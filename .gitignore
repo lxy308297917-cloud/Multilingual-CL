@@ -1,0 +1,35 @@
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.arrow
+*.parquet
+ckpt/
+checkpoints/
+outputs/
+logs/
+hf_cache/
+.cache/
+
+# datasets
+data/
+*.arrow
+*.parquet
+*.jsonl
+
+# models / checkpoints
+models/
+ckpt/
+checkpoints/
+outputs/
+logs/
+hf_cache/
+.cache/
+
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
