@@ -1,0 +1,131 @@
+#!/usr/bin/env bash
+set -e
+
+source /usr/local/Ascend/ascend-toolkit/set_env.sh
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate cl
+export HF_ENDPOINT=https://hf-mirror.com
+
+# 用法：
+# bash training/scripts/single_bigqwen.sh ibo_Latn train20k
+# bash training/scripts/single_bigqwen.sh hau_Latn train50k
+#
+# 如需从上一步模型继续训练：
+# bash training/scripts/single_bigqwen.sh hau_Latn train20k /data/HwHiAiUser/cl_workspace/ckpt/single_15b_bigqwen/ibo_Latn_train20k
+
+BASE_MODEL="/home/HwHiAiUser/cl_workspace/var/hf_cache/Qwen2.5-1.5B-Instruct"
+
+LANG="$1"                 # 例如 ibo_Latn
+TRAIN_SPLIT_NAME="$2"     # 例如 train20k / train50k
+PREV_MODEL="$3"           # 可选
+
+if [ -z "$LANG" ] || [ -z "$TRAIN_SPLIT_NAME" ]; then
+  echo "用法: bash training/scripts/single_bigqwen.sh <lang> <train_split_name> [prev_model]"
+  echo "示例1: bash training/scripts/single_bigqwen.sh ibo_Latn train20k"
+  echo "示例2: bash training/scripts/single_bigqwen.sh hau_Latn train50k"
+  echo "示例3: bash training/scripts/single_bigqwen.sh hau_Latn train20k /data/HwHiAiUser/cl_workspace/ckpt/single_15b_bigqwen/ibo_Latn_train20k"
+  exit 1
+fi
+
+if [ -n "$PREV_MODEL" ]; then
+  MODEL_NAME="$PREV_MODEL"
+else
+  MODEL_NAME="$BASE_MODEL"
+fi
+
+# ===== 新数据根目录 =====
+DATA_ROOT="$HOME/cl_workspace/data/fineweb2_big_qwen"
+HF_CACHE="$HOME/cl_workspace/var/hf_cache"
+
+# 输出根目录
+OUT_ROOT="/data/HwHiAiUser/cl_workspace/ckpt/single_15b_bigqwen"
+
+# 日志根目录（单独保存终端日志）
+RUN_LOG_ROOT="$HOME/cl_workspace/logs/single_15b_bigqwen"
+
+# 训练/测试目录
+TRAIN_DIR="${DATA_ROOT}/${LANG}/${TRAIN_SPLIT_NAME}"
+TEST_DIR="${DATA_ROOT}/${LANG}/test"
+
+# 输出目录名里带上 train20k/train50k，避免混淆
+OUTPUT_DIR="${OUT_ROOT}/${LANG}_${TRAIN_SPLIT_NAME}"
+LOG_DIR="${OUTPUT_DIR}/trainer_logs"
+RUN_LOG="${RUN_LOG_ROOT}/${LANG}_${TRAIN_SPLIT_NAME}.log"
+
+mkdir -p "${HF_CACHE}" "${OUTPUT_DIR}" "${LOG_DIR}" "${RUN_LOG_ROOT}"
+
+echo "========================================"
+echo "Single训练（FineWeb2 Big Qwen, 1.5B）"
+echo "LANG=${LANG}"
+echo "TRAIN_SPLIT_NAME=${TRAIN_SPLIT_NAME}"
+if [ -n "$PREV_MODEL" ]; then
+  echo "PREV_MODEL=${PREV_MODEL}"
+  echo "当前从上一步模型继续训练"
+else
+  echo "PREV_MODEL=None"
+  echo "当前直接从BASE_MODEL开始训练"
+fi
+echo "MODEL_NAME=${MODEL_NAME}"
+echo "BASE_MODEL=${BASE_MODEL}"
+echo "DATA_ROOT=${DATA_ROOT}"
+echo "TRAIN_DIR=${TRAIN_DIR}"
+echo "TEST_DIR=${TEST_DIR}"
+echo "OUTPUT_DIR=${OUTPUT_DIR}"
+echo "LOG_DIR=${LOG_DIR}"
+echo "RUN_LOG=${RUN_LOG}"
+echo "========================================"
+
+if [ ! -d "${TRAIN_DIR}" ]; then
+  echo "错误: TRAIN_DIR 不存在: ${TRAIN_DIR}"
+  exit 1
+fi
+
+if [ ! -d "${TEST_DIR}" ]; then
+  echo "错误: TEST_DIR 不存在: ${TEST_DIR}"
+  exit 1
+fi
+
+echo "===== 查看数据目录 ====="
+ls -lh "${DATA_ROOT}/${LANG}"
+echo "===== 开始训练 ====="
+
+cd /home/HwHiAiUser/cl_workspace/code/SSU/ssu-main/training/src
+
+python main.py \
+  --dataset_path "${TRAIN_DIR}" \
+  --output_dir "${OUTPUT_DIR}" \
+  --logging_dir "${LOG_DIR}" \
+  --model_name_or_path "${MODEL_NAME}" \
+  --tokenizer_name_or_path "${BASE_MODEL}" \
+  --cache_dir "${HF_CACHE}" \
+  --seed 42 \
+  --do_train \
+  --evaluation_strategy no \
+  --weight_decay 0.01 \
+  --warmup_ratio 0.05 \
+  --prediction_loss_only \
+  --lr_scheduler_type cosine \
+  --disable_tqdm True \
+  --label_names labels \
+  --remove_unused_columns True \
+  --save_strategy no \
+  --num_train_epochs 1 \
+  --logging_steps 10 \
+  --gradient_accumulation_steps 2 \
+  --per_device_train_batch_size 1 \
+  --learning_rate 1e-5 \
+  --max_grad_norm 1.0 \
+  2>&1 | tee "${RUN_LOG}"
+
+echo "✅ 训练结束，开始评测 PPL ..."
+
+cd /home/HwHiAiUser/cl_workspace/code/SSU/ssu-main
+
+python evaluation/src/eval_ppl_fineweb2.py \
+  --model_name "${OUTPUT_DIR}" \
+  --data_root "${DATA_ROOT}" \
+  --langs "${LANG}" \
+  --batch_size 8 \
+  2>&1 | tee -a "${RUN_LOG}"
+
+echo "🎉 ${LANG} ${TRAIN_SPLIT_NAME} 单任务训练 + 测试完成"
