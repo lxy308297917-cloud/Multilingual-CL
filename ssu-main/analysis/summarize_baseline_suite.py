@@ -2,7 +2,7 @@
 import argparse,csv,fcntl,io,json,statistics,sys,time
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(R/'scripts'))
+sys.path.insert(0,str(R/'scripts/src'))
 from run_baseline_eval import digest,valid_done,jobs
 from baseline_eval_integrity import require_scores
 

@@ -7,4 +7,4 @@ if [[ $# -lt 1 ]]; then
 fi
 method="$1"
 shift
-exec /root/miniconda3/envs/cl/bin/python "$script_dir/train_cl.py" --config "$script_dir/../configs/ig_baseline_train_v1.json" --method "$method" "$@"
+exec /root/miniconda3/envs/cl/bin/python "$script_dir/src/train_cl.py" --config "$script_dir/../configs/ig_baseline_train_v1.json" --method "$method" "$@"

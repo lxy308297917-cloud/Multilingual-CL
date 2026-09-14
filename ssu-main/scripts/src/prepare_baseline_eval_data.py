@@ -80,7 +80,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--output-root', required=True, type=Path)
     ap.add_argument('--cache-dir', type=Path)
-    ap.add_argument('--spec', type=Path, default=Path(__file__).resolve().parents[1] / 'configs/ig_baseline_data_v1.json')
+    ap.add_argument('--spec', type=Path, default=Path(__file__).resolve().parents[2] / 'configs/ig_baseline_data_v1.json')
     args = ap.parse_args()
     spec = json.loads(args.spec.read_text())
     root = args.output_root.resolve()

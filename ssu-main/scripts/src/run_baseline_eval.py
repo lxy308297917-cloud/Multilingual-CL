@@ -3,7 +3,7 @@ import argparse, csv, fcntl, hashlib, json, os, runpy, shutil, statistics, subpr
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from threading import Event
-R=Path(__file__).resolve().parents[1]
+R=Path(__file__).resolve().parents[2]
 from baseline_eval_integrity import aggregate, require_scores, unique_completed
 
 def sha(p):
@@ -37,7 +37,7 @@ def model_identity(model,c):
 
 def protocol(c,cp):
  if c.get('lighteval_source') and not (Path(c['lighteval_source'])/'lighteval/__init__.py').is_file():raise FileNotFoundError('Missing bundled LightEval source')
- code=list((R/'evaluation').rglob('*.py'))+[R/'scripts'/n for n in ['baseline_eval.sh','evaluate_cl.py','run_baseline_eval.py','baseline_eval_worker.py','baseline_eval_integrity.py','eval_plnd_downstream.py']]
+ code=list((R/'evaluation').rglob('*.py'))+[R/'scripts/baseline_eval.sh']+[R/'scripts/src'/n for n in ['evaluate_cl.py','run_baseline_eval.py','baseline_eval_worker.py','baseline_eval_integrity.py','eval_plnd_downstream.py']]
  code+=list(Path(c.get('lighteval_source', str(R.parent/'lighteval_latest/src'))).rglob('*.py'))
  code+=[R/'analysis/lape_qwen_preexperiment.py']
  inherited=Path(c['evaluation_data_manifest']) if c.get('evaluation_data_manifest') else R.parent/'experiments/ig_baseline_repro_v1/manifest.json'
@@ -115,7 +115,7 @@ def run_model(model,c,a,prot):
   attempt=unit/('attempt-'+str(time.time_ns()));attempt.mkdir(parents=True)
   write(attempt/'job.json',ident)
   write(attempt/'execution.json',{'physical_gpu':gpu,'pid':os.getpid(),'scheduler':'static_disjoint_lanes'})
-  cmd=[c['training_python'] if j['kind']=='ppl' else c['evaluation_python'],str(R/'scripts/baseline_eval_worker.py'),'--config',str(a.config),'--model',str(model),'--output',str(attempt)]
+  cmd=[c['training_python'] if j['kind']=='ppl' else c['evaluation_python'],str(R/'scripts/src/baseline_eval_worker.py'),'--config',str(a.config),'--model',str(model),'--output',str(attempt)]
   print('RUN',j['name'],'seed',j['seed'],'model',model,flush=True)
   with (attempt/'run.log').open('w') as log:rc=subprocess.run(cmd,env=task_env,stdout=log,stderr=subprocess.STDOUT,pass_fds=(a.lock_fd,)).returncode
   if rc:

@@ -1,7 +1,7 @@
 """Construct and gate the seven-method baseline training commands."""
 import argparse,hashlib,json,os,subprocess,sys
 from pathlib import Path
-R=Path(__file__).resolve().parents[1]
+R=Path(__file__).resolve().parents[2]
 def command(c,method):
  settings=c['methods'][method];output=Path(c['output_root'])/method
  entry='run_mofo_bf16.py' if method=='mofo15' else 'main_bf16.py'
@@ -57,7 +57,7 @@ def file_sha(p):
  return h.hexdigest()
 
 def source_identity():
- paths=list((R/'training/src').rglob('*.py'))+[R/'scripts/train_cl.py',Path(__file__).resolve()]
+ paths=list((R/'training/src').rglob('*.py'))+[R/'scripts/src/train_cl.py',Path(__file__).resolve()]
  return {str(p):file_sha(p) for p in sorted(paths)}
 
 def execute_training(c,a):

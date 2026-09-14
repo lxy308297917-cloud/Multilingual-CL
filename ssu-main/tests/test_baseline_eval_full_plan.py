@@ -2,12 +2,12 @@
 import sys,json,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
-R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'scripts'))
+R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'scripts/src'))
 import baseline_eval_worker as worker
 class Captured(Exception):pass
 class FullPlan(unittest.TestCase):
  def test_full_sample_limits_and_all_knowledge_subjects(self):
-  c=json.loads((R/'configs/ig_baseline_eval_v1.json').read_text())
+  c=json.loads((R/'configs/ig_baseline_eval_v3.json').read_text())
   for job in c['tasks']:
    with self.subTest(task=job['name']),tempfile.TemporaryDirectory() as temp:
     command=[]

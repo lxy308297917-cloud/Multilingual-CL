@@ -10,7 +10,7 @@ import os
 import subprocess
 from pathlib import Path
 
-PROJECT = Path(__file__).resolve().parents[1]
+PROJECT = Path(__file__).resolve().parents[2]
 TASKS = PROJECT / "evaluation" / "src"
 
 

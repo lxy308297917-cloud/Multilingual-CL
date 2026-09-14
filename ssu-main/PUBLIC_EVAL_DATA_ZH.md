@@ -7,7 +7,7 @@
 在仓库根目录执行（路径按学校服务器修改；Python 环境需已有 datasets、pyarrow、pandas）：
 
 ```bash
-python ssu-main/scripts/prepare_baseline_eval_data.py --output-root /data/ig-baseline-eval
+python ssu-main/scripts/src/prepare_baseline_eval_data.py --output-root /data/ig-baseline-eval
 ```
 
 脚本只构建数据，不启动 GPU。网络中断后可重跑，已下载的公开文件继续使用。仅当所有 126 个文件均通过数量、逐行内容与顺序校验时，生成 `/data/ig-baseline-eval/DATA_VERIFIED.json`。有任何不匹配会报错，不能把失败状态当作完成。该清单由学校服务器本地生成，包含当地路径，不依赖原服务器的 `evaluation_inputs_inherited` 清单。
@@ -30,7 +30,7 @@ python ssu-main/scripts/prepare_baseline_eval_data.py --output-root /data/ig-bas
 在学校服务器已准备好训练/评测环境、Base 和待测 checkpoint 的前提下，生成独立本地配置：
 
 ```bash
-python ssu-main/scripts/configure_baseline_eval.py \
+python ssu-main/scripts/src/configure_baseline_eval.py \
   --data-root /data/ig-baseline-eval \
   --base-model /data/models/Qwen2.5-1.5B-Instruct \
   --training-python /opt/envs/cl/bin/python \

@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-p = Path(__file__).resolve().parents[1] / 'scripts/prepare_baseline_eval_data.py'
+p = Path(__file__).resolve().parents[1] / 'scripts/src/prepare_baseline_eval_data.py'
 spec = importlib.util.spec_from_file_location('public_data', p)
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)

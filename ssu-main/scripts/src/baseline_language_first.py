@@ -30,7 +30,7 @@ def main():
    write(attempt/'execution.json',{'physical_gpu':gpu,'pid':os.getpid(),'scheduler':'language_first_stage_barrier','allocator':'expandable_segments:True'})
    env=dict(os.environ,CUDA_VISIBLE_DEVICES=str(gpu),HF_HOME=c['hf_cache'],HF_HUB_CACHE=c['hf_cache'],HF_DATASETS_CACHE=str(Path(c['hf_cache'])/'datasets'),HF_HUB_OFFLINE='1',HF_DATASETS_OFFLINE='1',TOKENIZERS_PARALLELISM='false',OMP_NUM_THREADS='1',PYTHONHASHSEED='42',CUBLAS_WORKSPACE_CONFIG=':4096:8',PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True')
    with (attempt/'run.log').open('w') as log:
-    child=subprocess.Popen([c['evaluation_python'],str(R/'scripts/baseline_eval_worker.py'),'--config',str(cp),'--model',str(model),'--output',str(attempt)],env=env,stdout=log,stderr=subprocess.STDOUT,pass_fds=(lock.fileno(),))
+    child=subprocess.Popen([c['evaluation_python'],str(R/'scripts/src/baseline_eval_worker.py'),'--config',str(cp),'--model',str(model),'--output',str(attempt)],env=env,stdout=log,stderr=subprocess.STDOUT,pass_fds=(lock.fileno(),))
     write(dest/f'language_lane_gpu{gpu}.json',{'pid':os.getpid(),'child_pid':child.pid,'task':name,'attempt':str(attempt)});rc=child.wait()
    if rc:write(attempt/'FAILED.json',{'returncode':rc});raise RuntimeError('Task failed: '+str(attempt))
    require_scores(json.loads((attempt/'scores.json').read_text()))

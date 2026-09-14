@@ -16,7 +16,7 @@ def main():
     ap.add_argument('--config-out', required=True, type=Path)
     ap.add_argument('--gpus', default='0', help='Local GPU indices, e.g. 0 or 0,1')
     a = ap.parse_args()
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[2]
     data = a.data_root.resolve()
     receipt = data / 'DATA_VERIFIED.json'
     manifest = json.loads(receipt.read_text())

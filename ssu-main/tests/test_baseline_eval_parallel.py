@@ -3,7 +3,7 @@ import sys,tempfile,threading,time,unittest
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts/src'))
 import run_baseline_eval as m
 class Parallel(unittest.TestCase):
  def test_disjoint_gpu_lanes_and_resume(self):

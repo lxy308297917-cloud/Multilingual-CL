@@ -1,3 +1,5 @@
+脚本目录：`scripts/` 顶层只放 `.sh` 入口，Python 实现集中在 `scripts/src/`。训练与评测继续使用 `scripts/baseline_train.sh`、`scripts/baseline_eval.sh`。直接调用数据工具时使用 `scripts/src/prepare_baseline_eval_data.py` 和 `scripts/src/configure_baseline_eval.py`。目录调整会改变代码身份哈希；已有协议锁的运行请保留旧 checkout，新运行使用独立输出目录。
+
 跨服务器复现：参见 [公开数据重建与本地配置](PUBLIC_EVAL_DATA_ZH.md)。无需访问 AutoDL 共享盘。
 
 # Multilingual-CL：Qwen 多语言适配与持续学习
