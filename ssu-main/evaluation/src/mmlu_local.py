@@ -1,5 +1,6 @@
 """Offline English MMLU tasks equivalent to lighteval's leaderboard suite."""
 
+import os
 from pathlib import Path
 from string import ascii_uppercase
 
@@ -8,7 +9,7 @@ from lighteval.tasks.lighteval_task import LightevalTaskConfig
 from lighteval.tasks.requests import Doc
 
 
-LOCAL_MMLU = Path("/root/.cache/huggingface/hub/datasets--lighteval--mmlu/snapshots/31d46ab06e6934bb0d95f6918668716d1db6f921")
+LOCAL_MMLU = Path((os.path.join(os.environ["BASELINE_EVAL_DATA_ROOT"], "mmlu") if os.environ.get("BASELINE_EVAL_DATA_ROOT") else "/root/.cache/huggingface/hub/datasets--lighteval--mmlu/snapshots/31d46ab06e6934bb0d95f6918668716d1db6f921"))
 
 
 def mmlu_harness(line, task_name: str | None = None):

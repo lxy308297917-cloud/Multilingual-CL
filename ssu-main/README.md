@@ -1,3 +1,5 @@
+跨服务器复现：参见 [公开数据重建与本地配置](PUBLIC_EVAL_DATA_ZH.md)。无需访问 AutoDL 共享盘。
+
 # Multilingual-CL：Qwen 多语言适配与持续学习
 
 本仓库基于 [SSU 上游项目](https://github.com/gucci-j/ssu) 扩展，不是该论文的官方仓库。

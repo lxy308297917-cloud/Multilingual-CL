@@ -12,7 +12,7 @@ TASKS_TABLE = []
 import os
 import json
 
-LOCAL_MT_DATA_DIR = "/root/autodl-tmp/eval_datasets_local/mt_flores_ssu_9langs"
+LOCAL_MT_DATA_DIR = (os.path.join(os.environ["BASELINE_EVAL_DATA_ROOT"], "mt_flores_ssu_9langs") if os.environ.get("BASELINE_EVAL_DATA_ROOT") else "/root/autodl-tmp/eval_datasets_local/mt_flores_ssu_9langs")
 
 print("========================================")
 print("[MT.py] 正在加载自定义机器翻译任务")
@@ -199,7 +199,7 @@ for language in [
             language=language,
             instruction=lang_code_to_2en_instruction(language),
         ),
-        hf_repo="/root/autodl-tmp/eval_datasets_local/mt_flores_ssu_9langs",
+        hf_repo=(os.path.join(os.environ["BASELINE_EVAL_DATA_ROOT"], "mt_flores_ssu_9langs") if os.environ.get("BASELINE_EVAL_DATA_ROOT") else "/root/autodl-tmp/eval_datasets_local/mt_flores_ssu_9langs"),
         hf_subset="default",
         evaluation_splits=("test",),
         hf_avail_splits=["validation", "test"],
@@ -215,7 +215,7 @@ for language in [
             language=language,
             instruction=lang_code_to_2tgt_instruction(language),
         ),
-        hf_repo="/root/autodl-tmp/eval_datasets_local/mt_flores_ssu_9langs",
+        hf_repo=(os.path.join(os.environ["BASELINE_EVAL_DATA_ROOT"], "mt_flores_ssu_9langs") if os.environ.get("BASELINE_EVAL_DATA_ROOT") else "/root/autodl-tmp/eval_datasets_local/mt_flores_ssu_9langs"),
         # hf_repo="/home/HwHiAiUser/cl_workspace/data/mt_flores_ssu_shift3",
         hf_subset="default",
         evaluation_splits=("test",),

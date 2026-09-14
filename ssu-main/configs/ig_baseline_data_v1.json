@@ -1,0 +1,4575 @@
+{
+  "schema_version": 1,
+  "identity": "ig_baseline_v3_seed42_public_inputs_v1",
+  "canonical_hash": "SHA256 of UTF-8 compact sorted-key JSON projected to fields, one LF per row; ordered rows; no Unicode normalization",
+  "summary_selection": "Published ordered IDs recover the original fixed 500 rows from test then validation. EN/IG were audited against stable ascending Qwen tokenizer length. ID replay avoids tokenizer-version sorting drift; HA/KY retained for PPL diagnostics only.",
+  "translation_selection": "FLORES-200 bilingual text-matching mirror; dev all 997; devtest pandas sample 500 random_state=42. Not a claim of current FLORES+ equivalence.",
+  "datasets": [
+    {
+      "path": "sum_ssu/en/test.jsonl",
+      "sources": [
+        {
+          "repo": "csebuetnlp/xlsum",
+          "revision": "ab04842511fc357feae53281fd104aa3c36dff07",
+          "file": "english/test/0000.parquet",
+          "sha256": "eb4e684461594f8245d4e842579ad62c4e543d031270ee113bbff4624b6f9f1d"
+        },
+        {
+          "repo": "csebuetnlp/xlsum",
+          "revision": "ab04842511fc357feae53281fd104aa3c36dff07",
+          "file": "english/validation/0000.parquet",
+          "sha256": "64b6c5417d70ff00e5620a033320188e4645a9fd30777c5cfad79d316b8c2e50"
+        }
+      ],
+      "fields": [
+        "id",
+        "title",
+        "text",
+        "summary"
+      ],
+      "selection": "frozen_ids",
+      "count": 500,
+      "content_sha256": "aa3bb5c35b068559e6d13d636fb7a6b61d808fb2fbb09e585130c0b242de30ed",
+      "ids": [
+        "world-europe-jersey-17973747",
+        "uk-wales-27575690",
+        "uk-england-kent-15894679",
+        "uk-scotland-edinburgh-east-fife-45533113",
+        "uk-england-cambridgeshire-36657605",
+        "uk-england-devon-51017258",
+        "uk-england-tyne-51617130",
+        "38142735",
+        "world-europe-jersey-25841446",
+        "uk-england-sussex-47356370",
+        "uk-wales-south-west-wales-34404336",
+        "uk-wales-south-west-wales-31507725",
+        "uk-england-berkshire-45273824",
+        "uk-england-gloucestershire-48157815",
+        "world-55300957",
+        "world-55210592",
+        "uk-england-dorset-38244635",
+        "uk-england-leeds-57025287",
+        "uk-wales-53756282",
+        "uk-england-south-yorkshire-48737228",
+        "uk-england-suffolk-51135670",
+        "uk-politics-42056452",
+        "uk-england-northamptonshire-22231627",
+        "uk-wales-52891181",
+        "uk-england-london-51784194",
+        "uk-england-devon-48509272",
+        "uk-wales-31139943",
+        "uk-england-nottinghamshire-19207006",
+        "uk-england-nottinghamshire-52745141",
+        "uk-england-lincolnshire-46429145",
+        "uk-england-london-46563718",
+        "uk-england-wiltshire-21609526",
+        "uk-england-bristol-26866388",
+        "world-europe-jersey-14521179",
+        "world-europe-guernsey-19685197",
+        "uk-england-wiltshire-42674629",
+        "uk-england-birmingham-32950841",
+        "uk-england-south-yorkshire-57288279",
+        "uk-wales-politics-31940004",
+        "uk-wales-north-east-wales-34985331",
+        "uk-england-lincolnshire-51016981",
+        "uk-england-berkshire-13028368",
+        "uk-scotland-glasgow-west-48990463",
+        "uk-scotland-north-east-orkney-shetland-38678084",
+        "uk-england-devon-20930192",
+        "uk-northern-ireland-17529736",
+        "world-europe-jersey-18083024",
+        "uk-england-nottinghamshire-45453255",
+        "uk-england-tyne-33199234",
+        "uk-england-devon-47413530",
+        "uk-england-leeds-55408217",
+        "uk-wales-36974795",
+        "uk-england-london-47640460",
+        "uk-england-hereford-worcester-46904355",
+        "uk-england-bristol-28042233",
+        "uk-england-cornwall-49163387",
+        "uk-scotland-south-scotland-49446550",
+        "uk-england-cambridgeshire-47360324",
+        "uk-scotland-highlands-islands-45745149",
+        "uk-scotland-scotland-politics-49133339",
+        "uk-england-kent-33070054",
+        "10256181",
+        "uk-england-nottinghamshire-50087352",
+        "newsbeat-12265334",
+        "uk-england-south-yorkshire-53537418",
+        "uk-england-cornwall-29771154",
+        "education-30422467",
+        "uk-england-bristol-53462520",
+        "uk-england-leeds-56701253",
+        "uk-england-dorset-34930127",
+        "uk-england-kent-50661408",
+        "uk-england-hereford-worcester-17713264",
+        "uk-england-leeds-48769998",
+        "world-europe-guernsey-11755918",
+        "uk-wales-south-east-wales-35558314",
+        "uk-england-somerset-55286575",
+        "uk-england-merseyside-54225405",
+        "uk-england-birmingham-44667257",
+        "uk-wales-south-east-wales-32188655",
+        "world-europe-isle-of-man-36110743",
+        "uk-northern-ireland-23160201",
+        "uk-scotland-scotland-business-33169376",
+        "uk-england-hampshire-50916695",
+        "sinhala.070326_air_attacks",
+        "uk-england-essex-44711390",
+        "uk-england-cambridgeshire-46987931",
+        "uk-scotland-highlands-islands-42424707",
+        "uk-england-hampshire-40265454",
+        "world-europe-jersey-11810643",
+        "uk-england-nottinghamshire-50705517",
+        "uk-england-derbyshire-50079114",
+        "uk-wales-south-west-wales-32310032",
+        "uk-england-leeds-20606873",
+        "uk-england-birmingham-47880718",
+        "uk-england-hampshire-49166056",
+        "uk-england-bristol-11018821",
+        "10190679",
+        "uk-scotland-highlands-islands-35814281",
+        "uk-wales-47304455",
+        "uk-england-london-46911449",
+        "uk-england-coventry-warwickshire-48936651",
+        "business-46610025",
+        "world-europe-isle-of-man-51615287",
+        "uk-england-devon-25795404",
+        "uk-wales-55300160",
+        "world-europe-isle-of-man-39495675",
+        "uk-england-merseyside-47800958",
+        "uk-wales-south-east-wales-39660716",
+        "uk-england-oxfordshire-50276066",
+        "uk-scotland-north-east-orkney-shetland-13334869",
+        "uk-wales-north-east-wales-28838268",
+        "uk-england-northamptonshire-46196843",
+        "uk-england-cumbria-31903481",
+        "uk-england-beds-bucks-herts-43319343",
+        "uk-scotland-south-scotland-22002334",
+        "world-europe-jersey-11048562",
+        "uk-england-london-47474524",
+        "uk-england-nottinghamshire-56184982",
+        "uk-wales-north-west-wales-33088923",
+        "uk-england-kent-19232708",
+        "uk-scotland-north-east-orkney-shetland-43458574",
+        "world-europe-jersey-22756433",
+        "10506420",
+        "uk-scotland-north-east-orkney-shetland-13205849",
+        "uk-england-wiltshire-51383435",
+        "uk-england-somerset-36585437",
+        "world-europe-jersey-17667881",
+        "uk-england-hereford-worcester-51161008",
+        "uk-england-birmingham-49576072",
+        "uk-wales-mid-wales-39194787",
+        "uk-england-birmingham-56157514",
+        "uk-england-lincolnshire-46126855",
+        "uk-england-devon-13260027",
+        "uk-england-lincolnshire-42944454",
+        "uk-england-beds-bucks-herts-54661099",
+        "uk-england-merseyside-50125349",
+        "uk-wales-south-west-wales-36241144",
+        "uk-england-tyne-49418642",
+        "uk-scotland-39699827",
+        "uk-england-stoke-staffordshire-19784394",
+        "uk-england-lancashire-33940666",
+        "uk-scotland-highlands-islands-54338080",
+        "uk-scotland-edinburgh-east-fife-35802624",
+        "uk-england-somerset-15753274",
+        "uk-england-berkshire-38386394",
+        "uk-scotland-highlands-islands-33415497",
+        "uk-england-south-yorkshire-53706317",
+        "uk-england-birmingham-48811638",
+        "world-europe-12547784",
+        "uk-wales-south-east-wales-40707374",
+        "uk-england-oxfordshire-10996972",
+        "uk-england-south-yorkshire-44191273",
+        "world-europe-guernsey-22919691",
+        "uk-scotland-highlands-islands-25431900",
+        "uk-england-cornwall-35209923",
+        "uk-england-tyne-53279644",
+        "uk-england-london-45692561",
+        "uk-wales-politics-30800341",
+        "world-34745739",
+        "newsbeat-10062764",
+        "uk-scotland-highlands-islands-14250125",
+        "uk-wales-politics-32040529",
+        "business-31980803",
+        "world-europe-guernsey-27262192",
+        "uk-england-coventry-warwickshire-11341248",
+        "uk-england-surrey-13638264",
+        "uk-scotland-tayside-central-18929950",
+        "uk-england-lincolnshire-17298602",
+        "uk-england-oxfordshire-34049911",
+        "uk-england-shropshire-26464689",
+        "newsbeat-10057749",
+        "uk-england-tees-52955073",
+        "world-europe-isle-of-man-50227624",
+        "uk-northern-ireland-30193184",
+        "uk-england-tees-50621438",
+        "uk-england-derbyshire-27870807",
+        "uk-scotland-south-scotland-38207937",
+        "uk-northern-ireland-12609926",
+        "uk-england-coventry-warwickshire-18307144",
+        "uk-wales-33651941",
+        "uk-northern-ireland-56233235",
+        "uk-england-kent-31813974",
+        "world-europe-guernsey-16308415",
+        "uk-england-tees-48628137",
+        "uk-england-bristol-56088061",
+        "uk-england-manchester-47233397",
+        "uk-england-oxfordshire-20552460",
+        "uk-england-tyne-51597667",
+        "uk-england-northamptonshire-17923231",
+        "uk-england-bristol-19007490",
+        "uk-england-hereford-worcester-36623663",
+        "world-asia-41023226",
+        "uk-england-19590368",
+        "uk-england-wiltshire-53380107",
+        "world-europe-jersey-29566298",
+        "uk-england-gloucestershire-17551148",
+        "uk-england-birmingham-45640452",
+        "uk-england-derbyshire-49016633",
+        "uk-england-dorset-55763322",
+        "uk-scotland-scotland-business-23233762",
+        "uk-scotland-north-east-orkney-shetland-43738267",
+        "uk-england-shropshire-21993624",
+        "uk-england-derbyshire-47584037",
+        "uk-england-bristol-11015863",
+        "uk-wales-south-east-wales-41038842",
+        "uk-england-coventry-warwickshire-54718542",
+        "uk-england-birmingham-49097266",
+        "uk-scotland-north-east-orkney-shetland-29474124",
+        "technology-11657290",
+        "uk-scotland-highlands-islands-27919836",
+        "uk-england-lancashire-19233705",
+        "world-europe-isle-of-man-22904988",
+        "uk-scotland-glasgow-west-20899469",
+        "uk-england-london-52592439",
+        "uk-northern-ireland-54667347",
+        "uk-england-oxfordshire-55386928",
+        "uk-england-derbyshire-45263713",
+        "uk-england-tees-48119188",
+        "uk-wales-north-east-wales-34067470",
+        "uk-england-london-20115220",
+        "uk-wales-south-east-wales-36799864",
+        "world-europe-isle-of-man-22014873",
+        "uk-england-nottinghamshire-52728112",
+        "uk-england-cambridgeshire-45757433",
+        "uk-england-hereford-worcester-54106088",
+        "uk-scotland-glasgow-west-54662967",
+        "world-africa-50974449",
+        "uk-england-tyne-52823193",
+        "uk-england-stoke-staffordshire-47295511",
+        "world-latin-america-32926068",
+        "newsbeat-14645224",
+        "world-europe-jersey-26597035",
+        "uk-wales-33137576",
+        "uk-england-sussex-55689871",
+        "uk-wales-north-east-wales-39797093",
+        "uk-wales-36448924",
+        "uk-england-leicestershire-50639434",
+        "uk-england-london-45135838",
+        "uk-england-surrey-11643139",
+        "uk-england-shropshire-37461334",
+        "newsbeat-11862568",
+        "uk-england-suffolk-32253150",
+        "uk-england-shropshire-26708757",
+        "uk-england-bristol-51306826",
+        "uk-england-hampshire-11685220",
+        "10591012",
+        "uk-england-tyne-32680872",
+        "uk-england-nottinghamshire-45561075",
+        "uk-england-cambridgeshire-56209207",
+        "uk-wales-43688217",
+        "uk-england-birmingham-51801735",
+        "uk-england-humber-24705775",
+        "uk-england-merseyside-23532975",
+        "uk-england-leeds-52861318",
+        "uk-england-bristol-13200554",
+        "uk-england-tees-54310702",
+        "uk-england-leicestershire-51713292",
+        "uk-england-manchester-33668050",
+        "uk-england-south-yorkshire-53309122",
+        "uk-england-manchester-47856288",
+        "uk-england-lancashire-56193224",
+        "uk-wales-south-east-wales-35840428",
+        "uk-scotland-north-east-orkney-shetland-46958859",
+        "world-europe-guernsey-34681985",
+        "uk-wales-26978209",
+        "uk-england-birmingham-56616347",
+        "uk-england-northamptonshire-26058418",
+        "world-europe-guernsey-17459032",
+        "uk-england-stoke-staffordshire-54682541",
+        "world-europe-44906118",
+        "uk-scotland-north-east-orkney-shetland-20546581",
+        "uk-scotland-highlands-islands-51719856",
+        "uk-wales-north-east-wales-31696504",
+        "uk-wales-south-east-wales-39923653",
+        "uk-england-birmingham-44858928",
+        "uk-england-norfolk-17125349",
+        "uk-scotland-highlands-islands-24549668",
+        "uk-england-essex-30708405",
+        "uk-england-tees-36819265",
+        "uk-28404164",
+        "uk-england-tyne-11806538",
+        "uk-england-cumbria-45837582",
+        "world-latin-america-52329500",
+        "uk-england-lincolnshire-18472967",
+        "sinhala.100217_lakeside_release",
+        "uk-scotland-edinburgh-east-fife-49073815",
+        "uk-england-22734863",
+        "uk-england-york-north-yorkshire-56214537",
+        "uk-wales-46459470",
+        "uk-england-lancashire-37717727",
+        "uk-england-24592387",
+        "uk-northern-ireland-51584972",
+        "world-europe-guernsey-12860203",
+        "uk-england-beds-bucks-herts-46211391",
+        "uk-england-coventry-warwickshire-34518860",
+        "world-us-canada-46102723",
+        "newsbeat-17352086",
+        "uk-wales-south-east-wales-29467623",
+        "uk-england-south-yorkshire-45746027",
+        "world-europe-guernsey-13309847",
+        "uk-england-birmingham-51118475",
+        "uk-england-gloucestershire-55220021",
+        "world-europe-guernsey-11027456",
+        "uk-wales-south-east-wales-23465632",
+        "uk-england-derbyshire-46871041",
+        "world-europe-guernsey-13333065",
+        "newsbeat-10087702",
+        "uk-england-tees-52229187",
+        "uk-england-surrey-32106153",
+        "uk-wales-54324095",
+        "uk-england-leeds-15357732",
+        "uk-england-humber-34139134",
+        "uk-england-hampshire-30922622",
+        "uk-england-leeds-47506126",
+        "uk-scotland-north-east-orkney-shetland-40715575",
+        "uk-england-wiltshire-18171281",
+        "uk-england-hampshire-54047189",
+        "world-46186431",
+        "uk-scotland-north-east-orkney-shetland-43567619",
+        "uk-england-cambridgeshire-22952135",
+        "uk-scotland-north-east-orkney-shetland-21045918",
+        "uk-england-wiltshire-21547019",
+        "10307347",
+        "uk-england-derbyshire-17999291",
+        "uk-scotland-north-east-orkney-shetland-55167509",
+        "uk-england-suffolk-11675842",
+        "world-europe-isle-of-man-23245326",
+        "uk-england-birmingham-45867724",
+        "uk-england-devon-40075962",
+        "world-europe-guernsey-15448081",
+        "uk-england-coventry-warwickshire-53291110",
+        "uk-england-somerset-12205592",
+        "uk-scotland-glasgow-west-54154642",
+        "uk-england-norfolk-53115043",
+        "uk-england-humber-48028420",
+        "uk-scotland-highlands-islands-34072571",
+        "uk-scotland-south-scotland-37922335",
+        "uk-england-manchester-22958341",
+        "uk-england-birmingham-55279869",
+        "uk-scotland-highlands-islands-49877455",
+        "sinhala.060202_talks",
+        "uk-england-south-yorkshire-44586703",
+        "uk-england-52023673",
+        "uk-wales-45878204",
+        "uk-scotland-south-scotland-47895624",
+        "uk-england-birmingham-34294028",
+        "world-europe-guernsey-11834273",
+        "uk-england-sussex-13994393",
+        "uk-england-tees-23364657",
+        "uk-scotland-north-east-orkney-shetland-48949563",
+        "uk-england-manchester-45666398",
+        "uk-politics-45006490",
+        "uk-wales-south-east-wales-35823638",
+        "uk-england-manchester-55498691",
+        "world-africa-35958463",
+        "uk-england-merseyside-54469163",
+        "newsbeat-13405464",
+        "uk-england-sussex-43742959",
+        "uk-england-stoke-staffordshire-29254604",
+        "uk-england-coventry-warwickshire-46577982",
+        "uk-scotland-south-scotland-47692271",
+        "uk-england-kent-53200048",
+        "entertainment-arts-42788267",
+        "uk-england-devon-14554778",
+        "world-europe-guernsey-16577203",
+        "uk-england-norfolk-12103425",
+        "uk-england-tyne-37815975",
+        "uk-england-gloucestershire-19753055",
+        "uk-wales-34801641",
+        "uk-wales-52353477",
+        "uk-wales-south-west-wales-29816458",
+        "uk-england-london-36465848",
+        "uk-england-surrey-20730166",
+        "uk-england-sussex-41656871",
+        "world-asia-42365606",
+        "world-europe-jersey-22408166",
+        "uk-scotland-scotland-business-18143191",
+        "uk-england-birmingham-21176766",
+        "world-europe-jersey-13540257",
+        "world-europe-guernsey-20712791",
+        "world-europe-isle-of-man-24804961",
+        "uk-scotland-north-east-orkney-shetland-38833505",
+        "uk-england-london-36702727",
+        "uk-scotland-edinburgh-east-fife-46738317",
+        "uk-england-cumbria-34014884",
+        "world-europe-jersey-12428550",
+        "uk-england-devon-11433197",
+        "uk-england-cambridgeshire-43456626",
+        "uk-england-leicestershire-47654041",
+        "world-europe-guernsey-14061420",
+        "world-europe-guernsey-21397418",
+        "uk-england-cornwall-49511443",
+        "uk-england-manchester-36332805",
+        "world-europe-isle-of-man-45018403",
+        "uk-scotland-edinburgh-east-fife-47387090",
+        "uk-england-tees-14774326",
+        "uk-england-norfolk-18532395",
+        "uk-northern-ireland-23782318",
+        "uk-england-hampshire-22751511",
+        "uk-england-derbyshire-13128002",
+        "blogs-trending-31737768",
+        "uk-scotland-highlands-islands-34831398",
+        "uk-england-bristol-29163732",
+        "uk-england-34992733",
+        "uk-england-south-yorkshire-54961779",
+        "uk-scotland-south-scotland-44123135",
+        "uk-wales-46328412",
+        "uk-england-merseyside-53973623",
+        "uk-england-tyne-46828400",
+        "uk-40928014",
+        "uk-wales-south-east-wales-37874772",
+        "sinhala.070720_welioya_mortar",
+        "uk-england-shropshire-46110172",
+        "uk-england-nottinghamshire-46824569",
+        "uk-england-essex-35915759",
+        "uk-england-dorset-43313517",
+        "uk-scotland-highlands-islands-17298950",
+        "uk-scotland-scotland-business-28108030",
+        "uk-england-hampshire-47094588",
+        "uk-england-stoke-staffordshire-49268172",
+        "uk-england-london-36225714",
+        "uk-scotland-highlands-islands-21858382",
+        "uk-england-essex-42321241",
+        "uk-england-derbyshire-55838579",
+        "uk-england-cumbria-51773426",
+        "world-europe-guernsey-13669863",
+        "uk-england-leeds-48095101",
+        "world-latin-america-21364428",
+        "uk-england-hampshire-34609612",
+        "uk-england-nottinghamshire-44972549",
+        "uk-england-merseyside-49446270",
+        "uk-39164504",
+        "uk-scotland-glasgow-west-42461507",
+        "uk-wales-54227038",
+        "world-europe-isle-of-man-52404021",
+        "uk-scotland-highlands-islands-34983334",
+        "uk-wales-south-east-wales-37194929",
+        "uk-england-hereford-worcester-13698357",
+        "uk-england-birmingham-49465736",
+        "newsbeat-22007586",
+        "uk-england-33602441",
+        "uk-england-northamptonshire-22583855",
+        "uk-england-humber-20377854",
+        "uk-wales-south-east-wales-37954521",
+        "uk-21737271",
+        "world-europe-isle-of-man-14276507",
+        "uk-england-devon-13043602",
+        "world-europe-guernsey-11369477",
+        "uk-wales-politics-30990621",
+        "uk-england-tyne-53544659",
+        "uk-england-kent-12326130",
+        "world-europe-isle-of-man-55048686",
+        "uk-england-18570083",
+        "uk-wales-politics-35673808",
+        "sinhala.100728_police",
+        "uk-england-lincolnshire-46330575",
+        "uk-scotland-south-scotland-55901721",
+        "uk-england-tees-22917918",
+        "uk-northern-ireland-12524277",
+        "uk-wales-south-east-wales-12764643",
+        "uk-england-kent-20907881",
+        "uk-england-shropshire-33090451",
+        "uk-scotland-highlands-islands-26436060",
+        "uk-england-london-21243738",
+        "uk-england-northamptonshire-19813051",
+        "world-asia-china-49938843",
+        "uk-england-tyne-44730908",
+        "uk-scotland-highlands-islands-38930288",
+        "uk-wales-36600175",
+        "uk-wales-53583424",
+        "uk-england-birmingham-41697309",
+        "uk-england-cumbria-19414768",
+        "world-europe-45625831",
+        "10142273",
+        "uk-england-35851281",
+        "uk-wales-south-west-wales-21584382",
+        "uk-northern-ireland-56992537",
+        "uk-england-hampshire-21612697",
+        "uk-england-london-11741814",
+        "uk-wales-54046558",
+        "uk-44997532",
+        "uk-england-coventry-warwickshire-17974375",
+        "world-europe-guernsey-24427208",
+        "world-europe-guernsey-36699090",
+        "uk-england-11236387",
+        "uk-scotland-scotland-business-44030009",
+        "uk-england-bristol-14165664",
+        "uk-england-lancashire-35975788",
+        "uk-wales-north-west-wales-39145963",
+        "uk-england-leicestershire-13322218",
+        "world-europe-isle-of-man-54508016",
+        "uk-england-nottinghamshire-48974183",
+        "newsbeat-10122033",
+        "uk-england-kent-55611277",
+        "uk-northern-ireland-22504393",
+        "uk-northern-ireland-11997538",
+        "uk-england-cornwall-12142399",
+        "world-europe-jersey-32974529",
+        "world-europe-jersey-17674890",
+        "uk-scotland-tayside-central-20186306"
+      ]
+    },
+    {
+      "path": "sum_ssu/ig/test.jsonl",
+      "sources": [
+        {
+          "repo": "csebuetnlp/xlsum",
+          "revision": "ab04842511fc357feae53281fd104aa3c36dff07",
+          "file": "igbo/test/0000.parquet",
+          "sha256": "84c372217360c2f40fa72e1a5a688825f4e29126431ffe1df769cd1a6be899ca"
+        },
+        {
+          "repo": "csebuetnlp/xlsum",
+          "revision": "ab04842511fc357feae53281fd104aa3c36dff07",
+          "file": "igbo/validation/0000.parquet",
+          "sha256": "6412fe6ffaab6e50aaed630ec324805ff41d262a9999f873ec22896f81813b6a"
+        }
+      ],
+      "fields": [
+        "id",
+        "title",
+        "text",
+        "summary"
+      ],
+      "selection": "frozen_ids",
+      "count": 500,
+      "content_sha256": "e25442935ce933a0ab5ba10ab3ea2b886d306cabed786527fbf44eb9da7c826a",
+      "ids": [
+        "afirika-50703740",
+        "afirika-50343740",
+        "afirika-51298927",
+        "media-51957557",
+        "44708886",
+        "afirika-51385104",
+        "afirika-47007572",
+        "afirika-47551341",
+        "afirika-44271449",
+        "42787750",
+        "44432540",
+        "afirika-47708407",
+        "afirika-56343041",
+        "afirika-50275793",
+        "42908212",
+        "afirika-43636117",
+        "afirika-47088193",
+        "48203757",
+        "egwuregwu-48657264",
+        "afirika-55046945",
+        "afirika-56570873",
+        "afirika-48381484",
+        "afirika-56003302",
+        "egwuregwu-49954271",
+        "egwuregwu-49883579",
+        "afirika-46889234",
+        "mba-uba-44245293",
+        "afirika-50035292",
+        "egwuregwu-51163542",
+        "afirika-45487854",
+        "43237846",
+        "egwuregwu-52973618",
+        "afirika-48733303",
+        "egwuregwu-43123876",
+        "afirika-48910518",
+        "afirika-50535804",
+        "afirika-46603819",
+        "afirika-52566710",
+        "43001003",
+        "afirika-43024565",
+        "egwuregwu-45205564",
+        "afirika-45675443",
+        "afirika-43171027",
+        "afirika-47761743",
+        "afirika-56663861",
+        "afirika-45372062",
+        "42956348",
+        "afirika-47764466",
+        "42835290",
+        "afirika-43225685",
+        "afirika-56757285",
+        "43692476",
+        "afirika-54170218",
+        "egwuregwu-48046576",
+        "afirika-46036072",
+        "afirika-43616138",
+        "afirika-43750811",
+        "afirika-44563300",
+        "afirika-49788814",
+        "afirika-48257405",
+        "egwuregwu-45058141",
+        "48486895",
+        "egwuregwu-55525024",
+        "egwuregwu-44193594",
+        "afirika-46938847",
+        "afirika-45094440",
+        "afirika-48509912",
+        "afirika-43986556",
+        "afirika-44125609",
+        "media-43102417",
+        "afirika-43872177",
+        "49283850",
+        "afirika-48122783",
+        "afirika-44598608",
+        "42782900",
+        "egwuregwu-43279617",
+        "afirika-43319891",
+        "afirika-46617113",
+        "afirika-45457700",
+        "43028571",
+        "42956345",
+        "afirika-52640237",
+        "afirika-43172823",
+        "afirika-47451984",
+        "afirika-50158929",
+        "afirika-53430361",
+        "afirika-48840561",
+        "mba-uba-43102329",
+        "42960352",
+        "egwuregwu-45205563",
+        "afirika-50774245",
+        "afirika-44105573",
+        "afirika-52663186",
+        "afirika-44032245",
+        "afirika-48979751",
+        "media-43652861",
+        "afirika-56353814",
+        "afirika-46417551",
+        "afirika-50365660",
+        "afirika-43216043",
+        "afirika-48580997",
+        "media-47928987",
+        "egwuregwu-45117741",
+        "afirika-43082262",
+        "afirika-46015370",
+        "afirika-50991763",
+        "afirika-45003089",
+        "egwuregwu-43015010",
+        "media-44353292",
+        "43095407",
+        "egwuregwu-49228916",
+        "afirika-48421403",
+        "afirika-44213493",
+        "afirika-44359636",
+        "afirika-43915247",
+        "afirika-55432440",
+        "afirika-45393829",
+        "afirika-44249587",
+        "afirika-44791717",
+        "egwuregwu-43626415",
+        "afirika-45193032",
+        "42850924",
+        "egwuregwu-43455220",
+        "afirika-48327476",
+        "afirika-49710270",
+        "media-53732827",
+        "afirika-51708561",
+        "afirika-44296449",
+        "46486698",
+        "afirika-46568349",
+        "afirika-45332517",
+        "media-43575957",
+        "afirika-43511913",
+        "afirika-48735843",
+        "afirika-47001732",
+        "media-45673668",
+        "afirika-44429476",
+        "afirika-49155750",
+        "afirika-49382524",
+        "afirika-48209477",
+        "afirika-45606168",
+        "egwuregwu-43307729",
+        "afirika-46664544",
+        "afirika-46198456",
+        "43028575",
+        "afirika-43815501",
+        "afirika-43561085",
+        "media-43383246",
+        "afirika-44776458",
+        "media-53820946",
+        "afirika-46554516",
+        "egwuregwu-50368537",
+        "egwuregwu-51665158",
+        "afirika-43404354",
+        "afirika-49389382",
+        "afirika-44416759",
+        "afirika-44393953",
+        "42928716",
+        "egwuregwu-48766055",
+        "46106714",
+        "afirika-49372230",
+        "afirika-45240668",
+        "afirika-48865187",
+        "afirika-50328180",
+        "afirika-47858755",
+        "afirika-45186251",
+        "afirika-46494665",
+        "afirika-49058486",
+        "afirika-43552027",
+        "media-45469449",
+        "afirika-43397299",
+        "afirika-44085413",
+        "afirika-45544740",
+        "egwuregwu-49055703",
+        "afirika-47123598",
+        "afirika-43946039",
+        "42945693",
+        "42960346",
+        "egwuregwu-48123913",
+        "afirika-46357102",
+        "afirika-49199655",
+        "afirika-46074349",
+        "afirika-44450018",
+        "afirika-48918946",
+        "42712413",
+        "media-44098244",
+        "afirika-50025391",
+        "egwuregwu-44550652",
+        "egwuregwu-48843388",
+        "afirika-48735842",
+        "egwuregwu-43034948",
+        "egwuregwu-48179273",
+        "43017680",
+        "42725984",
+        "afirika-47103469",
+        "afirika-48447718",
+        "afirika-44598609",
+        "afirika-48462608",
+        "43026753",
+        "media-48509913",
+        "afirika-47426211",
+        "afirika-53985676",
+        "afirika-47272118",
+        "afirika-44079941",
+        "afirika-43731553",
+        "afirika-43978133",
+        "afirika-45762916",
+        "afirika-43604142",
+        "afirika-47857518",
+        "egwuregwu-43341206",
+        "afirika-48973724",
+        "afirika-49855499",
+        "43723469",
+        "afirika-51306596",
+        "afirika-44055144",
+        "42814501",
+        "egwuregwu-43021800",
+        "media-43943181",
+        "afirika-53197106",
+        "afirika-43322983",
+        "42853157",
+        "afirika-50387181",
+        "afirika-47730113",
+        "afirika-48918953",
+        "akuko-ndi-ozo-43073985",
+        "afirika-49493808",
+        "afirika-53019884",
+        "afirika-45862852",
+        "egwuregwu-49188775",
+        "afirika-48199011",
+        "46555544",
+        "mba-uba-43319892",
+        "afirika-54869181",
+        "42888923",
+        "afirika-43722285",
+        "afirika-49255201",
+        "afirika-46842291",
+        "afirika-49866872",
+        "media-50858649",
+        "afirika-44632971",
+        "43691453",
+        "49000702",
+        "afirika-43222497",
+        "49199966",
+        "afirika-44559061",
+        "afirika-45652821",
+        "afirika-48735844",
+        "afirika-47656070",
+        "afirika-47408743",
+        "egwuregwu-49872912",
+        "afirika-56250554",
+        "afirika-44249506",
+        "afirika-48245973",
+        "afirika-43992912",
+        "afirika-48362214",
+        "afirika-43341207",
+        "afirika-43175580",
+        "egwuregwu-50929015",
+        "media-44511089",
+        "afirika-44921863",
+        "afirika-43876263",
+        "afirika-49485707",
+        "afirika-52623406",
+        "afirika-43851456",
+        "afirika-50320810",
+        "45172297",
+        "media-52732570",
+        "afirika-49210092",
+        "afirika-43113320",
+        "afirika-49177629",
+        "afirika-49355359",
+        "afirika-49666502",
+        "afirika-48912737",
+        "45521524",
+        "afirika-43081943",
+        "afirika-47939590",
+        "afirika-43285490",
+        "afirika-48919107",
+        "afirika-51251701",
+        "afirika-44505471",
+        "afirika-43284821",
+        "afirika-46082480",
+        "afirika-45782249",
+        "afirika-45094443",
+        "afirika-43065405",
+        "afirika-43165956",
+        "afirika-50457342",
+        "afirika-50381568",
+        "egwuregwu-43130018",
+        "45977411",
+        "afirika-44036598",
+        "afirika-51217804",
+        "afirika-46866992",
+        "43068861",
+        "afirika-45024124",
+        "afirika-43644845",
+        "42789459",
+        "afirika-56629793",
+        "afirika-50198711",
+        "afirika-46504344",
+        "afirika-43899224",
+        "afirika-44346026",
+        "afirika-45325147",
+        "afirika-48702084",
+        "afirika-44105570",
+        "afirika-45506422",
+        "afirika-43819563",
+        "afirika-49447075",
+        "afirika-44327248",
+        "43396469",
+        "afirika-48340003",
+        "afirika-43099082",
+        "afirika-47824831",
+        "afirika-53149025",
+        "afirika-46182341",
+        "afirika-49341214",
+        "49254834",
+        "egwuregwu-45071280",
+        "afirika-46930646",
+        "afirika-45541163",
+        "afirika-45280125",
+        "45117283",
+        "egwuregwu-48548980",
+        "afirika-43390145",
+        "42814493",
+        "afirika-47346158",
+        "afirika-48633657",
+        "afirika-43166904",
+        "egwuregwu-44563304",
+        "mba-uba-46410599",
+        "afirika-43994069",
+        "afirika-45550241",
+        "afirika-48273330",
+        "43105669",
+        "42869280",
+        "afirika-44150482",
+        "afirika-45594771",
+        "afirika-43252809",
+        "afirika-47422200",
+        "afirika-43225679",
+        "afirika-47329205",
+        "afirika-44821757",
+        "45850694",
+        "afirika-56391521",
+        "afirika-50570988",
+        "media-43652860",
+        "media-48274074",
+        "afirika-43841475",
+        "43691451",
+        "afirika-45090756",
+        "afirika-50886854",
+        "egwuregwu-46710880",
+        "afirika-44689951",
+        "afirika-43131451",
+        "afirika-48264146",
+        "afirika-44143556",
+        "afirika-49996787",
+        "egwuregwu-43455137",
+        "afirika-45321725",
+        "afirika-50142434",
+        "egwuregwu-47783742",
+        "afirika-51961600",
+        "afirika-50668554",
+        "egwuregwu-44550657",
+        "afirika-46388057",
+        "afirika-44304646",
+        "44727336",
+        "afirika-44263474",
+        "afirika-43394008",
+        "afirika-44950341",
+        "afirika-49966977",
+        "42828765",
+        "afirika-43739384",
+        "afirika-44423394",
+        "afirika-46702345",
+        "afirika-44866100",
+        "afirika-44861735",
+        "afirika-51558840",
+        "afirika-45977410",
+        "45172291",
+        "afirika-44530716",
+        "afirika-47222780",
+        "afirika-49757400",
+        "afirika-45466279",
+        "46916037",
+        "afirika-46793649",
+        "afirika-44276868",
+        "afirika-44639849",
+        "afirika-56536409",
+        "afirika-44064500",
+        "afirika-48381486",
+        "media-49148562",
+        "afirika-56395306",
+        "afirika-44356777",
+        "43436618",
+        "afirika-43903626",
+        "afirika-50063100",
+        "afirika-48930333",
+        "afirika-52675212",
+        "afirika-57076193",
+        "afirika-44058207",
+        "afirika-45886190",
+        "48721531",
+        "egwuregwu-45535382",
+        "afirika-44110848",
+        "afirika-56312391",
+        "afirika-44001661",
+        "afirika-44287866",
+        "egwuregwu-43312905",
+        "afirika-47692135",
+        "afirika-44121957",
+        "afirika-46161672",
+        "afirika-46937995",
+        "afirika-45332883",
+        "afirika-49525292",
+        "mba-uba-43155178",
+        "afirika-44321099",
+        "afirika-44510822",
+        "afirika-50386378",
+        "afirika-47612628",
+        "43959088",
+        "43807312",
+        "afirika-53670371",
+        "afirika-43710699",
+        "afirika-48861995",
+        "mba-uba-44685826",
+        "afirika-56282949",
+        "afirika-47103477",
+        "afirika-43276117",
+        "afirika-46684679",
+        "afirika-46774123",
+        "afirika-46375823",
+        "egwuregwu-43054705",
+        "47758303",
+        "afirika-44200153",
+        "afirika-44367433",
+        "egwuregwu-49348946",
+        "afirika-43875991",
+        "43618445",
+        "42999660",
+        "46540954",
+        "afirika-44693654",
+        "afirika-45694934",
+        "afirika-44735873",
+        "49037197",
+        "afirika-43137715",
+        "afirika-43302003",
+        "afirika-44059942",
+        "afirika-45011178",
+        "afirika-49398178",
+        "afirika-43482313",
+        "afirika-48135426",
+        "46452918",
+        "afirika-46989321",
+        "afirika-43616973",
+        "afirika-43956087",
+        "afirika-44970373",
+        "afirika-52987469",
+        "afirika-46975940",
+        "egwuregwu-54131995",
+        "42869533",
+        "44135409",
+        "egwuregwu-43691454",
+        "afirika-45259164",
+        "afirika-49645028",
+        "afirika-43061394",
+        "afirika-45930108",
+        "afirika-44120769",
+        "afirika-49265765",
+        "afirika-46376101",
+        "afirika-45505883",
+        "afirika-48652545",
+        "42914501",
+        "afirika-49927844",
+        "afirika-50732220",
+        "afirika-45380903",
+        "afirika-49539406",
+        "afirika-49118917",
+        "afirika-45163527",
+        "afirika-56500832",
+        "afirika-50029973",
+        "afirika-46589863",
+        "afirika-45321722",
+        "afirika-44817616",
+        "afirika-45117733",
+        "egwuregwu-51633003",
+        "afirika-43848396",
+        "afirika-45081379",
+        "afirika-43793208",
+        "afirika-48751909",
+        "afirika-44598612",
+        "43861975",
+        "afirika-51500394",
+        "afirika-47532362",
+        "afirika-50835637",
+        "afirika-51520267",
+        "egwuregwu-50227969",
+        "afirika-46025129",
+        "afirika-47222784",
+        "afirika-44319386"
+      ]
+    },
+    {
+      "path": "sum_ssu/ha/test.jsonl",
+      "sources": [
+        {
+          "repo": "csebuetnlp/xlsum",
+          "revision": "ab04842511fc357feae53281fd104aa3c36dff07",
+          "file": "hausa/test/0000.parquet",
+          "sha256": "cd040aa5c18bd8aeb8c3c9713f551cdd150e9eaee0845ed14365b90e33d918e3"
+        },
+        {
+          "repo": "csebuetnlp/xlsum",
+          "revision": "ab04842511fc357feae53281fd104aa3c36dff07",
+          "file": "hausa/validation/0000.parquet",
+          "sha256": "ed8457c2ddba3e2f2f2b2e65ab7e40df2351f9fa5ac3709f8a96e9ff5ff1ac7b"
+        }
+      ],
+      "fields": [
+        "id",
+        "title",
+        "text",
+        "summary"
+      ],
+      "selection": "frozen_ids",
+      "count": 500,
+      "content_sha256": "cdebf17c89dc08ec67df6385f8000a02b9dba18ff6e62fecda340cba28f930ca",
+      "ids": [
+        "wasanni-46978269",
+        "140601_cameroon_germany",
+        "140331_liverpool_rodgers_title",
+        "wasanni-51299135",
+        "wasanni-51991740",
+        "130919_iran_nuclear",
+        "wasanni-51842240",
+        "wasanni-51650685",
+        "labarai-53326562",
+        "140401_liverpool_portsmouth",
+        "140704_germenysemis_wc2014",
+        "130929_guinea_parliamentary_election",
+        "130525_france_military_mali",
+        "wasanni-40821708",
+        "wasanni-51937355",
+        "130923_mdd_summit",
+        "120813_syria_helicopter",
+        "130709_liverpool_suarez_talks",
+        "labarai-45806334",
+        "wasanni-39040396",
+        "wasanni-37720464",
+        "wasanni-52086356",
+        "wasanni-53760112",
+        "wasanni-53142772",
+        "wasanni-44746087",
+        "140505_suarez_fwa_award",
+        "121220_french_nigeria_kidnap",
+        "130408_thatcher_reax",
+        "120709_mancini_city",
+        "130122_nijar_mali_troops",
+        "130203_faransa_nijar_areva",
+        "wasanni-56088092",
+        "labarai-38921621",
+        "wasanni-52870273",
+        "labarai-56317387",
+        "wasanni-52550172",
+        "120830_syria_plane",
+        "120720_van_persie_arsenal_transfer",
+        "140326_moyes_failure",
+        "labarai-52175342",
+        "140922_iran_saudia_relarioship",
+        "labarai-46132636",
+        "labarai-43626483",
+        "shirye-shirye-na-musamman-51421932",
+        "wasanni-56065880",
+        "140814_saudiya",
+        "labarai-53495047",
+        "labarai-43916678",
+        "wasanni-51466434",
+        "130129_niger_drone",
+        "wasanni-51349192",
+        "labarai-40059406",
+        "wasanni-54443340",
+        "wasanni-51623291",
+        "labarai-52199039",
+        "wasanni-54129415",
+        "wasanni-53269706",
+        "wasanni-50515251",
+        "140325_sirbobby_moyes",
+        "wasanni-42467418",
+        "wasanni-49946652",
+        "labarai-54397826",
+        "120818_egypt_mursi",
+        "54588134",
+        "wasanni-40097255",
+        "wasanni-56906246",
+        "wasanni-52347134",
+        "130902_syria_us",
+        "130525_syriaqusair",
+        "wasanni-56200890",
+        "wasanni-51638632",
+        "140702_liverpool_barca_suarez_talks",
+        "wasanni-51362015",
+        "wasanni-51479540",
+        "wasanni-51650681",
+        "wasanni-51481412",
+        "37857823",
+        "wasanni-51794056",
+        "labarai-46417760",
+        "wasanni-52840526",
+        "wasanni-55177809",
+        "wasanni-43534564",
+        "labarai-46621377",
+        "labarai-51493115",
+        "wasanni-51607523",
+        "wasanni-55953288",
+        "labarai-54052444",
+        "wasanni-55612150",
+        "140223_liverpool_swansea",
+        "wasanni-52565437",
+        "wasanni-42851818",
+        "130219_cameroon_kidnapp",
+        "wasanni-52970664",
+        "wasanni-52743369",
+        "labarai-44941429",
+        "labarai-51647449",
+        "wasanni-52204938",
+        "wasanni-48000843",
+        "47382795",
+        "wasanni-53240716",
+        "labarai-46938595",
+        "130520_nigeria_bh",
+        "wasanni-50360332",
+        "wasanni-52869832",
+        "wasanni-51578196",
+        "wasanni-50312275",
+        "wasanni-51466431",
+        "47152539",
+        "wasanni-51169602",
+        "140514_wenger_fa_cup",
+        "wasanni-54362290",
+        "wasanni-53990559",
+        "140417_manu_hernandez",
+        "labarai-44305043",
+        "121218_syria_un",
+        "labarai-46329615",
+        "wasanni-50921145",
+        "wasanni-54784782",
+        "labarai-39085500",
+        "140923_nigerianpremier_week28",
+        "51734626",
+        "wasanni-46862641",
+        "wasanni-51342386",
+        "labarai-48094568",
+        "wasanni-56420949",
+        "labarai-52199044",
+        "labarai-51516416",
+        "wasanni-53302696",
+        "140605_worldcup_fifarankings_wc2014",
+        "labarai-51504762",
+        "wasanni-48834933",
+        "wasanni-51450023",
+        "121205_nato_turkiyya",
+        "wasanni-51606555",
+        "wasanni-52894485",
+        "42009462",
+        "wasanni-53225494",
+        "labarai-45025815",
+        "130113_israelpalstine",
+        "38491045",
+        "wasanni-51650686",
+        "labarai-51945415",
+        "140629_suarez_comolli_wc2014",
+        "wasanni-50975929",
+        "121207_microsoft_sharingpage",
+        "labarai-44770014",
+        "wasanni-52233866",
+        "53185082",
+        "wasanni-41044102",
+        "45807430",
+        "wasanni-52400208",
+        "wasanni-56284790",
+        "labarai-41968254",
+        "wasanni-51077487",
+        "wasanni-55561912",
+        "140309_caf_raja",
+        "wasanni-49804615",
+        "wasanni-51828287",
+        "wasanni-51524662",
+        "wasanni-54963917",
+        "130113_france_mali_security",
+        "labarai-41706235",
+        "wasanni-54773077",
+        "labarai-51758753",
+        "150323_egypt_sudan_ethiopia_rivernile",
+        "wasanni-53043877",
+        "45885986",
+        "wasanni-52085852",
+        "wasanni-51564746",
+        "wasanni-52300801",
+        "wasanni-55295588",
+        "130921_syria_chemical_weapon",
+        "wasanni-55006723",
+        "wasanni-51606552",
+        "41618257",
+        "130718_ecowas_mali_election",
+        "labarai-50850409",
+        "130101_us_fiscal_talk_deal",
+        "wasanni-52774953",
+        "131028_g7govs_decampment",
+        "120823_syria_amurka_burtaniya",
+        "wasanni-54696063",
+        "wasanni-50879092",
+        "120827_samuel_eto_cameroon",
+        "wasanni-51650677",
+        "wasanni-52547793",
+        "140128_stokecity_odemwingie",
+        "wasanni-51053363",
+        "wasanni-51342248",
+        "labarai-46168134",
+        "labarai-46366745",
+        "wasanni-56881047",
+        "labarai-47385840",
+        "140611_kano_emir_not_inplace",
+        "140102_arsenal_bendrner_injury",
+        "labarai-46746835",
+        "wasanni-54330791",
+        "160619_senators_reps_pension_immunity",
+        "130107_ussecurty_nominees",
+        "wasanni-51712802",
+        "150108_nigeria_refugees_camps",
+        "50885144",
+        "labarai-50256271",
+        "wasanni-56173204",
+        "labarai-50000989",
+        "wasanni-56394822",
+        "labarai-47583687",
+        "labarai-49522649",
+        "wasanni-53749484",
+        "45648070",
+        "labarai-46316395",
+        "wasanni-49476441",
+        "labarai-49958682",
+        "wasanni-51096332",
+        "140704_brazil_semi_wc2014",
+        "wasanni-53312834",
+        "wasanni-56365663",
+        "130622_saudideaths",
+        "wasanni-51161633",
+        "wasanni-51743434",
+        "labarai-53668347",
+        "labarai-57016318",
+        "wasanni-52039451",
+        "wasanni-51554637",
+        "labarai-50891121",
+        "wasanni-40550379",
+        "labarai-47921280",
+        "labarai-46203465",
+        "labarai-49560027",
+        "wasanni-52804025",
+        "42127249",
+        "wasanni-53294110",
+        "wasanni-49449516",
+        "wasanni-49820295",
+        "labarai-45659940",
+        "wasanni-54216841",
+        "labarai-46169621",
+        "labarai-51425837",
+        "130304_syria_military_death",
+        "labarai-52456463",
+        "54679171",
+        "140110_jonathan_sanusi_dispute",
+        "52954199",
+        "wasanni-56046856",
+        "wasanni-52743364",
+        "wasanni-55387355",
+        "120809_egypt_changes",
+        "wasanni-56074617",
+        "labarai-50856090",
+        "labarai-42281893",
+        "labarai-44505121",
+        "labarai-50923504",
+        "labarai-51266479",
+        "120814_syria_collapsing",
+        "labarai-50113241",
+        "labarai-41945285",
+        "130902_france_syria_chemical",
+        "labarai-51689474",
+        "labarai-51897556",
+        "wasanni-51680612",
+        "wasanni-55988809",
+        "labarai-52984178",
+        "wasanni-51725858",
+        "wasanni-53300466",
+        "wasanni-55249613",
+        "labarai-44437811",
+        "labarai-51473719",
+        "labarai-41124209",
+        "labarai-45655123",
+        "wasanni-55353695",
+        "labarai-53035944",
+        "labarai-39661539",
+        "46094328",
+        "120830_egypt_syria",
+        "46923880",
+        "labarai-46682764",
+        "labarai-46457684",
+        "51715953",
+        "wasanni-51084289",
+        "labarai-51064000",
+        "wasanni-52727401",
+        "wasanni-56451123",
+        "wasanni-47434801",
+        "labarai-52700445",
+        "labarai-48978411",
+        "labarai-53481627",
+        "wasanni-51698304",
+        "wasanni-55037270",
+        "labarai-40023473",
+        "wasanni-49353190",
+        "labarai-52651198",
+        "53763299",
+        "37996171",
+        "130912_syria_assad_weapons",
+        "37615277",
+        "labarai-41970515",
+        "wasanni-56046849",
+        "labarai-54174838",
+        "130418_kano_gunmen",
+        "wasanni-52926423",
+        "wasanni-55901590",
+        "labarai-46659992",
+        "wasanni-49953988",
+        "131223_supereagles_pillars_friedly",
+        "wasanni-52124577",
+        "wasanni-55922864",
+        "labarai-53800004",
+        "wasanni-55120192",
+        "labarai-53088142",
+        "wasanni-55721715",
+        "wasanni-51525250",
+        "labarai-51590180",
+        "40232336",
+        "wasanni-49946656",
+        "labarai-49926850",
+        "wasanni-52475953",
+        "labarai-48697774",
+        "labarai-54609535",
+        "wasanni-55295583",
+        "wasanni-53814640",
+        "wasanni-55736440",
+        "labarai-46825411",
+        "130422_borno_baga_killings",
+        "wasanni-51362013",
+        "41015579",
+        "labarai-49010047",
+        "labarai-49387275",
+        "wasanni-53385156",
+        "labarai-50643284",
+        "wasanni-54650344",
+        "wasanni-51525246",
+        "wasanni-45907848",
+        "labarai-50172218",
+        "wasanni-55665289",
+        "wasanni-49643975",
+        "labarai-41333412",
+        "labarai-47637412",
+        "labarai-51892452",
+        "wasanni-50515254",
+        "wasanni-51251436",
+        "labarai-45974431",
+        "130717_india_food_poisining",
+        "41625829",
+        "wasanni-53213757",
+        "labarai-52181005",
+        "wasanni-49993297",
+        "labarai-53230909",
+        "labarai-49924589",
+        "wasanni-53054712",
+        "wasanni-51592504",
+        "130409_korea_joint_industry",
+        "labarai-50996363",
+        "38876634",
+        "labarai-46558474",
+        "labarai-45349096",
+        "120808_aleppo_intensefighting",
+        "labarai-56207555",
+        "wasanni-50993900",
+        "labarai-52304922",
+        "50795834",
+        "wasanni-54216245",
+        "labarai-40961702",
+        "labarai-52879365",
+        "51730206",
+        "wasanni-56102784",
+        "labarai-52743710",
+        "labarai-51947890",
+        "51008711",
+        "labarai-50995516",
+        "wasanni-56351476",
+        "labarai-52616119",
+        "wasanni-56337968",
+        "120810_egypt",
+        "50357277",
+        "wasanni-55973314",
+        "labarai-55269689",
+        "labarai-46411175",
+        "wasanni-51620791",
+        "labarai-51055782",
+        "wasanni-55736437",
+        "46905675",
+        "130101_us_fiscal_talks_deal",
+        "labarai-52677088",
+        "labarai-50374363",
+        "labarai-52249405",
+        "41357399",
+        "labarai-50759802",
+        "labarai-47225689",
+        "labarai-47685011",
+        "wasanni-56478893",
+        "labarai-40548996",
+        "labarai-47491657",
+        "130114_france_mali_fabius",
+        "wasanni-52984717",
+        "wasanni-54653845",
+        "wasanni-50538684",
+        "wasanni-38461336",
+        "labarai-51524222",
+        "wasanni-52401323",
+        "labarai-44902391",
+        "labarai-53691816",
+        "labarai-56481552",
+        "labarai-47985791",
+        "labarai-50656216",
+        "labarai-50956972",
+        "labarai-50935186",
+        "labarai-46532597",
+        "wasanni-49411607",
+        "wasanni-50649078",
+        "wasanni-52652744",
+        "wasanni-56148153",
+        "labarai-53154039",
+        "wasanni-48000013",
+        "50327982",
+        "wasanni-50485826",
+        "50980085",
+        "labarai-43028372",
+        "130212_keshi_nageria_confederation",
+        "wasanni-52445415",
+        "labarai-49089423",
+        "labarai-41372280",
+        "labarai-44955612",
+        "wasanni-54634749",
+        "labarai-42109477",
+        "37553195",
+        "wasanni-49602692",
+        "wasanni-51700099",
+        "wasanni-50035535",
+        "wasanni-54738803",
+        "labarai-49071752",
+        "labarai-56479754",
+        "130121_obama_second_term",
+        "wasanni-52477817",
+        "wasanni-51053366",
+        "labarai-42144328",
+        "wasanni-52579731",
+        "shirye-shirye-na-musamman-56943492",
+        "wasanni-52957133",
+        "labarai-44629834",
+        "labarai-38993285",
+        "wasanni-53122315",
+        "labarai-49346599",
+        "51253020",
+        "labarai-50402572",
+        "labarai-53417024",
+        "labarai-49935744",
+        "labarai-53419405",
+        "labarai-51803354",
+        "labarai-46175480",
+        "labarai-52726492",
+        "wasanni-53054704",
+        "wasanni-49595961",
+        "wasanni-51699525",
+        "47479457",
+        "46900418",
+        "wasanni-55891231",
+        "labarai-48972417",
+        "labarai-50306306",
+        "labarai-48965475",
+        "labarai-40548997",
+        "labarai-42214282",
+        "labarai-47043322",
+        "labarai-43481299",
+        "130906_g20_leaders_divided",
+        "labarai-51944157",
+        "labarai-50714360",
+        "47017769",
+        "121030_china_press",
+        "labarai-50335479",
+        "wasanni-51712805",
+        "55524124",
+        "wasanni-53771999",
+        "labarai-49630105",
+        "wasanni-51376762",
+        "labarai-54830918",
+        "labarai-50647607",
+        "labarai-46040716",
+        "50393792",
+        "140313_fifa_ranking",
+        "wasanni-45560254",
+        "wasanni-52825146",
+        "wasanni-56325631",
+        "shirye-shirye-na-musamman-57105792",
+        "labarai-52109816",
+        "wasanni-52894490",
+        "130424_amnesty_committee",
+        "47689805",
+        "labarai-53710905",
+        "wasanni-42257994",
+        "labarai-52642202",
+        "wasanni-55788643",
+        "labarai-45560564",
+        "labarai-51889772",
+        "labarai-44034224",
+        "labarai-52689670",
+        "wasanni-55177807",
+        "labarai-53540961",
+        "labarai-55967724",
+        "labarai-45446208",
+        "42749773"
+      ]
+    },
+    {
+      "path": "sum_ssu/ky/test.jsonl",
+      "sources": [
+        {
+          "repo": "csebuetnlp/xlsum",
+          "revision": "ab04842511fc357feae53281fd104aa3c36dff07",
+          "file": "kyrgyz/test/0000.parquet",
+          "sha256": "dbfd19d864fa995b50c238ee53a70a159e3aad1005d34047514b78b220cce5da"
+        },
+        {
+          "repo": "csebuetnlp/xlsum",
+          "revision": "ab04842511fc357feae53281fd104aa3c36dff07",
+          "file": "kyrgyz/validation/0000.parquet",
+          "sha256": "66c1629e1dd61caef72b3e968a074eb4a1e4c8363d960d4946bb81ba5df1f6b9"
+        }
+      ],
+      "fields": [
+        "id",
+        "title",
+        "text",
+        "summary"
+      ],
+      "selection": "frozen_ids",
+      "count": 500,
+      "content_sha256": "e7a1baabd23eadbb61921495485eba1ee9438c39527d1526497eaffe355d718e",
+      "ids": [
+        "world-39619854",
+        "38554974",
+        "world-38376013",
+        "world-52321817",
+        "kyrgyzstan-56181810",
+        "world-52804873",
+        "world-52291214",
+        "world-40640980",
+        "kyrgyzstan-38566543",
+        "world-44120252",
+        "world-40812404",
+        "world-40749947",
+        "world-51249188",
+        "50313384",
+        "world-50415692",
+        "world-51441220",
+        "world-39551441",
+        "world-46504948",
+        "world-53089033",
+        "kyrgyzstan-51499550",
+        "world-38566393",
+        "world-52767364",
+        "world-38741220",
+        "160113_litvinenko",
+        "kyrgyzstan-57304992",
+        "world-46015000",
+        "world-38728076",
+        "world-41383821",
+        "world-52767004",
+        "world-38579866",
+        "world-56493650",
+        "world-40323600",
+        "world-52469514",
+        "world-53970790",
+        "world-54956635",
+        "world-43299063",
+        "world-38691523",
+        "world-40103557",
+        "kyrgyzstan-55608213",
+        "world-38729750",
+        "world-49665733",
+        "world-55300669",
+        "world-49997080",
+        "world-55615367",
+        "world-39960512",
+        "world-38965487",
+        "world-56744206",
+        "world-56714542",
+        "kyrgyzstan-52981686",
+        "world-47649014",
+        "world-44940379",
+        "world-40921158",
+        "world-43307315",
+        "kyrgyzstan-55852848",
+        "world-53426748",
+        "48048810",
+        "world-38606547",
+        "world-53246087",
+        "magazine-40810757",
+        "kyrgyzstan-49580570",
+        "world-50135928",
+        "world-54705992",
+        "world-56067266",
+        "world-44817687",
+        "world-38795607",
+        "entertainment-52659990",
+        "world-53675718",
+        "world-39996411",
+        "world-55398442",
+        "world-48263800",
+        "world-42758315",
+        "world-51922987",
+        "kyrgyzstan-41495304",
+        "kyrgyzstan-52321820",
+        "world-40353068",
+        "world-55876706",
+        "51354380",
+        "world-38379694",
+        "kyrgyzstan-56658933",
+        "entertainment-43722347",
+        "kyrgyzstan-51867645",
+        "world-51834269",
+        "world-51814679",
+        "kyrgyzstan-40421560",
+        "world-38023841",
+        "160120_energy",
+        "in-depth-55187528",
+        "kyrgyzstan-54430785",
+        "160928_space",
+        "world-45675406",
+        "world-57331851",
+        "kyrgyzstan-49724289",
+        "c8zydkv4n50o",
+        "world-40346479",
+        "kyrgyzstan-52452673",
+        "world-55672506",
+        "world-49660184",
+        "52195860",
+        "world-53928875",
+        "entertainment-56331934",
+        "world-52500586",
+        "world-41761122",
+        "150428_atambaev_energy_issue",
+        "world-40810751",
+        "world-40553305",
+        "world-55570999",
+        "kyrgyzstan-49903086",
+        "kyrgyzstan-41635036",
+        "55157806",
+        "world-54008758",
+        "world-38048672",
+        "world-52468746",
+        "world-42133650",
+        "world-56453288",
+        "in-depth-42510300",
+        "world-52441602",
+        "kyrgyzstan-50504931",
+        "world-56151337",
+        "magazine-53763548",
+        "world-38338323",
+        "entertainment-41171128",
+        "world-55360405",
+        "world-39020204",
+        "cyr239j1m4lo",
+        "kyrgyzstan-56940859",
+        "kyrgyzstan-49080256",
+        "world-41439465",
+        "kyrgyzstan-49645638",
+        "world-41252073",
+        "world-54285848",
+        "world-55328947",
+        "world-56250327",
+        "world-53720608",
+        "world-37937371",
+        "world-44394422",
+        "world-50898856",
+        "kyrgyzstan-53317585",
+        "world-38716436",
+        "world-51834275",
+        "world-39690731",
+        "kyrgyzstan-51193339",
+        "140925_batukaev",
+        "world-47303731",
+        "world-53061005",
+        "world-42601515",
+        "magazine-43919283",
+        "world-42884251",
+        "world-50471902",
+        "world-53147416",
+        "world-42390718",
+        "39945441",
+        "world-54336719",
+        "kyrgyzstan-54889303",
+        "kyrgyzstan-56276015",
+        "world-52845976",
+        "world-47354413",
+        "magazine-50709938",
+        "world-55016883",
+        "entertainment-47208369",
+        "world-49903723",
+        "world-39893866",
+        "world-53605541",
+        "world-48591821",
+        "world-57270229",
+        "world-42348837",
+        "world-53304413",
+        "magazine-42149423",
+        "world-56815252",
+        "world-46969387",
+        "world-54872375",
+        "entertainment-56250328",
+        "magazine-52060466",
+        "kyrgyzstan-51044783",
+        "world-54688745",
+        "kyrgyzstan-43086774",
+        "world-52030967",
+        "magazine-52413681",
+        "kyrgyzstan-56025416",
+        "world-50040924",
+        "world-47404179",
+        "world-53317502",
+        "kyrgyzstan-54475983",
+        "world-45813300",
+        "world-53635833",
+        "world-53845280",
+        "world-52589594",
+        "magazine-44380555",
+        "kyrgyzstan-57342384",
+        "world-53591627",
+        "world-55631475",
+        "world-41799835",
+        "world-54023731",
+        "160712_van_kyrgyzy",
+        "kyrgyzstan-54465323",
+        "kyrgyzstan-42856434",
+        "entertainment-44625209",
+        "world-52990111",
+        "magazine-40674130",
+        "world-42942136",
+        "kyrgyzstan-41897038",
+        "kyrgyzstan-46347561",
+        "world-54008816",
+        "magazine-52902047",
+        "kyrgyzstan-54997469",
+        "world-53816833",
+        "world-53089029",
+        "world-40270283",
+        "world-52917193",
+        "magazine-50231698",
+        "entertainment-53419936",
+        "entertainment-43735908",
+        "world-51145785",
+        "world-45041898",
+        "world-53019674",
+        "world-51925265",
+        "world-55707188",
+        "world-47053466",
+        "world-54869309",
+        "kyrgyzstan-52002744",
+        "50724715",
+        "world-54748213",
+        "magazine-54252401",
+        "150224_rahat_aliev_suicide",
+        "world-53414843",
+        "entertainment-52452674",
+        "world-42262086",
+        "kyrgyzstan-56707930",
+        "world-45900824",
+        "kyrgyzstan-53605547",
+        "cz52090g7l0o",
+        "kyrgyzstan-46902484",
+        "world-42659052",
+        "world-53934937",
+        "magazine-52104317",
+        "world-52817227",
+        "world-50371947",
+        "52703323",
+        "magazine-55570713",
+        "world-52001999",
+        "kyrgyzstan-50430915",
+        "world-39300563",
+        "world-53634749",
+        "world-49261125",
+        "kyrgyzstan-47538311",
+        "world-50626620",
+        "world-53216676",
+        "kyrgyzstan-51005657",
+        "kyrgyzstan-53748455",
+        "kyrgyzstan-43559376",
+        "kyrgyzstan-52751634",
+        "world-50010833",
+        "world-43848746",
+        "world-42248102",
+        "kyrgyzstan-52804865",
+        "world-39051691",
+        "world-53147385",
+        "entertainment-53591535",
+        "world-46534935",
+        "world-54915918",
+        "world-56695169",
+        "world-52934014",
+        "world-54957553",
+        "kyrgyzstan-45979260",
+        "kyrgyzstan-57238077",
+        "kyrgyzstan-55241915",
+        "magazine-48837146",
+        "world-55398441",
+        "world-43725646",
+        "world-41680957",
+        "world-52378725",
+        "world-54083682",
+        "kyrgyzstan-54806960",
+        "world-39598893",
+        "kyrgyzstan-52629053",
+        "world-45482887",
+        "world-54748215",
+        "world-42276474",
+        "world-50945060",
+        "world-47864732",
+        "kyrgyzstan-52134511",
+        "kyrgyzstan-42775018",
+        "blog-53515238",
+        "kyrgyzstan-43166684",
+        "world-47479297",
+        "world-39000941",
+        "kyrgyzstan-42162727",
+        "entertainment-55884129",
+        "world-55733655",
+        "world-55425541",
+        "magazine-50135925",
+        "kyrgyzstan-52380749",
+        "kyrgyzstan-54520598",
+        "kyrgyzstan-50821254",
+        "world-52541991",
+        "kyrgyzstan-54445439",
+        "world-53246085",
+        "kyrgyzstan-50728638",
+        "world-51717462",
+        "world-51961389",
+        "world-52539925",
+        "kyrgyzstan-45433556",
+        "kyrgyzstan-42370175",
+        "world-55097885",
+        "kyrgyzstan-52061617",
+        "world-56112830",
+        "kyrgyzstan-40525096",
+        "world-51765278",
+        "magazine-44157412",
+        "kyrgyzstan-41160423",
+        "world-56856218",
+        "magazine-54875463",
+        "magazine-48879090",
+        "entertainment-50945052",
+        "kyrgyzstan-53819136",
+        "world-53060993",
+        "world-40472248",
+        "magazine-51193522",
+        "world-48674879",
+        "world-53321571",
+        "world-55012547",
+        "world-43696063",
+        "kyrgyzstan-54641507",
+        "kyrgyzstan-41591734",
+        "kyrgyzstan-53605546",
+        "world-48019631",
+        "world-52542005",
+        "world-56152221",
+        "magazine-48864591",
+        "world-46644422",
+        "kyrgyzstan-56084823",
+        "kyrgyzstan-50400690",
+        "world-54100482",
+        "world-54023735",
+        "world-55542152",
+        "world-55257720",
+        "world-44207472",
+        "world-39947241",
+        "kyrgyzstan-53050694",
+        "world-56426205",
+        "world-50808160",
+        "world-56181808",
+        "kyrgyzstan-56926641",
+        "world-51398938",
+        "world-46644420",
+        "world-38741218",
+        "world-55097883",
+        "entertainment-43238766",
+        "world-48850530",
+        "kyrgyzstan-42659901",
+        "world-53747922",
+        "kyrgyzstan-50623866",
+        "world-54821106",
+        "world-51703061",
+        "world-42771678",
+        "world-53261505",
+        "world-42162666",
+        "magazine-44380558",
+        "kyrgyzstan-45117043",
+        "entertainment-43972594",
+        "world-49806977",
+        "world-54715849",
+        "kyrgyzstan-53556256",
+        "kyrgyzstan-41882562",
+        "kyrgyzstan-46920919",
+        "world-38093726",
+        "magazine-38687254",
+        "41425209",
+        "kyrgyzstan-52196432",
+        "world-42532629",
+        "world-53578123",
+        "world-51923214",
+        "world-56412043",
+        "world-55729246",
+        "world-46368458",
+        "world-54382852",
+        "kyrgyzstan-52890271",
+        "world-40305506",
+        "world-44250250",
+        "world-54201592",
+        "kyrgyzstan-53060355",
+        "magazine-51831448",
+        "kyrgyzstan-56968573",
+        "world-53660851",
+        "kyrgyzstan-44193805",
+        "world-54158362",
+        "entertainment-43203325",
+        "world-50980393",
+        "kyrgyzstan-51959493",
+        "world-43667927",
+        "kyrgyzstan-53569103",
+        "world-38989343",
+        "world-52270049",
+        "world-55792182",
+        "kyrgyzstan-51145651",
+        "kyrgyzstan-51030366",
+        "kyrgyzstan-57023684",
+        "world-55472592",
+        "world-47113160",
+        "world-41145146",
+        "world-53690376",
+        "world-43806490",
+        "magazine-45570633",
+        "131111_blog_azamat_baatai",
+        "magazine-55183388",
+        "world-51218082",
+        "kyrgyzstan-55930106",
+        "world-55464027",
+        "world-55156397",
+        "world-40363732",
+        "world-49480311",
+        "53364386",
+        "entertainment-52362228",
+        "world-44963400",
+        "kyrgyzstan-50547729",
+        "world-52673383",
+        "entertainment-56493929",
+        "world-52001310",
+        "world-52000231",
+        "kyrgyzstan-47455459",
+        "world-39024997",
+        "world-52961977",
+        "kyrgyzstan-48674882",
+        "world-55584699",
+        "world-45570341",
+        "world-55914990",
+        "world-54054371",
+        "world-54144885",
+        "world-56412041",
+        "world-53075118",
+        "kyrgyzstan-42944195",
+        "blog-53265612",
+        "kyrgyzstan-50208781",
+        "51569156",
+        "kyrgyzstan-52845978",
+        "world-44721235",
+        "kyrgyzstan-52528232",
+        "world-57326544",
+        "kyrgyzstan-43735931",
+        "kyrgyzstan-56402822",
+        "kyrgyzstan-43837974",
+        "kyrgyzstan-49180034",
+        "kyrgyzstan-42621538",
+        "magazine-50135927",
+        "kyrgyzstan-48991541",
+        "world-52874029",
+        "world-45563844",
+        "kyrgyzstan-56250481",
+        "kyrgyzstan-56493653",
+        "world-55298969",
+        "kyrgyzstan-45945384",
+        "world-50135900",
+        "magazine-46209484",
+        "56707931",
+        "kyrgyzstan-50223495",
+        "kyrgyzstan-53486380",
+        "world-41693004",
+        "world-45558728",
+        "magazine-48741822",
+        "kyrgyzstan-41322828",
+        "57270228",
+        "world-52962594",
+        "kyrgyzstan-44572226",
+        "world-54352705",
+        "magazine-43166685",
+        "world-54240934",
+        "kyrgyzstan-47199766",
+        "world-42162657",
+        "world-55344685",
+        "kyrgyzstan-48230310",
+        "world-52499293",
+        "world-53550993",
+        "world-53019678",
+        "kyrgyzstan-42730312",
+        "world-53523812",
+        "magazine-43848747",
+        "world-40440999",
+        "entertainment-55211886",
+        "c41865grdrro",
+        "kyrgyzstan-55127390",
+        "world-45889087",
+        "magazine-51765282",
+        "kyrgyzstan-53891630",
+        "magazine-42575542",
+        "world-45328282",
+        "magazine-50754369",
+        "world-55930107",
+        "kyrgyzstan-56940860",
+        "kyrgyzstan-53010873",
+        "entertainment-43580479",
+        "kyrgyzstan-48430001",
+        "kyrgyzstan-56899039",
+        "magazine-46943023",
+        "world-56658930",
+        "kyrgyzstan-48640698",
+        "kyrgyzstan-46519448",
+        "kyrgyzstan-44105780",
+        "world-51486125",
+        "world-48523929",
+        "kyrgyzstan-46436446",
+        "world-38193959"
+      ]
+    },
+    {
+      "path": "belebele/eng_Latn/test.jsonl",
+      "sources": [
+        {
+          "repo": "facebook/belebele",
+          "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+          "file": "data/eng_Latn.jsonl",
+          "sha256": "15af884c2b5994fdc71199e79d553a1864b08ce1b31894aa87f6be925a064a31"
+        }
+      ],
+      "fields": [
+        "flores_passage",
+        "question",
+        "mc_answer1",
+        "mc_answer2",
+        "mc_answer3",
+        "mc_answer4",
+        "correct_answer_num"
+      ],
+      "selection": "all",
+      "count": 900,
+      "content_sha256": "358ade2233a15fe7da64a07c0e4d81b38b6f78682c781e2bd924dee195cafaaa"
+    },
+    {
+      "path": "belebele/ibo_Latn/test.jsonl",
+      "sources": [
+        {
+          "repo": "facebook/belebele",
+          "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+          "file": "data/ibo_Latn.jsonl",
+          "sha256": "269307012c915a86d59d81f58a732c275f3dbd95b507e2a8e1c47662fda0a9aa"
+        }
+      ],
+      "fields": [
+        "flores_passage",
+        "question",
+        "mc_answer1",
+        "mc_answer2",
+        "mc_answer3",
+        "mc_answer4",
+        "correct_answer_num"
+      ],
+      "selection": "all",
+      "count": 900,
+      "content_sha256": "a68727cc2ccb76dc8047650afcba6806d96c9070e0eea6bd3a6ac6c9863e5853"
+    },
+    {
+      "path": "mt_flores_ssu_9langs/dev.jsonl",
+      "sources": [
+        {
+          "repo": "yash9439/flores200",
+          "revision": "3c6628a4571f383d029d6e897a89ac953ae756d3",
+          "file": "dev.parquet",
+          "sha256": "024301782a6ae84962bef679dd994f84ea46062d92dd379d14ff8df9f244aca2"
+        }
+      ],
+      "fields": [
+        "en",
+        "ig"
+      ],
+      "selection": "all",
+      "count": 997,
+      "content_sha256": "909c495f999eeb7649e333394c7c936a07dc27ee89a5bc47e2913e5eca5c685e",
+      "rename": {
+        "en": "eng_Latn",
+        "ig": "ibo_Latn"
+      }
+    },
+    {
+      "path": "mt_flores_ssu_9langs/test.jsonl",
+      "sources": [
+        {
+          "repo": "yash9439/flores200",
+          "revision": "3c6628a4571f383d029d6e897a89ac953ae756d3",
+          "file": "devtest.parquet",
+          "sha256": "37adade6f0174c18b1169721196ae22d6294157c46d9d77f4b2152afa0d5d2b5"
+        }
+      ],
+      "fields": [
+        "en",
+        "ig"
+      ],
+      "selection": "pandas_sample_500_seed42",
+      "count": 500,
+      "content_sha256": "64b5bc1bae84d1aa9452f87c8e19c1367108f24dee3542e24856c6ce8366c2bc",
+      "rename": {
+        "en": "eng_Latn",
+        "ig": "ibo_Latn"
+      }
+    },
+    {
+      "path": "gmmlu/ig/dev.jsonl",
+      "sources": [
+        {
+          "repo": "CohereForAI/Global-MMLU",
+          "revision": "0e619dbeb34206cd48705a1a0ea7fb21cae09993",
+          "file": "ig/dev-00000-of-00001.parquet",
+          "sha256": "cdf7a59f2da4796dc8fb0b2ec26e2e68a844fa187ef8607641151394e5283a83"
+        }
+      ],
+      "fields": [
+        "subject",
+        "question",
+        "option_a",
+        "option_b",
+        "option_c",
+        "option_d",
+        "answer"
+      ],
+      "selection": "all",
+      "count": 285,
+      "content_sha256": "a96ff1275effef667079a90963ab1571d5679a5d3985cd9b5589f3c91f1ddc05"
+    },
+    {
+      "path": "gmmlu/ig/test.jsonl",
+      "sources": [
+        {
+          "repo": "CohereForAI/Global-MMLU",
+          "revision": "0e619dbeb34206cd48705a1a0ea7fb21cae09993",
+          "file": "ig/test-00000-of-00001.parquet",
+          "sha256": "21e5352d4a823b033d217be65d698d6552bf4dd3dfb53140c8cc29ebb80f803b"
+        }
+      ],
+      "fields": [
+        "subject",
+        "question",
+        "option_a",
+        "option_b",
+        "option_c",
+        "option_d",
+        "answer"
+      ],
+      "selection": "all",
+      "count": 14042,
+      "content_sha256": "d64524e60ac722c29733faf4dc88c1e1e63cb72b0d975443483a21aa909db393"
+    },
+    {
+      "path": "mmlu/abstract_algebra/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "abstract_algebra/test-00000-of-00001.parquet",
+          "sha256": "2d2cc95a39503ecbd1999b674894c9579dd3244aa76a9e525bbf19bb990f6720"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "3847c2c3f9e15bd9359af4125be519da267ddbd7a5caa3665b6e528c73a47bf8"
+    },
+    {
+      "path": "mmlu/abstract_algebra/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "abstract_algebra/validation-00000-of-00001.parquet",
+          "sha256": "972bb7cf0abab41ee11dbdacdc3e6f26a93dc911205216ed6b3de1da98e385a8"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "63c3b40e3d0dae190a2d73d74d8016ae81a278bd5b499643b75841ed331eebb0"
+    },
+    {
+      "path": "mmlu/anatomy/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "anatomy/test-00000-of-00001.parquet",
+          "sha256": "2322eec0d77992b8ea97c6bef6a7c7696f1c83ed0125b8dab65eba889d9569c3"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 135,
+      "content_sha256": "834b686ac2cd23dd6a417f6042e8615ddc73017e15b9a93a163df906240bbd4b"
+    },
+    {
+      "path": "mmlu/anatomy/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "anatomy/validation-00000-of-00001.parquet",
+          "sha256": "a6458974e0a2fb2e4885be0c27dc04a7091b9084869def767784ecce1a32ef56"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 14,
+      "content_sha256": "48ba85929b6c0110ed264691a531941e1e7427c6ad60fdda1b1a31a4b84fd3bf"
+    },
+    {
+      "path": "mmlu/astronomy/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "astronomy/test-00000-of-00001.parquet",
+          "sha256": "097742de0ec4687bd0cd8eb86a9fb38f3fe3498dca45d4cb09f630badc1d5598"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 152,
+      "content_sha256": "ca522243aa1916f8d784187dc464ac038066aed28306cd2f4298cd4d55689736"
+    },
+    {
+      "path": "mmlu/astronomy/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "astronomy/validation-00000-of-00001.parquet",
+          "sha256": "16eb5b3b1ca9c64c195238e33c8b0cac1f2e5b606198398d5b8bb445864465f7"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 16,
+      "content_sha256": "13665dbf5ce7b4fbbfc14e59bffdc66f9a874281c43ea6eb8d8baeed5fd5d0e7"
+    },
+    {
+      "path": "mmlu/business_ethics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "business_ethics/test-00000-of-00001.parquet",
+          "sha256": "99d34fcaf6a31f7462bf3fad2432903796a2f0672467c0cfde6e8608d4f10faf"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "37bc72f90db6919fe18821dc86d7eff756a74c304d81ff99167733300d80d4f8"
+    },
+    {
+      "path": "mmlu/business_ethics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "business_ethics/validation-00000-of-00001.parquet",
+          "sha256": "2bb543d985898fd2630a67f02a449e5d3308ed91bc3ba52374ef74cab013cf0d"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "112027da0fe83fd3c1cc0ebab098aeac6915db1fae815ed9dbb7f930652deb21"
+    },
+    {
+      "path": "mmlu/clinical_knowledge/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "clinical_knowledge/test-00000-of-00001.parquet",
+          "sha256": "81a74fd1121699ebbdbe8c6f44a4efe4577aa8792bca091c7094be09896a2e36"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 265,
+      "content_sha256": "fc6d4d450d00433b5ac03ffb7315eb5dbd31c8fa78937830441bc2a0dbc562ac"
+    },
+    {
+      "path": "mmlu/clinical_knowledge/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "clinical_knowledge/validation-00000-of-00001.parquet",
+          "sha256": "66a168f080bf08d4d18b9ec0db2a0416328b228e321dca24ea116ae931f8e79f"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 29,
+      "content_sha256": "22e81f20f77079b7ac08c09fc87114c67784b6cc06eeb7190b05d35e262ec0d2"
+    },
+    {
+      "path": "mmlu/college_biology/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_biology/test-00000-of-00001.parquet",
+          "sha256": "7b8e52220d1bf042201cb71e25a47d9cdf818ee4541f67205872f58e4b7d3201"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 144,
+      "content_sha256": "2f2fbd2ff015131bb77205cffc9c493d1480eebb99b275b684b90d7bb7d8fc75"
+    },
+    {
+      "path": "mmlu/college_biology/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_biology/validation-00000-of-00001.parquet",
+          "sha256": "bb05d5f5c78a0e7d7c4bd6d0044e39888df40b576b5a9e615bc37904b29bae91"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 16,
+      "content_sha256": "96ede6c7c076e8ba9afd5acdad2fa286325cd78a72e057753df0508d3a22869a"
+    },
+    {
+      "path": "mmlu/college_chemistry/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_chemistry/test-00000-of-00001.parquet",
+          "sha256": "e1d9477056f186d4942cb96b56b3bf084ab9f90a4204bdf977d78370d10ed7c8"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "6cebd20cf01fc45f1e53fbdc8431aa0db755dddfb1891868e9b64c2af7a5d008"
+    },
+    {
+      "path": "mmlu/college_chemistry/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_chemistry/validation-00000-of-00001.parquet",
+          "sha256": "9c9d41e406c94bce386f9984c8ac1d6d96b8b384dc2ff602bb29082ad0d1209b"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 8,
+      "content_sha256": "874b7d3b289380130e26a68f8a9e72b0b1e9c919c2a92d7271206be70785efba"
+    },
+    {
+      "path": "mmlu/college_computer_science/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_computer_science/test-00000-of-00001.parquet",
+          "sha256": "b8685a45ae7f9224840bd39704512f7389e671ab5a40e5fbabc93cbba27013b5"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "4d06f413ccd54dc0d45d2dc6b3476a46e12141dc589851a0419ad92ca2c69a5b"
+    },
+    {
+      "path": "mmlu/college_computer_science/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_computer_science/validation-00000-of-00001.parquet",
+          "sha256": "b7317ea44dfcfc8b66dddfe53618421add2e507d1a6736f85b12449828de0c63"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "5f408f59da2925af3f1daf9751f0149872754b62be593e69a142cd82d71d2b50"
+    },
+    {
+      "path": "mmlu/college_mathematics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_mathematics/test-00000-of-00001.parquet",
+          "sha256": "33d15bfa8968d680f3fe8278209aa0e1efad9921a392d5d9528d2d3a4afe831f"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "259673e5b2c23ad33d6b5d7c8446062998cbe3534333211e938c002974275ed1"
+    },
+    {
+      "path": "mmlu/college_mathematics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_mathematics/validation-00000-of-00001.parquet",
+          "sha256": "02c938bd6d1e498788ab7c68aa2d039675bb91e3c5649d3be3c970cd4a298278"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "3f24c0e4556f2d99fd7f749215dde6c690d17de2d9076889a358619859296d4b"
+    },
+    {
+      "path": "mmlu/college_medicine/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_medicine/test-00000-of-00001.parquet",
+          "sha256": "a9bbba81068109cc5caf6235b16c494f2f1e58cfdc0e88a1767514c4da7c0435"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 173,
+      "content_sha256": "eb7c0d9e88a110d13a625a8aede231954bc1b747b5798eef74fdbf5966b5ce3e"
+    },
+    {
+      "path": "mmlu/college_medicine/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_medicine/validation-00000-of-00001.parquet",
+          "sha256": "4c086dcf941908b34711d65032646c349fa15c83681cd8ec99a04271a334a784"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 22,
+      "content_sha256": "718778b5672e68fe6a66280cbb8de986f6ea417bfe7485b1a65037cb90e9fd0d"
+    },
+    {
+      "path": "mmlu/college_physics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_physics/test-00000-of-00001.parquet",
+          "sha256": "11d068a92d8690700e8b5db5efa4c3c1215e3b27870ec83ff2675e1a58a30f0a"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 102,
+      "content_sha256": "ebe139965ff95d3bc16a5492fc82b90788f69867fbe8d5d1bc56861cc522adde"
+    },
+    {
+      "path": "mmlu/college_physics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "college_physics/validation-00000-of-00001.parquet",
+          "sha256": "3accba591a12e012a5d2aad7346559d48039e65c591c14a815e3cfc6b85789cb"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "6a8202a21370e5ab13f1df6f10bdc7bb17e35434c409e0d1fa08be691fdf54fe"
+    },
+    {
+      "path": "mmlu/computer_security/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "computer_security/test-00000-of-00001.parquet",
+          "sha256": "3f55080db8cca9b9542bcf695b032495d0623e5f796a9349756bdd58c3962ca7"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "c5090424a259b37350f5c609be663cea15e1ba5b40e0b26b6d0ffd24a1d645fb"
+    },
+    {
+      "path": "mmlu/computer_security/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "computer_security/validation-00000-of-00001.parquet",
+          "sha256": "381b548c745e1e1b51a48b74cd4c6b94a545bba92efe74d31d5aad189e2fd9f9"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "6045e2a1b6e46e28dd464a5ddb16bedc690704af35694fa7731f22bf030e6338"
+    },
+    {
+      "path": "mmlu/conceptual_physics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "conceptual_physics/test-00000-of-00001.parquet",
+          "sha256": "0d51a8ef47faab439431166fe5a0f4fc92737b586a6b3478f6a0d356ed98610f"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 235,
+      "content_sha256": "e975729bf9f3ff178d7eb0d7e27fba8d21ffcfe9759d181d18bba0c82ae549cb"
+    },
+    {
+      "path": "mmlu/conceptual_physics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "conceptual_physics/validation-00000-of-00001.parquet",
+          "sha256": "19a7f8cc46582c827b2f915679e957cb3a0087ed6229b65b0a0693827bd1472a"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 26,
+      "content_sha256": "b8ac332821c40f2a81ab61f8f9a56dfcc19f447836bb218480ea7eb1435c5ac0"
+    },
+    {
+      "path": "mmlu/econometrics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "econometrics/test-00000-of-00001.parquet",
+          "sha256": "61c74a3ac87861d3d9ac8988a290ef3ae87d3e1e457c206cd228d4f928dbded5"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 114,
+      "content_sha256": "42b247b57339340ff8476b3227874b2ffbac35ac3ce4838eb5c67415a42c8da7"
+    },
+    {
+      "path": "mmlu/econometrics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "econometrics/validation-00000-of-00001.parquet",
+          "sha256": "69f193e86b02399d1dd7be0726f1329abd1ffd46c4acd767d4dd7d935cc6181c"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 12,
+      "content_sha256": "07931cfba0a30c592cef6c8628af1906a3bc25eaee32ce106f6999ef352be96b"
+    },
+    {
+      "path": "mmlu/electrical_engineering/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "electrical_engineering/test-00000-of-00001.parquet",
+          "sha256": "7e054f96d3fc5ce6c672388492d2eecc1ccc1bf67a27487b73e66801a8b14f6b"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 145,
+      "content_sha256": "4fc9fb338d8986723a4424db0e105ed19f6be208d8440af7ba3d9a8a4cdaa55e"
+    },
+    {
+      "path": "mmlu/electrical_engineering/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "electrical_engineering/validation-00000-of-00001.parquet",
+          "sha256": "ef29134b3fd101d2bbcc5e57dd40b23857e7b4aab0d8aa82cfed19c9e11cbe59"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 16,
+      "content_sha256": "ed290e12cb5d98b57e98d4ec707688776a53e51e67f7c962f42d7067321a4845"
+    },
+    {
+      "path": "mmlu/elementary_mathematics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "elementary_mathematics/test-00000-of-00001.parquet",
+          "sha256": "10e527669c820dfcfcacc7c73a597bcb4b34f542b1d14b94cc809cb6a1409d42"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 378,
+      "content_sha256": "84f410496536cd6e79f81c7f6526207bc41710a70046d7984a17003352769e5d"
+    },
+    {
+      "path": "mmlu/elementary_mathematics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "elementary_mathematics/validation-00000-of-00001.parquet",
+          "sha256": "8c418d15f743a60cbb9110219e1fb58a3ec89bec32522d6f71baed46d9cf83e7"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 41,
+      "content_sha256": "383b582061ebd17d5ede7df45fd7112820a36ed6e09939782d37d65ac38e8323"
+    },
+    {
+      "path": "mmlu/formal_logic/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "formal_logic/test-00000-of-00001.parquet",
+          "sha256": "d7ff87d93c73f2cab23472197a523c78500f34a3a57bbe7b2132c8bc04e7c564"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 126,
+      "content_sha256": "7f4f50c02afb6217ae41b66849f65c7f2809ec9bfe98be6298e51a89b95bfa87"
+    },
+    {
+      "path": "mmlu/formal_logic/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "formal_logic/validation-00000-of-00001.parquet",
+          "sha256": "a61a06947bccf7e0cea7e8b0b13e9f5c9479f42dac3424a17dadb7dd7a8e1b30"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 14,
+      "content_sha256": "491134be497d154a47d1db0e9ad15ced6070c92bc501a33f938a354ba0ef42ee"
+    },
+    {
+      "path": "mmlu/global_facts/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "global_facts/test-00000-of-00001.parquet",
+          "sha256": "3498c1b25d1186eef7874e9eed9cf1855c8ab21218ce12a18841dcbe229a92f0"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "95162c4682def786029d887e77252128154ff1d4deeb5ac0217f39e120208a18"
+    },
+    {
+      "path": "mmlu/global_facts/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "global_facts/validation-00000-of-00001.parquet",
+          "sha256": "f331cc680b84e36e2ba3c105218be43e245406bdcf4341139bd5b8f91655e5e8"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 10,
+      "content_sha256": "ca1bb790558997559038351af62b4d215440c39b5e89869d68b56338f3b45809"
+    },
+    {
+      "path": "mmlu/high_school_biology/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_biology/test-00000-of-00001.parquet",
+          "sha256": "7fdeafef04c133837a83b80ce266e11427e3d7148becb1f3ef790affb6493ca3"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 310,
+      "content_sha256": "61cf707eccda526059287bc750da22a01ce3d6f6944deb73fb772c3bb7059024"
+    },
+    {
+      "path": "mmlu/high_school_biology/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_biology/validation-00000-of-00001.parquet",
+          "sha256": "3eaaca39dcb2506a3bb2bab1dfe0883f9e6a7b5275dbf3e8a50ce547bb2155b3"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 32,
+      "content_sha256": "20e4acfbe75e375b5baeb000475530cd6387ba8a964deed9a57e81c0b2481fd5"
+    },
+    {
+      "path": "mmlu/high_school_chemistry/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_chemistry/test-00000-of-00001.parquet",
+          "sha256": "fe69bd95f60bb1807fb56d3545356335fca94d8afd328c7889f7d31df0b1f547"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 203,
+      "content_sha256": "cec6566765d1c0f6855abe2153f59166d848d0fe848f03f06d67934645d6f566"
+    },
+    {
+      "path": "mmlu/high_school_chemistry/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_chemistry/validation-00000-of-00001.parquet",
+          "sha256": "02ec824dfa49416d7f43a54ea688e49eda36b78f91b999f5c51d1faf3545dd03"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 22,
+      "content_sha256": "d7dc05a4432992174d782ec3c5998b7cd9895667d099df159196489924feb1e4"
+    },
+    {
+      "path": "mmlu/high_school_computer_science/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_computer_science/test-00000-of-00001.parquet",
+          "sha256": "9ece9b1a9af50face567f315d461694ae2a65de8b56d8a5e79d828148add8530"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "459820cbf63cc76fef141ad27dc35d2855cdaf1dd3f8b1a351d58d3334ce3897"
+    },
+    {
+      "path": "mmlu/high_school_computer_science/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_computer_science/validation-00000-of-00001.parquet",
+          "sha256": "778320a9d3cb87712a5ccc2f70c4558a2d9c64e157df54ae91ab94ef9df7d1cf"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 9,
+      "content_sha256": "241cbdf0db3a179102b8c5eb570bcaabaa3ed1c08671568cf62018f3420307f3"
+    },
+    {
+      "path": "mmlu/high_school_european_history/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_european_history/test-00000-of-00001.parquet",
+          "sha256": "dfcd59174317aa9e7e22efc58db624fe8f5eab64e3b205face0427f11835b13e"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 165,
+      "content_sha256": "5a9e0df7aa677ae67b5f49a90ea63d24377de9926b4c5383358ccc302a58c833"
+    },
+    {
+      "path": "mmlu/high_school_european_history/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_european_history/validation-00000-of-00001.parquet",
+          "sha256": "ab18763d2d6d07a189d4b3fbf9b296f6250672648307e59525f8108e63c24799"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 18,
+      "content_sha256": "ad36ee3de6edf04002d109be305960263211d2d8c186a70919d46b965d0c92bd"
+    },
+    {
+      "path": "mmlu/high_school_geography/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_geography/test-00000-of-00001.parquet",
+          "sha256": "c0c819342bf1f221b63e3495d1c4cfe876407ab78b1497fd5c179c1c58ac6362"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 198,
+      "content_sha256": "d163046e471f0789e208c8e006fbb74f25c19e328bd03545392e51a5b2371ac5"
+    },
+    {
+      "path": "mmlu/high_school_geography/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_geography/validation-00000-of-00001.parquet",
+          "sha256": "d58db056ca84df83dea06c43a574456f9a4f8447d0344b439d2615d11d0375d1"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 22,
+      "content_sha256": "f8bed52af3273aab97df0bd1f386d49b72d3256d4a35b181ebf5d9a175bb1309"
+    },
+    {
+      "path": "mmlu/high_school_government_and_politics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_government_and_politics/test-00000-of-00001.parquet",
+          "sha256": "00dd810df6f248588e85544fd129c6f5badc71271d22019282046ec7a5d1c282"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 193,
+      "content_sha256": "bc5ac98b13b7ceb4e40e439cfe9f4312e5464b8306eda79ce6acfd4b22093549"
+    },
+    {
+      "path": "mmlu/high_school_government_and_politics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_government_and_politics/validation-00000-of-00001.parquet",
+          "sha256": "b5742db38103ebb5922b203611eb4ddae583d17dbe30ec62a5a952a1f0c87319"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 21,
+      "content_sha256": "6680962230aaf07d74b7e0eb4f0e585c96863ba220387d6971010d801bf9637d"
+    },
+    {
+      "path": "mmlu/high_school_macroeconomics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_macroeconomics/test-00000-of-00001.parquet",
+          "sha256": "586fb112139a54ed3cb2561df195219a8ed28917d703742d3659cbeff2e0dad6"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 390,
+      "content_sha256": "fc0b42efc91aae2bedc53cde953ee0cf663b6839ce001a03a24341879126ea1a"
+    },
+    {
+      "path": "mmlu/high_school_macroeconomics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_macroeconomics/validation-00000-of-00001.parquet",
+          "sha256": "61039fcfd2a20da8054da59d1f547cf7d7144f48ee51d7093d1f687b6f620d48"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 43,
+      "content_sha256": "86321c8e5d169adeb29a65841a0d1ae3abfe286a5c8a15b6e218c140738c90f6"
+    },
+    {
+      "path": "mmlu/high_school_mathematics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_mathematics/test-00000-of-00001.parquet",
+          "sha256": "aaeee814b52230d9e45131708af0bb105e4aca608f9e7dca7830d1a2e19de132"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 270,
+      "content_sha256": "e85a371610861fda2e877785de7e73552817f8f04f81cd41fbe676d23efa8c13"
+    },
+    {
+      "path": "mmlu/high_school_mathematics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_mathematics/validation-00000-of-00001.parquet",
+          "sha256": "fcbf3b3e99b61c53f5e6a7dcafd2c7508554522aa2b89fb2f923ab0b31b9b8ff"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 29,
+      "content_sha256": "d3d9857c97ba7101053a96e704f190ba1d19cf982310906aefeda2e71074cfeb"
+    },
+    {
+      "path": "mmlu/high_school_microeconomics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_microeconomics/test-00000-of-00001.parquet",
+          "sha256": "b04ab5c1b483350c454d25aadeccc99ec3f6f26e31bb17d3560fb15c9a4afd4d"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 238,
+      "content_sha256": "5eac75f5641b90a0059406b438e820de7b880afdfc3615b0035a7208da80074b"
+    },
+    {
+      "path": "mmlu/high_school_microeconomics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_microeconomics/validation-00000-of-00001.parquet",
+          "sha256": "27872cc6d251dfb5b2a644520205ab4248b1ed1d5fc6a6f2d0e37b2519a76080"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 26,
+      "content_sha256": "8d80f1293beb4483300251e96f109a148dd3e47d513d83e7391ddab5e98c5933"
+    },
+    {
+      "path": "mmlu/high_school_physics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_physics/test-00000-of-00001.parquet",
+          "sha256": "de1a000fa139d24c25d7d75633341b859a3f38f076e84d45b8d393b1aa030768"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 151,
+      "content_sha256": "7f1ea95fa0d3e26f3f49797af78df4bd6580adfe7a16af596e42857f50106bba"
+    },
+    {
+      "path": "mmlu/high_school_physics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_physics/validation-00000-of-00001.parquet",
+          "sha256": "4fe852a82d6abb458d31a5ce64c4d2bf81fb008cc0891fa78d51868901ba2445"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 17,
+      "content_sha256": "414d6537dc4514554a6845504abb76d5dccc2292f1440273f3b44cce8d8e9603"
+    },
+    {
+      "path": "mmlu/high_school_psychology/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_psychology/test-00000-of-00001.parquet",
+          "sha256": "8813f69670bfd397552c168a778cd7fc43ea346b96b7c19dce1459c251804630"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 545,
+      "content_sha256": "ec052615ae2892e718e495f61f48fd138045b41d10e52d16c32f4c1b1860922d"
+    },
+    {
+      "path": "mmlu/high_school_psychology/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_psychology/validation-00000-of-00001.parquet",
+          "sha256": "1d4608772647c6c7d784a7a90b6f3674aaef234bb02ac7d02e49f7c134cbeef5"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 60,
+      "content_sha256": "f8715701d539551ee26813b5b76fb1aa2931643e104c5f949ea0d9901beec850"
+    },
+    {
+      "path": "mmlu/high_school_statistics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_statistics/test-00000-of-00001.parquet",
+          "sha256": "7efaa3c59848bce966288ac3886d1d87d4f46492d8c345c31d39cbe97d2d1363"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 216,
+      "content_sha256": "17ce7080c9b619a910da3b558c6df855c4b5f63e2816e5968b6a1c95ed2d03f2"
+    },
+    {
+      "path": "mmlu/high_school_statistics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_statistics/validation-00000-of-00001.parquet",
+          "sha256": "989f235b7a8513f40da0d4e7b67b2c867ebf1d1e3867c10cdbb3f69e40a63f51"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 23,
+      "content_sha256": "43c58074efdb52306b010594f53f00ebbfd449a20c73b4dd561249e753690bf6"
+    },
+    {
+      "path": "mmlu/high_school_us_history/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_us_history/test-00000-of-00001.parquet",
+          "sha256": "5ba730d00893798998822359eb19f1bc8873ffe139c07a78854ebdf69f3db9bd"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 204,
+      "content_sha256": "adced3cf7af3706cec31e590793335b1df65aadf54b904dc34361879c86dc11f"
+    },
+    {
+      "path": "mmlu/high_school_us_history/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_us_history/validation-00000-of-00001.parquet",
+          "sha256": "339708dc2eaa961fb63bac71f715d6512106ef2e1cb6655d41cbbfb23c43233d"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 22,
+      "content_sha256": "1e87c710cd570c1596769d46705e72d3d6e60115d66edb94ea056750c3fa6d6a"
+    },
+    {
+      "path": "mmlu/high_school_world_history/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_world_history/test-00000-of-00001.parquet",
+          "sha256": "9688b239ea456500eca29784bd3c059b6105c9edb79c118b4ad61b1c6825ba08"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 237,
+      "content_sha256": "ab62d32433df5edf824b8be12d308ad404a1e1bf1335c65a890c5c2e0302e99a"
+    },
+    {
+      "path": "mmlu/high_school_world_history/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "high_school_world_history/validation-00000-of-00001.parquet",
+          "sha256": "f909ed4ebca35952fabd89826e0b5a3d1ce9057733fccc077ae0377093acada0"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 26,
+      "content_sha256": "782ebd0edc8b2a7489e3face015bfd00a2752bbb1581245fcf2648520a709753"
+    },
+    {
+      "path": "mmlu/human_aging/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "human_aging/test-00000-of-00001.parquet",
+          "sha256": "286b4cfe0fd65a7b82beee67c41a89b4ff8ad66d8c8ff51571a0be4d9ab7b159"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 223,
+      "content_sha256": "307d673783bc860fdcc86159c41209f978461931e7e0605f8958a834c10d5743"
+    },
+    {
+      "path": "mmlu/human_aging/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "human_aging/validation-00000-of-00001.parquet",
+          "sha256": "eb15b3fd23c069ba722f9dd3316844ca5e1dbc9f6911ee53b2a716b19417f626"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 23,
+      "content_sha256": "adc8aa3a5c840e19912a30ce5f12fabfe183820d754bec0b1ff9d03c31a8ebe7"
+    },
+    {
+      "path": "mmlu/human_sexuality/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "human_sexuality/test-00000-of-00001.parquet",
+          "sha256": "b61021d0c7cb57c011fd26757e330535d8b5876f3fe000e00d99cd45820aa4a0"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 131,
+      "content_sha256": "ad4a8aea3a6758b6e82bd7c3ed9f91153eb04ea204b56e504ce73eca9c92be52"
+    },
+    {
+      "path": "mmlu/human_sexuality/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "human_sexuality/validation-00000-of-00001.parquet",
+          "sha256": "b2d16e278a4dc367d1c993f5fd9961e54a59218a4cc2e1f8454e4d7e62163bbf"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 12,
+      "content_sha256": "6e87c6d88c5a4a5acc2c60c8b20dad70837a3452a4e71cb37f643d12653dfab9"
+    },
+    {
+      "path": "mmlu/international_law/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "international_law/test-00000-of-00001.parquet",
+          "sha256": "b92bf052787cc532199ee9e8175ee1789ae182946dbf608a87208a76e6840b8c"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 121,
+      "content_sha256": "9c9f48150f8100e5c189e1b3797a9a321922d051bd75302d9401bbb63b2efd50"
+    },
+    {
+      "path": "mmlu/international_law/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "international_law/validation-00000-of-00001.parquet",
+          "sha256": "d0907bcdec7004b464c66501f2fb78f38b0239002f9960e96bf1e2ec840ce1d5"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 13,
+      "content_sha256": "ecdb2fa4c7ba7d7510574d5898135e2d6bcd1f0b178c3ac97fbb85dc5657743a"
+    },
+    {
+      "path": "mmlu/jurisprudence/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "jurisprudence/test-00000-of-00001.parquet",
+          "sha256": "edf4e12ef25a4ef0caa43e254cee665fa9341ec8e8fd4265c5a295cb2dd9ca2d"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 108,
+      "content_sha256": "1ae9957e13e4442c4093be6630f12e55c8f2842e37b00fad8dd975b6f426a909"
+    },
+    {
+      "path": "mmlu/jurisprudence/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "jurisprudence/validation-00000-of-00001.parquet",
+          "sha256": "bc2d42f4de60752fb2a92bd985bb4259438c594f947ee6fda5afdc14294fa2f0"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "f87cc5c27aab5da728548300d15cadfe276495d02ee8ff615138cfb15cda6e3e"
+    },
+    {
+      "path": "mmlu/logical_fallacies/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "logical_fallacies/test-00000-of-00001.parquet",
+          "sha256": "51071098e4867f370919e59e0cf1ec16b6befebc1c8e1af1532fae8c9514ec9c"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 163,
+      "content_sha256": "e334a3b09e98288b2bbbff654a051b0a1437b53b046d02fabff79a33e1a9c920"
+    },
+    {
+      "path": "mmlu/logical_fallacies/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "logical_fallacies/validation-00000-of-00001.parquet",
+          "sha256": "eeb9a15a1d70f4eb3ed8ad970158de5aa0a1ce365fd448114159216239a07d73"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 18,
+      "content_sha256": "dbd7aabe471f9b15425e1befda1147dce8d49d911575d2ea6e93df411f9494ea"
+    },
+    {
+      "path": "mmlu/machine_learning/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "machine_learning/test-00000-of-00001.parquet",
+          "sha256": "1aa57fed5c9eadac5c23f9770c5ca3144610da64fd715e6efa38535ac9aa9ef3"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 112,
+      "content_sha256": "9b09d1faf9d534fd3b4fe9bd2d53fb99b436d7ced90d891e2b84ec872952406d"
+    },
+    {
+      "path": "mmlu/machine_learning/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "machine_learning/validation-00000-of-00001.parquet",
+          "sha256": "6061ec24ead2e3f9d9347c51a2cd7537c1427a2d6cb0eeee1f219db87ff7ca1a"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "dc54c6e1b61c53895108b6f59c354e763240eec8465fbd2a05910c85cf28a066"
+    },
+    {
+      "path": "mmlu/management/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "management/test-00000-of-00001.parquet",
+          "sha256": "3d3297ec431709220a2d12c04d754e6b4c2090e859429a704ef932df23ce37c3"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 103,
+      "content_sha256": "179f375cfcff1d13330bfcd9f1ed475e6bff1af03a42310b70e412b30042713a"
+    },
+    {
+      "path": "mmlu/management/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "management/validation-00000-of-00001.parquet",
+          "sha256": "e9b0c3ed2c0282eee103b7554ec96c22cbc28411503f2169514afe3b67f09102"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "92de43eac33e7740a5d20c8c5a0196cfd299362dbeb27124e227aa11101881f1"
+    },
+    {
+      "path": "mmlu/marketing/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "marketing/test-00000-of-00001.parquet",
+          "sha256": "8f51d8afa4082af375186991f5bbc0bb6caf799d793240209582b5efd4e1e401"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 234,
+      "content_sha256": "5300a227e384ad530717e06ec89033a001576e8bc633753a51fa33b4e3dbf51a"
+    },
+    {
+      "path": "mmlu/marketing/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "marketing/validation-00000-of-00001.parquet",
+          "sha256": "2a9c7448f5cb53594a23fecc457d9d38ce4f13330cd02e1beb61cde64085230a"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 25,
+      "content_sha256": "875fed04ec0f8944902a79991ecc19a2740c2c4a8e42220bf106b453d3cf6295"
+    },
+    {
+      "path": "mmlu/medical_genetics/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "medical_genetics/test-00000-of-00001.parquet",
+          "sha256": "1d6d0c9463d16228638ae00b43c9a36e6c87b111825f2bd64fb6ff0e95e39844"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "1580cb0c307f80762b8e79857cd52e01666011894856f09bb947f6112ccaed86"
+    },
+    {
+      "path": "mmlu/medical_genetics/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "medical_genetics/validation-00000-of-00001.parquet",
+          "sha256": "32d543a2f6648c35f11f796a897b02bcee611ce52f5fcca71f00e272a146e284"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "9d7e223d4f202770ebb8975a5a96610eeba14d961e8220be8141d6292f944ead"
+    },
+    {
+      "path": "mmlu/miscellaneous/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "miscellaneous/test-00000-of-00001.parquet",
+          "sha256": "ac01b39582480d3e345e2167ba9bd5827bfd4ff56ad8a464b21b60fbcf69d431"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 783,
+      "content_sha256": "b78f643b3401a09eae96ceddbb293b4f838b5a58e031e64ff70d983227744135"
+    },
+    {
+      "path": "mmlu/miscellaneous/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "miscellaneous/validation-00000-of-00001.parquet",
+          "sha256": "aa92e3f7e5833bda73d8dc630c729249e316e3a98f339b952dd408bb08a44b5d"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 86,
+      "content_sha256": "6d43d1166d7c669a00798ffafc0285b5d6bba27d1ab3e3489a4baf83d2c15088"
+    },
+    {
+      "path": "mmlu/moral_disputes/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "moral_disputes/test-00000-of-00001.parquet",
+          "sha256": "db307676f94567725f19f771cde7e5b5ebb3ef8bcee2257517e8aac1f946856e"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 346,
+      "content_sha256": "63829d94470d24d7b54e1f63d768c9dcc89f4982e6732f8d8599a6001a977b89"
+    },
+    {
+      "path": "mmlu/moral_disputes/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "moral_disputes/validation-00000-of-00001.parquet",
+          "sha256": "0e1a62e141b52b7170f0d46c8d49f3467945300b049799cf56a03b3e4508591c"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 38,
+      "content_sha256": "30156cac04280edbd2a2203a386b321149696c0afed3a08d1f9ad4d181fb2ac0"
+    },
+    {
+      "path": "mmlu/moral_scenarios/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "moral_scenarios/test-00000-of-00001.parquet",
+          "sha256": "fa864f068a047edc050b20cddd4d5f53f5b14a8634b6cc386e9924668dc77d40"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 895,
+      "content_sha256": "1e37e3f530d0072aeaaf8b39e5e4daa75597882dac43494aec28044ffdc0c7ed"
+    },
+    {
+      "path": "mmlu/moral_scenarios/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "moral_scenarios/validation-00000-of-00001.parquet",
+          "sha256": "8a598c97467fa0b717f24f6a00ea3c6e4e8f0012f5248b1beb21f178b1d1438c"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "8d38ec15bcca7635c45d28cf582b38a5b050c7d7e3dbdcd32b50739129c994c0"
+    },
+    {
+      "path": "mmlu/nutrition/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "nutrition/test-00000-of-00001.parquet",
+          "sha256": "19576e3fd281041cbee9f00574b230d99983c1ad96ef057d2516ff6c69e6d81e"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 306,
+      "content_sha256": "0b10fed2d289a56970b593cad65b1735f107e6c21806c4dabbd1205a02432434"
+    },
+    {
+      "path": "mmlu/nutrition/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "nutrition/validation-00000-of-00001.parquet",
+          "sha256": "f1a9ad5587cf0b05c6f989e75d2aecd914c1d86f0b80203c591afdb62904f693"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 33,
+      "content_sha256": "44f225165d4af3e673bb9c320ad34caa8875c62f1607984b2cf22c84598eeee4"
+    },
+    {
+      "path": "mmlu/philosophy/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "philosophy/test-00000-of-00001.parquet",
+          "sha256": "478e83a4325f9bb1c49f60fc04104344f0239ba61d89f83c924e03596ff000a3"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 311,
+      "content_sha256": "cb52508f36664439659986dfde2b06805c058e76af81577eec46d0608c35c3b7"
+    },
+    {
+      "path": "mmlu/philosophy/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "philosophy/validation-00000-of-00001.parquet",
+          "sha256": "d69cab9da7d5aa9f1ab17945d04a4aa5ce15b6f680d3bb4d99654ca26fc0cf56"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 34,
+      "content_sha256": "9b8b0240e5e68dd993641cd057afee576f2183f24c7062d60a6d6c835bff8c9f"
+    },
+    {
+      "path": "mmlu/prehistory/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "prehistory/test-00000-of-00001.parquet",
+          "sha256": "bf85949cd66ba2f6270973c094e29dad72486f79eed0e02a48307ee24a68d32b"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 324,
+      "content_sha256": "9e634753393b0e2f05f68f606f3aa15a01a2012dfbc223f3349706f79e893aaf"
+    },
+    {
+      "path": "mmlu/prehistory/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "prehistory/validation-00000-of-00001.parquet",
+          "sha256": "018d4b145f8ec3000d7adb3a97efb19c5b34b6d4de9971fa2e6f6dfe42b7a10f"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 35,
+      "content_sha256": "2c571808e7e157dfed32ad6aa4b8c8bfca6f7ce74451dc4e72b4cab14470ba24"
+    },
+    {
+      "path": "mmlu/professional_accounting/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "professional_accounting/test-00000-of-00001.parquet",
+          "sha256": "c7a74895f521daa4ed7d15d5a3cec9e1e7d53b5af02f03c47b7c7ea2d1fdcf47"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 282,
+      "content_sha256": "792f6d57715acbb6344b9b0d76d6e5b04a44dee6ce9ba941e349f4908d6e9d25"
+    },
+    {
+      "path": "mmlu/professional_accounting/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "professional_accounting/validation-00000-of-00001.parquet",
+          "sha256": "94724eb35babfb34738df813cde9b5d225793a98fa6aab491e0ee8c71191cded"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 31,
+      "content_sha256": "a16c46d6967a401090d8652473b0926024ec07eb7bda31ca517c767ed0c2f6e9"
+    },
+    {
+      "path": "mmlu/professional_law/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "professional_law/test-00000-of-00001.parquet",
+          "sha256": "790f497c2f9617d67f98fd3f45336e11a7aacf088d0c10e12cff4576729586cf"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 1534,
+      "content_sha256": "014467a3fc71a5d2fcb69939bc7c3aa5af49d1343f1ba77dca00395f040c50cd"
+    },
+    {
+      "path": "mmlu/professional_law/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "professional_law/validation-00000-of-00001.parquet",
+          "sha256": "24bc0caad939439e6e4df2d0633a776bac0a22e0e52b1d7688173e1324c0cd4c"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 170,
+      "content_sha256": "27e2db498df33948ea4802bec94ad70d168a3db34f494e8bbf505bcfcecdce87"
+    },
+    {
+      "path": "mmlu/professional_medicine/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "professional_medicine/test-00000-of-00001.parquet",
+          "sha256": "adefae866c651485ba6737b5aeffce1840d7fea2131ab956d87b205990f63059"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 272,
+      "content_sha256": "563ef57fb3c92a0ef4f42f00c069106d7d523ef863568873e34e889d48cf980f"
+    },
+    {
+      "path": "mmlu/professional_medicine/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "professional_medicine/validation-00000-of-00001.parquet",
+          "sha256": "e1ecb778a2ec60c256ec9f05a95313562c1e95c98295d674f8d414e2b1f3e0db"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 31,
+      "content_sha256": "8839053673be3f7b34d190d8b4b86d84ac0abd6f7acb510081d05684cc914ec9"
+    },
+    {
+      "path": "mmlu/professional_psychology/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "professional_psychology/test-00000-of-00001.parquet",
+          "sha256": "f68dc4b9ba63a0b74bed1f283197379ccc9e7e970ee54037c7339156ee336b8b"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 612,
+      "content_sha256": "c691e9082228a4c7e3cd049907cf5be5152fb41091ee9fe06f8379fdd001041e"
+    },
+    {
+      "path": "mmlu/professional_psychology/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "professional_psychology/validation-00000-of-00001.parquet",
+          "sha256": "b46fd55b1f409893529c3ea6874bea151cba644f8752e6a784667467b103d23e"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 69,
+      "content_sha256": "efd10d987aba1259fce355625219c74c9909eb97b1a7ae4855431387f0b9ad4f"
+    },
+    {
+      "path": "mmlu/public_relations/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "public_relations/test-00000-of-00001.parquet",
+          "sha256": "211e3c8cac11d365b5b5c67a26ade2da192cfbacfde4bca0decd20ab426b81ba"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 110,
+      "content_sha256": "72859d47368c34469d35beeff79b4a09138325a08357c2b56d2fd0bb7a5c80d6"
+    },
+    {
+      "path": "mmlu/public_relations/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "public_relations/validation-00000-of-00001.parquet",
+          "sha256": "4d7aa54f3e754345b1307e2f704d73f9a39f1e015e2d5a8e10dff500a80d95d7"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 12,
+      "content_sha256": "d90a25f94452f68ea1bffd4504917fc12792b4145bd3cb9546052eab265cac59"
+    },
+    {
+      "path": "mmlu/security_studies/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "security_studies/test-00000-of-00001.parquet",
+          "sha256": "36d1b77d713672a7bead419e80122ac2f5b8fe7f012ece3db78f1be30b82cb9c"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 245,
+      "content_sha256": "d502f778d53764bfeb03447e12f4744f7f72a826efe3fea91a2ccb7ed983ac51"
+    },
+    {
+      "path": "mmlu/security_studies/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "security_studies/validation-00000-of-00001.parquet",
+          "sha256": "a3a97a75b7e8e9f2ac066cdb989c05798bbd2fa8c48c71d8b9f8876b6a342bac"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 27,
+      "content_sha256": "c4471407e4c051cbae26b2fcd7c25499e76174e81b662b6fd59dd2400c1c7c0e"
+    },
+    {
+      "path": "mmlu/sociology/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "sociology/test-00000-of-00001.parquet",
+          "sha256": "0f575ff7f9b4a24a211cf3b79a9bc6acc632563b9f6fdd5c1af6a31aa3abe67e"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 201,
+      "content_sha256": "9e42b3650b43facd55c5505a28e535ba617ba8cc2726ebd3431fdcc36b32ef75"
+    },
+    {
+      "path": "mmlu/sociology/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "sociology/validation-00000-of-00001.parquet",
+          "sha256": "c16d22e656cc9662412fcda3517a15c34dfdfbcb7206fc5260aeada77b2e1068"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 22,
+      "content_sha256": "e47fe1c4f53722e8cb93f4cfdb6ee577397ffeece39738ff45804ae764761cc7"
+    },
+    {
+      "path": "mmlu/us_foreign_policy/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "us_foreign_policy/test-00000-of-00001.parquet",
+          "sha256": "40ee46e8bd29638686eb687c5513b3bac908e461aabb83ce570e139fb4d7debf"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 100,
+      "content_sha256": "90d2d1bc0df7c2be5a47b124b909dea827d08f158ad46ce8de29945c4b67ff0b"
+    },
+    {
+      "path": "mmlu/us_foreign_policy/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "us_foreign_policy/validation-00000-of-00001.parquet",
+          "sha256": "927a31292a7c78622e4a19c728245469e464e61ed6768536e86ed89b1e2e85f6"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 11,
+      "content_sha256": "5af2b78b65a8e6c66d31f8dc6b4bd1a59ab1604e5208131ede015f7d39fed4d4"
+    },
+    {
+      "path": "mmlu/virology/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "virology/test-00000-of-00001.parquet",
+          "sha256": "72aa28218b3406b468188f7e2b4deed61d289787a86183c9f1d0b3d4bf89d754"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 166,
+      "content_sha256": "2b21a67f2ea428aa6d50fc55ed513047f48fe9d2c046236f9718c651484f9d79"
+    },
+    {
+      "path": "mmlu/virology/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "virology/validation-00000-of-00001.parquet",
+          "sha256": "25ddc4e993dda216e1c31a1c12a2699f300858d775bcb95b156c1b6b73c9cacc"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 18,
+      "content_sha256": "a8a68dcc1dd81966665c5676ec2e7fe981d7db70f844173df8fa62a0165f4a05"
+    },
+    {
+      "path": "mmlu/world_religions/test-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "world_religions/test-00000-of-00001.parquet",
+          "sha256": "17c85ae041b79f4b44e5c544af8de82e2b03867ec82bb76aaa4fdfe178873953"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 171,
+      "content_sha256": "ddcd07e14f4e090f66bad76d836855c14670dec4af769cec71d18639ca602740"
+    },
+    {
+      "path": "mmlu/world_religions/validation-00000-of-00001.parquet",
+      "sources": [
+        {
+          "repo": "lighteval/mmlu",
+          "revision": "31d46ab06e6934bb0d95f6918668716d1db6f921",
+          "file": "world_religions/validation-00000-of-00001.parquet",
+          "sha256": "63b5db41ddf7c72e85239d6d89c474e46a3849ca87298f4fa32dcff2c21275dd"
+        }
+      ],
+      "fields": [
+        "question",
+        "choices",
+        "answer",
+        "subject"
+      ],
+      "selection": "all",
+      "count": 19,
+      "content_sha256": "207419b1ed1e718dca8836cade6d70747aa9d2d2033aea257fb6808759679f15"
+    },
+    {
+      "path": "ifeval/ifeval_input_data.jsonl",
+      "sources": [
+        {
+          "repo": "google/IFEval",
+          "revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+          "file": "ifeval_input_data.jsonl",
+          "sha256": "6a85310ca8ce15eff755aa08a3a4ff931c7e273e7515ebb3c492ea85fd8288f2"
+        }
+      ],
+      "fields": [
+        "key",
+        "prompt",
+        "instruction_id_list",
+        "kwargs"
+      ],
+      "selection": "all",
+      "count": 541,
+      "content_sha256": "4d49ac039cbebdfc4beb3f9f30435c4fa25320caffaae441c6b9d868126744eb"
+    },
+    {
+      "path": "gsm8k/gsm8k-test.arrow",
+      "sources": [
+        {
+          "repo": "openai/gsm8k",
+          "revision": "740312add88f781978c0658806c59bc2815b9866",
+          "file": "main/test-00000-of-00001.parquet",
+          "sha256": "ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59"
+        }
+      ],
+      "fields": [
+        "question",
+        "answer"
+      ],
+      "selection": "all",
+      "count": 1319,
+      "content_sha256": "32c548f08195e19e33408b844dd7be6aa4bcae457d957bc05909ff4bd4a00595"
+    }
+  ]
+}

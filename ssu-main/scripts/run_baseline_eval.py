@@ -36,11 +36,15 @@ def model_identity(model,c):
  return {'path':str(model),'files':{p.name:sha(p) for p in sorted(files)}}
 
 def protocol(c,cp):
+ if c.get('lighteval_source') and not (Path(c['lighteval_source'])/'lighteval/__init__.py').is_file():raise FileNotFoundError('Missing bundled LightEval source')
  code=list((R/'evaluation').rglob('*.py'))+[R/'scripts'/n for n in ['baseline_eval.sh','evaluate_cl.py','run_baseline_eval.py','baseline_eval_worker.py','baseline_eval_integrity.py','eval_plnd_downstream.py']]
- code+=list(Path('/root/autodl-fs/ssu-project/lighteval_latest/src').rglob('*.py'))
+ code+=list(Path(c.get('lighteval_source', str(R.parent/'lighteval_latest/src'))).rglob('*.py'))
  code+=[R/'analysis/lape_qwen_preexperiment.py']
- inherited=R.parent/'experiments/ig_baseline_repro_v1/manifest.json'
+ inherited=Path(c['evaluation_data_manifest']) if c.get('evaluation_data_manifest') else R.parent/'experiments/ig_baseline_repro_v1/manifest.json'
  inputs=json.loads(inherited.read_text())['evaluation_inputs_inherited']
+ if c.get('evaluation_data_manifest'):
+  for p,h in inputs.items():
+   if not Path(p).is_file() or sha(p)!=h:raise ValueError('Rebuilt evaluation data changed: '+p)
  paths=[Path(p) for p in inputs]+[Path(c['ifeval_data']),Path(c['gsm8k_data'])]
  for root in [Path(c['ppl_data_root'])]:paths+=list(root.rglob('*.parquet'))+list(root.rglob('*.arrow'))
  missing=[str(p) for p in paths if not p.is_file()]
@@ -87,6 +91,8 @@ def run_model(model,c,a,prot):
  dest=(root/'smoke'/digest(prot)[:16] if a.smoke else root/'evaluation')/key/a.replica;dest.mkdir(parents=True,exist_ok=True)
  write(dest/'model.json',mid);write(dest/'protocol.json',prot);write(dest/'config.json',c)
  env=dict(os.environ,CUDA_VISIBLE_DEVICES=str(c['gpu']),HF_HOME=c['hf_cache'],HF_HUB_CACHE=c['hf_cache'],HF_DATASETS_CACHE=str(Path(c['hf_cache'])/'datasets'),HF_HUB_OFFLINE='1',HF_DATASETS_OFFLINE='1',TOKENIZERS_PARALLELISM='false',OMP_NUM_THREADS='1',PYTHONHASHSEED='42',CUBLAS_WORKSPACE_CONFIG=':4096:8')
+ if c.get('evaluation_data_root'):env['BASELINE_EVAL_DATA_ROOT']=str(Path(c['evaluation_data_root']).resolve())
+ if c.get('lighteval_source'):env['PYTHONPATH']=c['lighteval_source']+os.pathsep+env.get('PYTHONPATH','')
  def execute_job(j,gpu):
   task_env=dict(env,CUDA_VISIBLE_DEVICES=str(gpu))
   unit=dest/(j['name']+'-seed'+str(j['seed']));ident={'protocol':digest(prot),'model':digest(mid),'job':j,'smoke':a.smoke}

@@ -1,3 +1,4 @@
+import os
 # 名字叫做：belebele.py
 # MIT License
 
@@ -71,7 +72,7 @@ TRANSLATION_LITERALS[Language.IGBO] = TranslationLiterals(
 
 TASKS_TABLE = []
 
-LOCAL_BELEBELE_ROOT = Path("/root/autodl-tmp/eval_datasets_local/belebele")
+LOCAL_BELEBELE_ROOT = Path((os.path.join(os.environ["BASELINE_EVAL_DATA_ROOT"], "belebele") if os.environ.get("BASELINE_EVAL_DATA_ROOT") else "/root/autodl-tmp/eval_datasets_local/belebele"))
 
 # Belebele: A large-scale reading comprehension dataset covering 122 languages.
 # https://arxiv.org/abs/2308.16884

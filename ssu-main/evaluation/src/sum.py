@@ -8,7 +8,7 @@ from lighteval.tasks.requests import Doc
 
 
 TASKS_TABLE = []
-LOCAL_SUM_ROOT = "/root/autodl-tmp/eval_datasets_local/sum_ssu"
+LOCAL_SUM_ROOT = (os.path.join(os.environ["BASELINE_EVAL_DATA_ROOT"], "sum_ssu") if os.environ.get("BASELINE_EVAL_DATA_ROOT") else "/root/autodl-tmp/eval_datasets_local/sum_ssu")
 
 # CUSTOM METRIC IF NEEDED
 class SampleLevelTranslationMetric(SampleLevelComputation):

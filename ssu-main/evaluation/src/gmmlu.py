@@ -1,3 +1,4 @@
+import os
 # 名字叫做：gmmlu.py
 
 # MIT License
@@ -46,7 +47,7 @@ from lighteval.utils.utils import as_list
 from lighteval.tasks.templates.utils.formatting_utils import capitalize, fix_ending_punct
 
 
-LOCAL_GMMLU_ROOT = Path("/root/autodl-tmp/eval_datasets_local/gmmlu")
+LOCAL_GMMLU_ROOT = Path((os.path.join(os.environ["BASELINE_EVAL_DATA_ROOT"], "gmmlu") if os.environ.get("BASELINE_EVAL_DATA_ROOT") else "/root/autodl-tmp/eval_datasets_local/gmmlu"))
 language_to_code = {
     "ne": "npi",
     "am": "amh",
