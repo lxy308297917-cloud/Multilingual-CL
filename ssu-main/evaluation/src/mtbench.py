@@ -258,15 +258,8 @@ class JudgeLLM:
         max_tokens: int | None = None,
     ) -> None:
         api_key = None
-        match judge_backend:
-            case "transformers" | "vllm":
-                api = HfApi()
-                models = api.list_models(model_name=judge_model_name)
-                if not models:
-                    raise ValueError(f"{judge_model_name} not found on Hugging Face Hub")
-
-            case _:
-                raise ValueError(f"{judge_backend} is not a valid backend for llm as a judge metric")
+        if judge_backend not in {"transformers", "vllm"}:
+            raise ValueError(f"{judge_backend} is not a valid backend for llm as a judge metric")
 
         self.short_judge_name = short_judge_name
         self.judge = JudgeLM(

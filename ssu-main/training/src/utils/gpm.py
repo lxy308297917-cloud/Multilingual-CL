@@ -16,6 +16,15 @@ class GPMConfig:
     # 采样多少条“token 向量”来做 SVD（越大越准，但越耗内存/时间）
     max_tokens_per_layer: int = 4096
 
+    # Wide LLM layers make explicit in_dim x in_dim projection matrices
+    # impractical. Keep a bounded compact basis and project in low-rank form.
+    max_rank_per_layer: Optional[int] = None
+
+    # Optional per-task growth cap.  Unlike max_rank_per_layer, this does not
+    # freeze the memory after task 1: each task may append this many residual
+    # directions, matching the cumulative update in the original GPM method.
+    max_new_rank_per_task: Optional[int] = None
+
     # 是否只对部分 Linear 做 GPM（推荐：先从 mlp / o_proj 开始）
     only_module_name_keywords: Tuple[str, ...] = (
         "mlp", "o_proj", "down_proj", "up_proj", "gate_proj"
@@ -84,14 +93,16 @@ class _ActivationCatcher:
             # 采样到 CPU/或保持在 GPU 都可以；这里放 CPU 更省显存
             x2 = x2.to("cpu")
 
+            limit = self.cfg.max_tokens_per_layer
             if name not in self.buffer:
-                self.buffer[name] = x2
+                self.buffer[name] = x2[:limit]
             else:
-                # 追加并截断
-                cat = torch.cat([self.buffer[name], x2], dim=0)
-                if cat.shape[0] > self.cfg.max_tokens_per_layer:
-                    cat = cat[: self.cfg.max_tokens_per_layer]
-                self.buffer[name] = cat
+                old = self.buffer[name]
+                remaining = limit - old.shape[0]
+                if remaining > 0:
+                    self.buffer[name] = torch.cat(
+                        [old, x2[:remaining]], dim=0
+                    )
 
         return hook
 
@@ -133,7 +144,9 @@ class GPMManager:
         self.cfg = cfg or GPMConfig()
 
         self.state = GPMState()
-        self.proj: Dict[str, torch.Tensor] = {}  # name -> P: [in_dim, in_dim]（放在 GPU 方便乘）
+        # name -> U: [in_dim, rank]. (g @ U) @ U.T is equivalent to
+        # g @ (U @ U.T) without quadratic projection-matrix memory.
+        self.proj: Dict[str, torch.Tensor] = {}
 
         self.catcher = _ActivationCatcher(self.cfg, device)
 
@@ -142,13 +155,11 @@ class GPMManager:
             self.state = GPMState.load(state_path)
 
     def before_task(self, task_idx: int):
-        # 根据已保存的 basis 生成投影矩阵 P = U U^T
+        # Move compact orthonormal bases to the training device. Do not build
+        # P = U U.T: Qwen's 8960-wide FFN would cost hundreds of MB per layer.
         self.proj.clear()
         for name, U in self.state.basis.items():
-            # U: [in_dim, r]
-            U = U.to(self.device, dtype=torch.float32)
-            P = U @ U.T  # [in_dim, in_dim]
-            self.proj[name] = P
+            self.proj[name] = U.to(self.device, dtype=torch.float32)
 
     @torch.no_grad()
     def project_gradients(self):
@@ -169,15 +180,17 @@ class GPMManager:
                 continue
 
             g = module.weight.grad.data  # [out, in]
-            P = self.proj[name]
+            U = self.proj[name]
 
             # 确保形状匹配
-            if g.dim() != 2 or P.dim() != 2:
+            if g.dim() != 2 or U.dim() != 2:
                 continue
-            if g.shape[1] != P.shape[0]:
+            if g.shape[1] != U.shape[0]:
                 continue
 
-            module.weight.grad.data = g - (g @ P)
+            g32 = g.float()
+            projected = g32 - ((g32 @ U) @ U.T)
+            module.weight.grad.data.copy_(projected.to(dtype=g.dtype))
 
     @torch.no_grad()
     def after_task_update_basis(self, task_idx: int, train_dataloader, max_batches: int = 20):
@@ -205,7 +218,23 @@ class GPMManager:
         self.catcher.remove()
 
         # 2) 逐层更新 basis
-        threshold = self.cfg.threshold_base + task_idx * self.cfg.threshold_inc
+        threshold = min(
+            self.cfg.threshold_base + task_idx * self.cfg.threshold_inc,
+            1.0 - 1e-6,
+        )
+
+        def rank_to_reach(cumulative_energy: torch.Tensor, target: float) -> int:
+            """Smallest positive rank whose cumulative energy reaches target."""
+            if cumulative_energy.numel() == 0:
+                return 0
+            rank = int(torch.searchsorted(
+                cumulative_energy,
+                torch.tensor(target, dtype=cumulative_energy.dtype),
+                right=False,
+            ).item()) + 1
+            if self.cfg.max_new_rank_per_task is not None:
+                rank = min(rank, int(self.cfg.max_new_rank_per_task))
+            return min(rank, cumulative_energy.numel())
 
         for name, X in self.catcher.buffer.items():
             # X: [N, in_dim] on CPU
@@ -226,14 +255,14 @@ class GPMManager:
 
             if name not in self.state.basis:
                 # 第一个 task：直接取前 r 个方向
-                r = int(torch.sum(cumsum < threshold).item())
-                r = max(r, 1)
+                r = max(rank_to_reach(cumsum, threshold), 1)
+                if self.cfg.max_rank_per_layer is not None:
+                    r = min(r, int(self.cfg.max_rank_per_layer))
                 self.state.basis[name] = U[:, :r].detach().cpu()
             else:
                 # 后续 task：先做残差投影 act_hat = A - U_old U_old^T A，再更新
                 U_old = self.state.basis[name].to(dtype=self.cfg.svd_dtype)  # CPU
-                P_old = U_old @ U_old.T
-                A_hat = A - (P_old @ A)
+                A_hat = A - U_old @ (U_old.T @ A)
 
                 U2, S2, Vh2 = torch.linalg.svd(A_hat, full_matrices=False)
                 sval_hat = torch.sum(S2 * S2)
@@ -245,14 +274,28 @@ class GPMManager:
                     continue
                 else:
                     # 需要补充新方向
-                    # r = 使得 (旧覆盖 + 新覆盖) 达到阈值
-                    # 近似实现：找最小 r 使 accumulated + cumsum(r) >= threshold
-                    r = int(torch.sum(cumsum + accumulated < threshold).item()) + 1
-                    r = max(r, 1)
+                    # Select from the residual singular spectrum S2, not the
+                    # original spectrum S.
+                    residual_ratio = (S2 * S2) / (sval_total + 1e-12)
+                    residual_cumsum = torch.cumsum(residual_ratio, dim=0)
+                    needed = max(float(threshold - accumulated), 0.0)
+                    r = max(rank_to_reach(residual_cumsum, needed), 1)
+
+                    # GPM appends residual directions after every task.  A
+                    # total memory cap limits the final width, while the
+                    # per-task cap controls only the newly added block.
+                    available = U_old.shape[0] - U_old.shape[1]
+                    if self.cfg.max_rank_per_layer is not None:
+                        available = min(
+                            available,
+                            int(self.cfg.max_rank_per_layer) - U_old.shape[1],
+                        )
+                    r = min(r, max(available, 0))
+                    if r <= 0:
+                        continue
 
                     U_new = torch.cat([U_old, U2[:, :r].cpu()], dim=1)
-                    # U_new 的列数不能超过行数
-                    U_new = U_new[:, : min(U_new.shape[0], U_new.shape[1])]
+                    U_new, _ = torch.linalg.qr(U_new, mode='reduced')
                     self.state.basis[name] = U_new.detach().cpu()
 
         self.state.task_idx = task_idx

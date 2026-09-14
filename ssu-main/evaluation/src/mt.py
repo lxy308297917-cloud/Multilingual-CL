@@ -1,46 +1,79 @@
-from aenum import extend_enum
 import numpy as np
 
-from lighteval.metrics.metrics import Metrics, SampleLevelMetric
-from lighteval.metrics.utils.metric_utils import MetricCategory, MetricUseCase
+from lighteval.metrics.utils.metric_utils import SampleLevelMetric
+from lighteval.metrics.metrics_sample import SampleLevelComputation
+from lighteval.tasks.requests import SamplingMethod
 from lighteval.tasks.lighteval_task import LightevalTaskConfig
 from lighteval.tasks.requests import Doc
 
 TASKS_TABLE = []
 
+# ===== 本地 MT 数据集调试打印 =====
+import os
+import json
+
+LOCAL_MT_DATA_DIR = "/root/autodl-tmp/eval_datasets_local/mt_flores_ssu_9langs"
+
+print("========================================")
+print("[MT.py] 正在加载自定义机器翻译任务")
+print(f"[MT.py] 本地 MT 数据目录：{LOCAL_MT_DATA_DIR}")
+print(f"[MT.py] 目录是否存在：{os.path.exists(LOCAL_MT_DATA_DIR)}")
+print(f"[MT.py] 是否为目录：{os.path.isdir(LOCAL_MT_DATA_DIR)}")
+
+if os.path.isdir(LOCAL_MT_DATA_DIR):
+    print("[MT.py] 本地 MT 数据目录下的文件：")
+    for fn in sorted(os.listdir(LOCAL_MT_DATA_DIR)):
+        fp = os.path.join(LOCAL_MT_DATA_DIR, fn)
+        if os.path.isfile(fp):
+            print(f"[MT.py]   文件名：{fn} | 大小：{os.path.getsize(fp)} bytes")
+
+    test_file = os.path.join(LOCAL_MT_DATA_DIR, "test.jsonl")
+    if os.path.isfile(test_file):
+        try:
+            with open(test_file, "r", encoding="utf-8") as f:
+                line = f.readline().strip()
+            obj = json.loads(line)
+            print(f"[MT.py] test.jsonl 第一行字段：{list(obj.keys())}")
+            preview = {k: str(v)[:80] for k, v in obj.items()}
+            print(f"[MT.py] test.jsonl 第一行内容预览：{preview}")
+        except Exception as e:
+            print(f"[MT.py] 读取 test.jsonl 第一行失败：{type(e).__name__}: {e}")
+    else:
+        print("[MT.py] 警告：没有找到 test.jsonl")
+else:
+    print("[MT.py] 警告：本地 MT 数据目录不存在！")
+
+print("========================================")
+# =======================================
+
 # CUSTOM METRIC IF NEEDED
-class SampleLevelTranslationMetric:
+class SampleLevelTranslationMetric(SampleLevelComputation):
     def __init__(self, metric_type: str):
-        """Stores the relevant parameters for a corpus level translation metric.
-
-        Args:
-            metric_type (str): Can be any of bleu, chrf, or ter depending on the metric to use.
-        """
         import sacrebleu
-        self.metric_type = metric_type
-        if metric_type == "chrf":
-            self.metric = sacrebleu.sentence_chrf
-        elif metric_type == "chrf++":
-            self.metric = sacrebleu.sentence_chrf
-        else:
-            raise ValueError(f"Unknown corpus level translation metric type : {metric_type}")
 
-    def compute(self, golds: list[str], predictions: list[str], **kwargs) -> float:
-        assert len(golds) == 1 and len(predictions) == 1
-        if self.metric_type == "chrf++":
-            return float(self.metric(predictions.pop(), golds, word_order=2).score)
-        else:
-            return float(self.metric(predictions.pop(), golds).score)
+        self.metric_type = metric_type
+        if metric_type not in {"chrf", "chrf++"}:
+            raise ValueError(f"Unknown corpus level translation metric type: {metric_type}")
+        self.metric = sacrebleu.sentence_chrf
+
+    def compute(self, doc, model_response, **kwargs) -> float:
+        golds = doc.get_golds()
+        predictions = model_response.final_text
+        if not golds or not predictions:
+            raise ValueError("chrF++ requires at least one gold and prediction")
+        word_order = 2 if self.metric_type == "chrf++" else 0
+        return float(np.mean([
+            self.metric(prediction, golds, word_order=word_order).score
+            for prediction in predictions
+        ]))
 
 chrf_sample = SampleLevelMetric(
     metric_name="chrfpp_sample",
-    category=MetricCategory.GENERATIVE,
-    use_case=MetricUseCase.TRANSLATION,
-    sample_level_fn=SampleLevelTranslationMetric("chrf++").compute, # how to compute score for one sample
+    category=SamplingMethod.GENERATIVE,
+    sample_level_fn=SampleLevelTranslationMetric("chrf++"),
     corpus_level_fn=np.mean, # aggregation
     higher_is_better=True,
 )
-extend_enum(Metrics, "chrfpp_sample", chrf_sample)
 
 
 def lang_code_to_2en_instruction(lang_code: str) -> str:
@@ -166,15 +199,13 @@ for language in [
             language=language,
             instruction=lang_code_to_2en_instruction(language),
         ),
-        suite=("custom",),
-        hf_repo="/data/HwHiAiUser/cl_workspace/data/mt_flores_ssu_18",
+        hf_repo="/root/autodl-tmp/eval_datasets_local/mt_flores_ssu_9langs",
         hf_subset="default",
         evaluation_splits=("test",),
         hf_avail_splits=["validation", "test"],
-        metric=[chrf_sample],
+        metrics=[chrf_sample],
         generation_size=128,
         stop_sequence=["\n"],
-        trust_dataset=True,
     )
     TASKS_TABLE.append(task)
 
@@ -184,15 +215,13 @@ for language in [
             language=language,
             instruction=lang_code_to_2tgt_instruction(language),
         ),
-        suite=("custom",),
-        hf_repo="/data/HwHiAiUser/cl_workspace/data/mt_flores_ssu_18",
+        hf_repo="/root/autodl-tmp/eval_datasets_local/mt_flores_ssu_9langs",
         # hf_repo="/home/HwHiAiUser/cl_workspace/data/mt_flores_ssu_shift3",
         hf_subset="default",
         evaluation_splits=("test",),
         hf_avail_splits=["validation", "test"],
-        metric=[chrf_sample],
+        metrics=[chrf_sample],
         generation_size=128,
         stop_sequence=["\n"],
-        trust_dataset=True,
     )
     TASKS_TABLE.append(task)

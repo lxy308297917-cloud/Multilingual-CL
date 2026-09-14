@@ -1,3 +1,13 @@
+# Multilingual-CL：Qwen 多语言适配与持续学习
+
+本仓库基于 [SSU 上游项目](https://github.com/gucci-j/ssu) 扩展，不是该论文的官方仓库。
+
+**2026-09-14 更新：** [Igbo baseline 训练与统一评测发布说明](BASELINE_RELEASE_ZH.md)。包含 FFT、SSU、Top20、HFT、LoTA、MoFO 和首尾整层方法的训练源码、冻结 JSON 配置及统一评测入口；实验仍在进行。
+
+下文保留上游 README 作为历史参考，其中模型、环境和命令不代表当前 Qwen baseline 协议；当前使用方法以上面的发布说明为准。
+
+---
+
 Mitigating Catastrophic Forgetting in Target Language Adaptation of LLMs via Source-Shielded Updates
 ===
 

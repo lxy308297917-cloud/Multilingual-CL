@@ -25,7 +25,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 import torch
-from datasets import load_dataset
+from datasets import Dataset, load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
@@ -94,6 +94,7 @@ def load_model_and_tokenizer(model_name_or_path: str, cache_dir: Optional[str]):
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "left"
 
     model = AutoModelForCausalLM.from_pretrained(
         model_name_or_path,
@@ -105,6 +106,9 @@ def load_model_and_tokenizer(model_name_or_path: str, cache_dir: Optional[str]):
     )
     model.to(device)
     model.eval()
+    model.generation_config.temperature = None
+    model.generation_config.top_p = None
+    model.generation_config.top_k = None
     return model, tokenizer, device
 
 
@@ -204,6 +208,40 @@ def generate_one(
     return text.strip()
 
 
+@torch.no_grad()
+def generate_batch(
+    model,
+    tokenizer,
+    device: str,
+    prompts: List[str],
+    apply_chat_template: bool,
+    max_new_tokens: int,
+) -> List[str]:
+    input_texts = [
+        build_input_text(prompt, tokenizer, apply_chat_template)
+        for prompt in prompts
+    ]
+    inputs = tokenizer(
+        input_texts,
+        return_tensors="pt",
+        padding=True,
+        truncation=True,
+    )
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+    input_width = inputs["input_ids"].shape[1]
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=max_new_tokens,
+        do_sample=False,
+        pad_token_id=tokenizer.pad_token_id,
+        eos_token_id=tokenizer.eos_token_id,
+    )
+    return [
+        tokenizer.decode(row[input_width:], skip_special_tokens=True).strip()
+        for row in outputs
+    ]
+
+
 def extract_prediction_strict_gsm8k_cot(text: str) -> Optional[str]:
     """
     Official gsm8k-cot.yaml strict regex:
@@ -249,6 +287,12 @@ def parse_args():
     parser.add_argument("--model_name_or_path", type=str, required=True)
     parser.add_argument("--output_dir", type=str, required=True)
     parser.add_argument("--cache_dir", type=str, default=None)
+    parser.add_argument(
+        "--test_arrow",
+        type=str,
+        default=None,
+        help="Optional local GSM8K test Arrow file for fully offline evaluation.",
+    )
 
     parser.add_argument(
         "--mode",
@@ -276,6 +320,12 @@ def parse_args():
         type=int,
         default=0,
         help="0 means use all test samples.",
+    )
+    parser.add_argument(
+        "--batch_size",
+        type=int,
+        default=4,
+        help="Generation batch size.",
     )
 
     parser.add_argument(
@@ -309,12 +359,15 @@ def main():
     )
     print(f"🖥️ device = {device}")
 
-    test_ds = load_dataset(
-        "gsm8k",
-        "main",
-        cache_dir=args.cache_dir,
-        split="test",
-    )
+    if args.test_arrow:
+        test_ds = Dataset.from_file(args.test_arrow)
+    else:
+        test_ds = load_dataset(
+            "gsm8k",
+            "main",
+            cache_dir=args.cache_dir,
+            split="test",
+        )
 
     if args.max_samples and args.max_samples > 0:
         test_ds = test_ds.select(range(min(args.max_samples, len(test_ds))))
@@ -338,58 +391,86 @@ def main():
     flexible_hits = 0
     total = 0
 
+    # Resume safely from valid per-sample records left by an interrupted run.
+    completed = {}
+    if details_path.exists():
+        with details_path.open(encoding="utf-8") as fin:
+            for line in fin:
+                try:
+                    record = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                index = int(record["index"])
+                if 0 <= index < len(test_ds):
+                    completed[index] = record
+
+    strict_hits = sum(int(row["strict_match"]) for row in completed.values())
+    flexible_hits = sum(int(row["flexible_match"]) for row in completed.values())
+    total = len(completed)
+    pending_indices = [i for i in range(len(test_ds)) if i not in completed]
+    if completed:
+        print(f"♻️ resume: {len(completed)} complete, {len(pending_indices)} remaining")
+
     with details_path.open("w", encoding="utf-8") as fout:
-        for idx, doc in enumerate(test_ds, start=1):
-            question = doc["question"]
-            gold = extract_gold_answer(doc["answer"])
+        for index in sorted(completed):
+            fout.write(json.dumps(completed[index], ensure_ascii=False) + "\n")
+        fout.flush()
 
-            if args.mode == "gsm8k_cot":
-                prompt = build_prompt_gsm8k_cot(question)
-            else:
-                prompt = build_prompt_gsm8k(question, gsm8k_train_fewshot)
-
-            response = generate_one(
+        for start in range(0, len(pending_indices), args.batch_size):
+            batch_indices = pending_indices[start : start + args.batch_size]
+            docs = test_ds.select(batch_indices)
+            prompts = []
+            for question in docs["question"]:
+                if args.mode == "gsm8k_cot":
+                    prompts.append(build_prompt_gsm8k_cot(question))
+                else:
+                    prompts.append(build_prompt_gsm8k(question, gsm8k_train_fewshot))
+            responses = generate_batch(
                 model=model,
                 tokenizer=tokenizer,
                 device=device,
-                prompt=prompt,
+                prompts=prompts,
                 apply_chat_template=args.apply_chat_template,
                 max_new_tokens=args.max_new_tokens,
             )
 
-            if args.mode == "gsm8k_cot":
-                pred_strict = extract_prediction_strict_gsm8k_cot(response)
-            else:
-                # gsm8k.yaml doesn't enforce "The answer is ...", so strict is same as flexible here
-                pred_strict = extract_prediction_flexible(response)
+            for offset, response in enumerate(responses):
+                index = batch_indices[offset]
+                question = docs["question"][offset]
+                gold = extract_gold_answer(docs["answer"][offset])
+                if args.mode == "gsm8k_cot":
+                    pred_strict = extract_prediction_strict_gsm8k_cot(response)
+                else:
+                    pred_strict = extract_prediction_flexible(response)
 
-            pred_flexible = extract_prediction_flexible(response)
+                pred_flexible = extract_prediction_flexible(response)
 
-            strict_ok = exact_match(pred_strict, gold)
-            flexible_ok = exact_match(pred_flexible, gold)
+                strict_ok = exact_match(pred_strict, gold)
+                flexible_ok = exact_match(pred_flexible, gold)
 
-            strict_hits += int(strict_ok)
-            flexible_hits += int(flexible_ok)
-            total += 1
+                strict_hits += int(strict_ok)
+                flexible_hits += int(flexible_ok)
+                total += 1
 
-            record = {
-                "index": idx - 1,
-                "question": question,
-                "gold_answer": gold,
-                "response": response,
-                "pred_strict": pred_strict,
-                "pred_flexible": pred_flexible,
-                "strict_match": strict_ok,
-                "flexible_match": flexible_ok,
-            }
-            if args.save_raw_prompt:
-                record["prompt"] = prompt
+                record = {
+                    "index": index,
+                    "question": question,
+                    "gold_answer": gold,
+                    "response": response,
+                    "pred_strict": pred_strict,
+                    "pred_flexible": pred_flexible,
+                    "strict_match": strict_ok,
+                    "flexible_match": flexible_ok,
+                }
+                if args.save_raw_prompt:
+                    record["prompt"] = prompts[offset]
 
-            fout.write(json.dumps(record, ensure_ascii=False) + "\n")
+                fout.write(json.dumps(record, ensure_ascii=False) + "\n")
+            fout.flush()
 
-            if idx % 20 == 0 or idx == len(test_ds):
+            if total % 20 < args.batch_size or total == len(test_ds):
                 print(
-                    f"[{idx}/{len(test_ds)}] "
+                    f"[{total}/{len(test_ds)}] "
                     f"strict={strict_hits / total:.4f} "
                     f"flexible={flexible_hits / total:.4f}"
                 )

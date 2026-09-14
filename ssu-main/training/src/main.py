@@ -39,7 +39,7 @@ def main(args, training_args):
     # Load the dataset
     #####
     train_dataset = datasets.load_from_disk(args.dataset_path)
-    # train_dataset = train_dataset.shuffle(seed=training_args.seed)
+    train_dataset = train_dataset.shuffle(seed=training_args.seed)
     from utils.data_utils import maybe_concat_replay_datasets
 
 
@@ -85,7 +85,6 @@ def main(args, training_args):
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-
     #####
     # Set up the data collator
     #####
@@ -104,15 +103,13 @@ def main(args, training_args):
         def compute_loss(self, model, inputs, return_outputs=False,**kwargs,):
             # ===== 1. 标准 LM loss =====
             outputs = model(**inputs)
-            lm_loss = outputs.loss
-            loss = lm_loss
+            loss = outputs.loss
 
+            # ===== 2. EWC penalty =====
             if self.ewc is not None:
-                ewc_loss = self.ewc.penalty(model)
-                loss = loss + ewc_loss
-            else:
-                ewc_loss = None
+                loss = loss + self.ewc.penalty(model)
 
+            # ===== 3. LwF distillation loss =====
             if self.lwf is not None:
                 lwf_loss = self.lwf.kd_loss(
                     student_logits=outputs.logits,
@@ -120,25 +117,6 @@ def main(args, training_args):
                     attention_mask=inputs.get("attention_mask", None),
                 )
                 loss = loss + lwf_loss
-            else:
-                lwf_loss = None
-
-            step = int(getattr(self.state, "global_step", -1))
-            loss_log_steps = max(int(getattr(self.args, "logging_steps", 10)), 1)
-            should_log_extra = (self.ewc is not None) or (self.lwf is not None)
-            if should_log_extra and (step <= 0 or (step % loss_log_steps == 0)):
-                print(f"[LOSS][step={step}] lm_loss = {float(lm_loss.detach().cpu())}")
-                if ewc_loss is not None:
-                    print(f"[LOSS][step={step}] ewc_loss = {float(ewc_loss.detach().cpu())}")
-                if lwf_loss is not None:
-                    print(f"[LOSS][step={step}] lwf_loss = {float(lwf_loss.detach().cpu())}")
-                print(f"[LOSS][step={step}] total_loss = {float(loss.detach().cpu())}")
-                print(f"[LOSS][step={step}] lm_loss is nan? {torch.isnan(lm_loss).any().item()}")
-                if ewc_loss is not None:
-                    print(f"[LOSS][step={step}] ewc_loss is nan? {torch.isnan(ewc_loss).any().item()}")
-                if lwf_loss is not None:
-                    print(f"[LOSS][step={step}] lwf_loss is nan? {torch.isnan(lwf_loss).any().item()}")
-                print(f"[LOSS][step={step}] total_loss is nan? {torch.isnan(loss).any().item()}")
 
             return (loss, outputs) if return_outputs else loss
 
@@ -158,12 +136,12 @@ def main(args, training_args):
 
     if fsdp_enabled:
         # Load on CPU (or default device) and let FSDP handle placement/sharding.
-        # 为了数值更稳定，这里使用 float32 作为默认 dtype（0.5B 模型在 12G 显存上仍然可以接受）。
+        # 为了数值更稳定，这里使用 float32 作为默认 dtype
         model = AutoModelForCausalLM.from_pretrained(
             args.model_name_or_path,
             cache_dir=args.cache_dir,
-            torch_dtype=torch.bfloat16,             # float16 ? loss=0
-            attn_implementation="eager",         # flash_attention_2
+            torch_dtype=torch.float32,
+            attn_implementation="sdpa",       # flash_attention_2
             low_cpu_mem_usage=True,
         )
         # Ensure FSDP uses original parameters so param names remain stable for GMT and freezing logic
@@ -193,8 +171,9 @@ def main(args, training_args):
         model = AutoModelForCausalLM.from_pretrained(
             args.model_name_or_path,
             cache_dir=args.cache_dir,
-            torch_dtype=torch.bfloat16,
-            attn_implementation="eager",
+            torch_dtype=torch.float32,
+            attn_implementation="sdpa",         # NOTE: 禁用 flash_attention_2
+            device_map="cuda" if torch.cuda.is_available() else "cpu",
             low_cpu_mem_usage=True,
         )
 
@@ -293,23 +272,23 @@ def main(args, training_args):
 
 
     # Quick exclusivity enforcement: CL methods vs other baselines
-    if getattr(args, "cl_method", "none") in ["replay", "ewc", "lwf", "gpm"]:
+    if getattr(args, "cl_method", "none") in ["replay", "ewc", "lwf","gpm"]:
         if getattr(args, "use_gmt", False):
             print("[CL] Disabling GMT because cl_method is set.")
             args.use_gmt = False
         if getattr(args, "do_hft", False):
             print("[CL] Disabling HFT because cl_method is set.")
             args.do_hft = False
+        if getattr(args, "peft_method", "none") != "none":
+            print("[CL] Disabling PEFT because cl_method is set.")
+            args.peft_method = "none"
         if getattr(args, "use_lota", False):
             print("[CL] Disabling LoTA because cl_method is set.")
-            args.use_lota = False   
+            args.use_lota = False
         if getattr(args, "use_s2ft", False):
             print("[CL] Disabling S2FT because cl_method is set.")
             args.use_s2ft = False
-
-        if getattr(args, "peft_method", "none") != "none":
-            print(f"[CL] Keeping PEFT enabled with cl_method={args.cl_method}, peft_method={args.peft_method}")
-                
+            
     # Optionally set up Lottery Ticket Adaptation (LoTA)
     lota_state = None
     if getattr(args, 'use_lota', False):
@@ -483,7 +462,7 @@ def main(args, training_args):
                 lambda_ewc=args.ewc_lambda,
                 fisher_max_batches=args.ewc_fisher_max_batches,  # 可选，控制计算成本
                 fisher_use_token_count=True,
-                fisher_decay=0.0,
+                fisher_decay=args.ewc_fisher_decay,
             ),
         )
 
@@ -577,47 +556,41 @@ def main(args, training_args):
 
     else:
         print(
-                f"[CL CONFIG] "
-                f"Replay={args.cl_method == 'replay'}, "
-                f"EWC={args.cl_method == 'ewc'}, "
-                f"LwF={args.cl_method == 'lwf'}, "
-                f"GMT={args.use_gmt}, "
-                f"PEFT={args.peft_method != 'none'}"
-            )
-        trainer = CLTrainer(
-            model=model,
-            args=training_args,
-            train_dataset=train_dataset,
-            eval_dataset=val_dataset,
-            data_collator=data_collator,
-            callbacks=callbacks,
-            ewc=ewc_obj,
-            lwf=lwf_obj,
+            f"[CL CONFIG] "
+            f"Replay={args.cl_method == 'replay'}, "
+            f"EWC={args.cl_method == 'ewc'}, "
+            f"LwF={args.cl_method == 'lwf'}, "
+            f"GMT={args.use_gmt}, "
+            f"PEFT={args.peft_method != 'none'}"
         )
+
+        # For ordinary FFT / single training, use the official standard Trainer.
+        # Only use CLTrainer when EWC / LwF is actually enabled.
+        if getattr(args, "cl_method", "none") == "none":
+            trainer = Trainer(
+                model=model,
+                args=training_args,
+                train_dataset=train_dataset,
+                eval_dataset=val_dataset,
+                data_collator=data_collator,
+                callbacks=callbacks,
+            )
+        else:
+            trainer = CLTrainer(
+                model=model,
+                args=training_args,
+                train_dataset=train_dataset,
+                eval_dataset=val_dataset,
+                data_collator=data_collator,
+                callbacks=callbacks,
+                ewc=ewc_obj,
+                lwf=lwf_obj,
+            )
 
     
     #####
     # Train the model
     #####
-
-    # 打印一下
-    batch = next(iter(DataLoader(train_dataset, batch_size=2, collate_fn=data_collator)))
-    labels = batch.get("labels", None)
-    am = batch.get("attention_mask", None)
-
-    print("input_ids:", batch["input_ids"].shape)
-    print("labels:", None if labels is None else labels.shape)
-    if labels is not None:
-        valid = (labels != -100)
-        print("labels!=-100 tokens:", valid.sum().item())
-    if am is not None:
-        print("attention_mask tokens:", am.sum().item())
-
-    if labels is not None and am is not None:
-        print("same mask?", (valid == am.bool()).all().item())
-
-
-
     trainer.train()
 
 

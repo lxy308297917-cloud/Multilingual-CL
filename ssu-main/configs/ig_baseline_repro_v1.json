@@ -1,0 +1,46 @@
+{
+  "experiment_family": "ig_baseline_repro_v1",
+  "active_protocol_id": "ig_baseline_legacy_checkpoint_reeval_v1",
+  "output_root": "/root/autodl-fs/ssu-project/experiments/ig_baseline_repro_v1",
+  "models": {
+    "base": "/root/models/Qwen2.5-1.5B-Instruct",
+    "full_fft": "/root/autodl-tmp/ckpt/single_3langs_full_fft_bf16_lr5e-5_maxsteps15000_train10k/ig",
+    "ssu_en_freeze50": "/root/autodl-tmp/ckpt/single_3langs_6methods_bf16_lr5e-5_maxsteps15000_train10k_rerun/ssu_en_freeze50/ig"
+  },
+  "training_python": "/root/miniconda3/envs/cl/bin/python",
+  "evaluation_python": "/root/miniconda3/envs/cl_eval_latest/bin/python",
+  "lighteval_executable": "/root/miniconda3/envs/cl_eval_latest/bin/lighteval",
+  "hf_cache": "/root/autodl-tmp/hf_cache",
+  "reserve_bytes": 1073741824,
+  "evaluation_peak_allowance_bytes": 536870912,
+  "seed": 42,
+  "first_pass": "core six tasks for all three models, then MMLU and G-MMLU",
+  "scoring": "current locked evaluation environment; retain sentence chrF++ matching historical field and corpus chrF++ separately",
+  "retrain_rule": "Investigate Base/task/sample/scoring mismatch first; retrain FFT/SSU if scores cannot be reproduced under matched evaluation and valid checkpoint identity.",
+  "historical_training": {
+    "full_fft": {
+      "learning_rate": 5e-05,
+      "steps": 15000,
+      "batch": 1,
+      "gradient_accumulation": 2,
+      "weight_decay": 0.01,
+      "gradient_checkpointing": true
+    },
+    "ssu_en_freeze50": {
+      "learning_rate": 5e-05,
+      "steps": 15000,
+      "batch": 2,
+      "gradient_accumulation": 1,
+      "weight_decay": 0.01,
+      "gradient_checkpointing": false
+    }
+  },
+  "deletion_authorization": "User permits deleting old Base/FFT/SSU models only if storage insufficient; no deletion for this reevaluation; foundational Base retained.",
+  "ppl_data_root": "/root/autodl-tmp/eval_datasets_local/sum_ssu",
+  "ppl_eval_tokens_requested": 8192,
+  "ordered_groups": [
+    "core",
+    "extended",
+    "ppl"
+  ]
+}

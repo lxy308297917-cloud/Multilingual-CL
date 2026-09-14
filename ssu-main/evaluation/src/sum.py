@@ -1,47 +1,43 @@
-from aenum import extend_enum
 import numpy as np
-
-from lighteval.metrics.metrics import Metrics, SampleLevelMetric
-from lighteval.metrics.utils.metric_utils import MetricCategory, MetricUseCase
+import os
+from lighteval.metrics.utils.metric_utils import SampleLevelMetric
+from lighteval.metrics.metrics_sample import SampleLevelComputation
+from lighteval.tasks.requests import SamplingMethod
 from lighteval.tasks.lighteval_task import LightevalTaskConfig
 from lighteval.tasks.requests import Doc
 
 
 TASKS_TABLE = []
+LOCAL_SUM_ROOT = "/root/autodl-tmp/eval_datasets_local/sum_ssu"
 
 # CUSTOM METRIC IF NEEDED
-class SampleLevelTranslationMetric:
+class SampleLevelTranslationMetric(SampleLevelComputation):
     def __init__(self, metric_type: str):
-        """Stores the relevant parameters for a corpus level translation metric.
-
-        Args:
-            metric_type (str): Can be any of bleu, chrf, or ter depending on the metric to use.
-        """
         import sacrebleu
-        self.metric_type = metric_type
-        if metric_type == "chrf":
-            self.metric = sacrebleu.sentence_chrf
-        elif metric_type == "chrf++":
-            self.metric = sacrebleu.sentence_chrf
-        else:
-            raise ValueError(f"Unknown corpus level translation metric type : {metric_type}")
 
-    def compute(self, golds: list[str], predictions: list[str], **kwargs) -> float:
-        assert len(golds) == 1 and len(predictions) == 1
-        if self.metric_type == "chrf++":
-            return float(self.metric(predictions.pop(), golds, word_order=2).score)
-        else:
-            return float(self.metric(predictions.pop(), golds).score)
+        self.metric_type = metric_type
+        if metric_type not in {"chrf", "chrf++"}:
+            raise ValueError(f"Unknown corpus level translation metric type: {metric_type}")
+        self.metric = sacrebleu.sentence_chrf
+
+    def compute(self, doc, model_response, **kwargs) -> float:
+        golds = doc.get_golds()
+        predictions = model_response.final_text
+        if not golds or not predictions:
+            raise ValueError("chrF++ requires at least one gold and prediction")
+        word_order = 2 if self.metric_type == "chrf++" else 0
+        return float(np.mean([
+            self.metric(prediction, golds, word_order=word_order).score
+            for prediction in predictions
+        ]))
 
 chrf_sample = SampleLevelMetric(
     metric_name="chrfpp_sample",
-    category=MetricCategory.GENERATIVE,
-    use_case=MetricUseCase.TRANSLATION,
-    sample_level_fn=SampleLevelTranslationMetric("chrf++").compute, # how to compute score for one sample
+    category=SamplingMethod.GENERATIVE,
+    sample_level_fn=SampleLevelTranslationMetric("chrf++"),
     corpus_level_fn=np.mean, # aggregation
     higher_is_better=True,
 )
-extend_enum(Metrics, "chrfpp_sample", chrf_sample)
 
 
 def lang_code_to_instruction(lang_code: str) -> str:
@@ -131,14 +127,12 @@ for language in [
             instruction=lang_code_to_instruction(language),
             anchor=lang_code_to_anchor(language),
         ),
-        suite=("custom",),
-        hf_repo=f"your-hf-id/sum-{language}-ssu",
-        hf_subset="default",
+        hf_repo=os.path.join(LOCAL_SUM_ROOT, language),
+        hf_subset=None,
         evaluation_splits=("test",),
         hf_avail_splits=["test"],
-        metric=[chrf_sample],
+        metrics=[chrf_sample],
         generation_size=128,
         stop_sequence=["\n"],
-        trust_dataset=True,
     )
     TASKS_TABLE.append(task)

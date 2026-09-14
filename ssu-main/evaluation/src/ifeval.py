@@ -46,6 +46,11 @@ from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
+VENDOR = Path(__file__).resolve().parents[1] / "vendor"
+if str(VENDOR) not in sys.path:
+    sys.path.insert(0, str(VENDOR))
+
+
 # =========================
 # Dynamic import of official IFEval files
 # =========================
@@ -246,6 +251,7 @@ def load_model_and_tokenizer(model_name_or_path: str, cache_dir: Optional[str]):
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "left"
 
     model = AutoModelForCausalLM.from_pretrained(
         model_name_or_path,
@@ -257,6 +263,9 @@ def load_model_and_tokenizer(model_name_or_path: str, cache_dir: Optional[str]):
     )
     model.to(device)
     model.eval()
+    model.generation_config.temperature = None
+    model.generation_config.top_p = None
+    model.generation_config.top_k = None
 
     return model, tokenizer, device
 
@@ -308,6 +317,40 @@ def generate_one(
     return text.strip()
 
 
+@torch.no_grad()
+def generate_batch(
+    model,
+    tokenizer,
+    device: str,
+    prompts: List[str],
+    apply_chat_template: bool,
+    max_new_tokens: int = 1280,
+) -> List[str]:
+    input_texts = [
+        build_input_text(prompt, tokenizer, apply_chat_template)
+        for prompt in prompts
+    ]
+    inputs = tokenizer(
+        input_texts,
+        return_tensors="pt",
+        padding=True,
+        truncation=True,
+    )
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+    input_width = inputs["input_ids"].shape[1]
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=max_new_tokens,
+        do_sample=False,
+        pad_token_id=tokenizer.pad_token_id,
+        eos_token_id=tokenizer.eos_token_id,
+    )
+    return [
+        tokenizer.decode(row[input_width:], skip_special_tokens=True).strip()
+        for row in outputs
+    ]
+
+
 # =========================
 # Main evaluation
 # =========================
@@ -318,6 +361,12 @@ def parse_args():
     parser.add_argument("--model_name_or_path", type=str, required=True)
     parser.add_argument("--output_dir", type=str, required=True)
     parser.add_argument("--cache_dir", type=str, default=None)
+    parser.add_argument(
+        "--dataset_jsonl",
+        type=str,
+        default=None,
+        help="Optional local official IFEval JSONL for fully offline evaluation.",
+    )
 
     parser.add_argument(
         "--official_files_dir",
@@ -345,6 +394,12 @@ def parse_args():
         type=int,
         default=0,
         help="0 means use all samples.",
+    )
+    parser.add_argument(
+        "--batch_size",
+        type=int,
+        default=4,
+        help="Generation batch size.",
     )
 
     return parser.parse_args()
@@ -378,14 +433,19 @@ def main():
     # Official config:
     # dataset_path: google/IFEval
     # test_split: train
-    ds = load_dataset(
-        "google/IFEval",
-        cache_dir=args.cache_dir,
-        split="train",
-    )
+    if args.dataset_jsonl:
+        with Path(args.dataset_jsonl).open(encoding="utf-8") as handle:
+            ds = [json.loads(line) for line in handle if line.strip()]
+    else:
+        ds = load_dataset(
+            "google/IFEval",
+            cache_dir=args.cache_dir,
+            split="train",
+        )
 
     if args.max_samples and args.max_samples > 0:
-        ds = ds.select(range(min(args.max_samples, len(ds))))
+        limit = min(args.max_samples, len(ds))
+        ds = ds[:limit] if isinstance(ds, list) else ds.select(range(limit))
 
     print(f"📥 载入样本数 = {len(ds)}")
 
@@ -395,61 +455,96 @@ def main():
     inst_level_strict_items: List[List[bool]] = []
     inst_level_loose_items: List[List[bool]] = []
 
-    with details_path.open("w", encoding="utf-8") as fout:
-        for idx, doc in enumerate(ds, start=1):
-            prompt = doc["prompt"]
+    # Resume safely from an interrupted run. Rewrite the valid records first so
+    # a partially written trailing JSON line cannot poison future summaries.
+    completed = {}
+    if details_path.exists():
+        with details_path.open(encoding="utf-8") as fin:
+            for line in fin:
+                try:
+                    record = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                completed[str(record["key"])] = record
 
-            response = generate_one(
+    valid_keys = {str(doc["key"]) for doc in ds}
+    completed = {key: row for key, row in completed.items() if key in valid_keys}
+    for doc in ds:
+        row = completed.get(str(doc["key"]))
+        if row is None:
+            continue
+        prompt_level_strict_list.append(bool(row["prompt_level_strict_acc"]))
+        prompt_level_loose_list.append(bool(row["prompt_level_loose_acc"]))
+        inst_level_strict_items.append(row["inst_level_strict_acc"])
+        inst_level_loose_items.append(row["inst_level_loose_acc"])
+
+    pending_docs = [doc for doc in ds if str(doc["key"]) not in completed]
+    if completed:
+        print(f"♻️ resume: {len(completed)} complete, {len(pending_docs)} remaining")
+
+    with details_path.open("w", encoding="utf-8") as fout:
+        for doc in ds:
+            row = completed.get(str(doc["key"]))
+            if row is not None:
+                fout.write(json.dumps(row, ensure_ascii=False) + "\n")
+        fout.flush()
+
+        for start in range(0, len(pending_docs), args.batch_size):
+            docs = pending_docs[start : start + args.batch_size]
+            responses = generate_batch(
                 model=model,
                 tokenizer=tokenizer,
                 device=device,
-                prompt=prompt,
+                prompts=[doc["prompt"] for doc in docs],
                 apply_chat_template=args.apply_chat_template,
                 max_new_tokens=args.max_new_tokens,
             )
 
-            inp = InputExample(
-                key=doc["key"],
-                instruction_id_list=doc["instruction_id_list"],
-                prompt=doc["prompt"],
-                kwargs=doc["kwargs"],
-            )
-
-            out_strict = test_instruction_following_strict(
-                inp, response, instructions_registry_module
-            )
-            out_loose = test_instruction_following_loose(
-                inp, response, instructions_registry_module
-            )
-
-            prompt_level_strict_list.append(out_strict.follow_all_instructions)
-            prompt_level_loose_list.append(out_loose.follow_all_instructions)
-            inst_level_strict_items.append(out_strict.follow_instruction_list)
-            inst_level_loose_items.append(out_loose.follow_instruction_list)
-
-            fout.write(
-                json.dumps(
-                    {
-                        "key": doc["key"],
-                        "prompt": doc["prompt"],
-                        "instruction_id_list": doc["instruction_id_list"],
-                        "kwargs": doc["kwargs"],
-                        "response": response,
-                        "prompt_level_strict_acc": out_strict.follow_all_instructions,
-                        "inst_level_strict_acc": out_strict.follow_instruction_list,
-                        "prompt_level_loose_acc": out_loose.follow_all_instructions,
-                        "inst_level_loose_acc": out_loose.follow_instruction_list,
-                    },
-                    ensure_ascii=False,
+            for doc, response in zip(docs, responses):
+                inp = InputExample(
+                    key=doc["key"],
+                    instruction_id_list=doc["instruction_id_list"],
+                    prompt=doc["prompt"],
+                    kwargs=doc["kwargs"],
                 )
-                + "\n"
-            )
 
-            if idx % 20 == 0 or idx == len(ds):
+                out_strict = test_instruction_following_strict(
+                    inp, response, instructions_registry_module
+                )
+                out_loose = test_instruction_following_loose(
+                    inp, response, instructions_registry_module
+                )
+
+                prompt_level_strict_list.append(out_strict.follow_all_instructions)
+                prompt_level_loose_list.append(out_loose.follow_all_instructions)
+                inst_level_strict_items.append(out_strict.follow_instruction_list)
+                inst_level_loose_items.append(out_loose.follow_instruction_list)
+
+                fout.write(
+                    json.dumps(
+                        {
+                            "key": doc["key"],
+                            "prompt": doc["prompt"],
+                            "instruction_id_list": doc["instruction_id_list"],
+                            "kwargs": doc["kwargs"],
+                            "response": response,
+                            "prompt_level_strict_acc": out_strict.follow_all_instructions,
+                            "inst_level_strict_acc": out_strict.follow_instruction_list,
+                            "prompt_level_loose_acc": out_loose.follow_all_instructions,
+                            "inst_level_loose_acc": out_loose.follow_instruction_list,
+                        },
+                        ensure_ascii=False,
+                    )
+                    + "\n"
+                )
+            fout.flush()
+
+            done = len(prompt_level_strict_list)
+            if done % 20 < args.batch_size or done == len(ds):
                 cur_prompt_strict = sum(prompt_level_strict_list) / len(prompt_level_strict_list)
                 cur_prompt_loose = sum(prompt_level_loose_list) / len(prompt_level_loose_list)
                 print(
-                    f"[{idx}/{len(ds)}] "
+                    f"[{done}/{len(ds)}] "
                     f"strict_prompt={cur_prompt_strict:.4f} "
                     f"loose_prompt={cur_prompt_loose:.4f}"
                 )

@@ -89,10 +89,13 @@ def maybe_concat_replay_datasets(train_dataset, replay_datasets, replay_ratio: f
     if target_replay_size <= 0:
         return train_dataset
 
-    per_ds = max(1, target_replay_size // len(replay_datasets))
+    # Balanced allocation with an exact total whenever all past datasets have
+    # enough rows. The old floor division silently undershot the requested ratio.
+    base, remainder = divmod(target_replay_size, len(replay_datasets))
     subsets = []
     for i, ds in enumerate(replay_datasets):
-        sub = build_replay_subset(ds, per_ds, seed + i)
+        requested = base + (1 if i < remainder else 0)
+        sub = build_replay_subset(ds, requested, seed + i)
         if sub is not None:
             subsets.append(sub)
 
@@ -100,4 +103,9 @@ def maybe_concat_replay_datasets(train_dataset, replay_datasets, replay_ratio: f
         return train_dataset
 
     replay_all = ConcatDataset(subsets)
+    actual_ratio = len(replay_all) / (len(train_dataset) + len(replay_all))
+    print(
+        f"[Replay] current={len(train_dataset)} replay={len(replay_all)} "
+        f"actual_ratio={actual_ratio:.6f} requested_ratio={replay_ratio:.6f}"
+    )
     return ConcatDataset([train_dataset, replay_all])

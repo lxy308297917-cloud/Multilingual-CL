@@ -10,6 +10,66 @@ import numpy as np
 import gc
 
 
+def _make_scale_hook(scale_mask):
+    """
+    SG-SSU 使用的梯度缩放 hook。
+
+    原来的 _make_mask_hook 只能做二值冻结：
+        mask=True  -> grad = 0
+        mask=False -> grad 保持不变
+
+    这里的 _make_scale_hook 可以做连续缩放：
+        scale=0.0 -> 完全冻结，相当于不更新
+        scale=0.1 -> 只保留 10% 梯度，小幅更新
+        scale=0.5 -> 保留 50% 梯度，中等更新
+        scale=1.0 -> 正常更新
+
+    这样就可以实现：
+        Old-Specific           scale=0.0
+        Old-Shared             scale=0.1
+        Current-History-Shared scale=0.5
+        Current-Specific       scale=1.0
+        Others                 scale=1.0
+
+    注意：
+        这是 gradient scaling 快速版。
+        在 AdamW 下，grad scaling 不完全等价于真正的 per-parameter learning rate scaling，
+        但它实现简单，适合第一版快速验证。
+    """
+    def hook_fn(grad):
+        if grad is None:
+            return grad
+
+        # 保证 scale_mask 和 grad 在同一个 device、同一个 dtype 上，
+        # 避免 CPU/CUDA/NPU device mismatch 报错。
+        s = scale_mask.to(device=grad.device, dtype=grad.dtype)
+
+        # 核心逻辑：不同位置的梯度乘以不同 scale。
+        return grad * s
+
+    return hook_fn
+
+
+
+
+
+def _make_mask_hook(mask, invert=False):
+    """
+    Create a gradient hook that always moves mask to the same device as grad.
+    This avoids errors like:
+    expected self and mask to be on the same device, but got mask on cpu and self on cuda:0
+    """
+    def hook_fn(grad):
+        if grad is None:
+            return grad
+        m = mask.to(device=grad.device, dtype=torch.bool)
+        if invert:
+            m = ~m
+        return grad.masked_fill(m, 0.0)
+    return hook_fn
+
+
+
 def _should_skip_module(module_name, skip_embeddings_and_head=False):
     """
     Check if a module should be skipped from freezing.
@@ -292,7 +352,7 @@ def _freeze_structured_2d(param, freeze_ratio, shape, elementwise=False, structu
             frozen_mask = frozen_mask.view(shape)
             
             # Store the mask in the parameter for gradient computation
-            param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+            param.register_hook(_make_mask_hook(frozen_mask))
             
             return num_to_freeze
     else:
@@ -307,7 +367,7 @@ def _freeze_structured_2d(param, freeze_ratio, shape, elementwise=False, structu
                 cols_to_freeze = random.sample(range(cols), num_to_freeze)
                 frozen_mask = torch.zeros_like(param, dtype=torch.bool)
                 frozen_mask[:, cols_to_freeze] = True
-                param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+                param.register_hook(_make_mask_hook(frozen_mask))
                 return num_to_freeze * rows
         else:
             num_to_freeze = int(rows * freeze_ratio)
@@ -315,7 +375,7 @@ def _freeze_structured_2d(param, freeze_ratio, shape, elementwise=False, structu
                 rows_to_freeze = random.sample(range(rows), num_to_freeze)
                 frozen_mask = torch.zeros_like(param, dtype=torch.bool)
                 frozen_mask[rows_to_freeze, :] = True
-                param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+                param.register_hook(_make_mask_hook(frozen_mask))
                 return num_to_freeze * cols
     
     return 0
@@ -335,7 +395,7 @@ def _freeze_unstructured_1d(param, freeze_ratio):
         frozen_mask[indices_to_freeze] = True
         
         # Store the mask in the parameter for gradient computation
-        param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+        param.register_hook(_make_mask_hook(frozen_mask))
         
         return num_to_freeze
     
@@ -1059,7 +1119,7 @@ def _freeze_structured_magnitude_2d(param, freeze_ratio, shape, elementwise=Fals
             frozen_mask = frozen_mask.view(shape)
             
             # Store the mask in the parameter for gradient computation
-            param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+            param.register_hook(_make_mask_hook(frozen_mask))
             
             # Log statistics
             frozen_magnitudes = flat_param[largest_indices]
@@ -1085,7 +1145,7 @@ def _freeze_structured_magnitude_2d(param, freeze_ratio, shape, elementwise=Fals
                 _, largest_indices = torch.topk(col_magnitudes, num_to_freeze, largest=True)
                 frozen_mask = torch.zeros_like(param, dtype=torch.bool)
                 frozen_mask[:, largest_indices] = True
-                param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+                param.register_hook(_make_mask_hook(frozen_mask))
                 avg_frozen_magnitude = col_magnitudes[largest_indices].mean().item()
                 print(f"    Froze {num_to_freeze} columns (input features) with avg magnitude: {avg_frozen_magnitude:.6f}")
                 return num_to_freeze * rows
@@ -1095,7 +1155,7 @@ def _freeze_structured_magnitude_2d(param, freeze_ratio, shape, elementwise=Fals
                 _, largest_indices = torch.topk(row_magnitudes, num_to_freeze, largest=True)
                 frozen_mask = torch.zeros_like(param, dtype=torch.bool)
                 frozen_mask[largest_indices, :] = True
-                param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+                param.register_hook(_make_mask_hook(frozen_mask))
                 avg_frozen_magnitude = row_magnitudes[largest_indices].mean().item()
                 print(f"    Froze {num_to_freeze} rows (output neurons) with avg magnitude: {avg_frozen_magnitude:.6f}")
                 return num_to_freeze * cols
@@ -1122,7 +1182,7 @@ def _freeze_unstructured_magnitude(param, freeze_ratio, original_shape):
         frozen_mask = frozen_mask.view(original_shape)
         
         # Store the mask in the parameter for gradient computation
-        param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+        param.register_hook(_make_mask_hook(frozen_mask))
         
         # Log statistics
         frozen_magnitudes = flat_param[largest_indices]
@@ -1305,6 +1365,652 @@ def _collect_activation_statistics(model, calibration_data, num_samples=128):
     
     print(f"Collected activation statistics for {len(processed_stats)} parameters from {sample_count} samples")
     return processed_stats
+
+
+# ============================================================
+# LA-SSU: Language-aware Soft Source-Shielded Updates
+# ============================================================
+#
+# 主方法设计：
+#   复用官方 SSU / Wanda 的 column-wise 重要性分数。
+#   不改变“怎么打分”，只改变“打分之后如何更新”。
+#
+# 原始 SSU:
+#   source calibration data
+#   -> Wanda score
+#   -> 每个矩阵选 top-k 重要 columns
+#   -> 这些 columns 的梯度置 0，也就是 hard freeze
+#
+# LA-SSU:
+#   每种语言分别用同一套 SSU/Wanda 方法计算重要 columns
+#   -> 保存每种语言的 top columns
+#   -> 根据历史语言和当前语言的 overlap 分类
+#   -> 不同类别使用不同 update scale
+#
+# 例如：
+#   Old-Specific columns            scale = 0.0
+#   Old-Shared columns              scale = 0.1
+#   Current-History-Shared columns  scale = 0.5
+#   Current-Specific columns        scale = 1.0
+#   Others                          scale = 1.0
+#
+# 注意：
+#   这是 column-wise soft SSU，不是 FFN-neuron 版本。
+#   它最接近官方 SSU，只是把 binary mask 扩展成 soft scale mask。
+
+
+def _lassu_get_actual_model(model):
+    """
+    兼容 HuggingFace CausalLM 包装结构。
+
+    有些模型是：
+        model.layers
+    有些模型是：
+        model.model.layers
+
+    所以这里统一取内部 actual_model。
+    """
+    return model.model if hasattr(model, "model") else model
+
+
+def _lassu_score_file_load(path):
+    """
+    读取 LA-SSU 保存的 score 文件。
+
+    文件格式：
+        {
+            "__meta__": {...},
+            "layers.0.mlp.down_proj.weight": {
+                "scores": Tensor[num_units],
+                "top_idx": Tensor[top_k],
+                "num_units": int,
+                "unit_axis": "column" or "element",
+                "param_shape": tuple,
+                ...
+            },
+            ...
+        }
+    """
+    obj = torch.load(path, map_location="cpu")
+    if not isinstance(obj, dict):
+        raise ValueError(f"[LA-SSU] score file should be a dict, got {type(obj)} from {path}")
+    return obj
+
+
+def _lassu_lookup_param(param_map, full_name):
+    """
+    根据参数名查找参数。
+
+    为什么需要这个函数？
+        score 文件里保存的名字可能是：
+            layers.0.mlp.down_proj.weight
+        但模型 named_parameters() 里可能是：
+            model.layers.0.mlp.down_proj.weight
+
+    所以这里尝试几种常见前缀。
+    """
+    candidates = [full_name]
+
+    for prefix in ["model.", "module."]:
+        if full_name.startswith(prefix):
+            candidates.append(full_name[len(prefix):])
+        else:
+            candidates.append(prefix + full_name)
+
+    for cand in candidates:
+        if cand in param_map:
+            return cand, param_map[cand]
+
+    return None, None
+
+
+def _lassu_compute_unit_scores(param, activation_importance=None):
+    """
+    计算一个参数的 LA-SSU unit score。
+
+    对 2D weight:
+        param shape = [out_features, in_features]
+        unit = column
+        第 j 个 column 表示第 j 个 input feature pathway。
+        这和官方 SSU 的 column-wise 逻辑一致。
+
+        score_j = || W[:, j] ||_2 * input_activation_importance[j]
+
+    对 1D 参数:
+        论文里说 1D 参数每个 element 可以看成自己的 column。
+        所以 unit = element。
+
+    返回：
+        scores: Tensor[num_units]
+        unit_axis: "column" or "element"
+    """
+    with torch.no_grad():
+        abs_param = param.detach().abs()
+
+        # 2D Linear weight: column-wise score
+        if param.dim() == 2:
+            rows, cols = param.shape
+
+            # 默认先用权重范数作为 fallback
+            col_magnitudes = torch.norm(abs_param, dim=0)  # [cols]
+            scores = col_magnitudes
+
+            if activation_importance is not None and hasattr(activation_importance, "input_activations"):
+                input_act = activation_importance.input_activations.view(-1)
+                input_act = input_act.to(device=param.device, dtype=abs_param.dtype)
+
+                if input_act.numel() >= cols:
+                    # 官方 SSU/Wanda 风格：
+                    # weight magnitude × input activation importance
+                    scores = col_magnitudes * input_act[:cols]
+                else:
+                    print(
+                        f"[LA-SSU] Warning: activation dim mismatch. "
+                        f"act={input_act.numel()}, cols={cols}. "
+                        f"Fallback to weight magnitude."
+                    )
+
+            return scores.float().cpu(), "column"
+
+        # 1D parameters: each element is treated as one column-like unit
+        elif param.dim() == 1:
+            num_units = param.numel()
+            scores = abs_param.view(-1)
+
+            if activation_importance is not None and hasattr(activation_importance, "input_activations"):
+                input_act = activation_importance.input_activations.view(-1)
+                input_act = input_act.to(device=param.device, dtype=abs_param.dtype)
+
+                if input_act.numel() >= num_units:
+                    scores = scores * input_act[:num_units]
+                else:
+                    # 1D 参数通常很小，fallback 问题不大
+                    pass
+
+            return scores.float().cpu(), "element"
+
+        else:
+            return None, None
+
+
+def collect_lassu_column_scores(
+    model,
+    calibration_data,
+    num_calibration_samples=128,
+    top_ratio=0.5,
+    save_path=None,
+    skip_embeddings_and_head=True,
+):
+    """
+    LA-SSU 第一步：
+        对一种语言的 calibration data 计算所有参数的 column-wise SSU/Wanda 分数。
+
+    重要：
+        “每种语言分别计算”不是修改分数公式。
+        它只是用不同语言的 calibration data 分别跑同一套官方 SSU/Wanda 计算流程。
+
+    例如：
+        ibo calibration data -> ibo important columns
+        hau calibration data -> hau important columns
+        kir calibration data -> kir important columns
+
+    参数：
+        model:
+            当前模型。
+
+        calibration_data:
+            某一种语言的 calibration dataloader。
+            例如 ibo/hau/kir/npi/amh 各自的 calibration 数据。
+
+        num_calibration_samples:
+            用多少 calibration samples。
+            先用 128 即可。
+
+        top_ratio:
+            每个参数里取 top 多少比例的 column 作为该语言的重要 column。
+            如果想和官方 SSU 50% freezing ratio 对齐，先用 0.5。
+
+        save_path:
+            保存 score 文件路径。
+            例如：
+                /root/autodl-fs/ssu_scores/lassu/ibo_scores.pt
+
+        skip_embeddings_and_head:
+            默认跳过 embedding 和 lm_head。
+            这和 SSU 论文以及你现有代码逻辑一致。
+
+    返回：
+        score_dict
+    """
+    if top_ratio <= 0.0 or top_ratio > 1.0:
+        raise ValueError(f"[LA-SSU] top_ratio should be in (0, 1], got {top_ratio}")
+
+    actual_model = _lassu_get_actual_model(model)
+
+    print("=" * 80)
+    print("[LA-SSU] Collecting column-wise SSU/Wanda scores")
+    print(f"[LA-SSU] num_calibration_samples = {num_calibration_samples}")
+    print(f"[LA-SSU] top_ratio = {top_ratio}")
+    print(f"[LA-SSU] skip_embeddings_and_head = {skip_embeddings_and_head}")
+    print("=" * 80)
+
+    # 复用官方 SSU 的 calibration activation 收集函数。
+    activation_stats = None
+    if calibration_data is not None:
+        activation_stats = _collect_activation_statistics(
+            model,
+            calibration_data,
+            num_calibration_samples,
+        )
+    else:
+        print("[LA-SSU] Warning: calibration_data is None. Fallback to magnitude-only scores.")
+
+    score_dict = {}
+
+    total_units = 0
+    total_top_units = 0
+    processed_params = 0
+
+    for module_name, module in actual_model.named_modules():
+        if module_name == "":
+            continue
+
+        if not list(module.parameters(recurse=False)):
+            continue
+
+        if _should_skip_module(module_name, skip_embeddings_and_head):
+            print(f"[LA-SSU] Skipping module: {module_name}")
+            continue
+
+        for param_name, param in [
+            ("weight", getattr(module, "weight", None)),
+            ("bias", getattr(module, "bias", None)),
+        ]:
+            if param is None:
+                continue
+
+            if not isinstance(param, torch.Tensor):
+                continue
+
+            if param.requires_grad is False:
+                continue
+
+            if param.dim() not in [1, 2]:
+                continue
+
+            full_param_name = f"{module_name}.{param_name}"
+            activation_importance = None
+
+            if activation_stats is not None:
+                activation_importance = activation_stats.get(full_param_name, None)
+
+            scores, unit_axis = _lassu_compute_unit_scores(
+                param,
+                activation_importance=activation_importance,
+            )
+
+            if scores is None:
+                continue
+
+            num_units = int(scores.numel())
+            if num_units == 0:
+                continue
+
+            top_k = max(1, int(num_units * top_ratio))
+            top_idx = torch.topk(scores, top_k, largest=True).indices.cpu()
+
+            score_dict[full_param_name] = {
+                "scores": scores,
+                "top_idx": top_idx,
+                "num_units": num_units,
+                "top_ratio": float(top_ratio),
+                "unit_axis": unit_axis,
+                "param_shape": tuple(param.shape),
+                "score_type": "ssu_wanda_column",
+            }
+
+            processed_params += 1
+            total_units += num_units
+            total_top_units += top_k
+
+            print(
+                f"[LA-SSU] {full_param_name}: "
+                f"axis={unit_axis}, selected top {top_k}/{num_units} units "
+                f"({top_k / max(1, num_units):.2%})"
+            )
+
+    score_dict["__meta__"] = {
+        "method": "LA-SSU",
+        "score_type": "ssu_wanda_column",
+        "top_ratio": float(top_ratio),
+        "num_calibration_samples": int(num_calibration_samples),
+        "skip_embeddings_and_head": bool(skip_embeddings_and_head),
+        "processed_params": int(processed_params),
+        "total_units": int(total_units),
+        "total_top_units": int(total_top_units),
+    }
+
+    if save_path is not None:
+        save_dir = os.path.dirname(save_path)
+        if save_dir:
+            os.makedirs(save_dir, exist_ok=True)
+        torch.save(score_dict, save_path)
+        print(f"[LA-SSU] Saved column scores to: {save_path}")
+
+    print("=" * 80)
+    print("[LA-SSU] Score collection completed")
+    print(f"[LA-SSU] processed params: {processed_params}")
+    print(f"[LA-SSU] total units: {total_units:,}")
+    print(f"[LA-SSU] selected top units: {total_top_units:,}")
+    print("=" * 80)
+
+    return score_dict
+
+
+def build_lassu_column_scales(
+    old_score_paths,
+    current_score_path,
+    old_shared_threshold=2,
+    old_specific_scale=0.0,
+    old_shared_scale=0.1,
+    current_shared_scale=0.5,
+    current_specific_scale=1.0,
+    others_scale=1.0,
+):
+    """
+    LA-SSU 第二步：
+        根据历史语言和当前语言的重要 column overlap，生成每个 column 的 update scale。
+
+    输入：
+        old_score_paths:
+            历史语言 score 文件列表。
+            例如训练 kir 时：
+                [ibo_scores.pt, hau_scores.pt]
+
+        current_score_path:
+            当前语言 score 文件。
+            例如训练 kir 时：
+                kir_scores.pt
+
+    分类：
+        old_union:
+            任意历史语言重要的 columns。
+
+        old_shared:
+            至少被 old_shared_threshold 个历史语言认为重要的 columns。
+
+        current_top:
+            当前语言重要 columns。
+
+    规则：
+        old_union - current_top:
+            旧语言重要、当前语言不重要。
+            默认 scale=0.0，强保护。
+
+        old_shared - current_top:
+            多个旧语言共享、当前语言不重要。
+            默认 scale=0.1，小幅更新。
+
+        current_top ∩ old_union:
+            当前语言和历史语言都重要。
+            默认 scale=0.5，中等更新。
+
+        current_top - old_union:
+            当前语言特异重要。
+            默认 scale=1.0，正常更新。
+
+        others:
+            默认 scale=1.0。
+    """
+    if isinstance(old_score_paths, str):
+        old_score_paths = [p for p in old_score_paths.split(",") if p.strip()]
+
+    old_score_paths = old_score_paths or []
+
+    print("=" * 80)
+    print("[LA-SSU] Building language-aware column scales")
+    print(f"[LA-SSU] old_score_paths = {old_score_paths}")
+    print(f"[LA-SSU] current_score_path = {current_score_path}")
+    print(f"[LA-SSU] old_shared_threshold = {old_shared_threshold}")
+    print(
+        "[LA-SSU] scales: "
+        f"old_specific={old_specific_scale}, "
+        f"old_shared={old_shared_scale}, "
+        f"current_shared={current_shared_scale}, "
+        f"current_specific={current_specific_scale}, "
+        f"others={others_scale}"
+    )
+    print("=" * 80)
+
+    old_scores_list = [_lassu_score_file_load(p) for p in old_score_paths]
+    current_scores = _lassu_score_file_load(current_score_path)
+
+    scale_dict = {}
+
+    for full_param_name, cur_info in current_scores.items():
+        if full_param_name == "__meta__":
+            continue
+
+        if not isinstance(cur_info, dict):
+            continue
+
+        if "top_idx" not in cur_info or "num_units" not in cur_info:
+            continue
+
+        num_units = int(cur_info["num_units"])
+        unit_axis = cur_info.get("unit_axis", "column")
+        current_top = set(cur_info["top_idx"].view(-1).long().tolist())
+
+        # old_count[j] 表示第 j 个 column 被多少个历史语言选为重要。
+        old_count = torch.zeros(num_units, dtype=torch.long)
+
+        for old_scores in old_scores_list:
+            if full_param_name not in old_scores:
+                continue
+
+            old_info = old_scores[full_param_name]
+
+            if not isinstance(old_info, dict) or "top_idx" not in old_info:
+                continue
+
+            old_idx = old_info["top_idx"].view(-1).long()
+            old_idx = old_idx[(old_idx >= 0) & (old_idx < num_units)]
+            old_count[old_idx] += 1
+
+        old_union = set(torch.nonzero(old_count > 0).view(-1).tolist())
+        old_shared = set(torch.nonzero(old_count >= old_shared_threshold).view(-1).tolist())
+
+        # 默认正常更新。
+        scale = torch.full((num_units,), float(others_scale), dtype=torch.float32)
+
+        # 1. 旧语言重要：先强保护。
+        for j in old_union:
+            scale[j] = float(old_specific_scale)
+
+        # 2. 多个旧语言共享：允许小幅更新。
+        for j in old_shared:
+            scale[j] = float(old_shared_scale)
+
+        # 3. 当前语言重要：优先级最高。
+        #    如果当前语言也需要这个 column，就不能完全冻结。
+        for j in current_top:
+            if j in old_union:
+                scale[j] = float(current_shared_scale)
+            else:
+                scale[j] = float(current_specific_scale)
+
+        scale_dict[full_param_name] = {
+            "scale": scale,
+            "unit_axis": unit_axis,
+            "num_units": num_units,
+            "param_shape": cur_info.get("param_shape", None),
+        }
+
+        overlap = current_top & old_union
+
+        print(
+            f"[LA-SSU] {full_param_name}: "
+            f"axis={unit_axis}, "
+            f"old_union={len(old_union)}, "
+            f"old_shared={len(old_shared)}, "
+            f"current_top={len(current_top)}, "
+            f"current_old_overlap={len(overlap)}"
+        )
+
+    print(f"[LA-SSU] Built scale tensors for {len(scale_dict)} parameters")
+    return scale_dict
+
+
+def apply_lassu_column_scales(model, scale_dict):
+    """
+    LA-SSU 第三步：
+        把 build_lassu_column_scales 生成的 scale 应用到模型参数上。
+
+    对 2D weight：
+        scale[j] 作用到第 j 列：
+            weight[:, j] *= scale[j] in gradient space
+
+    对 1D 参数：
+        scale[j] 作用到第 j 个元素。
+
+    注意：
+        这里不是直接修改 weight 数值。
+        而是在 backward 时修改梯度：
+            grad = grad * scale_mask
+    """
+    actual_model = _lassu_get_actual_model(model)
+    param_map = dict(actual_model.named_parameters())
+
+    total_scaled_params = 0
+    params_applied = 0
+
+    print("=" * 80)
+    print("[LA-SSU] Applying column-wise soft update scales")
+    print("=" * 80)
+
+    for full_param_name, info in scale_dict.items():
+        scale = info["scale"]
+        unit_axis = info.get("unit_axis", "column")
+
+        resolved_name, param = _lassu_lookup_param(param_map, full_param_name)
+
+        if param is None:
+            print(f"[LA-SSU] Warning: cannot find parameter {full_param_name}, skip.")
+            continue
+
+        if not param.requires_grad:
+            print(f"[LA-SSU] Warning: {resolved_name} requires_grad=False, skip.")
+            continue
+
+        scale = scale.to(device=param.device, dtype=param.dtype)
+
+        if param.dim() == 2 and unit_axis == "column":
+            rows, cols = param.shape
+
+            if scale.numel() != cols:
+                print(
+                    f"[LA-SSU] Warning: scale dim mismatch for {resolved_name}: "
+                    f"scale={scale.numel()}, cols={cols}. Skip."
+                )
+                continue
+
+            scale_mask = scale.view(1, cols).expand(rows, cols)
+
+        elif param.dim() == 1 and unit_axis == "element":
+            if scale.numel() != param.numel():
+                print(
+                    f"[LA-SSU] Warning: scale dim mismatch for {resolved_name}: "
+                    f"scale={scale.numel()}, numel={param.numel()}. Skip."
+                )
+                continue
+
+            scale_mask = scale.view_as(param)
+
+        else:
+            print(
+                f"[LA-SSU] Warning: unsupported param/unit for {resolved_name}: "
+                f"param_dim={param.dim()}, unit_axis={unit_axis}. Skip."
+            )
+            continue
+
+        param.register_hook(_make_scale_hook(scale_mask))
+
+        with torch.no_grad():
+            unique_values, counts = torch.unique(scale.float().cpu(), return_counts=True)
+            scale_summary = ", ".join(
+                [f"{float(v):.3f}:{int(c)}" for v, c in zip(unique_values, counts)]
+            )
+
+        total_scaled_params += int(param.numel())
+        params_applied += 1
+
+        print(
+            f"[LA-SSU] Applied scale to {resolved_name}, "
+            f"shape={tuple(param.shape)}, "
+            f"unit_axis={unit_axis}, "
+            f"scale_summary=({scale_summary})"
+        )
+
+    actual_model._lassu_scaled_params = total_scaled_params
+    actual_model._lassu_params_applied = params_applied
+    actual_model._hft_freeze_strategy = "la_ssu_column_soft_scaling"
+
+    print("=" * 80)
+    print("[LA-SSU] Soft scale hooks installed")
+    print(f"[LA-SSU] params applied: {params_applied}")
+    print(f"[LA-SSU] total parameters covered by scale hooks: {total_scaled_params:,}")
+    print("=" * 80)
+
+    return {
+        "params_applied": params_applied,
+        "total_scaled_params": total_scaled_params,
+    }
+
+
+def apply_lassu_from_score_files(
+    model,
+    old_score_paths,
+    current_score_path,
+    old_shared_threshold=2,
+    old_specific_scale=0.0,
+    old_shared_scale=0.1,
+    current_shared_scale=0.5,
+    current_specific_scale=1.0,
+    others_scale=1.0,
+):
+    """
+    LA-SSU 训练阶段总入口。
+
+    后续在 main.py 里只需要调用这个函数。
+
+    示例：
+        apply_lassu_from_score_files(
+            model=model,
+            old_score_paths=[
+                "/root/autodl-fs/ssu_scores/lassu/ibo_scores.pt",
+                "/root/autodl-fs/ssu_scores/lassu/hau_scores.pt",
+            ],
+            current_score_path="/root/autodl-fs/ssu_scores/lassu/kir_scores.pt",
+            old_specific_scale=0.0,
+            old_shared_scale=0.1,
+            current_shared_scale=0.5,
+            current_specific_scale=1.0,
+            others_scale=1.0,
+        )
+    """
+    scale_dict = build_lassu_column_scales(
+        old_score_paths=old_score_paths,
+        current_score_path=current_score_path,
+        old_shared_threshold=old_shared_threshold,
+        old_specific_scale=old_specific_scale,
+        old_shared_scale=old_shared_scale,
+        current_shared_scale=current_shared_scale,
+        current_specific_scale=current_specific_scale,
+        others_scale=others_scale,
+    )
+
+    return apply_lassu_column_scales(model, scale_dict)
+
 
 
 def _freeze_ssu_based_parameters(model, freeze_ratio=0.5, seed=None, skip_embeddings_and_head=False, calibration_data=None, num_calibration_samples=128, axis_preference: Optional[str] = None):
@@ -1562,7 +2268,7 @@ def _freeze_structured_ssu_2d(param, freeze_ratio, shape, activation_importance=
             frozen_mask[:, highest_indices] = True
             
             # Store the mask in the parameter for gradient computation
-            param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+            param.register_hook(_make_mask_hook(frozen_mask))
             
             avg_frozen_wanda = col_wanda_scores[highest_indices].mean().item()
             avg_frozen_magnitude = torch.norm(abs_param[:, highest_indices], dim=0).mean().item()
@@ -1579,7 +2285,7 @@ def _freeze_structured_ssu_2d(param, freeze_ratio, shape, activation_importance=
             frozen_mask[highest_indices, :] = True
             
             # Store the mask in the parameter for gradient computation
-            param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+            param.register_hook(_make_mask_hook(frozen_mask))
             
             avg_frozen_wanda = row_wanda_scores[highest_indices].mean().item()
             avg_frozen_magnitude = torch.norm(abs_param[highest_indices, :], dim=1).mean().item()
@@ -1659,7 +2365,7 @@ def _freeze_unstructured_ssu(param, freeze_ratio, original_shape, activation_imp
         frozen_mask = frozen_mask.view(original_shape)
         
         # Store the mask in the parameter for gradient computation
-        param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+        param.register_hook(_make_mask_hook(frozen_mask))
         
         # Log statistics
         frozen_wanda_scores = wanda_scores[highest_indices]
@@ -1885,7 +2591,7 @@ def _freeze_elementwise_ssu(param, freeze_ratio, param_name, module_name, activa
     frozen_mask = frozen_mask.view(original_shape)
     
     # Store the mask in the parameter for gradient computation
-    param.register_hook(lambda grad, mask=frozen_mask: grad.masked_fill_(mask, 0.0))
+    param.register_hook(_make_mask_hook(frozen_mask))
     
     # Log statistics
     frozen_wanda_scores = wanda_scores[highest_indices]
@@ -2098,7 +2804,7 @@ def _freeze_sgpt_based_parameters(model, freeze_ratio=0.5, seed=None, skip_embed
                     _, ridx = torch.topk(row_scores, k, largest=True)
                     mask = torch.zeros_like(W, dtype=torch.bool)
                     mask[ridx, :] = True
-                    W.register_hook(lambda g, m=mask: g.masked_fill_(m, 0.0))
+                    W.register_hook(_make_mask_hook(mask))
                     frozen_params += k * cols
                     print(f"  {name}.weight: froze {k} rows by SparseGPT row-scores")
             else:
@@ -2107,7 +2813,7 @@ def _freeze_sgpt_based_parameters(model, freeze_ratio=0.5, seed=None, skip_embed
                     _, cidx = torch.topk(ex2, k, largest=True)
                     mask = torch.zeros_like(W, dtype=torch.bool)
                     mask[:, cidx] = True
-                    W.register_hook(lambda g, m=mask: g.masked_fill_(m, 0.0))
+                    W.register_hook(_make_mask_hook(mask))
                     frozen_params += k * rows
                     print(f"  {name}.weight: froze {k} columns by SparseGPT E[x^2]")
 
@@ -2129,7 +2835,7 @@ def _freeze_sgpt_based_parameters(model, freeze_ratio=0.5, seed=None, skip_embed
                         mask = torch.zeros_like(p, dtype=torch.bool).view(-1)
                         mask[idx] = True
                         mask = mask.view_as(p)
-                        p.register_hook(lambda g, m=mask: g.masked_fill_(m, 0.0))
+                        p.register_hook(_make_mask_hook(mask))
                         frozen_params += k
 
     actual_model._hft_frozen_params = frozen_params
@@ -2182,7 +2888,7 @@ def _freeze_sgpt_elementwise_parameters(model, freeze_ratio=0.5, seed=None, skip
             _, idx = torch.topk(scores, k, largest=True)
             mask = torch.zeros_like(p, dtype=torch.bool).view(-1)
             mask[idx] = True
-            p.register_hook(lambda g, m=mask.view_as(p): g.masked_fill_(m.view_as(g), 0.0))
+            p.register_hook(_make_mask_hook(mask.view_as(p)))
             frozen_params += k
 
     actual_model._hft_frozen_params = frozen_params
@@ -2541,7 +3247,7 @@ def _freeze_structured_fisher_2d(param, freeze_ratio, shape, fisher_importance=N
         _, idx = torch.topk(col_scores, k, largest=True)
         mask = torch.zeros_like(param, dtype=torch.bool)
         mask[:, idx] = True
-        param.register_hook(lambda grad, m=mask: grad.masked_fill_(m, 0.0))
+        param.register_hook(_make_mask_hook(mask))
         print(f"    Froze {k} columns (input features) by Fisher scores")
         return k * rows
     else:
@@ -2551,7 +3257,7 @@ def _freeze_structured_fisher_2d(param, freeze_ratio, shape, fisher_importance=N
         _, idx = torch.topk(row_scores, k, largest=True)
         mask = torch.zeros_like(param, dtype=torch.bool)
         mask[idx, :] = True
-        param.register_hook(lambda grad, m=mask: grad.masked_fill_(m, 0.0))
+        param.register_hook(_make_mask_hook(mask))
         print(f"    Froze {k} rows (output neurons) by Fisher scores")
         return k * cols
 
@@ -2576,7 +3282,7 @@ def _freeze_unstructured_fisher(param, freeze_ratio, original_shape, fisher_impo
     mask = torch.zeros(flat_num, dtype=torch.bool, device=param.device)
     mask[top_idx] = True
     mask = mask.view(original_shape)
-    param.register_hook(lambda grad, m=mask: grad.masked_fill_(m, 0.0))
+    param.register_hook(_make_mask_hook(mask))
     return k
 
 
@@ -2811,7 +3517,7 @@ def _freeze_embedding_rows(model, token_ids):
             def make_embedding_hook(mask):
                 def hook_fn(grad):
                     if grad is not None:
-                        return grad.masked_fill(mask, 0.0)
+                        return grad.masked_fill(mask.to(device=grad.device, dtype=torch.bool), 0.0)
                     return grad
                 return hook_fn
             
@@ -2866,7 +3572,7 @@ def _freeze_output_projection_rows(model, token_ids):
                     def make_output_hook(mask):
                         def hook_fn(grad):
                             if grad is not None:
-                                return grad.masked_fill(mask, 0.0)
+                                return grad.masked_fill(mask.to(device=grad.device, dtype=torch.bool), 0.0)
                             return grad
                         return hook_fn
                     param.register_hook(make_output_hook(freeze_mask))
@@ -2886,7 +3592,7 @@ def _freeze_output_projection_rows(model, token_ids):
                     def make_output_hook(mask):
                         def hook_fn(grad):
                             if grad is not None:
-                                return grad.masked_fill(mask, 0.0)
+                                return grad.masked_fill(mask.to(device=grad.device, dtype=torch.bool), 0.0)
                             return grad
                         return hook_fn
                     param.register_hook(make_output_hook(freeze_mask))
@@ -3430,7 +4136,7 @@ def lota_prepare_sparse_training(model, lota_state: Optional[LotaState] = None, 
         # Partial: keep requires_grad, but zero-out gradients where mask=False
         def _grad_hook_factory(local_mask: torch.Tensor):
             def _hook(grad: torch.Tensor):
-                return grad.masked_fill(~local_mask, 0.0)
+                return grad.masked_fill((~local_mask.to(device=grad.device, dtype=torch.bool)), 0.0)
             return _hook
         p.register_hook(_grad_hook_factory(mask_tensor))
 
@@ -3454,3 +4160,183 @@ def lota_parameter_summary(model):
         f"LoTA(sparsity={state.sparsity:.2f}, calibration_steps={state.calibration_steps}, "
         f"trainable={state.trainable_params:,}/{state.total_params:,} ({state.trainable_params/state.total_params:.2%})" )
 
+def build_lassu_english_anchor_column_scales(
+    english_score_path,
+    current_score_path,
+    old_score_paths=None,
+    en_current_shared_scale=0.7,
+    en_past_shared_scale=0.1,
+    en_only_scale=0.0,
+    others_scale=1.0,
+):
+    """
+    English-Anchored LA-SSU.
+
+    只特殊处理 English-related columns：
+
+        C = EN ∩ CUR
+            英文和当前语言共享重要。
+            scale = en_current_shared_scale，默认 0.7。
+
+        P = EN ∩ PAST - CUR
+            英文和历史语言共享，当前语言不重要。
+            scale = en_past_shared_scale，默认 0.1。
+
+        E = EN - CUR - PAST
+            只有英文重要。
+            scale = en_only_scale，默认 0.0。
+
+        Others
+            不属于上面三类。
+            scale = others_scale，默认 1.0。
+
+    注意：
+        这里不保护 Past-only，也不处理 Current-Past-only。
+        这正是简化版思路：只修改英文相关重要 columns。
+    """
+    if isinstance(old_score_paths, str):
+        old_score_paths = [p for p in old_score_paths.split(",") if p.strip()]
+    old_score_paths = old_score_paths or []
+
+    print("=" * 80)
+    print("[EA-LA-SSU] Building English-anchored column scales")
+    print(f"[EA-LA-SSU] english_score_path = {english_score_path}")
+    print(f"[EA-LA-SSU] current_score_path = {current_score_path}")
+    print(f"[EA-LA-SSU] old_score_paths = {old_score_paths}")
+    print(
+        "[EA-LA-SSU] scales: "
+        f"EN∩CUR={en_current_shared_scale}, "
+        f"EN∩PAST-CUR={en_past_shared_scale}, "
+        f"EN-only={en_only_scale}, "
+        f"others={others_scale}"
+    )
+    print("=" * 80)
+
+    english_scores = _lassu_score_file_load(english_score_path)
+    current_scores = _lassu_score_file_load(current_score_path)
+    old_scores_list = [_lassu_score_file_load(p) for p in old_score_paths]
+
+    scale_dict = {}
+
+    for full_param_name, cur_info in current_scores.items():
+        if full_param_name == "__meta__":
+            continue
+
+        if not isinstance(cur_info, dict):
+            continue
+
+        if "top_idx" not in cur_info or "num_units" not in cur_info:
+            continue
+
+        if full_param_name not in english_scores:
+            print(f"[EA-LA-SSU] Warning: {full_param_name} not found in English scores, skip.")
+            continue
+
+        en_info = english_scores[full_param_name]
+        if not isinstance(en_info, dict) or "top_idx" not in en_info:
+            print(f"[EA-LA-SSU] Warning: invalid English score entry for {full_param_name}, skip.")
+            continue
+
+        num_units = int(cur_info["num_units"])
+        unit_axis = cur_info.get("unit_axis", "column")
+
+        cur_top = set(cur_info["top_idx"].view(-1).long().tolist())
+        en_top = set(en_info["top_idx"].view(-1).long().tolist())
+
+        # 历史语言重要 column 的并集
+        past_union = set()
+        for old_scores in old_scores_list:
+            if full_param_name not in old_scores:
+                continue
+            old_info = old_scores[full_param_name]
+            if not isinstance(old_info, dict) or "top_idx" not in old_info:
+                continue
+
+            old_idx = old_info["top_idx"].view(-1).long()
+            old_idx = old_idx[(old_idx >= 0) & (old_idx < num_units)]
+            past_union.update(old_idx.tolist())
+
+        # 严格三类：
+        # C = EN ∩ CUR
+        c_set = en_top & cur_top
+
+        # P = EN ∩ PAST - CUR
+        p_set = (en_top & past_union) - cur_top
+
+        # E = EN - CUR - PAST
+        e_set = en_top - cur_top - past_union
+
+        # 默认 Others 正常更新
+        scale = torch.full((num_units,), float(others_scale), dtype=torch.float32)
+
+        # 先设置 E，再设置 P，再设置 C。
+        # C 优先级最高，因为当前语言也需要它。
+        for j in e_set:
+            if 0 <= j < num_units:
+                scale[j] = float(en_only_scale)
+
+        for j in p_set:
+            if 0 <= j < num_units:
+                scale[j] = float(en_past_shared_scale)
+
+        for j in c_set:
+            if 0 <= j < num_units:
+                scale[j] = float(en_current_shared_scale)
+
+        scale_dict[full_param_name] = {
+            "scale": scale,
+            "unit_axis": unit_axis,
+            "num_units": num_units,
+            "param_shape": cur_info.get("param_shape", None),
+        }
+
+        print(
+            f"[EA-LA-SSU] {full_param_name}: "
+            f"C=EN∩CUR={len(c_set)}, "
+            f"P=EN∩PAST-CUR={len(p_set)}, "
+            f"E=EN-only={len(e_set)}, "
+            f"past_union={len(past_union)}, "
+            f"cur_top={len(cur_top)}, "
+            f"en_top={len(en_top)}"
+        )
+
+    print(f"[EA-LA-SSU] Built scale tensors for {len(scale_dict)} parameters")
+    return scale_dict
+
+
+def apply_lassu_english_anchor_from_score_files(
+    model,
+    english_score_path,
+    current_score_path,
+    old_score_paths=None,
+    en_current_shared_scale=0.7,
+    en_past_shared_scale=0.1,
+    en_only_scale=0.0,
+    others_scale=1.0,
+):
+    """
+    English-Anchored LA-SSU 训练阶段总入口。
+
+    训练时读取：
+        English score
+        当前语言 score
+        历史语言 score list
+
+    然后生成：
+        C = EN ∩ CUR
+        P = EN ∩ PAST - CUR
+        E = EN - CUR - PAST
+
+    最后注册 gradient scale hook。
+    """
+    scale_dict = build_lassu_english_anchor_column_scales(
+        english_score_path=english_score_path,
+        current_score_path=current_score_path,
+        old_score_paths=old_score_paths,
+        en_current_shared_scale=en_current_shared_scale,
+        en_past_shared_scale=en_past_shared_scale,
+        en_only_scale=en_only_scale,
+        others_scale=others_scale,
+    )
+
+    return apply_lassu_column_scales(model, scale_dict)

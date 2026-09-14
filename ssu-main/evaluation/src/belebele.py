@@ -27,7 +27,7 @@ from pathlib import Path
 from datasets import load_from_disk
 
 from lighteval.metrics.dynamic_metrics import (
-    loglikelihood_acc_metric,
+    LogLikelihoodAccMetric,
 )
 from lighteval.metrics.normalizations import LogProbCharNorm, LogProbTokenNorm
 from lighteval.tasks.lighteval_task import LightevalTaskConfig
@@ -38,12 +38,40 @@ from lighteval.tasks.templates.utils.formulation import (
     HybridFormulation,
     MCFFormulation,
 )
-from lighteval.utils.language import iso_639_3_ind_to_iso_639_3_macro
+from lighteval.utils.language import Language, iso_639_3_ind_to_iso_639_3_macro
+from lighteval.tasks.templates.utils.translation_literals import (
+    TRANSLATION_LITERALS,
+    TranslationLiterals,
+)
+
+
+def resolve_language(tag: str) -> Language:
+    code = LangCodeLanguage.get(tag).to_alpha3()
+    if code in iso_639_3_ind_to_iso_639_3_macro:
+        return iso_639_3_ind_to_iso_639_3_macro[code]
+    return Language(code)
+
+TRANSLATION_LITERALS[Language.IGBO] = TranslationLiterals(
+    language=Language.IGBO,
+    question_word="ajụjụ",
+    answer="azịza",
+    confirmation_word="ọ dị mma",
+    yes="ee",
+    no="mba",
+    also="kwa",
+    cause_word="n’ihi na",
+    effect_word="ya mere",
+    or_word="ma ọ bụ",
+    and_word="na",
+    true="ezigbo",
+    false="ụgha",
+    neither="ọ dịghị nke a",
+)
 
 
 TASKS_TABLE = []
 
-LOCAL_BELEBELE_ROOT = Path("/data/HwHiAiUser/cl_workspace/data/belebele")
+LOCAL_BELEBELE_ROOT = Path("/root/autodl-tmp/eval_datasets_local/belebele")
 
 # Belebele: A large-scale reading comprehension dataset covering 122 languages.
 # https://arxiv.org/abs/2308.16884
@@ -51,7 +79,7 @@ belebele_tasks = [
     LightevalTaskConfig(
         name=f"belebele_{language}_{formulation.name.lower()}",
         prompt_function=get_mcq_prompt_function(
-            iso_639_3_ind_to_iso_639_3_macro[LangCodeLanguage.get(language).to_alpha3()],
+            resolve_language(language),
             lambda line: {
                 "question": line["question"],
                 "context": line["flores_passage"],
@@ -60,16 +88,15 @@ belebele_tasks = [
             },
             formulation=formulation,
         ),
-        suite=("lighteval",),
         hf_repo=str(LOCAL_BELEBELE_ROOT / language),
         hf_subset=None,
         evaluation_splits=("test",),
         hf_avail_splits=["test"],
-        metric=get_metrics_for_formulation(
+        metrics=get_metrics_for_formulation(
             formulation,
             [
-                loglikelihood_acc_metric(normalization=LogProbTokenNorm()),
-                loglikelihood_acc_metric(normalization=LogProbCharNorm()),
+                LogLikelihoodAccMetric(normalization=LogProbTokenNorm()),
+                LogLikelihoodAccMetric(normalization=LogProbCharNorm()),
             ],
         ),
     )

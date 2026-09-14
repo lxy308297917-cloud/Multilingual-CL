@@ -1,0 +1,118 @@
+{
+  "experiment_family": "ig_baseline_eval_v1",
+  "active_protocol_id": "ig_baseline_eval_v3_seed42",
+  "base_model": "/root/models/Qwen2.5-1.5B-Instruct",
+  "output_root": "/root/autodl-fs/ssu-project/experiments/ig_baseline_eval_v3",
+  "evaluation_python": "/root/miniconda3/envs/cl_eval_latest/bin/python",
+  "training_python": "/root/miniconda3/envs/cl/bin/python",
+  "hf_cache": "/root/autodl-tmp/hf_cache",
+  "gpu": 0,
+  "batch_size": 1,
+  "dtype": "bfloat16",
+  "generation_seeds": [
+    42
+  ],
+  "classification_seed": 42,
+  "fewshot_policy": "existing project task definitions; MMLU and G-MMLU validation, sequential where specified",
+  "sampling": {
+    "do_sample": true,
+    "num_beams": 5,
+    "temperature": 0.8,
+    "top_k": 40,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "early_stopping": true
+  },
+  "general_sampling": {
+    "do_sample": true,
+    "num_beams": 1,
+    "temperature": 0.8,
+    "top_k": 40,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1
+  },
+  "general_max_tokens": {
+    "ifeval": 1280,
+    "gsm8k": 1280
+  },
+  "reserve_bytes": 1073741824,
+  "ppl_data_root": "/root/autodl-tmp/eval_datasets_local/sum_ssu",
+  "ppl_eval_tokens": 8192,
+  "ifeval_data": "/root/.cache/huggingface/hub/datasets--google--IFEval/snapshots/966cd89545d6b6acfd7638bc708b98261ca58e84/ifeval_input_data.jsonl",
+  "gsm8k_data": "/root/.cache/huggingface/datasets/openai___gsm8k/main/0.0.0/740312add88f781978c0658806c59bc2815b9866/gsm8k-test.arrow",
+  "aggregate": {
+    "en": [
+      "belebele_en",
+      "sum_en",
+      "mt_ig2en"
+    ],
+    "target": [
+      "sum_ig",
+      "belebele_ig",
+      "mt_en2ig"
+    ]
+  },
+  "tasks": [
+    {
+      "name": "sum_ig",
+      "task": "sum:ig|0",
+      "source": "sum.py",
+      "max_samples": 500,
+      "generative": true
+    },
+    {
+      "name": "sum_en",
+      "task": "sum:en|0",
+      "source": "sum.py",
+      "max_samples": 500,
+      "generative": true
+    },
+    {
+      "name": "mt_en2ig",
+      "task": "mt:en2ig|3",
+      "source": "mt.py",
+      "max_samples": 500,
+      "generative": true
+    },
+    {
+      "name": "mt_ig2en",
+      "task": "mt:ig2en|3",
+      "source": "mt.py",
+      "max_samples": 500,
+      "generative": true
+    },
+    {
+      "name": "belebele_en",
+      "task": "belebele_eng_Latn_mcf|3",
+      "source": "belebele.py",
+      "max_samples": null,
+      "generative": false
+    },
+    {
+      "name": "belebele_ig",
+      "task": "belebele_ibo_Latn_mcf|3",
+      "source": "belebele.py",
+      "max_samples": null,
+      "generative": false
+    },
+    {
+      "name": "mmlu_en",
+      "task": "mmlu_local:{subject}|5",
+      "source": "mmlu_local.py",
+      "max_samples": null,
+      "generative": false
+    },
+    {
+      "name": "gmmlu_ig",
+      "task": "gmmlu_ibo_mcf:{subject}|5",
+      "source": "gmmlu.py",
+      "max_samples": null,
+      "generative": false
+    }
+  ],
+  "tokenizer_policy": "fixed Base tokenizer and chat template for every model; model token ID mapping must match",
+  "evaluation_gpus": [
+    0,
+    1
+  ]
+}

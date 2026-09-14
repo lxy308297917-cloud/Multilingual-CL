@@ -31,19 +31,22 @@ from langcodes import standardize_tag
 
 from lighteval.tasks.requests import Doc
 from lighteval.tasks.templates.utils.adapter_utils import create_adapter_from_dict
-from lighteval.metrics.dynamic_metrics import loglikelihood_acc_metric
+from lighteval.metrics.dynamic_metrics import LogLikelihoodAccMetric
 from lighteval.metrics.normalizations import LogProbCharNorm, LogProbPMINorm, LogProbTokenNorm
-from lighteval.tasks.default_prompts import LETTER_INDICES
+from string import ascii_uppercase
 from lighteval.tasks.lighteval_task import LightevalTaskConfig
 from lighteval.tasks.multilingual.utils.task_utils import get_metrics_for_formulation
 from lighteval.tasks.templates.utils.formulation import MCFFormulation, Formulation, build_answers, build_choices
-from lighteval.tasks.templates.utils.translation_literals import TRANSLATION_LITERALS
 from lighteval.utils.language import Language
+from lighteval.tasks.templates.utils.translation_literals import (
+    TRANSLATION_LITERALS,
+    TranslationLiterals,
+)
 from lighteval.utils.utils import as_list
 from lighteval.tasks.templates.utils.formatting_utils import capitalize, fix_ending_punct
 
 
-LOCAL_GMMLU_ROOT = Path("/data/HwHiAiUser/cl_workspace/data/gmmlu")
+LOCAL_GMMLU_ROOT = Path("/root/autodl-tmp/eval_datasets_local/gmmlu")
 language_to_code = {
     "ne": "npi",
     "am": "amh",
@@ -107,6 +110,23 @@ language_to_class = {
     "ms": Language.MALAY,
     "uk": Language.UKRAINIAN,
 }
+TRANSLATION_LITERALS[Language.IGBO] = TranslationLiterals(
+    language=Language.IGBO,
+    question_word="ajụjụ",
+    answer="azịza",
+    confirmation_word="ọ dị mma",
+    yes="ee",
+    no="mba",
+    also="kwa",
+    cause_word="n’ihi na",
+    effect_word="ya mere",
+    or_word="ma ọ bụ",
+    and_word="na",
+    true="ezigbo",
+    false="ụgha",
+    neither="ọ dịghị nke a",
+)
+
 
 TASKS_TABLE = []
 MMLU_SUBSETS = [
@@ -348,16 +368,15 @@ global_mmlu_tasks = [
             lambda line: {
                 "question": line["question"],
                 "choices": [line["option_a"], line["option_b"], line["option_c"], line["option_d"]],
-                "gold_idx": LETTER_INDICES.index(line["answer"]),
+                "gold_idx": ascii_uppercase.index(line["answer"]),
                 "subject": subset,
             },
             formulation=MCFFormulation(),
         ),
-        suite=("lighteval",),
         hf_repo=str(LOCAL_GMMLU_ROOT / language_to_local_dir[language]),
         hf_subset=None,
         evaluation_splits=("test",),
-        few_shots_split="dev",
+        few_shots_split="validation",
         hf_filter=partial(
             lambda subset, sensitivity_label, x: x["subject"].lower() == subset
             and (
@@ -367,12 +386,12 @@ global_mmlu_tasks = [
             subset,
             "ALL",
         ),
-        metric=get_metrics_for_formulation(
+        metrics=get_metrics_for_formulation(
             MCFFormulation(),
             [
-                loglikelihood_acc_metric(normalization=LogProbTokenNorm()),
-                loglikelihood_acc_metric(normalization=LogProbCharNorm()),
-                loglikelihood_acc_metric(normalization=LogProbPMINorm()),
+                LogLikelihoodAccMetric(normalization=LogProbTokenNorm()),
+                LogLikelihoodAccMetric(normalization=LogProbCharNorm()),
+                LogLikelihoodAccMetric(normalization=LogProbPMINorm()),
             ],
         ),
     )

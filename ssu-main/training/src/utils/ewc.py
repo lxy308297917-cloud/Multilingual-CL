@@ -12,8 +12,8 @@ class EWCConfig:
     """
     lambda_ewc: float = 1.0
     fisher_max_batches: Optional[int] = None
-    fisher_use_token_count: bool = True
-    fisher_decay: float = 0.0
+    fisher_use_token_count: bool = False
+    fisher_decay: float = 0.95
 
 
 class EWC:
@@ -38,16 +38,11 @@ class EWC:
         # 只对当前可训练参数做 EWC
         self.param_names = [n for n, p in model.named_parameters() if p.requires_grad]
 
-        self.ref_param: Dict[str, torch.Tensor] = {
-            n: p.detach().clone().to(device)
-            for n, p in model.named_parameters()
-            if n in self.param_names
-        }
-
-        self.fisher: Dict[str, torch.Tensor] = {
-            n: torch.zeros_like(self.ref_param[n], device=device)
-            for n in self.param_names
-        }
+        # Task 1 has no previous task to protect. Allocate no duplicate model
+        # state until Fisher is estimated at the task boundary. This removes an
+        # unnecessary multi-GB memory penalty during the first task.
+        self.ref_param: Dict[str, torch.Tensor] = {}
+        self.fisher: Dict[str, torch.Tensor] = {}
 
     @torch.no_grad()
     def update_ref_param(self, model: PreTrainedModel):
@@ -55,7 +50,7 @@ class EWC:
         在任务结束时更新参考参数 θ*
         """
         for n, p in model.named_parameters():
-            if n in self.ref_param:
+            if n in self.param_names:
                 self.ref_param[n] = p.detach().clone().to(self.device)
 
     def estimate_fisher(
@@ -68,12 +63,21 @@ class EWC:
         """
         model.eval()
 
+        name_to_param = {
+            n: p
+            for n, p in model.named_parameters()
+            if n in self.param_names and p.requires_grad
+        }
+        # Accumulate squared gradients in float32, then store the online Fisher
+        # in bfloat16. BF16 retains FP32's exponent range and halves persistent
+        # state memory, while FP32 accumulation avoids precision loss over many
+        # calibration batches.
         fisher_new = {
-            n: torch.zeros_like(v, device=self.device)
-            for n, v in self.ref_param.items()
+            n: torch.zeros_like(p, dtype=torch.float32, device=self.device)
+            for n, p in name_to_param.items()
         }
 
-        total_units = 0.0
+        num_batches = 0
         max_batches = self.cfg.fisher_max_batches
 
         for step, batch in enumerate(dataloader):
@@ -87,39 +91,65 @@ class EWC:
             loss = outputs.loss
             loss.backward()
 
-            if self.cfg.fisher_use_token_count and "attention_mask" in batch:
-                units = float(batch["attention_mask"].sum().item())
-                units = max(units, 1.0)
-            else:
-                units = 1.0
-
-            total_units += units
+            num_batches += 1
 
             for n, p in model.named_parameters():
                 if n in fisher_new and p.grad is not None:
-                    fisher_new[n] += (p.grad.detach() ** 2) * units
+                    fisher_new[n].add_(p.grad.detach().float().square())
 
-        denom = max(total_units, 1.0)
+        denom = max(num_batches, 1)
         for n in fisher_new:
             fisher_new[n] /= denom
 
-        if self.cfg.fisher_decay > 0.0:
-            alpha = self.cfg.fisher_decay
-            for n in self.fisher:
-                self.fisher[n] = alpha * self.fisher[n] + (1.0 - alpha) * fisher_new[n]
-        else:
-            self.fisher = fisher_new
+        # Online EWC: F_total = gamma * F_old + F_new. Keep persistent
+        # Fisher tensors in BF16 so full-model EWC remains feasible on 32GB GPUs.
+        old_fisher = self.fisher
+        updated_fisher: Dict[str, torch.Tensor] = {}
+        gamma = self.cfg.fisher_decay
+        for n, current in fisher_new.items():
+            if gamma > 0.0 and n in old_fisher:
+                # Historical state may be offloaded to CPU at a task boundary.
+                # Move one tensor at a time to keep peak GPU memory bounded.
+                previous = old_fisher[n].to(
+                    device=current.device, dtype=torch.float32
+                )
+                current.add_(previous, alpha=gamma)
+                del previous
+            updated_fisher[n] = current.to(dtype=torch.bfloat16)
+        self.fisher = updated_fisher
+        del fisher_new
 
+        with torch.no_grad():
+            vals = [f.float().mean().item() for f in self.fisher.values()]
+            if len(vals) > 0:
+                print(f"[EWC] Fisher batches = {num_batches}")
+                print(f"[EWC] Fisher mean avg = {sum(vals) / len(vals):.6e}")
+                print(f"[EWC] Fisher mean max = {max(vals):.6e}")
+                print(f"[EWC] Fisher mean min = {min(vals):.6e}")
+
+        model.zero_grad(set_to_none=True)
         model.train()
+
+    def offload_state_to_cpu(self):
+        """Move historical EWC state off GPU before boundary Fisher estimation."""
+        self.ref_param = {
+            n: tensor.detach().cpu() for n, tensor in self.ref_param.items()
+        }
+        self.fisher = {
+            n: tensor.detach().cpu() for n, tensor in self.fisher.items()
+        }
 
     def penalty(self, model: PreTrainedModel) -> torch.Tensor:
         """
         计算 EWC 正则项
         """
         loss = torch.tensor(0.0, device=self.device)
+
         for n, p in model.named_parameters():
             if n in self.fisher:
-                loss = loss + (self.fisher[n] * (p - self.ref_param[n]).pow(2)).sum() / 2.0
+                loss = loss + (
+                    self.fisher[n] * (p - self.ref_param[n]).pow(2)
+                ).sum() / 2.0
 
         return self.cfg.lambda_ewc * loss
 
@@ -143,6 +173,7 @@ class EWC:
                 "fisher_decay": float(self.cfg.fisher_decay),
             },
         }
+
         torch.save(state, save_path)
 
     def load(self, load_path: str, model: PreTrainedModel):
@@ -160,18 +191,22 @@ class EWC:
         new_ref: Dict[str, torch.Tensor] = {}
         new_fisher: Dict[str, torch.Tensor] = {}
 
-        name_to_param = {n: p for n, p in model.named_parameters() if n in cur_param_names}
+        name_to_param = {
+            n: p for n, p in model.named_parameters()
+            if n in cur_param_names
+        }
 
         for n, p in name_to_param.items():
             if (n in loaded_ref) and (n in loaded_fisher):
                 ref_t = loaded_ref[n]
                 fish_t = loaded_fisher[n]
 
-                if tuple(ref_t.shape) != tuple(p.shape) or tuple(fish_t.shape) != tuple(p.shape):
-                    continue
-
-                new_ref[n] = ref_t.to(self.device)
-                new_fisher[n] = fish_t.to(self.device)
+                if tuple(ref_t.shape) == tuple(p.shape) and tuple(fish_t.shape) == tuple(p.shape):
+                    new_ref[n] = ref_t.to(self.device, dtype=p.dtype)
+                    new_fisher[n] = fish_t.to(self.device, dtype=torch.bfloat16)
+                else:
+                    new_ref[n] = p.detach().clone().to(self.device)
+                    new_fisher[n] = torch.zeros_like(p, device=self.device)
             else:
                 new_ref[n] = p.detach().clone().to(self.device)
                 new_fisher[n] = torch.zeros_like(p, device=self.device)

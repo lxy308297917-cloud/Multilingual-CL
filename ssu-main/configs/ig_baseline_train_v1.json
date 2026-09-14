@@ -1,0 +1,103 @@
+{
+  "experiment_family": "ig_baseline_train_v1",
+  "active_protocol_id": "ig_baseline_train_v1_seed42",
+  "protocol_status": "frozen_common_budget_per_method_release_required",
+  "base_model": "/root/models/Qwen2.5-1.5B-Instruct",
+  "tokenizer": "/root/models/Qwen2.5-1.5B-Instruct",
+  "training_python": "/root/miniconda3/envs/cl/bin/python",
+  "training_data": "/root/autodl-fs/fineweb2_cpt_ssu/ibo_Latn/train10k",
+  "output_root": "/root/autodl-fs/ssu-project/experiments/ig_baseline_suite_v1/retrained",
+  "gpu": 2,
+  "seed": 42,
+  "data_seed": 42,
+  "sequence_length": 512,
+  "max_steps": 15000,
+  "batch_size": 2,
+  "gradient_accumulation_steps": 1,
+  "bf16": true,
+  "gradient_checkpointing": true,
+  "learning_rate": 5e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.05,
+  "lr_scheduler_type": "cosine",
+  "max_grad_norm": 1.0,
+  "adam_beta1": 0.9,
+  "adam_beta2": 0.999,
+  "adam_epsilon": 1e-08,
+  "optimizer": "adamw_torch",
+  "english_calibration": "/root/autodl-fs/ssu_calib/qwen25_15b_alpaca_calib_2048",
+  "english_calibration_requested": 500,
+  "target_calibration_requested": 128,
+  "calibration_max_length": 2048,
+  "methods": {
+    "full_fft": {
+      "selection": "all_parameters"
+    },
+    "ssu_en_freeze50": {
+      "selection": "source_activation_weight_L2_column_score",
+      "freeze_ratio": 0.5,
+      "freeze_chat_template_tokens": true,
+      "skip_embeddings_and_head": true
+    },
+    "current_top20_all_layers": {
+      "selection": "target_activation_weight_column_scores",
+      "top_ratio": 0.2,
+      "calibration_language": "ig",
+      "layers": "all"
+    },
+    "hft50": {
+      "selection": "hft_based",
+      "freeze_ratio": 0.5,
+      "description": "per-layer random module freezing: 2/4 attention, 1 or 2/3 FFN, 1/2 norms",
+      "skip_embeddings_and_head": true,
+      "freeze_chat_template_tokens": true
+    },
+    "lota90": {
+      "selection": "lota",
+      "sparsity": 0.9,
+      "calibration_steps": 100,
+      "calibration_grad_accum_steps": 1,
+      "calibration_optimizer": "adamw",
+      "reset_to_base_after_selection": true,
+      "extra_calibration_cost_reported_separately": true,
+      "skip_embeddings_and_head": true
+    },
+    "mofo15": {
+      "selection": "per_tensor_momentum_top_fraction",
+      "fraction": 0.15,
+      "ties": "threshold includes ties; count actual updates"
+    },
+    "layers1_5_23_27_fft": {
+      "selection": "whole_layers",
+      "zero_based_layer_ranges": "1-5,23-27",
+      "freeze_outside_layers": true
+    }
+  },
+  "evaluation_entry": "scripts/baseline_eval.sh",
+  "release_gates": [
+    "verify calibration sample IDs and actual counts",
+    "verify full train10k block lengths and tokenizer identity",
+    "record exact selected parameters and masks",
+    "verify frozen/update behavior with the chosen optimizer",
+    "measure final-save and recovery storage requirements before launch",
+    "freeze commands, code and data hashes"
+  ],
+  "historical_behavior_note": "Legacy selective gradient hooks and method-specific optimizers are audited separately; no assertion that nominal ratios equal effective updated parameter ratios.",
+  "english_calibration_actual_available": 101,
+  "train_block_count": 31575,
+  "training_token_positions": 15360000,
+  "audit_sources": {
+    "data": "/root/autodl-fs/ssu-project/experiments/ig_baseline_suite_v1/training_data_and_storage_audit.json",
+    "structural_parameters": "/root/autodl-fs/ssu-project/experiments/ig_baseline_suite_v1/structural_parameter_audit.json"
+  },
+  "training_gpu_pool": [
+    2,
+    3
+  ],
+  "execution_policy": "User authorized training/evaluation overlap after four-GPU upgrade: evaluation GPUs 0,1; independent training runs GPUs 2,3. Preserve effective batch2 per model; no DDP world-size change.",
+  "save_strategy": "no",
+  "save_policy": "final complete HF model only; no intermediate optimizer/scheduler/RNG checkpoint; rerun interrupted methods from Base",
+  "gradient_checkpointing_kwargs": {
+    "use_reentrant": false
+  }
+}

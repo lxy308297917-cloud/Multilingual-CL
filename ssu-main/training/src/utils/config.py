@@ -76,7 +76,7 @@ class CustomArgumentParser(argparse.ArgumentParser):
                 "sgpt_elementwise",
                 "sgpt_rowwise",
             ],
-            default="fine_grained",
+            default="random_based",
             help=(
                 "Strategy for parameter freezing: "
                 "'random_based' freezes individual neurons/weights (structured by columns), "
@@ -96,6 +96,15 @@ class CustomArgumentParser(argparse.ArgumentParser):
                 "'sgpt_rowwise' aggregates to rows, "
                 "'sgpt_elementwise' uses E[x^2] for element-wise selection, "
             )
+        )
+        self.parser.add_argument(
+            "--freeze_seed",
+            type=int,
+            default=None,
+            help=(
+                "Mask-selection seed for HFT/SSU. Defaults to TrainingArguments.seed. "
+                "Set it per task to reproduce HFT's stage-wise resampling."
+            ),
         )
         self.parser.add_argument(
             "--skip_embeddings_and_head", 
@@ -143,7 +152,7 @@ class CustomArgumentParser(argparse.ArgumentParser):
             "--gmt_mask_ratio",
             type=float,
             default=0.2,
-            help="Ratio of gradients to keep (top-k percentile by absolute value) in GMT. E.g., 0.2 means keep top 20% of gradients."
+            help="Ratio of gradients to keep (top-k percentile by absolute value) in GMT. E.g., 0.2 means keep top 20%% of gradients."
         )
         self.parser.add_argument(
             "--gmt_skip_embeddings_and_head",
@@ -161,7 +170,7 @@ class CustomArgumentParser(argparse.ArgumentParser):
             "--lota_sparsity",
             type=float,
             default=0.9,
-            help="Fraction of weights to freeze in LoTA (e.g. 0.9 => keep top 10% trainable)."
+            help="Fraction of weights to freeze in LoTA (e.g. 0.9 => keep top 10%% trainable)."
         )
         self.parser.add_argument(
             "--lota_calibration_steps",
@@ -375,6 +384,8 @@ class CustomArgumentParser(argparse.ArgumentParser):
             action="store_true",
             help="训练结束后保存 EWC 状态到 output_dir/ewc_state.pt"
         )
+        
+        self.parser.add_argument("--ewc_fisher_decay", type=float, default=0.95)
 
 
         # LwF options
@@ -393,9 +404,34 @@ class CustomArgumentParser(argparse.ArgumentParser):
         )
 
         # GPM options
+        self.parser.add_argument(
+            "--task_id",
+            type=int,
+            default=0,
+            help="Zero-based task index used by sequential CL methods such as GPM.",
+        )
         self.parser.add_argument("--gpm_threshold_base", type=float, default=0.97, help="GPM 子空间能量阈值基值")
         self.parser.add_argument("--gpm_threshold_inc", type=float, default=0.003, help="GPM 每个 task 递增阈值")
         self.parser.add_argument("--gpm_max_tokens_per_layer", type=int, default=4096, help="每层用于 SVD 的 token 向量采样上限")
+        self.parser.add_argument(
+            "--gpm_max_rank_per_layer",
+            type=int,
+            default=None,
+            help=(
+                "Optional rank cap for the compact GPM basis. The original "
+                "algorithm is recovered with None; use a small cap for wide LLM layers."
+            ),
+        )
+        self.parser.add_argument(
+            "--gpm_max_new_rank_per_task",
+            type=int,
+            default=None,
+            help=(
+                "Optional cap on residual GPM directions appended per task. "
+                "Use this for a bounded low-rank GPM without preventing later tasks "
+                "from contributing to the cumulative memory."
+            ),
+        )
         self.parser.add_argument(
             "--gpm_keywords",
             type=str,
@@ -403,8 +439,159 @@ class CustomArgumentParser(argparse.ArgumentParser):
             help="对哪些 Linear 生效：按模块名关键字过滤，逗号分隔"
         )
         self.parser.add_argument("--gpm_update_max_batches", type=int, default=20, help="每个 task 结束后，用多少个 batch 更新子空间")
+        self.parser.add_argument(
+            "--gpm_state_path",
+            type=str,
+            default=None,
+            help=(
+                "Explicit prior GPM state. If omitted, load "
+                "model_name_or_path/gpm_state.pt when present."
+            ),
+        )
 
 
+        # ==============================
+        # LA-SSU options
+        # ==============================
+        self.parser.add_argument(
+            "--lassu_collect_scores",
+            action="store_true",
+            help=(
+                "Only collect LA-SSU column-wise SSU/Wanda scores and save them. "
+                "No training will be performed."
+            )
+        )
+        self.parser.add_argument(
+            "--lassu_enable",
+            action="store_true",
+            help=(
+                "Enable LA-SSU training: load old/current language score files, "
+                "build language-aware soft column scales, and apply gradient scaling."
+            )
+        )
+        self.parser.add_argument(
+            "--lassu_score_save_path",
+            type=str,
+            default=None,
+            help="Path to save LA-SSU score file when --lassu_collect_scores is enabled."
+        )
+        self.parser.add_argument(
+            "--lassu_current_score_path",
+            type=str,
+            default=None,
+            help="Score file path for the current language when --lassu_enable is enabled."
+        )
+        self.parser.add_argument(
+            "--lassu_old_score_paths",
+            type=str,
+            default="",
+            help=(
+                "Comma-separated score file paths for old languages. "
+                "Example: ibo_scores.pt,hau_scores.pt"
+            )
+        )
+        self.parser.add_argument(
+            "--lassu_calibration_dataset_path",
+            type=str,
+            default=None,
+            help=(
+                "Calibration dataset path for LA-SSU score collection. "
+                "If not provided, fallback to --calibration_dataset_path or train_dataset."
+            )
+        )
+        self.parser.add_argument(
+            "--lassu_num_calibration_samples",
+            type=int,
+            default=128,
+            help="Number of calibration samples used for LA-SSU score collection."
+        )
+        self.parser.add_argument(
+            "--lassu_top_ratio",
+            type=float,
+            default=0.5,
+            help=(
+                "Top ratio of important columns selected for each language. "
+                "Use 0.5 to align with original SSU freeze_ratio=0.5."
+            )
+        )
+        self.parser.add_argument(
+            "--lassu_skip_embeddings_and_head",
+            action=argparse.BooleanOptionalAction,
+            default=True,
+            help=(
+                "Whether to skip embeddings and lm_head when collecting LA-SSU scores. "
+                "Default: True. Use --no-lassu_skip_embeddings_and_head to disable."
+            )
+        )
+        self.parser.add_argument(
+            "--lassu_old_shared_threshold",
+            type=int,
+            default=2,
+            help=(
+                "A column is treated as old-shared if it appears in at least this many old languages."
+            )
+        )
+        self.parser.add_argument(
+            "--lassu_old_specific_scale",
+            type=float,
+            default=0.0,
+            help="Gradient scale for old-specific columns."
+        )
+        self.parser.add_argument(
+            "--lassu_old_shared_scale",
+            type=float,
+            default=0.1,
+            help="Gradient scale for old-shared columns."
+        )
+        self.parser.add_argument(
+            "--lassu_current_shared_scale",
+            type=float,
+            default=0.5,
+            help="Gradient scale for columns important to both current and old languages."
+        )
+        self.parser.add_argument(
+            "--lassu_current_specific_scale",
+            type=float,
+            default=1.0,
+            help="Gradient scale for current-specific important columns."
+        )
+        self.parser.add_argument(
+            "--lassu_others_scale",
+            type=float,
+            default=1.0,
+            help="Gradient scale for other columns."
+        )
+                # ==============================
+        # English-Anchored LA-SSU options
+        # ==============================
+        self.parser.add_argument(
+            "--lassu_english_score_path",
+            type=str,
+            default=None,
+            help=(
+                "English anchor score file path. If provided with --lassu_enable, "
+                "use English-Anchored LA-SSU classification: "
+                "C=EN∩CUR, P=EN∩PAST-CUR, E=EN-CUR-PAST."
+            )
+        )
+        self.parser.add_argument(
+            "--lassu_en_current_shared_scale",
+            type=float,
+            default=0.7,
+            help="Scale for EN ∩ CUR columns."
+        )
+        self.parser.add_argument(
+            "--lassu_en_past_shared_scale",
+            type=float,
+            default=0.1,
+            help="Scale for EN ∩ PAST - CUR columns."
+        )
+        self.parser.add_argument(
+            "--lassu_en_only_scale",
+            type=float,
+            default=0.0,
+            help="Scale for EN - CUR - PAST columns."
+        )
 
 
 
