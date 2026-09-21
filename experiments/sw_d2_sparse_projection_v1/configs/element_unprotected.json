@@ -1,0 +1,31 @@
+{
+  "experiment_family": "sw_d2_sparse_projection_v1",
+  "protocol_id": "sw_d2_sparse_projection_seed42_v1",
+  "status": "frozen_staged_release",
+  "recipe": "D2",
+  "recipe_selection": "/root/autodl-fs/ssu-project/experiments/d2_bilingual_v1/D2_METHOD_TRACK_SELECTION.json",
+  "manifest": "/root/autodl-tmp/d2_bilingual_v1/sw/manifest.json",
+  "manifest_sha256": "3c7dba8a78834380d05d2933d7c2e962517e5a60511df2606977a5b25828e9f7",
+  "checkpoint_root": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints",
+  "output_dir": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/element_unprotected",
+  "base_model": "/root/models/Qwen2.5-1.5B-Instruct",
+  "seed": 42,
+  "input_token_budget": 15360000,
+  "max_length": 2048,
+  "learning_rate": 5e-05,
+  "weight_decay": 0.01,
+  "training_python": "/root/miniconda3/envs/cl/bin/python",
+  "training_environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.6",
+    "datasets": "4.8.5",
+    "accelerate": "1.7.0"
+  },
+  "minimum_start_free_bytes": 21474836480,
+  "calibration_file": "/root/autodl-tmp/sw_update_utility_v1/calibration_candidates.jsonl",
+  "calibration_sha256": "5f931f18c2469e906eced38a8b862006fd96af6796ef95a80d3ef3887fc47472",
+  "basis_file": "/root/autodl-tmp/sw_d2_sparse_projection_v1/edge_bases_rank32.safetensors",
+  "basis_sha256": "db0ee1796606a95dbd48fb463d9888a940237cb205954cc61dfa32c0cd848b07",
+  "method": "element_unprotected"
+}

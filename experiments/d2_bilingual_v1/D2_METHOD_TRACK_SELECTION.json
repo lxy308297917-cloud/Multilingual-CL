@@ -1,0 +1,49 @@
+{
+  "status": "frozen_exploratory_choice_after_complete_evaluation",
+  "time_utc": "2026-09-20T13:11:18.134779+00:00",
+  "selected_language": "SW",
+  "selected_recipe": "D2",
+  "recipe_weights": {
+    "fineweb2_cpt": 0.7,
+    "aya": 0.1,
+    "en_to_sw": 0.1,
+    "sw_to_en": 0.1
+  },
+  "comparison": {
+    "SW": {
+      "target3_relative_pct": 51.69934956395514,
+      "en3_relative_pct": 27.781498498068572,
+      "belebele_sw": 7.666666666666664,
+      "belebele_en": -3.444444444444457,
+      "sum_en": -0.25591244438063754,
+      "mt_sw2en": 18.63812700278715,
+      "ifeval_prompt_strict": -22.73567467652495,
+      "gsm8k_strict": -17.81652767247915,
+      "retention_pass": false
+    },
+    "IG": {
+      "target3_relative_pct": 54.049177363638734,
+      "en3_relative_pct": 22.807062000186395,
+      "belebele_ig": 2.3333333333333357,
+      "belebele_en": -3.444444444444457,
+      "sum_en": -0.6991202151114919,
+      "mt_ig2en": 12.287156148976702,
+      "ifeval_prompt_strict": -24.399260628465807,
+      "gsm8k_strict": -18.423047763457163,
+      "retention_pass": false
+    }
+  },
+  "interpretation": "Both fail preregistered retention gate; SW selected as a Pareto tradeoff for exploratory mechanism testing, not overall optimal or no-forgetting. SW has stronger reading gain, smaller IFEval and strict GSM8K loss, stronger EN3, and stronger overlap evidence. IG Target3 is slightly higher but IG summary has detected CPT/test exact overlap.",
+  "overlap_limitations": {
+    "ig_summary_cpt_exact_13word_matched_eval_rows": 27,
+    "sw_summary_cpt_exact_13word_matched_eval_rows": 0,
+    "sw_summary_translation_exact_13word_matched_eval_rows_at_least": 1,
+    "scope": "Only fixed 500 summary rows and 13-word exact windows; no semantic or full near-duplicate guarantee."
+  },
+  "evidence_sha256": {
+    "/root/autodl-fs/ssu-project/experiments/d2_bilingual_v1/LATEST_SW_IG_D2_RESULTS.csv": "c73e1c30dc0a4b2ea9ef80449bcd4cea51f8d7ee51414b7fb0d137be2d48040d",
+    "/root/autodl-fs/ssu-project/experiments/d2_bilingual_v1/IG_D2_EXACT_OVERLAP_AUDIT.json": "dbeee280ca05e1dacd2db49851855aaeaf0cf2293f82b7f792fb8a13426819c6",
+    "/root/autodl-fs/ssu-project/experiments/d2_bilingual_v1/SW_D2_EXACT_OVERLAP_AUDIT.json": "9b584ab7b480413a3ef648b3f51e996b63750cc2dba35b03c401159061de1fd7",
+    "/root/autodl-fs/ssu-project/experiments/d2_bilingual_v1/SELECTION_PROTOCOL_ZH.md": "e2e327a09e576a0670800acde31c80209d5c1f0ed05664824d2f94d520d0762c"
+  }
+}

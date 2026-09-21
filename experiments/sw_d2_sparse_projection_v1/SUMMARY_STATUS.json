@@ -1,0 +1,339 @@
+{
+  "missing": {
+    "edge_projected_rows": "训练未完成",
+    "edge_rows_no_projection": "训练未完成",
+    "fft_fp32_matched": "训练未完成"
+  },
+  "verified_models": [
+    "Base",
+    "D2_历史FFT",
+    "element_protected",
+    "element_unprotected"
+  ],
+  "reading_pairs": [
+    {
+      "left": "element_protected",
+      "right": "element_unprotected",
+      "delta_pp": 1.6666666666666667,
+      "ci95_pp": [
+        -1.2168141592920354,
+        4.439634973486248
+      ],
+      "one_sided_cluster_signflip_p": 0.1434856514348565,
+      "questions": 900,
+      "passages": 488,
+      "resamples": 10000,
+      "seed": 42
+    },
+    {
+      "left": "element_protected",
+      "right": "D2_历史FFT",
+      "delta_pp": 0.1111111111111111,
+      "ci95_pp": [
+        -2.768626013804686,
+        2.986891225006375
+      ],
+      "one_sided_cluster_signflip_p": 0.49555044495550443,
+      "questions": 900,
+      "passages": 488,
+      "resamples": 10000,
+      "seed": 42
+    },
+    {
+      "left": "element_unprotected",
+      "right": "D2_历史FFT",
+      "delta_pp": -1.5555555555555556,
+      "ci95_pp": [
+        -4.250620274750609,
+        1.123627102791926
+      ],
+      "one_sided_cluster_signflip_p": 0.8852114788521148,
+      "questions": 900,
+      "passages": 488,
+      "resamples": 10000,
+      "seed": 42
+    },
+    {
+      "left": "D2_历史FFT",
+      "right": "Base",
+      "delta_pp": 7.666666666666667,
+      "ci95_pp": [
+        4.2268013842541095,
+        11.123470522803114
+      ],
+      "one_sided_cluster_signflip_p": 9.999000099990002e-05,
+      "questions": 900,
+      "passages": 488,
+      "resamples": 10000,
+      "seed": 42
+    },
+    {
+      "left": "element_protected",
+      "right": "Base",
+      "delta_pp": 7.777777777777778,
+      "ci95_pp": [
+        4.083885209713024,
+        11.543050931064245
+      ],
+      "one_sided_cluster_signflip_p": 9.999000099990002e-05,
+      "questions": 900,
+      "passages": 488,
+      "resamples": 10000,
+      "seed": 42
+    },
+    {
+      "left": "element_unprotected",
+      "right": "Base",
+      "delta_pp": 6.111111111111111,
+      "ci95_pp": [
+        2.6815642458100557,
+        9.560461192350955
+      ],
+      "one_sided_cluster_signflip_p": 0.0004999500049995,
+      "questions": 900,
+      "passages": 488,
+      "resamples": 10000,
+      "seed": 42
+    }
+  ],
+  "aggregates": {
+    "Base": {
+      "EN3": 0.0,
+      "Target3": 0.0
+    },
+    "D2_历史FFT": {
+      "EN3": 27.781498498068572,
+      "Target3": 51.69934956395514
+    },
+    "element_protected": {
+      "EN3": 34.64681767388999,
+      "Target3": 53.41805781586325
+    },
+    "element_unprotected": {
+      "EN3": 26.8555766788017,
+      "Target3": 48.29849338995683
+    }
+  },
+  "evidence": {
+    "Base": {
+      "language": "sw",
+      "model": "/autodl-fs/data/system_disk_offload/models/Qwen2.5-1.5B-Instruct",
+      "complete": true,
+      "missing": [],
+      "verified_units": [
+        {
+          "task": "sum_sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/ccabf401e0f1ca27/sum_sw-seed42/attempt-1789400439216219842/DONE.json",
+          "done_sha256": "0c50b42b09bed2326cc316c1e1218d5cdcb3c529ea8236bfb6ac00396439b980"
+        },
+        {
+          "task": "sum_en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/ccabf401e0f1ca27/sum_en-seed42/attempt-1789401685654261181/DONE.json",
+          "done_sha256": "1e3ce41feaf8c2fbf31fcb779588cf165375c78d568355bc23f7e3e7430b7080"
+        },
+        {
+          "task": "mt_en2sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/ccabf401e0f1ca27/mt_en2sw-seed42/attempt-1789402407264564344/DONE.json",
+          "done_sha256": "59738933a146654da311e2fef3647fc212b7d615c6a79bd5ff910a2177378f7f"
+        },
+        {
+          "task": "mt_sw2en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/ccabf401e0f1ca27/mt_sw2en-seed42/attempt-1789403446504251807/DONE.json",
+          "done_sha256": "9bad0173eec3e361c4136bb06cf78e6a37b0e9df8dd3db0e185dbcd184347137"
+        },
+        {
+          "task": "belebele_sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/ccabf401e0f1ca27/belebele_sw-seed42/attempt-1789403473257254628/DONE.json",
+          "done_sha256": "46dbadd3009f4c453e414443b381eac767884a02bb5b015bac2357c9268bbf96"
+        },
+        {
+          "task": "belebele_en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/ccabf401e0f1ca27/belebele_en-seed42/attempt-1789403646029461316/DONE.json",
+          "done_sha256": "7eb2111840ec13dd77b69911482746743b5269213adfa8c909e41ca233b631d5"
+        },
+        {
+          "task": "ifeval",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/ccabf401e0f1ca27/ifeval-seed42/attempt-1789410155977207018/DONE.json",
+          "done_sha256": "14d6a6a972876653e761b52a7181facee041176327d07510907c37795a69074b"
+        },
+        {
+          "task": "ppl",
+          "done": "/autodl-fs/data/ssu-project/experiments/sw_fineweb2_aya_v1/diagnostics/44713d456bfe3f9d/DONE.json",
+          "done_sha256": "4c7d5278156c839258c4c9bef6e653a66b8c9c6693ddc8e9bfa32b5fc904bd99",
+          "details_sha256": "3d73504ec5fde242149d71486ada856b029e4be5e655af9f78a414994651e999"
+        },
+        {
+          "task": "gsm8k",
+          "done": "/autodl-fs/data/ssu-project/experiments/ig_gsm8k_harness048_v1/evaluation/ccabf401e0f1ca27/attempt-1789614388563521018/DONE.json",
+          "done_sha256": "e7984c9f3578a6a0f005e4f7c45b08324e4cab3c3a2f104e26ff0255050661f5"
+        }
+      ],
+      "verification": "live model/tokenizer identities, current protocol code/data/environment, all frozen DONE artifacts; PPL details recomputed; no GPU execution"
+    },
+    "D2_历史FFT": {
+      "language": "sw",
+      "model": "/root/autodl-tmp/d2_bilingual_v1/checkpoints/sw/final",
+      "complete": true,
+      "missing": [],
+      "verified_units": [
+        {
+          "task": "sum_sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/d5507f149fefb4a3/sum_sw-seed42/attempt-1789716004047830569/DONE.json",
+          "done_sha256": "25a30ce377f9232f8c290884e24e093f3146f503b73ecafaf0461d3795924deb"
+        },
+        {
+          "task": "sum_en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/d5507f149fefb4a3/sum_en-seed42/attempt-1789717632637059152/DONE.json",
+          "done_sha256": "0ad836a12d9925e32ed9bddff64bcd16c5aad758d27da56f82583f1c582ae806"
+        },
+        {
+          "task": "mt_en2sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/d5507f149fefb4a3/mt_en2sw-seed42/attempt-1789719337027320988/DONE.json",
+          "done_sha256": "b236d9cc549b1bd4ef5c6259522366d6651e6a74eeaa53fb387a94616b9a3e2e"
+        },
+        {
+          "task": "mt_sw2en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/d5507f149fefb4a3/mt_sw2en-seed42/attempt-1789720274720391119/DONE.json",
+          "done_sha256": "41d74522ffd7013ac32142392828737d5e22f114b9cabc6e0da8970ca4580b7c"
+        },
+        {
+          "task": "belebele_sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/d5507f149fefb4a3/belebele_sw-seed42/attempt-1789720801962938024/DONE.json",
+          "done_sha256": "240bcf176e9d737d367e4c2cb322223189df9c8e1312f538adc002f172d80f94"
+        },
+        {
+          "task": "belebele_en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/d5507f149fefb4a3/belebele_en-seed42/attempt-1789720976368016924/DONE.json",
+          "done_sha256": "747e0556d222f7a951d7032b775a51f8f95c4a5be74c4db25e0097ede4549796"
+        },
+        {
+          "task": "ifeval",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/d5507f149fefb4a3/ifeval-seed42/attempt-1789721092552226236/DONE.json",
+          "done_sha256": "73ddeb4fd80742ae413362e104c4494c6425311dbff1d4feca987e999f565c2a"
+        },
+        {
+          "task": "ppl",
+          "done": "/autodl-fs/data/ssu-project/experiments/sw_fineweb2_aya_v1/diagnostics/fcc34bf65f11a6ec/DONE.json",
+          "done_sha256": "73467391242f025c9e09747e7af7667e8333ce5c4e01fdd9ea006def1a130e1b",
+          "details_sha256": "dba8c5374856f308edbf0b6371c7d7243da092b9ffa419a4274c3847b56f6eb4"
+        },
+        {
+          "task": "gsm8k",
+          "done": "/autodl-fs/data/ssu-project/experiments/ig_gsm8k_harness048_v1/evaluation/d5507f149fefb4a3/attempt-1789905327092995748/DONE.json",
+          "done_sha256": "778e5d9b56707a08df73f8037061a661f60b0f589059142bffc03aa476b82682"
+        }
+      ],
+      "verification": "live model/tokenizer identities, current protocol code/data/environment, all frozen DONE artifacts; PPL details recomputed; no GPU execution"
+    },
+    "element_protected": {
+      "language": "sw",
+      "model": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/element_protected/final",
+      "complete": true,
+      "missing": [],
+      "verified_units": [
+        {
+          "task": "sum_sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/23202db244566cf0/sum_sw-seed42/attempt-1789975808925562005/DONE.json",
+          "done_sha256": "e854dc18fd7f1c93c9c182c8e85421358d486848cbb1c4b1060ea46855d3d285"
+        },
+        {
+          "task": "sum_en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/23202db244566cf0/sum_en-seed42/attempt-1789977394568493383/DONE.json",
+          "done_sha256": "288af5081a66359ed58e9a6559512ab73bab6386f83e490c12e1c3cd36cdf113"
+        },
+        {
+          "task": "mt_en2sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/23202db244566cf0/mt_en2sw-seed42/attempt-1789978841294402077/DONE.json",
+          "done_sha256": "7b6adc6586ea175d35601cff0430ba8be98bd8fc73dc27e0e01c83181768bc32"
+        },
+        {
+          "task": "mt_sw2en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/23202db244566cf0/mt_sw2en-seed42/attempt-1789979771715352640/DONE.json",
+          "done_sha256": "aa38332c15d119cd5b6c3f7462e8c47817e633dd134deb855ee4f1ed1d0a9761"
+        },
+        {
+          "task": "belebele_sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/23202db244566cf0/belebele_sw-seed42/attempt-1789980265283118909/DONE.json",
+          "done_sha256": "4a70dc1649a37367039b02c3ba0e3e83d074fc39ff4cf1c9ffd1a4a4dabe6048"
+        },
+        {
+          "task": "belebele_en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/23202db244566cf0/belebele_en-seed42/attempt-1789980437532333465/DONE.json",
+          "done_sha256": "0cd200592da213e3f2903f611ad24bd184cafeb0f415e0e3c839dd0b701b3c17"
+        },
+        {
+          "task": "ifeval",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/23202db244566cf0/ifeval-seed42/attempt-1789980554007890602/DONE.json",
+          "done_sha256": "a63d4dc0115e066375c77ef68300de2d71a351286a41561b44d435f475c05939"
+        },
+        {
+          "task": "ppl",
+          "done": "/autodl-fs/data/ssu-project/experiments/sw_fineweb2_aya_v1/diagnostics/81dd2924e035991b/DONE.json",
+          "done_sha256": "f32a3518bbd62b4e64e8d6b3cc2abb90376c3dd39f04fb2d38aa26081d172220",
+          "details_sha256": "e8d6c3cbcd73945e10944fa134323414da2d2fa66d2f7326dcf46341add1c492"
+        },
+        {
+          "task": "gsm8k",
+          "done": "/autodl-fs/data/ssu-project/experiments/ig_gsm8k_harness048_v1/evaluation/23202db244566cf0/attempt-1789982232459381653/DONE.json",
+          "done_sha256": "4ad6c32d0d0910fb4cd34901abffa2397f499e13b529c2b2d0c88620ad5b634c"
+        }
+      ],
+      "verification": "live model/tokenizer identities, current protocol code/data/environment, all frozen DONE artifacts; PPL details recomputed; no GPU execution"
+    },
+    "element_unprotected": {
+      "language": "sw",
+      "model": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/element_unprotected/final",
+      "complete": true,
+      "missing": [],
+      "verified_units": [
+        {
+          "task": "sum_sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/226f2ecbdac11cb9/sum_sw-seed42/attempt-1789964818956847837/DONE.json",
+          "done_sha256": "8f7d5f54817213e67403e1ce1a928965b3111caac1f356631c3a09b391dcc7d2"
+        },
+        {
+          "task": "sum_en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/226f2ecbdac11cb9/sum_en-seed42/attempt-1789966334873790233/DONE.json",
+          "done_sha256": "d7ed330a1a40e0c6be2718ea7e8ead75c56651d4489930a8c83395bd56410269"
+        },
+        {
+          "task": "mt_en2sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/226f2ecbdac11cb9/mt_en2sw-seed42/attempt-1789967613727152970/DONE.json",
+          "done_sha256": "790dcff41cf40014ae2e8c6515317d918cbc8ad7effc65609dff0f97b7dda68e"
+        },
+        {
+          "task": "mt_sw2en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/226f2ecbdac11cb9/mt_sw2en-seed42/attempt-1789968600212877460/DONE.json",
+          "done_sha256": "dfcc352db05f0ad2196cc28f9788d7f4d89d7d32f44e6b1d8c04fee5d93e8d27"
+        },
+        {
+          "task": "belebele_sw",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/226f2ecbdac11cb9/belebele_sw-seed42/attempt-1789969087727843700/DONE.json",
+          "done_sha256": "36026d8246a79d380da825914285db4476ccf8d637037b7d351ec7c741070899"
+        },
+        {
+          "task": "belebele_en",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/226f2ecbdac11cb9/belebele_en-seed42/attempt-1789969262773231014/DONE.json",
+          "done_sha256": "21e57655b2f285b6feb7af3703c729a72d5ef339f282e05cd548e0250297226c"
+        },
+        {
+          "task": "ifeval",
+          "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/226f2ecbdac11cb9/ifeval-seed42/attempt-1789969380521867605/DONE.json",
+          "done_sha256": "4f2fb37986b75494f58c20ad6e7a57bcacff14f1b2f1ed1cebbe2bd1778b7225"
+        },
+        {
+          "task": "ppl",
+          "done": "/autodl-fs/data/ssu-project/experiments/sw_fineweb2_aya_v1/diagnostics/e38db336b2088165/DONE.json",
+          "done_sha256": "fbfc11cd85b46498ac2b65e9e0f46c6152a0e150a1fd7fbf8ee67d8a1c6b506f",
+          "details_sha256": "efdf94401f631e2456b678be95c5c864200075c7804857edc577a760c9469fc5"
+        },
+        {
+          "task": "gsm8k",
+          "done": "/autodl-fs/data/ssu-project/experiments/ig_gsm8k_harness048_v1/evaluation/226f2ecbdac11cb9/attempt-1789971339250586546/DONE.json",
+          "done_sha256": "cf9fd207f572de4f45ae48e06b60ca133dbcfcc0602b78616d08ac04d35f8d68"
+        }
+      ],
+      "verification": "live model/tokenizer identities, current protocol code/data/environment, all frozen DONE artifacts; PPL details recomputed; no GPU execution"
+    }
+  }
+}

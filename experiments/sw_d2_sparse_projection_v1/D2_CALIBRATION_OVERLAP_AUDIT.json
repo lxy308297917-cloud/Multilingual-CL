@@ -1,0 +1,12 @@
+{
+  "status": "screen_complete",
+  "method": "20-token exact rolling hash of calibration body parts against full D2 sample; hashes not independently rechecked; short/common content and semantic overlap not covered",
+  "calibration_sha256": "5f931f18c2469e906eced38a8b862006fd96af6796ef95a80d3ef3887fc47472",
+  "d2_manifest_sha256": "3c7dba8a78834380d05d2933d7c2e962517e5a60511df2606977a5b25828e9f7",
+  "rows": {
+    "train": 217853,
+    "dev": 11013
+  },
+  "overlapping_calibration_ids": {},
+  "examples": []
+}

@@ -1,0 +1,61 @@
+{
+  "status": "released",
+  "time_utc": "2026-09-21T08:00:57.994780+00:00",
+  "protocol_id": "sw_d2_sparse_projection_seed42_v1",
+  "methods": [
+    "element_protected",
+    "element_unprotected",
+    "edge_projected_rows",
+    "edge_rows_no_projection",
+    "fft_fp32_matched"
+  ],
+  "future_methods": [],
+  "configs": {
+    "/autodl-fs/data/ssu-project/experiments/sw_d2_sparse_projection_v1/configs/element_protected.json": "c1a026d14bdb621b7aa31a057570766d0b361ddb40d06fb31f50cff81db1ebf0",
+    "/autodl-fs/data/ssu-project/experiments/sw_d2_sparse_projection_v1/configs/element_unprotected.json": "6aa3040949e859ec11337d061e2338260becc0db41fdaf95d31b4f10202d2eca",
+    "/autodl-fs/data/ssu-project/experiments/sw_d2_sparse_projection_v1/configs/edge_projected_rows.json": "b0a0ec15c9a99e539f66680d58035da4eabd9bc644dbbcf421dd9a2c57b0e061",
+    "/autodl-fs/data/ssu-project/experiments/sw_d2_sparse_projection_v1/configs/edge_rows_no_projection.json": "95aa51e44deccbd41c46ce8f95f5044e54f4e367be90430f0b6dcff4da61ccad",
+    "/autodl-fs/data/ssu-project/experiments/sw_d2_sparse_projection_v1/configs/fft_fp32_matched.json": "87204f0b311c6f1415f18db82792dd521604a08702a8393e6662ee9a7cf675a3"
+  },
+  "code": {
+    "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/method_optimizers.py": "8402049bb1f03e6f6171b0773748ecd18315dd1b15308e9096911591d97a9963",
+    "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/activation_bases.py": "a50e6fc6da9dff382a88d921cfa714b6997d438486e2cb461dbd2f93f964eaba",
+    "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/train_method.py": "7ce0ff989bde71f02dc781cb06c7f0f5ab8746a136fba91bf1a604ba449c3013",
+    "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/evaluate_method.py": "96f73367ca47ab5e50426e2b0dfd493a82c730ef9a58853327148078db2ea8fd",
+    "/root/autodl-fs/ssu-project/ssu-main/scripts/train_cl.py": "14b70d9f50898ef38b4f10e0a727d1723cb0d4b476b9f82cb34baaa3286dda10",
+    "/root/autodl-fs/ssu-project/ssu-main/scripts/evaluate_cl.py": "88bb3ee5164181e2e3e6afb12651ff64df8ce968c764d2e930a9a35336dd26ca",
+    "/root/autodl-fs/ssu-project/experiments/sw_update_utility_v1/prototype/safe_state.py": "b0f2f7d66783d98c92406a85071b68d01469c0f4ff39de768001ccbae0448edf",
+    "/root/autodl-fs/ssu-project/experiments/sw_update_utility_v1/prototype/safe_resume.py": "dfaec21dc993f76c19adaaf25dae33cc5f116077fe29f6dd1acac1a6cc79301f",
+    "/root/autodl-fs/ssu-project/experiments/sw_update_utility_v1/prototype/source_gradients.py": "c6fb7f3b7a1b8c6b9394f5752c95c7ff3339ebb174cd875eec3aced644eec282",
+    "/root/autodl-fs/ssu-project/experiments/sw_update_utility_v1/prototype/raw_gradient_capture.py": "dec79fc0c29c27d1e3979563192b62ba1e813a381c9ec1d4752e652aa10196c6",
+    "/root/autodl-fs/ssu-project/experiments/sw_update_utility_v1/prototype/dense_optimizer.py": "a31db5aa4f1283584b94df61228c80f0d9254b346abcf6e67b6a2af1f2bc7137",
+    "/root/autodl-fs/ssu-project/experiments/sw_update_utility_v1/prototype/block_ops.py": "53129f34804bfaa1e05134d327186751235477153e5613d4c8ae5624ce21ecef"
+  },
+  "base_files": {
+    "/root/models/Qwen2.5-1.5B-Instruct/model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "/root/models/Qwen2.5-1.5B-Instruct/config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+    "/root/models/Qwen2.5-1.5B-Instruct/tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "/root/models/Qwen2.5-1.5B-Instruct/tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "/root/models/Qwen2.5-1.5B-Instruct/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "/root/models/Qwen2.5-1.5B-Instruct/merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+  },
+  "evidence": {
+    "/root/autodl-tmp/d2_bilingual_v1/sw/manifest.json": "3c7dba8a78834380d05d2933d7c2e962517e5a60511df2606977a5b25828e9f7",
+    "/root/autodl-tmp/sw_update_utility_v1/calibration_candidates.jsonl": "5f931f18c2469e906eced38a8b862006fd96af6796ef95a80d3ef3887fc47472",
+    "/root/autodl-tmp/sw_d2_sparse_projection_v1/edge_bases_rank32.safetensors": "db0ee1796606a95dbd48fb463d9888a940237cb205954cc61dfa32c0cd848b07",
+    "/root/autodl-fs/ssu-project/experiments/d2_bilingual_v1/D2_METHOD_TRACK_SELECTION.json": "73ab41cecd3de97d982ce97fa9144d36e6a3ac517637749371e1e6571dab9e41",
+    "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/BASIS_BUILD.json": "ac674012b9544e375b5eb690280844088835120931bb45664c1901ebc8a73a1e",
+    "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/D2_CALIBRATION_OVERLAP_AUDIT.json": "637ff57020bae84ef15ad050c0a42f89cf610dd5e835f017b601266256c946d2",
+    "/root/autodl-tmp/d2_bilingual_v1/sw/train.jsonl": "9d55513d0080cb7a2bcb1aba9d33da8d9943aff00c9ea3b0b738b0e015e1ffbc",
+    "/root/autodl-tmp/d2_bilingual_v1/sw/dev.jsonl": "c6e455c41d0951a1e29edc8a5f8cf62a4fb97bfea532e1a2fdc64782068c09d0",
+    "/root/autodl-tmp/d2_bilingual_v1/sw/indices.json": "f6cc3a7b530eb4ee81929b5520849e33734ee29e6a47aabe0c4b9b2f3e9e1d4f",
+    "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/USER_STAGED_STORAGE_OVERRIDE.json": "9c71007b8c9fd1c08fe3250d5d1b47d831cf61dd503c5367d1477dfb5d642fe4"
+  },
+  "free_bytes": 112946008064,
+  "suite_required_free_bytes": 112742891520,
+  "current_stage_required_free_bytes": 112742891520,
+  "deficit_bytes": 0,
+  "full_suite_deficit_bytes": 0,
+  "user_staged_override": "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/USER_STAGED_STORAGE_OVERRIDE.json",
+  "reason": "Full five-model release at >=105 GiB free, retaining first-pair config identity."
+}

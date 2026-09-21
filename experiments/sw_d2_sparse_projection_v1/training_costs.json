@@ -1,0 +1,26 @@
+{
+  "element_protected": {
+    "config_sha256": "c1a026d14bdb621b7aa31a057570766d0b361ddb40d06fb31f50cff81db1ebf0",
+    "manifest_sha256": "3c7dba8a78834380d05d2933d7c2e962517e5a60511df2606977a5b25828e9f7",
+    "global_step": 22146,
+    "input_tokens": 15360372,
+    "supervised_tokens": 12175915,
+    "total_gpu_hours": 7.267078629599677,
+    "peak_gpu_memory_bytes": 21438695424,
+    "final_weights": {
+      "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/element_protected/final/model.safetensors": "010dba2c5778109911a171db43511fc9d043e2a5cfe67795a7a4cba5e1b96580"
+    }
+  },
+  "element_unprotected": {
+    "config_sha256": "6aa3040949e859ec11337d061e2338260becc0db41fdaf95d31b4f10202d2eca",
+    "manifest_sha256": "3c7dba8a78834380d05d2933d7c2e962517e5a60511df2606977a5b25828e9f7",
+    "global_step": 22146,
+    "input_tokens": 15360372,
+    "supervised_tokens": 12175915,
+    "total_gpu_hours": 5.71046806467904,
+    "peak_gpu_memory_bytes": 21438695424,
+    "final_weights": {
+      "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/element_unprotected/final/model.safetensors": "f06693b0ada2e39048b609674cf2c95cb13374f3d1b6064a5667c4dfc23ae02c"
+    }
+  }
+}
