@@ -3,7 +3,7 @@
 仅列出固定 seed42 任务中通过 DONE、产物哈希和模型身份核验的成绩。D2 旧 FFT 是历史参考；同优化器密集 FFT 与两组机制对照为本轨道严格对照。
 MMLU/G-MMLU 延期。PPL/NLL 仅作诊断，不进入 EN3/Target3 或能力结论。
 
-待完成：{"edge_projected_rows": "训练未完成", "edge_rows_no_projection": "训练未完成", "fft_fp32_matched": "训练未完成"}
+待完成：{"fft_fp32_matched": "测评未完成"}
 
 ## 下游原始分数与相对 Base 变化
 
@@ -49,17 +49,42 @@ MMLU/G-MMLU 延期。PPL/NLL 仅作诊断，不进入 EN3/Target3 或能力结�
 |element_unprotected|IFEval instruction strict|30.34|-21.46|+0.60|
 |element_unprotected|GSM8K strict 5-shot|13.42|-17.89|-0.08|
 |element_unprotected|GSM8K flexible 5-shot|30.10|-24.64|-7.05|
+|edge_projected_rows|SW Belebele|46.67|+9.44|+1.78|
+|edge_projected_rows|SW XL-Sum|30.52|+6.59|+0.34|
+|edge_projected_rows|EN→SW|37.75|+20.31|+1.41|
+|edge_projected_rows|SW→EN|42.91|+21.91|+3.27|
+|edge_projected_rows|EN Belebele|81.78|+0.00|+3.44|
+|edge_projected_rows|EN XL-Sum|22.37|+0.49|+0.74|
+|edge_projected_rows|IFEval prompt strict|34.75|-8.13|+14.60|
+|edge_projected_rows|IFEval instruction strict|44.48|-7.31|+14.75|
+|edge_projected_rows|GSM8K strict 5-shot|38.21|+6.90|+24.72|
+|edge_projected_rows|GSM8K flexible 5-shot|47.01|-7.73|+9.86|
+|edge_rows_no_projection|SW Belebele|44.22|+7.00|-0.67|
+|edge_rows_no_projection|SW XL-Sum|31.31|+7.37|+1.12|
+|edge_rows_no_projection|EN→SW|37.61|+20.17|+1.27|
+|edge_rows_no_projection|SW→EN|42.36|+21.36|+2.72|
+|edge_rows_no_projection|EN Belebele|78.89|-2.89|+0.56|
+|edge_rows_no_projection|EN XL-Sum|21.75|-0.14|+0.12|
+|edge_rows_no_projection|IFEval prompt strict|32.72|-10.17|+12.57|
+|edge_rows_no_projection|IFEval instruction strict|44.12|-7.67|+14.39|
+|edge_rows_no_projection|GSM8K strict 5-shot|40.11|+8.79|+26.61|
+|edge_rows_no_projection|GSM8K flexible 5-shot|42.76|-11.98|+5.61|
 
 ## SW 阅读逐文章配对差值
 
 |比较|差值 pp|95% CI pp|单侧配对检验 p|
 |---|---:|---:|---:|
 |element_protected − element_unprotected|+1.67|[-1.22, +4.44]|0.1435|
+|edge_projected_rows − edge_rows_no_projection|+2.44|[+0.00, +4.93]|0.0315|
 |element_protected − D2_历史FFT|+0.11|[-2.77, +2.99]|0.4956|
 |element_unprotected − D2_历史FFT|-1.56|[-4.25, +1.12]|0.8852|
+|edge_projected_rows − D2_历史FFT|+1.78|[-1.34, +4.99]|0.1520|
+|edge_rows_no_projection − D2_历史FFT|-0.67|[-3.83, +2.65]|0.6793|
 |D2_历史FFT − Base|+7.67|[+4.23, +11.12]|0.0001|
 |element_protected − Base|+7.78|[+4.08, +11.54]|0.0001|
 |element_unprotected − Base|+6.11|[+2.68, +9.56]|0.0005|
+|edge_projected_rows − Base|+9.44|[+5.97, +12.87]|0.0001|
+|edge_rows_no_projection − Base|+7.00|[+3.42, +10.59]|0.0003|
 
 该区间按文章分组、配对重抽样10000次；只反映固定模型与固定测试集的抽样不确定性，不代表跨训练 seed 稳定性。
 
@@ -71,6 +96,8 @@ MMLU/G-MMLU 延期。PPL/NLL 仅作诊断，不进入 EN3/Target3 或能力结�
 |D2_历史FFT|+27.78%|+51.70%|
 |element_protected|+34.65%|+53.42%|
 |element_unprotected|+26.86%|+48.30%|
+|edge_projected_rows|+35.50%|+56.45%|
+|edge_rows_no_projection|+32.50%|+55.09%|
 
 ## PPL/NLL 诊断
 
@@ -80,6 +107,8 @@ MMLU/G-MMLU 延期。PPL/NLL 仅作诊断，不进入 EN3/Target3 或能力结�
 |D2_历史FFT|16.392|13.696|2.797|2.617|
 |element_protected|14.506|14.301|2.675|2.660|
 |element_unprotected|15.413|14.245|2.735|2.656|
+|edge_projected_rows|13.788|15.794|2.624|2.760|
+|edge_rows_no_projection|14.690|15.778|2.687|2.759|
 
 ## 训练成本与范围
 

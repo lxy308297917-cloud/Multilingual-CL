@@ -1,0 +1,114 @@
+{
+  "status": "partial_evaluation_gpu_unavailable",
+  "time": 1790169649.1296396,
+  "model": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/fft_fp32_matched/final",
+  "training_done": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/fft_fp32_matched/TRAINING_DONE.json",
+  "training_done_sha256": "8bbae73a95b957e79a1626e2af0fd12bfdb887c627a88ac7fc0353653cc246d9",
+  "completed_units": {
+    "belebele_en": {
+      "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/belebele_en-seed42/attempt-1790157221004354309/DONE.json",
+      "done_sha256": "52e4b65702afa26d50ff6ed4ccfb3c112d58a23a78afd4f6b0aaf294983aa088",
+      "scores": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/belebele_en-seed42/attempt-1790157221004354309/scores.json",
+      "scores_sha256": "c86ea5a2a03723813fea1d01ce13b08756ba74ab6cb4cbe7ef3b349934ef40ec"
+    },
+    "belebele_sw": {
+      "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/belebele_sw-seed42/attempt-1790157046584914412/DONE.json",
+      "done_sha256": "048e3a507ac9c5b797680de4ab072677e677df1719ca925469f2b80e4651089c",
+      "scores": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/belebele_sw-seed42/attempt-1790157046584914412/scores.json",
+      "scores_sha256": "ce5003e610e0ca801c9e1a53fe9f289dc98cf5ff90548b64a047e7e35e92b296"
+    },
+    "ifeval": {
+      "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/ifeval-seed42/attempt-1790157340011182081/DONE.json",
+      "done_sha256": "769483b09bf42cd7072851a0efe9c5e1b370d1399f0eadf2851e9f3b028c4ec2",
+      "scores": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/ifeval-seed42/attempt-1790157340011182081/scores.json",
+      "scores_sha256": "282e91523761b6a26dadf30818219add1989b199d5cb8a562453cbf26c0a6b24"
+    },
+    "mt_en2sw": {
+      "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/mt_en2sw-seed42/attempt-1790155967300435866/DONE.json",
+      "done_sha256": "b5eba4ea805e538b159ad9152c0a2d91f7e3f9c2230eda7713eaefad15b4baab",
+      "scores": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/mt_en2sw-seed42/attempt-1790155967300435866/scores.json",
+      "scores_sha256": "4c1b9072f1b22d070a3da38d7c6ce0d07adce75dbc8ddafec57926804c567664"
+    },
+    "mt_sw2en": {
+      "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/mt_sw2en-seed42/attempt-1790156542729429156/DONE.json",
+      "done_sha256": "5f537cdf03a70bd1ee5b11c687663e85171604fe75d83ecb2e5d04acac5481bb",
+      "scores": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/mt_sw2en-seed42/attempt-1790156542729429156/scores.json",
+      "scores_sha256": "4a130ee838c16ee6148f98b688099ac06e8738ae1b9a69f04c73cfde48f5d696"
+    },
+    "sum_en": {
+      "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/sum_en-seed42/attempt-1790154453702626799/DONE.json",
+      "done_sha256": "f9cf25d05d5fd3c754db39ae9bc4044ca582d285880cb75035d0aab8f2c4f8d5",
+      "scores": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/sum_en-seed42/attempt-1790154453702626799/scores.json",
+      "scores_sha256": "d2470bca55654b781f2118f36c957480013d13edbed41ad6ffdd9aa02ad26e7a"
+    },
+    "sum_sw": {
+      "done": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/sum_sw-seed42/attempt-1790152596146275963/DONE.json",
+      "done_sha256": "af0b58a276f3c9570d44f6e3ca70c0856f2653de22436aa60c4a0de38f5fc9c8",
+      "scores": "/root/autodl-tmp/sw_fineweb2_aya_v1/evaluation/7c2a933429942bdd/sum_sw-seed42/attempt-1790152596146275963/scores.json",
+      "scores_sha256": "993015121fa7f395ee1a99c19cabb725b4c14fade15fe2264ecd26835efe1273"
+    },
+    "ppl": {
+      "done": "/root/autodl-fs/ssu-project/experiments/sw_fineweb2_aya_v1/diagnostics/0dcbfc5299c2ed38/DONE.json",
+      "done_sha256": "90be70fe3f7b8abe09c1bdf6eb91cd07fe52608c93ca1958147b829b4c71d188",
+      "scores": "/root/autodl-fs/ssu-project/experiments/sw_fineweb2_aya_v1/diagnostics/0dcbfc5299c2ed38/scores.json",
+      "scores_sha256": "a4afa587f3cf986981e7798a96e02094c72949f03f0d876549bb6edb8fd20445"
+    }
+  },
+  "missing": [
+    "gsm8k"
+  ],
+  "scores": {
+    "belebele_en": 71.44444444444444,
+    "belebele_sw": 41.888888888888886,
+    "ifeval_prompt_strict": 14.602587800369685,
+    "ifeval_instruction_strict": 23.021582733812952,
+    "mt_en2sw": 19.382139801199486,
+    "mt_sw2en": 37.4271642338918,
+    "sum_en": 21.705912434877924,
+    "sum_sw": 30.2487351765494,
+    "en_nll": 3.053786024451256,
+    "en_ppl": 21.195439157460438,
+    "sw_nll": 2.4369742423295975,
+    "sw_ppl": 11.438378567880244
+  },
+  "aggregates_relative_base_pct": {
+    "EN3": 21.567187593909694,
+    "Target3": 16.685829627356608
+  },
+  "reading_cluster_comparisons_dense_minus_right": {
+    "vs_Base": {
+      "delta_pp": 4.666666666666667,
+      "ci95_pp": [
+        1.0044642857142858,
+        8.416417776882891
+      ],
+      "p_one_sided": 0.007799220077992201
+    },
+    "vs_D2_history": {
+      "delta_pp": -3.0,
+      "ci95_pp": [
+        -6.040360646065344,
+        0.11013215859030837
+      ],
+      "p_one_sided": 0.9764023597640236
+    },
+    "vs_edge_projected_rows": {
+      "delta_pp": -4.777777777777778,
+      "ci95_pp": [
+        -8.138238573021182,
+        -1.4395660872597797
+      ],
+      "p_one_sided": 0.9985001499850015
+    },
+    "vs_edge_rows_no_projection": {
+      "delta_pp": -2.3333333333333335,
+      "ci95_pp": [
+        -5.698324022346369,
+        0.9967053649696868
+      ],
+      "p_one_sided": 0.9256074392560744
+    }
+  },
+  "gpu_observation": "nvidia-smi: No devices were found",
+  "resume_entry": "/root/miniconda3/envs/cl/bin/python /root/resume_sw_d2_after_reboot.py"
+}

@@ -1,0 +1,90 @@
+{
+  "protocol_id": "sw_d2_sparse_projection_seed42_v1",
+  "parameter_counting": "unique stored/tied parameters; tied LM head is not double counted",
+  "unique_base_parameters": 1543714304,
+  "implementation": {
+    "train_method_sha256": "7ce0ff989bde71f02dc781cb06c7f0f5ab8746a136fba91bf1a604ba449c3013",
+    "method_optimizers_sha256": "71375bc33ecce71d703f507ec465f733481444fe5ad03d1077b4ce17237352b2",
+    "activation_bases_sha256": "a50e6fc6da9dff382a88d921cfa714b6997d438486e2cb461dbd2f93f964eaba"
+  },
+  "element_protected": {
+    "candidate_matrices": 196,
+    "candidate_parameters_requires_grad": 1310195712,
+    "candidate_fraction_full": 0.8487293980531776,
+    "active_parameters_per_step": 196529312,
+    "active_fraction_candidate": 0.14999996580663516,
+    "active_fraction_full": 0.12730938068706266,
+    "mask_interval_steps": 20,
+    "mask_refresh_events_final_trajectory": 1108,
+    "source_interval_steps": 200,
+    "source_refresh_events_final_trajectory": 111,
+    "source_examples_per_refresh": 32,
+    "source_examples_breakdown": {
+      "instruction": 11,
+      "reading": 11,
+      "math": 10
+    },
+    "source_sensitivity": "EMA of squared independent English calibration gradients; matrix-wise mean normalized",
+    "selection": "top 15% individual elements in every Attention/MLP matrix by normalized target first-moment strength divided by 1 + normalized English sensitivity",
+    "frozen": "embedding/tied lm_head, norms, biases, and every parameter outside 196 2-D transformer matrices",
+    "cumulative_unique_update_fraction": "not recorded; dynamic masks mean it can exceed the per-step 12.73%"
+  },
+  "element_unprotected": {
+    "same_as": "element_protected",
+    "difference": "English sensitivity denominator removed; score is normalized absolute target first moment"
+  },
+  "edge_projected_rows": {
+    "zero_based_layers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "candidate_matrices": 70,
+    "candidate_parameters_requires_grad": 467927040,
+    "candidate_fraction_full": 0.30311764216184917,
+    "active_parameters_per_step": 233963520,
+    "active_fraction_candidate": 0.5,
+    "active_fraction_full": 0.15155882108092458,
+    "row_fraction": 0.5,
+    "mask_interval_steps": 20,
+    "mask_refresh_events_final_trajectory": 1108,
+    "basis_rank": 32,
+    "projection_alpha": 0.5,
+    "basis_examples": 256,
+    "basis_examples_breakdown": {
+      "instruction": 86,
+      "reading": 85,
+      "math": 85
+    },
+    "activation_tokens_per_example_per_module": 8,
+    "activation_count_per_module": 2048,
+    "basis_estimator": "deterministic randomized covariance range finder Q=qr(sum X^T X Omega), seed42",
+    "projection": "Delta_projected = Delta - 0.5*(Delta U)U^T",
+    "selection": "top 50% output rows per candidate matrix by projected-delta row mean square; all columns in selected rows update",
+    "frozen": "all parameters outside the 70 Attention/MLP matrices in the selected ten layers; within candidates, unselected rows per mask interval",
+    "cumulative_unique_update_fraction": "not recorded; dynamic row masks mean it can exceed the per-step 15.16%"
+  },
+  "edge_rows_no_projection": {
+    "same_as": "edge_projected_rows",
+    "difference": "projection alpha is 0; same layers, row budget, mask interval, optimizer and data"
+  },
+  "optimizer_common": {
+    "moments": "FP32 m/v for every candidate parameter",
+    "model_weights": "BF16",
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "weight_decay": 0.01,
+    "learning_rate": 5e-05,
+    "inactive_parameter_rule": "no parameter update and no weight decay; candidate moments still update"
+  },
+  "interpretation": "sparse nonzero parameter updates, not sparse forward/backward compute or adapter storage; final artifact is a full model",
+  "created_at": 1790170654.1820452
+}

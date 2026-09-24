@@ -1,0 +1,184 @@
+{
+  "status": "blocked_only_by_gpu_for_dense_gsm8k",
+  "observed_at_unix": 1790169912.271207,
+  "protocol_id": "sw_d2_sparse_projection_seed42_v1",
+  "release": {
+    "path": "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/TRAINING_RELEASE.json",
+    "sha256": "77578ca15bb464d73b3345fc0e40f5d1e3e92ee4f229a5abd5587343a1abcf38"
+  },
+  "training": {
+    "element_protected": {
+      "complete": true,
+      "path": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/element_protected/TRAINING_DONE.json",
+      "sha256": "17fae9c05aee33bad14be4f054915aca8ea56460c6fe05dd587436b033722c2c",
+      "global_step": 22146,
+      "input_tokens": 15360372,
+      "supervised_tokens": 12175915,
+      "gpu_hours": 7.267078629599677,
+      "peak_gpu_memory_bytes": 21438695424,
+      "final_weights": {
+        "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/element_protected/final/model.safetensors": "010dba2c5778109911a171db43511fc9d043e2a5cfe67795a7a4cba5e1b96580"
+      }
+    },
+    "element_unprotected": {
+      "complete": true,
+      "path": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/element_unprotected/TRAINING_DONE.json",
+      "sha256": "e554cb10c368debba5b3d0b66e05e866c9bfe11f6d93f532c8d2bcccc81f4eb1",
+      "global_step": 22146,
+      "input_tokens": 15360372,
+      "supervised_tokens": 12175915,
+      "gpu_hours": 5.71046806467904,
+      "peak_gpu_memory_bytes": 21438695424,
+      "final_weights": {
+        "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/element_unprotected/final/model.safetensors": "f06693b0ada2e39048b609674cf2c95cb13374f3d1b6064a5667c4dfc23ae02c"
+      }
+    },
+    "edge_projected_rows": {
+      "complete": true,
+      "path": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/edge_projected_rows/TRAINING_DONE.json",
+      "sha256": "d4883eb3962a44a0dcfa739567723bb5713a9fd38bdeaad063cf922d8a7701c9",
+      "global_step": 22146,
+      "input_tokens": 15360372,
+      "supervised_tokens": 12175915,
+      "gpu_hours": 3.0842234311501184,
+      "peak_gpu_memory_bytes": 11699762176,
+      "final_weights": {
+        "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/edge_projected_rows/final/model.safetensors": "8ef1e941e3e18048b6506f6b2844b9aabccfc87bbef08fae10027a4e8711d9ed"
+      }
+    },
+    "edge_rows_no_projection": {
+      "complete": true,
+      "path": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/edge_rows_no_projection/TRAINING_DONE.json",
+      "sha256": "1004ad2d4bb2706ff04412f7cdd29dc2fe13b0ccf22e5a15b013cddd6afe4120",
+      "global_step": 22146,
+      "input_tokens": 15360372,
+      "supervised_tokens": 12175915,
+      "gpu_hours": 2.9073578607373767,
+      "peak_gpu_memory_bytes": 11699762176,
+      "final_weights": {
+        "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/edge_rows_no_projection/final/model.safetensors": "331dd43d87bca6bcb86e517b652180154143442a44e4f9b6f8c85f15ec3ba9b6"
+      }
+    },
+    "fft_fp32_matched": {
+      "complete": true,
+      "path": "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/fft_fp32_matched/TRAINING_DONE.json",
+      "sha256": "8bbae73a95b957e79a1626e2af0fd12bfdb887c627a88ac7fc0353653cc246d9",
+      "global_step": 22146,
+      "input_tokens": 15360372,
+      "supervised_tokens": 12175915,
+      "gpu_hours": 5.8381845847103335,
+      "peak_gpu_memory_bytes": 23209185280,
+      "final_weights": {
+        "/root/autodl-tmp/sw_d2_sparse_projection_v1/checkpoints/fft_fp32_matched/final/model.safetensors": "bb2c861d37ee8c9a0203b9d8d37dbd02483f1d309f6cec38974df20386aec453"
+      }
+    }
+  },
+  "complete_evaluations": {
+    "element_protected": {
+      "complete": true,
+      "path": "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/evaluation/element_protected/DONE.json",
+      "sha256": "ac4c729e120dd19955955f221ad3a70f37e8bde913a7e75fbe71edbb732bb13d"
+    },
+    "element_unprotected": {
+      "complete": true,
+      "path": "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/evaluation/element_unprotected/DONE.json",
+      "sha256": "10f11ff5d736f4b57d563ced302a71d60e9be00da06fa64a5a114e627d2d4639"
+    },
+    "edge_projected_rows": {
+      "complete": true,
+      "path": "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/evaluation/edge_projected_rows/DONE.json",
+      "sha256": "2412e274769860f203aefb04940dfde3d0b7d7347d4c0eea0580393eb5827510"
+    },
+    "edge_rows_no_projection": {
+      "complete": true,
+      "path": "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/evaluation/edge_rows_no_projection/DONE.json",
+      "sha256": "e09259e9c4b5e43d822e1f412a2c44b9980b63ff980b2dbb0ce11e73ed725046"
+    },
+    "fft_fp32_matched": {
+      "complete": false,
+      "path": null,
+      "sha256": null
+    }
+  },
+  "dense_partial_evaluation": {
+    "evidence_file": "/root/autodl-fs/ssu-project/experiments/sw_d2_sparse_projection_v1/DENSE_PARTIAL_RESULTS_PENDING_GSM8K.json",
+    "evidence_sha256": "81e47fadbe2dc1e9302c077cefed6bf65865703aa4082a551b3426ba760bc400",
+    "completed_units": [
+      "belebele_en",
+      "belebele_sw",
+      "ifeval",
+      "mt_en2sw",
+      "mt_sw2en",
+      "ppl",
+      "sum_en",
+      "sum_sw"
+    ],
+    "missing": [
+      "gsm8k"
+    ],
+    "scores": {
+      "belebele_en": 71.44444444444444,
+      "belebele_sw": 41.888888888888886,
+      "ifeval_prompt_strict": 14.602587800369685,
+      "ifeval_instruction_strict": 23.021582733812952,
+      "mt_en2sw": 19.382139801199486,
+      "mt_sw2en": 37.4271642338918,
+      "sum_en": 21.705912434877924,
+      "sum_sw": 30.2487351765494,
+      "en_nll": 3.053786024451256,
+      "en_ppl": 21.195439157460438,
+      "sw_nll": 2.4369742423295975,
+      "sw_ppl": 11.438378567880244
+    },
+    "aggregates_relative_base_pct": {
+      "EN3": 21.567187593909694,
+      "Target3": 16.685829627356608
+    },
+    "reading_comparisons": {
+      "vs_Base": {
+        "delta_pp": 4.666666666666667,
+        "ci95_pp": [
+          1.0044642857142858,
+          8.416417776882891
+        ],
+        "p_one_sided": 0.007799220077992201
+      },
+      "vs_D2_history": {
+        "delta_pp": -3.0,
+        "ci95_pp": [
+          -6.040360646065344,
+          0.11013215859030837
+        ],
+        "p_one_sided": 0.9764023597640236
+      },
+      "vs_edge_projected_rows": {
+        "delta_pp": -4.777777777777778,
+        "ci95_pp": [
+          -8.138238573021182,
+          -1.4395660872597797
+        ],
+        "p_one_sided": 0.9985001499850015
+      },
+      "vs_edge_rows_no_projection": {
+        "delta_pp": -2.3333333333333335,
+        "ci95_pp": [
+          -5.698324022346369,
+          0.9967053649696868
+        ],
+        "p_one_sided": 0.9256074392560744
+      }
+    }
+  },
+  "runtime_observation": {
+    "nvidia_smi": "No devices were found",
+    "stale_controller_pid_12881_alive": false
+  },
+  "remaining_actions": [
+    "restore at least one CUDA GPU",
+    "run /root/miniconda3/envs/cl/bin/python /root/resume_sw_d2_after_reboot.py",
+    "verify fft_fp32_matched evaluation/DONE.json and live cache complete",
+    "run summarize_results.py",
+    "audit final REPORT_ZH.md, raw_scores.csv, reading_pairs.csv, SUMMARY_STATUS.json"
+  ],
+  "completion_claim_allowed": false
+}
