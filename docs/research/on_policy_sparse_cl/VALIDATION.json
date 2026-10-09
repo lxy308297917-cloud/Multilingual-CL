@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-09",
+  "python": "3.10.20",
+  "torch": "2.5.1+cu121",
+  "unit_tests": 14,
+  "unit_tests_passed": 14,
+  "cpu_demo_stages": 2,
+  "cpu_demo_updates": 16,
+  "gpu_experiments": 0,
+  "downstream_scores": null,
+  "checked_sha256": {
+    "docs/research/on_policy_sparse_cl/CHATGPT_REVIEW_BRIEF_ZH.md": "ac924141615f3bd28c08408975434653e4857f5b305b37a55c9bcc9080f20064",
+    "docs/research/on_policy_sparse_cl/EXPERIMENT_PLAN_ZH.md": "9cfc05224be5b413f0d7107c2754b8d9ed12bf77eb3eddf4cb90a39dab17e5a8",
+    "docs/research/on_policy_sparse_cl/METHOD_ZH.md": "8d0cf2d6d7802ea93e4c7d72ed15950447efe9e47b51761d97070d4da59b01ca",
+    "docs/research/on_policy_sparse_cl/RELATED_WORK.md": "5fa365b71c99479e860d2bc7a6b371b315f4b4da7080ba62ececc75071607d63",
+    "experiments/on_policy_sparse_cl_v1/README.md": "e3ed0e500379173db1500bc48a8e839a535ba2563086cf6695c21865a3ad37c1",
+    "experiments/on_policy_sparse_cl_v1/core.py": "2e99f753a7e713e14335d4d8123829d3b3109561db14ff5e640a2d26113dbe67",
+    "experiments/on_policy_sparse_cl_v1/demo_cpu.py": "533baa4f672e327a0a79869bb0fd7cdc3630cc29cc5dcdb930ad2fe2427fa90c",
+    "experiments/on_policy_sparse_cl_v1/example_config.json": "98e9b13a6838385798c260c65046fe08e3fdafa22231b3904e45b3cfa0c1cff4",
+    "experiments/on_policy_sparse_cl_v1/test_core.py": "dda81e43ec94569b5009f41ddc6f6fb4e62e6725025c2ff0d40387c453aae73c"
+  }
+}
