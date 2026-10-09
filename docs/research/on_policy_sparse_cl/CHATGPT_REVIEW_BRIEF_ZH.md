@@ -1,6 +1,6 @@
 # 给 ChatGPT 的研究评议入口
 
-更新2026-10-09。请先读 [METHOD_ZH.md](METHOD_ZH.md)、[RELATED_WORK.md](RELATED_WORK.md)、[EXPERIMENT_PLAN_ZH.md](EXPERIMENT_PLAN_ZH.md)，再读 [core.py](../../../experiments/on_policy_sparse_cl_v1/core.py) 与 [demo_cpu.py](../../../experiments/on_policy_sparse_cl_v1/demo_cpu.py)。本包未做Qwen/GPU实验，无方法成绩。
+更新2026-10-09（已补充国庆完整结果）。**历史实验统一入口是[仓库根目录全局总览](../../../EXPERIMENT_RESULTS_OVERVIEW_ZH.md)**，完整分数/分项报告见[假期结果索引](../../results/holiday_20261008/README.md)。请先读 [METHOD_ZH.md](METHOD_ZH.md)、[RELATED_WORK.md](RELATED_WORK.md)、[EXPERIMENT_PLAN_ZH.md](EXPERIMENT_PLAN_ZH.md)，再读 [core.py](../../../experiments/on_policy_sparse_cl_v1/core.py) 与 [demo_cpu.py](../../../experiments/on_policy_sparse_cl_v1/demo_cpu.py)。本包未做Qwen/GPU实验，无方法成绩。
 
 ## 已有可信项目进展（历史结果，非候选成绩）
 
@@ -9,7 +9,8 @@
 - 同预算5.798%均匀保护EN→SW seed42/43为33.87/33.04；LP为16.34/16.56，不沿旧LP集中预算作为主方法。
 - 固定mask与EMA未达独立开发短训门槛，EMA正式日程前缀复核仍失败；梯度方向与撤销定位信号未达到可用稳定性。
 - 10月8日独立开发集保护减去保护：EN阅读+10.55个百分点，指令prompt+6.25；SW翻译/摘要差异未明确。数学####格式受限。
-- Igbo seed42首尾位置目标摘要/翻译好于分散，但英语有取舍；seed43最后核验落盘20:21为28/44正式DONE，完整报告尚未核实，不能把它写为完成。
+- Igbo seed43现已有最终报告及四模型44项正式DONE完整性审计。首尾−分散目标摘要/双向翻译两轮同向；GSM8K两轮分别−4.70/−15.69个百分点。原IFEval保留，语言检测固定seed的重评分另列诊断，不覆盖正式成绩。
+- SW开发基线已补齐MoFO/SSU/HFT及seed42去保护。seed42指令约束保护差+5.19个百分点、区间为正，英语阅读−0.39；seed43阅读+10.55。开发到正式差值不稳定：两轮SW→EN开发约零/负，正式+4.49/+5.89，不能单独凭当前翻译dev决定新方法长训。详见已同步的DEVELOPMENT_TRANSFER_AUDIT报告。
 
 这些值来自服务器分项报告的汇编，不替代原始输出。旧GitHub部分报告使用过早的分数或方案口径，当前简报与旧稿冲突时请要求核对模型身份、协议和正式DONE，不混用两者。历史训练seed改变也伴随输入步顺序改变。
 
@@ -20,7 +21,8 @@
 3. 本地KL stop-gradient-prefix的semi-gradient解释是否准确？缺失状态分布导数、teacher提示位置、采样温度、EOS与陈旧度有哪些偏差？
 4. 三阶段CL流、双参考与固定prompt记忆是否公平？是否应先用标准CL benchmark，再加低资源语言验证？
 5. 核心四格消融是否能拆开on-policy、选参、刷新频次与额外记忆？还缺哪个最有说服力的强基线？
-6. 哪一项最便宜的前置实验能最快否决这个方案？如果无增益，如何写有价值的机制分析而不制造“有效新方法”？
+6. 当前翻译开发差值未可靠预示正式集，请评议如何建立训练侧的更可信准入证据，避免重复用正式测试挑方法。
+7. 哪一项最便宜的前置实验能最快否决这个方案？如果无增益，如何写有价值的机制分析而不制造“有效新方法”？
 
 ## 可直接复制的提问
 
