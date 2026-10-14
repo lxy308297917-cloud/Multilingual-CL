@@ -1,10 +1,10 @@
 # 十语言 Qwen3 数学 Single 交接与实时状态
 
-更新时间：2026-10-15 04:33（Asia/Shanghai）。状态：**共享题单 v8 已冻结、SW/ZH 训练链路烟测已完成；标签验收与正式 SFT 未完成，Base IFEval 与英语开发集评测运行中**。
+更新时间：2026-10-15 04:37（Asia/Shanghai）。状态：**共享题单 v8 已冻结、SW/ZH 训练链路烟测已完成；标签验收与正式 SFT 未完成，Base IFEval 与英语开发集评测运行中**。
 
 ## 代码与环境
 
-- 主仓库远端 `main` 已同步十语言 single 核心代码与 v7 审计，核对提交 `3a60e4e`；本工作树 `/data0/users/lixiaoyang/Multilingual-CL-math-single-20261015` 的 v8 单位归一化去重修订待提交。原 `/data0/users/lixiaoyang/Multilingual-CL` 有未提交改动，保留原样。
+- 主仓库远端 `main` 已同步十语言 single 核心代码与 v8 审计，核对提交 `d10ca22`；本工作树 `/data0/users/lixiaoyang/Multilingual-CL-math-single-20261015` 的语言识别诊断修订待提交。原 `/data0/users/lixiaoyang/Multilingual-CL` 有未提交改动，保留原样。
 - Python：`/data0/users/lixiaoyang/ssu-migration/envs/cl/bin/python`；torch 2.5.1+cu121、transformers 4.57.6、datasets 4.8.5、accelerate 1.7.0。当前显卡为 8× RTX 3090 24GB；启动前仍需重新核验 GPU 利用率、显存、进程归属和本账号占卡总量。
 - 学生模型：`Qwen/Qwen3-4B`，revision `1cfa9a7208912126459214e8b04321603b3df60c`，本地 `/data0/users/lixiaoyang/models/Qwen3-4B`，已完整落盘并通过两项真实 GPU 评测链路小样本。
 - 第一候选标签生成器：`Qwen/Qwen3-8B`，revision `b968826d9c46dd6066d109eabc6255188de91218`，本地 `/data0/users/lixiaoyang/models/Qwen3-8B` 已完整落盘。第二候选 `Qwen/Qwen3-14B`，revision `40c069824f4251a91eefaf281ebe4c544efd3e18`，本地 `/data0/users/lixiaoyang/models/Qwen3-14B` 八个权重分片均已对官方哈希验证；两者都尚未通过十语质量验收。
@@ -39,7 +39,7 @@ CUDA_VISIBLE_DEVICES=GPU-UUID $PY experiments/math_single_10lang/build_math_sft_
 3. SW 四卡 FSDP 20 步烟测已成功，GPU2–5 各约 11.6 GiB 常驻，20 步训练及 eval/save 总用时约 169 秒，TensorBoard 文件已生成。ZH 尝试 FSDP 自带激活检查点虽也成功，但四卡 nvidia-smi 显示约 24 GiB 占用、训练步速仍约 5.5 秒，因此已恢复 SW 的低显存配置。FSDP 当前将 BF16 参数上转 FP32，单份 checkpoint 权重实际为 17,645,742,616 字节（约 16.4 GiB）；按方案每语四份、十语至少约 657 GiB，而 `/data0` 烟测后剩余不足 250 GiB，尚未计终点副本、日志和后续 seed。现已在 `/data1/lixiaoyang_math_single_10lang_20261015` 建立本账号 700 私有目录（该盘剩余约 6.8 TiB），并从统一 checkpoint 根目录建立 `formal_runs` 软链接，原子写入探针已通过。正式 run 应放此链接下独立目录，并继续检查实际剩余空间。`save_only_model=True` 不含优化器状态，中断后必须从 Base 重跑。
 4. 固定生成入口已实现且数值提取样例通过；PolyMath 官方 `math_equal` 已在本任务隔离依赖目录通过基础自检，并完成一题真实模型输出端到端验证，保存在 `/data0/users/lixiaoyang/logs/math_single_10lang/base_polymath_sw1_20261015/`。SW Base 两题 GPU 小样本也已完成，原始输出与评分在 `base_sw2_retry1_20261015/`：两题均错，思考区为英语候选、最终解释为 SW 候选。SW 20 步烟测权重可重载并完成一题开发集生成；Base 与烟测权重均耗尽 4096 token，未给出合格答案，每题约 139 秒，配对入口通过。ZH 20 步烟测权重也可重载；一题算出正确值 502，但没有关闭 `</think>`，按协议计错。全部仅为链路 smoke，不是正式分数。第一次 SW Base 尝试因 Transformers 4.57.6 不接受 `generate(generator=...)` 失败，失败输出保留在 `base_sw2_20261015_0247/`；已改为逐题设置 PyTorch seed。语言识别尚未校准；无 Base/单语正式分数。
    IFEval 英语入口复用本机固定 541 条唯一题及既有评分代码，一题 Base smoke 通过，319 token、11.6 秒，提示级严格未通过；见 `logs/math_single_10lang/ifeval_base_smoke_result_20261015/`，不能作正式成绩。随后 GPU2 上已启动全量 Base IFEval，输出在 `logs/math_single_10lang/ifeval_base_formal_20261015_v1/`，完成以 `result/DONE.json` 为准。v5 英语 dev_select Base seed17 因源题泄漏在 0 题后停止，v7 因额外同题改写在 1 题后停止，均保留原始日志，不作成绩；现用 v8 在 GPU3 运行同协议 seed17 评测，输出在 `logs/math_single_10lang/dev_select_en_base_seed17_v8_20261015/`。该任务只是一组 seed 的 Base 开发基线，不能单独选后续语言。
-   对发布数据中每语 100 条译题的筛查，`langdetect` 将中文仅 49 条标为目标语言，31 条错判、20 条过短或无法判断；该工具只能输出 `candidate_*` 状态，不能用于 best 选择门槛。原始筛查见 `audit_v1/langdetect_question_screen.json`。
+   对发布数据中每语 100 条译题的筛查，`langdetect` 将中文仅 49 条标为目标语言，31 条错判、20 条过短或无法判断；该工具只能输出 `candidate_*` 状态，不能用于 best 选择门槛。原始筛查见 `audit_v1/langdetect_question_screen.json`。另在 v8 的 200 道共享题上比较 GlotLID 与 langdetect，中文 GlotLID 150 pass/48 unknown/2 fail，langdetect 103/48/49；SW 分别为 163/6/31 与 187/6/7。GlotLID 对前述夹杂英语且生硬的 SW 标签仍给出 99.7% 的 SW 预测概率，不能据此验收流畅度或代码混用；记录在 `audit_v8_screened/glotlid_selected200.json`、`langdetect_selected200.json`，都只是弱阳性筛查，缺人工标注的生成输出校准。
 5. 后续教师、A/B/C、三语言顺序和保持机制的启动条件均未满足，仅 `future_stages.json` 定义接口与评测矩阵字段，未启动后续训练。
 6. 当前共同备用池仅 658 原题，不能直接支持三阶段各 1000 道互不重叠的新题；后续顺序阶段需先重新设计共同规模或扩展合格来源。
 

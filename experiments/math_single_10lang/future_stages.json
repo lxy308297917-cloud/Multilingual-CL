@@ -1,5 +1,5 @@
 {
-  "status": "interface_only_no_training_authorized_until_gates_pass",
+  "status": "interface_only_stage_gates_not_met",
   "selected_languages": null,
   "selection_source": "single dev_select three-seed report",
   "stage_matrix_export": "make_future_eval_matrix.py --selection-record frozen_selection.json --languages L1 L2 L3; requires exact frozen ordered list and emits planned rows only",
