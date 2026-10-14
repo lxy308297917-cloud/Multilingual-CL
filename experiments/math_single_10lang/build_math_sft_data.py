@@ -40,14 +40,15 @@ def norm_answer(s):
     return re.sub(r"\s+", "", s.replace("\\boxed{", "").replace("}", "").replace("$", "")).lower()
 
 
-def generate(model, tokenizer, prompt, max_new_tokens=640, system="You prepare accurate, concise math teaching solutions. Return only <reasoning>...</reasoning><final>...</final> sections. Never invent missing information."):
+def generate(model, tokenizer, prompt, max_new_tokens=640, system="You prepare accurate, concise math teaching solutions. Return only <reasoning>...</reasoning><final>...</final> sections. Never invent missing information.", thinking=False):
     turns = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
-    text = tokenizer.apply_chat_template(turns, tokenize=False, add_generation_prompt=True, enable_thinking=False)
+    text = tokenizer.apply_chat_template(turns, tokenize=False, add_generation_prompt=True, enable_thinking=thinking)
     inputs = tokenizer(text, return_tensors="pt").to(model.device)
     if inputs["input_ids"].shape[-1] > 7000:
         raise ValueError("Generator input exceeds 7000 tokens; requires shorter verified source")
     with torch.inference_mode():
-        output = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False, pad_token_id=tokenizer.eos_token_id)
+        sampling = {"do_sample": True, "temperature": 0.6, "top_p": 0.95, "top_k": 20} if thinking else {"do_sample": False}
+        output = model.generate(**inputs, max_new_tokens=max_new_tokens, pad_token_id=tokenizer.eos_token_id, **sampling)
     return tokenizer.decode(output[0, inputs["input_ids"].shape[-1]:], skip_special_tokens=False), int(inputs["input_ids"].shape[-1]), int(output.shape[-1] - inputs["input_ids"].shape[-1])
 
 
@@ -71,15 +72,22 @@ def main():
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--languages", nargs="+", choices=list(CONFIG["languages"]), default=list(CONFIG["languages"]))
     p.add_argument("--limit", type=int)
+    p.add_argument("--problem-ids-file", type=Path, help="JSON list of exact IDs for a targeted qualification probe")
     p.add_argument("--smoke-train", type=int)
     p.add_argument("--smoke-dev", type=int)
     p.add_argument("--english-only", action="store_true", help="Qualify short English math reasoning before spending target-language generation tokens")
+    p.add_argument("--english-strategy", choices=("extract", "independent_thinking"), default="extract", help="Independent thinking is a qualification probe that solves without source reasoning or gold")
     a = p.parse_args()
     splits = json.loads(a.splits.read_text())
     desired = {key: name for name in ("train", "dev_tune", "dev_select") for key in splits[name]}
     examples = [x for x in read_jsonl(a.inventory) if x["problem_id"] in desired]
     order = {"train": 0, "dev_tune": 1, "dev_select": 2}
     examples.sort(key=lambda x: (order[desired[x["problem_id"]]], x["problem_id"]))
+    if a.problem_ids_file:
+        wanted = set(json.loads(a.problem_ids_file.read_text()))
+        if not wanted or wanted - {row["problem_id"] for row in examples}:
+            raise ValueError("Problem ID probe contains unknown or out-of-split IDs")
+        examples = [row for row in examples if row["problem_id"] in wanted]
     if a.smoke_train is not None or a.smoke_dev is not None:
         if a.limit is not None:
             raise ValueError("--limit and --smoke-train/--smoke-dev are mutually exclusive")
@@ -97,11 +105,17 @@ def main():
     for n, row in enumerate(examples, 1):
         key = row["problem_id"]
         en_path = a.output_dir / "en_short" / f"{key}.json"
-        prompt = f"Extract a SHORT, COMPLETE, mathematically valid solution from the supplied worked solution. Preserve its correct equations and numerical values; omit unnecessary algebra. Before writing, substitute any parameter values you mention into all given conditions. If a proposed value fails a condition, correct it. Explain the mathematics directly, without mentioning any checking process. Return only <reasoning>...</reasoning><final>...</final>, with exactly one boxed final answer.\nQuestion: {row['question_en']}\nOriginal worked solution: {row['reference_en_original']}\nGold answer: {row['gold_answer']}"
+        if a.english_strategy == "independent_thinking":
+            prompt = f"Solve this math problem independently. Establish each equation from the question and prove any claimed minimum or uniqueness. Check the result against every condition before answering. Give a short but complete derivation after thinking. Return only <reasoning>...</reasoning><final>...</final>, with exactly one boxed final answer.\nQuestion: {row['question_en']}"
+        else:
+            prompt = f"Extract a SHORT, COMPLETE, mathematically valid solution from the supplied worked solution. Preserve its correct equations and numerical values; omit unnecessary algebra. Before writing, substitute any parameter values you mention into all given conditions. If a proposed value fails a condition, correct it. Explain the mathematics directly, without mentioning any checking process. Return only <reasoning>...</reasoning><final>...</final>, with exactly one boxed final answer.\nQuestion: {row['question_en']}\nOriginal worked solution: {row['reference_en_original']}\nGold answer: {row['gold_answer']}"
         if not en_path.exists():
             raw, in_tok, out_tok = None, None, None
             try:
-                raw, in_tok, out_tok = generate(model, tokenizer, prompt, a.max_new_tokens, "You write accurate, concise math solutions from verified source reasoning.")
+                if a.english_strategy == "independent_thinking":
+                    torch.manual_seed(42 + int(key[:8], 16))
+                system_prompt = "You solve mathematics carefully and write concise, complete solutions." if a.english_strategy == "independent_thinking" else "You write accurate, concise math solutions from verified source reasoning."
+                raw, in_tok, out_tok = generate(model, tokenizer, prompt, a.max_new_tokens, system_prompt, thinking=a.english_strategy == "independent_thinking")
                 result = parse_sections(raw)
                 flags = [] if norm_answer(row["gold_answer"]) in norm_answer(result["final"]) else ["gold_text_not_in_final_manual_check"]
                 boxes = balanced_boxes(result["final"])
@@ -110,14 +124,16 @@ def main():
                 elif norm_answer(boxes[0]) != norm_answer(row["gold_answer"]):
                     flags.append("english_boxed_text_mismatch_manual_check")
                 status = "generation_truncated" if out_tok >= a.max_new_tokens else "pending_review"
-                save(en_path, {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "reference_en_short": result, "raw": raw, "status": status, "screening_flags": flags, "input_tokens": in_tok, "output_tokens": out_tok, "prompt_hash": sha(prompt), "generator_id": generator_id, "generator_revision": generator_revision})
+                save(en_path, {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "reference_en_short": result, "raw": raw, "status": status, "screening_flags": flags, "input_tokens": in_tok, "output_tokens": out_tok, "max_new_tokens": a.max_new_tokens, "prompt_hash": sha(prompt), "english_strategy": a.english_strategy, "generator_id": generator_id, "generator_revision": generator_revision})
             except Exception as exc:
                 status = "generation_truncated" if out_tok is not None and out_tok >= a.max_new_tokens else "generation_error"
-                save(en_path, {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "status": status, "error": str(exc), "raw": raw, "input_tokens": in_tok, "output_tokens": out_tok, "prompt_hash": sha(prompt), "generator_id": generator_id, "generator_revision": generator_revision})
+                save(en_path, {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "status": status, "error": str(exc), "raw": raw, "input_tokens": in_tok, "output_tokens": out_tok, "max_new_tokens": a.max_new_tokens, "prompt_hash": sha(prompt), "english_strategy": a.english_strategy, "generator_id": generator_id, "generator_revision": generator_revision})
         en = json.loads(en_path.read_text())
         expected_en = {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "prompt_hash": sha(prompt), "generator_id": generator_id, "generator_revision": generator_revision}
         if any(en.get(field) != value for field, value in expected_en.items()):
             raise ValueError(f"Existing English short label has stale identity or generator prompt: {en_path}")
+        if "max_new_tokens" in en and en["max_new_tokens"] != a.max_new_tokens:
+            raise ValueError(f"Existing English short label used a different generation budget: {en_path}")
         if en["status"] != "pending_review":
             continue
         if a.english_only:
