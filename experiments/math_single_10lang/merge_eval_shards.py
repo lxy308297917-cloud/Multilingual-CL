@@ -64,12 +64,13 @@ def main():
         if row["generation_seed"] != manifest["seed"]:
             raise ValueError(f"Result row changed seed: {item['id']}")
     args.output_dir.mkdir(parents=True)
+    (args.output_dir / "EVAL_CONFIG.json").write_text(json.dumps(original_config, ensure_ascii=False, indent=2) + "\n")
     (args.output_dir / "predictions.jsonl").write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in ordered))
     by_dataset = {}
     for dataset in sorted(set(row["dataset"] for row in ordered)):
         subset = [row for row in ordered if row["dataset"] == dataset]
         by_dataset[dataset] = {"count": len(subset), "correct": sum(bool(row["math_correct"]) for row in subset), "accuracy": sum(bool(row["math_correct"]) for row in subset) / len(subset)}
-    summary = {"count": len(ordered), "correct": sum(bool(row["math_correct"]) for row in ordered), "by_dataset": by_dataset, "scoring_statuses": dict(Counter(row["scoring_status"] for row in ordered)), "prompt_tokens": sum(row["prompt_tokens"] for row in ordered), "generated_tokens": sum(row["generated_tokens"] for row in ordered), "generation_seconds": sum(row["generation_seconds"] for row in ordered), "truncated_count": sum(bool(row["truncated"]) for row in ordered), "valid_final_count": sum(bool(row["final_section_present"] and row["boxed_count_final"] == 1) for row in ordered), "source_items_sha256": digest(source), "manifest_sha256": digest(args.manifest), "prediction_file": "predictions.jsonl"}
+    summary = {"count": len(ordered), "scored_count": sum(row["scoring_status"] in ("scored", "official_math_equal") for row in ordered), "correct": sum(bool(row["math_correct"]) for row in ordered), "by_dataset": by_dataset, "scoring_statuses": dict(Counter(row["scoring_status"] for row in ordered)), "prompt_tokens_recorded": sum(row["prompt_tokens"] for row in ordered), "generated_tokens": sum(row["generated_tokens"] for row in ordered), "generation_seconds": sum(row["generation_seconds"] for row in ordered), "truncated_count": sum(bool(row["truncated"]) for row in ordered), "valid_final_count": sum(bool(row["final_section_present"] and row["boxed_count_final"] == 1) for row in ordered), "source_items_sha256": digest(source), "manifest_sha256": digest(args.manifest), "prediction_file": "predictions.jsonl"}
     (args.output_dir / "DONE.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps(summary, ensure_ascii=False))
 
