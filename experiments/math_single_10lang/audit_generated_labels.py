@@ -29,7 +29,7 @@ def main():
                 file = a.labels_dir / lang / f"{key}.json"
                 if file.exists():
                     row = json.loads(file.read_text())
-                    if row.get("problem_id") != key or row.get("language") != lang:
+                    if row.get("problem_id") != key or row.get("language") != lang or row.get("split") != name:
                         raise ValueError(f"Identity mismatch: {file}")
                     records[key] = row
         statuses = Counter(r.get("quality_status", "unknown") for r in records.values())

@@ -1,10 +1,10 @@
 # 十语言 Qwen3 数学 Single 交接与实时状态
 
-更新时间：2026-10-15 04:37（Asia/Shanghai）。状态：**共享题单 v8 已冻结、SW/ZH 训练链路烟测已完成；标签验收与正式 SFT 未完成，Base IFEval 与英语开发集评测运行中**。
+更新时间：2026-10-15 04:38（Asia/Shanghai）。状态：**共享题单 v8 已冻结、SW/ZH 训练链路烟测已完成；标签验收与正式 SFT 未完成，Base IFEval 与英语开发集评测运行中**。
 
 ## 代码与环境
 
-- 主仓库远端 `main` 已同步十语言 single 核心代码与 v8 审计，核对提交 `d10ca22`；本工作树 `/data0/users/lixiaoyang/Multilingual-CL-math-single-20261015` 的语言识别诊断修订待提交。原 `/data0/users/lixiaoyang/Multilingual-CL` 有未提交改动，保留原样。
+- 主仓库远端 `main` 已同步十语言 single 核心代码、v8 审计与语言识别诊断，核对提交 `df713a0`；本工作树 `/data0/users/lixiaoyang/Multilingual-CL-math-single-20261015` 的旧标签身份门槛修订待提交。原 `/data0/users/lixiaoyang/Multilingual-CL` 有未提交改动，保留原样。
 - Python：`/data0/users/lixiaoyang/ssu-migration/envs/cl/bin/python`；torch 2.5.1+cu121、transformers 4.57.6、datasets 4.8.5、accelerate 1.7.0。当前显卡为 8× RTX 3090 24GB；启动前仍需重新核验 GPU 利用率、显存、进程归属和本账号占卡总量。
 - 学生模型：`Qwen/Qwen3-4B`，revision `1cfa9a7208912126459214e8b04321603b3df60c`，本地 `/data0/users/lixiaoyang/models/Qwen3-4B`，已完整落盘并通过两项真实 GPU 评测链路小样本。
 - 第一候选标签生成器：`Qwen/Qwen3-8B`，revision `b968826d9c46dd6066d109eabc6255188de91218`，本地 `/data0/users/lixiaoyang/models/Qwen3-8B` 已完整落盘。第二候选 `Qwen/Qwen3-14B`，revision `40c069824f4251a91eefaf281ebe4c544efd3e18`，本地 `/data0/users/lixiaoyang/models/Qwen3-14B` 八个权重分片均已对官方哈希验证；两者都尚未通过十语质量验收。
@@ -35,6 +35,7 @@ CUDA_VISIBLE_DEVICES=GPU-UUID $PY experiments/math_single_10lang/build_math_sft_
 ## 已知阻塞
 
 1. 十语言目标语言完整推理标签未完成，独立质量抽查尚未完成。当前禁止正式 SFT。8B 首轮 8 个英文小样本只有 4 条进入待审，SW 4 条里 2 条生成失败；第二轮共同小样本中 TE 0/4、BN 0/3 有闭合格式，SW 1/4 待审且仍有语言质量疑点。第二轮在质量门槛处主动停止，原始部分结果保留于 `labels_v2/` 与 `labels_v2_audit/`。不能把 `pending_review` 当成验收通过。
+   标签生成器复用已有文件时现核对题目、gold、目标语言、当前 split、模型 revision 与提示词哈希；训练和标签审计也检查 split。用旧 v4 标签碰 v8 划分的真实样本，身份门槛按预期拒绝，避免把旧待审标签静默混入新题单。
 2. Qwen3-8B 对低资源语言不合格；14B 已完整下载。旧 v3–v7 逐步暴露源 `Answer` 指向中间结果、证明题不能用最终式自动评分、问题直接写出答案，以及训练/开发集同题改写交叉等问题；这些旧题单均不可用于正式训练。当前 v8 保守排除测试近似题 108 ID、答案/评分/问题泄漏风险 824 ID、内部同答案高相似（数值答案忽略单位写法）29 ID，三类并集 935，再排除长度 7，剩余 2058 共同题，划为 1000/200/200/658。它仍只是筛查结果，不证明每条数学推理正确。v4 14B 初探针首题虽答对 33 却写错递推参数，SW 输出 640 token 后陷入重复；更严格提示后同题十语格式闭合，但 SW 有“kusolve system”等英语夹杂、生硬表述，自动 langdetect 仍误报通过。v5 英语 10 train+10 dev_tune 的 20 条短解答全被自动标为 `pending_review`、没有格式告警；独立检查至少发现 2 条实质推理错误（最小值只给可行例、不证下界；兔笼计数把自己算作邻居）。记录见 `logs/math_single_10lang/labels_14b_v5_english20_20261015/MANUAL_REVIEW.json`。所有旧样本均未接受；v8 需重新生成并独立审查。
 3. SW 四卡 FSDP 20 步烟测已成功，GPU2–5 各约 11.6 GiB 常驻，20 步训练及 eval/save 总用时约 169 秒，TensorBoard 文件已生成。ZH 尝试 FSDP 自带激活检查点虽也成功，但四卡 nvidia-smi 显示约 24 GiB 占用、训练步速仍约 5.5 秒，因此已恢复 SW 的低显存配置。FSDP 当前将 BF16 参数上转 FP32，单份 checkpoint 权重实际为 17,645,742,616 字节（约 16.4 GiB）；按方案每语四份、十语至少约 657 GiB，而 `/data0` 烟测后剩余不足 250 GiB，尚未计终点副本、日志和后续 seed。现已在 `/data1/lixiaoyang_math_single_10lang_20261015` 建立本账号 700 私有目录（该盘剩余约 6.8 TiB），并从统一 checkpoint 根目录建立 `formal_runs` 软链接，原子写入探针已通过。正式 run 应放此链接下独立目录，并继续检查实际剩余空间。`save_only_model=True` 不含优化器状态，中断后必须从 Base 重跑。
 4. 固定生成入口已实现且数值提取样例通过；PolyMath 官方 `math_equal` 已在本任务隔离依赖目录通过基础自检，并完成一题真实模型输出端到端验证，保存在 `/data0/users/lixiaoyang/logs/math_single_10lang/base_polymath_sw1_20261015/`。SW Base 两题 GPU 小样本也已完成，原始输出与评分在 `base_sw2_retry1_20261015/`：两题均错，思考区为英语候选、最终解释为 SW 候选。SW 20 步烟测权重可重载并完成一题开发集生成；Base 与烟测权重均耗尽 4096 token，未给出合格答案，每题约 139 秒，配对入口通过。ZH 20 步烟测权重也可重载；一题算出正确值 502，但没有关闭 `</think>`，按协议计错。全部仅为链路 smoke，不是正式分数。第一次 SW Base 尝试因 Transformers 4.57.6 不接受 `generate(generator=...)` 失败，失败输出保留在 `base_sw2_20261015_0247/`；已改为逐题设置 PyTorch seed。语言识别尚未校准；无 Base/单语正式分数。

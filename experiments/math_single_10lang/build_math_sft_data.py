@@ -97,8 +97,8 @@ def main():
     for n, row in enumerate(examples, 1):
         key = row["problem_id"]
         en_path = a.output_dir / "en_short" / f"{key}.json"
+        prompt = f"Extract a SHORT, COMPLETE, mathematically valid solution from the supplied worked solution. Preserve its correct equations and numerical values; omit unnecessary algebra. Before writing, substitute any parameter values you mention into all given conditions. If a proposed value fails a condition, correct it. Explain the mathematics directly, without mentioning any checking process. Return only <reasoning>...</reasoning><final>...</final>, with exactly one boxed final answer.\nQuestion: {row['question_en']}\nOriginal worked solution: {row['reference_en_original']}\nGold answer: {row['gold_answer']}"
         if not en_path.exists():
-            prompt = f"Extract a SHORT, COMPLETE, mathematically valid solution from the supplied worked solution. Preserve its correct equations and numerical values; omit unnecessary algebra. Before writing, substitute any parameter values you mention into all given conditions. If a proposed value fails a condition, correct it. Explain the mathematics directly, without mentioning any checking process. Return only <reasoning>...</reasoning><final>...</final>, with exactly one boxed final answer.\nQuestion: {row['question_en']}\nOriginal worked solution: {row['reference_en_original']}\nGold answer: {row['gold_answer']}"
             raw, in_tok, out_tok = None, None, None
             try:
                 raw, in_tok, out_tok = generate(model, tokenizer, prompt, a.max_new_tokens, "You write accurate, concise math solutions from verified source reasoning.")
@@ -113,8 +113,11 @@ def main():
                 save(en_path, {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "reference_en_short": result, "raw": raw, "status": status, "screening_flags": flags, "input_tokens": in_tok, "output_tokens": out_tok, "prompt_hash": sha(prompt), "generator_id": generator_id, "generator_revision": generator_revision})
             except Exception as exc:
                 status = "generation_truncated" if out_tok is not None and out_tok >= a.max_new_tokens else "generation_error"
-                save(en_path, {"problem_id": key, "status": status, "error": str(exc), "raw": raw, "input_tokens": in_tok, "output_tokens": out_tok, "generator_id": generator_id, "generator_revision": generator_revision})
+                save(en_path, {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "status": status, "error": str(exc), "raw": raw, "input_tokens": in_tok, "output_tokens": out_tok, "prompt_hash": sha(prompt), "generator_id": generator_id, "generator_revision": generator_revision})
         en = json.loads(en_path.read_text())
+        expected_en = {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "prompt_hash": sha(prompt), "generator_id": generator_id, "generator_revision": generator_revision}
+        if any(en.get(field) != value for field, value in expected_en.items()):
+            raise ValueError(f"Existing English short label has stale identity or generator prompt: {en_path}")
         if en["status"] != "pending_review":
             continue
         if a.english_only:
@@ -122,11 +125,15 @@ def main():
             continue
         for lang in a.languages:
             out = a.output_dir / lang / f"{key}.json"
-            if out.exists():
-                continue
             target_question = row["languages"][lang]["question_target"]
             local_hint = "In Swahili, use 'tarakimu' for digit and 'jumla ya tarakimu' for digit sum; avoid English words such as digit, solution, correct, and number in prose. " if lang == "sw" else ""
             prompt = f"Translate the following concise mathematical solution into natural {LANGUAGE_NAMES[lang]}. Copy every equation, number, condition and conclusion exactly. Do not add new steps, variables, metadata or explanations beyond the English source. Use the target question's terminology. Translate every explanatory sentence; mathematical symbols and proper names may stay. {local_hint}Do not repeat phrases. Return only <reasoning>...</reasoning><final>...</final>, with exactly one boxed final answer matching the source.\nTarget-language question: {target_question}\nEnglish reasoning: {en['reference_en_short']['reasoning']}\nEnglish final: {en['reference_en_short']['final']}\nGold answer: {row['gold_answer']}"
+            if out.exists():
+                existing = json.loads(out.read_text())
+                expected = {"problem_id": key, "language": lang, "split": desired[key], "question_target": target_question, "gold_answer": row["gold_answer"], "generation_prompt_hash": sha(prompt), "generator_id": generator_id, "generator_revision": generator_revision}
+                if any(existing.get(field) != value for field, value in expected.items()):
+                    raise ValueError(f"Existing target label has stale split, identity or generator prompt: {out}")
+                continue
             raw, in_tok, out_tok = None, None, None
             try:
                 raw, in_tok, out_tok = generate(model, tokenizer, prompt, a.max_new_tokens, f"You translate mathematics into fluent {LANGUAGE_NAMES[lang]} faithfully and concisely.")
@@ -152,7 +159,7 @@ def main():
                 save(out, {"source_id": f"{CONFIG['train_dataset_revision']}:{row['languages'][lang]['source_row']}", "problem_id": key, "problem_hash": key, "source": row["source"], "language": lang, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "reference_en_short": en["reference_en_short"], "question_target": target_question, "solution_target": result, "gold_answer": row["gold_answer"], "split": desired[key], "generator_id": generator_id, "generator_revision": generator_revision, "generation_prompt_hash": sha(prompt), "quality_status": status, "screening_flags": flags, "reasoning_target": result["reasoning"], "final_target": result["final"], "assistant_completion": completion, "input_tokens": len(student_prompt), "supervised_tokens": supervised_tokens, "full_tokens": full_tokens, "generator_input_tokens": in_tok, "generator_output_tokens": out_tok, "raw": raw})
             except Exception as exc:
                 status = "generation_truncated" if out_tok is not None and out_tok >= a.max_new_tokens else "generation_error"
-                save(out, {"problem_id": key, "language": lang, "quality_status": status, "error": str(exc), "raw": raw, "generator_input_tokens": in_tok, "generator_output_tokens": out_tok, "generator_id": generator_id, "generator_revision": generator_revision})
+                save(out, {"problem_id": key, "language": lang, "split": desired[key], "question_target": target_question, "gold_answer": row["gold_answer"], "generation_prompt_hash": sha(prompt), "quality_status": status, "error": str(exc), "raw": raw, "generator_input_tokens": in_tok, "generator_output_tokens": out_tok, "generator_id": generator_id, "generator_revision": generator_revision})
         print(f"{n}/{len(examples)} {key}", flush=True)
 
 

@@ -77,7 +77,8 @@ def main():
         if not file.exists():
             raise FileNotFoundError(file)
         row = json.loads(file.read_text())
-        if row.get("problem_id") != key or row.get("language") != a.language:
+        expected_split = "train" if key in splits["train"] else "dev_tune"
+        if row.get("problem_id") != key or row.get("language") != a.language or row.get("split") != expected_split:
             raise ValueError(f"Label identity mismatch: {file}")
         if row.get("quality_status") != "accepted" and not (a.smoke and row.get("quality_status") == "pending_review"):
             raise ValueError(f"Label not accepted: {file}: {row.get('quality_status')}")
