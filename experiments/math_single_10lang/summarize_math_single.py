@@ -33,8 +33,8 @@ def main():
         raise FileExistsError(a.output_dir)
     base_cfg, base = load_run(a.base)
     single_cfg, single = load_run(a.single)
-    for key in ("items_sha256", "seed", "generation"):
-        if base_cfg[key] != single_cfg[key]:
+    for key in ("items_sha256", "seed", "generation", "tokenizer_sha256", "polymath_scorer_commit", "polymath_local_import_patch"):
+        if base_cfg.get(key) != single_cfg.get(key):
             raise ValueError(f"Protocol mismatch in {key}")
     if set(base) != set(single):
         raise ValueError("Question IDs differ")

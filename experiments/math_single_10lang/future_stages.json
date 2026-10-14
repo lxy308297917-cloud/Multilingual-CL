@@ -2,6 +2,7 @@
   "status": "interface_only_no_training_authorized_until_gates_pass",
   "selected_languages": null,
   "selection_source": "single dev_select three-seed report",
+  "stage_matrix_export": "make_future_eval_matrix.py --selection-record frozen_selection.json --languages L1 L2 L3; requires exact frozen ordered list and emits planned rows only",
   "teacher_check": {
     "start_gate": ["three languages selected and frozen", "all labels accepted", "independent train-side teacher-check IDs frozen"],
     "contexts": ["target_question", "target_question_plus_english_question", "target_question_plus_english_question_plus_english_short_solution"],
@@ -14,6 +15,8 @@
     "selected_language_rule": "highest mean single Base-to-best dev_select gain among accepted top three",
     "groups": {"A": "reference-prefix hard-label SFT", "B": "same reference prefix, frozen teacher full-vocabulary reverse KL", "C": "fresh student rollout each update, same frozen teacher full-vocabulary reverse KL"},
     "frozen_teacher": "original Qwen/Qwen3-4B separate immutable weights",
+    "record_fields": ["problem_id", "split", "language", "student_prompt_token_ids", "teacher_only_context_hash", "fixed_reference_completion_token_ids", "student_rollout_token_ids", "teacher_scored_response_token_ids", "student_logprob_token_ids", "valid_response_loss_mask", "response_alignment_verified", "teacher_model_revision", "student_initial_model_revision"],
+    "response_alignment_gate": "B and C require exactly aligned response tokens under the same tokenizer, excluding privileged teacher-prefix tokens from student loss and cost denominators",
     "cost_fields": ["reference_supervised_tokens", "student_generated_tokens", "teacher_scored_tokens", "valid_loss_tokens", "optimizer_steps", "max_gpu_memory_mib", "wall_seconds"]
   },
   "three_language_sequence": {

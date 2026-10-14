@@ -36,7 +36,7 @@ def main():
         lengths = [r["full_tokens"] for r in records.values() if isinstance(r.get("full_tokens"), int)]
         required = splits["train"] + splits["dev_tune"]
         formal_ready = all(k in records and records[k].get("quality_status") == "accepted" for k in required)
-        report[lang] = {"expected": {k: len(splits[k]) for k in ("train", "dev_tune", "dev_select")}, "present": len(records), "statuses": dict(statuses), "full_tokens": quantiles(lengths), "over_2048": sum(n>CONFIG["max_length"] for n in lengths), "formal_ready": formal_ready}
+        report[lang] = {"expected": {k: len(splits[k]) for k in ("train", "dev_tune", "dev_select")}, "present": len(records), "statuses": dict(statuses), "full_tokens": quantiles(lengths), "over_2048": sum(n>CONFIG["max_length"] for n in lengths), "generator_input_tokens_recorded": sum(r.get("generator_input_tokens") or 0 for r in records.values()), "generator_output_tokens_recorded": sum(r.get("generator_output_tokens") or 0 for r in records.values()), "generator_token_cost_missing_rows": sum(r.get("generator_input_tokens") is None or r.get("generator_output_tokens") is None for r in records.values()), "formal_ready": formal_ready}
         rng = random.Random(42)
         chosen = []
         for name, n in (("train", 30), ("dev_tune", 10), ("dev_select", 10)):
@@ -48,9 +48,11 @@ def main():
                 chosen.extend(bucket[:max(1, n//5)])
         with (a.output_dir / f"review_{lang}.jsonl").open("w") as f:
             for row in chosen:
-                f.write(json.dumps({k: row.get(k) for k in ("problem_id", "split", "language", "question_en", "question_target", "reference_en_original", "reference_en_short", "gold_answer", "reasoning_target", "final_target", "assistant_completion", "full_tokens", "quality_status")}, ensure_ascii=False) + "\n")
+                f.write(json.dumps({k: row.get(k) for k in ("problem_id", "split", "language", "question_en", "question_target", "reference_en_original", "reference_en_short", "gold_answer", "reasoning_target", "final_target", "assistant_completion", "full_tokens", "quality_status", "screening_flags", "generator_input_tokens", "generator_output_tokens")}, ensure_ascii=False) + "\n")
+    english = [json.loads(f.read_text()) for f in (a.labels_dir / "en_short").glob("*.json")] if (a.labels_dir / "en_short").exists() else []
+    report["_english_short"] = {"present": len(english), "statuses": dict(Counter(r.get("status", "unknown") for r in english)), "generator_input_tokens_recorded": sum(r.get("input_tokens") or 0 for r in english), "generator_output_tokens_recorded": sum(r.get("output_tokens") or 0 for r in english), "generator_token_cost_missing_rows": sum(r.get("input_tokens") is None or r.get("output_tokens") is None for r in english)}
     dump_json(a.output_dir / "label_audit.json", report)
-    print(json.dumps({l: {"present": x["present"], "statuses": x["statuses"], "formal_ready": x["formal_ready"]} for l,x in report.items()}, ensure_ascii=False, indent=2))
+    print(json.dumps({l: {"present": x["present"], "statuses": x["statuses"], "formal_ready": x.get("formal_ready")} for l,x in report.items()}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

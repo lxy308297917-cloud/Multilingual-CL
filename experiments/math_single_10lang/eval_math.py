@@ -1,5 +1,6 @@
 """Fixed Qwen3 generation and auditable per-question math scoring."""
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -106,13 +107,14 @@ def evaluate_one(model, tokenizer, item, seed, polymath_equal=None):
     else:
         raise ValueError(f"Unknown dataset: {item['dataset']}")
     thinking = raw.split("</think>", 1)[0].removeprefix("<think>") if final else ""
-    return {**item, "prompt": prompt, "raw_output": raw, "generated_tokens": int(len(generated)), "generation_seconds": generation_seconds, "finished": bool(len(generated) < CONFIG["generation"]["max_new_tokens"] and int(generated[-1]) == tokenizer.eos_token_id), "truncated": bool(len(generated) >= CONFIG["generation"]["max_new_tokens"]), "final_section_present": final is not None, "boxed_count_final": len(boxes), "extracted_answer": prediction, "math_correct": correct, "scoring_status": scoring_status, "thinking_language": language_status(thinking, lang), "final_language": language_status(final or "", lang), "generation_seed": seed}
+    return {**item, "prompt": prompt, "prompt_tokens": int(inputs["input_ids"].shape[-1]), "raw_output": raw, "generated_tokens": int(len(generated)), "generation_seconds": generation_seconds, "finished": bool(len(generated) < CONFIG["generation"]["max_new_tokens"] and int(generated[-1]) == tokenizer.eos_token_id), "truncated": bool(len(generated) >= CONFIG["generation"]["max_new_tokens"]), "final_section_present": final is not None, "boxed_count_final": len(boxes), "extracted_answer": prediction, "math_correct": correct, "scoring_status": scoring_status, "thinking_language": language_status(thinking, lang), "final_language": language_status(final or "", lang), "generation_seed": seed}
 
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--items", type=Path, required=True)
     p.add_argument("--model", type=Path, required=True)
+    p.add_argument("--tokenizer", type=Path, help="Pinned Base tokenizer; defaults to model directory")
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--seed", type=int, default=17)
     p.add_argument("--polymath-code", type=Path)
@@ -137,8 +139,10 @@ def main():
         if not polymath_equal("2", "2") or polymath_equal("2", "3"):
             raise ValueError("Official scorer self-check failed")
     a.output_dir.mkdir(parents=True)
-    dump_json(a.output_dir / "EVAL_CONFIG.json", {"model": str(a.model), "items": str(a.items), "items_sha256": sha(a.items.read_text()), "generation": CONFIG["generation"], "seed": a.seed, "count": len(items), "language_detector": "langdetect uncalibrated candidate only", "polymath_scorer_commit": "fbf4e41cae78687d6be7447dbea897357c06aaa7" if polymath_equal else None, "polymath_local_import_patch": "bundled/symeval/__init__.py exports EvaluatorMath" if polymath_equal else None})
-    tokenizer = AutoTokenizer.from_pretrained(str(a.model), local_files_only=True)
+    tokenizer_path = a.tokenizer or a.model
+    tokenizer_sha256 = hashlib.sha256((tokenizer_path / "tokenizer.json").read_bytes()).hexdigest()
+    dump_json(a.output_dir / "EVAL_CONFIG.json", {"model": str(a.model), "tokenizer": str(tokenizer_path), "tokenizer_sha256": tokenizer_sha256, "items": str(a.items), "items_sha256": sha(a.items.read_text()), "generation": CONFIG["generation"], "seed": a.seed, "count": len(items), "language_detector": "langdetect uncalibrated candidate only", "polymath_scorer_commit": "fbf4e41cae78687d6be7447dbea897357c06aaa7" if polymath_equal else None, "polymath_local_import_patch": "bundled/symeval/__init__.py exports EvaluatorMath" if polymath_equal else None})
+    tokenizer = AutoTokenizer.from_pretrained(str(a.tokenizer or a.model), local_files_only=True)
     model = AutoModelForCausalLM.from_pretrained(str(a.model), local_files_only=True, torch_dtype=torch.bfloat16, device_map="cuda:0", attn_implementation="sdpa").eval()
     with (a.output_dir / "predictions.jsonl").open("w") as f:
         for n, item in enumerate(items, 1):
@@ -146,7 +150,8 @@ def main():
             f.write(json.dumps(result, ensure_ascii=False) + "\n")
             f.flush()
             print(f"{n}/{len(items)} {item['id']} {result['scoring_status']}", flush=True)
-    dump_json(a.output_dir / "DONE.json", {"count": len(items), "prediction_file": "predictions.jsonl", "scored_count": sum(json.loads(s)["scoring_status"] in ("scored", "official_math_equal") for s in (a.output_dir / "predictions.jsonl").read_text().splitlines())})
+    results = [json.loads(s) for s in (a.output_dir / "predictions.jsonl").read_text().splitlines()]
+    dump_json(a.output_dir / "DONE.json", {"count": len(items), "prediction_file": "predictions.jsonl", "scored_count": sum(r["scoring_status"] in ("scored", "official_math_equal") for r in results), "prompt_tokens_recorded": sum(r.get("prompt_tokens", 0) for r in results), "generated_tokens": sum(r["generated_tokens"] for r in results), "generation_seconds": sum(r.get("generation_seconds", 0) for r in results), "truncated_count": sum(r["truncated"] for r in results), "valid_final_count": sum(r["final_section_present"] and r["boxed_count_final"] == 1 for r in results)})
 
 
 if __name__ == "__main__":

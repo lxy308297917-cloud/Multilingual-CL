@@ -17,6 +17,7 @@ def main():
     p.add_argument("--inventory", required=True)
     p.add_argument("--audit", required=True)
     p.add_argument("--near-duplicates", required=True)
+    p.add_argument("--problem-exclusions", type=Path, help="Additional shared gold-semantic quarantine IDs")
     p.add_argument("--tokenizer", type=Path, required=True)
     p.add_argument("--max-prompt-tokens", type=int, default=1024)
     p.add_argument("--output-dir", type=Path, required=True)
@@ -26,7 +27,14 @@ def main():
         raise ValueError("Required schema/alignment/exact contamination audit has unresolved issues")
     inventory = lines(a.inventory)
     near = lines(a.near_duplicates)
-    exclude = {x["problem_id"] for x in near}
+    near_ids = {x["problem_id"] for x in near}
+    known_ids = {x["problem_id"] for x in inventory}
+    if near_ids - known_ids:
+        raise ValueError("Near-match exclusion list contains unknown problem IDs")
+    extra_ids = set(json.loads(a.problem_exclusions.read_text())) if a.problem_exclusions else set()
+    if extra_ids - known_ids:
+        raise ValueError("Gold-semantic exclusion list contains unknown problem IDs")
+    exclude = near_ids | extra_ids
     clean = [x for x in inventory if x["problem_id"] not in exclude]
     tokenizer = AutoTokenizer.from_pretrained(str(a.tokenizer), local_files_only=True)
     length_excluded = []
@@ -60,10 +68,12 @@ def main():
         splits[name] = [x["problem_id"] for x in ordered[cursor:cursor + n]]
         cursor += n
     splits["reserve"] = [x["problem_id"] for x in ordered[cursor:]]
+    if a.output_dir.exists() and any(a.output_dir.iterdir()):
+        raise FileExistsError(a.output_dir)
     a.output_dir.mkdir(parents=True, exist_ok=True)
     dump_json(a.output_dir / "problem_ids.json", splits)
-    dump_json(a.output_dir / "split_manifest.json", {"seed": CONFIG["seed"], "source_revision": CONFIG["train_dataset_revision"], "benchmark_sources": {"MGSM-Rev2": "5f091edeae66ebc605ac4f98dca07a6c345f0060", "MGSM-original": "452a21ad3dae5668c06ceeac21ff073e1e40f9be", "PolyMath": "71e0db902e0ece05e208dfd8b1695bd3d95cf130", "GSM8K-test": "740312add88f781978c0658806c59bc2815b9866"}, "near_match_policy": "exclude all char-TFIDF 3-5 gram cosine >= 0.30 candidate IDs", "excluded_near_match_problem_ids": sorted(exclude), "max_student_prompt_tokens": a.max_prompt_tokens, "length_excluded": length_excluded, "counts": {k: len(v) for k, v in splits.items()}, "audit_limit": "Candidate retrieval is lexical; semantic paraphrases below threshold may remain. Target answer full-sequence lengths are unknown until labels are generated."})
-    print(json.dumps({"near_match_excluded": len(exclude), "length_excluded": len(length_excluded), "counts": {k: len(v) for k, v in splits.items()}}))
+    dump_json(a.output_dir / "split_manifest.json", {"seed": CONFIG["seed"], "source_revision": CONFIG["train_dataset_revision"], "benchmark_sources": {"MGSM-Rev2": "5f091edeae66ebc605ac4f98dca07a6c345f0060", "MGSM-original": "452a21ad3dae5668c06ceeac21ff073e1e40f9be", "PolyMath": "71e0db902e0ece05e208dfd8b1695bd3d95cf130", "GSM8K-test": "740312add88f781978c0658806c59bc2815b9866"}, "near_match_policy": "exclude all char-TFIDF 3-5 gram cosine >= 0.30 candidate IDs", "excluded_near_match_problem_ids": sorted(near_ids), "excluded_gold_semantic_problem_ids": sorted(extra_ids), "combined_excluded_problem_ids": sorted(exclude), "max_student_prompt_tokens": a.max_prompt_tokens, "length_excluded": length_excluded, "counts": {k: len(v) for k, v in splits.items()}, "audit_limit": "Candidate retrieval is lexical; semantic paraphrases below threshold may remain. Gold-semantic quarantine is conservative, not proof that remaining labels are correct. Target answer full-sequence lengths are unknown until labels are generated."})
+    print(json.dumps({"near_match_excluded": len(near_ids), "gold_semantic_excluded": len(extra_ids), "combined_excluded": len(exclude), "length_excluded": len(length_excluded), "counts": {k: len(v) for k, v in splits.items()}}))
 
 
 if __name__ == "__main__":

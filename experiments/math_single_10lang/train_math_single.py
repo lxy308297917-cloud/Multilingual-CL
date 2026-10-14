@@ -119,11 +119,12 @@ def main():
         fsdp_config={"transformer_layer_cls_to_wrap": ["Qwen3DecoderLayer"]} if world_size == 4 else {},
         remove_unused_columns=False, dataloader_num_workers=0)
     trainer = Trainer(model=model, args=args, train_dataset=train, eval_dataset=dev, processing_class=tokenizer)
-    trainer.train()
+    train_result = trainer.train()
+    final_eval = trainer.evaluate(metric_key_prefix="eval_final")
     if not a.smoke:
         trainer.save_model(str(a.output_dir / "final"))
     if rank == 0:
-        dump_json(a.output_dir / "TRAINING_DONE.json", {"language": a.language, "global_step": trainer.state.global_step, "model_revision": CONFIG["model_revision"], "smoke": a.smoke, "final_checkpoint": "checkpoint-20" if a.smoke else "final", "note": "save_only_model checkpoints contain weights only; interrupted run must restart from Base"})
+        dump_json(a.output_dir / "TRAINING_DONE.json", {"language": a.language, "global_step": trainer.state.global_step, "model_revision": CONFIG["model_revision"], "smoke": a.smoke, "final_checkpoint": "checkpoint-20" if a.smoke else "final", "train_metrics": train_result.metrics, "final_eval_metrics": final_eval, "rank0_peak_gpu_memory_mib": round(torch.cuda.max_memory_allocated() / 2**20, 1) if torch.cuda.is_available() else None, "note": "save_only_model checkpoints contain weights only; interrupted run must restart from Base"})
 
 
 if __name__ == "__main__":
