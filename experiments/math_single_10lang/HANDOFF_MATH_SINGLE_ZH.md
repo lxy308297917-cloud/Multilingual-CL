@@ -48,6 +48,8 @@ CUDA_VISIBLE_DEVICES=GPU-UUID $PY experiments/math_single_10lang/build_math_sft_
 
 v8 新探针：14B 从英文原解答整理的 20 道短解答共输入 16,672、输出 5,787 token，18 条待审、1 条格式错误、1 条截断；独立检查至少 3 条数学推理或证明不合格，详见 `logs/math_single_10lang/labels_14b_v8_english20_20261015/MANUAL_REVIEW.json`。新增 `--english-strategy independent_thinking` 只从题面独立求解，按题目 ID 固定采样种子；1600-token 上限首题即截断，4096-token 上限已完成两题中，一题以 2693 生成 token 修正源解错误，另一题用满 4096 token 仍未闭合。原始输出与提前结束原因在 `logs/math_single_10lang/labels_14b_v8_independent4_4096_20261015/RESULT.json`。两种方式都未通过完整性与独立质量门槛，零条标签验收；不能据此估计全库错误率。代码保留精确题目 ID 探针入口，新增 `merge_eval_shards.py` 只在所有分片完成并核对配置、ID 和源 SHA 后合并。
 
+额外源解筛查：v8 保留池的独立展示整数算式中，至少 4 个原题有 8 处明确算术矛盾；这只是极窄规则检出的下界，最终 gold 可能仍正确，详见 `data/math_single_10lang_20261015/audit_v8_screened/reference_arithmetic_exact_display.json`。对这些题必须修订或隔离源解，不能把表面 boxed 相符当作解题过程正确。
+
 后续接口：`export_teacher_check_items.py` 在冻结三语言名单、划分哈希匹配、每语训练/开发标签均为 `accepted` 且英语短解答已审查时，才能导出共同训练侧 100—200 道教师检查题；输出显式区分 `student_visible` 与 `teacher_only`。`make_future_eval_matrix.py` 在同一冻结名单下生成 SFT/B/C、正反顺序、Base 和三阶段、全部入选语言及英语的 360 条计划评测行，含训练/生成 seed 与 token、教师评分和耗时字段。两者都是接口与门槛检查，当前无教师测评或后续训练结果。
 
 ## 官方 COPSD 代码核对（仅作后续参考）
