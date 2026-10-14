@@ -30,7 +30,7 @@ def main():
                 for language in [*a.languages, "en"]:
                     datasets = ("dev_tune", "dev_select", "MGSM-Rev2", "PolyMath") if language != "en" else ("dev_select", "GSM8K-test", "IFEval")
                     for dataset in datasets:
-                        rows.append({"method": method, "order": ">".join(order), "stage": stage, "checkpoint": checkpoint, "eval_language": language, "eval_dataset": dataset, "status": "planned", "trained_nonpadding_input_tokens": "", "trained_valid_loss_tokens": "", "student_generated_tokens": "", "teacher_scored_tokens": "", "eval_generated_tokens": "", "eval_wall_seconds": "", "score_file": ""})
+                        rows.append({"method": method, "order": ">".join(order), "train_seed": "", "stage": stage, "checkpoint": checkpoint, "eval_language": language, "eval_dataset": dataset, "generation_seed": "", "status": "planned", "trained_nonpadding_input_tokens": "", "trained_valid_loss_tokens": "", "student_generated_tokens": "", "teacher_scored_tokens": "", "eval_generated_tokens": "", "eval_wall_seconds": "", "score_file": ""})
     a.output.parent.mkdir(parents=True, exist_ok=True)
     with a.output.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0]))

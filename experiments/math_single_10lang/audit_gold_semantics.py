@@ -2,6 +2,7 @@
 import argparse
 import json
 import re
+import unicodedata
 from collections import Counter
 from pathlib import Path
 
@@ -13,6 +14,11 @@ CHOICE_MARKERS = [re.compile(rf"(?m)(?:^|\n)\s*{letter}[.、):]") for letter in 
 PART_A = re.compile(r"(?i)(?:^|[\n ])\(?a\)")
 PART_B = re.compile(r"(?i)(?:^|[\n ])\(?b\)")
 PROOF_TASK = re.compile(r"(?i)\b(?:prove|show\s+that|demonstrate|verify\s+that|establish\s+that|justify\s+that)\b")
+WORKED_SOLUTION_CUE = re.compile(r"(?i)\b(?:therefore|hence|as\s+a\s+result|clearly)\b")
+
+
+def compact(text):
+    return re.sub(r"\s+", "", unicodedata.normalize("NFKC", text)).lower()
 
 
 def main():
@@ -40,6 +46,11 @@ def main():
             reasons.append("multipart_question")
         if PROOF_TASK.search(question):
             reasons.append("proof_task_not_answer_scorable")
+        if WORKED_SOLUTION_CUE.search(question):
+            reasons.append("worked_solution_cue_in_question")
+        answer = compact(row["gold_answer"])
+        if len(answer) >= 8 and answer in compact(question):
+            reasons.append("published_answer_in_question")
         if reasons:
             excluded.append({"problem_id": row["problem_id"], "prior_split": membership.get(row["problem_id"], "already_excluded"), "reasons": reasons, "gold_answer": row["gold_answer"], "boxed_answers": boxes, "question_en": question})
             counts.update(reasons)
