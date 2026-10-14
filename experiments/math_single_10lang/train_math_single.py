@@ -48,7 +48,9 @@ def main():
     p.add_argument("--splits", type=Path, required=True)
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--smoke", action="store_true")
+    p.add_argument("--seed", type=int, default=42)
     p.add_argument("--smoke-examples", type=int, default=64)
+    p.add_argument("--smoke-dev-examples", type=int, default=16)
     a = p.parse_args()
     rank = int(os.environ.get("RANK", "0"))
     if rank == 0 and a.output_dir.exists() and any(a.output_dir.iterdir()):
@@ -56,11 +58,18 @@ def main():
     world_size = int(os.environ.get("WORLD_SIZE", "1"))
     if not a.smoke and world_size != 4:
         raise ValueError("Formal 4B FFT requires four GPU FSDP workers on this 24GB/GPU machine")
-    set_seed(CONFIG["seed"])
+    set_seed(a.seed)
     splits = json.loads(a.splits.read_text())
     ids = splits["train"] + splits["dev_tune"]
     if a.smoke:
-        ids = splits["train"][:a.smoke_examples] + splits["dev_tune"][:min(16, len(splits["dev_tune"]))]
+        def available_for_smoke(key):
+            file = a.labels_dir / a.language / f"{key}.json"
+            return file.exists() and json.loads(file.read_text()).get("quality_status") in ("pending_review", "accepted")
+        train_ids = [key for key in splits["train"] if available_for_smoke(key)][:a.smoke_examples]
+        dev_ids = [key for key in splits["dev_tune"] if available_for_smoke(key)][:a.smoke_dev_examples]
+        if len(train_ids) != a.smoke_examples or len(dev_ids) != a.smoke_dev_examples:
+            raise ValueError(f"Insufficient valid smoke labels: train={len(train_ids)}/{a.smoke_examples}, dev={len(dev_ids)}/{a.smoke_dev_examples}")
+        ids = train_ids + dev_ids
     tokenizer = AutoTokenizer.from_pretrained(str(a.model), local_files_only=True)
     rows = {}
     for key in ids:
@@ -86,7 +95,13 @@ def main():
     steps_half_epoch = math.ceil(len(train) / CONFIG["global_batch"] / 2)
     a.output_dir.mkdir(parents=True, exist_ok=True)
     if rank == 0:
-        dump_json(a.output_dir / "RUN_CONFIG.json", {"config": CONFIG, "language": a.language, "model_path": str(a.model), "model_revision": CONFIG["model_revision"], "smoke": a.smoke, "world_size": world_size, "gradient_accumulation_steps": accum, "train_count": len(train), "dev_count": len(dev), "supervised_tokens_train": sum(rows[k]["supervised_tokens"] for k in ids if k in splits["train"]), "input_tokens_train": sum(rows[k]["input_tokens"] for k in ids if k in splits["train"]), "padding_tokens_train": sum(rows[k]["padding_tokens"] for k in ids if k in splits["train"]), "split_sha256": sha(a.splits.read_text()), "label_status_required": "pending_review allowed only for smoke" if a.smoke else "accepted"})
+        dump_json(a.output_dir / "RUN_CONFIG.json", {"config": CONFIG, "language": a.language, "train_seed": a.seed, "data_seed": a.seed, "model_path": str(a.model), "model_revision": CONFIG["model_revision"], "smoke": a.smoke, "world_size": world_size, "gradient_accumulation_steps": accum, "train_ids": [k for k in ids if k in splits["train"]], "dev_ids": [k for k in ids if k in splits["dev_tune"]], "train_count": len(train), "dev_count": len(dev), "supervised_tokens_train": sum(rows[k]["supervised_tokens"] for k in ids if k in splits["train"]), "input_tokens_train": sum(rows[k]["input_tokens"] for k in ids if k in splits["train"]), "padding_tokens_train": sum(rows[k]["padding_tokens"] for k in ids if k in splits["train"]), "split_sha256": sha(a.splits.read_text()), "label_status_required": "pending_review allowed only for smoke" if a.smoke else "accepted"})
+        with (a.output_dir / "PREPARED_SAMPLES.jsonl").open("w") as sample_file:
+            for key in ids[:5]:
+                row = rows[key]
+                active = row["input_ids"][:row["input_tokens"]]
+                first_label = next(i for i, value in enumerate(row["labels"]) if value != -100)
+                sample_file.write(json.dumps({"problem_id": key, "prompt_token_ids": active[:first_label], "completion_token_ids": active[first_label:], "decoded_full_sequence": tokenizer.decode(active, skip_special_tokens=False), "supervised_tokens": row["supervised_tokens"], "input_tokens": row["input_tokens"]}, ensure_ascii=False) + "\n")
     model = AutoModelForCausalLM.from_pretrained(str(a.model), local_files_only=True, torch_dtype=torch.bfloat16, attn_implementation="sdpa")
     model.config.use_cache = False
     args = TrainingArguments(output_dir=str(a.output_dir), overwrite_output_dir=False,
@@ -99,15 +114,16 @@ def main():
         eval_strategy="steps", eval_steps=10 if a.smoke else steps_half_epoch,
         save_strategy="steps", save_steps=20 if a.smoke else steps_half_epoch,
         eval_on_start=True, report_to=["tensorboard"], save_safetensors=True,
-        save_only_model=True, seed=CONFIG["seed"], data_seed=CONFIG["seed"],
+        save_only_model=True, seed=a.seed, data_seed=a.seed,
         fsdp="full_shard auto_wrap" if world_size == 4 else "",
         fsdp_config={"transformer_layer_cls_to_wrap": ["Qwen3DecoderLayer"]} if world_size == 4 else {},
         remove_unused_columns=False, dataloader_num_workers=0)
     trainer = Trainer(model=model, args=args, train_dataset=train, eval_dataset=dev, processing_class=tokenizer)
     trainer.train()
-    trainer.save_model(str(a.output_dir / "final"))
+    if not a.smoke:
+        trainer.save_model(str(a.output_dir / "final"))
     if rank == 0:
-        dump_json(a.output_dir / "TRAINING_DONE.json", {"language": a.language, "global_step": trainer.state.global_step, "model_revision": CONFIG["model_revision"], "note": "save_only_model checkpoints contain weights only; interrupted run must restart from Base"})
+        dump_json(a.output_dir / "TRAINING_DONE.json", {"language": a.language, "global_step": trainer.state.global_step, "model_revision": CONFIG["model_revision"], "smoke": a.smoke, "final_checkpoint": "checkpoint-20" if a.smoke else "final", "note": "save_only_model checkpoints contain weights only; interrupted run must restart from Base"})
 
 
 if __name__ == "__main__":

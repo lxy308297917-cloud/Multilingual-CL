@@ -3,6 +3,7 @@ import argparse
 import json
 import re
 import sys
+import time
 import unicodedata
 from fractions import Fraction
 from pathlib import Path
@@ -57,7 +58,8 @@ def score_mgsm(pred, gold):
 
 
 def language_status(text, lang):
-    from langdetect import detect_langs
+    from langdetect import DetectorFactory, detect_langs
+    DetectorFactory.seed = 0
     prose = re.sub(r"\\\[.*?\\\]|\\\(.*?\\\)|\$.*?\$|\\boxed\{.*?\}", " ", text, flags=re.S)
     prose = re.sub(r"[\W\d_]+", " ", prose, flags=re.UNICODE).strip()
     if len(prose) < 20:
@@ -75,9 +77,18 @@ def evaluate_one(model, tokenizer, item, seed, polymath_equal=None):
     lang = item["language"]
     prompt = tokenizer.apply_chat_template(messages(item["question_target"], lang), tokenize=False, add_generation_prompt=True, enable_thinking=True)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-    generator = torch.Generator(device=model.device).manual_seed(seed + int(sha(item["id"])[:8], 16))
+    item_seed = seed + int(sha(item["id"])[:8], 16)
+    torch.manual_seed(item_seed)
+    if model.device.type == "cuda":
+        torch.cuda.manual_seed_all(item_seed)
+    if model.device.type == "cuda":
+        torch.cuda.synchronize()
+    started = time.monotonic()
     with torch.inference_mode():
-        output = model.generate(**inputs, do_sample=True, temperature=.6, top_p=.95, top_k=20, max_new_tokens=CONFIG["generation"]["max_new_tokens"], num_return_sequences=1, generator=generator, pad_token_id=tokenizer.eos_token_id)
+        output = model.generate(**inputs, do_sample=True, temperature=.6, top_p=.95, top_k=20, min_p=0.0, max_new_tokens=CONFIG["generation"]["max_new_tokens"], num_return_sequences=1, pad_token_id=tokenizer.eos_token_id)
+    if model.device.type == "cuda":
+        torch.cuda.synchronize()
+    generation_seconds = time.monotonic() - started
     generated = output[0, inputs["input_ids"].shape[-1]:]
     raw = tokenizer.decode(generated, skip_special_tokens=False)
     final = final_section(raw)
@@ -87,15 +98,15 @@ def evaluate_one(model, tokenizer, item, seed, polymath_equal=None):
     if item["dataset"] in ("MGSM-Rev2", "GSM8K-test", "dev_tune_numeric", "dev_select_numeric"):
         correct = score_mgsm(prediction, gold) if prediction is not None else False
         scoring_status = "gold_parse_error" if exact_number(gold) is None else "scored"
-    elif item["dataset"] == "PolyMath":
+    elif item["dataset"] in ("PolyMath", "dev_tune_math", "dev_select_math"):
         if polymath_equal is None:
             raise ValueError("Official PolyMath scorer is required")
         correct = bool(polymath_equal(prediction, gold)) if prediction is not None else False
-        scoring_status = "official_polymath"
+        scoring_status = "official_math_equal"
     else:
         raise ValueError(f"Unknown dataset: {item['dataset']}")
     thinking = raw.split("</think>", 1)[0].removeprefix("<think>") if final else ""
-    return {**item, "prompt": prompt, "raw_output": raw, "generated_tokens": int(len(generated)), "finished": bool(len(generated) < CONFIG["generation"]["max_new_tokens"] and int(generated[-1]) == tokenizer.eos_token_id), "truncated": bool(len(generated) >= CONFIG["generation"]["max_new_tokens"]), "final_section_present": final is not None, "boxed_count_final": len(boxes), "extracted_answer": prediction, "math_correct": correct, "scoring_status": scoring_status, "thinking_language": language_status(thinking, lang), "final_language": language_status(final or "", lang), "generation_seed": seed}
+    return {**item, "prompt": prompt, "raw_output": raw, "generated_tokens": int(len(generated)), "generation_seconds": generation_seconds, "finished": bool(len(generated) < CONFIG["generation"]["max_new_tokens"] and int(generated[-1]) == tokenizer.eos_token_id), "truncated": bool(len(generated) >= CONFIG["generation"]["max_new_tokens"]), "final_section_present": final is not None, "boxed_count_final": len(boxes), "extracted_answer": prediction, "math_correct": correct, "scoring_status": scoring_status, "thinking_language": language_status(thinking, lang), "final_language": language_status(final or "", lang), "generation_seed": seed}
 
 
 def main():
@@ -117,7 +128,7 @@ def main():
     if len(ids) != len(set(ids)):
         raise ValueError("Duplicate item IDs")
     polymath_equal = None
-    if any(x["dataset"] == "PolyMath" for x in items):
+    if any(x["dataset"] in ("PolyMath", "dev_tune_math", "dev_select_math") for x in items):
         if not a.polymath_code or not a.scorer_deps:
             raise ValueError("PolyMath items require --polymath-code and --scorer-deps")
         sys.path[:0] = [str(a.scorer_deps), str(a.polymath_code / "eval")]
@@ -135,7 +146,7 @@ def main():
             f.write(json.dumps(result, ensure_ascii=False) + "\n")
             f.flush()
             print(f"{n}/{len(items)} {item['id']} {result['scoring_status']}", flush=True)
-    dump_json(a.output_dir / "DONE.json", {"count": len(items), "prediction_file": "predictions.jsonl", "scored_count": sum(json.loads(s)["scoring_status"] in ("scored", "official_polymath") for s in (a.output_dir / "predictions.jsonl").read_text().splitlines())})
+    dump_json(a.output_dir / "DONE.json", {"count": len(items), "prediction_file": "predictions.jsonl", "scored_count": sum(json.loads(s)["scoring_status"] in ("scored", "official_math_equal") for s in (a.output_dir / "predictions.jsonl").read_text().splitlines())})
 
 
 if __name__ == "__main__":

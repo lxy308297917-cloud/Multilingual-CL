@@ -65,12 +65,20 @@ def main():
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--languages", nargs="+", choices=list(CONFIG["languages"]), default=list(CONFIG["languages"]))
     p.add_argument("--limit", type=int)
+    p.add_argument("--smoke-train", type=int)
+    p.add_argument("--smoke-dev", type=int)
     a = p.parse_args()
     splits = json.loads(a.splits.read_text())
     desired = {key: name for name in ("train", "dev_tune", "dev_select") for key in splits[name]}
     examples = [x for x in read_jsonl(a.inventory) if x["problem_id"] in desired]
     order = {"train": 0, "dev_tune": 1, "dev_select": 2}
     examples.sort(key=lambda x: (order[desired[x["problem_id"]]], x["problem_id"]))
+    if a.smoke_train is not None or a.smoke_dev is not None:
+        if a.limit is not None:
+            raise ValueError("--limit and --smoke-train/--smoke-dev are mutually exclusive")
+        train_examples = [x for x in examples if desired[x["problem_id"]] == "train"][:a.smoke_train or 0]
+        dev_examples = [x for x in examples if desired[x["problem_id"]] == "dev_tune"][:a.smoke_dev or 0]
+        examples = train_examples + dev_examples
     if a.limit:
         examples = examples[:a.limit]
     tokenizer = AutoTokenizer.from_pretrained(str(a.model), local_files_only=True)
@@ -82,14 +90,16 @@ def main():
         key = row["problem_id"]
         en_path = a.output_dir / "en_short" / f"{key}.json"
         if not en_path.exists():
-            prompt = f"Check the given worked solution against the gold answer. Rewrite it as a SHORT, COMPLETE English solution with all essential reasoning. If the solution appears wrong, say so in the final section. Use <reasoning> and <final> sections only.\nQuestion: {row['question_en']}\nOriginal worked solution: {row['reference_en_original']}\nGold answer: {row['gold_answer']}"
+            prompt = f"Check the given worked solution against the gold answer. Rewrite it as a SHORT, COMPLETE English solution with all essential reasoning. Explain the mathematics directly; do not write that the solution is correct or that it was checked. If the original reasoning is wrong, correct it. Use <reasoning> and <final> sections only.\nQuestion: {row['question_en']}\nOriginal worked solution: {row['reference_en_original']}\nGold answer: {row['gold_answer']}"
+            raw = None
             try:
                 raw, in_tok, out_tok = generate(model, tokenizer, prompt)
                 result = parse_sections(raw)
-                status = "pending_review" if norm_answer(row["gold_answer"]) in norm_answer(result["final"]) else "generator_mismatch"
-                save(en_path, {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "reference_en_short": result, "raw": raw, "status": status, "input_tokens": in_tok, "output_tokens": out_tok, "prompt_hash": sha(prompt), "generator_id": generator_id, "generator_revision": generator_revision})
+                flags = [] if norm_answer(row["gold_answer"]) in norm_answer(result["final"]) else ["gold_text_not_in_final_manual_check"]
+                status = "generation_truncated" if out_tok >= 640 else "pending_review"
+                save(en_path, {"problem_id": key, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "gold_answer": row["gold_answer"], "reference_en_short": result, "raw": raw, "status": status, "screening_flags": flags, "input_tokens": in_tok, "output_tokens": out_tok, "prompt_hash": sha(prompt), "generator_id": generator_id, "generator_revision": generator_revision})
             except Exception as exc:
-                save(en_path, {"problem_id": key, "status": "generation_error", "error": str(exc), "generator_id": generator_id, "generator_revision": generator_revision})
+                save(en_path, {"problem_id": key, "status": "generation_error", "error": str(exc), "raw": raw, "generator_id": generator_id, "generator_revision": generator_revision})
         en = json.loads(en_path.read_text())
         if en["status"] != "pending_review":
             continue
@@ -98,11 +108,14 @@ def main():
             if out.exists():
                 continue
             target_question = row["languages"][lang]["question_target"]
-            prompt = f"Translate the following draft English short mathematical reasoning and final explanation into {LANGUAGE_NAMES[lang]}. Keep every condition, number, equation and mathematical conclusion unchanged. Use natural {LANGUAGE_NAMES[lang]} for prose. Do not solve afresh. Return <reasoning> and <final> sections only; final must include the gold answer exactly.\nTarget-language question: {target_question}\nEnglish reasoning: {en['reference_en_short']['reasoning']}\nEnglish final: {en['reference_en_short']['final']}\nGold answer: {row['gold_answer']}"
+            local_hint = "In Swahili, use 'tarakimu' for digit and 'jumla ya tarakimu' for digit sum; avoid English words such as digit, solution, correct, and number in prose. " if lang == "sw" else ""
+            prompt = f"Translate the following draft English short mathematical reasoning and final explanation into fluent {LANGUAGE_NAMES[lang]}. Keep every condition, number, equation and mathematical conclusion unchanged. Every explanatory sentence must be in natural {LANGUAGE_NAMES[lang]}; mathematical symbols and proper names may stay. {local_hint}Do not solve afresh. Return <reasoning> and <final> sections only; final must include the gold answer exactly.\nTarget-language question: {target_question}\nEnglish reasoning: {en['reference_en_short']['reasoning']}\nEnglish final: {en['reference_en_short']['final']}\nGold answer: {row['gold_answer']}"
+            raw = None
             try:
                 raw, in_tok, out_tok = generate(model, tokenizer, prompt)
                 result = parse_sections(raw)
-                status = "pending_review" if norm_answer(row["gold_answer"]) in norm_answer(result["final"]) else "generator_mismatch"
+                flags = [] if norm_answer(row["gold_answer"]) in norm_answer(result["final"]) else ["gold_text_not_in_final_manual_check"]
+                status = "generation_truncated" if out_tok >= 640 else "pending_review"
                 final = result["final"].strip()
                 if "\\boxed{" not in final:
                     final += " \\boxed{" + row["gold_answer"] + "}"
@@ -112,9 +125,9 @@ def main():
                 full_tokens = len(student_prompt) + supervised_tokens
                 if full_tokens > CONFIG["max_length"]:
                     status = "overlength"
-                save(out, {"source_id": f"{CONFIG['train_dataset_revision']}:{row['languages'][lang]['source_row']}", "problem_id": key, "problem_hash": key, "source": row["source"], "language": lang, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "reference_en_short": en["reference_en_short"], "question_target": target_question, "solution_target": result, "gold_answer": row["gold_answer"], "split": desired[key], "generator_id": generator_id, "generator_revision": generator_revision, "generation_prompt_hash": sha(prompt), "quality_status": status, "reasoning_target": result["reasoning"], "final_target": result["final"], "assistant_completion": completion, "input_tokens": len(student_prompt), "supervised_tokens": supervised_tokens, "full_tokens": full_tokens, "generator_input_tokens": in_tok, "generator_output_tokens": out_tok, "raw": raw})
+                save(out, {"source_id": f"{CONFIG['train_dataset_revision']}:{row['languages'][lang]['source_row']}", "problem_id": key, "problem_hash": key, "source": row["source"], "language": lang, "question_en": row["question_en"], "reference_en_original": row["reference_en_original"], "reference_en_short": en["reference_en_short"], "question_target": target_question, "solution_target": result, "gold_answer": row["gold_answer"], "split": desired[key], "generator_id": generator_id, "generator_revision": generator_revision, "generation_prompt_hash": sha(prompt), "quality_status": status, "screening_flags": flags, "reasoning_target": result["reasoning"], "final_target": result["final"], "assistant_completion": completion, "input_tokens": len(student_prompt), "supervised_tokens": supervised_tokens, "full_tokens": full_tokens, "generator_input_tokens": in_tok, "generator_output_tokens": out_tok, "raw": raw})
             except Exception as exc:
-                save(out, {"problem_id": key, "language": lang, "quality_status": "generation_error", "error": str(exc), "generator_id": generator_id, "generator_revision": generator_revision})
+                save(out, {"problem_id": key, "language": lang, "quality_status": "generation_error", "error": str(exc), "raw": raw, "generator_id": generator_id, "generator_revision": generator_revision})
         print(f"{n}/{len(examples)} {key}", flush=True)
 
 

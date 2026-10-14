@@ -15,5 +15,5 @@
   "micro_batch": 1,
   "weight_decay": 0.01,
   "warmup_ratio": 0.05,
-  "generation": {"do_sample": true, "temperature": 0.6, "top_p": 0.95, "top_k": 20, "max_new_tokens": 4096, "seed": 17}
+  "generation": {"do_sample": true, "temperature": 0.6, "top_p": 0.95, "top_k": 20, "min_p": 0.0, "max_new_tokens": 4096, "seed": 17}
 }
