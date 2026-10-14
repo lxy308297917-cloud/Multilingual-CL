@@ -5,7 +5,7 @@
   "stage_matrix_export": "make_future_eval_matrix.py --selection-record frozen_selection.json --languages L1 L2 L3; requires exact frozen ordered list and emits planned rows only",
   "teacher_check": {
     "start_gate": ["three languages selected and frozen", "all labels accepted", "independent train-side teacher-check IDs frozen"],
-    "train_side_export": "export_teacher_check_items.py --selection-record frozen_selection.json --splits split_v7_screened/problem_ids.json --labels-dir reviewed_labels --count 100; refuses incomplete accepted labels and emits student_visible/teacher_only separately",
+    "train_side_export": "export_teacher_check_items.py --selection-record frozen_selection.json --splits split_v8_screened/problem_ids.json --labels-dir reviewed_labels --count 100; refuses incomplete accepted labels and emits student_visible/teacher_only separately",
     "contexts": ["target_question", "target_question_plus_english_question", "target_question_plus_english_question_plus_english_short_solution"],
     "student_fields": ["problem_id", "language", "question_target", "student_prompt", "student_prefix_tokens"],
     "teacher_only_fields": ["question_en", "reference_en_short"],

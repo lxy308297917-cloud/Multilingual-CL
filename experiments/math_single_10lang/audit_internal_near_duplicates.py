@@ -10,7 +10,11 @@ from common import dump_json
 
 
 def norm_answer(text):
-    return re.sub(r"\s+", "", text).lower()
+    compact = re.sub(r"\s+", "", text).lower()
+    numeric_without_units = re.sub(r"\\(?:text|mathrm)\{[^{}]*\}", "", compact).replace("\\,", "")
+    if re.fullmatch(r"[-+]?\d+(?:\.\d+)?", numeric_without_units):
+        return numeric_without_units
+    return compact
 
 
 def main():
