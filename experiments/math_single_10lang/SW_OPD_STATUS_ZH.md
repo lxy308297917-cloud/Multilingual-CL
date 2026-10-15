@@ -1,6 +1,6 @@
 # SW OPD 当前状态
 
-更新时间：2026-10-15 13:23（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
+更新时间：2026-10-15 13:33（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
 
 SW 源题 30 train、10 dev_tune、10 dev_check 分层样本的 Codex 模型预审现已完成，逐题记录在 `logs/math_sw_opd_20261015/SW_SOURCE_REVIEW_*_CODEX.jsonl`，汇总及文件哈希在 `SW_SOURCE_REVIEW_50_CODEX_SUMMARY.json`。50 条中 14 条有明确问题或待修订项：train 10/30、dev 4/20；其中 10 条涉及英文参考推导或证明，5 条涉及 SW 条件或术语，1 条两类重叠。典型例子包括参考把两两和的 `2G+60=121` 写为 `3G+60=121`、把 `n=1` 的质数特例判为合数、SW 将“倍数”写成“因子”。这是抽样发现，不是全池错误率；其余 36 条也只是模型预审未见明显问题。**正式源题批次验收仍未完成，Q_full=0**，14 条争议题在修订或剔除前不得混入正式问题池。此项是源题审核，不能与教师 SFT 轨迹的 0 条 accepted 混为一谈。
 
@@ -32,6 +32,7 @@ SW 候选 split 已按预先固定 SHA256(seed42) 规则从旧 v8 不相交划�
 - 新协议正式同教师 SW 轨迹合成尚未启动，回溯探针候选 2、accepted 0；旧 14B 翻译标签不可作为 A 组主数据。源题审查、SW 语言审核和 2048 完整序列检查仍是放行条件。
 - 14B 外部教师诊断与 4B 关闭 thinking 诊断都已完成，退出码 0；前者只能作为独立强教师轨道证据，后者只能作为生成模式诊断，均不能替代同快照 4B、thinking=True 的正式 A/B/C 对照。
 - 4 卡 OPD 工程烟测队列已启动但真实训练尚未开始；当前只有 GPU 0 核实空闲且由本账号队列保留，其他卡有用户计算进程。之前 GPU 7 在 14B 任务运行期间出现另一用户的计算进程，未干预对方任务；两题探针仍正常完成。本账号后续新任务必须重新逐卡检查和遵守四卡总上限，不把旧空闲快照当作当前资源状态。
+- 单卡烟测中 CPU 教师评分 320 token 用时 134.43 秒，短序列均值约 0.420 秒/token。若机械外推到 100 step×batch 32，四路并行、每题 512/1024/2048 token，**仅教师评分**约 1.99/3.98/7.97 天；这是 5 条 64-token 样本的粗略容量估算，不是正式运行时长，实际长上下文与 CPU 争用可能显著改变吞吐。机器可读计算在 `logs/math_sw_opd_20261015/SW_OPD_CPU_TEACHER_COST_EXTRAPOLATION_V1.json`。因此另准备独立 GPU 分片教师的 `train_sw_opd_dual_fsdp_smoke.py` 与启动脚本，不修改已排队的 CPU 教师烟测。两进程微型 Qwen3 的 CPU 双 FSDP 教师/学生前向、不同回答长度、KL、反向和 AdamW 更新通过；日志为 `SW_OPD_DUAL_FSDP_CPU_PROBE.log`。真实 4B 显存与吞吐**尚未验证**，新入口未启动、不能称正式训练。
 - SW 来源审核后先做教师前缀信号与长度/显存检查，再做 5–20 step OPD smoke；通过后从原始 Base 另起 C_full，开启 0/20/50/100 的开发集 eval 和 TensorBoard。A/B/C 仅在共同 accepted 题池准备好后运行。
 
 ## 资源与成本
