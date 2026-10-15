@@ -1,6 +1,6 @@
 """Engineering-only four-GPU SW OPD smoke with an independent frozen sharded GPU teacher.
 
-This deliberately uses short rollouts and BF16 AdamW state to establish the
+This uses shorter-than-formal rollouts and BF16 AdamW state to establish the
 4B on-policy/FSDP path. It is not the formal 100-step FP32-optimizer protocol.
 Run with torchrun and four queue-selected GPUs; source rows may be pending
 review only because --smoke is mandatory here.
@@ -114,10 +114,13 @@ def main():
     p.add_argument("--rollout-max-new-tokens", type=int, default=64)
     p.add_argument("--eval-max-new-tokens", type=int, default=128)
     p.add_argument("--seed", type=int, default=42)
-    p.add_argument("--smoke", action="store_true", required=True)
+    p.add_argument("--smoke", action="store_true")
+    p.add_argument("--pilot", action="store_true", help="Exploratory 20-step pilot on model-prereviewed source; never formal acceptance")
     a = p.parse_args()
-    if not a.smoke or a.max_steps not in range(1, 21) or not 1 <= a.rollout_max_new_tokens <= 256:
-        raise ValueError("This entrypoint is limited to explicit 1–20 step short-rollout engineering smoke")
+    if a.smoke == a.pilot:
+        raise ValueError("Select exactly one of --smoke and --pilot")
+    if a.max_steps not in range(1, 21) or not 1 <= a.rollout_max_new_tokens <= (512 if a.pilot else 256):
+        raise ValueError("This entrypoint is limited to 1–20 updates and at most 512 pilot or 256 smoke rollout tokens")
     if os.environ.get("GPU_QUEUE_GPU_COUNT") != "4" or not os.environ.get("CUDA_VISIBLE_DEVICES"):
         raise RuntimeError("Four queue-selected GPUs with explicit CUDA_VISIBLE_DEVICES are required")
     world = int(os.environ.get("WORLD_SIZE", "0"))
@@ -147,9 +150,10 @@ def main():
             row, src = rows[key], source[key]
             if src.get("triage_flags") or src["question_sw"] != row["languages"]["sw"]["question_target"] or src["question_en"] != row["question_en"] or src["gold_answer"] != row["gold_answer"]:
                 raise ValueError(f"Stale or flagged source: {key}")
-        for key in train_ids:
-            if reviewed.get(key, {}).get("math_status") != "model_review_pass":
-                raise ValueError(f"Smoke train source lacks independent Codex math precheck: {key}")
+        for key in train_ids + dev_ids:
+            review = reviewed.get(key, {})
+            if review.get("math_status") != "model_review_pass" or review.get("sw_question_status") != "no_obvious_condition_change_model_review_only":
+                raise ValueError(f"Exploratory source lacks both math and SW Codex prechecks: {key}")
         sys.path[:0] = [str(a.scorer_deps), str(a.polymath_code / "eval")]
         from scripts import math_equal
         if not math_equal("2", "2") or math_equal("2", "3"):
@@ -158,12 +162,12 @@ def main():
         if tokenizer.pad_token_id is None:
             tokenizer.pad_token = tokenizer.eos_token
         config = {
-            "protocol": "engineering_smoke_only", "model": str(a.model), "model_revision": a.model_revision,
+            "protocol": "exploratory_pilot_not_formal" if a.pilot else "engineering_smoke_only", "model": str(a.model), "model_revision": a.model_revision,
             "student": "four-GPU BF16 FSDP FFT", "teacher": "independent frozen Qwen3-4B BF16 FSDP GPU copy",
             "optimizer": "torch AdamW with BF16 state; NOT formal FP32 AdamW", "learning_rate": 5e-6,
             "max_steps": a.max_steps, "global_batch": 4, "rollout_max_new_tokens": a.rollout_max_new_tokens,
             "eval_max_new_tokens": a.eval_max_new_tokens, "seed": a.seed,
-            "source_quality": "candidate; Codex math precheck only; no formal Q_full acceptance",
+            "source_quality": "candidate; Codex math and SW condition prereview only; no formal Q_full acceptance",
             "train_ids": train_ids, "dev_ids": dev_ids,
             "files_sha256": {str(path): digest(path) for path in (a.inventory, a.source_manifest, a.source_review, a.split_file, a.train_ids_file, a.dev_ids_file)},
             "tokenizer_sha256": digest(a.model / "tokenizer.json"),
@@ -190,17 +194,23 @@ def main():
         eval_file = (a.output_dir / f"eval_rank{rank}.jsonl").open("w")
 
         def run_eval(step):
-            key = dev_ids[rank % len(dev_ids)]
-            record = eval_once(student, tokenizer, rows[key], a.eval_max_new_tokens, a.seed + 100000 + step * 100 + rank, device, math_equal)
-            record["step"] = step
-            eval_file.write(json.dumps(record, ensure_ascii=False) + "\n")
-            eval_file.flush()
+            local_records = []
+            # FSDP generation gathers weights on every rank, so all ranks must
+            # enter the same number of evaluation calls even for short dev sets.
+            for slot in range((len(dev_ids) + world - 1) // world):
+                index = (slot * world + rank) % len(dev_ids)
+                key = dev_ids[index]
+                record = eval_once(student, tokenizer, rows[key], a.eval_max_new_tokens, a.seed + 100000 + step * 100 + index, device, math_equal)
+                record["step"] = step
+                eval_file.write(json.dumps(record, ensure_ascii=False) + "\n")
+                eval_file.flush()
+                local_records.append(record)
             gathered = [None for _ in range(world)]
-            dist.all_gather_object(gathered, record)
+            dist.all_gather_object(gathered, local_records)
             if rank == 0:
-                unique = {item["problem_id"]: item for item in gathered}
-                write_json(a.output_dir / f"EVAL_STEP_{step}.json", {"step": step, "items": list(unique.values()), "correct": sum(x["correct"] for x in unique.values()), "count": len(unique), "note": "short smoke generation; not fixed formal evaluation"})
-                writer.add_scalar("eval_smoke/math_correct", sum(x["correct"] for x in unique.values()) / len(unique), step)
+                unique = {item["problem_id"]: item for group in gathered for item in group}
+                write_json(a.output_dir / f"EVAL_STEP_{step}.json", {"step": step, "items": list(unique.values()), "correct": sum(x["correct"] for x in unique.values()), "count": len(unique), "note": "exploratory generation; not fixed formal evaluation"})
+                writer.add_scalar("eval_exploratory/math_correct", sum(x["correct"] for x in unique.values()) / len(unique), step)
                 writer.flush()
 
         run_eval(0)
@@ -254,7 +264,7 @@ def main():
         all_stats = [None for _ in range(world)]
         dist.all_gather_object(all_stats, stats)
         if rank == 0:
-            write_json(a.output_dir / "SMOKE_DONE.json", {"status": "engineering_smoke_completed", "steps": a.max_steps, "all_ranks": all_stats, "total_effective_loss_tokens": sum(x["effective_loss_tokens"] for x in all_stats), "formal_opd_completed": False, "source_accepted": False})
+            write_json(a.output_dir / ("PILOT_DONE.json" if a.pilot else "SMOKE_DONE.json"), {"status": "exploratory_pilot_completed" if a.pilot else "engineering_smoke_completed", "steps": a.max_steps, "all_ranks": all_stats, "total_effective_loss_tokens": sum(x["effective_loss_tokens"] for x in all_stats), "formal_opd_completed": False, "source_accepted": False})
         metrics_file.close()
         eval_file.close()
         if writer is not None:

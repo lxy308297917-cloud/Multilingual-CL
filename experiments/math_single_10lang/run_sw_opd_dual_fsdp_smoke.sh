@@ -10,10 +10,10 @@ exec "$root/ssu-migration/envs/cl/bin/torchrun" --standalone --nproc_per_node=4 
   experiments/math_single_10lang/train_sw_opd_dual_fsdp_smoke.py \
   --inventory "$root/data/math_single_10lang_20261015/audit_v2/inventory.jsonl" \
   --source-manifest "$root/logs/math_sw_opd_20261015/SW_STATIC_TRIAGE_V1.jsonl" \
-  --source-review "$root/logs/math_sw_opd_20261015/SW_SOURCE_REVIEW_FIRST10_CODEX.jsonl" \
+  --source-review "$root/logs/math_sw_opd_20261015/SW_SOURCE_REVIEW_50_CODEX.jsonl" \
   --split-file "$root/logs/math_sw_opd_20261015/SW_SPLIT_CANDIDATE_V1.json" \
   --train-ids-file "$root/logs/math_sw_opd_20261015/SW_OPD_FSDP_SMOKE_TRAIN_IDS_V1.json" \
-  --dev-ids-file "$root/logs/math_sw_opd_20261015/teacher_probe2_ids.json" \
+  --dev-ids-file "$root/logs/math_sw_opd_20261015/SW_OPD_DUAL_SMOKE_DEV_IDS_V1.json" \
   --model "$root/models/Qwen3-4B" \
   --model-revision 1cfa9a7208912126459214e8b04321603b3df60c \
   --polymath-code "$root/data/math_single_10lang_20261015/polymath_code" \
