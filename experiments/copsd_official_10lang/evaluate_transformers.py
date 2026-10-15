@@ -32,17 +32,24 @@ def build_prompt(tokenizer, question, lang, prompts):
 
 
 def extract_boxed(text):
-    pos = text.rfind("\\boxed{")
-    if pos < 0:
+    idx = text.rfind("\\boxed")
+    if idx < 0:
         return None
-    depth = 0
-    for j in range(pos + len("\\boxed"), len(text)):
+    left = 0
+    right = None
+    for j in range(idx, len(text)):
         if text[j] == "{":
-            depth += 1
+            left += 1
         elif text[j] == "}":
-            depth -= 1
-            if depth == 0:
-                return text[pos + len("\\boxed{"):j].strip()
+            left -= 1
+            if left == 0:
+                right = j
+                break
+    if right is None:
+        return None
+    boxed = text[idx:right + 1]
+    if boxed.startswith("\\boxed{") and boxed.endswith("}"):
+        return boxed[7:-1].strip()
     return None
 
 
