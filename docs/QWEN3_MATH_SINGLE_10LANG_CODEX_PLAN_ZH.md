@@ -2,6 +2,10 @@
 
 更新日期：2026 年 10 月 15 日。目标仓库：lxy308297917-cloud/Multilingual-CL。
 
+> **2026-10-15 最新任务覆盖说明**：用户已明确替换下文旧方案。当前先以固定版本的 [COPSD 官方源码](https://github.com/cisnlp/COPSD)实施 SW 完整链路，再做 SW、TE、TH、BN、ZH、JA、RU、DE、FR、ES 十语言独立 single OPD；用独立开发集选三语言，执行正反两条三阶段顺序 OPD，逐阶段测遗忘。SFT、FFT、14B 批量标签和新保护机制暂缓。下文涉及“先做 SFT A/B/C”“暂缓十语和顺序训练”“自写 FFT/OPD 为当前主线”的指令均属旧协议，不再执行；历史材料保留供追溯。服务器实际实现、适配边界与运行状态见 [`experiments/copsd_official_10lang/STATUS_ZH.md`](../experiments/copsd_official_10lang/STATUS_ZH.md)。
+
+当前评测分成两套，不能混算：**官方复现**沿用 COPSD 发布的 SW AfriMGSM、PolyMath 提示与 pass@12；**本项目十语言比较**以 MGSM-Rev2 十语单次正确率为主，PolyMath 十语为补充，英文 GSM8K 衡量保持。Base、single、顺序模型用同一版本、提示、采样和评分协议。开发集用于选择，正式测试集只在冻结配置后报告。官方训练代码、固定教师 LoRA、在线 rollout、损失、thinking 与语言前缀优先保持；模型规模、单卡设备、SDPA/Transformers 生成等必要适配单独标记，不能称与官方硬件及全部发布配置等同。
+
 ## 1 当前目标与任务变更
 
 本文件是当前任务依据。文件路径保留原名，便于现有 Codex 链接继续使用，但实验优先级已改为：**先做 SW 单语言 OPD，检查有效性，再补齐同一特权教师的 SFT 与固定前缀蒸馏对照；十语言筛选和三语言顺序训练暂缓。**

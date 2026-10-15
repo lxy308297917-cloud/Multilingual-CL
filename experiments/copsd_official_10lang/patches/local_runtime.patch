@@ -1,0 +1,20 @@
+--- a/multilingual_opsd_train.py
++++ b/multilingual_opsd_train.py
+@@ -3,7 +3,7 @@
+ os.environ["VLLM_NO_USAGE_STATS"] = "1"
+ os.environ["DO_NOT_TRACK"] = "1"
+ 
+-CACHE_ROOT = "YOUR PATH"
++CACHE_ROOT = os.environ.get("COPSD_CACHE_ROOT", "/data0/users/lixiaoyang/cache/copsd_official")
+ 
+ # ====== Hugging Face ======
+ os.environ["HF_HOME"] = f"{CACHE_ROOT}/huggingface"
+@@ -317,7 +317,7 @@
+         revision=model_args.model_revision,
+         trust_remote_code=model_args.trust_remote_code,
+         attn_implementation=model_args.attn_implementation or "flash_attention_2",
+-        torch_dtype=model_dtype,
++        torch_dtype=str(model_dtype).removeprefix("torch."),
+         use_cache=False if training_args.gradient_checkpointing else True,
+     )
+     quantization_config = get_quantization_config(model_args)
