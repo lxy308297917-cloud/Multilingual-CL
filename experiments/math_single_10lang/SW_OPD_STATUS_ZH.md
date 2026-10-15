@@ -1,6 +1,6 @@
 # SW OPD 当前状态
 
-更新时间：2026-10-15 12:40（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
+更新时间：2026-10-15 12:51（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
 
 12:10 结果更新：同快照冻结 4B 教师两题×三上下文已全部完成，三组都答对两题，生成 token 总计 8,945，教师采样权重检查不变；但 **六条 thinking 都明显为英语**，仅 final 为 SW，不能据此验收 SW 教师轨迹。SW 强制思考前缀试验中，一题缺 `</think>`、另一题答对但 SW 表达明显重复和生硬，故也未放行。两条 Base 学生 512-token 轨迹上，同快照特权教师全词表 reverse KL 分别为 0.1301、0.0150，参数无梯度；这只证明对齐和分布差异，不证明有用的 SW 训练信号。原始记录分别在 `logs/math_sw_opd_20261015/teacher_probe2/`、`teacher_prefix_probe2/`、`teacher_prefix_score2/`。更强 14B 特权教师作为**独立诊断备选**的两题探针已手动排队，不能与原定同快照 4B A/B/C 混称。
 
@@ -12,6 +12,8 @@ SW 候选 split 已按预先固定 SHA256(seed42) 规则从旧 v8 不相交划�
 
 现有特权上下文教师探针中的两条 dev_tune 输出已按新 SFT 规则单独审计：完整学生序列分别为 1,272、1,120 token，均答对且正常终止，但 thinking 为英语，因此两条都自动拒绝，accepted=0。源题本身仍待审，作为另一个未放行状态。审计 `logs/math_sw_opd_20261015/SW_TEACHER4B_DIRECT_CANDIDATE_AUDIT_V2.jsonl`；V1 曾把源题待审误列为硬拒绝，保留并由 V2 纠正。两条仅为已有探针的回溯候选，不计作正式批量标签合成。
 
+14B 外部特权教师两题诊断已在 GPU 0、7 正常完成：2/2 答对，2/2 thinking 为英语，2/2 final 候选为 SW；生成 2,577 token、提示 1,920 token、生成计时 189.1 秒，见 `teacher14b_probe2/result/`。仅增加模型规模未解决这两题的 SW 思考语言问题。4B 关闭 thinking、直接写最终步骤解答的独立诊断也完成：2/2 答对、终止正常，正文语言检测 2/2 判 SW；但原文多处机械重复和明显不自然词句（例如 `Mafanikao`、反复 `Kwa kuchangia`），不满足人工可读的 SW 轨迹要求，不能按自动语言检测放行。该诊断生成 1,611 token、提示 1,928 token、生成计时 59.3 秒，见 `teacher4b_no_think_probe2/result/`；它不改变 thinking=True 的主 OPD 协议。
+
 ## 已完成与仍在运行
 
 - 旧十语言 14B 标签队列 `mathlabels-v8-reviewed4` 尚未取得第二张 GPU、没有启动模型；已按新方案手动停止并释放本账号保留的 GPU。四个 8192-token Base 长度复测队列也已停止，均未运行。旧数据、日志和已完成的英语 Base 三 seed 与 IFEval 结果完整保留，属于旧协议基线。
@@ -22,10 +24,10 @@ SW 候选 split 已按预先固定 SHA256(seed42) 规则从旧 v8 不相交划�
 
 - OPD 4 卡 FSDP 工程烟测入口 `train_sw_opd_fsdp_smoke.py` 与 `run_sw_opd_fsdp_smoke.sh` 已准备：4B 学生在线采样、独立冻结的同快照 CPU 教师全词表 reverse KL、5 step 短 rollout、0/5 step 冒烟生成 eval 与 TensorBoard，逐 rank 记录 token/耗时/显存。训练题 4 条为 Codex 数学预审通过的待审源题，dev 2 条为原教师接口探针题；身份与拆分预检通过。此入口使用 BF16 AdamW 状态、短 rollout 和未正式验收源题，**只用于工程烟测，不是正式 100 step FP32 AdamW 先导或 A/B/C 结果**。随机初始化微型 Qwen3 的两进程 CPU FSDP 完整工程链路已通过：不同 rank 生成长度、冻结教师评分、全词表 KL、反向传播、梯度裁剪和 AdamW 更新；原始脚本及输出摘要保存在 `logs/math_sw_opd_20261015/SW_OPD_FSDP_CPU_PROBE_SOURCE.py` 与 `SW_OPD_FSDP_CPU_PROBE_DONE.json`。但 4B 真机烟测尚未运行；不能把算法检查或旧 SFT 烟测当 OPD 结果。
 - 新协议正式同教师 SW 轨迹合成尚未启动，回溯探针候选 2、accepted 0；旧 14B 翻译标签不可作为 A 组主数据。源题审查、SW 语言审核和 2048 完整序列检查仍是放行条件。
-- 14B 外部教师两题诊断 `swopd-teacher14b-probe2` 仍在手动启动的一次性双卡队列等待第二张经核实空闲的卡；其结果仅用于判断另开强教师轨道是否值得做，不能替代同快照 4B 主对照。
-- 当前外部教师队列已核实 systemd `ActiveState=active`、`MainPID=1746364`，保留 GPU 0 等第二张卡。暂不同时启动需要 4 卡的 OPD 烟测队列，避免两个队列各自占住部分卡后互相等待；待诊断完成或明确调整优先级再手动启动工程烟测。
+- 14B 外部教师诊断与 4B 关闭 thinking 诊断都已完成，退出码 0；前者只能作为独立强教师轨道证据，后者只能作为生成模式诊断，均不能替代同快照 4B、thinking=True 的正式 A/B/C 对照。
+- 4 卡 OPD 工程烟测仍未启动。之前 GPU 7 在 14B 任务运行期间出现另一用户的计算进程，未干预对方任务；两题探针仍正常完成。本账号后续新任务必须重新逐卡检查和遵守四卡总上限，不把旧空闲快照当作当前资源状态。
 - SW 来源审核后先做教师前缀信号与长度/显存检查，再做 5–20 step OPD smoke；通过后从原始 Base 另起 C_full，开启 0/20/50/100 的开发集 eval 和 TensorBoard。A/B/C 仅在共同 accepted 题池准备好后运行。
 
 ## 资源与成本
 
-已完成的 4B 三上下文教师生成 8,945 token；两条短学生轨迹共 1,024 rollout token、1,024 个教师评分位置及 1,024 个学生评分位置，全词表 KL 计算不计作 OPD 更新。正式 OPD 有效 loss token 和 optimizer step 仍为 0。14B 诊断队列按本账号最多四卡与 UUID 选卡规则等待，不占用其他用户的任务。
+已完成的 4B 三上下文教师生成 8,945 token，14B 外部诊断生成 2,577 token，4B 关闭 thinking 诊断生成 1,611 token，合计这些教师生成 13,133 token；对应提示 token 分别保留在各自 `DONE.json`，不混作同一协议。两条短学生轨迹共 1,024 rollout token、1,024 个教师评分位置及 1,024 个学生评分位置，全词表 KL 计算不计作 OPD 更新。正式 OPD 有效 loss token 和 optimizer step 仍为 0。
