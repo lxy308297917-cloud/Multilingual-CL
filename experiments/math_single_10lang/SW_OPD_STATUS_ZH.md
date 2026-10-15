@@ -1,6 +1,8 @@
 # SW OPD 当前状态
 
-更新时间：2026-10-15 13:16（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
+更新时间：2026-10-15 13:23（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
+
+SW 源题 30 train、10 dev_tune、10 dev_check 分层样本的 Codex 模型预审现已完成，逐题记录在 `logs/math_sw_opd_20261015/SW_SOURCE_REVIEW_*_CODEX.jsonl`，汇总及文件哈希在 `SW_SOURCE_REVIEW_50_CODEX_SUMMARY.json`。50 条中 14 条有明确问题或待修订项：train 10/30、dev 4/20；其中 10 条涉及英文参考推导或证明，5 条涉及 SW 条件或术语，1 条两类重叠。典型例子包括参考把两两和的 `2G+60=121` 写为 `3G+60=121`、把 `n=1` 的质数特例判为合数、SW 将“倍数”写成“因子”。这是抽样发现，不是全池错误率；其余 36 条也只是模型预审未见明显问题。**正式源题批次验收仍未完成，Q_full=0**，14 条争议题在修订或剔除前不得混入正式问题池。此项是源题审核，不能与教师 SFT 轨迹的 0 条 accepted 混为一谈。
 
 12:10 结果更新：同快照冻结 4B 教师两题×三上下文已全部完成，三组都答对两题，生成 token 总计 8,945，教师采样权重检查不变；但 **六条 thinking 都明显为英语**，仅 final 为 SW，不能据此验收 SW 教师轨迹。SW 强制思考前缀试验中，一题缺 `</think>`、另一题答对但 SW 表达明显重复和生硬，故也未放行。两条 Base 学生 512-token 轨迹上，同快照特权教师全词表 reverse KL 分别为 0.1301、0.0150，参数无梯度；这只证明对齐和分布差异，不证明有用的 SW 训练信号。原始记录分别在 `logs/math_sw_opd_20261015/teacher_probe2/`、`teacher_prefix_probe2/`、`teacher_prefix_score2/`。更强 14B 特权教师作为**独立诊断备选**的两题探针已手动排队，不能与原定同快照 4B A/B/C 混称。
 
