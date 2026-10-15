@@ -28,7 +28,7 @@ def sample_answer(student, tokenizer, prompt, max_new_tokens, seed, device):
     student.eval()
     started = time.monotonic()
     with torch.no_grad():
-        outputs = student.generate(input_ids=inputs, do_sample=True, temperature=1.1,
+        outputs = student.generate(input_ids=inputs, attention_mask=torch.ones_like(inputs), do_sample=True, temperature=1.1,
                                    top_p=.95, top_k=20, max_new_tokens=max_new_tokens,
                                    pad_token_id=tokenizer.eos_token_id, use_cache=True)
     torch.cuda.synchronize(device)

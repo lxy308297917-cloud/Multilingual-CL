@@ -66,7 +66,8 @@ def rollout(student, prompt_ids, tokenizer, max_new_tokens, seed, device):
     with FSDP.summon_full_params(student, recurse=True, writeback=False):
         with torch.no_grad():
             generated = student.module.generate(
-                input_ids=prefix, do_sample=True, temperature=1.1, top_p=.95, top_k=20,
+                input_ids=prefix, attention_mask=torch.ones_like(prefix),
+                do_sample=True, temperature=1.1, top_p=.95, top_k=20,
                 max_new_tokens=max_new_tokens, pad_token_id=tokenizer.eos_token_id,
                 use_cache=True,
             )
