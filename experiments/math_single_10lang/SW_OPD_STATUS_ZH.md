@@ -1,6 +1,6 @@
 # SW OPD 当前状态
 
-更新时间：2026-10-15 13:53（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
+更新时间：2026-10-15 14:06（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
 
 SW 源题 30 train、10 dev_tune、10 dev_check 分层样本的 Codex 模型预审现已完成，逐题记录在 `logs/math_sw_opd_20261015/SW_SOURCE_REVIEW_*_CODEX.jsonl`，汇总及文件哈希在 `SW_SOURCE_REVIEW_50_CODEX_SUMMARY.json`。50 条中 14 条有明确问题或待修订项：train 10/30、dev 4/20；其中 10 条涉及英文参考推导或证明，5 条涉及 SW 条件或术语，1 条两类重叠。典型例子包括参考把两两和的 `2G+60=121` 写为 `3G+60=121`、把 `n=1` 的质数特例判为合数、SW 将“倍数”写成“因子”。这是抽样发现，不是全池错误率；其余 36 条也只是模型预审未见明显问题。**正式源题批次验收仍未完成，Q_full=0**，14 条争议题在修订或剔除前不得混入正式问题池。此项是源题审核，不能与教师 SFT 轨迹的 0 条 accepted 混为一谈。
 
@@ -19,6 +19,8 @@ SW 候选 split 已按预先固定 SHA256(seed42) 规则从旧 v8 不相交划�
 14B 外部特权教师两题诊断已在 GPU 0、7 正常完成：2/2 答对，2/2 thinking 为英语，2/2 final 候选为 SW；生成 2,577 token、提示 1,920 token、生成计时 189.1 秒，见 `teacher14b_probe2/result/`。仅增加模型规模未解决这两题的 SW 思考语言问题。4B 关闭 thinking、直接写最终步骤解答的独立诊断也完成：2/2 答对、终止正常，正文语言检测 2/2 判 SW；但原文多处机械重复和明显不自然词句（例如 `Mafanikao`、反复 `Kwa kuchangia`），不满足人工可读的 SW 轨迹要求，不能按自动语言检测放行。该诊断生成 1,611 token、提示 1,928 token、生成计时 59.3 秒，见 `teacher4b_no_think_probe2/result/`；它不改变 thinking=True 的主 OPD 协议。
 
 为排查教师指令语言，额外在一条已完成 Codex 源题预审的易题 dev_tune 上使用全 SW system/user 指令，仍提供原英文题与参考、同一冻结 4B 教师；该诊断在 CPU 上生成 512 token、用时 190.4 秒。输出从开头持续以英语思考，未出现完整 final、达到生成上限；不计数学正确率或标签验收，见 `teacher4b_sw_system_cpu_dev1/`。这是单题模板诊断，说明简单改用 SW 指令并未立即解决英语思考，不能据此证明所有模板无效，也不能将未完成答案当作答错。提示哈希、原文及成本已保留。
+
+同题同 SW 指令的外部 Qwen3-14B CPU 诊断也结束：512 token 原文中的思考仍明显为英语，虽在正文算出 36，但尚未输出正常 final 与 boxed 答案，故数学完整正确率和标签验收均不能按成功计；生成 546.3 秒、提示 575 token，见 `teacher14b_sw_system_cpu_dev1/`。这进一步排除“只把指令翻成 SW 或只增大模型”作为现成修复，不对未测试的模板作普遍结论。该外部教师不能与主同快照 4B OPD/SFT 对照混用。
 
 同一冻结 4B 教师和两道 dev 题的 ZH 接口诊断也完成：2/2 数学正确，thinking 与 final 原文均为中文，生成 3,015 token、提示 1,896 token、生成计时 115.5 秒，见 `teacher4b_zh_probe2/result/`。原自动语言检测器把含数学标记的中文 final 错判越南语；移除公式后，两条 final 的汉字占汉字/拉丁/假名字符比例分别 0.950、0.947，thinking 为 0.846、0.981，见 `ZH_TEACHER4B_LANGUAGE_AUDIT_V1.json`。这说明当前 SW 问题更像目标语言生成能力差异，不能据此断言所有语言教师接口失效。ZH 完整学生序列分别 2,067、1,154 token；前者超出 2048 硬限制，后者仍待源题与语言独立复核，正式 accepted=0，见 `ZH_TEACHER4B_LABEL_SCREEN_V1.json`。
 
