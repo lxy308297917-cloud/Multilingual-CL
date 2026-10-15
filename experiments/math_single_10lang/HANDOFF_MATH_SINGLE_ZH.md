@@ -1,8 +1,8 @@
 # 十语言 Qwen3 数学 Single 交接与实时状态
 
-更新时间：2026-10-15 11:00（Asia/Shanghai）。状态：**共享题单 v8 已冻结、SW/ZH 训练链路烟测已完成；标签验收与正式 SFT 未完成，完整 Base IFEval 与英语开发集三种随机种子评测已完成；8192-token 长度敏感性评测四个单卡队列等待空闲 GPU**。
+更新时间：2026-10-15 11:26（Asia/Shanghai）。状态：**共享题单 v8 已冻结、SW/ZH 训练链路烟测已完成；标签验收与正式 SFT 未完成，完整 Base IFEval 与英语开发集三种随机种子评测已完成；当前优先排队制作 v8 目标语言解答候选**。
 
-最新正式结果：同一 v8 英语 `dev_select` 200 题、Qwen3-4B Base、4096 生成 token、PolyMath 官方评分，seed17/18/19 分别为 76/200、75/200、73/200，均值 37.33%，样本标准差 0.76 个百分点；截断分别为 104/105/104 题，触发方案规定的 8192-token 统一复测。逐样本与成本分别见 `logs/math_single_10lang/dev_select_en_base_seed{17,18,19}_v8_parallel_20261015/merged/`、`logs/math_single_10lang/dev_select_en_base_three_seed_summary_20261015.json` 和 `COST_LEDGER.json`。8192 复测使用同一题单与 seed17，四个不重叠的 50 题分片保存在 `logs/math_single_10lang/dev_select_en_base_seed17_v8_8192_20261015/`，队列名 `math8192s17-0` 至 `math8192s17-3`；每队列只手动启动一次，账号总上限四卡，当前其他任务占满所有 GPU，队列等待。未完成前没有 8192 分数。
+最新正式结果：同一 v8 英语 `dev_select` 200 题、Qwen3-4B Base、4096 生成 token、PolyMath 官方评分，seed17/18/19 分别为 76/200、75/200、73/200，均值 37.33%，样本标准差 0.76 个百分点；截断分别为 104/105/104 题，触发方案规定的 8192-token 统一复测。逐样本与成本分别见 `logs/math_single_10lang/dev_select_en_base_seed{17,18,19}_v8_parallel_20261015/merged/`、`logs/math_single_10lang/dev_select_en_base_three_seed_summary_20261015.json` 和 `COST_LEDGER.json`。8192 复测使用同一题单与 seed17，四个不重叠的 50 题分片保存在 `logs/math_single_10lang/dev_select_en_base_seed17_v8_8192_20261015/`，队列名 `math8192s17-0` 至 `math8192s17-3`；由于目标语言标签是正式 SFT 的当前关键阻塞，四个队列在仍处于等待、尚未占卡或运行时已手动停止。未完成前没有 8192 分数。现将 v8 中两道 train 与两道 dev_tune 的英文短解答做独立于 14B 的数学预核，保留原生成记录和预核证据于 `data/math_single_10lang_20261015/labels_v8_14b_reviewed4_target_probe/`；这只是 Codex 模型核查，不构成人工目标语言验收。`mathlabels-v8-reviewed4` 双卡队列已手动启动，等待空闲 GPU 后生成十语言候选，`max_user_gpus=4`；产物仍为 `pending_review`。
 
 ## 代码与环境
 
