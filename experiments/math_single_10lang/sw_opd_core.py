@@ -38,3 +38,29 @@ def aligned_reverse_kl(student_logits, teacher_logits, student_prompt_tokens, te
         per_token = (logp.exp() * (logp - logq)).sum(dim=-1)
         total = total + (per_token * answer_mask[:, start:stop].float()).sum()
     return total / count
+
+
+def aligned_reverse_kl_tail(student_tail_logits, teacher_tail_logits, answer_mask, chunk_tokens=16):
+    """Full-vocabulary KL when each model returns only answer-prediction logits.
+
+    Feed each model `prompt_ids + answer_ids[:-1]` with Qwen3's
+    `logits_to_keep=len(answer_ids)`. The resulting tail starts at the logit
+    that predicts answer_ids[0], irrespective of the two prompt lengths.
+    This avoids materializing logits for the privileged teacher prompt.
+    """
+    if student_tail_logits.shape != teacher_tail_logits.shape or student_tail_logits.ndim != 3:
+        raise ValueError("Student and teacher answer logits must have the same [batch, tokens, vocab] shape")
+    if answer_mask.shape != student_tail_logits.shape[:2]:
+        raise ValueError("Answer mask must match returned answer positions")
+    if chunk_tokens < 1 or not bool(answer_mask.any()):
+        raise ValueError("Need positive chunk size and at least one effective answer token")
+    total = student_tail_logits.new_zeros((), dtype=torch.float32)
+    count = answer_mask.float().sum()
+    for start in range(0, answer_mask.shape[1], chunk_tokens):
+        stop = min(start + chunk_tokens, answer_mask.shape[1])
+        s = student_tail_logits[:, start:stop].float()
+        t = teacher_tail_logits[:, start:stop].detach().float()
+        logp = torch.log_softmax(s, dim=-1)
+        logq = torch.log_softmax(t, dim=-1)
+        total = total + ((logp.exp() * (logp - logq)).sum(dim=-1) * answer_mask[:, start:stop].float()).sum()
+    return total / count

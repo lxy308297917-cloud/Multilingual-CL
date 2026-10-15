@@ -1,12 +1,14 @@
 # SW OPD 当前状态
 
-更新时间：2026-10-15 12:20（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
+更新时间：2026-10-15 12:26（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
 
 12:10 结果更新：同快照冻结 4B 教师两题×三上下文已全部完成，三组都答对两题，生成 token 总计 8,945，教师采样权重检查不变；但 **六条 thinking 都明显为英语**，仅 final 为 SW，不能据此验收 SW 教师轨迹。SW 强制思考前缀试验中，一题缺 `</think>`、另一题答对但 SW 表达明显重复和生硬，故也未放行。两条 Base 学生 512-token 轨迹上，同快照特权教师全词表 reverse KL 分别为 0.1301、0.0150，参数无梯度；这只证明对齐和分布差异，不证明有用的 SW 训练信号。原始记录分别在 `logs/math_sw_opd_20261015/teacher_probe2/`、`teacher_prefix_probe2/`、`teacher_prefix_score2/`。更强 14B 特权教师作为**独立诊断备选**的两题探针已手动排队，不能与原定同快照 4B A/B/C 混称。
 
 SW 候选 split 已按预先固定 SHA256(seed42) 规则从旧 v8 不相交划分中取 500 train、100 dev_tune、100 dev_check；排除 4 条已知算式矛盾和 24 条英文参考语言检测不确定，见 `logs/math_sw_opd_20261015/SW_SPLIT_CANDIDATE_V1.json`。这是待审候选，正式 Q_full 仍为 0；另保存 30/10/10 道分层源质量审查清单 `SW_SOURCE_REVIEW_SAMPLE_V1.jsonl` 和 `ACCEPTANCE_POLICY_V1.json`，没有虚构人工审核。
 
 源题分层样本前 10 条已完成 Codex 数学预审：8 条未见明显数学错误，2 条需修订或剔除（一道把两两和求总价的 `2G+60=121` 错写成 `3G+60=121`，一道三角函数最优性证明缺推导）。记录在 `SW_SOURCE_REVIEW_FIRST10_CODEX.jsonl`；这是模型预审，不是人工或 SW 母语认证，不能据此放行批量源题。SW 教师轨迹候选生成入口 `build_sw_teacher_trajectories.py` 已实现，显式核验源身份/状态、输出结构、官方 gold、SW 语言筛查与学生完整 2048 token 长度，并记录逐条成本；它尚未生成或验收标签。
+
+现有特权上下文教师探针中的两条 dev_tune 输出已按新 SFT 规则单独审计：完整学生序列分别为 1,272、1,120 token，均答对且正常终止，但 thinking 为英语，因此两条都自动拒绝，accepted=0。源题本身仍待审，作为另一个未放行状态。审计 `logs/math_sw_opd_20261015/SW_TEACHER4B_DIRECT_CANDIDATE_AUDIT_V2.jsonl`；V1 曾把源题待审误列为硬拒绝，保留并由 V2 纠正。两条仅为已有探针的回溯候选，不计作正式批量标签合成。
 
 ## 已完成与仍在运行
 
@@ -16,8 +18,8 @@ SW 候选 split 已按预先固定 SHA256(seed42) 规则从旧 v8 不相交划�
 
 ## 阻塞与接续
 
-- OPD FFT 的独立冻结教师全词表 reverse KL 训练入口尚未实现和烟测；100 step C_full 先导、eval 与 TensorBoard 尚未启动，不能把旧 SFT 烟测当 OPD 结果。
-- 新协议同教师 SW 轨迹候选和 accepted 均为 0；旧 14B 翻译标签不可作为 A 组主数据。需先确定 `acceptance_policy`、源题审查、SW 语言审核和 2048 完整序列检查。
+- OPD FFT 的独立冻结教师全词表 reverse KL 训练入口尚未实现和烟测；100 step C_full 先导、eval 与 TensorBoard 尚未启动，不能把旧 SFT 烟测当 OPD 结果。CPU 两步微型模型更新及随机初始化微型 Qwen3 `logits_to_keep` 与完整 logits 的 KL 对齐均通过，记录在 `SW_OPD_ALGORITHM_SMOKE.json`，只属于算法检查。
+- 新协议正式同教师 SW 轨迹合成尚未启动，回溯探针候选 2、accepted 0；旧 14B 翻译标签不可作为 A 组主数据。源题审查、SW 语言审核和 2048 完整序列检查仍是放行条件。
 - 14B 外部教师两题诊断 `swopd-teacher14b-probe2` 仍在手动启动的一次性双卡队列等待第二张经核实空闲的卡；其结果仅用于判断另开强教师轨道是否值得做，不能替代同快照 4B 主对照。
 - SW 来源审核后先做教师前缀信号与长度/显存检查，再做 5–20 step OPD smoke；通过后从原始 Base 另起 C_full，开启 0/20/50/100 的开发集 eval 和 TensorBoard。A/B/C 仅在共同 accepted 题池准备好后运行。
 

@@ -7,7 +7,7 @@ from pathlib import Path
 import torch
 from torch import nn
 
-from sw_opd_core import aligned_reverse_kl
+from sw_opd_core import aligned_reverse_kl, aligned_reverse_kl_tail
 
 
 class TinyCausalLM(nn.Module):
@@ -67,7 +67,22 @@ def main():
         records.append({"policy_version": step, "sampled_answer_ids": answer[0].tolist(), "effective_loss_tokens": int(mask.sum()), "reverse_kl": float(loss), "student_grad_norm": float(grad_norm)})
     if digest(teacher) != teacher_before or digest(student) == student_before:
         raise RuntimeError("Teacher changed or student failed to update")
-    result = {"status": "passed", "scope": "CPU tiny-model algorithm only; not a Qwen3/FSDP training smoke", "updates": 2, "teacher_hash_unchanged": True, "student_hash_changed": True, "records": records}
+    from transformers import Qwen3Config, Qwen3ForCausalLM
+    tiny_qwen = Qwen3ForCausalLM(Qwen3Config(vocab_size=32, hidden_size=32, intermediate_size=64, num_hidden_layers=1, num_attention_heads=4, num_key_value_heads=2, head_dim=8, max_position_embeddings=64, attention_dropout=0.0)).eval()
+    answer = torch.tensor([[8, 9, 10, 11]])
+    qwen_mask = torch.ones_like(answer, dtype=torch.bool)
+    s_full_ids = torch.cat((student_prompt, answer), dim=1)
+    t_full_ids = torch.cat((teacher_prompt, answer), dim=1)
+    with torch.no_grad():
+        s_full = tiny_qwen(s_full_ids).logits
+        t_full = tiny_qwen(t_full_ids).logits
+        s_tail = tiny_qwen(s_full_ids[:, :-1], logits_to_keep=answer.shape[1]).logits
+        t_tail = tiny_qwen(t_full_ids[:, :-1], logits_to_keep=answer.shape[1]).logits
+        old_kl = aligned_reverse_kl(s_full, t_full, student_prompt.shape[1], teacher_prompt.shape[1], qwen_mask, chunk_tokens=2)
+        tail_kl = aligned_reverse_kl_tail(s_tail, t_tail, qwen_mask, chunk_tokens=2)
+    if not torch.allclose(old_kl, tail_kl, atol=1e-6, rtol=1e-5):
+        raise RuntimeError(f"Qwen3 tail/full causal alignment mismatch: {old_kl} vs {tail_kl}")
+    result = {"status": "passed", "scope": "CPU tiny-model algorithm and randomly initialized tiny Qwen3 alignment only; not a 4B/FSDP training smoke", "updates": 2, "teacher_hash_unchanged": True, "student_hash_changed": True, "qwen3_tail_full_kl_match": True, "qwen3_reverse_kl": float(tail_kl), "records": records}
     out = Path('/data0/users/lixiaoyang/logs/math_sw_opd_20261015/SW_OPD_ALGORITHM_SMOKE.json')
     out.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps(result, ensure_ascii=False))
