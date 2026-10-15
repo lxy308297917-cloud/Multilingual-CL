@@ -1,12 +1,16 @@
 # SW OPD 当前状态
 
-更新时间：2026-10-15 11:50（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，远端 main `efe9b146d7c418ce8696368bbb6891ab36c29573`。
+更新时间：2026-10-15 12:10（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
+
+12:10 结果更新：同快照冻结 4B 教师两题×三上下文已全部完成，三组都答对两题，生成 token 总计 8,945，教师采样权重检查不变；但 **六条 thinking 都明显为英语**，仅 final 为 SW，不能据此验收 SW 教师轨迹。SW 强制思考前缀试验中，一题缺 `</think>`、另一题答对但 SW 表达明显重复和生硬，故也未放行。两条 Base 学生 512-token 轨迹上，同快照特权教师全词表 reverse KL 分别为 0.1301、0.0150，参数无梯度；这只证明对齐和分布差异，不证明有用的 SW 训练信号。原始记录分别在 `logs/math_sw_opd_20261015/teacher_probe2/`、`teacher_prefix_probe2/`、`teacher_prefix_score2/`。更强 14B 特权教师作为**独立诊断备选**的两题探针已手动排队，不能与原定同快照 4B A/B/C 混称。
+
+SW 候选 split 已按预先固定 SHA256(seed42) 规则从旧 v8 不相交划分中取 500 train、100 dev_tune、100 dev_check；排除 4 条已知算式矛盾和 24 条英文参考语言检测不确定，见 `logs/math_sw_opd_20261015/SW_SPLIT_CANDIDATE_V1.json`。这是待审候选，正式 Q_full 仍为 0；另保存 30/10/10 道分层源质量审查清单 `SW_SOURCE_REVIEW_SAMPLE_V1.jsonl` 和 `ACCEPTANCE_POLICY_V1.json`，没有虚构人工审核。
 
 ## 已完成与仍在运行
 
 - 旧十语言 14B 标签队列 `mathlabels-v8-reviewed4` 尚未取得第二张 GPU、没有启动模型；已按新方案手动停止并释放本账号保留的 GPU。四个 8192-token Base 长度复测队列也已停止，均未运行。旧数据、日志和已完成的英语 Base 三 seed 与 IFEval 结果完整保留，属于旧协议基线。
 - 复用旧 v8 原题对齐、benchmark 排除和划分作为 SW 候选池。`logs/math_sw_opd_20261015/SW_STATIC_TRIAGE_V1.jsonl` 保留 1000 train、200 dev_tune、200 旧 dev_select 题的 SW/EN/参考/gold 与内容哈希；24 条英文参考的语言检测不确定，4 条出现已知独立算式矛盾。这些只是自动初筛，源推理和 SW 题意仍待验收，当前正式 Q_full=0。
-- 两道旧 dev_tune 题的英文推理及 SW 题意已作 Codex 预核，作为 **教师接口探针**，不代表正式数据通过人工验收。新增冻结 Qwen3-4B 教师三上下文脚本 `sw_opd_teacher_probe.py`，对 SW 题、SW+英文题、SW+英文题+原参考使用相同逐题 seed 和官方 PolyMath 评分，记录原始输出、语言、token、耗时及参数无梯度/采样权重不变检查。队列 `swopd-teacher-probe2` 手动启动，等待一张核实空闲 GPU；结果目录 `logs/math_sw_opd_20261015/teacher_probe2/result/`。当前没有教师质量结果。
+- 两道旧 dev_tune 题的英文推理及 SW 题意已作 Codex 预核，作为 **教师接口探针**，不代表正式数据通过人工验收。新增冻结 Qwen3-4B 教师三上下文脚本 `sw_opd_teacher_probe.py`，对 SW 题、SW+英文题、SW+英文题+原参考使用相同逐题 seed 和官方 PolyMath 评分，记录原始输出、语言、token、耗时及参数无梯度/采样权重不变检查。队列 `swopd-teacher-probe2` 已在 GPU 0 完成，结果目录 `logs/math_sw_opd_20261015/teacher_probe2/result/`；质量结论见文首。
 
 ## 阻塞与接续
 
@@ -16,4 +20,4 @@
 
 ## 资源与成本
 
-当前教师探针只排队，GPU 生成 token、教师评分 token、OPD 有效 loss token 均为 0。所有 GPU 在启动前均显示已有计算进程，队列按本账号最多四卡与 UUID 选卡规则等待，不占用其他用户的任务。
+已完成的 4B 三上下文教师生成 8,945 token；两条短学生轨迹共 1,024 rollout token、1,024 个教师评分位置及 1,024 个学生评分位置，全词表 KL 计算不计作 OPD 更新。正式 OPD 有效 loss token 和 optimizer step 仍为 0。14B 诊断队列按本账号最多四卡与 UUID 选卡规则等待，不占用其他用户的任务。

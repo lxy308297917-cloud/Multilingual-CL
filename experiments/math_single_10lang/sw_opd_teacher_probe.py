@@ -18,11 +18,14 @@ def main():
     p.add_argument("--inventory", type=Path, required=True)
     p.add_argument("--ids-file", type=Path, required=True)
     p.add_argument("--model", type=Path, required=True)
+    p.add_argument("--device-map", default="cuda:0")
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--polymath-code", type=Path, required=True)
     p.add_argument("--scorer-deps", type=Path, required=True)
     p.add_argument("--seed", type=int, default=17)
     p.add_argument("--max-new-tokens", type=int, default=4096)
+    p.add_argument("--sw-prefix", action="store_true", help="Condition the teacher on an explicit Swahili reasoning start")
+    p.add_argument("--contexts", nargs="+", choices=("sw_only", "sw_en", "sw_en_reference"), default=("sw_only", "sw_en", "sw_en_reference"))
     a = p.parse_args()
     if a.output_dir.exists() and any(a.output_dir.iterdir()):
         raise FileExistsError(a.output_dir)
@@ -47,7 +50,7 @@ def main():
         sw = item["languages"]["sw"]["question_target"]
         en = item["question_en"]
         reference = item["reference_en_original"]
-        for context in ("sw_only", "sw_en", "sw_en_reference"):
+        for context in a.contexts:
             if context == "sw_only":
                 turns = messages(sw, "sw")
             else:
@@ -59,14 +62,16 @@ def main():
                     {"role": "user", "content": "Swahili question:\n" + sw + "\n" + extra},
                 ]
             prompt = tokenizer.apply_chat_template(turns, tokenize=False, add_generation_prompt=True, enable_thinking=True)
+            if a.sw_prefix:
+                prompt += "<think>Kwa kuzingatia swali, "
             length = len(tokenizer(prompt, add_special_tokens=False).input_ids)
             if length + a.max_new_tokens > tokenizer.model_max_length and tokenizer.model_max_length < 100000:
                 raise ValueError(f"Context window exceeded: {key} {context}")
             prompts.append((key, context, prompt, length))
     a.output_dir.mkdir(parents=True)
-    config = {"model": str(a.model), "tokenizer_sha256": hashlib.sha256((a.model / "tokenizer.json").read_bytes()).hexdigest(), "inventory_sha256": hashlib.sha256(a.inventory.read_bytes()).hexdigest(), "ids": ids, "seed": a.seed, "max_new_tokens": a.max_new_tokens, "contexts": ["sw_only", "sw_en", "sw_en_reference"], "polymath_scorer_commit": "fbf4e41cae78687d6be7447dbea897357c06aaa7", "prompt_sha256": {key + ":" + context: sha(prompt) for key, context, prompt, _ in prompts}, "prompt_tokens": {key + ":" + context: length for key, context, _, length in prompts}}
+    config = {"model": str(a.model), "device_map": a.device_map, "tokenizer_sha256": hashlib.sha256((a.model / "tokenizer.json").read_bytes()).hexdigest(), "inventory_sha256": hashlib.sha256(a.inventory.read_bytes()).hexdigest(), "ids": ids, "seed": a.seed, "max_new_tokens": a.max_new_tokens, "sw_prefix": a.sw_prefix, "contexts": list(a.contexts), "polymath_scorer_commit": "fbf4e41cae78687d6be7447dbea897357c06aaa7", "prompt_sha256": {key + ":" + context: sha(prompt) for key, context, prompt, _ in prompts}, "prompt_tokens": {key + ":" + context: length for key, context, _, length in prompts}}
     (a.output_dir / "CONFIG.json").write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n")
-    model = AutoModelForCausalLM.from_pretrained(str(a.model), local_files_only=True, torch_dtype=torch.bfloat16, device_map="cuda:0", attn_implementation="sdpa").eval()
+    model = AutoModelForCausalLM.from_pretrained(str(a.model), local_files_only=True, torch_dtype=torch.bfloat16, device_map=a.device_map, attn_implementation="sdpa").eval()
     model.requires_grad_(False)
     first = next(model.parameters())
     frozen_sample = first.flatten()[:1024].detach().float().cpu().clone()
@@ -84,7 +89,7 @@ def main():
                 output = model.generate(**inputs, do_sample=True, temperature=.6, top_p=.95, top_k=20, min_p=0.0, max_new_tokens=a.max_new_tokens, pad_token_id=tokenizer.eos_token_id)
             torch.cuda.synchronize()
             generated = output[0, inputs["input_ids"].shape[-1]:]
-            raw = tokenizer.decode(generated, skip_special_tokens=False)
+            raw = ("<think>Kwa kuzingatia swali, " if a.sw_prefix else "") + tokenizer.decode(generated, skip_special_tokens=False)
             final = final_section(raw)
             boxes = balanced_boxes(final) if final else []
             answer = boxes[0] if len(boxes) == 1 else None
