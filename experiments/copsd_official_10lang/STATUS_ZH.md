@@ -1,6 +1,6 @@
 # COPSD 官方源码十语言实验状态
 
-更新时间：2026-10-15 17:10（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。
+更新时间：2026-10-15 17:19（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。
 
 ## 官方来源与实现边界
 
@@ -24,7 +24,8 @@
 - 本机 GPU 为 8×RTX 3090 24GB；现有任务只能核实单张 GPU 0 空闲。将该短程速度粗略外推至官方 100×32 单题更新，约 87 小时，仅作容量规划，不能视为实际正式耗时，因为题目长度、模型尺寸、micro batch 和生成路径会改变吞吐。已获取 `Qwen/Qwen3-1.7B` 固定 revision `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e` 的文件清单与 LFS SHA256，正在下载校验；十语统一 1.7B 轨道要在模型完整且短程吞吐核实后才启动。
 - 16:43 手动启动 `copsd-sw-4b-dev8-base-v1` 单卡独立开发集 8 题 Base 探查，使用官方 PolyMath 语言提示字符串与 2048 回答预算，项目 Transformers 生成后端，逐题输出在 `logs/copsd_official_10lang/sw_4b_dev8_base_v1/`。该输出不是正式 MGSM-Rev2、PolyMath 或 AfriMGSM 分数。
 - 上述 Base 8 题已完成：单次 0/8、正常终止 2/8、生成 15,573 token、583.2 秒、峰值 8,071.5 MiB，`DONE.json` 与原始逐题输出已保存。6/8 在 2048 token 上限截断且多数出现循环性 SW 文本。相同 8 题与采样协议的一步 checkpoint 队列 `copsd-sw-4b-dev8-smoke1-v1` 16:55 启动，17:09 完成：单次 1/8、正常终止 4/8、生成 12,059 token、861.6 秒、峰值 8,761.4 MiB。两组逐题原文、配置和 `DONE.json` 均保存；样本量、训练步数和评测预算不足以判断 COPSD 方法收益，尤其不能把 1/8 对 0/8 当正式提升。项目评测解析器随后改为与官方 `extract_boxed_answer` 一致，并在这两组共 16 个输出上验证提取结果一致。
-- Qwen3-1.7B 固定 revision 的两个模型 shard 与 tokenizer LFS SHA256 均验证通过，`models/Qwen3-1.7B/MODEL_LOCK.json` 已生成。其他七张 GPU 为其他用户计算任务；`copsd-sw-17b-official-smoke1-v1` 于 17:04 手动启动单卡队列，等待当前评测释放 GPU 后做完整 2048 上限、LoRA/固定教师/官方损失的单步吞吐和显存测试。只有该测试通过后才考虑正式 SW 1.7B 训练。
+- Qwen3-1.7B 固定 revision 的两个模型 shard 与 tokenizer LFS SHA256 均验证通过，`models/Qwen3-1.7B/MODEL_LOCK.json` 已生成。其他七张 GPU 为其他用户计算任务；`copsd-sw-17b-official-smoke1-v1` 于 17:14 在 GPU 0 启动、17:15 完成完整 2048 上限、LoRA/固定教师/官方损失的单步训练，退出码 0。一次在线生成 806 token、49.35 秒（16.3 tok/s），整步 51.71 秒，loss 0.009567、非零 grad norm 0.3859，checkpoint-1 与 optimizer/scheduler/RNG、TensorBoard 已保存。该单样本时长不能代表正式 32 条/更新的稳定吞吐；完整训练期间将继续核实显存峰值与样本成本。
+- **SW 1.7B 正式 single 已于 17:17 启动**：命名队列 `copsd-sw-17b-project2900-formal-v1`，GPU 0，当前 `phase=running`。从原始 Qwen3-1.7B 开始，项目共享训练题 2900 条，独立开发题 100 条；官方 LoRA/fixed teacher/在线 rollout/KL，学习率 5e-6、有效 batch 32（micro 1 × 累积 32）、100 步、生成上限 2048、每 5 步保存、TensorBoard 开启。环境适配为单 GPU、SDPA 与 Transformers 生成，不称完全相同的官方 4B/vLLM 硬件复现。数据 SHA256 `59ea3c059d637cfb203c1abe9203764489dca06d66b3afaf624f8c4b917ad403`。完整冻结配置、源码/数据哈希、GPU UUID 和命令保存在 `logs/copsd_official_10lang/sw_17b_project2900_formal_v1.MANIFEST.json`，训练日志同名前缀 `.run.log`，checkpoint 在 `models/checkpoint/copsd_official_17b_single_v1/sw_17b_project2900_seed42_20261015_v1/`。目前只有启动和第一个 rollout 的证据，**尚无正式结果或方法效果判断**；开发集评测将在 checkpoint 产生后按固定协议独立运行。
 - 官方入口训练时 `eval_dataset=None`；直接打开 Trainer 的 `eval_strategy` 会调用没有数据集的评测。当前使用独立开发集评测脚本在训练外评估并保存逐题结果，TensorBoard 在训练中开启；正式训练需固定逐 checkpoint 评测调度并记录为本项目适配，不能把它叫官方内置 eval。
 
 ## 后续启动条件
