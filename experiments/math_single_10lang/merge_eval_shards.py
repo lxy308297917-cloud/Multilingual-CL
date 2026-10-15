@@ -29,10 +29,12 @@ def main():
     ids = [item["id"] for item in items]
     if len(ids) != len(set(ids)):
         raise ValueError("Duplicate original item IDs")
-    prefix = read_jsonl(Path(manifest["original_partial"]))
+    prefix_path = Path(manifest["original_partial"]) if manifest.get("original_partial") else None
+    prefix = read_jsonl(prefix_path) if prefix_path else []
     if len(prefix) != manifest["completed_prefix_count"] or [row["id"] for row in prefix] != ids[:len(prefix)]:
         raise ValueError("Partial evaluation prefix changed")
-    original_config = json.loads((Path(manifest["original_partial"]).parent / "EVAL_CONFIG.json").read_text())
+    config_path = Path(manifest["reference_config"]) if manifest.get("reference_config") else prefix_path.parent / "EVAL_CONFIG.json"
+    original_config = json.loads(config_path.read_text())
     if original_config["items_sha256"] != digest(source) or original_config["seed"] != manifest["seed"]:
         raise ValueError("Original evaluation config mismatch")
     all_rows = list(prefix)

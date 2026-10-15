@@ -74,7 +74,8 @@ def language_status(text, lang):
         return {"status": "unknown", "reason": str(exc)}
 
 
-def evaluate_one(model, tokenizer, item, seed, polymath_equal=None):
+def evaluate_one(model, tokenizer, item, seed, polymath_equal=None, max_new_tokens=None):
+    max_new_tokens = max_new_tokens or CONFIG["generation"]["max_new_tokens"]
     lang = item["language"]
     prompt = tokenizer.apply_chat_template(messages(item["question_target"], lang), tokenize=False, add_generation_prompt=True, enable_thinking=True)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
@@ -86,7 +87,7 @@ def evaluate_one(model, tokenizer, item, seed, polymath_equal=None):
         torch.cuda.synchronize()
     started = time.monotonic()
     with torch.inference_mode():
-        output = model.generate(**inputs, do_sample=True, temperature=.6, top_p=.95, top_k=20, min_p=0.0, max_new_tokens=CONFIG["generation"]["max_new_tokens"], num_return_sequences=1, pad_token_id=tokenizer.eos_token_id)
+        output = model.generate(**inputs, do_sample=True, temperature=.6, top_p=.95, top_k=20, min_p=0.0, max_new_tokens=max_new_tokens, num_return_sequences=1, pad_token_id=tokenizer.eos_token_id)
     if model.device.type == "cuda":
         torch.cuda.synchronize()
     generation_seconds = time.monotonic() - started
@@ -107,7 +108,7 @@ def evaluate_one(model, tokenizer, item, seed, polymath_equal=None):
     else:
         raise ValueError(f"Unknown dataset: {item['dataset']}")
     thinking = raw.split("</think>", 1)[0].removeprefix("<think>") if final else ""
-    return {**item, "prompt": prompt, "prompt_tokens": int(inputs["input_ids"].shape[-1]), "raw_output": raw, "generated_tokens": int(len(generated)), "generation_seconds": generation_seconds, "finished": bool(len(generated) < CONFIG["generation"]["max_new_tokens"] and int(generated[-1]) == tokenizer.eos_token_id), "truncated": bool(len(generated) >= CONFIG["generation"]["max_new_tokens"]), "final_section_present": final is not None, "boxed_count_final": len(boxes), "extracted_answer": prediction, "math_correct": correct, "scoring_status": scoring_status, "thinking_language": language_status(thinking, lang), "final_language": language_status(final or "", lang), "generation_seed": seed}
+    return {**item, "prompt": prompt, "prompt_tokens": int(inputs["input_ids"].shape[-1]), "raw_output": raw, "generated_tokens": int(len(generated)), "generation_seconds": generation_seconds, "finished": bool(len(generated) < max_new_tokens and int(generated[-1]) == tokenizer.eos_token_id), "truncated": bool(len(generated) >= max_new_tokens), "final_section_present": final is not None, "boxed_count_final": len(boxes), "extracted_answer": prediction, "math_correct": correct, "scoring_status": scoring_status, "thinking_language": language_status(thinking, lang), "final_language": language_status(final or "", lang), "generation_seed": seed}
 
 
 def main():
@@ -120,6 +121,7 @@ def main():
     p.add_argument("--polymath-code", type=Path)
     p.add_argument("--scorer-deps", type=Path)
     p.add_argument("--limit", type=int)
+    p.add_argument("--max-new-tokens", type=int, choices=(4096, 8192), default=CONFIG["generation"]["max_new_tokens"])
     a = p.parse_args()
     if a.output_dir.exists() and any(a.output_dir.iterdir()):
         raise FileExistsError(a.output_dir)
@@ -141,12 +143,12 @@ def main():
     a.output_dir.mkdir(parents=True)
     tokenizer_path = a.tokenizer or a.model
     tokenizer_sha256 = hashlib.sha256((tokenizer_path / "tokenizer.json").read_bytes()).hexdigest()
-    dump_json(a.output_dir / "EVAL_CONFIG.json", {"model": str(a.model), "tokenizer": str(tokenizer_path), "tokenizer_sha256": tokenizer_sha256, "items": str(a.items), "items_sha256": sha(a.items.read_text()), "generation": CONFIG["generation"], "seed": a.seed, "count": len(items), "language_detector": "langdetect uncalibrated candidate only", "polymath_scorer_commit": "fbf4e41cae78687d6be7447dbea897357c06aaa7" if polymath_equal else None, "polymath_local_import_patch": "bundled/symeval/__init__.py exports EvaluatorMath" if polymath_equal else None})
+    dump_json(a.output_dir / "EVAL_CONFIG.json", {"model": str(a.model), "tokenizer": str(tokenizer_path), "tokenizer_sha256": tokenizer_sha256, "items": str(a.items), "items_sha256": sha(a.items.read_text()), "generation": {**CONFIG["generation"], "max_new_tokens": a.max_new_tokens}, "seed": a.seed, "count": len(items), "language_detector": "langdetect uncalibrated candidate only", "polymath_scorer_commit": "fbf4e41cae78687d6be7447dbea897357c06aaa7" if polymath_equal else None, "polymath_local_import_patch": "bundled/symeval/__init__.py exports EvaluatorMath" if polymath_equal else None})
     tokenizer = AutoTokenizer.from_pretrained(str(a.tokenizer or a.model), local_files_only=True)
     model = AutoModelForCausalLM.from_pretrained(str(a.model), local_files_only=True, torch_dtype=torch.bfloat16, device_map="cuda:0", attn_implementation="sdpa").eval()
     with (a.output_dir / "predictions.jsonl").open("w") as f:
         for n, item in enumerate(items, 1):
-            result = evaluate_one(model, tokenizer, item, a.seed, polymath_equal)
+            result = evaluate_one(model, tokenizer, item, a.seed, polymath_equal, a.max_new_tokens)
             f.write(json.dumps(result, ensure_ascii=False) + "\n")
             f.flush()
             print(f"{n}/{len(items)} {item['id']} {result['scoring_status']}", flush=True)
