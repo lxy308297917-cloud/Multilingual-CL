@@ -5,6 +5,7 @@ RTX-3090 host. Results are project metrics, never labeled vLLM reproduction.
 """
 import argparse
 import ast
+import csv
 import hashlib
 import json
 import time
@@ -68,10 +69,16 @@ def load_items(path, kind, lang):
     if kind == "dev":
         for row in json.loads(path.read_text()):
             yield {"id": row["problem_id"], "question": row[f"problem_{lang}"], "answer": row["Answer"]}
-    else:
+    elif kind == "mgsm_rev2":
         for i, line in enumerate(path.read_text().splitlines()):
             question, answer = line.split("\t", 1)
             yield {"id": str(i), "question": question, "answer": answer}
+    elif kind == "afrimgsm":
+        with path.open(newline="") as f:
+            for i, row in enumerate(csv.DictReader(f, delimiter="\t")):
+                yield {"id": str(i), "question": row["question"], "answer": row["answer_number"]}
+    else:
+        raise ValueError(kind)
 
 
 def main():
@@ -80,7 +87,7 @@ def main():
     p.add_argument("--base-model", type=Path, required=True)
     p.add_argument("--adapter", type=Path)
     p.add_argument("--input", type=Path, required=True)
-    p.add_argument("--input-kind", choices=["dev", "mgsm_rev2"], required=True)
+    p.add_argument("--input-kind", choices=["dev", "mgsm_rev2", "afrimgsm"], required=True)
     p.add_argument("--language", required=True)
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--max-items", type=int, default=0)

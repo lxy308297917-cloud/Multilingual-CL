@@ -1,6 +1,6 @@
 # COPSD 官方源码十语言实验状态
 
-更新时间：2026-10-15 17:19（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。
+更新时间：2026-10-15 17:31（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。
 
 ## 官方来源与实现边界
 
@@ -26,6 +26,9 @@
 - 上述 Base 8 题已完成：单次 0/8、正常终止 2/8、生成 15,573 token、583.2 秒、峰值 8,071.5 MiB，`DONE.json` 与原始逐题输出已保存。6/8 在 2048 token 上限截断且多数出现循环性 SW 文本。相同 8 题与采样协议的一步 checkpoint 队列 `copsd-sw-4b-dev8-smoke1-v1` 16:55 启动，17:09 完成：单次 1/8、正常终止 4/8、生成 12,059 token、861.6 秒、峰值 8,761.4 MiB。两组逐题原文、配置和 `DONE.json` 均保存；样本量、训练步数和评测预算不足以判断 COPSD 方法收益，尤其不能把 1/8 对 0/8 当正式提升。项目评测解析器随后改为与官方 `extract_boxed_answer` 一致，并在这两组共 16 个输出上验证提取结果一致。
 - Qwen3-1.7B 固定 revision 的两个模型 shard 与 tokenizer LFS SHA256 均验证通过，`models/Qwen3-1.7B/MODEL_LOCK.json` 已生成。其他七张 GPU 为其他用户计算任务；`copsd-sw-17b-official-smoke1-v1` 于 17:14 在 GPU 0 启动、17:15 完成完整 2048 上限、LoRA/固定教师/官方损失的单步训练，退出码 0。一次在线生成 806 token、49.35 秒（16.3 tok/s），整步 51.71 秒，loss 0.009567、非零 grad norm 0.3859，checkpoint-1 与 optimizer/scheduler/RNG、TensorBoard 已保存。该单样本时长不能代表正式 32 条/更新的稳定吞吐；完整训练期间将继续核实显存峰值与样本成本。
 - **SW 1.7B 正式 single 已于 17:17 启动**：命名队列 `copsd-sw-17b-project2900-formal-v1`，GPU 0，当前 `phase=running`。从原始 Qwen3-1.7B 开始，项目共享训练题 2900 条，独立开发题 100 条；官方 LoRA/fixed teacher/在线 rollout/KL，学习率 5e-6、有效 batch 32（micro 1 × 累积 32）、100 步、生成上限 2048、每 5 步保存、TensorBoard 开启。环境适配为单 GPU、SDPA 与 Transformers 生成，不称完全相同的官方 4B/vLLM 硬件复现。数据 SHA256 `59ea3c059d637cfb203c1abe9203764489dca06d66b3afaf624f8c4b917ad403`。完整冻结配置、源码/数据哈希、GPU UUID 和命令保存在 `logs/copsd_official_10lang/sw_17b_project2900_formal_v1.MANIFEST.json`，训练日志同名前缀 `.run.log`，checkpoint 在 `models/checkpoint/copsd_official_17b_single_v1/sw_17b_project2900_seed42_20261015_v1/`。目前只有启动和第一个 rollout 的证据，**尚无正式结果或方法效果判断**；开发集评测将在 checkpoint 产生后按固定协议独立运行。
+- 17:30 核验该训练队列仍有真实计算进程，日志已完成 6 次在线生成、共 11,080 生成 token、生成耗时合计 679.1 秒；有效 batch 32，所以尚未到首次参数更新。GPU 0 前 3 分钟 86 次采样的显存使用量为 14,257–15,619 MiB，利用率均值 26.0%；这是采样观察范围，不是完整运行峰值。若许多回答都生成至 2048 上限，实际总耗时会远高于单条 806 token 的 smoke 外推，不能用小步测试声称已完成正式训练。
+- 已用同一固定提示和随机种子准备 100 题 SW 开发集 Base 对照；命名队列 `copsd-sw-17b-dev100-base-v1` 手动启动，17:30 为等待状态，不占 GPU。保存逐题输出与 2048 token 上限、终止、答案提取及成本；checkpoint 出现后才启动对应模型的同协议评测。
+- 官方 AfriMGSM 数据集 `masakhane/afrimgsm` 锁定 revision `8e4268d2b94941f18f63f694cf48e4ae26fbec65`，SW test 250 题，文件哈希在 `data/copsd_official_20261015/afrimgsm_8e4268d2b949/MANIFEST.json`。与 MGSM-Rev2 SW test 有 207/250 完全相同的 SW 题面，四处相同题的答案文本仅差千位逗号；它们按两套协议单独报告，但不能当两份独立测试证据。SW 训练/开发题与 AfriMGSM SW test 的题面精确重叠均为 0，详见 `adapted_v2_ordered/BENCHMARK_OVERLAP_AFRIMGSM_SW.json`。官方 African 评测提示在一题上与本项目 Transformers 后端逐字相同；官方脚本的 pass@12、1024 token 入口 `run_sw_afrimgsm_17b.sh` 已备，vLLM 后端差异继续单列。
 - 官方入口训练时 `eval_dataset=None`；直接打开 Trainer 的 `eval_strategy` 会调用没有数据集的评测。当前使用独立开发集评测脚本在训练外评估并保存逐题结果，TensorBoard 在训练中开启；正式训练需固定逐 checkpoint 评测调度并记录为本项目适配，不能把它叫官方内置 eval。
 
 ## 后续启动条件
