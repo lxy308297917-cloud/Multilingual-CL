@@ -1,6 +1,6 @@
 # SW OPD 当前状态
 
-更新时间：2026-10-15 12:30（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
+更新时间：2026-10-15 12:38（Asia/Shanghai）。执行依据：`docs/QWEN3_MATH_SINGLE_10LANG_CODEX_PLAN_ZH.md`，方案版本 `efe9b146d7c418ce8696368bbb6891ab36c29573`。
 
 12:10 结果更新：同快照冻结 4B 教师两题×三上下文已全部完成，三组都答对两题，生成 token 总计 8,945，教师采样权重检查不变；但 **六条 thinking 都明显为英语**，仅 final 为 SW，不能据此验收 SW 教师轨迹。SW 强制思考前缀试验中，一题缺 `</think>`、另一题答对但 SW 表达明显重复和生硬，故也未放行。两条 Base 学生 512-token 轨迹上，同快照特权教师全词表 reverse KL 分别为 0.1301、0.0150，参数无梯度；这只证明对齐和分布差异，不证明有用的 SW 训练信号。原始记录分别在 `logs/math_sw_opd_20261015/teacher_probe2/`、`teacher_prefix_probe2/`、`teacher_prefix_score2/`。更强 14B 特权教师作为**独立诊断备选**的两题探针已手动排队，不能与原定同快照 4B A/B/C 混称。
 
@@ -20,9 +20,10 @@ SW 候选 split 已按预先固定 SHA256(seed42) 规则从旧 v8 不相交划�
 
 ## 阻塞与接续
 
-- OPD FFT 的独立冻结教师全词表 reverse KL 训练入口尚未实现和烟测；100 step C_full 先导、eval 与 TensorBoard 尚未启动，不能把旧 SFT 烟测当 OPD 结果。CPU 两步微型模型更新及随机初始化微型 Qwen3 `logits_to_keep` 与完整 logits 的 KL 对齐均通过，记录在 `SW_OPD_ALGORITHM_SMOKE.json`，只属于算法检查。
+- OPD 4 卡 FSDP 工程烟测入口 `train_sw_opd_fsdp_smoke.py` 与 `run_sw_opd_fsdp_smoke.sh` 已准备：4B 学生在线采样、独立冻结的同快照 CPU 教师全词表 reverse KL、5 step 短 rollout、0/5 step 冒烟生成 eval 与 TensorBoard，逐 rank 记录 token/耗时/显存。训练题 4 条为 Codex 数学预审通过的待审源题，dev 2 条为原教师接口探针题；身份与拆分预检通过。此入口使用 BF16 AdamW 状态、短 rollout 和未正式验收源题，**只用于工程烟测，不是正式 100 step FP32 AdamW 先导或 A/B/C 结果**。随机初始化微型 Qwen3 的两进程 CPU FSDP 生成已验证（不同 rank 生成长度亦可），但 4B 真机烟测尚未运行；不能把算法检查或旧 SFT 烟测当 OPD 结果。
 - 新协议正式同教师 SW 轨迹合成尚未启动，回溯探针候选 2、accepted 0；旧 14B 翻译标签不可作为 A 组主数据。源题审查、SW 语言审核和 2048 完整序列检查仍是放行条件。
 - 14B 外部教师两题诊断 `swopd-teacher14b-probe2` 仍在手动启动的一次性双卡队列等待第二张经核实空闲的卡；其结果仅用于判断另开强教师轨道是否值得做，不能替代同快照 4B 主对照。
+- 当前外部教师队列已核实 systemd `ActiveState=active`、`MainPID=1746364`，保留 GPU 0 等第二张卡。暂不同时启动需要 4 卡的 OPD 烟测队列，避免两个队列各自占住部分卡后互相等待；待诊断完成或明确调整优先级再手动启动工程烟测。
 - SW 来源审核后先做教师前缀信号与长度/显存检查，再做 5–20 step OPD smoke；通过后从原始 Base 另起 C_full，开启 0/20/50/100 的开发集 eval 和 TensorBoard。A/B/C 仅在共同 accepted 题池准备好后运行。
 
 ## 资源与成本
