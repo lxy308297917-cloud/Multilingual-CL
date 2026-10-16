@@ -7,8 +7,11 @@
 - SW 1.7B single 正式任务继续在 GPU 0 运行，队列 `copsd-sw-17b-project2900-formal-v1` 于 16:15 状态为 `running`，有对应 GPU 计算进程。最新已落盘 checkpoint-20（100 次优化更新目标的 20 次）；日志至 16:16 已完成 730 条在线 rollout，共生成 1,312,571 token，生成阶段累计 22.70 小时；547/730 条触及 2048 token 上限。最后 100 条均值约 107.5 秒/题、1,718.9 token/题。按当前吞吐仅粗估剩余约 3 天生成计算，另有反传、保存和评测；学生轨迹长度可能变化，完成时间不能保证。loss 变化和 4B 八题 smoke 均不是方法有效的证据，尚无 1.7B 开发集完整 Base/训练模型对照分数。
 - 单卡 micro batch 2 短测 `copsd-sw-17b-batch2-probe-v1` 于 2026-10-15 20:02 失败，退出码 1。官方完整词表 KL 的 `F.kl_div` 需要再分配 2.32 GiB 时 GPU 仅余 1.30 GiB，CUDA OOM；该配置不能直接用于本机 24GB 单卡正式训练。失败日志保留，不重复运行，也未影响 micro batch 1 正式任务。
 - 16:15 手动启动 SW 100 题开发集 Base 与 checkpoint-20 两条相同协议的评测队列；两者当前均等待空闲 GPU。它们使用独立开发题、单次回答和同一 2048-token 上限，不用正式测试集调配置。评测结果完成前不宣称数学提升。
-- 用户要求扩展后，TE、TH、BN、ZH、JA、RU、DE、FR、ES 九个 single 队列已全部单独配置、CPU 预检并于 16:15 手动启动；每个队列单卡、相同 Qwen3-1.7B revision、同一官方训练代码和 2900 条对应题、micro 1 × 累积 32、100 次更新、独立日志与 checkpoint 目录。当前九个均处于 `waiting`，不占 GPU：GPU 0 为本账号 SW，其他七卡均有计算进程。九条新训练队列将本账号并发阈值显式设为 3 张，为评测保留第四张卡的账号容量；实际占用仍以 GPU 空闲和队列复查为准，不占或中断其他用户任务。不设开机启动、故障自动重试。
+- 用户要求扩展后，TE、TH、BN、ZH、JA、RU、DE、FR、ES 九个 single 队列已全部单独配置、CPU 预检并于 16:15 手动启动；每个队列单卡、相同 Qwen3-1.7B revision、同一官方训练代码和 2900 条对应题、micro 1 × 累积 32、100 次更新、独立日志与 checkpoint 目录。当时九个均处于 `waiting`，不占 GPU：GPU 0 为本账号 SW，其他七卡均有计算进程。九条新训练队列将本账号并发阈值显式设为 3 张，为评测保留第四张卡的账号容量；实际占用仍以 GPU 空闲和队列复查为准，不占或中断其他用户任务。不设开机启动、故障自动重试。
 - MGSM-Rev2 十语单次回答正式测评入口 `run_mgsm_rev2_17b.sh` 已补齐，直接调用现有固定提示和评分器；十个本地 TSV 均以同一加载器验证为 250 条、题目与答案非空，shell 语法预检通过。正式测试不会先于开发集选择拿来调参，当前也没有为此额外占用 GPU。
+- PolyMath 补充测试输入已从本地四档 `low/medium/high/top` Parquet 固化为每语言 500 题 JSON，十语逐题答案与英文对应项一致；源文件与输出 SHA256 在 `data/copsd_official_20261015/polymath_project_eval_v1/MANIFEST.json`。项目单次回答入口 `run_polymath_project_17b.sh` 已通过 CPU 加载和语法预检。它与官方默认单档、vLLM 多次采样结果分开报告，目前尚未启动 GPU 测评。
+- 用户进一步指出现有十语训练墙钟耗时不可接受后，于 16:28–16:29 停止上述九个**尚未占卡**的等待队列，九个状态均为 `stopped`；配置保留，均未发生训练和产出 checkpoint。SW 正式训练与两条 SW 开发集评测等待队列不受影响。742 条 rollout 的实测生成约 23.07 小时、最近 100 条约 15.97 token/s；详细瓶颈、方案和三篇方法比较见 `ACCELERATION_AND_METHOD_REVIEW_ZH.md`。
+- 另立 `COPSD-fast-kl-probe-20261016` 源码副本，在官方 `beta=0` 损失中分块计算并用 autograd 重算以降低临时显存；CPU 小张量 loss/梯度对照原代码通过，补丁 `patches/fast_kl_batch2_probe.patch` 可对原适配源码 `git apply --check`。完整 2048 上限的单卡 micro batch 2 单更新短测 `copsd-sw-17b-fastkl-batch2-probe-v1` 于 16:35 手动排队，目前等待 GPU。它仅是吞吐/显存实验，不修改正式 SW 进程，也不在 GPU 实测之前声称已经提速。
 
 ## 官方来源与实现边界
 
