@@ -1,0 +1,48 @@
+--- a/multilingual_opsd_trainer.py
++++ b/multilingual_opsd_trainer.py
+@@ -444,6 +444,45 @@
+         Returns:
+             loss: Scalar tensor with the generalized JSD loss
+         """
++
++        # Isolated throughput probe: preserve the released beta=0 full-vocabulary
++        # objective, but checkpoint small groups of response positions so the
++        # [batch, response, vocab] KL intermediates are not all live at once.
++        if (
++            beta == 0
++            and not logits_are_probs
++            and top_k is None
++            and labels is not None
++            and reduction == "batchmean"
++        ):
++            from torch.utils.checkpoint import checkpoint
++
++            flat_mask = (labels.reshape(-1) != -100)
++            kept = torch.nonzero(flat_mask, as_tuple=False).flatten()
++            if kept.numel() == 0:
++                raise ValueError("No response tokens for COPSD loss")
++            vocabulary = student_logits.shape[-1]
++            student_flat = student_logits.reshape(-1, vocabulary)
++            teacher_flat = teacher_logits.reshape(-1, vocabulary)
++
++            def chunk_loss(student_chunk, teacher_chunk):
++                student_log_probs = F.log_softmax(student_chunk / temperature, dim=-1)
++                teacher_log_probs = F.log_softmax(teacher_chunk / temperature, dim=-1)
++                terms = F.kl_div(
++                    student_log_probs, teacher_log_probs, reduction="none", log_target=True
++                )
++                if token_clip is not None:
++                    terms = terms.clamp(max=token_clip)
++                return terms.sum()
++
++            total = student_logits.new_zeros(())
++            for positions in kept.split(32):
++                student_chunk = student_flat.index_select(0, positions)
++                teacher_chunk = teacher_flat.index_select(0, positions)
++                total = total + checkpoint(
++                    chunk_loss, student_chunk, teacher_chunk, use_reentrant=False
++                )
++            return total / kept.numel()
+ 
+         if logits_are_probs:
+             student_log_probs = torch.log(student_logits.clamp_min(1e-8))
