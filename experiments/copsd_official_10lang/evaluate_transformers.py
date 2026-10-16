@@ -69,6 +69,9 @@ def load_items(path, kind, lang):
     if kind == "dev":
         for row in json.loads(path.read_text()):
             yield {"id": row["problem_id"], "question": row[f"problem_{lang}"], "answer": row["Answer"]}
+    elif kind == "polymath_project":
+        for row in json.loads(path.read_text()):
+            yield {"id": row["id"], "question": row["question"], "answer": row["answer"]}
     elif kind == "mgsm_rev2":
         for i, line in enumerate(path.read_text().splitlines()):
             question, answer = line.split("\t", 1)
@@ -87,7 +90,7 @@ def main():
     p.add_argument("--base-model", type=Path, required=True)
     p.add_argument("--adapter", type=Path)
     p.add_argument("--input", type=Path, required=True)
-    p.add_argument("--input-kind", choices=["dev", "mgsm_rev2", "afrimgsm"], required=True)
+    p.add_argument("--input-kind", choices=["dev", "mgsm_rev2", "afrimgsm", "polymath_project"], required=True)
     p.add_argument("--language", required=True)
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--max-items", type=int, default=0)
