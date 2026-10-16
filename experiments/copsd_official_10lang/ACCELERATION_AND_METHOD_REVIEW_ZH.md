@@ -4,7 +4,7 @@
 
 - SW 1.7B 正式轨道仍按官方核心训练代码运行：LoRA、固定教师、在线 rollout、完整词表 KL，micro batch 1 × 梯度累积 32、100 更新、回答上限 2048。当前为 RTX 3090 24 GB、Transformers `generate`、SDPA；官方发布脚本则使用 4 GPU、vLLM colocate、FlashAttention 2。硬件和生成后端不同，不能称严格官方速度复现。
 - 16:36 采样 742 条在线生成、1,333,587 token、纯生成累计 23.07 小时；最近 100 条约 15.97 token/s、106.64 秒/题。若回答长度分布不变，距 3200 条曝光尚有约 72.8 小时**仅生成**。约 74.7% 的轨迹触及 2048 token 上限。按现状十语直接并行排队不经济，故已停止九语未占卡队列；SW 当前正式进程和 checkpoint 保留，开发集 Base/ckpt20 评测仍等待空卡。
-- 原样 micro batch 2 在官方完整词表 KL `F.kl_div` 分配时 OOM（还需 2.32 GiB，余 1.30 GiB）。问题并非模型权重单独装不下，而是批量回答位置 × 词表的临时张量峰值。已在独立 `COPSD-fast-kl-probe-20261016` 源码副本中增加仅对 `beta=0` 生效的 32 位置分块和 autograd 重算，未改损失、mask、教师、生成参数。CPU 上 2 个种子、带/不带官方 clip 的 loss 差不超过 1.2e-7，梯度最大差 0；补丁在 `patches/fast_kl_batch2_probe.patch`。完整 2048 上限的 micro batch 2 单步 GPU 短测队列已挂起，待卡后确认显存、题目/秒与有效 token/秒；成功前不推断提速倍数。
+- 原样 micro batch 2 在官方完整词表 KL `F.kl_div` 分配时 OOM（还需 2.32 GiB，余 1.30 GiB）。问题并非模型权重单独装不下，而是批量回答位置 × 词表的临时张量峰值。已在独立 `COPSD-fast-kl-probe-20261016` 源码副本中增加仅对 `beta=0` 生效的 32 位置分块和 autograd 重算，未改损失、mask、教师、生成参数。CPU 上 2 个种子、带/不带官方 clip 的 loss 差不超过 1.2e-7，梯度最大差 0；补丁在 `patches/fast_kl_batch2_probe.patch`。探针日志另按各回答首个 EOS 统计实际生成 token；官方 batch>1 日志把较短回答的填充也算入总 token，会高估吞吐。完整 2048 上限的 micro batch 2 单步 GPU 短测队列已挂起，待卡后确认显存、题目/秒与实际生成 token/秒；成功前不推断提速倍数。
 
 ## 按证据推进的加速顺序
 
