@@ -1,6 +1,13 @@
 # COPSD 官方源码十语言实验状态
 
-更新时间：2026-10-15 17:31（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。
+更新时间：2026-10-16 16:16（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。
+
+## 2026-10-16 实时进展
+
+- SW 1.7B single 正式任务继续在 GPU 0 运行，队列 `copsd-sw-17b-project2900-formal-v1` 于 16:15 状态为 `running`，有对应 GPU 计算进程。最新已落盘 checkpoint-20（100 次优化更新目标的 20 次）；日志至 16:16 已完成 730 条在线 rollout，共生成 1,312,571 token，生成阶段累计 22.70 小时；547/730 条触及 2048 token 上限。最后 100 条均值约 107.5 秒/题、1,718.9 token/题。按当前吞吐仅粗估剩余约 3 天生成计算，另有反传、保存和评测；学生轨迹长度可能变化，完成时间不能保证。loss 变化和 4B 八题 smoke 均不是方法有效的证据，尚无 1.7B 开发集完整 Base/训练模型对照分数。
+- 单卡 micro batch 2 短测 `copsd-sw-17b-batch2-probe-v1` 于 2026-10-15 20:02 失败，退出码 1。官方完整词表 KL 的 `F.kl_div` 需要再分配 2.32 GiB 时 GPU 仅余 1.30 GiB，CUDA OOM；该配置不能直接用于本机 24GB 单卡正式训练。失败日志保留，不重复运行，也未影响 micro batch 1 正式任务。
+- 16:15 手动启动 SW 100 题开发集 Base 与 checkpoint-20 两条相同协议的评测队列；两者当前均等待空闲 GPU。它们使用独立开发题、单次回答和同一 2048-token 上限，不用正式测试集调配置。评测结果完成前不宣称数学提升。
+- 用户要求扩展后，TE、TH、BN、ZH、JA、RU、DE、FR、ES 九个 single 队列已全部单独配置、CPU 预检并于 16:15 手动启动；每个队列单卡、相同 Qwen3-1.7B revision、同一官方训练代码和 2900 条对应题、micro 1 × 累积 32、100 次更新、独立日志与 checkpoint 目录。当前九个均处于 `waiting`，不占 GPU：GPU 0 为本账号 SW，其他七卡均有计算进程。九条新训练队列将本账号并发阈值显式设为 3 张，为评测保留第四张卡的账号容量；实际占用仍以 GPU 空闲和队列复查为准，不占或中断其他用户任务。不设开机启动、故障自动重试。
 
 ## 官方来源与实现边界
 
@@ -28,6 +35,8 @@
 - **SW 1.7B 正式 single 已于 17:17 启动**：命名队列 `copsd-sw-17b-project2900-formal-v1`，GPU 0，当前 `phase=running`。从原始 Qwen3-1.7B 开始，项目共享训练题 2900 条，独立开发题 100 条；官方 LoRA/fixed teacher/在线 rollout/KL，学习率 5e-6、有效 batch 32（micro 1 × 累积 32）、100 步、生成上限 2048、每 5 步保存、TensorBoard 开启。环境适配为单 GPU、SDPA 与 Transformers 生成，不称完全相同的官方 4B/vLLM 硬件复现。数据 SHA256 `59ea3c059d637cfb203c1abe9203764489dca06d66b3afaf624f8c4b917ad403`。完整冻结配置、源码/数据哈希、GPU UUID 和命令保存在 `logs/copsd_official_10lang/sw_17b_project2900_formal_v1.MANIFEST.json`，训练日志同名前缀 `.run.log`，checkpoint 在 `models/checkpoint/copsd_official_17b_single_v1/sw_17b_project2900_seed42_20261015_v1/`。目前只有启动和第一个 rollout 的证据，**尚无正式结果或方法效果判断**；开发集评测将在 checkpoint 产生后按固定协议独立运行。
 - 17:30 核验该训练队列仍有真实计算进程，日志已完成 6 次在线生成、共 11,080 生成 token、生成耗时合计 679.1 秒；有效 batch 32，所以尚未到首次参数更新。GPU 0 前 3 分钟 86 次采样的显存使用量为 14,257–15,619 MiB，利用率均值 26.0%；这是采样观察范围，不是完整运行峰值。若许多回答都生成至 2048 上限，实际总耗时会远高于单条 806 token 的 smoke 外推，不能用小步测试声称已完成正式训练。
 - 已用同一固定提示和随机种子准备 100 题 SW 开发集 Base 对照；命名队列 `copsd-sw-17b-dev100-base-v1` 手动启动，17:30 为等待状态，不占 GPU。保存逐题输出与 2048 token 上限、终止、答案提取及成本；checkpoint 出现后才启动对应模型的同协议评测。
+- 用户要求优先实测加速后，17:33 停止**尚未占卡**的 `copsd-sw-17b-dev100-base-v1` 等待队列，保留配置和数据，正式训练不受影响。`copsd-sw-17b-batch2-probe-v1` 已手动排队：同一 1.7B/数据/2048 上限/官方损失，micro batch 2、一更新工程短测；若显存足够，再比较题目/秒、有效 token/秒及峰值。正式配置若切换，应设累积 16 保持有效 batch 32，重新从原始 Base 开始、另存 run ID，不把现在 micro 1 的权重混入新轨道。其他七卡均为他人任务，不能直接占用；目前无可立即运行短测的第二张卡。多卡数据并行和 vLLM 仅在资源与兼容性实证满足时考虑，不以等待四卡空闲作为当前 SW 正式训练前提。
+- 17:35 早期 9 条正式在线轨迹中 7 条达到 2048 token 上限，均值生成约 107.3 秒/题，单按当前均值 × 3200 题曝光外推约 95.4 小时**生成时间**，尚未加上反向传播、保存和评测。这是早期估计，后续学生长度会变；不能用单步 smoke 的 51.7 秒推算 100 步。若 batch2 实测明显提速且显存安全，再决定是否从 Base 重启新的正式 run；当前 run 继续产出，不凭假定收益中断。
 - 官方 AfriMGSM 数据集 `masakhane/afrimgsm` 锁定 revision `8e4268d2b94941f18f63f694cf48e4ae26fbec65`，SW test 250 题，文件哈希在 `data/copsd_official_20261015/afrimgsm_8e4268d2b949/MANIFEST.json`。与 MGSM-Rev2 SW test 有 207/250 完全相同的 SW 题面，四处相同题的答案文本仅差千位逗号；它们按两套协议单独报告，但不能当两份独立测试证据。SW 训练/开发题与 AfriMGSM SW test 的题面精确重叠均为 0，详见 `adapted_v2_ordered/BENCHMARK_OVERLAP_AFRIMGSM_SW.json`。官方 African 评测提示在一题上与本项目 Transformers 后端逐字相同；官方脚本的 pass@12、1024 token 入口 `run_sw_afrimgsm_17b.sh` 已备，vLLM 后端差异继续单列。
 - 官方入口训练时 `eval_dataset=None`；直接打开 Trainer 的 `eval_strategy` 会调用没有数据集的评测。当前使用独立开发集评测脚本在训练外评估并保存逐题结果，TensorBoard 在训练中开启；正式训练需固定逐 checkpoint 评测调度并记录为本项目适配，不能把它叫官方内置 eval。
 
