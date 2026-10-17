@@ -1,0 +1,308 @@
+{
+  "models": {
+    "element_protected_seed43": {
+      "training_done_sha256": "4e408213a37945c1515ae6518ce6807a8c404a0bef0d6ffd4cb9a83108812505",
+      "formal_status_sha256": "2e37f6622a54a589fbd55a93af953603be185554988c2f7913af3f3df4c5195c",
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_element15_seed43_20261004/element_protected_seed43/final",
+      "model_identity_prefix": "3f7412dea88bf4a8",
+      "sw_protocol": "a7fabe61eb771b7e2c3c6b03f00f1e3d4817158ce86d5942451751021cfef36d",
+      "gsm_protocol": "8cf108fc797fd6d95a2472f4aba5f2471566bcf65260dfddfb926f654d112933",
+      "gpu_hours": 7.582996845642725,
+      "peak_gpu_memory_bytes": 21438695424,
+      "selected_elements_per_step": 196529312
+    },
+    "element_unprotected_seed43": {
+      "training_done_sha256": "4685da2077b1484e18046eeedc929666347bacd049bfb45c14626563040f81c2",
+      "formal_status_sha256": "4d3846fd11071a20ad2feef4e9047feadfa7bce31b5fa1d288634fccc821831d",
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_element15_unprotected_seed43_20261004/element_unprotected_seed43/final",
+      "model_identity_prefix": "ae3caf57e6be9407",
+      "sw_protocol": "878f5bd35cdb54e109b0d0c1a7b8ca84b14c7583debf12df02e0e746a27bec37",
+      "gsm_protocol": "602c05f135916c79adf1f4fd0908f4e996457e630f121cb74fa13ac9cd21b239",
+      "gpu_hours": 5.655486419333352,
+      "peak_gpu_memory_bytes": 21438695424,
+      "selected_elements_per_step": 196529312
+    }
+  },
+  "fixed_input_match": {
+    "belebele_sw": {
+      "sample_count": 900,
+      "seed42_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/belebele_sw-seed42/attempt-1790041602929373247",
+        "artifact_sha256": "79bf3b05a477de7de4069e96e640e83c87c89a271d6e1148deeb5116f78db10b"
+      }
+    },
+    "sum_sw": {
+      "sample_count": 500,
+      "seed42_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/sum_sw-seed42/attempt-1790035639689442290",
+        "artifact_sha256": "2b26da853a55f52c21b742d89cd1689bc76cdbfd530e9b350bbba9417bb4abe4"
+      }
+    },
+    "mt_en2sw": {
+      "sample_count": 500,
+      "seed42_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/mt_en2sw-seed42/attempt-1790039644438418518",
+        "artifact_sha256": "a41a7aaa598822ddae4cb58a663ec755bf8fb156df34f53f23c30f77e5b9ebe6"
+      }
+    },
+    "mt_sw2en": {
+      "sample_count": 500,
+      "seed42_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/mt_sw2en-seed42/attempt-1790040933311996272",
+        "artifact_sha256": "c8ee87112c2e31d5193576314434046f766af71728ad4927fbc3334d452bda3f"
+      }
+    },
+    "belebele_en": {
+      "sample_count": 900,
+      "seed42_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/belebele_en-seed42/attempt-1790041849624886178",
+        "artifact_sha256": "496ff1a873389d62302e850cf10bfa59d2ce9199af9876f098a8fccdf7cfdc63"
+      }
+    },
+    "sum_en": {
+      "sample_count": 500,
+      "seed42_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/sum_en-seed42/attempt-1790037831917757737",
+        "artifact_sha256": "f9f4bc22ad75cf4da104be18c8dab0632a3568677d825d29fd70234bda6b603f"
+      }
+    },
+    "ifeval": {
+      "sample_count": 541,
+      "seed42_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/ifeval-seed42/attempt-1790042015118696203",
+        "artifact_sha256": "53b1e2909a3ce5a8496a1ffdf9b525e114bceadbb292a6a43228f146610ffb06"
+      }
+    },
+    "gsm8k": {
+      "sample_count": 1319,
+      "seed42_artifact": {
+        "attempt": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/03d6d9fc68d29e0d/attempt-1790044255947306005",
+        "artifact_sha256": "24644013caa88bdf4d257fda32f8c0ecaa41e15744d7f4c63ceb501eb42e997f"
+      }
+    }
+  },
+  "tasks": {
+    "belebele_sw": {
+      "protected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_seed43-evaluation/3f7412dea88bf4a8/belebele_sw-seed42/attempt-1791098025165218925",
+        "artifact_sha256": "be9c2ddfaa8aca6d06e20eec58800ad0dddaa4c0ae5d4bc30cd78afac4c17901"
+      },
+      "unprotected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_unprotected_seed43-evaluation/ae3caf57e6be9407/belebele_sw-seed42/attempt-1791094556526086368",
+        "artifact_sha256": "56b784908b14ef7d38af95e2e0a44ca9173a9dbffd2049735ebf7f72806726be"
+      },
+      "protected_headline_scores": {
+        "belebele_sw": 46.0
+      },
+      "unprotected_headline_scores": {
+        "belebele_sw": 44.0
+      },
+      "paired": {
+        "sample_count": 900,
+        "mean_per_sample_delta": 2.0,
+        "paired_bootstrap_95_interval": [
+          -0.5555555555555556,
+          4.558333333333318
+        ],
+        "better_count": 86,
+        "worse_count": 68,
+        "tied_count": 746
+      }
+    },
+    "sum_sw": {
+      "protected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_seed43-evaluation/3f7412dea88bf4a8/sum_sw-seed42/attempt-1791092099851848000",
+        "artifact_sha256": "412d2ea01ea020a8780464ea8156ac32ea5c43daceee0ad31930919b4f0fbcad"
+      },
+      "unprotected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_unprotected_seed43-evaluation/ae3caf57e6be9407/sum_sw-seed42/attempt-1791088423454322995",
+        "artifact_sha256": "d88457fa97b50a9a96b0118c7d91d2eafe6482fc9d40675badccdae11fc2bb40"
+      },
+      "protected_headline_scores": {
+        "sum_sw": 31.36126854233785
+      },
+      "unprotected_headline_scores": {
+        "sum_sw": 31.444485028155082
+      },
+      "paired": {
+        "sample_count": 500,
+        "mean_per_sample_delta": -0.08321648581723821,
+        "paired_bootstrap_95_interval": [
+          -0.5450884962401056,
+          0.3507061028257322
+        ],
+        "better_count": 151,
+        "worse_count": 175,
+        "tied_count": 174
+      }
+    },
+    "mt_en2sw": {
+      "protected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_seed43-evaluation/3f7412dea88bf4a8/mt_en2sw-seed42/attempt-1791096141689364197",
+        "artifact_sha256": "4e3f5c632fe72bae232ff6aaee9d2707c5f45fccbf3bb070bb19b35fc30b3b2d"
+      },
+      "unprotected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_unprotected_seed43-evaluation/ae3caf57e6be9407/mt_en2sw-seed42/attempt-1791092555450439438",
+        "artifact_sha256": "e3ecd5a1fe581951f6ea739cf635ef2976959f45c6efaf027c359fac11f0fc8b"
+      },
+      "protected_headline_scores": {
+        "mt_en2sw": 35.19952847413736
+      },
+      "unprotected_headline_scores": {
+        "mt_en2sw": 33.41971410293821
+      },
+      "paired": {
+        "sample_count": 500,
+        "mean_per_sample_delta": 1.7798143711991503,
+        "paired_bootstrap_95_interval": [
+          0.8075690016987376,
+          2.7374849974102022
+        ],
+        "better_count": 299,
+        "worse_count": 191,
+        "tied_count": 10
+      }
+    },
+    "mt_sw2en": {
+      "protected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_seed43-evaluation/3f7412dea88bf4a8/mt_sw2en-seed42/attempt-1791097411288632842",
+        "artifact_sha256": "d83214b466fbe1be4871b1f8aaf0c02b165abba862673adaf7077b802e25e721"
+      },
+      "unprotected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_unprotected_seed43-evaluation/ae3caf57e6be9407/mt_sw2en-seed42/attempt-1791093838975649784",
+        "artifact_sha256": "bbbd5d7c3857d26795f05e7f7e15f38614b74a6bc2c53f80d8d24d931a12da94"
+      },
+      "protected_headline_scores": {
+        "mt_sw2en": 44.11837290951365
+      },
+      "unprotected_headline_scores": {
+        "mt_sw2en": 38.22586023311097
+      },
+      "paired": {
+        "sample_count": 500,
+        "mean_per_sample_delta": 5.8925126764026805,
+        "paired_bootstrap_95_interval": [
+          4.858482318364903,
+          6.986850546275268
+        ],
+        "better_count": 323,
+        "worse_count": 159,
+        "tied_count": 18
+      }
+    },
+    "belebele_en": {
+      "protected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_seed43-evaluation/3f7412dea88bf4a8/belebele_en-seed42/attempt-1791098269337354221",
+        "artifact_sha256": "7ac09ede26be6f9eeb80bb03cd882bb7f0d2fbcce525379359b934b88c699c83"
+      },
+      "unprotected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_unprotected_seed43-evaluation/ae3caf57e6be9407/belebele_en-seed42/attempt-1791094803857628378",
+        "artifact_sha256": "710c508fdf01715346da3b7a046a9a3eac7de229e20f992afdd984f0e76d7c17"
+      },
+      "protected_headline_scores": {
+        "belebele_en": 80.77777777777779
+      },
+      "unprotected_headline_scores": {
+        "belebele_en": 77.77777777777779
+      },
+      "paired": {
+        "sample_count": 900,
+        "mean_per_sample_delta": 3.0,
+        "paired_bootstrap_95_interval": [
+          1.2222222222222223,
+          4.888888888888889
+        ],
+        "better_count": 50,
+        "worse_count": 23,
+        "tied_count": 827
+      }
+    },
+    "sum_en": {
+      "protected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_seed43-evaluation/3f7412dea88bf4a8/sum_en-seed42/attempt-1791094485477053122",
+        "artifact_sha256": "3d413c893597b64fc32b3be04415ce2283ec105b2cd5b888e694ff56a160d394"
+      },
+      "unprotected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_unprotected_seed43-evaluation/ae3caf57e6be9407/sum_en-seed42/attempt-1791090788935758764",
+        "artifact_sha256": "fbee74f14a78f9d52427d2dad448ce9c6ec59183743a9afb3ae5971ce8fdbfd4"
+      },
+      "protected_headline_scores": {
+        "sum_en": 21.530218885825636
+      },
+      "unprotected_headline_scores": {
+        "sum_en": 21.55272672625057
+      },
+      "paired": {
+        "sample_count": 500,
+        "mean_per_sample_delta": -0.02250784042493305,
+        "paired_bootstrap_95_interval": [
+          -0.3876584159417462,
+          0.335868868555132
+        ],
+        "better_count": 167,
+        "worse_count": 199,
+        "tied_count": 134
+      }
+    },
+    "ifeval": {
+      "protected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_seed43-evaluation/3f7412dea88bf4a8/ifeval-seed42/attempt-1791103789202232136",
+        "artifact_sha256": "31fb0764b823dc3327956dc583e8e63c8a94530c023d06e44b080391e6f6ee46"
+      },
+      "unprotected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/logs/sw_element15_unprotected_seed43-evaluation/ae3caf57e6be9407/ifeval-seed42/attempt-1791100610310673859",
+        "artifact_sha256": "349e8065afb8362b05a96752a5a55d58bbe5758de9348351b9cbd4eb72eeb5f7"
+      },
+      "protected_headline_scores": {
+        "ifeval_prompt_strict": 28.835489833641404,
+        "ifeval_instruction_strict": 38.84892086330935
+      },
+      "unprotected_headline_scores": {
+        "ifeval_prompt_strict": 21.996303142329023,
+        "ifeval_instruction_strict": 31.534772182254194
+      },
+      "paired": {
+        "sample_count": 541,
+        "mean_per_sample_delta": 6.839186691312385,
+        "paired_bootstrap_95_interval": [
+          2.957486136783734,
+          10.536044362292051
+        ],
+        "better_count": 72,
+        "worse_count": 35,
+        "tied_count": 434
+      }
+    },
+    "gsm8k": {
+      "protected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/reproductions/sw_element15_seed43_20261004/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/3f7412dea88bf4a8/attempt-1791114418181893597",
+        "artifact_sha256": "dc0952808e88b4f30198264d6c1cd0a2fb5fb8af5e4bbfbc6d33943715c041ed"
+      },
+      "unprotected_artifact": {
+        "attempt": "/data0/users/lixiaoyang/reproductions/sw_element15_unprotected_seed43_20261004/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/ae3caf57e6be9407/attempt-1791110644810508941",
+        "artifact_sha256": "5c722618f8c180e1351540a356d6999c8a49d27ffe2b4fa5485adf0f062ed050"
+      },
+      "protected_headline_scores": {
+        "gsm8k_strict": 18.498862774829416,
+        "gsm8k_flexible": 42.2289613343442
+      },
+      "unprotected_headline_scores": {
+        "gsm8k_strict": 16.224412433661865,
+        "gsm8k_flexible": 33.05534495830174
+      },
+      "paired": {
+        "sample_count": 1319,
+        "mean_per_sample_delta": 2.274450341167551,
+        "paired_bootstrap_95_interval": [
+          -0.3032600454890068,
+          4.852160727824109
+        ],
+        "better_count": 168,
+        "worse_count": 138,
+        "tied_count": 1013
+      }
+    }
+  },
+  "caution": "Same training batch order and exact planned budget; per-task descriptive intervals are not multiple-comparison corrected. Seed43 also changes random seed relative to seed42.",
+  "source_sha256": "01717932a2afa5866785d25a6796e83fe3ba09bf37c44765426466fef2a5de31"
+}

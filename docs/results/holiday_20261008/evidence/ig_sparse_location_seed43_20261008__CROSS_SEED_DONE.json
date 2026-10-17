@@ -1,0 +1,97 @@
+{
+  "old_report": "/data0/users/lixiaoyang/reproductions/ig_sparse_location_20261004/REPORT_DONE.json",
+  "new_report": "/data0/users/lixiaoyang/reproductions/ig_sparse_location_seed43_20261008/REPORT_DONE.json",
+  "primary_positive_both": [
+    "sum_ig",
+    "mt_en2ig",
+    "mt_ig2en"
+  ],
+  "deltas": {
+    "belebele_ig": [
+      0.5555555555555607,
+      3.1111111111111143
+    ],
+    "sum_ig": [
+      3.9795164219044388,
+      5.424496275049991
+    ],
+    "mt_en2ig": [
+      2.346743667908111,
+      3.093004100934781
+    ],
+    "mt_ig2en": [
+      3.7703263853213986,
+      1.9087432792258987
+    ],
+    "belebele_en": [
+      -0.5555555555555571,
+      -0.11111111111111427
+    ],
+    "sum_en": [
+      -0.9932067779132225,
+      -0.48887715891494565
+    ],
+    "ifeval_prompt_strict": [
+      -1.1090573012938947,
+      -1.1090573012939018
+    ],
+    "ifeval_instruction_strict": [
+      -0.7194244604316467,
+      -2.278177458033568
+    ],
+    "gsm8k_strict": [
+      -4.700530705079601,
+      -15.693707354056102
+    ],
+    "mmlu_en": [
+      -0.526303345017304,
+      -0.13499432034477366
+    ],
+    "gmmlu_ig": [
+      2.1172180491363726,
+      2.394783876121217
+    ]
+  },
+  "training": {
+    "seed42": {
+      "edge": {
+        "global_step": 15000,
+        "selected_elements": 196608000,
+        "candidate_elements": 1310195712,
+        "sample_order_sha256": "67a9790ee4fbb8302f162962c8ef6d6401ddd4bf881371244050279b6e38831e",
+        "final_weight_sha256": "86b17363c3eb7be0d7dfb9b79e99e1a850faac7193dcb025cc50428486852f86",
+        "gpu_hours": 1.0805150222778321,
+        "peak_gpu_memory_bytes": 7067676672
+      },
+      "spread": {
+        "global_step": 15000,
+        "selected_elements": 196608000,
+        "candidate_elements": 1310195712,
+        "sample_order_sha256": "67a9790ee4fbb8302f162962c8ef6d6401ddd4bf881371244050279b6e38831e",
+        "final_weight_sha256": "fc048711930e9bd4235dd33a17ea6da23852ea54908a2eb1b7c0044a014b1b74",
+        "gpu_hours": 1.1026135300265418,
+        "peak_gpu_memory_bytes": 7067676672
+      }
+    },
+    "seed43": {
+      "edge": {
+        "global_step": 15000,
+        "selected_elements": 196608000,
+        "candidate_elements": 1310195712,
+        "sample_order_sha256": "99d708f2806c31343d49f970ee47dd7a08af185f233bea8ef863a8e742a869cf",
+        "final_weight_sha256": "498150da768ed7552acb3a1cec95db6056e1a5c942bd15b468fd9e749b4f100d",
+        "gpu_hours": 1.0903952297237185,
+        "peak_gpu_memory_bytes": 7067676672
+      },
+      "spread": {
+        "global_step": 15000,
+        "selected_elements": 196608000,
+        "candidate_elements": 1310195712,
+        "sample_order_sha256": "99d708f2806c31343d49f970ee47dd7a08af185f233bea8ef863a8e742a869cf",
+        "final_weight_sha256": "9d7bde051112fb8315a6a17b6ff029498bec8f454cd7d2888b8edf773d2efa0c",
+        "gpu_hours": 1.120168570942349,
+        "peak_gpu_memory_bytes": 7067676672
+      }
+    }
+  }
+}
