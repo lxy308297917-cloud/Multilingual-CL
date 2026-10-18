@@ -2,6 +2,14 @@
 
 ## 2026-10-18：SW 逐题诊断与用户提速建议的落实
 
+四卡 TH 正式运行的首个完整更新已完成：32 条 rollout、61,685 个生成 token，用时 1048.32 秒（约 17 分 28 秒），按整次更新计算生成吞吐约 58.84 token/s，线性外推 100 更新约 29.12 小时，另计评测和保存。这是单次更新的 TH 记录，不是同题 SW 的配对测速；学生长度和稳定吞吐仍可能变化。原始计数见 `th_17b_four_gpu_first_update_20261018.json`。原 SW 及四卡 TH 均已核对实际训练 PID 和 GPU 计算进程存活。
+
+为后续空卡测速新增 `benchmark_rollout.py` 与 `run_rollout_benchmark.sh`：直接用固定官方 collator 逐题生成未填充的学生 prompt token IDs，CPU 已固化同一组 4 道 SW 训练题（提示长 227/172/119/146 token），两后端读取相同 token 清单、同一模型身份、可选同一 LoRA snapshot 和相同采样参数。支持 batch1/2/4、2048 生成上限，64-token warmup 单列，不计入正式测速；报告真实生成 token、终止原因、逐题文本、包版本以及每 0.5 秒的设备显存／利用率。该工具仅测独立 rollout，不包含教师、反传或在线权重同步，不能据此直接承诺端到端 OPD 加速。输入位于 `logs/copsd_official_10lang/rollout_benchmark/sw_train4_prompts_20261018/PROMPTS.json`；prepare 已在 CPU 运行成功，GPU 后端尚未执行。
+
+独立 Python 3.10 venv `envs/copsd-vllm011-20261018` 正在按 `requirements_vllm011_rollout.txt` 安装 COPSD 发布版本对应的 vLLM0.11.0、Torch2.8.0、Transformers4.57.1 等生成依赖；此阶段未装 DeepSpeed/bitsandbytes，不称完整官方训练环境。首次 pip 下载因网络读超时终止，日志保留；随后用 120 秒超时继续下载，安装与 GPU 兼容性还未验收。本机 driver535.54.03、glibc2.31；采用独立环境避免影响当前 Torch2.5.1 正式训练。官方安装说明与 NVIDIA 的 CUDA minor compatibility 只说明候选兼容路径，实际 vLLM 内核仍须空卡运行验证。来源：[vLLM0.11 安装说明](https://docs.vllm.ai/en/v0.11.0/getting_started/installation/gpu.html)、[固定版本发布页](https://github.com/vllm-project/vllm/releases/tag/v0.11.0)、[NVIDIA 兼容说明](https://docs.nvidia.com/deploy/cuda-compatibility/latest/595/minor-version-compatibility.html)。环境进度、安装命令和日志位置记录于 `logs/copsd_official_10lang/vllm011_environment_20261018.MANIFEST.json`。
+
+准备中的四卡 fast-KL／leftpad 探针已另建源码副本，加入四卡 smoke 验证通过的 teacher-unwrapped 与 `ddp_find_unused_parameters=false` 适配，避免重复旧 DDP reducer 错误；旧源码保留。同时新增单卡完整长度 micro2 探针 `run_sw_17b_fastkl_leftpad_batch2_probe_v2.sh`，以便仅有一张空卡时先验证正确批量生成。两项均未启动，当前五卡用于 SW 单卡与 TH 四卡正式训练；开发集评测继续等待空卡。
+
 已重新核对 SW Base 与 checkpoint-20 的 100 题独立开发集逐题输出：题目、标准答案、完整提示、逐题采样 seed 和其余评测配置一致，只有 adapter 不同。单次正确数为 2→11，新增正确 9 题、丢失 0 题；正常终止 9→43，2048-token 截断 91→57，成功提取 boxed 答案 11→56，平均生成 token 1925.65→1680.57。按小写词／标点序列定义的四元组重复占比（1−不同四元组数／全部四元组数）均值为 83.56%→41.08%；这个数字只作重复诊断，不是数学或语言能力分数。
 
 人工检查的新增正确题中，2015 的算术、1/2 的因式分解极限、sin(4α)/2 的三角化简均包含正确变换，说明存在实际数学输出改善。但有正确极限题转用英语，其他回答也存在明显混乱语句，不能据答案正确认定 SW 推理与语言保持已达标。另有两项评分适用性问题：证明题的 gold 是待证公式，仅匹配公式不验证证明；一道双问题的 gold 只含第一问的 0，模型把第二问也答成 0，第二问实际极限为 e²。原始数据和 11/100 原始分数保留。事后排除这两题的敏感性诊断是 Base 2/98、checkpoint-20 9/98；它不是重新选择的正式 benchmark。
