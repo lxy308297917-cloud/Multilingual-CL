@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-18T20:38:57.788577+08:00",
+  "checkpoint": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-20",
+  "global_step": 20,
+  "file_sizes": {
+    "adapter_model.safetensors": 278973888,
+    "adapter_config.json": 954,
+    "optimizer.pt": 558173226,
+    "scheduler.pt": 1064,
+    "trainer_state.json": 2750,
+    "rng_state_0.pth": 14960,
+    "rng_state_1.pth": 14960,
+    "rng_state_2.pth": 14960,
+    "rng_state_3.pth": 14960
+  },
+  "adapter_sha256": "12a538416695209d5bb334dc925391841007fab5dd2f6e09a583b1ea3f3a900d",
+  "generation_records_in_log": 640,
+  "rollouts": 640,
+  "generated_tokens_first_640": 1194860,
+  "capped_first_640": 452,
+  "elapsed_seconds_rounded_progress_bar": 20204,
+  "allocated_gpu_hours": 22.448888888888888,
+  "scope": "Files and trainer state observed; no optimizer reload or actual distributed restore performed",
+  "evaluation": "checkpoint20 now exists; Base and checkpoint20 dev100 queues still need free GPU"
+}
