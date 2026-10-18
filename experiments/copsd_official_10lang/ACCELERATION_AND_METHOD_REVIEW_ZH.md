@@ -80,3 +80,10 @@ patch -d COPSD-rebuild-ddp-4f441073 -p1 < experiments/copsd_official_10lang/patc
 | [多语言 OPD² 论文](https://arxiv.org/abs/2608.05802) / [官方实现](https://github.com/naver-ai/opd2) | 从强教师相对其基座模型的 log-prob 差提取后训练信号；论文用 Qwen3-30B-A3B-2507 教师、Qwen3-1.7B/8B 学生、英/韩/日 100K 题及 100 更新。 | 这是另一种强教师 OPD，不能与 COPSD 的冻结同模型特权教师等同。当前 24GB 单卡和十语问题池不足以直接复现；先借鉴其“正确率提升是否伴随改用英语回答”的诊断，待主基线和资源允许后再做独立扩展。 |
 
 实验顺序建议：先把 SW 的 Base、checkpoint-20 与后续 checkpoint 做同题开发集对照；按吞吐证据选择官方代码的最快可行运行方式，再跑十语 single。三个顺序训练语言最终按独立开发集的增益、绝对分数、目标语言保持和成本确定；仅作为预设观察组，可优先留意 SW（低资源）、JA（不同文字体系）、RU（中资源），不能跳过十语筛选直接宣称它们入选。主项目评测固定十语 MGSM-Rev2 单次正确率、四档 PolyMath 的分档与加权结果、英语 GSM8K 保持；SW 另按官方 AfriMGSM pass@12 对照。MGSM-Rev2 与 AfriMGSM 的 SW 题大幅重叠，不能当两份独立证据。每个阶段固定题、提示、采样和评分器，并报告终止、答案提取失败、思考区/最终回答语言、生成与训练 token 及 GPU 小时。
+
+
+## 19:25 可审阅的四卡恢复入口（未启动）
+
+新增 `run_four_gpu_17b_resume_v2.sh th NEW_RUN_ID ABSOLUTE_CHECKPOINT`。它保留当前正式TH的冻结源码、环境、四rank×micro1×GA8、100次总更新、2048上限与官方损失，仅增加Trainer的resume参数并输出到新目录。预检验证原manifest的源码／模型锁／数据哈希，以及checkpoint step与optimizer、scheduler、四rank RNG文件；checkpoint-15的CPU预检和shell语法检查已通过，实际GPU恢复尚未验证。不会因准备这个入口而取消当前训练。
+
+建议在用户批准后，于完整checkpoint处短暂停TH，保留SW，进行相同SW学生快照的HF batch2与vLLM batch2/4固定四题测速，再恢复四卡训练。预计测速约20–40分钟，尚无实测保证；交接可能遇其他用户取得空卡，须重新排队而不能强占。当前AGENTS.md要求取消运行中的队列任务需明确授权，因此执行暂停前需用户确认；无答复时现有训练继续。独立推理测速不含教师、反传和在线权重同步，不能直接当作完整OPD提速倍数。
