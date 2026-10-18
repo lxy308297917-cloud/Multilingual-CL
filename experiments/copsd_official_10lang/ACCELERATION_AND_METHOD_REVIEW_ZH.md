@@ -1,5 +1,29 @@
 # COPSD 单卡耗时与相关方法的实验建议（2026-10-16）
 
+## 正式运行源码的完整重建（2026-10-18）
+
+
+已静态核对新装 vLLM0.11 的同步接口：COPSD 指定的 `external_launcher` 会在 `vllm/config/parallel.py` 关闭 V1 multiprocessing；`vllm/v1/engine/llm_engine.py` 在该模式下保留 `model_executor` 兼容属性，worker wrapper 的属性代理也保留了 `model_runner` 访问。由此未发现仅因 V1 默认多进程接口而必须重写同步代码的证据，不额外补丁化官方同步逻辑。此结论仅针对静态接口链，不等同于 GPU 上生成、权重更新、缓存失效与教师冻结已验证。
+
+
+已从官方固定 commit `4f4410730e9b6775a30d20f4b6e141cba2e87590` 独立获取四个核心原文件，分别重建当前 SW single 与 TH 四卡运行源码，并与各自启动 manifest 的源码哈希核对一致。SW 的实际工作目录由存活进程确认是 `COPSD-local-adapter-20261015`，不是旁边的 pristine `COPSD-official-20261015`；其 trainer 保持官方原文件。TH 的 trainer 只加入无梯度教师绕过 DDP 包装的适配，完整 KL、clip、mask、在线 rollout 和 LoRA 固定教师定义未改。
+
+此前记录以独立增量补丁为主，正式四卡源码还有 `use_cache=False` 的加载设置没有单独覆盖；正式命令开启梯度检查点，和原条件式在此配置下相同，但逐字节源码重建仍应包含它。现已生成并实际在临时目录应用两份完整补丁，重建后的 train、trainer、collator、language_config 四文件哈希全部与运行清单一致：
+
+- `patches/single_complete_from_4f441073.patch`：重建 SW single 的正式源码。
+- `patches/formal_ddp_complete_from_4f441073.patch`：重建 TH 四卡的正式源码。
+- `CORE_SOURCE_REBUILD_LOCK_20261018.json`：保存官方原文件 URL／哈希、完整补丁哈希、两条运行轨道的目标文件哈希及验证范围。
+
+在新的干净目录 checkout 上述官方 commit 后，按所需轨道**只应用一份完整补丁**，不要叠加旧增量补丁。示例（仅重建新目录，运行中的源码目录保持冻结）：
+
+```bash
+git clone https://github.com/cisnlp/COPSD.git COPSD-rebuild-ddp-4f441073
+git -C COPSD-rebuild-ddp-4f441073 checkout --detach 4f4410730e9b6775a30d20f4b6e141cba2e87590
+patch -d COPSD-rebuild-ddp-4f441073 -p1 < experiments/copsd_official_10lang/patches/formal_ddp_complete_from_4f441073.patch
+```
+
+该核验只证明四个训练核心文件可完整重建；模型、数据、依赖、启动命令和评测仍分别按各自的锁和记录复现，不能把源文件一致等同于论文全部配置或方法效果已复现。
+
 ## 2026-10-18 续跑：英语保持评测与完整官方依赖
 
 补齐了英语保持评测输入和入口，尚未启动正式测试。GSM8K main test 的 1319 条输入从既有本地 Arrow 缓存导出，并与 [OpenAI 官方固定 commit 的 test.jsonl](https://raw.githubusercontent.com/openai/grade-school-math/b0bb162abedc65e1fdd8e93ed090fd7598ee68bc/grade_school_math/data/test.jsonl) 的题目及数值答案按顺序逐条核对一致；原始文件 SHA256 为 `3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14`。数值 gold 来自官方 `####` 后缀，参考解答不会进入模型输入。与当前共享 2900 训练题及 100 开发题的英文题面，在 NFKC／空白合并／casefold 下的精确重叠分别为 0；不声称覆盖模糊或语义重复。与 MGSM-Rev2 English 250 题有 228 道相同英文题，不能把二者当两份独立测试证据。
