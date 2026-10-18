@@ -1,0 +1,14 @@
+--- a/multilingual_opsd_trainer.py
++++ b/multilingual_opsd_trainer.py
+@@ -745,8 +745,10 @@
+         else:
+             adapter_context = nullcontext()
+ 
++        # Keep the no-grad fixed-teacher forward outside the DDP reducer.
++        teacher_model = self.accelerator.unwrap_model(model) if self.accelerator.num_processes > 1 else model
+         with torch.no_grad(), adapter_context:
+-            outputs_teacher = model(
++            outputs_teacher = teacher_model(
+                 input_ids=inputs["teacher_input_ids"],
+                 attention_mask=inputs["teacher_attention_mask"],
+             )
