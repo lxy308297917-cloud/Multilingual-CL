@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-10-19T00:24:47.996428+08:00",
+  "checkpoint": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_v1/sw_17b_project2900_seed42_20261015_v1/checkpoint-80",
+  "global_step": 80,
+  "file_sizes": {
+    "adapter_model.safetensors": 278973888,
+    "adapter_config.json": 954,
+    "optimizer.pt": 558173226,
+    "scheduler.pt": 1064,
+    "trainer_state.json": 8736,
+    "rng_state.pth": 14244
+  },
+  "adapter_sha256": "a616238a2fba8823b35183dd02c580dc51e47806a1614d28cebf66165e990617",
+  "generation_records_in_log": 2560,
+  "rollouts": 2560,
+  "generated_tokens_first_2560": 4641757,
+  "capped_first_2560": 1798,
+  "elapsed_seconds_rounded_progress_bar": 284799,
+  "allocated_gpu_hours": 79.11083333333333,
+  "scope": "Checkpoint files and trainer state observed; no optimizer reload or actual resume performed",
+  "evaluation": "No new development scores available; checkpoint65 dev100 remains queued"
+}
