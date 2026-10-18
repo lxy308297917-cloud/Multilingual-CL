@@ -87,3 +87,12 @@ patch -d COPSD-rebuild-ddp-4f441073 -p1 < experiments/copsd_official_10lang/patc
 新增 `run_four_gpu_17b_resume_v2.sh th NEW_RUN_ID ABSOLUTE_CHECKPOINT`。它保留当前正式TH的冻结源码、环境、四rank×micro1×GA8、100次总更新、2048上限与官方损失，仅增加Trainer的resume参数并输出到新目录。预检验证原manifest的源码／模型锁／数据哈希，以及checkpoint step与optimizer、scheduler、四rank RNG文件；checkpoint-15的CPU预检和shell语法检查已通过，实际GPU恢复尚未验证。不会因准备这个入口而取消当前训练。
 
 建议在用户批准后，于完整checkpoint处短暂停TH，保留SW，进行相同SW学生快照的HF batch2与vLLM batch2/4固定四题测速，再恢复四卡训练。预计测速约20–40分钟，尚无实测保证；交接可能遇其他用户取得空卡，须重新排队而不能强占。当前AGENTS.md要求取消运行中的队列任务需明确授权，因此执行暂停前需用户确认；无答复时现有训练继续。独立推理测速不含教师、反传和在线权重同步，不能直接当作完整OPD提速倍数。
+
+
+## 2026-10-19 01:08 恢复方案更正：旧Torch无法直接加载optimizer
+
+先前19:25准备的恢复入口不能按原环境直接执行：Torch2.5.1下Trainer的安全版本检查拒绝optimizer反序列化，实际错误见 `resume_legacy_runtime_gate_20261019.json`。不能据“文件完整／CPU预检”宣称可无风险暂停再恢复。当前正式SW和TH未受影响，原环境和冻结源码未改。
+
+已修正**尚未启动**的`run_four_gpu_17b_resume_v2.sh`，改用已有隔离`copsd-vllm011-20261018`环境。新增bootstrap仅为旧NumPy RNG的reconstruct模块名及uint32状态类型提供显式兼容，保留weights-only加载和Torch版本检查，然后运行同一冻结官方适配入口。没有改损失、LoRA、固定教师、batch32、100总更新或2048上限。运行时版本变化必须记录：Torch2.5.1→2.8.0、Transformers4.57.6→4.57.1、datasets4.8.5→3.6.0、NumPy1.26.4→2.2.6；TRL0.26.0／PEFT0.17.1／Accelerate1.11.0相同，不称为原环境精确续跑。
+
+`verify_resume_state_cpu.py`对真实checkpoint-35调用Trainer原生optimizer／scheduler／RNG恢复函数，验证392个optimizer状态及四rank的Python、NumPy、CPU RNG；结果在`resume_torch28_cpu_restore_20261019.json`。这只消除了CPU序列化兼容阻塞：没有验证CUDA RNG、实际LoRA参数名与optimizer顺序映射、四卡更新、数据skip位置或新CUDA内核，尚不能保证实际恢复成功。新入口`--help`、shell语法及冻结身份预检通过。未收到暂停确认，现有训练继续。若后续实际恢复，需冻结并记录新环境、父checkpoint及bootstrap哈希；不能隐去环境改变。
