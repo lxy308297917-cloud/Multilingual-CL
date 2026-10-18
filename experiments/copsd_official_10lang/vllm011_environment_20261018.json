@@ -1,0 +1,50 @@
+{
+  "updated_at": "2026-10-18T15:37:09.093073+08:00",
+  "status": "installed_cpu_import_pass",
+  "environment": "/data0/users/lixiaoyang/envs/copsd-vllm011-20261018",
+  "python_base": "/data0/users/lixiaoyang/ssu-migration/envs/cl/bin/python",
+  "isolated_system_site_packages": false,
+  "requirements": "/data0/users/lixiaoyang/Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/requirements_vllm011_rollout.txt",
+  "requirements_sha256": "148d2108bdb8259f1372bfa0b44ff369ae49dcbeb204c9c01c18de99ca7c2d82",
+  "official_copsd_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "official_environment_source": "/data0/users/lixiaoyang/COPSD-official-20261015/environment.yml",
+  "scope": "rollout benchmarking preparation; DeepSpeed and bitsandbytes excluded from this installation stage",
+  "system": {
+    "nvidia_driver": "535.54.03",
+    "glibc": "2.31"
+  },
+  "sources": [
+    "https://docs.vllm.ai/en/v0.11.0/getting_started/installation/gpu.html",
+    "https://github.com/vllm-project/vllm/releases/tag/v0.11.0",
+    "https://docs.nvidia.com/deploy/cuda-compatibility/latest/595/minor-version-compatibility.html"
+  ],
+  "installation_logs": [
+    "/data0/users/lixiaoyang/logs/copsd_official_10lang/vllm011_environment_install_20261018.log",
+    "/data0/users/lixiaoyang/logs/copsd_official_10lang/vllm011_environment_install_20261018_retry1.log"
+  ],
+  "first_attempt": "terminal exit2: ReadTimeoutError on files.pythonhosted.org",
+  "retry": "terminal exit0; --timeout 120 --retries 2",
+  "gpu_validation": "not performed; compatibility is not established by pip installation",
+  "benchmark_prompts": "/data0/users/lixiaoyang/logs/copsd_official_10lang/rollout_benchmark/sw_train4_prompts_20261018/PROMPTS.json",
+  "pip_check": "No broken requirements found; exit0",
+  "cpu_import": {
+    "python": "/data0/users/lixiaoyang/envs/copsd-vllm011-20261018/bin/python",
+    "prefix": "/data0/users/lixiaoyang/envs/copsd-vllm011-20261018",
+    "versions": {
+      "torch": "2.8.0",
+      "vllm": "0.11.0",
+      "transformers": "4.57.1",
+      "trl": "0.26.0",
+      "peft": "0.17.1",
+      "accelerate": "1.11.0"
+    },
+    "gpu_test": false,
+    "python_import": true,
+    "cuda_extension_import": true,
+    "torch_cuda_runtime": "12.8"
+  },
+  "freeze": {
+    "path": "/data0/users/lixiaoyang/logs/copsd_official_10lang/vllm011_environment_freeze_20261018.txt",
+    "sha256": "9172de0bc116b28f5d8753eab607cbc0f1d2a3454667389c185efc1e09218aa6"
+  }
+}
