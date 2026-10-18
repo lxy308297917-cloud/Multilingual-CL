@@ -1,0 +1,20 @@
+--- a/multilingual_data_collator.py
++++ b/multilingual_data_collator.py
+@@ -46,7 +46,9 @@
+         self.include_reference_solution_en = include_reference_solution_en
+ 
+         print(f"[DataCollator] Original padding_side: {self.tokenizer.padding_side}")
+-        self.tokenizer.padding_side = "right"
++        # Decoder-only batched generation must end each prompt with its final
++        # real token. Right padding makes shorter prompts decode from PAD.
++        self.tokenizer.padding_side = "left"
+         print(f"[DataCollator] Set padding_side to: {self.tokenizer.padding_side}")
+         print(f"[DataCollator] Reason first mode: {self.reason_first}")
+         print(f"[DataCollator] Include English problem: {self.include_problem_en}")
+@@ -295,4 +297,4 @@
+                 }
+             )
+ 
+-        return result
+\ No newline at end of file
++        return result
