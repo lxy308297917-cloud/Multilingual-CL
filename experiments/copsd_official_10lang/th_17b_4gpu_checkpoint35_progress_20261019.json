@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-19T00:50:13.927691+08:00",
+  "checkpoint": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-35",
+  "global_step": 35,
+  "file_sizes": {
+    "adapter_model.safetensors": 278973888,
+    "adapter_config.json": 954,
+    "optimizer.pt": 558173226,
+    "scheduler.pt": 1064,
+    "trainer_state.json": 4152,
+    "rng_state_0.pth": 14960,
+    "rng_state_1.pth": 14960,
+    "rng_state_2.pth": 14960,
+    "rng_state_3.pth": 14960
+  },
+  "adapter_sha256": "c8db80887095378d8c0b62cff07c8fec7398565ad314be585666a6c935801008",
+  "generation_records_in_log": 1120,
+  "rollouts": 1120,
+  "generated_tokens_first_1120": 2135920,
+  "capped_first_1120": 853,
+  "elapsed_seconds_rounded_progress_bar": 35233,
+  "allocated_gpu_hours": 39.147777777777776,
+  "scope": "Checkpoint files and trainer state observed, no optimizer reload or actual distributed restore performed",
+  "evaluation": "No new development scores available"
+}
