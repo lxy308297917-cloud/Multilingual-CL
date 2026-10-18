@@ -1,0 +1,55 @@
+--- a/multilingual_opsd_train.py
++++ b/multilingual_opsd_train.py
+@@ -3,7 +3,7 @@
+ os.environ["VLLM_NO_USAGE_STATS"] = "1"
+ os.environ["DO_NOT_TRACK"] = "1"
+ 
+-CACHE_ROOT = "YOUR PATH"
++CACHE_ROOT = os.environ.get("COPSD_CACHE_ROOT", "/data0/users/lixiaoyang/cache/copsd_official")
+ 
+ # ====== Hugging Face ======
+ os.environ["HF_HOME"] = f"{CACHE_ROOT}/huggingface"
+@@ -317,13 +317,17 @@
+         revision=model_args.model_revision,
+         trust_remote_code=model_args.trust_remote_code,
+         attn_implementation=model_args.attn_implementation or "flash_attention_2",
+-        torch_dtype=model_dtype,
+-        use_cache=False if training_args.gradient_checkpointing else True,
++        torch_dtype=str(model_dtype).removeprefix("torch."),
++        use_cache=False,
+     )
+     quantization_config = get_quantization_config(model_args)
+     if quantization_config is not None:
+         model_kwargs["device_map"] = get_kbit_device_map()
+         model_kwargs["quantization_config"] = quantization_config
++    elif num_processes > 1:
++        # TRL defaults string-loaded models to device_map="auto". Accelerate
++        # rejects that map in DDP; each rank must load on its local device.
++        model_kwargs["device_map"] = None
+ 
+     training_args.model_init_kwargs = model_kwargs
+ 
+@@ -414,5 +418,5 @@
+         completions_callback = LogCompletionsCallback(trainer, generation_config, num_prompts=8)
+         trainer.add_callback(completions_callback)
+ 
+-    trainer.train()
+-    trainer.save_model(training_args.output_dir)
+\ No newline at end of file
++    trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
++    trainer.save_model(training_args.output_dir)
+--- a/multilingual_opsd_trainer.py
++++ b/multilingual_opsd_trainer.py
+@@ -706,8 +706,11 @@
+         else:
+             adapter_context = nullcontext()
+ 
++        # DDP tracks only the student forward. The fixed teacher shares the same
++        # local base weights but runs without adapters and without gradients.
++        teacher_model = self.accelerator.unwrap_model(model) if self.accelerator.num_processes > 1 else model
+         with torch.no_grad(), adapter_context:
+-            outputs_teacher = model(
++            outputs_teacher = teacher_model(
+                 input_ids=inputs["teacher_input_ids"],
+                 attention_mask=inputs["teacher_attention_mask"],
+             )
