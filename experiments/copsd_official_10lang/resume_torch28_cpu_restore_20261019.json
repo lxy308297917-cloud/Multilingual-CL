@@ -1,0 +1,56 @@
+{
+  "observed_at": "2026-10-19T01:05:52.166646+08:00",
+  "checkpoint": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-35",
+  "global_step": 35,
+  "runtime": {
+    "torch": "2.8.0+cu128",
+    "numpy": "2.2.6",
+    "numpy_rng_compat": "old reconstruct path and uint32 dtype allowlist",
+    "weights_only_default_preserved": true
+  },
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "4.57.1",
+    "trl": "0.26.0",
+    "peft": "0.17.1",
+    "accelerate": "1.11.0",
+    "datasets": "3.6.0",
+    "numpy": "2.2.6"
+  },
+  "optimizer_state_count": 392,
+  "optimizer_steps": [
+    35
+  ],
+  "optimizer_moments_finite": true,
+  "scheduler_last_epoch": 35,
+  "learning_rates": [
+    3.2500000000000002e-06,
+    3.2500000000000002e-06
+  ],
+  "rank_rng_results": [
+    {
+      "rank": 0,
+      "python_numpy_cpu_rng_restored": true,
+      "cuda_rng_restored": false
+    },
+    {
+      "rank": 1,
+      "python_numpy_cpu_rng_restored": true,
+      "cuda_rng_restored": false
+    },
+    {
+      "rank": 2,
+      "python_numpy_cpu_rng_restored": true,
+      "cuda_rng_restored": false
+    },
+    {
+      "rank": 3,
+      "python_numpy_cpu_rng_restored": true,
+      "cuda_rng_restored": false
+    }
+  ],
+  "bootstrap_sha256": "9cd3eaa61e52ae21ac08bc21b2bb02195a29e9898ee96de59e72fb1954bafb94",
+  "scope": "Exercise real Trainer restore helpers on saved TH states, without a GPU.\n\nValidates serialization/runtime compatibility, not model parameter-name mapping,\nCUDA RNG restoration, distributed execution, or resumed data-loader position.",
+  "distributed_model_resume_verified": false,
+  "current_training_or_environment_modified": false
+}
