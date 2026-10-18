@@ -1,0 +1,66 @@
+{
+  "checkpoint": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-5",
+  "global_step": 5,
+  "adapter_tensors": 392,
+  "all_adapter_tensors_finite": true,
+  "nonzero_lora_B_tensors": 196,
+  "optimizer_parameter_states": 392,
+  "optimizer_steps": [
+    5.0
+  ],
+  "scheduler_last_epoch": 5,
+  "per_rank_rng": [
+    {
+      "rank": 0,
+      "keys": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "python"
+      ]
+    },
+    {
+      "rank": 1,
+      "keys": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "python"
+      ]
+    },
+    {
+      "rank": 2,
+      "keys": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "python"
+      ]
+    },
+    {
+      "rank": 3,
+      "keys": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "python"
+      ]
+    }
+  ],
+  "scope": "CPU deserialization and consistency only; full distributed resume not executed",
+  "remaining_validation": "Actual GPU save/load/resume short run remains unverified",
+  "adapter_sha256": "7925dfd756028629f9514b34dd3c88ad01d66bfafa94c5e20feeb4b7b8cf17a0",
+  "validated_at": "2026-10-18T16:28:57.992147+08:00",
+  "first_five_updates": {
+    "optimizer_updates": 5,
+    "rollouts": 160,
+    "generated_tokens": 297405,
+    "cap_2048_count": 112,
+    "elapsed_seconds_rounded_progress_bar": 5064,
+    "allocated_gpu_hours": 5.626666666666667,
+    "generated_tokens_per_full_training_second": 58.7292654028436,
+    "linear_100_update_hours_excluding_eval": 28.133333333333333,
+    "remaining_95_updates_hours_at_same_mean": 26.726666666666667,
+    "counting_scope": "micro batch1 logs; generation tokens include stop tokens; valid distillation tokens not separately measured"
+  }
+}
