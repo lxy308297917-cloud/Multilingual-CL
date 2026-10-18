@@ -1,5 +1,15 @@
 # COPSD 单卡耗时与相关方法的实验建议（2026-10-16）
 
+## 2026-10-18 续跑：英语保持评测与完整官方依赖
+
+补齐了英语保持评测输入和入口，尚未启动正式测试。GSM8K main test 的 1319 条输入从既有本地 Arrow 缓存导出，并与 [OpenAI 官方固定 commit 的 test.jsonl](https://raw.githubusercontent.com/openai/grade-school-math/b0bb162abedc65e1fdd8e93ed090fd7598ee68bc/grade_school_math/data/test.jsonl) 的题目及数值答案按顺序逐条核对一致；原始文件 SHA256 为 `3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14`。数值 gold 来自官方 `####` 后缀，参考解答不会进入模型输入。与当前共享 2900 训练题及 100 开发题的英文题面，在 NFKC／空白合并／casefold 下的精确重叠分别为 0；不声称覆盖模糊或语义重复。与 MGSM-Rev2 English 250 题有 228 道相同英文题，不能把二者当两份独立测试证据。
+
+项目英语 GSM8K 协议固定为 0-shot、COPSD 发布 EN 指令与 English thinking 前缀、2048 token 上限、单次采样及现有 math_verify／boxed 评分，和本轨其他项目单次评测保持同一生成参数。它独立于旧 SW D2 5-shot 协议及 COPSD 官方已发表的其他 benchmark 分数。`run_english_math_17b.sh` 支持 `gsm8k|mgsm_rev2 base|adapter RUN_ID [CHECKPOINT]`，由单卡 GPU 队列调用；MGSM-Rev2 English 250 题可作同题阶段对齐补充，完整 GSM8K 保持评测仍单独报告。输入 JSON 复用冻结 evaluator 的通用 `id/question/answer` 读取器，其历史 CLI 别名为 `polymath_project`；实际 benchmark 身份、输入／evaluator／adapter 哈希由独立 `BENCHMARK_PROTOCOL.json` 明确记录，不能按读取器别名误标结果。现有 SW、TH 等待评测的 evaluator 未改。
+
+`prepare_english_gsm8k.py` 可从固定 SHA 的官方 JSONL 重建输入与重叠报告；已在临时目录重建并确认导出字节与冻结文件完全相同，实际旧 evaluator 可读取全部 1319 项，EN 官方提示存在，新增 shell 与内嵌 Python 语法通过。输入位于 `data/copsd_official_20261015/gsm8k_project_en_zeroshot_v1/`，记录见 `english_math_data_20261018.json`。正式测试仅在开发集选定 checkpoint 并冻结协议后运行，不用于选择语言、训练题或超参数。
+
+独立 vLLM 环境进一步按 `requirements_vllm011_train.txt` 补齐 DeepSpeed0.18.2 和 bitsandbytes0.48.2，`environment.yml` 的全部 17 项官方版本与实际安装完全一致。关闭 GPU 可见性并设 `DS_BUILD_OPS=0` 安装成功，`pip check` 通过，固定官方训练入口 `multilingual_opsd_train.py --help` 退出码 0。完整 freeze 与验证记录为 `vllm011_training_environment_freeze_20261018.txt`、`vllm011_training_environment_20261018.json`。这仅证明依赖和入口导入通过；未编译／测试 DeepSpeed GPU 算子，也未验证 vLLM 的显存、生成、权重同步和训练吞吐。当前正式 SW／TH 继续使用原环境，不因准备新环境而改动运行代码。
+
 ## 2026-10-18：SW 逐题诊断与用户提速建议的落实
 
 四卡 TH 正式运行的首个完整更新已完成：32 条 rollout、61,685 个生成 token，用时 1048.32 秒（约 17 分 28 秒），按整次更新计算生成吞吐约 58.84 token/s，线性外推 100 更新约 29.12 小时，另计评测和保存。这是单次更新的 TH 记录，不是同题 SW 的配对测速；学生长度和稳定吞吐仍可能变化。原始计数见 `th_17b_four_gpu_first_update_20261018.json`。原 SW 及四卡 TH 均已核对实际训练 PID 和 GPU 计算进程存活。
