@@ -1,6 +1,6 @@
 # COPSD 官方源码十语言实验状态
 
-更新时间：2026-10-18 15:02（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。以下 10 月 16 日段落保留为历史快照；当前状态以紧接的 10 月 18 日段落及下面的 14:52 更新为准。
+更新时间：2026-10-18 15:07（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。以下 10 月 16 日段落保留为历史快照；当前状态以紧接的 10 月 18 日段落及下面的 14:52 更新为准。
 
 ## 2026-10-18 当前进展
 
@@ -14,6 +14,10 @@
 - 14:53 v6 结束：关闭检查点后，完整词表 JSD 在 GPU 2 仅剩约 698 MiB 时申请 1.16 GiB，CUDA OOM；没有完成更新。上述“当前运行”为当时快照。
 - 14:57–14:59 v7 使用相同隔离源码、非重入式激活检查点和 `ddp_find_unused_parameters=false` 完成四卡完整长度一步：四 rank 生成长度 1181/2048/2048/2048，整步 123.47 秒，loss 0.000343、grad norm 0.1346，退出码 0；`checkpoint-1` 含 adapter、optimizer、scheduler 和四 rank RNG 文件，日志及 TensorBoard 留存。它证明工程更新能完成，不是方法效果结论。短测不接续正式训练。
 - 根据 v7 冻结的源码和参数，从原始 Qwen3-1.7B 配置了 TH 独立 single：四 GPU、每卡 micro 1、梯度累积 8、有效 batch 32、100 更新、2048 token 上限、LoRA r64、固定教师、每 5 更新保存，TensorBoard 开启。15:01 已手动启动队列 `copsd-th-17b-project2900-4gpu-v1`，脚本 `run_four_gpu_17b_project_v2.sh`，输出 `models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2`，日志 `logs/copsd_official_10lang/th_17b_project2900_4gpu_v2.run.log`；冻结脚本、源码、数据、模型哈希在同名前缀 `MANIFEST.json`。需核查取得 GPU 和首步更新，启动命令本身不代表训练成功。正式 eval 继续由独立开发集脚本在 checkpoint 后执行；官方入口 `eval_dataset=None`，没有把训练 loss 冒充 eval。
+
+
+- 15:01:25 队列实际取得 GPU 2/3/4/5，四个训练进程开始 TH 在线生成；SW GPU 0 同时运行，本账号正好五卡，其他用户 GPU 1/6/7 未动。训练队列 `phase=running`，首个有效 batch32 更新仍未完成，正式总耗时需据首个完整更新估计。
+- TH Base 与四卡 TH checkpoint-20 的同一 100 题开发集、同一单次回答协议评测队列已分别 `validate` 并手动启动，当前均为 `waiting`，不占 GPU。队列 `copsd-th-17b-dev100-base-4gpu-v2`、`copsd-th-17b-dev100-ckpt20-4gpu-v2` 遵守五卡总上限；仅当 SW 或 TH 释放卡后才运行。checkpoint-20 若未形成，适配评测脚本会拒绝启动并保留失败记录，不能将排队视为已获得效果结果。
 
 - SW 1.7B single 仍在 GPU 0 运行，已保存至 checkpoint-65。14:03 日志中约 2201 条在线 rollout、4,005,418 个生成 token，纯生成累计 68.04 小时；最近 100 条平均 98.8 秒/题，约 71.5% 的全部回答触及 2048 token 上限。100 步目标与正式测试尚未完成。队列 `copsd-sw-17b-project2900-formal-v1` 为 `running`，对应 PID 1933369。
 - 同一 100 题独立开发集和同一单次生成协议下，Base 2/100、正常终止 9/100；SW checkpoint-20 11/100、正常终止 43/100。两项队列于 10 月 16 日分别以退出码 0 完成，原始逐题输出、配置和 `DONE.json` 在 `logs/copsd_official_10lang/evaluation/sw_17b_dev100_{base,ckpt20}_v1/`。这是项目开发集早期改进信号，不能代替正式 MGSM-Rev2、PolyMath 或官方 AfriMGSM 成绩，也不能据此单独宣称十语效果。
