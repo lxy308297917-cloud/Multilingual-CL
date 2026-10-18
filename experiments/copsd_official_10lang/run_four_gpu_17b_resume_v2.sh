@@ -3,6 +3,9 @@ set -euo pipefail
 
 # Full four-GPU project single OPD. Use a one-time queue with target_gpus=4;
 # this entry resumes saved optimizer/scheduler/RNG state into a new output directory.
+# Uses a separate Torch 2.8 environment: the old Torch 2.5 runtime cannot restore
+# optimizer state through Transformers. This runtime change must be recorded;
+# actual four-GPU restore and CUDA compatibility remain unverified.
 test "${GPU_QUEUE_GPU_COUNT:-}" = 4
 test -n "${CUDA_VISIBLE_DEVICES:-}"
 lang="${1:?usage: run_four_gpu_17b_resume_v2.sh th NEW_RUN_ID ABSOLUTE_CHECKPOINT}"
@@ -13,14 +16,17 @@ case "$lang" in th) ;; *) exit 2 ;; esac
 [[ "$run_id" =~ ^[a-zA-Z0-9_-]+$ ]] || exit 2
 
 root=/data0/users/lixiaoyang
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 data="$root/data/copsd_official_20261015/adapted_v2_ordered/project_train_2900_${lang}.json"
 output="$root/models/checkpoint/copsd_official_17b_single_4gpu_v1/$run_id"
 test -f "$root/models/Qwen3-1.7B/MODEL_LOCK.json"
 test -s "$data"
 test ! -e "$output"
 # CPU preflight checks original launch identity and all four rank RNG files.
-"$root/envs/copsd-official-20261015/bin/python" - "$checkpoint" "$lang" <<'CHECK'
+"$root/envs/copsd-vllm011-20261018/bin/python" - "$checkpoint" "$lang" <<'CHECK'
 import hashlib,json,sys
+from transformers.utils.import_utils import check_torch_load_is_safe
+check_torch_load_is_safe()
 from pathlib import Path
 checkpoint=Path(sys.argv[1]).resolve()
 root=Path('/data0/users/lixiaoyang')
@@ -54,10 +60,10 @@ cd "$root/COPSD-ddp-teacher-unwrapped-20261018"
 # Frozen from successful v7 four-GPU one-update probe; fixed teacher runs
 # unwrapped without gradients, student through DDP. This DDP/SDPA/Transformers
 # backend is a project adaptation; official four-GPU launcher uses ZeRO-2, FA2, vLLM.
-exec "$root/envs/copsd-official-20261015/bin/accelerate" launch \
+exec "$root/envs/copsd-vllm011-20261018/bin/accelerate" launch \
   --multi_gpu --num_processes 4 --mixed_precision bf16 \
   --gradient_accumulation_steps 8 --main_process_port 12979 \
-  multilingual_opsd_train.py \
+  "$script_dir/resume_torch28_entry.py" \
   --train_language "${lang^^}" --translated_data_path "$data" \
   --model_name_or_path "$root/models/Qwen3-1.7B" \
   --learning_rate 5e-6 --max_grad_norm 0.1 \
