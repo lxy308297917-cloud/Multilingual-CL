@@ -1,0 +1,85 @@
+{
+  "scope": "CPU synthetic logits; actual functions AST extracted; no GPU speed or long-run stability claim",
+  "results": [
+    {
+      "dtype": "torch.float32",
+      "seed": 42,
+      "clip": null,
+      "steps": 3,
+      "max_loss_abs_difference": 4.76837158203125e-07,
+      "max_gradient_abs_difference": 0.0,
+      "final_parameter_max_abs_difference": 0.0,
+      "adam_exp_avg_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.float32",
+      "seed": 42,
+      "clip": 0.05,
+      "steps": 3,
+      "max_loss_abs_difference": 2.384185791015625e-07,
+      "max_gradient_abs_difference": 0.0,
+      "final_parameter_max_abs_difference": 0.0,
+      "adam_exp_avg_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.float32",
+      "seed": 43,
+      "clip": null,
+      "steps": 3,
+      "max_loss_abs_difference": 4.76837158203125e-07,
+      "max_gradient_abs_difference": 0.0,
+      "final_parameter_max_abs_difference": 0.0,
+      "adam_exp_avg_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.float32",
+      "seed": 43,
+      "clip": 0.05,
+      "steps": 3,
+      "max_loss_abs_difference": 2.384185791015625e-07,
+      "max_gradient_abs_difference": 0.0,
+      "final_parameter_max_abs_difference": 0.0,
+      "adam_exp_avg_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "seed": 42,
+      "clip": null,
+      "steps": 3,
+      "max_loss_abs_difference": 0.0,
+      "max_gradient_abs_difference": 0.0,
+      "final_parameter_max_abs_difference": 0.0,
+      "adam_exp_avg_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "seed": 42,
+      "clip": 0.05,
+      "steps": 3,
+      "max_loss_abs_difference": 0.0,
+      "max_gradient_abs_difference": 0.0,
+      "final_parameter_max_abs_difference": 0.0,
+      "adam_exp_avg_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "seed": 43,
+      "clip": null,
+      "steps": 3,
+      "max_loss_abs_difference": 0.03125,
+      "max_gradient_abs_difference": 0.0,
+      "final_parameter_max_abs_difference": 0.0,
+      "adam_exp_avg_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "seed": 43,
+      "clip": 0.05,
+      "steps": 3,
+      "max_loss_abs_difference": 0.0,
+      "max_gradient_abs_difference": 0.0,
+      "final_parameter_max_abs_difference": 0.0,
+      "adam_exp_avg_max_abs_difference": 0.0
+    }
+  ]
+}
