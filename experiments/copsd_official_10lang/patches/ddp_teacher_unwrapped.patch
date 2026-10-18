@@ -1,0 +1,15 @@
+--- a/multilingual_opsd_trainer.py
++++ b/multilingual_opsd_trainer.py
+@@ -706,8 +706,11 @@
+         else:
+             adapter_context = nullcontext()
+ 
++        # DDP tracks only the student forward. The fixed teacher shares the same
++        # local base weights but runs without adapters and without gradients.
++        teacher_model = self.accelerator.unwrap_model(model) if self.accelerator.num_processes > 1 else model
+         with torch.no_grad(), adapter_context:
+-            outputs_teacher = model(
++            outputs_teacher = teacher_model(
+                 input_ids=inputs["teacher_input_ids"],
+                 attention_mask=inputs["teacher_attention_mask"],
+             )
