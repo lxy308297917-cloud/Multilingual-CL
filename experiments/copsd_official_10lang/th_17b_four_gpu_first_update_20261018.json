@@ -1,0 +1,16 @@
+{
+  "run": "th_17b_project2900_4gpu_v2",
+  "scope": "first complete optimizer update only; TH, not a paired SW speed comparison",
+  "update": 1,
+  "world_size": 4,
+  "micro_batch": 1,
+  "gradient_accumulation": 8,
+  "rollouts": 32,
+  "actual_tokens": 61685,
+  "full_update_seconds_rounded_progress_bar": 1048.32,
+  "generated_tokens_per_full_update_second": 58.84176587301587,
+  "sum_per_rank_generation_seconds": 3653.479999999999,
+  "allocated_gpu_hours_per_update": 1.1647999999999998,
+  "linear_100_update_hours_before_eval": 29.12,
+  "caution": "single update; lengths and compute times may change; evaluation and saving add cost; log token counts valid for micro batch 1"
+}
