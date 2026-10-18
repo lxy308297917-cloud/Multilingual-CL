@@ -1,8 +1,16 @@
 # COPSD 官方源码十语言实验状态
 
-更新时间：2026-10-19 00:50（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。当前状态以最近日期的更新为准，较早段落保留为历史快照。
+更新时间：2026-10-19 01:08（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。当前状态以最近日期的更新为准，较早段落保留为历史快照。
 
 ## 2026-10-19 当前进展
+
+
+### 01:08 恢复入口的实际兼容问题与修正
+
+- 补查原环境真实Trainer恢复路径发现：Torch2.5.1／Transformers4.57.6会在加载optimizer前被`check_torch_load_is_safe`拒绝。因此此前“CPU预检通过”仅证明checkpoint文件／源码／数据身份，不足以支持直接暂停后恢复；实际拒绝证据保存于 `resume_legacy_runtime_gate_20261019.json`。当前SW／TH连续训练不受影响，未修改其环境或冻结源码。
+- 准备的恢复入口已改用现成隔离Torch2.8环境，并通过 `resume_torch28_entry.py` 为旧NumPy RNG的具体类型／模块名增加兼容allowlist，未禁用Torch版本检查、未替换`torch.load`或使用`weights_only=False`。当前正式训练入口未改，只有未来恢复启动器改变。
+- 对真实TH checkpoint-35调用Trainer原生恢复函数的CPU检查已通过：392个AdamW状态的step均为35，moment均有限，scheduler last_epoch=35；四rank的Python、NumPy和CPU RNG均恢复并逐项一致。原生新环境不加旧NumPy模块名兼容时会拒绝该RNG文件。证据和实际版本见 `resume_torch28_cpu_restore_20261019.json`，复查脚本为 `verify_resume_state_cpu.py`；shell语法、新入口`--help`与更新后的CPU预检均通过。
+- 此候选会改变运行时：Torch2.5.1→2.8.0、Transformers4.57.6→4.57.1、datasets4.8.5→3.6.0、NumPy1.26.4→2.2.6，必须单列环境适配，不能声称原环境精确续跑。CUDA RNG、真实模型参数映射、四卡恢复更新及数据采样位置仍未实测，不将CPU通过当作完整resume成功。尚未收到暂停确认，未取消或重启当前训练；原长期只读监测会话仍在监督同一进程。
 
 ### 00:50 小时监督：SW checkpoint-80／TH checkpoint-35
 
