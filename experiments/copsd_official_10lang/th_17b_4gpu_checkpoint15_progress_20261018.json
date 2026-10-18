@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-18T19:15:43.528502+08:00",
+  "checkpoint": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-15",
+  "global_step": 15,
+  "file_sizes": {
+    "adapter_model.safetensors": 278973888,
+    "adapter_config.json": 954,
+    "optimizer.pt": 558173226,
+    "scheduler.pt": 1064,
+    "trainer_state.json": 2168,
+    "rng_state_0.pth": 14960,
+    "rng_state_1.pth": 14960,
+    "rng_state_2.pth": 14960,
+    "rng_state_3.pth": 14960
+  },
+  "adapter_sha256": "19e8ecb94c1855d615a5834798955f0a409cbfead525362432e1bd02fcc397ba",
+  "parsed_generation_records": 480,
+  "rollouts": 480,
+  "generated_tokens": 894363,
+  "cap_2048_count": 341,
+  "elapsed_seconds_rounded_progress_bar": 15217,
+  "allocated_gpu_hours": 16.907777777777778,
+  "scope": "Files and trainer state verified; first 480 generation records counted, no new distributed restore claim",
+  "evaluation": "No new TH or SW development scores available"
+}
