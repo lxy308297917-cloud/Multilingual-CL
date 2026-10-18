@@ -1,8 +1,16 @@
 # COPSD 官方源码十语言实验状态
 
-更新时间：2026-10-18 16:29（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。以下 10 月 16 日段落保留为历史快照；当前状态以紧接的 10 月 18 日段落及下面的 14:52 更新为准。
+更新时间：2026-10-18 17:04（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。以下 10 月 16 日段落保留为历史快照；当前状态以紧接的 10 月 18 日段落及下面的 14:52 更新为准。
 
 ## 2026-10-18 当前进展
+
+
+### 正式源码可完整重建
+
+- 已从固定官方 commit 独立取得四个核心原文件，并分别生成 SW single／TH DDP 的完整补丁。临时目录应用后，train、trainer、collator、language_config 四文件逐一与实际运行 manifest 哈希一致，记录在 `CORE_SOURCE_REBUILD_LOCK_20261018.json`。新增完整补丁为 `patches/single_complete_from_4f441073.patch` 和 `patches/formal_ddp_complete_from_4f441073.patch`；它们各自直接用于干净官方 checkout，不与旧增量补丁叠加。
+- SW 存活进程实际使用 `COPSD-local-adapter-20261015`，trainer 与官方原文件一致；TH trainer 仅加入教师前向绕过 DDP 的适配。完整四卡补丁还补齐了增量记录遗漏的加载缓存设置，运行中的文件未改。它在当前开启梯度检查点的正式配置下与原条件式相同，但源码哈希复现仍需包含。
+- vLLM0.11 的 `external_launcher` 静态接口链保留了官方同步代码所访问的兼容属性，无需据此先行改写同步器；GPU 运行和实际同步仍待空卡验证。原只读 checkpoint-10 监测会话继续观察同一 SW／TH PID，不因本轮源码归档而重启训练。
+
 
 
 ### TH 四卡首个正式 checkpoint-5
