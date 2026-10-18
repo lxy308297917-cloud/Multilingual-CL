@@ -24,7 +24,7 @@ export TRANSFORMERS_OFFLINE=1
 export OMP_NUM_THREADS=4
 export MKL_NUM_THREADS=4
 mkdir -p "$COPSD_CACHE_ROOT" "$WANDB_DIR" "$(dirname "$output")"
-cd "$root/COPSD-fast-kl-leftpad-ddp-probe-20261018"
+cd "$root/COPSD-fast-kl-leftpad-ddp-teacher-probe-20261018"
 
 # Four workers × micro batch 2 × accumulation 4 = effective batch 32.
 # This isolated throughput probe additionally uses left-padded batch prompts
@@ -37,7 +37,7 @@ exec "$root/envs/copsd-official-20261015/bin/accelerate" launch \
   --model_name_or_path "$root/models/Qwen3-1.7B" \
   --learning_rate 5e-6 --max_grad_norm 0.1 \
   --per_device_train_batch_size 2 --gradient_accumulation_steps 4 \
-  --gradient_checkpointing --gradient_checkpointing_kwargs '{"use_reentrant": false}' \
+  --gradient_checkpointing --gradient_checkpointing_kwargs '{"use_reentrant": false}' --ddp_find_unused_parameters false \
   --max_steps 1 --save_steps 1 --logging_steps 1 \
   --output_dir "$output" --run_config "$run_id" \
   --max_completion_length 2048 --max_length 20000 \
