@@ -1,0 +1,172 @@
+{
+  "scope": "100 independent development questions, one sampling seed; not a formal test",
+  "sources": {
+    "sw_17b_dev100_base_v1": {
+      "items_sha256": "0b1a93ab0a721e6efdea1d92abd2d24af42cdd88f4f0e272418942ef963f76b6",
+      "config": {
+        "input_kind": "dev",
+        "language": "sw",
+        "input": "/data0/users/lixiaoyang/data/copsd_official_20261015/adapted_v2_ordered/project_dev_100_sw.json",
+        "input_sha256": "cf2c0e6b802e5c88de9398a859a894c96d99b9207618211359c796134c24a87c",
+        "official_eval_source": "/data0/users/lixiaoyang/COPSD-official-20261015/polymath_eval/evaluate_math.py",
+        "official_eval_source_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+        "base_model": "/data0/users/lixiaoyang/models/Qwen3-1.7B",
+        "adapter": null,
+        "samples": 1,
+        "max_new_tokens": 2048,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 0,
+        "backend": "Transformers, project adaptation; COPSD official prompt strings and math_verify scorer"
+      }
+    },
+    "sw_17b_dev100_ckpt20_v1": {
+      "items_sha256": "e2412419d5e0dbe2f2d954ca2f1a3c708d8f910d6eebd990641be9ae22ba45ba",
+      "config": {
+        "input_kind": "dev",
+        "language": "sw",
+        "input": "/data0/users/lixiaoyang/data/copsd_official_20261015/adapted_v2_ordered/project_dev_100_sw.json",
+        "input_sha256": "cf2c0e6b802e5c88de9398a859a894c96d99b9207618211359c796134c24a87c",
+        "official_eval_source": "/data0/users/lixiaoyang/COPSD-official-20261015/polymath_eval/evaluate_math.py",
+        "official_eval_source_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+        "base_model": "/data0/users/lixiaoyang/models/Qwen3-1.7B",
+        "adapter": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_v1/sw_17b_project2900_seed42_20261015_v1/checkpoint-20",
+        "samples": 1,
+        "max_new_tokens": 2048,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 0,
+        "backend": "Transformers, project adaptation; COPSD official prompt strings and math_verify scorer"
+      }
+    }
+  },
+  "metrics": {
+    "sw_17b_dev100_base_v1": {
+      "n": 100,
+      "correct": 2,
+      "finished": 9,
+      "cap_2048": 91,
+      "boxed_extracted": 11,
+      "think_closed": 9,
+      "mean_tokens": 1925.65,
+      "median_tokens": 2048.0,
+      "correct_with_box": 2,
+      "correct_and_finished": 2,
+      "repeated_4gram_fraction_mean": 0.8356042033395659,
+      "repeated_4gram_fraction_median": 0.9083306613810592,
+      "repeated_4gram_fraction_gt_0_5": 90
+    },
+    "sw_17b_dev100_ckpt20_v1": {
+      "n": 100,
+      "correct": 11,
+      "finished": 43,
+      "cap_2048": 57,
+      "boxed_extracted": 56,
+      "think_closed": 44,
+      "mean_tokens": 1680.57,
+      "median_tokens": 2048.0,
+      "correct_with_box": 11,
+      "correct_and_finished": 10,
+      "repeated_4gram_fraction_mean": 0.41083082742773647,
+      "repeated_4gram_fraction_median": 0.38784562561420965,
+      "repeated_4gram_fraction_gt_0_5": 31
+    }
+  },
+  "paired": {
+    "ids_questions_answers_prompts_sample_seeds_equal": true,
+    "gained_ids": [
+      "05a809fb81b0a32b370933d6a5c9f338935e18ec8f0eb0e471a93208a7750cba",
+      "01b65b79aba7d62b84cc0c7b85f04f58e76f61567fc7acc733b0a1090376c2e2",
+      "06d1fefb8d674dce6685c5ae680051fbd0a40c2c6492603cbe3859040f9a96eb",
+      "070acb7a59d8ec83d17a4ce87ba32739efc5b16b7b49e2290fc89dc47c229727",
+      "025012664840b930267a63c3ed69f743de2bd577b7ac0f9e236fd0761f9fddd3",
+      "06c725ac40987010a964c847a768007830eb724abcd09ad8a90398db2b62ba30",
+      "0105ed957bc756b34561c914401f618c0c8bd61ba9229e176822c34eca836611",
+      "03062f72b27eb93bdff4420a708b78c262fd89d983baf4cfef6ea60df4cdcced",
+      "009c074bf4eb953f9c9e13dc3052b48987683459b4e99055d15d256fba4df42e"
+    ],
+    "lost_ids": [],
+    "retained_correct_ids": [
+      "0014142e5f3c28a7b09446252f4a627a50ca4010f859e17ba2bd12b4c00a830a",
+      "023f989e814ee03d4bb4df7af0334cff0f4ee0953022eda407a0c9fb290a40a2"
+    ],
+    "delta_accuracy_pp": 9.0,
+    "other_eval_config_equal": true
+  },
+  "manual_checks": [
+    {
+      "id": "05a809fb81b0a32b370933d6a5c9f338935e18ec8f0eb0e471a93208a7750cba",
+      "observation": "Arithmetic gain verified: (25*2+15*7)*13 = 2015; checkpoint shows valid arithmetic transformations, despite poor prose."
+    },
+    {
+      "id": "06d1fefb8d674dce6685c5ae680051fbd0a40c2c6492603cbe3859040f9a96eb",
+      "observation": "Limit gain verified: numerator=(x-1)^2, denominator=(x-1)^2*(x+1), limit=1/2."
+    },
+    {
+      "id": "06c725ac40987010a964c847a768007830eb724abcd09ad8a90398db2b62ba30",
+      "observation": "Trigonometric gain verified by double-angle identities, answer=sin(4*alpha)/2."
+    },
+    {
+      "id": "070acb7a59d8ec83d17a4ce87ba32739efc5b16b7b49e2290fc89dc47c229727",
+      "observation": "Correct limit 0 but output shifts to English; answer correctness does not certify SW reasoning retention."
+    },
+    {
+      "id": "01b65b79aba7d62b84cc0c7b85f04f58e76f61567fc7acc733b0a1090376c2e2",
+      "observation": "Proof question gold repeats statement. Boxed-formula scoring cannot certify a valid proof; do not count this as verified proof success."
+    },
+    {
+      "id": "03062f72b27eb93bdff4420a708b78c262fd89d983baf4cfef6ea60df4cdcced",
+      "observation": "Question has two limits but gold contains only 0 for the first. Second limit is e^2, while model says 0. Official scoring marks correct despite incomplete/wrong second subanswer; source record retained."
+    }
+  ],
+  "diagnostic_sensitivity_only": {
+    "excluded_ids": [
+      "01b65b79aba7d62b84cc0c7b85f04f58e76f61567fc7acc733b0a1090376c2e2",
+      "03062f72b27eb93bdff4420a708b78c262fd89d983baf4cfef6ea60df4cdcced"
+    ],
+    "n": 98,
+    "base_correct": 2,
+    "checkpoint20_correct": 9,
+    "note": "Post-hoc sensitivity diagnostic only; neither replaces original 100-item scores nor defines a new tuned benchmark."
+  },
+  "training_rollout_diagnostics": {
+    "note": "Different training questions across windows; not paired dev evaluation and not mathematical scores. Lower ngram repetition does not imply better language or reasoning.",
+    "windows": [
+      {
+        "saved_step": 5,
+        "n": 100,
+        "step_range": [
+          2,
+          5
+        ],
+        "think_closed": 18,
+        "contains_boxed": 19,
+        "repeated_4gram_fraction_mean": 0.8017324420895524
+      },
+      {
+        "saved_step": 20,
+        "n": 100,
+        "step_range": [
+          17,
+          20
+        ],
+        "think_closed": 35,
+        "contains_boxed": 38,
+        "repeated_4gram_fraction_mean": 0.5464516644820825
+      },
+      {
+        "saved_step": 60,
+        "n": 100,
+        "step_range": [
+          57,
+          60
+        ],
+        "think_closed": 25,
+        "contains_boxed": 24,
+        "repeated_4gram_fraction_mean": 0.13404016710540256
+      }
+    ]
+  }
+}
