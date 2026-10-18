@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-10-18T17:51:14.782320+08:00",
+  "checkpoint": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-10",
+  "global_step": 10,
+  "file_sizes": {
+    "adapter_model.safetensors": 278973888,
+    "adapter_config.json": 954,
+    "optimizer.pt": 558173226,
+    "scheduler.pt": 1064,
+    "trainer_state.json": 1751,
+    "rng_state_0.pth": 14960,
+    "rng_state_1.pth": 14960,
+    "rng_state_2.pth": 14960,
+    "rng_state_3.pth": 14960
+  },
+  "adapter_sha256": "b94d4685b38059315ea7a552b2337a0713f33bafa448b9785e45367df11a09f7",
+  "rollouts": 320,
+  "generated_tokens": 595236,
+  "cap_2048_count": 226,
+  "elapsed_seconds_rounded_progress_bar": 10086,
+  "allocated_gpu_hours": 11.206666666666667,
+  "scope": "Checkpoint files and trainer state observed; full CPU state validation previously passed at checkpoint5; no repeat distributed-resume claim",
+  "evaluation": "TH scores not yet available; checkpoint20 dev evaluation remains queued"
+}
