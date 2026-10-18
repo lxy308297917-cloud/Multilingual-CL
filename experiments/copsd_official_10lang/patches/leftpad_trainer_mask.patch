@@ -1,0 +1,15 @@
+--- a/multilingual_opsd_trainer.py
++++ b/multilingual_opsd_trainer.py
+@@ -1485,9 +1485,9 @@
+         # Create labels for generation tokens
+         # Mask prompt tokens (use per-example lengths for accurate masking)
+         labels = generated_ids.clone()
+-        for i in range(labels.shape[0]):
+-            actual_prompt_len = inputs["student_prompt_lengths_per_example"][i].item()
+-            labels[i, :actual_prompt_len] = -100  # Mask actual prompt
++        # Collator left-pads prompts to a common width. Mask that entire width,
++        # including the shorter rows' left PAD and every real prompt token.
++        labels[:, :student_prompt_len] = -100
+ 
+         if self.processing_class.pad_token_id is not None:
+             labels[labels == self.processing_class.pad_token_id] = -100
