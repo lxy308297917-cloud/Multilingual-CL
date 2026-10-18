@@ -1,8 +1,19 @@
 # COPSD 官方源码十语言实验状态
 
-更新时间：2026-10-18 14:03（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。以下 10 月 16 日段落保留为历史快照；当前状态以紧接的 10 月 18 日段落为准。
+更新时间：2026-10-18 15:02（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。以下 10 月 16 日段落保留为历史快照；当前状态以紧接的 10 月 18 日段落及下面的 14:52 更新为准。
 
 ## 2026-10-18 当前进展
+
+### 14:52 用户改为 SW 单卡加四卡联合任务
+
+- 用户要求取消刚开始的 TE、JA、RU，改为四卡联合 OPD；随后明确临时允许本周末占用本账号最多五卡，保留 SW GPU 0。三个队列分别用 `stop --cancel-job` 取消，仅操作本账号新建进程组；状态中退出码 -15 是用户取消，不是训练算法失败。各自日志和目录保留，没有 checkpoint。GPU 1/6/7 为其他用户任务，未操作；GPU 2/3/4/5 被选作四卡任务。
+- GPU 2–5 的四卡 SW 工程短测 v1 在模型加载阶段因 TRL `device_map=auto` 与 DDP 冲突失败；隔离源码副本把多进程非量化模型的 `device_map` 设为 `None`。v2 完成 32 条、55,918 生成 token，但在首次反传报 DDP `Expected to mark a variable ready only once`，没有更新。v3/v4/v5 改变梯度累积和检查点配置，仍在反传失败；**v5 名称虽含 no-gc，实际启动参数遗漏关闭梯度检查点，日志仍显示 PyTorch checkpoint，不能作为无检查点反证**。所有失败原始日志分别在 `logs/copsd_official_10lang/sw_17b_fourgpu_smoke_v*.run.log`，无有效四卡训练结果。
+- 14:51 手动启动 v6 一步短测：独立官方源码适配副本 `COPSD-ddp-teacher-unwrapped-20261018` 使无梯度固定教师前向绕过 DDP 包装，学生前向仍通过 DDP；同时脚本明确传 `--no_gradient_checkpointing`。这仅验证四卡反传和完整 2048-token 长度的显存，输出独立目录 `models/checkpoint/copsd_four_gpu_17b_smoke/sw_17b_4gpu_smoke_seed42_v6_teacher_unwrap`，队列 `copsd-sw-17b-fourgpu-smoke-v6-teacher-unwrap` 当前运行。若短测成功，需据实测吞吐再从 Base 启动独立四卡正式任务；不能把短测接为正式训练，也不能把 DDP/SDPA 后端称为官方 DeepSpeed/vLLM 完整复现。
+
+
+- 14:53 v6 结束：关闭检查点后，完整词表 JSD 在 GPU 2 仅剩约 698 MiB 时申请 1.16 GiB，CUDA OOM；没有完成更新。上述“当前运行”为当时快照。
+- 14:57–14:59 v7 使用相同隔离源码、非重入式激活检查点和 `ddp_find_unused_parameters=false` 完成四卡完整长度一步：四 rank 生成长度 1181/2048/2048/2048，整步 123.47 秒，loss 0.000343、grad norm 0.1346，退出码 0；`checkpoint-1` 含 adapter、optimizer、scheduler 和四 rank RNG 文件，日志及 TensorBoard 留存。它证明工程更新能完成，不是方法效果结论。短测不接续正式训练。
+- 根据 v7 冻结的源码和参数，从原始 Qwen3-1.7B 配置了 TH 独立 single：四 GPU、每卡 micro 1、梯度累积 8、有效 batch 32、100 更新、2048 token 上限、LoRA r64、固定教师、每 5 更新保存，TensorBoard 开启。15:01 已手动启动队列 `copsd-th-17b-project2900-4gpu-v1`，脚本 `run_four_gpu_17b_project_v2.sh`，输出 `models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2`，日志 `logs/copsd_official_10lang/th_17b_project2900_4gpu_v2.run.log`；冻结脚本、源码、数据、模型哈希在同名前缀 `MANIFEST.json`。需核查取得 GPU 和首步更新，启动命令本身不代表训练成功。正式 eval 继续由独立开发集脚本在 checkpoint 后执行；官方入口 `eval_dataset=None`，没有把训练 loss 冒充 eval。
 
 - SW 1.7B single 仍在 GPU 0 运行，已保存至 checkpoint-65。14:03 日志中约 2201 条在线 rollout、4,005,418 个生成 token，纯生成累计 68.04 小时；最近 100 条平均 98.8 秒/题，约 71.5% 的全部回答触及 2048 token 上限。100 步目标与正式测试尚未完成。队列 `copsd-sw-17b-project2900-formal-v1` 为 `running`，对应 PID 1933369。
 - 同一 100 题独立开发集和同一单次生成协议下，Base 2/100、正常终止 9/100；SW checkpoint-20 11/100、正常终止 43/100。两项队列于 10 月 16 日分别以退出码 0 完成，原始逐题输出、配置和 `DONE.json` 在 `logs/copsd_official_10lang/evaluation/sw_17b_dev100_{base,ckpt20}_v1/`。这是项目开发集早期改进信号，不能代替正式 MGSM-Rev2、PolyMath 或官方 AfriMGSM 成绩，也不能据此单独宣称十语效果。
