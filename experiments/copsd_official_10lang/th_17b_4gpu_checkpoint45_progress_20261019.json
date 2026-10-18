@@ -1,0 +1,53 @@
+{
+  "observed_at": "2026-10-19T03:46:37.404973+08:00",
+  "checkpoint": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-45",
+  "global_step": 45,
+  "file_sizes": {
+    "adapter_model.safetensors": 278973888,
+    "adapter_config.json": 954,
+    "optimizer.pt": 558173226,
+    "scheduler.pt": 1064,
+    "trainer_state.json": 5147,
+    "rng_state_0.pth": 14960,
+    "rng_state_1.pth": 14960,
+    "rng_state_2.pth": 14960,
+    "rng_state_3.pth": 14960
+  },
+  "adapter_sha256": "e2603b7f090a79ae105df7a944d9f6a33313bdcba6c5ff6e3db19a43c04340fe",
+  "generation_records_in_log": 1440,
+  "rollouts": 1440,
+  "generated_tokens_first_1440": 2775425,
+  "capped_first_1440": 1144,
+  "elapsed_seconds_rounded_progress_bar": 45819,
+  "allocated_gpu_hours": 50.91,
+  "logged_training_scalars_finite": true,
+  "recent_training_log_history": [
+    {
+      "epoch": 0.4413793103448276,
+      "grad_norm": 0.05538543686270714,
+      "learning_rate": 3.05e-06,
+      "loss": -0.0124,
+      "on_policy_loss": -0.0124,
+      "step": 40
+    },
+    {
+      "epoch": 0.463448275862069,
+      "grad_norm": 0.0633496567606926,
+      "learning_rate": 2.95e-06,
+      "loss": -0.0133,
+      "on_policy_loss": -0.0133,
+      "step": 42
+    },
+    {
+      "epoch": 0.48551724137931035,
+      "grad_norm": 0.06094731390476227,
+      "learning_rate": 2.85e-06,
+      "loss": -0.0129,
+      "on_policy_loss": -0.0129,
+      "step": 44
+    }
+  ],
+  "scope": "Checkpoint files and trainer state observed; optimizer tensors not reloaded; log finiteness is not mathematical performance",
+  "evaluation": "No new development scores available",
+  "distributed_resume_executed": false
+}
