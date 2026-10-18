@@ -1,0 +1,13 @@
+--- a/multilingual_opsd_train.py
++++ b/multilingual_opsd_train.py
+@@ -324,6 +324,10 @@
+     if quantization_config is not None:
+         model_kwargs["device_map"] = get_kbit_device_map()
+         model_kwargs["quantization_config"] = quantization_config
++    elif num_processes > 1:
++        # TRL defaults string-loaded models to device_map="auto". Accelerate
++        # rejects that map in DDP; each rank must load on its local device.
++        model_kwargs["device_map"] = None
+ 
+     training_args.model_init_kwargs = model_kwargs
+ 
