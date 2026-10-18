@@ -1,0 +1,57 @@
+{
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "upstream": {
+    "commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+    "files": {
+      "multilingual_opsd_train.py": {
+        "url": "https://raw.githubusercontent.com/cisnlp/COPSD/4f4410730e9b6775a30d20f4b6e141cba2e87590/multilingual_opsd_train.py",
+        "sha256": "3f593f83b11a174964839c77e2a2f77c68395351b82d6f2c290735c200193592",
+        "bytes": 16174
+      },
+      "multilingual_opsd_trainer.py": {
+        "url": "https://raw.githubusercontent.com/cisnlp/COPSD/4f4410730e9b6775a30d20f4b6e141cba2e87590/multilingual_opsd_trainer.py",
+        "sha256": "2dd1442cc99bcf864f00067b1c956826c35adc4169a19c684b4f4fc0e8564590",
+        "bytes": 72872
+      },
+      "multilingual_data_collator.py": {
+        "url": "https://raw.githubusercontent.com/cisnlp/COPSD/4f4410730e9b6775a30d20f4b6e141cba2e87590/multilingual_data_collator.py",
+        "sha256": "46d6462fc841977e05c475e8bfc1bdafe4d1438ec34f89af6d5b72205118145d",
+        "bytes": 11301
+      },
+      "language_config.py": {
+        "url": "https://raw.githubusercontent.com/cisnlp/COPSD/4f4410730e9b6775a30d20f4b6e141cba2e87590/language_config.py",
+        "sha256": "2177afe9b3bd753f6a82a1506848ffec1f834b51a3342bee8801899674010947",
+        "bytes": 55500
+      }
+    }
+  },
+  "tracks": {
+    "single": {
+      "runtime_source": "/data0/users/lixiaoyang/COPSD-local-adapter-20261015",
+      "complete_patch": "patches/single_complete_from_4f441073.patch",
+      "patch_sha256": "8d2a2e8211307ffe20eec9bf6c6fb16421650bf2ac96eb08989e0e77ab224f71",
+      "files_sha256": {
+        "multilingual_opsd_train.py": "aea2cc4a114bf43e9ac0a1eacb67fe7fc976d81bff06c36aeb5d1a82b790cf7a",
+        "multilingual_opsd_trainer.py": "2dd1442cc99bcf864f00067b1c956826c35adc4169a19c684b4f4fc0e8564590",
+        "multilingual_data_collator.py": "46d6462fc841977e05c475e8bfc1bdafe4d1438ec34f89af6d5b72205118145d",
+        "language_config.py": "2177afe9b3bd753f6a82a1506848ffec1f834b51a3342bee8801899674010947"
+      },
+      "rebuild_from_pristine_matches_all_four_files": true
+    },
+    "formal_ddp": {
+      "runtime_source": "/data0/users/lixiaoyang/COPSD-ddp-teacher-unwrapped-20261018",
+      "complete_patch": "patches/formal_ddp_complete_from_4f441073.patch",
+      "patch_sha256": "7bd5ab54ff2955f02907a847be7b83f64c807b6bd8931e80087fe7445ce79655",
+      "files_sha256": {
+        "multilingual_opsd_train.py": "134e09adfa449fde36c3daf8bf08646073fdce414fab84418ab0325b5f1dbf3d",
+        "multilingual_opsd_trainer.py": "61ac661d2bbea66988d1b7adc671bcd35c210f7aeb7e43a27e6e2f8872b7ffa6",
+        "multilingual_data_collator.py": "46d6462fc841977e05c475e8bfc1bdafe4d1438ec34f89af6d5b72205118145d",
+        "language_config.py": "2177afe9b3bd753f6a82a1506848ffec1f834b51a3342bee8801899674010947"
+      },
+      "rebuild_from_pristine_matches_all_four_files": true
+    }
+  },
+  "scope": "Complete patches for four core source files. Apply exactly one complete patch to a clean checkout of the official commit; do not stack historical incremental patches. No running source was modified.",
+  "sw_manifest": "/data0/users/lixiaoyang/logs/copsd_official_10lang/sw_17b_project2900_formal_v1.MANIFEST.json",
+  "th_manifest": "/data0/users/lixiaoyang/logs/copsd_official_10lang/th_17b_project2900_4gpu_v2.MANIFEST.json"
+}
