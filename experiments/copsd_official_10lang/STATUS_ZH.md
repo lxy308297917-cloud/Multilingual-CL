@@ -1,8 +1,15 @@
 # COPSD 官方源码十语言实验状态
 
-更新时间：2026-10-18 18:38（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。以下 10 月 16 日段落保留为历史快照；当前状态以紧接的 10 月 18 日段落及下面的 14:52 更新为准。
+更新时间：2026-10-18 19:16（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。以下 10 月 16 日段落保留为历史快照；当前状态以紧接的 10 月 18 日段落及下面的 14:52 更新为准。
 
 ## 2026-10-18 当前进展
+
+
+### 19:15 TH checkpoint-15 已保存
+
+- 同一只读监测会话确认 checkpoint-15 落盘，trainer state global_step=15；adapter、optimizer、scheduler 与四 rank RNG 文件均非空。随后直接核查 SW、TH launcher 和四个 worker 仍为本账号存活进程，没有重启、取消或改变冻结配置。
+- TH 前15更新：480条在线轨迹、894,363生成token，341/480触及2048上限；训练用时4小时13分37秒，分配成本约16.91 GPU小时。记录与adapter SHA256见 `th_17b_4gpu_checkpoint15_progress_20261018.json`。这是保存与吞吐证据，不是效果分数或实际分布式恢复证明。
+- SW 最近核实74/100，TH 15/100。SW checkpoint-65、TH Base及checkpoint-20开发集评测仍待五卡额度内空位；现有SW效果证据仍为同题开发集Base 2/100、checkpoint-20 11/100，尚无新分数。vLLM与修正padding的batch2 GPU测速尚未启动。
 
 
 ### 18:36 小时监督与 checkpoint-10
