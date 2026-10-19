@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-10-19T22:45:38.516420+08:00",
+  "validation": "One full-length update restored from saved checkpoint1, followed by saved checkpoint2 and ordinary Python exit.",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "start_step": 1,
+  "global_step": 2,
+  "completed_updates": 1,
+  "actual_rollouts": 32,
+  "generated_tokens": 59133,
+  "capped_at_2048_count": 28,
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "optimizer_step_restored": 1,
+  "scheduler_step_restored": 1,
+  "loaded_student_and_inference_weights_match_original_step1": true,
+  "base_unchanged_bitwise": true,
+  "student_inference_sync_steps": [
+    1,
+    2
+  ],
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state.pth"
+  ],
+  "final_adapter_matches_saved_checkpoint2": true,
+  "ordered_runtime_release_completed": true,
+  "train_seconds_including_diagnostic_hashing": 579.2226322274655,
+  "physical_board_peak_mib_sampled_1s": 17263,
+  "telemetry_sample_count": 643,
+  "telemetry_scope": "Whole allocated board, 1-second nvidia-smi sampling; may miss subsecond peaks.",
+  "restored_final_adapter_bitwise_equal_to_original_probe_step2": false,
+  "reproducibility_scope": "Verified loaded student/inference weights, optimizer, scheduler and live update. Bitwise replay is reported separately, not assumed from seed.",
+  "complete_engineering_resume_and_exit_check_accepted": true,
+  "effectiveness": "Engineering verification; no downstream score or formal100-update completion from this short run."
+}
