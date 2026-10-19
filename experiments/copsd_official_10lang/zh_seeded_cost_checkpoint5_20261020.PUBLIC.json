@@ -1,0 +1,48 @@
+{
+  "observed_at": "2026-10-20T02:23:34.121904+08:00",
+  "language": "zh",
+  "runtime": "seeded_cost_batch_v2",
+  "global_step": 5,
+  "actual_completed_rollouts": 160,
+  "generated_tokens": 295590,
+  "cost_ledger": {
+    "loss_calls": 160,
+    "valid_response_loss_positions": 295590,
+    "masked_response_positions": 32090,
+    "student_forward_calls": 160,
+    "student_forward_cuda_seconds": 36.49629302978516,
+    "student_processed_input_positions": 345338,
+    "student_attended_input_positions": 313248,
+    "teacher_forward_calls": 160,
+    "teacher_forward_cuda_seconds": 39.197558013916016,
+    "teacher_processed_input_positions": 488745,
+    "teacher_attended_input_positions": 456655,
+    "start_step": 0,
+    "global_step": 5,
+    "seed_applied_before_model_and_PEFT": 42,
+    "loss_temperature": 1.1,
+    "scope": "This process segment only; parent continuation ledgers remain separate.",
+    "forward_timer_scope": "Outer model forward CUDA events; excludes rollout, KL, backward, optimizer and saving.",
+    "method": "Original official loss returned unchanged, exact shifted-label masks counted."
+  },
+  "checkpoint_recovery_files_nonempty": true,
+  "all_first160_microstep_losses_finite": true,
+  "frozen_Base_and_inference_sync_checks_passed_through_step5": true,
+  "sampler_prefix_reconstruction": {
+    "data_seed": 42,
+    "reconstructed_exposures": 160,
+    "student_teacher_processed_and_attended_totals_match_actual_ledger": true,
+    "scope": "Reconstructed from trusted saved arguments/pinned sampler; checked against four actual forward-position totals. Not a direct per-microstep runtime ID log. Actual IDs/fingerprints kept private."
+  },
+  "training_status": "running",
+  "effectiveness": "Base development25/100; final model not yet evaluated. No method improvement claim.",
+  "sync_steps_verified": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "student_adapter_and_inference_weights_changed": true
+}
