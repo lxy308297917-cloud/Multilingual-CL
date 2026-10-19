@@ -96,3 +96,23 @@ patch -d COPSD-rebuild-ddp-4f441073 -p1 < experiments/copsd_official_10lang/patc
 已修正**尚未启动**的`run_four_gpu_17b_resume_v2.sh`，改用已有隔离`copsd-vllm011-20261018`环境。新增bootstrap仅为旧NumPy RNG的reconstruct模块名及uint32状态类型提供显式兼容，保留weights-only加载和Torch版本检查，然后运行同一冻结官方适配入口。没有改损失、LoRA、固定教师、batch32、100总更新或2048上限。运行时版本变化必须记录：Torch2.5.1→2.8.0、Transformers4.57.6→4.57.1、datasets4.8.5→3.6.0、NumPy1.26.4→2.2.6；TRL0.26.0／PEFT0.17.1／Accelerate1.11.0相同，不称为原环境精确续跑。
 
 `verify_resume_state_cpu.py`对真实checkpoint-35调用Trainer原生optimizer／scheduler／RNG恢复函数，验证392个optimizer状态及四rank的Python、NumPy、CPU RNG；结果在`resume_torch28_cpu_restore_20261019.json`。这只消除了CPU序列化兼容阻塞：没有验证CUDA RNG、实际LoRA参数名与optimizer顺序映射、四卡更新、数据skip位置或新CUDA内核，尚不能保证实际恢复成功。新入口`--help`、shell语法及冻结身份预检通过。未收到暂停确认，现有训练继续。若后续实际恢复，需冻结并记录新环境、父checkpoint及bootstrap哈希；不能隐去环境改变。
+
+
+## 2026-10-19 11:35 实测结果：vLLM生成端明显更快
+
+模型固定Qwen3-1.7B、同一revision和SW checkpoint20 adapter，使用同四题官方学生prompt token、temperature1.1／top_p0.95／top_k20／2048上限。均在隔离Torch2.8环境进行，未缩短回答、改变损失或生成离线SFT标签。
+
+| 后端 | batch | GPU | 生成token/s | 观测设备峰值MiB |
+| --- | ---: | --- | ---: | ---: |
+| Transformers | 2 | 4（同卡复测） | 32.46 | 4821 |
+| vLLM | 2 | 4 | 201.85 | 18792 |
+| Transformers | 4 | 3 | 63.31 | 5689 |
+| vLLM | 4 | 5 | 322.96 | 18894 |
+
+同GPU4、batch2的token吞吐比为6.22；HF生成7855 token用时242.02秒，vLLM生成8192 token用时40.58秒，实际时间比5.96。输出长度不同，不能混用时间比与token/s比。原HF batch2在GPU2为30.78 token/s，其逐题token ID与GPU4同卡对照全部一致。batch4使用不同物理卡，作首轮工程观察，未做同卡因果比值结论。
+
+结果保留在`rollout_benchmark_results_20261019.json`，含原始逐题输出／token／设备遥测路径及哈希、版本、adapter与prompt身份。四题仅作性能先导，结束／思考闭合／boxed格式诊断不是开发集或数学正确率证据。vLLM冷启动加载及编译约70–93秒，另有独立warmup；不计入稳定生成吞吐，但实际任务成本需保留。
+
+vLLM0.11首轮因为将CUDA_VISIBLE_DEVICES中的UUID强转整数而在NVML能力查询失败。安装包未改；新增显式进程级UUID→NVML索引适配，并通过PYTHONPATH传播到模型检查／worker子进程，CUDA可见UUID本身不变。原失败与修正后成功分别存档。TRL即使正式训练不用vLLM也会导入其工具，因此恢复启动器同样需要此元数据适配；第一次恢复在导入阶段退出后，诊断并手动启动恢复-only新队列，保留失败记录。
+
+**这证明生成端提速空间，不等于完整OPD提速。** 本轮未计教师前向、全词表loss、反传、在线学生权重同步；vLLM独立运行的设备峰值约18.4GiB，不能据此假定能与训练直接共置到24GiB。下一项必要验证是官方训练路径中的实时学生权重同步、冻结教师保持、完整长度更新及显存／完整step吞吐。正式TH当前恢复的是既有HF／SDPA配置，保持100总更新、batch32和2048上限，未直接把独立vLLM测速替换到正式训练中；实际恢复仍待global step从70推进。
