@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-10-20T00:36:05.997104+08:00",
+  "language": "bn",
+  "queue_phase": "running",
+  "status_scope": "Assigned GPU and live launcher; no completed update claimed at launch snapshot",
+  "initialization": "Original frozen Qwen3-1.7B, no resume argument, independent single",
+  "runtime": "vLLM batch32 rollouts within one optimizer update; validated two-update and checkpoint restore gates",
+  "max_steps": 100,
+  "micro_batch": 1,
+  "gradient_accumulation_steps": 32,
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "train_questions": 2900,
+  "heldout_development_questions": 100,
+  "same_english_question_pool_as_other_languages": true,
+  "teacher": "Original Base through disabled adapter, GPU forward",
+  "optimizer": "AdamW, learning_rate5e-6",
+  "loss": "Pinned official beta0 clipped per-vocabulary-component teacher-to-student loss",
+  "evaluation": "Base development100 manually queued; trained checkpoint evaluation still pending",
+  "tensorboard_enabled": true,
+  "account_gpu_cap": 4,
+  "effectiveness": "Not yet evaluated."
+}
