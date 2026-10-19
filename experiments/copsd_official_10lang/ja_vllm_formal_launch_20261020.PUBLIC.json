@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-10-20T00:24:41.231347+08:00",
+  "language": "ja",
+  "model": "Qwen3-1.7B",
+  "initialization": "Fresh original Base, independent from TE and debug adapters",
+  "runtime": "Validated v1 colocated vLLM; one prompt per accumulation microstep",
+  "fresh_base_start_verified": true,
+  "completed_microsteps_at_observation": 59,
+  "global_step_at_last_microstep": 1,
+  "all_observed_microstep_losses_finite": true,
+  "effective_batch": 32,
+  "max_steps": 100,
+  "max_completion_length": 2048,
+  "status": "running",
+  "effectiveness": "No paired JA development result yet."
+}
