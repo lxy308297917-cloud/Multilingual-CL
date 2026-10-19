@@ -90,3 +90,9 @@ MGSM-Rev2 SW test250，固定100更新参考与Base均按`project_single_vllm_v1
 ZH Base开发100题25题正确，185,308生成token、纯生成72.15秒。随后从原始Base独立开始100更新，实际GPU初始推理权重与此前核验的原始Base一致，已有有限loss的真实microstep。新入口在模型／PEFT初始化前调用实际seed42，读取原shifted labels记录有效回答位置，分别记录teacher／student forward CUDA时间；不更换损失或优化器。600秒watchdog只打印堆栈，不杀进程或自动重试。训练正常完成后在同一分配GPU上接最终100题开发评测。见 `zh_seeded_cost_launch_20261020.PUBLIC.json`、`SEEDED_COST_RUNTIME_ZH.md`。
 
 ZH checkpoint5成本文件已实际验收：160次loss调用，295,590有效回答位置（等于本段生成token），教师forward39.20 CUDA秒、学生36.50秒，恢复文件齐全。根据保存参数与固定sampler重建的160题曝光前缀，其四项实际forward位置总量均吻合；原题ID清单保留本机私有文件，不把重建清单称为逐条运行时记录。见 `zh_seeded_cost_checkpoint5_20261020.PUBLIC.json`。
+
+## 03:03 调度与成本补充
+
+BN checkpoint65已保存完整恢复文件，ZH checkpoint25的800题次已记录1,446,755有效回答位置、772.49秒整组生成、197.72秒teacher forward CUDA时间；计时范围不同，不能将其相减推算全部剩余成本。两项训练仍运行，尚无其100更新终点评测结果。
+
+RU已手动启动单次排队，仍等待账号四卡上限内的空位，没有分配第五张GPU。取得资源后依次执行Base开发评测、从原始Base独立100更新、最终开发评测；DE／FR／ES仍仅配置，未启动。等待中的英语保持队列已接入BN完成条件检查，满足时先评BN最终开发集，再做原英语保持对照。见 `ru_seeded_single_queue_20261020.PUBLIC.json`、`zh_seeded_cost_checkpoint25_20261020.PUBLIC.json`、`EVALUATION_HANDOFF_ZH.md`。此前GitHub传输异常已恢复，这两项记录已补传。
