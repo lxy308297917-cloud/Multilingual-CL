@@ -1,6 +1,6 @@
 # COPSD 当前实验进展
 
-更新：2026-10-20 04:57（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
+更新：2026-10-20 05:47（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
 
 ## 当前任务
 
@@ -8,11 +8,11 @@
 |---|---|
 | SW single | 100/100更新完成，checkpoint100及最终adapter保存，正常退出 |
 | TH 四卡single | 100/100更新完成，checkpoint100及最终adapter保存，正常退出 |
-| TE single | 已核实39/100更新，已保存checkpoint35；原逐题vLLM训练继续 |
+| TE single | 已核实44/100更新，已保存checkpoint40；原逐题vLLM训练继续 |
 | BN single | 100/100更新正常完成；最终开发Base8/100→训练后0/100 |
 | JA single | 卡住：4次更新、142个microstep后停滞，尚无checkpoint；进程仍活着，不能计为有效训练 |
-| ZH single | 已核实82/100更新，已保存checkpoint80；批量rollout训练继续 |
-| RU / DE / FR / ES | RU等待监控已停止，先排查BN退步；DE／FR／ES仅配置，未启动 |
+| ZH single | 100/100训练及最终开发评测正常完成：25/100→38/100；正式评测已启动 |
+| RU / DE / FR / ES | RU等待监控保持停止；DE链路已启动，先评Base；FR／ES仅配置 |
 | 新vLLM开发评测cohort | 六种Base及SW／TH checkpoint20／100全部完成，父队列exit0 |
 | SW MGSM-Rev2主评 | Base8/250（3.2%）→100更新9/250（3.6%），父队列exit0 |
 | 三语言顺序OPD | 未达到稳定开发收益与语言选择条件，未启动 |
@@ -30,6 +30,7 @@
 | SW | 6/100 | checkpoint20：11/100；100：5/100 | 分别+5、−1题 |
 | TH | 41/100 | checkpoint20：26/100；100：17/100 | 分别−15、−24题 |
 | JA | 39/100 | 无已保存checkpoint | 未完成 |
+| ZH | 25/100 | checkpoint100：38/100 | 新增18题、失去5题，+13题；单seed |
 | 英语 | 40/100 | 保持评测待补 | 未完成 |
 
 两批新vLLM开发评测父队列均已正常退出；不同更新预算不能作正式语言排名，当前没有早期稳定收益证据。BN checkpoint5有96/100条截断，TE checkpoint10有100/100条截断，需要保留这一限制。详见 `bn_dev100_vllm_early_pair_20261020.PUBLIC.json`、`te_dev100_vllm_early_pair_20261020.PUBLIC.json`。完整新协议cohort见 `vllm_dev_active_cohort_20261020.PUBLIC.json`：共1000条回答、1,838,900生成token，纯生成1036.92秒；SW早期增益未保持到100更新，TH两处checkpoint均低于Base，当前不满足稳定三语言选择条件。
@@ -75,7 +76,7 @@ JA日志停在00:44:28，第4次更新后第142个microstep；检查时GPU利用
 
 当前配对开发评测及SW MGSM-Rev2正式主评已完成。新v2入口已补上初始化前seed和有效token／教师成本记录；ZH已从Base独立启动，RU／DE／FR／ES后续逐项推进；其余四种配置已预检但未启动，见 `remaining_single_batch32_grid_20261020.PUBLIC.json`。未启动全部后续阶段，没有自动失败重试或开机启动。
 
-PolyMath四档补评和剩余single正式结果仍未完成。Base／SW100／TH100英语GSM8K1319题0-shot正式保持对照已全部完成，后续SW／TH主评与PolyMath补评按同一单卡队列继续；冻结报告用途，不用于选语言或checkpoint。顺序数据接口已有967／967／966个互不重叠原题池，与开发集隔离，十语言英文问题／参考／答案对齐；字符长度不是难度标签。尚未选择三语言或训练顺序模型。后续依据独立开发集、必要的训练seed复测和成本选择，不能用正式测试挑语言、训练题或checkpoint，也不因目前缺少收益而强行进入顺序阶段。
+SW／TH已完成正式主评及四档PolyMath补评；ZH正式评测已启动，其余single正式结果仍未完成。Base／SW100／TH100英语GSM8K1319题0-shot正式保持对照已全部完成，后续SW／TH主评与PolyMath补评按同一单卡队列继续；冻结报告用途，不用于选语言或checkpoint。顺序数据接口已有967／967／966个互不重叠原题池，与开发集隔离，十语言英文问题／参考／答案对齐；字符长度不是难度标签。尚未选择三语言或训练顺序模型。后续依据独立开发集、必要的训练seed复测和成本选择，不能用正式测试挑语言、训练题或checkpoint，也不因目前缺少收益而强行进入顺序阶段。
 
 ## 新完成的正式主评与教师诊断
 
@@ -126,3 +127,27 @@ SW、TH、BN已有的最终开发结果均未提供稳定增益证据，目前�
 | TH100 | 1068/1319 | 80.97% | −3.41个百分点 |
 
 SW相对Base新增58题、失去115题；TH新增58题、失去103题。题目、答案、prompt及配置除adapter／输出目录外相同，冻结评分源码与逐题seed规则相同；正式ITEMS没有独立保存sample seed字段，因此这里不声称从样本字段直接验过实际seed值。两项训练均存在英语数学下降，单seed保持对照不等于顺序遗忘实验，不用于挑语言或checkpoint。见 `english_gsm8k_completed_singles_20261020.PUBLIC.json`。ZH与TE仍运行，教师条件检查仍等待四卡上限内资源，RU等待监控已停止。
+
+## ZH完整100更新与最终开发验收
+
+ZH新v2链路父队列exit0，完成3188题次、5,651,145生成／有效回答token，训练时钟12,342.77秒（3.43小时），每秒采样显存峰值20,463 MiB。Base不变、101个同步点、3188次有限loss、完整checkpoint100、最终adapter一致及有序退出均通过；实际TensorBoard事件文件存在。教师forward累计792.52 CUDA秒、学生735.63秒，计时范围不含生成、KL、反传和保存。完整重建sampler清单含2900个独立原题、3188题次，跨epoch第91次更新为20题尾组，四项真实forward位置总量均吻合；清单保留本机，重建不等于逐microstep运行ID日志。见 `zh_seeded_completed100_20261020.PUBLIC.json`。
+
+同一开发100题、提示词、逐题seed和评分，Base25→训练后38，新增18题／失去5题，正常结束24→44，截断76→56。ZH成为正向开发候选，尚未跨训练seed确认，也未选定顺序三语言。固定100更新参考的ZH MGSM-Rev2、PolyMath和英语保持评测已手动启动独立单卡队列；复用已完成英语Base，正式测试不用于语言或checkpoint选择。见 `zh_dev100_vllm_final_pair_20261020.PUBLIC.json`。
+
+## SW／TH正式补评完整结束
+
+原正式套件父队列exit0；全部四档PolyMath各125题均保留并从逐题输出复算。
+
+| 语言／benchmark | Base | checkpoint100 |
+|---|---:|---:|
+| SW PolyMath500 | 9/500（1.8%） | 15/500（3.0%） |
+| TH MGSM-Rev2 | 165/250（66.0%） | 91/250（36.4%） |
+| TH PolyMath500 | 86/500（17.2%） | 42/500（8.4%） |
+
+同题、同prompt及配置除adapter／输出外一致；项目n=1／2048协议与官方SW AfriMGSM pass@12分开。SW正式小幅增益不用于推翻开发选择规则；TH两项正式指标均下降。见 `sw_th_remaining_formal_pairs_20261020.PUBLIC.json`。
+
+## 教师条件诊断完成，推进DE独立基线
+
+BN原始冻结1.7B、无adapter、同100题及逐题seed：官方训练collator学生前缀6/100，附英文问题／参考解答的特权教师前缀49/100（新增46题、失去3题），父队列exit0。教师仍有89条截断，看到参考解答的条件分数不是公平benchmark，也不代表所有学生轨迹位置的教师分布有帮助。此学生控制6/100与标准开发评测Base8/100提示协议不同，不混比。诊断证明存在可用条件信号，没有定位BN训练崩退原因，更未制作SFT标签。见 `bn_teacher_conditioning_20261020.PUBLIC.json`。
+
+结合ZH正向开发变化与教师条件检查，通过预检后已手动启动DE同一原始1.7B、官方损失、100更新和批量vLLM的独立链路；当前先做Base开发评测，不把启动当训练完成。RU等待监控保持停止，FR／ES未启动，现有TE及ZH正式评测继续，全账号最多四卡。没有启动顺序训练或无裁剪消融。见 `de_seeded_single_launch_20261020.PUBLIC.json`。
