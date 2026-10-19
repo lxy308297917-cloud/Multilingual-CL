@@ -1,7 +1,7 @@
 {
   "model": "Qwen/Qwen3-1.7B",
   "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
-  "training_entry": "run_vllm_update_batch_17b.sh",
+  "training_entry": "run_seeded_cost_batch_17b.sh",
   "source": "Pinned COPSD plus explicitly recorded compatibility and batched-rollout adaptations",
   "train_rows_per_language": 2900,
   "heldout_dev_rows": 100,
@@ -22,44 +22,54 @@
   "teacher": "Original frozen Base with adapter disabled, GPU forward",
   "loss": "Original beta0 teacher-to-student component-clipped distribution loss, clip0.05",
   "tensorboard": true,
-  "evaluation": "Separate fixed100-question vLLM development and frozen formal benchmark protocols",
+  "evaluation": "Same-GPU Base development100 before training and final development100 after normal training exit",
   "account_gpu_cap": 4,
-  "launch_policy": "Configured and CPU-validated only; start languages individually as resources permit after already queued paired development and formal SW evaluation. No boot startup or failure retry.",
+  "launch_policy": "OnlyZH manually started;RU/DE/FR/ES configured and CPU-validated but not started. Account cap4, no boot startup or failure retry.",
   "runs": [
     {
       "language": "zh",
-      "run_id": "zh_17b_project2900_vllm_update_batch_seed42_20261020_v1",
-      "status": "configured_not_started",
+      "run_id": "zh_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
+      "status": "running_training_after_Base_development",
       "initialization": "fresh original Base",
-      "max_steps": 100
+      "max_steps": 100,
+      "Base_dev_run_id": "zh_17b_dev100_vllm_base_20261020_v1",
+      "final_dev_run_id": "zh_17b_dev100_vllm_ckpt100_20261020_v2"
     },
     {
       "language": "ru",
-      "run_id": "ru_17b_project2900_vllm_update_batch_seed42_20261020_v1",
+      "run_id": "ru_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
       "status": "configured_not_started",
       "initialization": "fresh original Base",
-      "max_steps": 100
+      "max_steps": 100,
+      "Base_dev_run_id": "ru_17b_dev100_vllm_base_20261020_v1",
+      "final_dev_run_id": "ru_17b_dev100_vllm_ckpt100_20261020_v2"
     },
     {
       "language": "de",
-      "run_id": "de_17b_project2900_vllm_update_batch_seed42_20261020_v1",
+      "run_id": "de_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
       "status": "configured_not_started",
       "initialization": "fresh original Base",
-      "max_steps": 100
+      "max_steps": 100,
+      "Base_dev_run_id": "de_17b_dev100_vllm_base_20261020_v1",
+      "final_dev_run_id": "de_17b_dev100_vllm_ckpt100_20261020_v2"
     },
     {
       "language": "fr",
-      "run_id": "fr_17b_project2900_vllm_update_batch_seed42_20261020_v1",
+      "run_id": "fr_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
       "status": "configured_not_started",
       "initialization": "fresh original Base",
-      "max_steps": 100
+      "max_steps": 100,
+      "Base_dev_run_id": "fr_17b_dev100_vllm_base_20261020_v1",
+      "final_dev_run_id": "fr_17b_dev100_vllm_ckpt100_20261020_v2"
     },
     {
       "language": "es",
-      "run_id": "es_17b_project2900_vllm_update_batch_seed42_20261020_v1",
+      "run_id": "es_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
       "status": "configured_not_started",
       "initialization": "fresh original Base",
-      "max_steps": 100
+      "max_steps": 100,
+      "Base_dev_run_id": "es_17b_dev100_vllm_base_20261020_v1",
+      "final_dev_run_id": "es_17b_dev100_vllm_ckpt100_20261020_v2"
     }
   ],
   "expected_actual_rollouts_for100_updates": 3188,
@@ -77,5 +87,10 @@
   "attn_implementation": "sdpa",
   "dtype": "bfloat16",
   "student_enable_thinking": true,
-  "tokenizer": "Same local pinned model revision"
+  "tokenizer": "Same local pinned model revision",
+  "pipeline_entry": "run_seeded_single_with_dev.sh",
+  "runtime_revision": "seeded_cost_batch_v2",
+  "early_seed_before_model_and_PEFT": true,
+  "cost_accounting": "Exact shifted-label positions and CUDA teacher/student forward events per checkpoint and process segment",
+  "watchdog": "600-second traceback only; no kill or retry"
 }
