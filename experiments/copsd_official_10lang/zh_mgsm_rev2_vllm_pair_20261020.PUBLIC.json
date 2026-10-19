@@ -1,0 +1,69 @@
+{
+  "observed_at": "2026-10-20T05:48:36.554854+08:00",
+  "language": "zh",
+  "benchmark": "MGSM-Rev2",
+  "protocol": "project_single_vllm_v1",
+  "formal_full_test": true,
+  "items": 250,
+  "compared_models": [
+    "Base",
+    "fixed100-update_reference"
+  ],
+  "metrics": [
+    {
+      "generated_tokens": 229880,
+      "normal_terminations": 218,
+      "truncated": 32,
+      "answer_extraction_failures": 28,
+      "single_correct": 203,
+      "pass_n_correct": 203,
+      "items": 250,
+      "generation_count": 250,
+      "single_accuracy": 0.812,
+      "pass_n": 0.812,
+      "n": 1,
+      "model_load_seconds": 9.791990047320724,
+      "generation_seconds": 73.07924487628043,
+      "evaluation_seconds": 73.6771399602294,
+      "generated_tokens_per_generation_second": 3145.6263729760144,
+      "protocol": "project_single_vllm_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "scores_by_difficulty": {}
+    },
+    {
+      "generated_tokens": 219443,
+      "normal_terminations": 223,
+      "truncated": 27,
+      "answer_extraction_failures": 19,
+      "single_correct": 196,
+      "pass_n_correct": 196,
+      "items": 250,
+      "generation_count": 250,
+      "single_accuracy": 0.784,
+      "pass_n": 0.784,
+      "n": 1,
+      "model_load_seconds": 10.800359161570668,
+      "generation_seconds": 127.77121478691697,
+      "evaluation_seconds": 128.3817140981555,
+      "generated_tokens_per_generation_second": 1717.4682135249582,
+      "protocol": "project_single_vllm_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "scores_by_difficulty": {}
+    }
+  ],
+  "configs_equal_except_adapter_output": true,
+  "problem_ids_questions_answers_and_prompts_match": true,
+  "same_frozen_per_question_seed_rule": true,
+  "delta_percentage_points": -2.8000000000000025,
+  "paired_counts": {
+    "gained": 18,
+    "lost": 25,
+    "retained": 178
+  },
+  "pair_subprocesses_successful": true,
+  "subsequent_PolyMath_started": true,
+  "parent_suite_complete": false,
+  "assessment": "Formal report203/250 to196/250; keep separate from positive hard-math dev25/100 to38/100. Do not use formal results to select checkpoint, language or training data."
+}
