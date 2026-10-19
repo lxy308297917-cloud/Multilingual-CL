@@ -1,0 +1,41 @@
+{
+  "protocol": "privileged_teacher_conditioning_diagnostic_v1",
+  "language": "bn",
+  "formal_test": false,
+  "conditions": {
+    "student": {
+      "items": 100,
+      "correct": 6,
+      "normal_terminations": 5,
+      "truncated": 95,
+      "answer_extraction_failures": 91,
+      "generated_tokens": 203397,
+      "generation_seconds": 95.58454983867705
+    },
+    "teacher": {
+      "items": 100,
+      "correct": 49,
+      "normal_terminations": 11,
+      "truncated": 89,
+      "answer_extraction_failures": 50,
+      "generated_tokens": 201114,
+      "generation_seconds": 152.19123740680516
+    }
+  },
+  "model_load_seconds": 10.467594733461738,
+  "teacher_adapter": null,
+  "same_original_Base": true,
+  "scope": "Teacher receives English reference. Conditional-generation diagnostic only; not fair benchmark accuracy, not training-label synthesis, and not an evaluation of all on-policy teacher-token distributions.",
+  "observed_at": "2026-10-20T05:44:47.166062+08:00",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "paired_ids_answers_and_sample_seeds_match": true,
+  "official_training_collator_prefixes_used": true,
+  "paired_counts": {
+    "gained_under_privileged_context": 46,
+    "lost_under_privileged_context": 3,
+    "correct_under_both": 3
+  },
+  "interpretation": "Original frozen1.7B can exploit supplied English problem/reference on this BN dev set. This rules out a blanket claim that privileged context offers no usable conditional signal; it does not isolate the cause of trained BN collapse or establish useful teacher distributions at every student trajectory position. Teacher answers are not SFT labels.",
+  "comparison_boundary": "Student control uses official training-collator prefix. Its6/100 is separate from the standard dev-evaluator Base8/100; do not mix these prompt protocols."
+}
