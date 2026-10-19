@@ -1,0 +1,52 @@
+{
+  "observed_at": "2026-10-20T01:51:35.128331+08:00",
+  "scope": "Fresh Base first2 SW updates,64 real on-policy training trajectories; not final100-update model or a downstream effectiveness test",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "model": "Qwen3-1.7B",
+  "global_step": 2,
+  "actual_rollouts": 64,
+  "generated_tokens": 113068,
+  "valid_response_loss_positions": 113068,
+  "fixed_Base_unchanged_bitwise": true,
+  "saved_checkpoint1_and2_recovery_files_nonempty": true,
+  "ordered_runtime_shutdown_verified": true,
+  "train_seconds_including_instrumentation_and_diagnostic_syncs": 290.6594817582518,
+  "signal_summary": {
+    "calls": 64,
+    "totals": {
+      "valid_response_positions": 113068,
+      "masked_response_positions": 18004,
+      "teacher_argmax_component_clipped_positions": 5007,
+      "argmax_disagreement_positions": 2004,
+      "teacher_probability_mass_sum": 113068.00273513794,
+      "clipped_teacher_probability_mass_sum": 4037.6964936633594,
+      "unclipped_component_sum": 2549.12872666825,
+      "clipped_component_sum": 187.0282794382057,
+      "teacher_minus_student_sampled_logprob_sum": -2160.6853795018137
+    },
+    "loss_temperature": 1.1,
+    "component_clip": 0.05,
+    "beta": 0.0,
+    "teacher_argmax_component_clipped_fraction": 0.044283086284359854,
+    "argmax_disagreement_fraction": 0.01772384759613684,
+    "clipped_teacher_mass_fraction_estimate": 0.03571033710679115,
+    "mean_unclipped_KL_component_sum_float32": 0.02254509433852416,
+    "mean_clipped_component_sum_float32": 0.0016541221162327598,
+    "mean_teacher_minus_student_sampled_logprob": -0.019109609964815984,
+    "returned_loss_uses_unmodified_original_function": true,
+    "scope": "Real on-policy two-update training signals, not full100-update downstream efficacy. Float32 diagnostic reductions of original-dtype components. Instrumentation overhead included.",
+    "teacher_forward_calls": 64,
+    "student_forward_calls": 64,
+    "teacher_forward_cuda_seconds": 16.093282318115236,
+    "student_forward_cuda_seconds": 15.378542129516601,
+    "forward_timer_scope": "Outer PEFT forward CUDA events only; excludes rollout, KL, backward, optimizer and saving. Instrumented probe, not formal-run throughput."
+  },
+  "interpretation_limits": [
+    "Global scalar divergence reduction is not the fraction of useful gradient removed.",
+    "Teacher/student local argmax agreement is not math correctness or teacher capability.",
+    "Mean teacher-minus-student sampled logprob on student rollouts is not a teacher accuracy score.",
+    "Early64 trajectories do not establish the cause of final-model regressions; official loss was not replaced.",
+    "Chunked detached statistics and CUDA timers add overhead; this is not a production-throughput benchmark."
+  ]
+}
