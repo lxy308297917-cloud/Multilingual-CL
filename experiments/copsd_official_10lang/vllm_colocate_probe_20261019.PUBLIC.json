@@ -1,0 +1,41 @@
+{
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "status": "Manual one-GPU queue waiting; GPU training probe not started",
+  "scope": "Project engineering adaptation of the fixed official trainer. Never mix this two-update probe with formal single results.",
+  "model": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "language": "sw",
+  "data_relative_path": "data/copsd_official_20261015/adapted_v2_ordered/project_train_2900_sw.json",
+  "gpu_count": 1,
+  "max_user_gpus": 4,
+  "max_steps": 2,
+  "micro_batch": 1,
+  "gradient_accumulation_steps": 32,
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "max_length": 20000,
+  "vllm_gpu_memory_utilization": 0.4,
+  "vllm_enable_sleep_mode": true,
+  "vllm_sync_frequency": 1,
+  "learning_rate": 5e-06,
+  "lora_r": 64,
+  "lora_alpha": 128,
+  "beta": 0,
+  "jsd_token_clip": 0.05,
+  "teacher": "Original base with adapter disabled; no CPU teacher forward",
+  "adaptations": [
+    "Non-mutating BF16 merged-weight stream; two actual matrices match official PEFT merged tensors bitwise on CPU",
+    "Explicit initial student sync, required for later resume or sequential stages",
+    "Single-GPU sleep mode to fit 24GiB; GPU memory feasibility unverified",
+    "Instrumentation: full frozen-parameter hashes at sync, policy hashes before rollouts, two optimizer updates and checkpoint saves"
+  ],
+  "gates": [
+    "2 real optimizer updates,64 microsteps",
+    "Student LoRA and engine weights change after both updates",
+    "All frozen parameters identical before/after sync and training",
+    "Every rollout uses last synchronized current adapter",
+    "2048-token budget and full official KD/AdamW retained",
+    "Checkpoints 1 and 2 plus final model saved; restore test remains a separate gate"
+  ],
+  "local_lock": "Exact data/code fingerprints are retained in the local CONFIG manifest; omitted from public summary."
+}
