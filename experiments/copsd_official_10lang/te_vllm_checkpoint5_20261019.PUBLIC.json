@@ -1,0 +1,59 @@
+{
+  "observed_at": "2026-10-19T23:43:48.274383+08:00",
+  "language": "te",
+  "global_step": 5,
+  "actual_completed_rollouts": 160,
+  "generated_tokens": 326553,
+  "capped_at_2048_count": 158,
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state.pth",
+    "training_args.bin"
+  ],
+  "fresh_Base_start_verified": true,
+  "student_adapter_changed_from_initialization": true,
+  "fixed_Base_hash_checks_passed_at_sync_steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "logged_metrics_finite": true,
+  "recent_log_history": [
+    {
+      "epoch": 0.022068965517241378,
+      "grad_norm": 0.059831276535987854,
+      "learning_rate": 4.95e-06,
+      "loss": -0.0032,
+      "on_policy_loss": -0.0032,
+      "step": 2
+    },
+    {
+      "epoch": 0.044137931034482755,
+      "grad_norm": 0.062138915061950684,
+      "learning_rate": 4.85e-06,
+      "loss": -0.0033,
+      "on_policy_loss": -0.0033,
+      "step": 4
+    }
+  ],
+  "approx_training_clock_seconds_through_update5": 2876.6948337759823,
+  "allocated_single_gpu_hours_training_clock_approx": 0.7990818982711062,
+  "approx_mean_update_seconds_excluding_one_time_initial_sync": 570.2965062934906,
+  "remaining95_update_hours_if_current_rate_persists": 15.049491138300445,
+  "reported_generation_timer_seconds_sum": 2250.470000000001,
+  "teacher_forward_calls_inferred_from_frozen_one_teacher_forward_per_rollout": 160,
+  "teacher_forward_seconds_separately_measured": null,
+  "teacher_cost_scope": "Teacher, student KD forward and backward are included in complete update timing; no standalone teacher timer. Do not attribute all non-generation time to teacher alone.",
+  "physical_board_peak_mib_since_launch_to_observation": 19477,
+  "memory_scope": "1-second external board samples, including any partial next update; not a full-run peak guarantee.",
+  "training_status": "running",
+  "effectiveness": "No paired TE development result yet; engineering progress only.",
+  "eta_caveat": "Five full updates; excludes model cold startup and subsequent evaluation. Future example lengths and checkpoint costs vary."
+}
