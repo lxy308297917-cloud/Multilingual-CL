@@ -1,0 +1,50 @@
+{
+  "scope": "Synthetic CPU autograd counterexample, not real-model evidence or a proposed training replacement",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "adapted_loss_AST_equal_pinned_upstream": true,
+  "beta": 0,
+  "teacher_distribution": [
+    0.9,
+    0.05,
+    0.03,
+    0.02
+  ],
+  "student_distribution": [
+    0.01,
+    0.4,
+    0.3,
+    0.29
+  ],
+  "results": [
+    {
+      "component_clip": null,
+      "loss": 3.8232961004348933,
+      "student_logit_gradients": [
+        -0.8899999999999999,
+        0.35,
+        0.2699999999999999,
+        0.2699999999999999
+      ],
+      "teacher_top_token_logit_gradient": -0.8899999999999999,
+      "descent_effect_on_teacher_top_token_logit": "increase"
+    },
+    {
+      "component_clip": 0.05,
+      "loss": -0.17653260286234373,
+      "student_logit_gradients": [
+        0.0010000000000000007,
+        -0.01000000000000001,
+        -5.967448757360217e-18,
+        0.008999999999999994
+      ],
+      "teacher_top_token_logit_gradient": 0.0010000000000000007,
+      "descent_effect_on_teacher_top_token_logit": "decrease"
+    }
+  ],
+  "finding": "The released code clips individual vocabulary contributions before vocabulary reduction. This can suppress the teacher-top-token term and reverse its student-logit gradient sign.",
+  "limits": [
+    "Does not prove that this pattern is frequent in actual trajectories or explains measured regressions.",
+    "No running code or scientific configuration changed. Current official-reference runs retain clip0.05.",
+    "Any future unclipped-loss comparison must be a separately labelled project ablation with matched data/budget/evaluation."
+  ]
+}
