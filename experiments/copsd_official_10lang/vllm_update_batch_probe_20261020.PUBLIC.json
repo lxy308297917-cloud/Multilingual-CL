@@ -1,0 +1,46 @@
+{
+  "start_step": 0,
+  "global_step": 2,
+  "completed_updates": 2,
+  "micro_steps": 64,
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "base_unchanged_bitwise": true,
+  "train_seconds_including_diagnostic_hashing": 277.04778880625963,
+  "memory_caveat": "Allocator accounting with sleeping pools is not physical board peak; use external telemetry.",
+  "scope": "Update completion only; requires checkpoint files, normal exit and independent downstream evaluation.",
+  "observed_at": "2026-10-20T00:30:25.174120+08:00",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "groups": [
+    {
+      "global_step": 0,
+      "rollouts": 32,
+      "generated_tokens": 54755,
+      "generation_seconds": 30.29252110980451
+    },
+    {
+      "global_step": 1,
+      "rollouts": 32,
+      "generated_tokens": 58833,
+      "generation_seconds": 31.339009689167142
+    }
+  ],
+  "actual_generated_tokens": 113588,
+  "physical_board_peak_mib_sampled_1s": 19099,
+  "all_microstep_losses_finite": true,
+  "checkpoint1_and2_recovery_files_nonempty": true,
+  "final_adapter_equals_checkpoint2": true,
+  "ordered_shutdown_verified": true,
+  "current_policy_sync_steps": [
+    0,
+    1,
+    2
+  ],
+  "student_adapter_and_engine_changed_each_update": true,
+  "mean_update_seconds_including_initial_sync": 138.52389440312982,
+  "linear100_update_hours_including_diagnostic_syncs": 3.8478859556424947,
+  "resume_check": "Separate checkpoint1-to2 validation now queued; not yet accepted.",
+  "effectiveness": "Engineering probe only; no downstream score.",
+  "comparison_caveat": "Different stochastic trajectories; batching can change RNG consumption. Two-update ETA is provisional, not a complete100-update benchmark."
+}
