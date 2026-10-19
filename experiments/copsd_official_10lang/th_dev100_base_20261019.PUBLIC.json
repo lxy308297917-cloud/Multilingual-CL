@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-10-19T22:09:27.995389+08:00",
+  "model": "Qwen3-1.7B Base",
+  "language": "th",
+  "split": "independent development,100 held-out questions",
+  "protocol": "project Transformers, official PolyMath prompt/answer scorer, single sample, max2048, seed42",
+  "official_test_result": false,
+  "metrics": {
+    "items": 100,
+    "single_correct": 37,
+    "single_accuracy": 0.37,
+    "pass_n_correct": 37,
+    "pass_n": 0.37,
+    "n": 1,
+    "generated_tokens": 181532,
+    "normal_terminations": 33,
+    "generation_count": 100,
+    "seconds": 4840.253888560459,
+    "peak_gpu_mib": 3578.1
+  },
+  "training_effectiveness": "Base only; await paired trained checkpoint score before judging gain."
+}
