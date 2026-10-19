@@ -1,0 +1,17 @@
+{
+  "scope": "CPU input/prompt compatibility only, no inference or score parity claim",
+  "languages": [
+    "sw",
+    "th",
+    "te",
+    "ja",
+    "bn",
+    "en"
+  ],
+  "heldout_items_each": 100,
+  "same_ordered_problem_ids_across_languages": true,
+  "target_fields_match_existing_dev_loader": true,
+  "english_uses_original_problem_field": true,
+  "original_official_prompts_equal_existing_HF_prompts_for_items": 600,
+  "gpu_validated": false
+}
