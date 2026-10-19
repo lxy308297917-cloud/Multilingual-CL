@@ -1,6 +1,6 @@
 # COPSD 当前实验进展
 
-更新：2026-10-20 01:29（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
+更新：2026-10-20 01:54（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
 
 ## 当前任务
 
@@ -13,7 +13,7 @@
 | JA single | 卡住：4次更新、142个microstep后停滞，尚无checkpoint；进程仍活着，不能计为有效训练 |
 | ZH / RU / DE / FR / ES | 批量single配置已准备并CPU预检，未启动 |
 | 新vLLM开发评测cohort | 六种Base及SW／TH checkpoint20／100全部完成，父队列exit0 |
-| SW MGSM-Rev2主评 | Base／固定100更新模型对照已手动排队，尚无正式分数 |
+| SW MGSM-Rev2主评 | Base8/250（3.2%）→100更新9/250（3.6%），父队列exit0 |
 | 三语言顺序OPD | 未达到稳定开发收益与语言选择条件，未启动 |
 
 按账号总计最多四张GPU调度，JA卡住任务仍计入占卡。没有占第五张卡，也不因等待或观察超时重启任务。
@@ -72,6 +72,14 @@ JA日志停在00:44:28，第4次更新后第142个microstep；检查时GPU利用
 
 ## 后续执行
 
-先完成当前配对开发评测及SW MGSM-Rev2正式主评，再逐项使用资源推进ZH／RU／DE／FR／ES；其配置已预检但未启动，见 `remaining_single_batch32_grid_20261020.PUBLIC.json`。未启动全部后续阶段，没有自动失败重试或开机启动。
+当前配对开发评测及SW MGSM-Rev2正式主评已完成。后续先在新入口补上初始化前seed和有效token／教师成本记录，再逐项推进ZH／RU／DE／FR／ES；其配置已预检但未启动，见 `remaining_single_batch32_grid_20261020.PUBLIC.json`。未启动全部后续阶段，没有自动失败重试或开机启动。
 
 PolyMath四档补评、英语GSM8K正式保持评测和剩余single正式结果仍未完成。顺序数据接口已有967／967／966个互不重叠原题池，与开发集隔离，十语言英文问题／参考／答案对齐；字符长度不是难度标签。尚未选择三语言或训练顺序模型。后续依据独立开发集、必要的训练seed复测和成本选择，不能用正式测试挑语言、训练题或checkpoint，也不因目前缺少收益而强行进入顺序阶段。
+
+## 新完成的正式主评与教师诊断
+
+MGSM-Rev2 SW test250，固定100更新参考与Base均按`project_single_vllm_v1`完成：8/250→9/250，净增1题（新增7题、失去6题），正常结束54→190，截断196→60。回答结束改善没有形成明显数学收益。题目／答案／prompt、逐题seed规则及配置除adapter／输出外相同，父队列exit0；正式测试只作报告，不用于挑checkpoint、语言或训练题。见 `sw_mgsm_rev2_vllm_pair_20261020.PUBLIC.json`。
+
+真实SW教师信号两更新诊断已正常完成：64条在线轨迹、113,068有效回答loss位置，Base不变、保存与退出通过。教师argmax项被裁剪占4.43%，被裁剪教师概率质量约3.57%；这些局部统计不能证明终点退步原因。教师forward64次，CUDA事件合计16.09秒，学生forward15.38秒，均不含生成、KL和反传。诊断仍返回原损失，没有启动无裁剪消融。见 `teacher_signal_probe_20261020.PUBLIC.json`、`LOSS_DIAGNOSTICS_ZH.md`。
+
+复现记录补充：两次同样声明Trainer seed42的短跑，初始LoRA参数指纹不同，但初始推理策略均等于同一Base。固定库在创建PEFT后才进入Trainer设置seed，需在新入口中显式提前设置；现有运行及旧结果不改写。该兼容修正尚未实施，不宣称逐位复现。见 `lora_initial_seed_observation_20261020.PUBLIC.json`。
