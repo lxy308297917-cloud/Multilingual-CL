@@ -1,0 +1,71 @@
+{
+  "observed_at": "2026-10-19T14:27:17.357269+08:00",
+  "checkpoint_step": 80,
+  "parent_step": 70,
+  "post_resume_updates": 10,
+  "post_resume_rollouts": 320,
+  "post_resume_generated_tokens": 635129,
+  "post_resume_capped_2048": 283,
+  "post_resume_training_elapsed_seconds": 10834,
+  "allocated_gpu_hours_since_resume_clock_start": 12.037777777777778,
+  "mean_seconds_per_resumed_update": 1083.4,
+  "remaining_training_seconds_from_ten_update_mean": 21668.0,
+  "eta_caveat": "Ten-update mean only; excludes subsequent variation and evaluation, not a completion guarantee. Ignore restored tqdm ETA/rate.",
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state_0.pth",
+    "rng_state_1.pth",
+    "rng_state_2.pth",
+    "rng_state_3.pth"
+  ],
+  "adapter_changed_from_checkpoint75": true,
+  "logged_metrics_finite": true,
+  "recent_log_history": [
+    {
+      "epoch": 0.8606896551724138,
+      "grad_norm": 0.03980167582631111,
+      "learning_rate": 1.1500000000000002e-06,
+      "loss": -0.0181,
+      "on_policy_loss": -0.0181,
+      "step": 78
+    },
+    {
+      "epoch": 0.8827586206896552,
+      "grad_norm": 0.045513298362493515,
+      "learning_rate": 1.0500000000000001e-06,
+      "loss": -0.0193,
+      "on_policy_loss": -0.0193,
+      "step": 80
+    }
+  ],
+  "sw_current_step": 95,
+  "formal_generation_backend": "Transformers/SDPA",
+  "queues": [
+    {
+      "queue": "copsd-sw-17b-vllm-colocate-probe-v1",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    },
+    {
+      "queue": "copsd-sw-17b-dev100-ckpt65-v1",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    },
+    {
+      "queue": "copsd-th-17b-dev100-base-4gpu-v2",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    },
+    {
+      "queue": "copsd-th-17b-dev100-ckpt20-4gpu-v2",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    }
+  ],
+  "effectiveness": "No new development or official-test scores; engineering progress only.",
+  "verification_scope": "Checkpoint80 state/files and original live process identities verified; no redundant optimizer reload, no new GPU resume test, no training mutations."
+}
