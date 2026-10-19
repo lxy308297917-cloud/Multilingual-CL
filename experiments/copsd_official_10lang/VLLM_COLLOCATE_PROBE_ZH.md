@@ -25,6 +25,14 @@
 
 以上为本项目的工程适配，未修改官方损失、英文特权教师上下文、思考前缀、AdamW 或目标语言数据。不能把修正后的路径直接称为未经修改的官方实现。
 
+## 长梯度累积中的 sleep 生命周期适配
+
+本轮为了24GiB同卡运行启用 sleep，但发布脚本默认未启用这一可选分支。已核实 vLLM0.11 的实际源码：level2 会丢弃权重和KV；level1把权重备份到CPU、丢弃KV。官方可选路径每个micro step后level2休眠，下一micro step仅唤醒KV，权重只在优化器更新后的同步时重载，因此不能直接用于本轮32次梯度累积。
+
+待运行probe保留初始化时的level2，并在第一次生成前完整加载当前学生权重；之后每次生成后使用level1，下一次只唤醒仍在休眠的tag。普通micro step唤醒权重和KV；更新边界若同步已唤醒权重，则只唤醒KV，避免重复映射。权重备份不执行CPU模型前向，没有增加独立CPU教师。
+
+CPU已调用安装版本的真实 `ExecutorBase.sleep/wake_up` 方法验证以上状态转换，worker RPC为模拟，不能证明GPU内存复制成功。记录见 `vllm_sleep_lifecycle_cpu_20261019.PUBLIC.json`。GPU probe会在第2和第34个micro step核对唤醒后的推理权重与当前同步指纹完全相同，再接受两次更新结果。此兼容适配仅用于排队中的probe，当前正式SW／TH及固定官方参考均未改变。
+
 ## 已准备的下一次 GPU 检查
 
 入口 `run_vllm_colocate_probe.sh NEW_RUN_ID`，必须由单卡手动队列提供 UUID；公开设置在 `vllm_colocate_probe_20261019.PUBLIC.json`；实际启动读取的 `vllm_colocate_probe_20261019.CONFIG.json` 含精确数据／源码指纹，仅保留本机。自动审批拒绝发布这些内部指纹，公开证据仅含统计与验证结论。源码／模型／SW数据哈希、入口解析和 shell 语法已通过 CPU 检查。**尚未启动 GPU probe，尚未验证该训练路径能在24GiB完成。** 单卡队列 `copsd-sw-17b-vllm-colocate-probe-v1` 已手动启动监控，目前等待资源，GPU probe 尚未开始。不取消正在运行的 SW 或 TH。新增probe与三个待开发集评测均使用默认账号四卡上限；当前SW加四卡TH的既有临时五卡授权不扩展给新任务。
