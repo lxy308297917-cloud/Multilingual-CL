@@ -1,0 +1,13 @@
+{
+  "language": "bn",
+  "items": 100,
+  "inference_performed": false,
+  "student_prefix_tokens": 33154,
+  "teacher_prefix_tokens": 160056,
+  "all_prefixes_untruncated": true,
+  "official_collator_used_directly": true,
+  "teacher_receives_English_problem_and_reference": true,
+  "student_receives_target_problem_only": true,
+  "formal_test": false,
+  "GPU_validation": "Not yet run; private prompts prepared only."
+}
