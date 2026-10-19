@@ -32,3 +32,7 @@
 只手动启动ZH新链路；RU／DE／FR／ES已改用相同新入口并CPU预检，尚未启动。Base与最终checkpoint的开发协议同为`project_dev_single_vllm_v1`，各100题，仅adapter／输出目录不同。遇错整个链路停止，不自动重试；不覆盖已有结果。
 
 新checkpoint使用`models/checkpoint/copsd_vllm_seeded_cost_single_v2/RUN_ID`，开发结果在`logs/copsd_official_10lang/development_vllm/`，训练日志与GPU采样在项目日志目录。TensorBoard沿用Trainer对应run目录。全部任务合计最多四张GPU，以队列分配的UUID为准，不手设局部GPU号覆盖选卡。
+
+ZH已验收checkpoint5：160次loss调用、295,590有效回答位置、teacher／student各160次forward，分别39.20／36.50 CUDA秒。`reconstruct_single_sampling.py`从本机可信checkpoint参数和固定SeedableRandomSampler重建前160个原题ID，学生／教师总处理与attention位置四个实际总量均吻合；原题ID与指纹清单仅保存在本机私有文件。这是重建清单，不冒称逐microstep直接记录。见 `zh_seeded_cost_checkpoint5_20261020.PUBLIC.json`。
+
+Base、SW100与TH100的英语GSM8K1319题0-shot正式保持评测已另行手动排队，使用冻结协议，只作结果报告，不用于挑语言或checkpoint；不占第五张卡。
