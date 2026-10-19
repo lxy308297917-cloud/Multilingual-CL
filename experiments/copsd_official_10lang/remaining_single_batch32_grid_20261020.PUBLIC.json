@@ -1,0 +1,81 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "training_entry": "run_vllm_update_batch_17b.sh",
+  "source": "Pinned COPSD plus explicitly recorded compatibility and batched-rollout adaptations",
+  "train_rows_per_language": 2900,
+  "heldout_dev_rows": 100,
+  "micro_batch": 1,
+  "gradient_accumulation_steps": 32,
+  "effective_batch": 32,
+  "rollouts_generated_together_per_full_update": 32,
+  "max_completion_length": 2048,
+  "lora_rank": 64,
+  "lora_alpha": 128,
+  "optimizer": "adamw_torch_fused inherited from fixed Transformers4.57.1/Torch2.8 runtime",
+  "learning_rate": 5e-06,
+  "temperature": 1.1,
+  "top_p": 0.95,
+  "top_k": 20,
+  "seed": 42,
+  "data_seed": 42,
+  "teacher": "Original frozen Base with adapter disabled, GPU forward",
+  "loss": "Original beta0 teacher-to-student component-clipped distribution loss, clip0.05",
+  "tensorboard": true,
+  "evaluation": "Separate fixed100-question vLLM development and frozen formal benchmark protocols",
+  "account_gpu_cap": 4,
+  "launch_policy": "Configured and CPU-validated only; start languages individually as resources permit after already queued paired development and formal SW evaluation. No boot startup or failure retry.",
+  "runs": [
+    {
+      "language": "zh",
+      "run_id": "zh_17b_project2900_vllm_update_batch_seed42_20261020_v1",
+      "status": "configured_not_started",
+      "initialization": "fresh original Base",
+      "max_steps": 100
+    },
+    {
+      "language": "ru",
+      "run_id": "ru_17b_project2900_vllm_update_batch_seed42_20261020_v1",
+      "status": "configured_not_started",
+      "initialization": "fresh original Base",
+      "max_steps": 100
+    },
+    {
+      "language": "de",
+      "run_id": "de_17b_project2900_vllm_update_batch_seed42_20261020_v1",
+      "status": "configured_not_started",
+      "initialization": "fresh original Base",
+      "max_steps": 100
+    },
+    {
+      "language": "fr",
+      "run_id": "fr_17b_project2900_vllm_update_batch_seed42_20261020_v1",
+      "status": "configured_not_started",
+      "initialization": "fresh original Base",
+      "max_steps": 100
+    },
+    {
+      "language": "es",
+      "run_id": "es_17b_project2900_vllm_update_batch_seed42_20261020_v1",
+      "status": "configured_not_started",
+      "initialization": "fresh original Base",
+      "max_steps": 100
+    }
+  ],
+  "expected_actual_rollouts_for100_updates": 3188,
+  "max_length": 20000,
+  "max_grad_norm": 0.1,
+  "beta": 0,
+  "lmbda": 1,
+  "jsd_token_clip": 0.05,
+  "save_steps": 5,
+  "logging_steps": 2,
+  "vllm_mode": "colocate",
+  "vllm_tensor_parallel_size": 1,
+  "vllm_gpu_memory_utilization": 0.4,
+  "vllm_sleep_mode": true,
+  "attn_implementation": "sdpa",
+  "dtype": "bfloat16",
+  "student_enable_thinking": true,
+  "tokenizer": "Same local pinned model revision"
+}
