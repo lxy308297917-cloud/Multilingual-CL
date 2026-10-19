@@ -1,0 +1,267 @@
+{
+  "observed_at": "2026-10-20T01:26:48.844422+08:00",
+  "protocol": "project_dev_single_vllm_v1",
+  "scope": "Held-out100-question development; separate from formal tests and previous HF scores",
+  "parent_cohort_exit_code": 0,
+  "results": {
+    "sw": [
+      {
+        "stage": "base",
+        "metrics": {
+          "items": 100,
+          "single_correct": 6,
+          "generated_tokens": 184835,
+          "normal_terminations": 14,
+          "truncated": 86,
+          "answer_extraction_failures": 84,
+          "single_accuracy": 0.06,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 78.90377578139305,
+          "model_load_seconds": 9.53094994649291,
+          "generated_tokens_per_generation_second": 2342.536819937424
+        },
+        "missing_final_section": 83
+      },
+      {
+        "stage": "ckpt20",
+        "metrics": {
+          "items": 100,
+          "single_correct": 11,
+          "generated_tokens": 162446,
+          "normal_terminations": 47,
+          "truncated": 53,
+          "answer_extraction_failures": 46,
+          "single_accuracy": 0.11,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 121.15156464651227,
+          "model_load_seconds": 11.721438329666853,
+          "generated_tokens_per_generation_second": 1340.8493771745648
+        },
+        "missing_final_section": 50
+      },
+      {
+        "stage": "ckpt100",
+        "metrics": {
+          "items": 100,
+          "single_correct": 5,
+          "generated_tokens": 160102,
+          "normal_terminations": 58,
+          "truncated": 42,
+          "answer_extraction_failures": 42,
+          "single_accuracy": 0.05,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 122.50300804711878,
+          "model_load_seconds": 11.804065870121121,
+          "generated_tokens_per_generation_second": 1306.9230099102494
+        },
+        "missing_final_section": 24
+      }
+    ],
+    "th": [
+      {
+        "stage": "base",
+        "metrics": {
+          "items": 100,
+          "single_correct": 41,
+          "generated_tokens": 180242,
+          "normal_terminations": 34,
+          "truncated": 66,
+          "answer_extraction_failures": 46,
+          "single_accuracy": 0.41,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 70.73860533349216,
+          "model_load_seconds": 9.85733331926167,
+          "generated_tokens_per_generation_second": 2548.000475133229
+        },
+        "missing_final_section": 49
+      },
+      {
+        "stage": "ckpt20",
+        "metrics": {
+          "items": 100,
+          "single_correct": 26,
+          "generated_tokens": 191700,
+          "normal_terminations": 22,
+          "truncated": 78,
+          "answer_extraction_failures": 50,
+          "single_accuracy": 0.26,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 152.66001810319722,
+          "model_load_seconds": 11.396820737048984,
+          "generated_tokens_per_generation_second": 1255.7315424292167
+        },
+        "missing_final_section": 65
+      },
+      {
+        "stage": "ckpt100",
+        "metrics": {
+          "items": 100,
+          "single_correct": 17,
+          "generated_tokens": 199833,
+          "normal_terminations": 10,
+          "truncated": 90,
+          "answer_extraction_failures": 53,
+          "single_accuracy": 0.17,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 162.46968805789948,
+          "model_load_seconds": 10.961357410997152,
+          "generated_tokens_per_generation_second": 1229.9709711314601
+        },
+        "missing_final_section": 85
+      }
+    ],
+    "te": [
+      {
+        "stage": "base",
+        "metrics": {
+          "items": 100,
+          "single_correct": 2,
+          "generated_tokens": 203962,
+          "normal_terminations": 2,
+          "truncated": 98,
+          "answer_extraction_failures": 95,
+          "single_accuracy": 0.02,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 100.4041538964957,
+          "model_load_seconds": 9.751774728298187,
+          "generated_tokens_per_generation_second": 2031.4099774224449
+        },
+        "missing_final_section": 86
+      }
+    ],
+    "ja": [
+      {
+        "stage": "base",
+        "metrics": {
+          "items": 100,
+          "single_correct": 39,
+          "generated_tokens": 168081,
+          "normal_terminations": 42,
+          "truncated": 58,
+          "answer_extraction_failures": 46,
+          "single_accuracy": 0.39,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 64.45777904242277,
+          "model_load_seconds": 9.919875575229526,
+          "generated_tokens_per_generation_second": 2607.6138907823333
+        },
+        "missing_final_section": 56
+      }
+    ],
+    "bn": [
+      {
+        "stage": "base",
+        "metrics": {
+          "items": 100,
+          "single_correct": 8,
+          "generated_tokens": 202156,
+          "normal_terminations": 6,
+          "truncated": 94,
+          "answer_extraction_failures": 89,
+          "single_accuracy": 0.08,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 93.83360644243658,
+          "model_load_seconds": 9.67698678560555,
+          "generated_tokens_per_generation_second": 2154.409359977176
+        },
+        "missing_final_section": 78
+      }
+    ],
+    "en": [
+      {
+        "stage": "base",
+        "metrics": {
+          "items": 100,
+          "single_correct": 40,
+          "generated_tokens": 185543,
+          "normal_terminations": 31,
+          "truncated": 69,
+          "answer_extraction_failures": 58,
+          "single_accuracy": 0.4,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 69.79343239404261,
+          "model_load_seconds": 9.966601835563779,
+          "generated_tokens_per_generation_second": 2658.459308211892
+        },
+        "missing_final_section": 59
+      }
+    ]
+  },
+  "paired_transitions": {
+    "sw": [
+      {
+        "from": "base",
+        "to": "ckpt20",
+        "gained": 7,
+        "lost": 2,
+        "retained": 4,
+        "delta_percentage_points": 5
+      },
+      {
+        "from": "base",
+        "to": "ckpt100",
+        "gained": 4,
+        "lost": 5,
+        "retained": 1,
+        "delta_percentage_points": -1
+      }
+    ],
+    "th": [
+      {
+        "from": "base",
+        "to": "ckpt20",
+        "gained": 6,
+        "lost": 21,
+        "retained": 20,
+        "delta_percentage_points": -15
+      },
+      {
+        "from": "base",
+        "to": "ckpt100",
+        "gained": 4,
+        "lost": 28,
+        "retained": 13,
+        "delta_percentage_points": -24
+      }
+    ],
+    "te": [],
+    "ja": [],
+    "bn": [],
+    "en": []
+  },
+  "configs_equal_except_adapter_output_per_language": true,
+  "problem_ids_questions_answers_prompts_and_seeds_match_per_language": true,
+  "total_generated_tokens": 1838900,
+  "total_pure_generation_seconds": 1036.9156317450106,
+  "assessment": "Development-only, single seed. SW checkpoint20 improvement does not persist at100; TH checkpoints remain belowBase. No stable three-language selection gate passed; independent formal tests still separate."
+}
