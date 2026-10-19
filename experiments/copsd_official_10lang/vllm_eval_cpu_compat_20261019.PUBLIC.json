@@ -1,0 +1,10 @@
+{
+  "scope": "CPU compatibility checks only, no GPU benchmark score",
+  "project_prompts_match_previous_frozen_HF_protocol_languages": 11,
+  "automatic_special_tokens_do_not_change_prompt_token_ids": true,
+  "original_official_extractor_and_grader_match_saved_SW100_responses": 100,
+  "saved_response_correct_count_unchanged": 7,
+  "official_afri_config": "swa",
+  "official_afri_reference": "Released1.7B script:12 samples,1024 generated tokens,temperature1.0; CLI default38912 is not selected.",
+  "project_formal_protocol": "New vLLM backend, single2048-token answer, all models share this protocol; existing HF development results remain separate."
+}
