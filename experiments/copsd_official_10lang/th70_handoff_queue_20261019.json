@@ -1,0 +1,26 @@
+{
+  "interval_minutes": 5.0,
+  "target_gpus": 4,
+  "max_idle_memory_mib": 512,
+  "max_idle_util_percent": 5,
+  "hold_memory_percent": 90,
+  "min_free_after_hold_mib": 256,
+  "mode": "job",
+  "job": {
+    "script": "/data0/users/lixiaoyang/Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/run_benchmark_then_resume.sh",
+    "cwd": "",
+    "conda_exe": "/data0/users/lixiaoyang/.local/miniforge3/bin/conda",
+    "conda_env": "",
+    "conda_prefix": "/data0/users/lixiaoyang/ssu-migration/envs/cl",
+    "args": [
+      "--checkpoint",
+      "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-70",
+      "--handoff-run-id",
+      "th70_benchmark_resume_20261019_v1",
+      "--resume-run-id",
+      "th_17b_project2900_seed42_4gpu_resume70_torch28_20261019_v1"
+    ],
+    "log": "/data0/users/lixiaoyang/logs/copsd_official_10lang/th70_bench_resume_20261019_v1.run.log"
+  },
+  "max_user_gpus": 5
+}
