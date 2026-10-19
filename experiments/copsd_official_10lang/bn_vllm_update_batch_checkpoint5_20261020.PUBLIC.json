@@ -1,0 +1,67 @@
+{
+  "observed_at": "2026-10-20T00:48:48.505994+08:00",
+  "language": "bn",
+  "global_step": 5,
+  "actual_completed_rollouts": 160,
+  "generated_tokens": 326681,
+  "capped_at_2048_count": 157,
+  "all_microstep_losses_finite": true,
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state.pth",
+    "training_args.bin"
+  ],
+  "fixed_Base_checks_passed_at_sync_steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "student_and_engine_changed_each_update": true,
+  "generation_groups": [
+    {
+      "global_step": 0,
+      "rollouts": 32,
+      "generated_tokens": 65329,
+      "generation_seconds": 41.31351464614272
+    },
+    {
+      "global_step": 1,
+      "rollouts": 32,
+      "generated_tokens": 65536,
+      "generation_seconds": 41.61188071966171
+    },
+    {
+      "global_step": 2,
+      "rollouts": 32,
+      "generated_tokens": 65104,
+      "generation_seconds": 42.18673896417022
+    },
+    {
+      "global_step": 3,
+      "rollouts": 32,
+      "generated_tokens": 65176,
+      "generation_seconds": 41.42072476632893
+    },
+    {
+      "global_step": 4,
+      "rollouts": 32,
+      "generated_tokens": 65536,
+      "generation_seconds": 41.91575856693089
+    }
+  ],
+  "generation_seconds_for_160_rollouts": 208.44861766323447,
+  "microstep_and_update_sync_timer_sum_seconds_excluding_initial_sync": 664.1836585458368,
+  "timer_scope": "Sum of instrumented microsteps and policy-sync timers; excludes dataloader, outer optimizer, saving and startup. Not complete wall-clock training time.",
+  "teacher_forward_calls_inferred_from_frozen_code": 160,
+  "teacher_forward_seconds_separately_measured": null,
+  "physical_board_peak_mib_since_launch_to_snapshot_1s_samples": 19003,
+  "training_status": "running",
+  "effectiveness": "Paired vLLM development evaluation queued; no trained BN score yet."
+}
