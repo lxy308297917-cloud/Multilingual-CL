@@ -34,6 +34,8 @@ def main():
         raise FileExistsError(a.output)
     import fasttext
     model = fasttext.load_model(str(a.model))
+    if a.target_label not in model.get_labels():
+        raise ValueError("Target label is not present in this GlotLID model: " + a.target_label)
 
     def identify(text):
         text = prose(text)
