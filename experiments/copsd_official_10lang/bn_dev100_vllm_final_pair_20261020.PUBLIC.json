@@ -1,0 +1,65 @@
+{
+  "observed_at": "2026-10-20T04:26:19.168270+08:00",
+  "language": "bn",
+  "protocol": "project_dev_single_vllm_v1",
+  "development_items": 100,
+  "compared_models": [
+    "Base",
+    "checkpoint100"
+  ],
+  "configs_equal_except_adapter_output": true,
+  "problem_ids_questions_answers_prompts_and_sample_seeds_match": true,
+  "metrics": [
+    {
+      "items": 100,
+      "single_correct": 8,
+      "generated_tokens": 202156,
+      "normal_terminations": 6,
+      "truncated": 94,
+      "answer_extraction_failures": 89,
+      "single_accuracy": 0.08,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 93.83360644243658,
+      "model_load_seconds": 9.67698678560555,
+      "generated_tokens_per_generation_second": 2154.409359977176
+    },
+    {
+      "items": 100,
+      "single_correct": 0,
+      "generated_tokens": 204800,
+      "normal_terminations": 0,
+      "truncated": 100,
+      "answer_extraction_failures": 100,
+      "single_accuracy": 0.0,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 194.3648432660848,
+      "model_load_seconds": 10.892561133950949,
+      "generated_tokens_per_generation_second": 1053.6884992088283
+    }
+  ],
+  "paired_counts": {
+    "gained": 0,
+    "lost": 8,
+    "retained": 0
+  },
+  "delta_percentage_points": -8,
+  "raw_text_diagnostics": [
+    {
+      "outputs_with_close_think_tag": 22,
+      "outputs_with_boxed_literal": 11
+    },
+    {
+      "outputs_with_close_think_tag": 2,
+      "outputs_with_boxed_literal": 0
+    }
+  ],
+  "final_dev_subprocess_returned_successfully": true,
+  "parent_suite_phase": "running",
+  "assessment": "No gain: Base8/100 to trained0/100; all trained responses hit2048 and lack extractable boxed answers. Does not prove every internal reasoning step is wrong. Do not select this as a stable-benefit language or infer causal mechanism from termination alone."
+}
