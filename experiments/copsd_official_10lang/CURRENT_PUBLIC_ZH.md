@@ -1,6 +1,6 @@
 # COPSD 当前实验进展
 
-更新：2026-10-20 00:44（Asia/Shanghai）。目标保持为十语言 single OPD，依据独立开发集选择三语言，再做正反顺序 OPD 与逐阶段遗忘评测。服务器进程、绝对路径和内部指纹保留本机。
+更新：2026-10-20 00:51（Asia/Shanghai）。目标保持为十语言 single OPD，依据独立开发集选择三语言，再做正反顺序 OPD 与逐阶段遗忘评测。服务器进程、绝对路径和内部指纹保留本机。
 
 | 项目 | 已核实状态 |
 |---|---|
@@ -8,7 +8,7 @@
 | TH 四卡 single | 100更新完成，checkpoint100、最终adapter及恢复文件保存，正常退出 |
 | TE single | vLLM正式训练运行，已完成10更新并保存checkpoint10；继续训练 |
 | JA single | 新vLLM正式训练运行，从原始Base独立开始；00:20完成1更新、44个microstep |
-| BN single | 批量rollout正式100更新任务已实际启动，原始Base独立初始化，已执行96次microstep，前两次更新已完成，继续运行 |
+| BN single | 批量rollout正式100更新任务已实际启动，原始Base独立初始化，已完成5更新／160条轨迹，checkpoint5已验收；继续运行 |
 | ZH / RU / DE / FR / ES | 尚未新启动 |
 | 开发集 | TE Base已完成4/100；TH20运行；新vLLM开发集配对cohort已手动排队，账号四卡上限下等待 |
 | 批量rollout工程验证 | SW两更新完整长度GPU检查通过并正常退出，断点恢复验证完成并正常退出；已用于新BN正式任务 |
@@ -60,3 +60,7 @@ TE Base独立开发集100题完成：4题正确、2题正常终止，204,143生�
 开发评测提速已实现并手动排队：先评当前五种目标语言与英语Base，再补SW／TH checkpoint20和100的相同协议配对，固定原100题开发集、2048预算、原官方提示与评分；新vLLM开发协议与历史HF分开。六语言600个实际prompt已CPU核对一致，不代表采样结果或分数相同，尚无GPU新开发分数。见 `DEV_VLLM_ZH.md`。
 
 TE／JA批量rollout续训入口和独立队列已配置、CPU预检，尚未启动，也未停止原任务。AGENTS.md要求停止运行中的队列任务获得用户明确授权，已询问是否允许在下个完整checkpoint后迁移；答复前两项原训练继续。
+
+BN checkpoint5已核验：326,681生成token、157/160条达到2048上限，160次microstep损失有限，固定Base与逐更新学生推理同步检查通过，adapter／optimizer／scheduler／RNG／trainer state齐全；160条批量生成共208.45秒。微步与更新同步计时合计664.18秒，不含外层optimizer、保存、启动等，不能当完整墙钟训练耗时。实采显存峰值19,003 MiB。见 `bn_vllm_update_batch_checkpoint5_20261020.PUBLIC.json`。
+
+BN checkpoint5与TE checkpoint10的100题新vLLM开发评测已手动排队，供同协议Base配对；早期预算不同，不用作正式100更新排名。旧HF输出的CPU语言诊断显示：SW思考区目标语言top1计数62→79→97（Base→20→100），数学2→11→7；TH思考区泰语99→100，但缺少结束思考标记的输出44→84，数学37→20。语言ID改善不等于数学改善，也不能只凭诊断归因；见 `sw_th_dev100_language_20261020.PUBLIC.json`。
