@@ -1,0 +1,67 @@
+{
+  "observed_at": "2026-10-19T22:49:03.429274+08:00",
+  "language": "sw",
+  "split": "independent100-question development,one seed",
+  "evaluation_config_equal_except_adapter": true,
+  "questions_answers_prompts_sample_seeds_equal": true,
+  "curve": [
+    {
+      "step": 0,
+      "items": 100,
+      "single_correct": 2,
+      "single_accuracy": 0.02,
+      "pass_n_correct": 2,
+      "pass_n": 0.02,
+      "n": 1,
+      "generated_tokens": 192565,
+      "normal_terminations": 9,
+      "generation_count": 100,
+      "seconds": 5276.18907584995,
+      "peak_gpu_mib": 3559.8
+    },
+    {
+      "step": 20,
+      "items": 100,
+      "single_correct": 11,
+      "single_accuracy": 0.11,
+      "pass_n_correct": 11,
+      "pass_n": 0.11,
+      "n": 1,
+      "generated_tokens": 168057,
+      "normal_terminations": 43,
+      "generation_count": 100,
+      "seconds": 8507.708970224485,
+      "peak_gpu_mib": 3820.9
+    },
+    {
+      "step": 65,
+      "items": 100,
+      "single_correct": 9,
+      "single_accuracy": 0.09,
+      "pass_n_correct": 9,
+      "pass_n": 0.09,
+      "n": 1,
+      "generated_tokens": 171317,
+      "normal_terminations": 45,
+      "generation_count": 100,
+      "seconds": 8818.135996559635,
+      "peak_gpu_mib": 3828.6
+    },
+    {
+      "step": 100,
+      "items": 100,
+      "single_correct": 7,
+      "single_accuracy": 0.07,
+      "pass_n_correct": 7,
+      "pass_n": 0.07,
+      "n": 1,
+      "generated_tokens": 159266,
+      "normal_terminations": 58,
+      "generation_count": 100,
+      "seconds": 8181.25469481945,
+      "peak_gpu_mib": 3820.8
+    }
+  ],
+  "checkpoint_selection_policy_for_followup": "Retain final100 as fixed100-update reference; keep20 and65 as development learning-curve evidence. Do not select sequential languages or claim stable benefit from one seed. Formal tests have not been used for tuning.",
+  "assessment": "Raw accuracy2→11→9→7; normal termination9→43→45→58. Later updates improved termination but not monotonic mathematical accuracy."
+}
