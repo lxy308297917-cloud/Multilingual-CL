@@ -1,0 +1,20 @@
+{
+  "check": "CPU actual official generation method, deterministic fake inference engine, real Qwen3 tokenizer",
+  "matching_microbatch_outputs": 52,
+  "compared": [
+    "input_ids",
+    "attention_mask",
+    "labels",
+    "prompt_texts",
+    "completion_texts"
+  ],
+  "group_sizes": [
+    32,
+    20
+  ],
+  "generation_calls_per_group": 1,
+  "engine_sleep_calls_per_group": 1,
+  "stale_step_and_wrong_prompt_rejected": true,
+  "gpu_training_validated": false,
+  "scope": "Packing and mask parity for fixed completions only; no stochastic-output equivalence, speed or training-effectiveness claim."
+}
