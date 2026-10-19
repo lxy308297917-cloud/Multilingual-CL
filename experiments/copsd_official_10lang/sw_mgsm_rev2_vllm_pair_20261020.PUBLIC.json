@@ -1,0 +1,68 @@
+{
+  "observed_at": "2026-10-20T01:40:57.374217+08:00",
+  "benchmark": "MGSM-Rev2 SW test250",
+  "protocol": "project_single_vllm_v1",
+  "samples_per_question": 1,
+  "max_generated_tokens": 2048,
+  "formal_full_test": true,
+  "fixed_reference": "Base versus completed SW100-update model; no checkpoint selection from test",
+  "configs_equal_except_adapter_output": true,
+  "problem_ids_questions_answers_prompts_match": true,
+  "per_question_seed_rule_equal": true,
+  "parent_queue_completed_exit0": true,
+  "models": [
+    "Base",
+    "SW checkpoint100"
+  ],
+  "metrics": [
+    {
+      "generated_tokens": 437415,
+      "normal_terminations": 54,
+      "truncated": 196,
+      "answer_extraction_failures": 194,
+      "single_correct": 8,
+      "pass_n_correct": 8,
+      "items": 250,
+      "generation_count": 250,
+      "single_accuracy": 0.032,
+      "pass_n": 0.032,
+      "n": 1,
+      "model_load_seconds": 9.858391266316175,
+      "generation_seconds": 185.28401936031878,
+      "evaluation_seconds": 185.77077684924006,
+      "generated_tokens_per_generation_second": 2360.781040427271,
+      "protocol": "project_single_vllm_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "scores_by_difficulty": {}
+    },
+    {
+      "generated_tokens": 344751,
+      "normal_terminations": 190,
+      "truncated": 60,
+      "answer_extraction_failures": 74,
+      "single_correct": 9,
+      "pass_n_correct": 9,
+      "items": 250,
+      "generation_count": 250,
+      "single_accuracy": 0.036,
+      "pass_n": 0.036,
+      "n": 1,
+      "model_load_seconds": 11.002837020903826,
+      "generation_seconds": 246.35912989079952,
+      "evaluation_seconds": 247.35884493030608,
+      "generated_tokens_per_generation_second": 1399.3839000519827,
+      "protocol": "project_single_vllm_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "scores_by_difficulty": {}
+    }
+  ],
+  "paired_counts": {
+    "gained": 7,
+    "lost": 6,
+    "retained": 2
+  },
+  "delta_percentage_points": 0.3999999999999997,
+  "assessment": "Single fixed-budget seed; report alongside development results, not used to choose training questions, checkpoints or sequential languages. No general stable-benefit claim."
+}
