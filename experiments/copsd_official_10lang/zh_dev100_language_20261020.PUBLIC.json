@@ -1,0 +1,93 @@
+{
+  "observed_at": "2026-10-20T06:25:58.935016+08:00",
+  "language": "zh",
+  "source": "Existing paired held-out vLLM dev100 outputs; CPU classification only, no new generation",
+  "target_label": "__label__cmn_Hani",
+  "target_label_note": "GlotLID model_v3 uses cmn_Hani, not cmn_Hans. Threshold counts recomputed from saved predictions with the actual model label; no model inference repeated. Analyzer now rejects unknown target labels.",
+  "method": "Existing math/control stripping, minimum20 alphabetic characters; top1 and probability>=0.8 counts reported with eligibility/section status",
+  "models": [
+    {
+      "model": "Base",
+      "math_correct": 25,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 99,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 96,
+            "__label__nan_Hani": 1,
+            "__label__lit_Latn": 1,
+            "__label__dan_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 88,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 24,
+            "__label__nan_Hani": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 37,
+            "no_final_section": 61,
+            "too_short": 2
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 37
+          },
+          "target_top1_probability_ge_0_8": 35,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 25
+          }
+        }
+      }
+    },
+    {
+      "model": "checkpoint100_seeded_v2",
+      "math_correct": 38,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 92,
+            "too_short": 8
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 91,
+            "__label__anp_Deva": 1
+          },
+          "target_top1_probability_ge_0_8": 90,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 33,
+            "too_short": 4,
+            "__label__anp_Deva": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 39,
+            "no_final_section": 61
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 39
+          },
+          "target_top1_probability_ge_0_8": 39,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 26,
+            "no_final_section": 12
+          }
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Language ID is not calibrated fluency, coherence or mathematical correctness.",
+    "Too-short outputs are unclassified, not automatically wrong-language.",
+    "No final section means no closing thinking marker; distinguish from EOS termination and answer grading.",
+    "Official whole-output math score remains unchanged."
+  ]
+}
