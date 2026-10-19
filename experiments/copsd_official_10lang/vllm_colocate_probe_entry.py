@@ -65,6 +65,31 @@ class ProbeCallback(TrainerCallback):
         print('COLLOCATE_PROBE_UPDATES_DONE', json.dumps(result), flush=True)
 
 
+def install_preserving_sleep(engine):
+    # After the initial full sync, consecutive accumulation microsteps must
+    # reuse the same policy. vLLM level2 discards weights; level1 backs them up.
+    original_sleep = engine.sleep
+
+    def preserving_sleep(level=1):
+        return original_sleep(level=1)
+
+    engine.sleep = preserving_sleep
+
+
+def wake_sleeping_allocations(engine):
+    executor = engine.llm_engine.model_executor
+    if executor.is_sleeping:
+        # At an optimizer boundary sync already woke weights; only KV remains.
+        # Between microsteps both tags sleep. Do not ask to remap awake tags.
+        engine.wake_up(tags=sorted(executor.sleeping_tags))
+
+
+def preserving_wake(self):
+    if self.vllm_mode == 'colocate' and self.vllm_enable_sleep_mode:
+        core.empty_cache()
+        wake_sleeping_allocations(self.vllm_engine)
+
+
 original_init = core.OPSDTrainer.__init__
 original_generation = core.OPSDTrainer._generate_on_policy_outputs_vllm
 original_training_step = core.OPSDTrainer.training_step
@@ -74,6 +99,8 @@ def instrumented_init(self, *args, **kwargs):
     original_init(self, *args, **kwargs)
     self._probe_syncs = []
     self._probe_micro_steps = 0
+    if self.vllm_enable_sleep_mode:
+        install_preserving_sleep(self.vllm_engine)
     self.add_callback(ProbeCallback(self))
 
 
@@ -100,6 +127,10 @@ def instrumented_generation(self, *args, **kwargs):
     assert self._last_vllm_sync_step == self.state.global_step
     current = fingerprint((n, p) for n, p in self.model.named_parameters() if p.requires_grad)
     assert current == self._probe_syncs[-1]['adapter_hash'], 'Stale rollout policy'
+    if self._probe_micro_steps in (1, 33):
+        engine_model = self.vllm_engine.llm_engine.model_executor.driver_worker.model_runner.model
+        assert fingerprint(engine_model.named_parameters()) == self._probe_syncs[-1]['engine_hash'], 'Restored inference weights differ'
+        print('COLLOCATE_SLEEP_WEIGHT_RESTORE_VERIFIED', self._probe_micro_steps, flush=True)
     return original_generation(self, *args, **kwargs)
 
 
@@ -125,4 +156,5 @@ if __name__ == '__main__':
     core.OPSDTrainer._move_model_to_vllm = nonmutating_sync
     core.OPSDTrainer._generate_on_policy_outputs_vllm = instrumented_generation
     core.OPSDTrainer.training_step = instrumented_training_step
+    core.OPSDTrainer._wake_vllm_if_needed = preserving_wake
     runpy.run_path(str(SOURCE / 'multilingual_opsd_train.py'), run_name='__main__')
