@@ -1,0 +1,49 @@
+{
+  "observed_at": "2026-10-19T17:32:20.916306+08:00",
+  "checkpoint_step": 90,
+  "parent_step": 70,
+  "post_resume_updates": 20,
+  "post_resume_rollouts": 640,
+  "post_resume_generated_tokens": 1277199,
+  "post_resume_capped_2048": 569,
+  "post_resume_training_elapsed_seconds": 21961,
+  "allocated_gpu_hours_since_resume_clock_start": 24.40111111111111,
+  "mean_seconds_per_resumed_update": 1098.05,
+  "remaining_training_seconds_from_twenty_update_mean": 10980.5,
+  "eta_caveat": "Twenty-update mean only; excludes subsequent variation and evaluation, not a completion guarantee. Ignore restored tqdm ETA/rate.",
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state_0.pth",
+    "rng_state_1.pth",
+    "rng_state_2.pth",
+    "rng_state_3.pth"
+  ],
+  "adapter_changed_from_checkpoint85": true,
+  "logged_metrics_finite": true,
+  "recent_log_history": [
+    {
+      "epoch": 0.9710344827586207,
+      "grad_norm": 0.04493046551942825,
+      "learning_rate": 6.5e-07,
+      "loss": -0.0201,
+      "on_policy_loss": -0.0201,
+      "step": 88
+    },
+    {
+      "epoch": 0.993103448275862,
+      "grad_norm": 0.04324445500969887,
+      "learning_rate": 5.5e-07,
+      "loss": -0.0203,
+      "on_policy_loss": -0.0203,
+      "step": 90
+    }
+  ],
+  "sw_current_step_at_snapshot": 99,
+  "formal_generation_backend": "Transformers/SDPA",
+  "effectiveness": "No new development or official-test scores; engineering progress only.",
+  "verification_scope": "Checkpoint90 files/state and tracked original live process identities verified; no redundant optimizer reload, no new GPU restore test, no training changes."
+}
