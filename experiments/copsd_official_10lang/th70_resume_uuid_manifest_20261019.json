@@ -1,0 +1,109 @@
+{
+  "created_at": "2026-10-19T11:28:20.694746+08:00",
+  "official_source_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "parent_checkpoint": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-70",
+  "parent_global_step": 70,
+  "parent_adapter_sha256": "3a93dc2b9b3c62a3ac4f33bd1ced4ab20189dddabf11d6c567b7d407c7aa5746",
+  "actual_queue_job": {
+    "script": "/data0/users/lixiaoyang/Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/run_four_gpu_17b_resume_uuid_v3.sh",
+    "cwd": "/data0/users/lixiaoyang/Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang",
+    "conda_prefix": "/data0/users/lixiaoyang/ssu-migration/envs/cl",
+    "log_file": "/data0/users/lixiaoyang/logs/copsd_official_10lang/th70_resume_uuid_20261019_v2.run.log",
+    "script_sha256": "e71149e8f8d22e1ac207244ba023f686732bf05a8458ea64594cdd36b138d33b",
+    "command": [
+      "/usr/bin/nohup",
+      "/bin/bash",
+      "-c",
+      "set -e\nsource \"$1\"\nconda activate \"$2\"\nexport CUDA_VISIBLE_DEVICES=\"$3\"\nexport CUDA_DEVICE_ORDER=PCI_BUS_ID\nshift 3\nexec /bin/bash \"$@\"",
+      "gpu-queue",
+      "/data0/users/lixiaoyang/.local/miniforge3/etc/profile.d/conda.sh",
+      "/data0/users/lixiaoyang/ssu-migration/envs/cl",
+      "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39,GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573,GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a,GPU-4d65516e-eaa6-0d50-ff59-a1c8d4a75df8",
+      "/data0/users/lixiaoyang/Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/run_four_gpu_17b_resume_uuid_v3.sh",
+      "th",
+      "th_17b_project2900_seed42_4gpu_resume70_torch28_uuid_20261019_v2",
+      "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-70"
+    ],
+    "config": {
+      "interval_minutes": 5.0,
+      "target_gpus": 4,
+      "max_idle_memory_mib": 512,
+      "max_idle_util_percent": 5,
+      "hold_memory_percent": 90,
+      "min_free_after_hold_mib": 256,
+      "mode": "job",
+      "job": {
+        "script": "/data0/users/lixiaoyang/Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/run_four_gpu_17b_resume_uuid_v3.sh",
+        "cwd": "",
+        "conda_exe": "/data0/users/lixiaoyang/.local/miniforge3/bin/conda",
+        "conda_env": "",
+        "conda_prefix": "/data0/users/lixiaoyang/ssu-migration/envs/cl",
+        "args": [
+          "th",
+          "th_17b_project2900_seed42_4gpu_resume70_torch28_uuid_20261019_v2",
+          "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-70"
+        ],
+        "log": "/data0/users/lixiaoyang/logs/copsd_official_10lang/th70_resume_uuid_20261019_v2.run.log"
+      },
+      "max_user_gpus": 5
+    },
+    "run_dir": "/data0/users/lixiaoyang/gpu-queue/queues/copsd-th70-resume-uuid-20261019-v2/runs/20261019-112515-665c16f4",
+    "gpu_indices": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "gpu_uuids": [
+      "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+      "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573",
+      "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a",
+      "GPU-4d65516e-eaa6-0d50-ff59-a1c8d4a75df8"
+    ],
+    "started_at": "2026-10-19 11:25:15",
+    "phase": "running",
+    "pid": 4013784,
+    "exit_code": null
+  },
+  "model_lock": {
+    "path": "/data0/users/lixiaoyang/models/Qwen3-1.7B/MODEL_LOCK.json",
+    "sha256": "c4eda4223ab073d94587e5854acb70e5b153938b79e2b7a39094989600a7ec72"
+  },
+  "data": {
+    "path": "/data0/users/lixiaoyang/data/copsd_official_20261015/adapted_v2_ordered/project_train_2900_th.json",
+    "sha256": "d0260864b4f5558e3008a584bdb666939128752143a682e88b6622f50cbdc1f4"
+  },
+  "core_source_sha256": {
+    "multilingual_opsd_train.py": "134e09adfa449fde36c3daf8bf08646073fdce414fab84418ab0325b5f1dbf3d",
+    "multilingual_opsd_trainer.py": "61ac661d2bbea66988d1b7adc671bcd35c210f7aeb7e43a27e6e2f8872b7ffa6",
+    "multilingual_data_collator.py": "46d6462fc841977e05c475e8bfc1bdafe4d1438ec34f89af6d5b72205118145d",
+    "language_config.py": "2177afe9b3bd753f6a82a1506848ffec1f834b51a3342bee8801899674010947"
+  },
+  "resume_source_sha256": {
+    "run_four_gpu_17b_resume_uuid_v3.sh": "e71149e8f8d22e1ac207244ba023f686732bf05a8458ea64594cdd36b138d33b",
+    "resume_torch28_entry.py": "9cd3eaa61e52ae21ac08bc21b2bb02195a29e9898ee96de59e72fb1954bafb94",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d"
+  },
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "4.57.1",
+    "trl": "0.26.0",
+    "peft": "0.17.1",
+    "accelerate": "1.11.0",
+    "datasets": "3.6.0",
+    "numpy": "2.2.6",
+    "vllm": "0.11.0"
+  },
+  "optimizer_total_updates": 100,
+  "remaining_at_resume": 30,
+  "effective_batch": 32,
+  "micro_batch_per_gpu": 1,
+  "gradient_accumulation": 8,
+  "gpu_count": 4,
+  "max_completion_length": 2048,
+  "generation_backend": "Transformers/SDPA; vLLM benchmark is not integrated into formal training",
+  "teacher": "original frozen base with LoRA disabled; unchanged official core",
+  "resume_scope": "Runtime adaptation from Torch2.5 to Torch2.8, NumPy RNG compatibility and process-local UUID NVML metadata fix; original checkpoint, optimizer, scheduler and RNG are loaded; actual first update pending observation",
+  "original_failed_resume_log": "/data0/users/lixiaoyang/logs/copsd_official_10lang/th70_bench_resume_20261019_v1.run.log",
+  "new_checkpoint_root": "/data0/users/lixiaoyang/models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_resume70_torch28_uuid_20261019_v2"
+}
