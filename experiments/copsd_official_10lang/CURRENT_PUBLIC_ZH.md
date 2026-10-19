@@ -1,6 +1,6 @@
 # COPSD 当前实验进展
 
-更新：2026-10-20 01:23（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
+更新：2026-10-20 01:29（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
 
 ## 当前任务
 
@@ -8,11 +8,11 @@
 |---|---|
 | SW single | 100/100更新完成，checkpoint100及最终adapter保存，正常退出 |
 | TH 四卡single | 100/100更新完成，checkpoint100及最终adapter保存，正常退出 |
-| TE single | 已核实16/100更新，已保存checkpoint15，原逐题vLLM训练继续 |
-| BN single | 已核实21/100更新，已保存checkpoint20，批量rollout训练继续 |
+| TE single | 已核实17/100更新，已保存checkpoint15；原逐题vLLM训练继续 |
+| BN single | 已核实23/100更新，已保存checkpoint20；批量rollout训练继续 |
 | JA single | 卡住：4次更新、142个microstep后停滞，尚无checkpoint；进程仍活着，不能计为有效训练 |
 | ZH / RU / DE / FR / ES | 批量single配置已准备并CPU预检，未启动 |
-| 新vLLM开发评测cohort | 已实际运行，当前语言及英语Base已完成，继续SW／TH checkpoint20／100 |
+| 新vLLM开发评测cohort | 六种Base及SW／TH checkpoint20／100全部完成，父队列exit0 |
 | SW MGSM-Rev2主评 | Base／固定100更新模型对照已手动排队，尚无正式分数 |
 | 三语言顺序OPD | 未达到稳定开发收益与语言选择条件，未启动 |
 
@@ -26,12 +26,12 @@
 |---|---:|---:|---|
 | BN | 8/100 | checkpoint5：8/100 | 新增4题、失去4题，净变化0 |
 | TE | 2/100 | checkpoint10：0/100 | 新增0题、失去2题，净变化−2 |
-| SW | 6/100 | 评测中 | 未完成 |
-| TH | 41/100 | 评测中 | 未完成 |
+| SW | 6/100 | checkpoint20：11/100；100：5/100 | 分别+5、−1题 |
+| TH | 41/100 | checkpoint20：26/100；100：17/100 | 分别−15、−24题 |
 | JA | 39/100 | 无已保存checkpoint | 未完成 |
 | 英语 | 40/100 | 保持评测待补 | 未完成 |
 
-BN／TE早期评测父队列已正常退出；不同更新预算不能作正式语言排名，当前没有早期稳定收益证据。BN checkpoint5有96/100条截断，TE checkpoint10有100/100条截断，需要保留这一限制。详见 `bn_dev100_vllm_early_pair_20261020.PUBLIC.json`、`te_dev100_vllm_early_pair_20261020.PUBLIC.json`。
+两批新vLLM开发评测父队列均已正常退出；不同更新预算不能作正式语言排名，当前没有早期稳定收益证据。BN checkpoint5有96/100条截断，TE checkpoint10有100/100条截断，需要保留这一限制。详见 `bn_dev100_vllm_early_pair_20261020.PUBLIC.json`、`te_dev100_vllm_early_pair_20261020.PUBLIC.json`。完整新协议cohort见 `vllm_dev_active_cohort_20261020.PUBLIC.json`：共1000条回答、1,838,900生成token，纯生成1036.92秒；SW早期增益未保持到100更新，TH两处checkpoint均低于Base，当前不满足稳定三语言选择条件。
 
 历史HF开发协议另行保留，不能与新vLLM分数混合比较：
 
