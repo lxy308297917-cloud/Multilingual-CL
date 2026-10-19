@@ -1,0 +1,65 @@
+{
+  "observed_at": "2026-10-19T13:49:01.551871+08:00",
+  "language": "sw",
+  "checkpoint_step": 95,
+  "observed_completed_rollouts": 3028,
+  "exposure_count_note": "At the epoch boundary the last accumulation group has20 rather than32 questions; count measured from completed generation logs, not95x32.",
+  "generated_tokens": 5449997,
+  "capped_2048": 2067,
+  "training_elapsed_seconds": 333044,
+  "allocated_gpu_hours": 92.51222222222222,
+  "remaining_updates": 5,
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state.pth"
+  ],
+  "logged_metrics_finite": true,
+  "recent_log_history": [
+    {
+      "epoch": 1.0110344827586206,
+      "grad_norm": 0.09867534786462784,
+      "learning_rate": 4.5000000000000003e-07,
+      "loss": -0.0284,
+      "on_policy_loss": -0.035,
+      "step": 92
+    },
+    {
+      "epoch": 1.033103448275862,
+      "grad_norm": 0.11871810257434845,
+      "learning_rate": 3.5000000000000004e-07,
+      "loss": -0.0296,
+      "on_policy_loss": -0.0296,
+      "step": 94
+    }
+  ],
+  "th_current_step": 77,
+  "formal_generation_backend": "Transformers/SDPA",
+  "queues": [
+    {
+      "queue": "copsd-sw-17b-vllm-colocate-probe-v1",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    },
+    {
+      "queue": "copsd-sw-17b-dev100-ckpt65-v1",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    },
+    {
+      "queue": "copsd-th-17b-dev100-base-4gpu-v2",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    },
+    {
+      "queue": "copsd-th-17b-dev100-ckpt20-4gpu-v2",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    }
+  ],
+  "effectiveness": "No new development or formal-test scores. This checkpoint report proves engineering progress only.",
+  "verification_scope": "Checkpoint95 files/state and live original training process identities checked. No new GPU resume test, no source/environment mutation, no extra GPU."
+}
