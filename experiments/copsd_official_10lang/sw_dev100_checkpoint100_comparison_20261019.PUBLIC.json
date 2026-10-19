@@ -1,0 +1,83 @@
+{
+  "observed_at": "2026-10-19T22:35:20.454569+08:00",
+  "scope": "SW independent100-question development set; one seed; no formal test or multi-seed claim.",
+  "evaluation_configs_identical_except_adapter": true,
+  "ids_questions_answers_prompts_sample_seeds_aligned": true,
+  "metrics": {
+    "sw_17b_dev100_base_v1": {
+      "items": 100,
+      "single_correct": 2,
+      "single_accuracy": 0.02,
+      "pass_n_correct": 2,
+      "pass_n": 0.02,
+      "n": 1,
+      "generated_tokens": 192565,
+      "normal_terminations": 9,
+      "generation_count": 100,
+      "seconds": 5276.18907584995,
+      "peak_gpu_mib": 3559.8
+    },
+    "sw_17b_dev100_ckpt20_v1": {
+      "items": 100,
+      "single_correct": 11,
+      "single_accuracy": 0.11,
+      "pass_n_correct": 11,
+      "pass_n": 0.11,
+      "n": 1,
+      "generated_tokens": 168057,
+      "normal_terminations": 43,
+      "generation_count": 100,
+      "seconds": 8507.708970224485,
+      "peak_gpu_mib": 3820.9
+    },
+    "sw_17b_dev100_ckpt100_v1": {
+      "items": 100,
+      "single_correct": 7,
+      "single_accuracy": 0.07,
+      "pass_n_correct": 7,
+      "pass_n": 0.07,
+      "n": 1,
+      "generated_tokens": 159266,
+      "normal_terminations": 58,
+      "generation_count": 100,
+      "seconds": 8181.25469481945,
+      "peak_gpu_mib": 3820.8
+    }
+  },
+  "paired_counts": {
+    "sw_17b_dev100_base_v1__to__sw_17b_dev100_ckpt20_v1": {
+      "gained_correct": 9,
+      "lost_correct": 0,
+      "retained_correct": 2,
+      "delta_accuracy_pp": 9
+    },
+    "sw_17b_dev100_base_v1__to__sw_17b_dev100_ckpt100_v1": {
+      "gained_correct": 5,
+      "lost_correct": 0,
+      "retained_correct": 2,
+      "delta_accuracy_pp": 5
+    },
+    "sw_17b_dev100_ckpt20_v1__to__sw_17b_dev100_ckpt100_v1": {
+      "gained_correct": 3,
+      "lost_correct": 7,
+      "retained_correct": 4,
+      "delta_accuracy_pp": -4
+    }
+  },
+  "diagnostic_sensitivity_only": {
+    "fixed_excluded_question_count": 2,
+    "n": 98,
+    "correct_by_run": {
+      "sw_17b_dev100_base_v1": 2,
+      "sw_17b_dev100_ckpt20_v1": 9,
+      "sw_17b_dev100_ckpt100_v1": 7
+    },
+    "note": "Reuse the two-question scoring-blindspot exclusion list fixed in the prior checkpoint20 diagnostic. Original100-question scores remain primary; this is not a new benchmark or post-hoc dataset change."
+  },
+  "answer_extraction_failures": {
+    "sw_17b_dev100_base_v1": 89,
+    "sw_17b_dev100_ckpt20_v1": 44,
+    "sw_17b_dev100_ckpt100_v1": 46
+  },
+  "assessment": "Final checkpoint improves raw score by5 percentage points over Base but remains low and below earlier checkpoint20. More optimization steps did not yield monotonic improvement. Insufficient evidence for stable benefit or sequential-language selection."
+}
