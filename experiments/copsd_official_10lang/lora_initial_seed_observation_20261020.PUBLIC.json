@@ -1,0 +1,13 @@
+{
+  "observed_at": "2026-10-20T01:54:01.157137+08:00",
+  "scope": "Reproducibility observation in fixed TRL0.26.0 / Transformers4.57.1 runtime",
+  "both_runs_declared_trainer_seed": 42,
+  "initial_trainable_adapter_fingerprints_equal": false,
+  "initial_inference_model_fingerprints_equal": true,
+  "same_original_Base_policy_at_start": true,
+  "source_observation": "SFTTrainer creates PEFT at line703 before super Trainer initialization at871; Trainer applies set_seed at452. No explicit early seed in current outer entry.",
+  "interpretation": "Same declared Trainer seed did not establish identical LoRA initialization; do not attribute short-run gradient differences solely to instrumentation or claim bitwise replay.",
+  "next_action": "Apply explicit seed before model/PEFT initialization in a new versioned entry; retain current frozen runs, original data order and all prior artifacts.",
+  "fix_implemented": false,
+  "limits": "Does not establish the cause of downstream regressions and does not mean the original Base weights differed."
+}
