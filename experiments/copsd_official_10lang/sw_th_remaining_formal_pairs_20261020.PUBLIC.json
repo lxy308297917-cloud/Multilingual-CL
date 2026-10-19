@@ -1,0 +1,275 @@
+{
+  "observed_at": "2026-10-20T05:41:50.761206+08:00",
+  "model": "Qwen3-1.7B",
+  "checkpoint_selection": "Fixed100-update references",
+  "protocol": "project_single_vllm_v1",
+  "max_new_tokens": 2048,
+  "n": 1,
+  "formal_full_tests": true,
+  "parent_suite_phase": "completed",
+  "parent_suite_exit_code": 0,
+  "pairs": [
+    {
+      "language": "sw",
+      "benchmark": "polymath",
+      "items": 500,
+      "metrics": [
+        {
+          "generated_tokens": 981594,
+          "normal_terminations": 36,
+          "truncated": 464,
+          "answer_extraction_failures": 458,
+          "single_correct": 9,
+          "pass_n_correct": 9,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.018,
+          "pass_n": 0.018,
+          "n": 1,
+          "model_load_seconds": 9.6855215318501,
+          "generation_seconds": 417.72485464066267,
+          "evaluation_seconds": 419.24958339706063,
+          "generated_tokens_per_generation_second": 2349.857781013274,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 1,
+              "single_accuracy": 0.008
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            }
+          }
+        },
+        {
+          "generated_tokens": 824924,
+          "normal_terminations": 274,
+          "truncated": 226,
+          "answer_extraction_failures": 217,
+          "single_correct": 15,
+          "pass_n_correct": 15,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.03,
+          "pass_n": 0.03,
+          "n": 1,
+          "model_load_seconds": 11.293723789975047,
+          "generation_seconds": 536.7710284162313,
+          "evaluation_seconds": 549.1085184123367,
+          "generated_tokens_per_generation_second": 1536.8266100984956,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 7,
+              "single_accuracy": 0.056
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 3,
+              "single_accuracy": 0.024
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 1,
+              "single_accuracy": 0.008
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            }
+          }
+        }
+      ],
+      "delta_percentage_points": 1.2,
+      "paired_counts": {
+        "gained": 14,
+        "lost": 8,
+        "retained": 1
+      },
+      "configs_equal_except_adapter_output": true,
+      "problem_ids_questions_answers_prompts_match": true,
+      "same_frozen_per_question_seed_rule": true,
+      "difficulty_scores_recounted_from_items": true
+    },
+    {
+      "language": "th",
+      "benchmark": "mgsm_rev2",
+      "items": 250,
+      "metrics": [
+        {
+          "generated_tokens": 221057,
+          "normal_terminations": 233,
+          "truncated": 17,
+          "answer_extraction_failures": 13,
+          "single_correct": 165,
+          "pass_n_correct": 165,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.66,
+          "pass_n": 0.66,
+          "n": 1,
+          "model_load_seconds": 9.620059737935662,
+          "generation_seconds": 79.00080198422074,
+          "evaluation_seconds": 79.81731825694442,
+          "generated_tokens_per_generation_second": 2798.161467324761,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 445084,
+          "normal_terminations": 85,
+          "truncated": 165,
+          "answer_extraction_failures": 102,
+          "single_correct": 91,
+          "pass_n_correct": 91,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.364,
+          "pass_n": 0.364,
+          "n": 1,
+          "model_load_seconds": 10.897984586656094,
+          "generation_seconds": 266.78658892028034,
+          "evaluation_seconds": 267.6052638720721,
+          "generated_tokens_per_generation_second": 1668.3147447602678,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_percentage_points": -29.600000000000005,
+      "paired_counts": {
+        "gained": 10,
+        "lost": 84,
+        "retained": 81
+      },
+      "configs_equal_except_adapter_output": true,
+      "problem_ids_questions_answers_prompts_match": true,
+      "same_frozen_per_question_seed_rule": true,
+      "difficulty_scores_recounted_from_items": false
+    },
+    {
+      "language": "th",
+      "benchmark": "polymath",
+      "items": 500,
+      "metrics": [
+        {
+          "generated_tokens": 865823,
+          "normal_terminations": 146,
+          "truncated": 354,
+          "answer_extraction_failures": 278,
+          "single_correct": 86,
+          "pass_n_correct": 86,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.172,
+          "pass_n": 0.172,
+          "n": 1,
+          "model_load_seconds": 9.957882542163134,
+          "generation_seconds": 361.78572645783424,
+          "evaluation_seconds": 367.1853344514966,
+          "generated_tokens_per_generation_second": 2393.192811880904,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 65,
+              "single_accuracy": 0.52
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 15,
+              "single_accuracy": 0.12
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 2,
+              "single_accuracy": 0.016
+            }
+          }
+        },
+        {
+          "generated_tokens": 988817,
+          "normal_terminations": 57,
+          "truncated": 443,
+          "answer_extraction_failures": 241,
+          "single_correct": 42,
+          "pass_n_correct": 42,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.084,
+          "pass_n": 0.084,
+          "n": 1,
+          "model_load_seconds": 11.07880269177258,
+          "generation_seconds": 641.5231810268015,
+          "evaluation_seconds": 648.9520677551627,
+          "generated_tokens_per_generation_second": 1541.3581757362706,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 33,
+              "single_accuracy": 0.264
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 5,
+              "single_accuracy": 0.04
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            }
+          }
+        }
+      ],
+      "delta_percentage_points": -8.799999999999999,
+      "paired_counts": {
+        "gained": 6,
+        "lost": 50,
+        "retained": 36
+      },
+      "configs_equal_except_adapter_output": true,
+      "problem_ids_questions_answers_prompts_match": true,
+      "same_frozen_per_question_seed_rule": true,
+      "difficulty_scores_recounted_from_items": true
+    }
+  ],
+  "scope": "Formal report only, not language/checkpoint selection. PolyMath includes all four125-item difficulty groups. Keep official AfriMGSM pass@12 separate; this is single-sample project protocol. English retention results recorded separately."
+}
