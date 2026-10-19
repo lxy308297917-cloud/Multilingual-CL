@@ -19,3 +19,5 @@ CPU对照核对六语言共600个实际开发prompt，与已有HF prompt逐字�
 `run_vllm_update_batch_resume_checked.sh`和两个独立续训队列已CPU预检，仅配置、未启动。入口要求完整checkpoint及父任务对应step的真实推理同步记录，恢复时强制比对加载的学生／推理权重，同时恢复optimizer、scheduler及RNG。不会把调试权重作为正式起点。
 
 TE／JA原训练继续运行。根据AGENTS.md，停止运行中的队列任务需要用户明确授权，已请求在下一完整checkpoint后迁移；未获授权不停止。若授权，续训写新目录、保留旧产物与分段成本；批处理及恢复的随机轨迹不保证逐位一致，四卡上限和交接竞争仍适用。该授权与开发评测队列推进相互独立。
+
+BN checkpoint5与TE checkpoint10的同协议100题开发评测已另行手动排队，保存新输出目录；对照cohort中的各自Base。不混合历史HF分数，不把不同更新预算的早期分数作为正式100更新语言排名。入口为 `run_dev_vllm_early_checkpoints.sh`。
