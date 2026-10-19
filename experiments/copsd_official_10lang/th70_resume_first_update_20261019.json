@@ -1,0 +1,34 @@
+{
+  "observed_at": "2026-10-19T11:44:52.200451+08:00",
+  "parent_global_step": 70,
+  "resumed_global_step": 71,
+  "first_update_observed_at": "2026-10-19T11:44:05.433813+08:00",
+  "first_update_progress": "71/100 [18:14<07:27, 15.41s/it]",
+  "progress_bar_rate_warning": "The callback jumps from zero to restored global step; displayed ETA/rate is invalid. First post-resume update took 18m14s; do not use 15.41s/it as real update speed.",
+  "completed_rollout_records_in_resume_log_at_observation": 32,
+  "manifest_sha256": "76799a7ffede5d4bdfe0f2d2c3a5fb18a84cd4055bdeb2f69e7300979ee1b7a0",
+  "evaluation_queues_manually_restarted": [
+    {
+      "name": "copsd-sw-17b-dev100-ckpt65-v1",
+      "phase": "waiting",
+      "updated_at": "2026-10-19 11:44:48",
+      "config_unchanged": true
+    },
+    {
+      "name": "copsd-th-17b-dev100-base-4gpu-v2",
+      "phase": "waiting",
+      "updated_at": "2026-10-19 11:44:49",
+      "config_unchanged": true
+    },
+    {
+      "name": "copsd-th-17b-dev100-ckpt20-4gpu-v2",
+      "phase": "waiting",
+      "updated_at": "2026-10-19 11:44:50",
+      "config_unchanged": true
+    }
+  ],
+  "scope": "Real four-rank optimizer update after checkpoint70 restore verified. Formal generation remains HF/SDPA. No new math score; not a bitwise old-runtime reproduction.",
+  "run_id": "th_17b_project2900_seed42_4gpu_resume70_torch28_uuid_20261019_v2",
+  "live_process_identity_verified_locally": true,
+  "server_process_commands_and_absolute_paths": "Retained only in private local evidence; omitted from public report."
+}
