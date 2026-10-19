@@ -1,0 +1,53 @@
+{
+  "observed_at": "2026-10-20T01:15:54.242114+08:00",
+  "language": "bn",
+  "protocol": "project_dev_single_vllm_v1",
+  "development_items": 100,
+  "compared_models": [
+    "Base",
+    "checkpoint5"
+  ],
+  "configs_equal_except_adapter_output": true,
+  "problem_ids_questions_answers_prompts_and_sample_seeds_match": true,
+  "metrics": [
+    {
+      "items": 100,
+      "single_correct": 8,
+      "generated_tokens": 202156,
+      "normal_terminations": 6,
+      "truncated": 94,
+      "answer_extraction_failures": 89,
+      "single_accuracy": 0.08,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 93.83360644243658,
+      "model_load_seconds": 9.67698678560555,
+      "generated_tokens_per_generation_second": 2154.409359977176
+    },
+    {
+      "items": 100,
+      "single_correct": 8,
+      "generated_tokens": 203730,
+      "normal_terminations": 4,
+      "truncated": 96,
+      "answer_extraction_failures": 90,
+      "single_accuracy": 0.08,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 178.87789274565876,
+      "model_load_seconds": 11.771010775119066,
+      "generated_tokens_per_generation_second": 1138.9333632729995
+    }
+  ],
+  "paired_counts": {
+    "gained": 4,
+    "lost": 4,
+    "retained": 4
+  },
+  "delta_percentage_points": 0,
+  "assessment": "Single-seed early development pair, not final100-update result or stable-benefit evidence. Do not mix with historical HF results."
+}
