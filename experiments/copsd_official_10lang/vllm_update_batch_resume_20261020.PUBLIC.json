@@ -1,0 +1,23 @@
+{
+  "start_step": 1,
+  "global_step": 2,
+  "completed_updates": 1,
+  "micro_steps": 32,
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "base_unchanged_bitwise": true,
+  "train_seconds_including_diagnostic_hashing": 159.36340824514627,
+  "memory_caveat": "Allocator accounting with sleeping pools is not physical board peak; use external telemetry.",
+  "scope": "Update completion only; requires checkpoint files, normal exit and independent downstream evaluation.",
+  "observed_at": "2026-10-20T00:34:47.900669+08:00",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "loaded_student_and_engine_equal_parent_checkpoint1": true,
+  "optimizer_step1_and_scheduler_step1_restored": true,
+  "final_adapter_equals_checkpoint2": true,
+  "checkpoint2_recovery_files_nonempty": true,
+  "ordered_runtime_shutdown_verified": true,
+  "complete_engineering_restore_check_accepted": true,
+  "final_adapter_bitwise_equal_to_uninterrupted_probe_step2": false,
+  "effectiveness": "Engineering resume verification only; no downstream score or full100-update claim."
+}
