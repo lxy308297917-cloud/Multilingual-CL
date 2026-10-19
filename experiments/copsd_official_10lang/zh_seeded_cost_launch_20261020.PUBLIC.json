@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-10-20T02:10:31.107665+08:00",
+  "language": "zh",
+  "runtime": "seeded_cost_batch_v2",
+  "pipeline": "Base development100 -> fresh100 updates -> final development100 on one allocated GPU",
+  "initial_policy_matches_previously_verified_original_Base": true,
+  "start_step": 0,
+  "early_seed_implementation": "set_seed(args.seed) before original model/PEFT initializer",
+  "latest_completed_microstep_at_snapshot": {
+    "global_step": 1,
+    "micro_step": 57,
+    "seconds": 1.925924176350236,
+    "loss_finite": true
+  },
+  "Base_development_correct": 25,
+  "Base_development_total": 100,
+  "full100_updates_complete": false,
+  "loss": "Original beta0 clipped teacher-to-student; unchanged",
+  "teacher": "Original frozen Base through disabled adapter; GPU forward",
+  "cost_accounting": "Exact shifted-label counts and student/teacher CUDA forward events, checkpoint snapshots every5 updates",
+  "watchdog": "600-second traceback only; no kill/retry",
+  "account_gpu_cap": 4,
+  "other_new_languages": "RU/DE/FR/ES configured and validated, not started"
+}
