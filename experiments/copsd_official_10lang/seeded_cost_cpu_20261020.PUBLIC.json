@@ -1,0 +1,11 @@
+{
+  "scope": "Tiny synthetic CPU Qwen3/PEFT initializer and exact pinned loss; not full-model GPU replay",
+  "late_seed_does_not_control_initial_LoRA": true,
+  "early_seed_controls_initial_LoRA_across_prior_rng_states": true,
+  "initial_zero_B_adapter_policy_equals_same_Base": true,
+  "cost_observer_loss_equal": true,
+  "cost_observer_gradient_equal": true,
+  "cost_observer_rng_unchanged": true,
+  "exact_mask_counts_verified": true,
+  "full_model_GPU_initialization_verified": false
+}
