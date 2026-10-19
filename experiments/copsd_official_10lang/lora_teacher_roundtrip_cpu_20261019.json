@@ -1,0 +1,67 @@
+{
+  "device": "cpu",
+  "torch": "2.8.0+cu128",
+  "scope": "Two actual checkpoint matrices only; no full-model distribution or GPU equivalence claim.",
+  "matrices": [
+    {
+      "module": "model.layers.0.self_attn.q_proj",
+      "elements": 4194304,
+      "shape": [
+        2048,
+        2048
+      ],
+      "base_dtype": "torch.bfloat16",
+      "adapter_dtype": "torch.float32",
+      "nonmutating_export_matches_peft_merge_bitwise": true,
+      "nonmutating_export_preserves_base_bitwise": true,
+      "roundtrips": [
+        {
+          "round": 1,
+          "changed_elements": 8909,
+          "max_abs_change": 0.0001220703125
+        },
+        {
+          "round": 2,
+          "changed_elements": 8909,
+          "max_abs_change": 0.00018310546875
+        },
+        {
+          "round": 3,
+          "changed_elements": 8909,
+          "max_abs_change": 0.00018310546875
+        }
+      ]
+    },
+    {
+      "module": "model.layers.0.mlp.down_proj",
+      "elements": 12582912,
+      "shape": [
+        2048,
+        6144
+      ],
+      "base_dtype": "torch.bfloat16",
+      "adapter_dtype": "torch.float32",
+      "nonmutating_export_matches_peft_merge_bitwise": true,
+      "nonmutating_export_preserves_base_bitwise": true,
+      "roundtrips": [
+        {
+          "round": 1,
+          "changed_elements": 17870,
+          "max_abs_change": 6.103515625e-05
+        },
+        {
+          "round": 2,
+          "changed_elements": 17870,
+          "max_abs_change": 6.103515625e-05
+        },
+        {
+          "round": 3,
+          "changed_elements": 17870,
+          "max_abs_change": 6.103515625e-05
+        }
+      ]
+    }
+  ],
+  "bitwise_invariant_for_checked_matrices": false,
+  "public_report": "Counts and comparison results only. Weight-derived fingerprints retained in local evidence."
+}
