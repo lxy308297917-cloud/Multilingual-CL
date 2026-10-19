@@ -1,6 +1,6 @@
 # 同一次更新内批量 rollout：独立工程适配
 
-状态：2026-10-20，CPU对照及完整长度GPU两更新通过，父队列exit0；独立断点恢复验证正在运行。现有TE／JA v1训练使用原冻结配置。
+状态：2026-10-20，CPU对照及完整长度GPU两更新通过，父队列exit0；独立断点恢复验证通过并正常退出，已从原始Base启动BN正式100更新。现有TE／JA v1训练使用原冻结配置。
 
 ## 实现边界
 
@@ -22,4 +22,10 @@ Transformers Trainer原本在`get_batch_samples`预取本次累积所需的micro
 
 ## 两更新实测
 
-64条在线轨迹共113,588 token，两次整组生成分别30.29秒／54,755 token与31.34秒／58,833 token；包括教师／学生前向、反传与诊断同步的训练总计277.05秒，约138.52秒／更新。外部每秒显存采样峰值19,099 MiB。固定Base不变，推理权重逐更新变化，64个microstep损失有限，checkpoint1／2及最终adapter已保存，顺序释放后父队列exit0。恢复验收尚在进行，尚不启用新正式100更新。短跑线性100更新约3.85小时，仍需正式运行校准；不能把缓存命中打印的数千万token/s当成实测吞吐。见 `vllm_update_batch_probe_20261020.PUBLIC.json`。
+64条在线轨迹共113,588 token，两次整组生成分别30.29秒／54,755 token与31.34秒／58,833 token；包括教师／学生前向、反传与诊断同步的训练总计277.05秒，约138.52秒／更新。外部每秒显存采样峰值19,099 MiB。固定Base不变，推理权重逐更新变化，64个microstep损失有限，checkpoint1／2及最终adapter已保存，顺序释放后父队列exit0。独立恢复验收已通过，BN正式100更新已实际启动。短跑线性100更新约3.85小时，仍需正式运行校准；不能把缓存命中打印的数千万token/s当成实测吞吐。见 `vllm_update_batch_probe_20261020.PUBLIC.json`。
+
+## 独立恢复验收
+
+从真实checkpoint1恢复optimizer、scheduler和学生权重，完成step1→2的32次microstep，耗时159.36秒；加载的学生及推理权重均与父step1一致，固定Base未变，checkpoint2及最终adapter一致，顺序清理后父队列exit0。恢复后最终adapter与未中断probe step2非逐位相同，保留此限制；验收范围为功能恢复与在线策略同步，不是确定性逐轨迹重放。见 `vllm_update_batch_resume_20261020.PUBLIC.json`。
+
+BN正式任务使用同一冻结批量适配、相同1.7B revision与tokenizer、共同2900原题池及100更新／2048长度预算，从原始Base重新初始化，输出与验证任务独立。BN Base开发评测已排队；现有TE／JA v1任务不变。
