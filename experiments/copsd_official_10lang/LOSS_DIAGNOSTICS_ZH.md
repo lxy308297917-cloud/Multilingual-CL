@@ -40,3 +40,5 @@
 ## 初始化seed边界
 
 两次同样声明Trainer seed42的短跑，其初始LoRA参数指纹不同，但初始推理模型指纹相同，均为原始Base策略。当前固定TRL在创建PEFT后才进入Trainer设置seed，因此不能由seed42宣称LoRA初值相同。现有运行与旧记录保留；后续新入口应在模型／PEFT初始化前显式设seed，并继续记录有效token和教师成本，单独标记兼容修正。此修正尚未实施。见 `lora_initial_seed_observation_20261020.PUBLIC.json`。
+
+后续更新：初始化前seed修正现已在独立v2入口实施并CPU验证，ZH正式链路已启动，初始GPU策略仍为原始Base。旧记录中的`fix_implemented=false`保留为当时观测，旧运行不改写；见 `SEEDED_COST_RUNTIME_ZH.md`。
