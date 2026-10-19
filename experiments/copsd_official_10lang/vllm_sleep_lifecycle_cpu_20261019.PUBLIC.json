@@ -1,0 +1,68 @@
+{
+  "scope": "CPU executor state transitions only; actual vLLM ExecutorBase methods, simulated worker RPC. No claim of GPU allocation/copy success.",
+  "initial_sleep_level2_followed_by_full_initial_sync": true,
+  "subsequent_sleep_requests_use_level1": true,
+  "wake_only_sleeping_tags": true,
+  "ordinary_microsteps_and_optimizer_boundaries_checked": true,
+  "rpc_calls": [
+    {
+      "method": "sleep",
+      "level": 2
+    },
+    {
+      "method": "wake_up",
+      "tags": [
+        "weights"
+      ]
+    },
+    {
+      "method": "wake_up",
+      "tags": [
+        "kv_cache"
+      ]
+    },
+    {
+      "method": "sleep",
+      "level": 1
+    },
+    {
+      "method": "wake_up",
+      "tags": [
+        "kv_cache",
+        "weights"
+      ]
+    },
+    {
+      "method": "sleep",
+      "level": 1
+    },
+    {
+      "method": "wake_up",
+      "tags": [
+        "kv_cache",
+        "weights"
+      ]
+    },
+    {
+      "method": "sleep",
+      "level": 1
+    },
+    {
+      "method": "wake_up",
+      "tags": [
+        "weights"
+      ]
+    },
+    {
+      "method": "wake_up",
+      "tags": [
+        "kv_cache"
+      ]
+    }
+  ],
+  "gpu_validation_required": [
+    "Two consecutive generation microsteps restore identical engine weights",
+    "Full 2048-token KD and backward fit24GiB",
+    "64 microsteps and2 optimizer updates complete"
+  ]
+}
