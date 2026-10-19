@@ -1,0 +1,65 @@
+{
+  "observed_at": "2026-10-19T23:29:38.320904+08:00",
+  "scope": "TH independent100-question development set, one seed; no formal test.",
+  "evaluation_config_equal_except_adapter": true,
+  "questions_answers_prompts_sample_seeds_equal": true,
+  "metrics": {
+    "th_17b_dev100_base_4gpu_v2": {
+      "items": 100,
+      "single_correct": 37,
+      "single_accuracy": 0.37,
+      "pass_n_correct": 37,
+      "pass_n": 0.37,
+      "n": 1,
+      "generated_tokens": 181532,
+      "normal_terminations": 33,
+      "generation_count": 100,
+      "seconds": 4840.253888560459,
+      "peak_gpu_mib": 3578.1
+    },
+    "th_17b_dev100_ckpt100_4gpu_v1": {
+      "items": 100,
+      "single_correct": 20,
+      "single_accuracy": 0.2,
+      "pass_n_correct": 20,
+      "pass_n": 0.2,
+      "n": 1,
+      "generated_tokens": 201144,
+      "normal_terminations": 9,
+      "generation_count": 100,
+      "seconds": 10720.046609556302,
+      "peak_gpu_mib": 3847.6
+    }
+  },
+  "diagnostics": {
+    "th_17b_dev100_base_4gpu_v2": {
+      "answer_extraction_failures": 41,
+      "at_2048_token_cap": 67,
+      "below_cap_not_primary_eos": 0,
+      "correct_normal_termination": 22,
+      "correct_at_token_cap": 15,
+      "boxed_predictions_with_non_ascii_decimal_digits": 0
+    },
+    "th_17b_dev100_ckpt100_4gpu_v1": {
+      "answer_extraction_failures": 51,
+      "at_2048_token_cap": 91,
+      "below_cap_not_primary_eos": 0,
+      "correct_normal_termination": 5,
+      "correct_at_token_cap": 15,
+      "boxed_predictions_with_non_ascii_decimal_digits": 0
+    }
+  },
+  "paired_counts": {
+    "gained_correct": 8,
+    "lost_correct": 25,
+    "retained_correct": 12,
+    "delta_accuracy_pp": -17
+  },
+  "fixed_previous_two_question_scoring_blindspot_sensitivity": {
+    "n": 98,
+    "base_correct": 36,
+    "checkpoint100_correct": 18,
+    "scope": "Same two English problem IDs fixed in prior SW diagnostic; original100-question score retained."
+  },
+  "assessment": "Negative final-checkpoint result under the current1.7B/2900-training-question project protocol:37→20, termination33→9. Increased truncation warrants diagnosis; it is not proof of a code bug or a general conclusion about the original paper. No sequential-language selection is justified yet."
+}
