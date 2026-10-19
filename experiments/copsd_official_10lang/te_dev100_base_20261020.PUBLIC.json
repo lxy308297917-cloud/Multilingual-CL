@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-10-20T00:27:02.312895+08:00",
+  "language": "te",
+  "model": "Base",
+  "split": "Held-out development100",
+  "protocol": "Existing frozen HF single-answer development protocol, not formal vLLM test protocol",
+  "metrics": {
+    "items": 100,
+    "single_correct": 4,
+    "single_accuracy": 0.04,
+    "generated_tokens": 204143,
+    "normal_terminations": 2,
+    "generation_count": 100,
+    "seconds": 5679.283186841756
+  },
+  "assessment": "Baseline only; no trained TE score yet."
+}
