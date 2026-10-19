@@ -1,0 +1,70 @@
+{
+  "observed_at": "2026-10-19T12:57:08.776746+08:00",
+  "checkpoint_step": 75,
+  "parent_step": 70,
+  "post_resume_updates": 5,
+  "post_resume_rollouts": 160,
+  "post_resume_generated_tokens": 319431,
+  "post_resume_capped_2048": 145,
+  "post_resume_training_elapsed_seconds": 5446,
+  "allocated_gpu_hours_since_resume_clock_start": 6.051111111111111,
+  "mean_seconds_per_resumed_update": 1089.2,
+  "remaining_training_seconds_from_five_update_mean": 27230.0,
+  "eta_caveat": "Five-update average only; excludes initialization, subsequent length variation, saves and evaluation; restored tqdm ETA is invalid.",
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state_0.pth",
+    "rng_state_1.pth",
+    "rng_state_2.pth",
+    "rng_state_3.pth"
+  ],
+  "logged_metrics_finite": true,
+  "recent_log_history": [
+    {
+      "epoch": 0.7944827586206896,
+      "grad_norm": 0.04665650054812431,
+      "learning_rate": 1.45e-06,
+      "loss": -0.0189,
+      "on_policy_loss": -0.0189,
+      "step": 72
+    },
+    {
+      "epoch": 0.8165517241379311,
+      "grad_norm": 0.045732151716947556,
+      "learning_rate": 1.3500000000000002e-06,
+      "loss": -0.0189,
+      "on_policy_loss": -0.0189,
+      "step": 74
+    }
+  ],
+  "sw_current_step": 94,
+  "formal_backend": "Transformers/SDPA; vLLM not integrated into current formal runs",
+  "queues": [
+    {
+      "queue": "copsd-sw-17b-vllm-colocate-probe-v1",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    },
+    {
+      "queue": "copsd-sw-17b-dev100-ckpt65-v1",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    },
+    {
+      "queue": "copsd-th-17b-dev100-base-4gpu-v2",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    },
+    {
+      "queue": "copsd-th-17b-dev100-ckpt20-4gpu-v2",
+      "phase": "waiting",
+      "account_gpu_cap": 4
+    }
+  ],
+  "effectiveness": "No new dev/test scores; old SW Base2/100 to checkpoint20 11/100 remains the only measured paired dev result.",
+  "verification_scope": "New runtime completed5 optimizer updates and saved checkpoint75. File presence and trainer state verified; no claim of bitwise old-runtime continuation, new checkpoint75 GPU restore or method effectiveness."
+}
