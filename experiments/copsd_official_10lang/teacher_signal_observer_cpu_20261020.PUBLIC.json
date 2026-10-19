@@ -1,0 +1,9 @@
+{
+  "scope": "CPU invariant check against exact pinned loss, synthetic masked example only",
+  "original_loss_equal": true,
+  "original_gradient_equal": true,
+  "torch_rng_unchanged": true,
+  "valid_and_masked_positions_counted_correctly": true,
+  "teacher_argmax_clip_detected": true,
+  "gpu_probe_validated": false
+}
