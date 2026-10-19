@@ -1,0 +1,252 @@
+{
+  "observed_at": "2026-10-20T06:13:53.059821+08:00",
+  "training_language": "zh",
+  "model": "Qwen3-1.7B",
+  "checkpoint_selection": "Fixed100-update reference",
+  "protocol": "project_single_vllm_v1",
+  "n": 1,
+  "max_new_tokens": 2048,
+  "formal_full_tests": true,
+  "parent_suite_phase": "completed",
+  "parent_suite_exit_code": 0,
+  "pairs": [
+    {
+      "benchmark": "mgsm_rev2",
+      "evaluation_language": "zh",
+      "items": 250,
+      "metrics": [
+        {
+          "generated_tokens": 229880,
+          "normal_terminations": 218,
+          "truncated": 32,
+          "answer_extraction_failures": 28,
+          "single_correct": 203,
+          "pass_n_correct": 203,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.812,
+          "pass_n": 0.812,
+          "n": 1,
+          "model_load_seconds": 9.791990047320724,
+          "generation_seconds": 73.07924487628043,
+          "evaluation_seconds": 73.6771399602294,
+          "generated_tokens_per_generation_second": 3145.6263729760144,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 219443,
+          "normal_terminations": 223,
+          "truncated": 27,
+          "answer_extraction_failures": 19,
+          "single_correct": 196,
+          "pass_n_correct": 196,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.784,
+          "pass_n": 0.784,
+          "n": 1,
+          "model_load_seconds": 10.800359161570668,
+          "generation_seconds": 127.77121478691697,
+          "evaluation_seconds": 128.3817140981555,
+          "generated_tokens_per_generation_second": 1717.4682135249582,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": -7,
+      "delta_percentage_points": -2.8000000000000025,
+      "paired_counts": {
+        "gained": 18,
+        "lost": 25,
+        "retained": 178
+      },
+      "configs_equal_except_adapter_output": true,
+      "problem_ids_questions_answers_prompts_match": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "difficulty_counts_recomputed_from_items": false,
+      "Base_reused_from_existing_formal_run": false
+    },
+    {
+      "benchmark": "polymath",
+      "evaluation_language": "zh",
+      "items": 500,
+      "metrics": [
+        {
+          "generated_tokens": 885843,
+          "normal_terminations": 114,
+          "truncated": 386,
+          "answer_extraction_failures": 373,
+          "single_correct": 101,
+          "pass_n_correct": 101,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.202,
+          "pass_n": 0.202,
+          "n": 1,
+          "model_load_seconds": 9.874322939664125,
+          "generation_seconds": 353.7402907740325,
+          "evaluation_seconds": 357.2332111634314,
+          "generated_tokens_per_generation_second": 2504.21855554439,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 90,
+              "single_accuracy": 0.72
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 8,
+              "single_accuracy": 0.064
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 3,
+              "single_accuracy": 0.024
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            }
+          }
+        },
+        {
+          "generated_tokens": 849299,
+          "normal_terminations": 170,
+          "truncated": 330,
+          "answer_extraction_failures": 298,
+          "single_correct": 108,
+          "pass_n_correct": 108,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.216,
+          "pass_n": 0.216,
+          "n": 1,
+          "model_load_seconds": 11.81788982078433,
+          "generation_seconds": 498.60520789399743,
+          "evaluation_seconds": 501.96687294729054,
+          "generated_tokens_per_generation_second": 1703.3496372556128,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 90,
+              "single_accuracy": 0.72
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 14,
+              "single_accuracy": 0.112
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 3,
+              "single_accuracy": 0.024
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 1,
+              "single_accuracy": 0.008
+            }
+          }
+        }
+      ],
+      "delta_correct": 7,
+      "delta_percentage_points": 1.3999999999999986,
+      "paired_counts": {
+        "gained": 18,
+        "lost": 11,
+        "retained": 90
+      },
+      "configs_equal_except_adapter_output": true,
+      "problem_ids_questions_answers_prompts_match": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "difficulty_counts_recomputed_from_items": true,
+      "Base_reused_from_existing_formal_run": false
+    },
+    {
+      "benchmark": "gsm8k",
+      "evaluation_language": "en",
+      "items": 1319,
+      "metrics": [
+        {
+          "generated_tokens": 1234772,
+          "normal_terminations": 1181,
+          "truncated": 138,
+          "answer_extraction_failures": 108,
+          "single_correct": 1113,
+          "pass_n_correct": 1113,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.8438210765731615,
+          "pass_n": 0.8438210765731615,
+          "n": 1,
+          "model_load_seconds": 10.681749437004328,
+          "generation_seconds": 426.92153029330075,
+          "evaluation_seconds": 429.1413431689143,
+          "generated_tokens_per_generation_second": 2892.2692166677452,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 1349156,
+          "normal_terminations": 1124,
+          "truncated": 195,
+          "answer_extraction_failures": 150,
+          "single_correct": 1093,
+          "pass_n_correct": 1093,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.8286580742987112,
+          "pass_n": 0.8286580742987112,
+          "n": 1,
+          "model_load_seconds": 11.048292765393853,
+          "generation_seconds": 621.6176183633506,
+          "evaluation_seconds": 623.8724934458733,
+          "generated_tokens_per_generation_second": 2170.3953687029916,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": -20,
+      "delta_percentage_points": -1.5163002274450332,
+      "paired_counts": {
+        "gained": 66,
+        "lost": 86,
+        "retained": 1027
+      },
+      "configs_equal_except_adapter_output": true,
+      "problem_ids_questions_answers_prompts_match": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "difficulty_counts_recomputed_from_items": false,
+      "Base_reused_from_existing_formal_run": true
+    }
+  ],
+  "assessment": "Mixed formal outcomes: target MGSM203 to196/250, target PolyMath101 to108/500, English1113 to1093/1319. Keep separate from single-seed held-out dev25 to38/100. Formal reports are not used to choose language, checkpoint or training data; no sequential forgetting claim.",
+  "new_run_cost": {
+    "engine_processes": 5,
+    "generated_responses": 2819,
+    "generated_tokens": 3533621,
+    "generation_seconds": 1674.813576694578,
+    "evaluation_seconds_including_grading_and_output": 1685.13143161498,
+    "cached_English_Base_generation_not_repeated": true,
+    "scope": "Only five newly executed evaluators; cached English Base metrics shown in pairs are not a new cost. Evaluation wall time includes grading and output, not isolated grader CPU time."
+  }
+}
