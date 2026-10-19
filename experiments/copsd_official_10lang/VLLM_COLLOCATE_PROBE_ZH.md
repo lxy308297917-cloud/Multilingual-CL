@@ -27,7 +27,7 @@
 
 ## 已准备的下一次 GPU 检查
 
-入口 `run_vllm_colocate_probe.sh NEW_RUN_ID`，必须由单卡手动队列提供 UUID；配置与源文件哈希在 `vllm_colocate_probe_20261019.CONFIG.json`。源码／模型／SW数据哈希、入口解析和 shell 语法已通过 CPU 检查。**尚未启动 GPU probe，尚未验证该训练路径能在24GiB完成。** 单卡队列 `copsd-sw-17b-vllm-colocate-probe-v1` 已手动启动监控，目前等待资源，GPU probe 尚未开始。不取消正在运行的 SW 或 TH。新增probe与三个待开发集评测均使用默认账号四卡上限；当前SW加四卡TH的既有临时五卡授权不扩展给新任务。
+入口 `run_vllm_colocate_probe.sh NEW_RUN_ID`，必须由单卡手动队列提供 UUID；公开设置在 `vllm_colocate_probe_20261019.PUBLIC.json`；实际启动读取的 `vllm_colocate_probe_20261019.CONFIG.json` 含精确数据／源码指纹，仅保留本机。自动审批拒绝发布这些内部指纹，公开证据仅含统计与验证结论。源码／模型／SW数据哈希、入口解析和 shell 语法已通过 CPU 检查。**尚未启动 GPU probe，尚未验证该训练路径能在24GiB完成。** 单卡队列 `copsd-sw-17b-vllm-colocate-probe-v1` 已手动启动监控，目前等待资源，GPU probe 尚未开始。不取消正在运行的 SW 或 TH。新增probe与三个待开发集评测均使用默认账号四卡上限；当前SW加四卡TH的既有临时五卡授权不扩展给新任务。
 
 - 同一1.7B模型、SW官方适配数据，从 Base 独立开始。
 - micro1、累积32、有效 batch32，保留2048生成上限和完整官方裁剪蒸馏损失，运行2次真实更新，64个micro step。
