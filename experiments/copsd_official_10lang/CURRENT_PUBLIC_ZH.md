@@ -1,16 +1,16 @@
 # COPSD 当前实验进展
 
-更新：2026-10-20 00:24（Asia/Shanghai）。目标保持为十语言 single OPD，依据独立开发集选择三语言，再做正反顺序 OPD 与逐阶段遗忘评测。服务器进程、绝对路径和内部指纹保留本机。
+更新：2026-10-20 00:32（Asia/Shanghai）。目标保持为十语言 single OPD，依据独立开发集选择三语言，再做正反顺序 OPD 与逐阶段遗忘评测。服务器进程、绝对路径和内部指纹保留本机。
 
 | 项目 | 已核实状态 |
 |---|---|
 | SW single | 100更新完成，checkpoint100、最终adapter及恢复文件保存，正常退出 |
 | TH 四卡 single | 100更新完成，checkpoint100、最终adapter及恢复文件保存，正常退出 |
-| TE single | vLLM正式训练运行，00:20完成9更新、315个microstep；已保存checkpoint5 |
+| TE single | vLLM正式训练运行，已完成10更新并保存checkpoint10；继续训练 |
 | JA single | 新vLLM正式训练运行，从原始Base独立开始；00:20完成1更新、44个microstep |
 | BN / ZH / RU / DE / FR / ES | 尚未新启动 |
-| 开发集 | TE Base、TH20运行；JA Base已手动排队，账号四卡上限下等待 |
-| 批量rollout工程验证 | 独立适配完成CPU对照，SW两更新完整长度GPU检查已手动排队；尚无GPU提速结论 |
+| 开发集 | TE Base已完成4/100；TH20运行；JA Base已手动排队，账号四卡上限下等待 |
+| 批量rollout工程验证 | SW两更新完整长度GPU检查通过并正常退出，断点恢复验证已运行 |
 | 三语言顺序 OPD | 未达到稳定开发集收益与语言选择条件，未启动 |
 
 ## 完成的训练与实际预算
@@ -42,12 +42,14 @@ SW后期低于早期checkpoint，不能称单调提升。TH最终比Base少17题
 
 Pass@12增加6题，平均回答正确率下降；单seed、低绝对水平，不能判定稳定有效。此1024-token官方对照与项目2048-token主评测分开。AfriMGSM SW与MGSM-Rev2有207道相同目标语言题，不能视作独立证据。详见 `sw_afrimgsm_vllm_pair_20261019.PUBLIC.json`、`VLLM_EVALUATION_ZH.md`。
 
-项目MGSM-Rev2主评、PolyMath四档补评及英语GSM8K保持测评尚未完成。正式测试只作冻结报告，不用于选择训练题、语言或checkpoint。
+项目MGSM-Rev2的SW Base／checkpoint100同协议正式对照已手动排队；尚无分数。PolyMath四档补评及英语GSM8K保持测评尚未完成。正式测试只作冻结报告，不用于选择训练题、语言或checkpoint。
 
 ## vLLM 提速与下一步
 
 单题在线生成约146 token/s，原HF约16 token/s；不同语言完整训练不是严格等长测速。TE前5次完整更新平均约570.3秒，按当时速率外推剩余95更新约15.05小时，另计评测与后续波动。独立恢复、固定Base不变、学生推理同步、保存和正常退出已通过；早期probe析构失败及非逐位重放均保留记录。详见 `VLLM_RUNTIME_ZH.md`、`te_vllm_checkpoint5_20261019.PUBLIC.json`。
 
-新的批量rollout适配仅在同一次optimizer更新内批量生成，随后逐microstep执行原官方拼接、mask、教师前向与KD反传。CPU用实际官方生成方法、真实tokenizer和固定模拟输出核对32题组与20题尾组，52次逐条结果完全一致，错序与跨更新缓存会拒绝；不证明随机轨迹相同或GPU加速。现有TE、JA的冻结v1运行不变。两更新GPU检查遵守账号四卡总上限排队，不占第五张卡，不自动重试。详见 `VLLM_UPDATE_BATCH_ZH.md`。
+新的批量rollout适配仅在同一次optimizer更新内批量生成，随后逐microstep执行原官方拼接、mask、教师前向与KD反传。CPU用实际官方生成方法、真实tokenizer和固定模拟输出核对32题组与20题尾组，52次逐条结果完全一致，错序与跨更新缓存会拒绝；不证明随机轨迹相同或GPU加速。现有TE、JA的冻结v1运行不变。两更新GPU检查已正常完成：64条轨迹、113,588生成token，含诊断同步的完整训练277.05秒，约138.52秒／更新；外部显存采样峰值19,099 MiB。固定Base未变、推理权重随两次更新变化、checkpoint1／2恢复文件完整、最终adapter一致，父队列exit0。短跑线性外推100更新约3.85小时，仅供初步排期，不能当完整100更新实测。checkpoint1恢复至2的独立验证正在运行；现有TE／JA不迁移。所有队列仍遵守账号四卡总上限，不占第五张卡，不自动重试。详见 `VLLM_UPDATE_BATCH_ZH.md`。
 
 顺序数据接口已准备967／967／966三个不重叠原题池，十语言英文问题、参考与答案对齐，与开发集无交集。原数据无难度标签，字符长度仅作代理。尚未选择三语言，顺序训练与匹配single参考仍需实施。详见 `SEQUENTIAL_POOLS_ZH.md`。
+
+TE Base独立开发集100题完成：4题正确、2题正常终止，204,143生成token，约5679秒。TE训练后尚无配对分数。详见 `te_dev100_base_20261020.PUBLIC.json`；批量GPU检查详见 `vllm_update_batch_probe_20261020.PUBLIC.json`。
