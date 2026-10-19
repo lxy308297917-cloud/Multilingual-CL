@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-10-20T05:46:16.054547+08:00",
+  "language": "de",
+  "model": "Qwen3-1.7B",
+  "queue_phase": "running",
+  "first_pipeline_stage": "Base held-out development100",
+  "Base_development_phase": {
+    "phase": "generation"
+  },
+  "training_pipeline_phase_announced": false,
+  "training_microstep_observed": false,
+  "planned_updates": 100,
+  "effective_batch": 32,
+  "rollout_group_size": 32,
+  "max_completion_length": 2048,
+  "seeded_before_model_and_PEFT": true,
+  "max_user_gpus": 4,
+  "pipeline": [
+    "Base dev100",
+    "fresh original Base OPD100 updates",
+    "final dev100"
+  ],
+  "reason_for_proceeding": "ZH single dev25/100 to38/100 and BN privileged-context control6/100 to49/100 provide evidence to continue independent official baselines. Neither resolves BN training collapse or establishes seed-stable gains.",
+  "loss_or_optimizer_modified": false,
+  "scope": "New DE independent pipeline started. Do not infer100 updates completed or effectiveness from queue launch. RU remains manually stopped; FR/ES not started."
+}
