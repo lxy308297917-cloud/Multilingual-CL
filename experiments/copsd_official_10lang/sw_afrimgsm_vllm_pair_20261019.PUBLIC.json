@@ -1,0 +1,74 @@
+{
+  "observed_at": "2026-10-20T00:09:36.927760+08:00",
+  "benchmark": "AfriMGSM SW test250",
+  "protocol": "afrimgsm_release_vllm_v1",
+  "reference": "Original pinned1.7B released evaluation script:12 samples,1024 generated tokens,temperature1.0. Model/data/training-budget adaptations remain separately documented.",
+  "paired_configs_equal_except_adapter_and_output": true,
+  "problem_ids_questions_answers_prompts_equal": true,
+  "parent_queue_completed_exit0": true,
+  "results": [
+    {
+      "model": "Base",
+      "metrics": {
+        "generated_tokens": 2797919,
+        "normal_terminations": 614,
+        "truncated": 2386,
+        "answer_extraction_failures": 2364,
+        "single_correct": 6,
+        "pass_n_correct": 34,
+        "items": 250,
+        "generation_count": 3000,
+        "single_accuracy": 0.024,
+        "pass_n": 0.136,
+        "n": 12,
+        "model_load_seconds": 9.710334407165647,
+        "generation_seconds": 821.8315557334572,
+        "evaluation_seconds": 826.0572049748152,
+        "generated_tokens_per_generation_second": 3404.492052514278,
+        "protocol": "afrimgsm_release_vllm_v1",
+        "benchmark": "afrimgsm",
+        "formal_full_test": true,
+        "scores_by_difficulty": {}
+      },
+      "official_average_at12_percent": 3.0,
+      "official_majority_vote_at12_percent": 8.0,
+      "physical_board_peak_mib_sampled_1s": 22719
+    },
+    {
+      "model": "SW checkpoint100",
+      "metrics": {
+        "generated_tokens": 2787358,
+        "normal_terminations": 998,
+        "truncated": 2002,
+        "answer_extraction_failures": 1996,
+        "single_correct": 4,
+        "pass_n_correct": 40,
+        "items": 250,
+        "generation_count": 3000,
+        "single_accuracy": 0.016,
+        "pass_n": 0.16,
+        "n": 12,
+        "model_load_seconds": 15.185038080438972,
+        "generation_seconds": 977.7471072319895,
+        "evaluation_seconds": 981.3262872248888,
+        "generated_tokens_per_generation_second": 2850.796468108236,
+        "protocol": "afrimgsm_release_vllm_v1",
+        "benchmark": "afrimgsm",
+        "formal_full_test": true,
+        "scores_by_difficulty": {}
+      },
+      "official_average_at12_percent": 2.466666666666667,
+      "official_majority_vote_at12_percent": 8.0,
+      "physical_board_peak_mib_sampled_1s": 22743
+    }
+  ],
+  "paired_pass_at12_counts": {
+    "gained": 19,
+    "lost": 13,
+    "retained": 21,
+    "delta_percentage_points": 2.3999999999999995
+  },
+  "assessment": "Pass@12 rises13.6→16.0 percent, a small2.4-point difference; first-completion accuracy in this1024-token official protocol falls2.4→1.6 percent. Absolute scores remain low, one seed, no stable-benefit claim.",
+  "selection_policy": "Formal test is frozen reporting only; not used to select training questions, checkpoints or sequential languages.",
+  "overlap_caveat": "AfriMGSM and MGSM-Rev2 SW share207 exact SW questions in the prior audit; not independent evidence."
+}
