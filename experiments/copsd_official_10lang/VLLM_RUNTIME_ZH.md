@@ -14,10 +14,10 @@ SW／Qwen3-1.7B，micro batch1、梯度累积32、有效batch32、2048生成上�
 
 新入口 `vllm_colocate_entry.py` 复用原不可变probe中的非破坏性LoRA导出、初始同步、保留权重的sleep/wake及官方训练核心；额外支持真实Trainer checkpoint恢复和100更新运行。它核验恢复后的optimizer step、scheduler step，以及从首次probe checkpoint1加载后的adapter与推理引擎权重身份。最终曝光数按epoch尾部不足batch计算，已对照实际SW／TH的3188题次、TH恢复段948题次核对。
 
-`vllm_ordered_shutdown.py`在训练和最终模型保存结束后显式释放引擎，再按MemPool先于其allocator所有者的顺序释放引用，最后释放分布式资源。参考[vLLM当前源码的release_pools](https://github.com/vllm-project/vllm/blob/main/vllm/device_allocator/cumem.py)；相似退出故障见[上游问题16993](https://github.com/vllm-project/vllm/issues/16993)。安装的0.11已有上游早期callback强引用修复，因此不能声称重新应用该修复即可解决此次异常。当前顺序释放适配仍待真实GPU验证，不修改已安装包、不跳过Python析构、不把异常退出码改为成功。
+`vllm_ordered_shutdown.py`在训练和最终模型保存结束后显式释放引擎，再按MemPool先于其allocator所有者的顺序释放引用，最后释放分布式资源。参考[vLLM当前源码的release_pools](https://github.com/vllm-project/vllm/blob/main/vllm/device_allocator/cumem.py)；相似退出故障见[上游问题16993](https://github.com/vllm-project/vllm/issues/16993)。安装的0.11已有上游早期callback强引用修复，因此不能声称重新应用该修复即可解决此次异常。独立SW恢复运行已通过本机真实GPU更新及正常退出验证，不修改已安装包、不跳过Python析构、不把异常退出码改为成功。
 
-恢复验证已手动排队，独立输出，从首次probe的checkpoint1恢复到step2，预期32次microstep。它只验证恢复、权重同步和正常退出；沿用两步调试学习率日程，不能冒充100步正式训练。原失败目录和日志保留。
+恢复验证已在独立输出目录完成，从首次probe的checkpoint1恢复到step2，实际32次microstep、59,133生成token，训练579.22秒，checkpoint2保存后exit code0。1秒间隔外部采样的物理显存峰值17,263 MiB（约16.9 GiB）；可能漏掉亚秒峰值。见 `vllm_resume_exitfix_20261019.RESULTS.PUBLIC.json`。恢复时student／推理引擎权重、optimizer step及scheduler step均已核对，但恢复后最终adapter与原probe step2并非逐位相同，因此不声称完整随机轨迹逐位重放。它只验证恢复、权重同步和正常退出；沿用两步调试学习率日程，不能冒充100步正式训练。原失败目录和日志保留。
 
 启动入口：`run_vllm_colocate_17b.sh LANG NEW_RUN_ID 2|100 [CHECKPOINT]`。固定官方损失、AdamW、LoRA64／alpha128、学习率5e-6、有效batch32、2048长度及种子42；源代码、模型锁、各语言数据和运行适配的实际身份清单保留服务器私有配置。每次新输出目录，开启TensorBoard、外部显存采样，按账号四卡上限手动排队，无失败自动重试。
 
-只有真实恢复更新、checkpoint保存、顺序资源释放和exit code0均通过，才采用此入口启动后续语言正式训练。开发集与正式测试仍独立进行；工程通过不代表数学效果有效。
+真实恢复更新、checkpoint保存、顺序资源释放及exit code0门槛均已通过，现已用此入口从原始Base启动TE独立100更新正式训练，另行运行TE Base开发集评测。正式训练不接续调试权重。开发集与正式测试仍独立进行；工程通过不代表数学效果有效。
