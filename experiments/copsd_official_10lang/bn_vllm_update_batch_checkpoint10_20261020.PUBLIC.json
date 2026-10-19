@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-10-20T01:03:17.155701+08:00",
+  "language": "bn",
+  "global_step": 10,
+  "actual_completed_rollouts": 320,
+  "generated_tokens": 653044,
+  "capped_at2048": 313,
+  "all_microstep_losses_finite": true,
+  "fixed_Base_checks_passed_at_sync_steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "saved_checkpoint10_recovery_files_nonempty": true,
+  "last_tqdm_elapsed_seconds_at_step10": 1379,
+  "approx_mean_update_seconds_from_tqdm": 137.9,
+  "linear100_update_hours_at_first10_rate": 3.8305555555555557,
+  "remaining90_hours_from_checkpoint10_at_same_rate": 3.4475,
+  "timer_scope": "Rounded Trainer progress clock through last step10 display; includes diagnostic policy sync and preceding saves, excludes cold model startup, future variation, evaluation and possibly final checkpoint10 save. Preliminary ETA only.",
+  "training_status": "running",
+  "effectiveness": "Early dev checkpoint5 has8/100 under vLLM, matching Base pending; no trained100-update effectiveness result."
+}
