@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-10-20T03:02:55.206348+08:00",
+  "language": "ru",
+  "model": "Qwen3-1.7B",
+  "manually_started_queue": true,
+  "queue_phase": "waiting",
+  "gpu_allocated": false,
+  "max_user_gpus": 4,
+  "pipeline": [
+    "Base dev100",
+    "fresh Base initialized independent OPD100 updates",
+    "final dev100"
+  ],
+  "rollout_backend": "vLLM grouped within each optimizer update",
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "training_core": "fixed official COPSD plus separately recorded compatibility and rollout batching adapters",
+  "teacher": "original frozen Base with adapters disabled",
+  "same_language_Base_result_reused": false,
+  "restarts": "No boot startup, no failed-job retry",
+  "scope": "Queue started, not evidence that training has started or completed. DE/FR/ES remain configured but not started."
+}
