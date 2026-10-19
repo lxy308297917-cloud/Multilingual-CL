@@ -27,7 +27,8 @@
     "Non-mutating BF16 merged-weight stream; two actual matrices match official PEFT merged tensors bitwise on CPU",
     "Explicit initial student sync, required for later resume or sequential stages",
     "Single-GPU sleep mode to fit 24GiB; GPU memory feasibility unverified",
-    "Instrumentation: full frozen-parameter hashes at sync, policy hashes before rollouts, two optimizer updates and checkpoint saves"
+    "Instrumentation: full frozen-parameter hashes at sync, policy hashes before rollouts, two optimizer updates and checkpoint saves",
+    "Within accumulation use vLLM sleep level1 (CPU weight backup, no CPU teacher inference) and wake only currently sleeping tags; original init sleep2 is followed by explicit full initial sync. Released optional sleep2 branch discards weights after each microstep while only KV is woken, so it cannot be reused unchanged with accumulation32."
   ],
   "gates": [
     "2 real optimizer updates,64 microsteps",
@@ -35,7 +36,8 @@
     "All frozen parameters identical before/after sync and training",
     "Every rollout uses last synchronized current adapter",
     "2048-token budget and full official KD/AdamW retained",
-    "Checkpoints 1 and 2 plus final model saved; restore test remains a separate gate"
+    "Checkpoints 1 and 2 plus final model saved; restore test remains a separate gate",
+    "Inference weights after sleep/wake at microsteps2 and34 equal the current synchronized engine fingerprint"
   ],
-  "local_lock": "Exact data/code fingerprints are retained in the local CONFIG manifest; omitted from public summary."
+  "local_lock": "Exact code/data fingerprints retained in local CONFIG only."
 }
