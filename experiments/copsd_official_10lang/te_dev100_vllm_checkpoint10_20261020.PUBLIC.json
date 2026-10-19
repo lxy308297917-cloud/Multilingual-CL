@@ -1,0 +1,27 @@
+{
+  "observed_at": "2026-10-20T01:03:17.155701+08:00",
+  "model": "TE checkpoint10",
+  "protocol": "project_dev_single_vllm_v1",
+  "split": "held-out development100",
+  "metrics": {
+    "items": 100,
+    "single_correct": 0,
+    "generated_tokens": 204800,
+    "normal_terminations": 0,
+    "truncated": 100,
+    "answer_extraction_failures": 99,
+    "single_accuracy": 0.0,
+    "n": 1,
+    "generation_count": 100,
+    "protocol": "project_dev_single_vllm_v1",
+    "formal_test": false,
+    "generation_seconds": 182.356364229694,
+    "model_load_seconds": 11.48528297059238,
+    "generated_tokens_per_generation_second": 1123.0756922858818
+  },
+  "problem_ids_questions_answers_match_frozen_development_pool": true,
+  "saved_adapter_checkpoint_verified": 10,
+  "parent_cohort_completed_exit0": true,
+  "missing_final_section": 92,
+  "assessment": "Same-protocol Base reference pending. Do not compare with old HF baseline or infer a training gain/regression yet; early checkpoint, not100-update result."
+}
