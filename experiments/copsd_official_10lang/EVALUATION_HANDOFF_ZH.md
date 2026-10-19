@@ -9,3 +9,9 @@
 `run_seeded_cost_resume_checked.sh` 保留完整 checkpoint 和父策略同步记录检查，切换到新成本记录入口；未用于迁移正在运行的 TE。恢复后的成本仅覆盖新进程片段，不能补称旧段已有统计，也不保证随机轨迹逐位重放。
 
 03:00 左右核对：BN、ZH、TE 的真实训练进程存活；BN 已显示63次更新、ZH24次、TE26次，日志继续更新。JA 进程仍活但没有新的训练进展。全账号仍按最多四张卡调度。未启动顺序训练，未改动官方蒸馏损失。
+
+## 正式补评入口
+
+等待中的原英语队列已扩展为 `run_completed_singles_formal_suite.sh`，仍只分配一张GPU。先执行上述BN完成条件检查与英语保持对照，再补SW Base／100更新的PolyMath500题、TH Base／100更新的MGSM-Rev2及PolyMath500题。PolyMath每种语言low／medium／high／top各125题，保留难度字段以分别报告。SW已完成MGSM-Rev2不重跑。均使用既定`project_single_vllm_v1`单次回答协议，不混称官方pass@12。
+
+配置前已确认队列仍waiting、无运行中的冻结job；shell语法及输出目录不重复检查通过，队列validate通过。没有新增GPU、启用开机启动或故障重试，也没有修改运行中的训练代码。新增正式补评尚未实际开始；任何阶段失败即停止并保留此前产物，不自动重跑。
