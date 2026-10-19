@@ -1,6 +1,6 @@
 # COPSD 当前实验进展
 
-更新：2026-10-20 00:53（Asia/Shanghai）。目标保持为十语言 single OPD，依据独立开发集选择三语言，再做正反顺序 OPD 与逐阶段遗忘评测。服务器进程、绝对路径和内部指纹保留本机。
+更新：2026-10-20 01:04（Asia/Shanghai）。目标保持为十语言 single OPD，依据独立开发集选择三语言，再做正反顺序 OPD 与逐阶段遗忘评测。服务器进程、绝对路径和内部指纹保留本机。
 
 | 项目 | 已核实状态 |
 |---|---|
@@ -8,7 +8,7 @@
 | TH 四卡 single | 100更新完成，checkpoint100、最终adapter及恢复文件保存，正常退出 |
 | TE single | vLLM正式训练运行，已完成10更新并保存checkpoint10；继续训练 |
 | JA single | 新vLLM正式训练运行，从原始Base独立开始；00:20完成1更新、44个microstep |
-| BN single | 批量rollout正式100更新任务已实际启动，原始Base独立初始化，已完成5更新／160条轨迹，checkpoint5已验收；继续运行 |
+| BN single | 批量rollout正式100更新任务已实际启动，原始Base独立初始化，已完成10更新／320条轨迹，checkpoint10已验收；继续运行 |
 | ZH / RU / DE / FR / ES | 尚未新启动 |
 | 开发集 | TE Base已完成4/100；TH20已完成29/100；新vLLM开发集配对cohort已手动排队，账号四卡上限下等待 |
 | 批量rollout工程验证 | SW两更新完整长度GPU检查通过并正常退出，断点恢复验证完成并正常退出；已用于新BN正式任务 |
@@ -66,3 +66,7 @@ BN checkpoint5已核验：326,681生成token、157/160条达到2048上限，160�
 BN checkpoint5与TE checkpoint10的100题新vLLM开发评测已手动排队，供同协议Base配对；早期预算不同，不用作正式100更新排名。旧HF输出的CPU语言诊断显示：SW思考区目标语言top1计数62→79→97（Base→20→100），数学2→11→7；TH思考区泰语99→100，但缺少结束思考标记的输出44→84，数学37→20。语言ID改善不等于数学改善，也不能只凭诊断归因；见 `sw_th_dev100_language_20261020.PUBLIC.json`。
 
 TH checkpoint20开发集已完整完成并正常退出：29/100，正常终止22/100、78条达到2048上限、69条没有结束思考标记。Base→20→100为37→29→20题正确，现有两处训练checkpoint均低于Base；问题／提示／seed及配置除adapter外一致，不能支持TH进入顺序实验。完整配对学习曲线见 `th_dev100_learning_curve_20261020.PUBLIC.json`。
+
+BN前10更新共653,044生成token、313/320条达到2048上限，保存checkpoint10，固定Base与0—10次推理同步检查通过。Trainer进度时钟step10最后显示22分59秒，约137.9秒／更新；粗估100更新约3.83小时、从checkpoint10剩余约3.45小时，另计启动、评测及后续波动；并非最终100更新实测。见 `bn_vllm_update_batch_checkpoint10_20261020.PUBLIC.json`。
+
+第一批vLLM开发评测已全部完成，父队列exit0：BN checkpoint5为8/100（203,730 token，纯生成178.88秒，96条截断），TE checkpoint10为0/100（204,800 token，纯生成182.36秒，100条截断）。同一新协议的Base参考仍在独立cohort队列中，不能拿旧HF Base或两种不同预算checkpoint直接推断收益、退步或语言排名。见 `bn_dev100_vllm_checkpoint5_20261020.PUBLIC.json`、`te_dev100_vllm_checkpoint10_20261020.PUBLIC.json`。SW MGSM-Rev2主评及配对Base开发cohort继续按四卡总上限调度。
