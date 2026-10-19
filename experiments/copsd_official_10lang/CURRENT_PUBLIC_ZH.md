@@ -1,6 +1,6 @@
 # COPSD 当前实验进展
 
-更新：2026-10-20 01:54（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
+更新：2026-10-20 02:30（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
 
 ## 当前任务
 
@@ -8,10 +8,11 @@
 |---|---|
 | SW single | 100/100更新完成，checkpoint100及最终adapter保存，正常退出 |
 | TH 四卡single | 100/100更新完成，checkpoint100及最终adapter保存，正常退出 |
-| TE single | 已核实17/100更新，已保存checkpoint15；原逐题vLLM训练继续 |
-| BN single | 已核实23/100更新，已保存checkpoint20；批量rollout训练继续 |
+| TE single | 已核实23/100更新，已保存checkpoint20；原逐题vLLM训练继续 |
+| BN single | 已核实51/100更新，已保存checkpoint50；批量rollout训练继续 |
 | JA single | 卡住：4次更新、142个microstep后停滞，尚无checkpoint；进程仍活着，不能计为有效训练 |
-| ZH / RU / DE / FR / ES | 批量single配置已准备并CPU预检，未启动 |
+| ZH single | 已核实11/100更新，已保存checkpoint10；批量rollout训练继续 |
+| RU / DE / FR / ES | 已改用新v2链路并CPU预检，未启动 |
 | 新vLLM开发评测cohort | 六种Base及SW／TH checkpoint20／100全部完成，父队列exit0 |
 | SW MGSM-Rev2主评 | Base8/250（3.2%）→100更新9/250（3.6%），父队列exit0 |
 | 三语言顺序OPD | 未达到稳定开发收益与语言选择条件，未启动 |
@@ -72,9 +73,9 @@ JA日志停在00:44:28，第4次更新后第142个microstep；检查时GPU利用
 
 ## 后续执行
 
-当前配对开发评测及SW MGSM-Rev2正式主评已完成。后续先在新入口补上初始化前seed和有效token／教师成本记录，再逐项推进ZH／RU／DE／FR／ES；其配置已预检但未启动，见 `remaining_single_batch32_grid_20261020.PUBLIC.json`。未启动全部后续阶段，没有自动失败重试或开机启动。
+当前配对开发评测及SW MGSM-Rev2正式主评已完成。新v2入口已补上初始化前seed和有效token／教师成本记录；ZH已从Base独立启动，RU／DE／FR／ES后续逐项推进；其余四种配置已预检但未启动，见 `remaining_single_batch32_grid_20261020.PUBLIC.json`。未启动全部后续阶段，没有自动失败重试或开机启动。
 
-PolyMath四档补评、英语GSM8K正式保持评测和剩余single正式结果仍未完成。顺序数据接口已有967／967／966个互不重叠原题池，与开发集隔离，十语言英文问题／参考／答案对齐；字符长度不是难度标签。尚未选择三语言或训练顺序模型。后续依据独立开发集、必要的训练seed复测和成本选择，不能用正式测试挑语言、训练题或checkpoint，也不因目前缺少收益而强行进入顺序阶段。
+PolyMath四档补评和剩余single正式结果仍未完成。Base／SW100／TH100英语GSM8K1319题0-shot正式保持对照已手动排队，当前四卡上限下等待；冻结报告用途，不用于选语言或checkpoint。顺序数据接口已有967／967／966个互不重叠原题池，与开发集隔离，十语言英文问题／参考／答案对齐；字符长度不是难度标签。尚未选择三语言或训练顺序模型。后续依据独立开发集、必要的训练seed复测和成本选择，不能用正式测试挑语言、训练题或checkpoint，也不因目前缺少收益而强行进入顺序阶段。
 
 ## 新完成的正式主评与教师诊断
 
@@ -82,4 +83,10 @@ MGSM-Rev2 SW test250，固定100更新参考与Base均按`project_single_vllm_v1
 
 真实SW教师信号两更新诊断已正常完成：64条在线轨迹、113,068有效回答loss位置，Base不变、保存与退出通过。教师argmax项被裁剪占4.43%，被裁剪教师概率质量约3.57%；这些局部统计不能证明终点退步原因。教师forward64次，CUDA事件合计16.09秒，学生forward15.38秒，均不含生成、KL和反传。诊断仍返回原损失，没有启动无裁剪消融。见 `teacher_signal_probe_20261020.PUBLIC.json`、`LOSS_DIAGNOSTICS_ZH.md`。
 
-复现记录补充：两次同样声明Trainer seed42的短跑，初始LoRA参数指纹不同，但初始推理策略均等于同一Base。固定库在创建PEFT后才进入Trainer设置seed，需在新入口中显式提前设置；现有运行及旧结果不改写。该兼容修正尚未实施，不宣称逐位复现。见 `lora_initial_seed_observation_20261020.PUBLIC.json`。
+复现记录补充：两次同样声明Trainer seed42的短跑，初始LoRA参数指纹不同，但初始推理策略均等于同一Base。固定库在创建PEFT后才进入Trainer设置seed，需在新入口中显式提前设置；现有运行及旧结果不改写。该修正已在新v2入口实施并CPU验证，完整GPU初始策略已核对仍等于原始Base；不宣称完整训练逐位重放。见 `lora_initial_seed_observation_20261020.PUBLIC.json`。
+
+## ZH新v2正式链路
+
+ZH Base开发100题25题正确，185,308生成token、纯生成72.15秒。随后从原始Base独立开始100更新，实际GPU初始推理权重与此前核验的原始Base一致，已有有限loss的真实microstep。新入口在模型／PEFT初始化前调用实际seed42，读取原shifted labels记录有效回答位置，分别记录teacher／student forward CUDA时间；不更换损失或优化器。600秒watchdog只打印堆栈，不杀进程或自动重试。训练正常完成后在同一分配GPU上接最终100题开发评测。见 `zh_seeded_cost_launch_20261020.PUBLIC.json`、`SEEDED_COST_RUNTIME_ZH.md`。
+
+ZH checkpoint5成本文件已实际验收：160次loss调用，295,590有效回答位置（等于本段生成token），教师forward39.20 CUDA秒、学生36.50秒，恢复文件齐全。根据保存参数与固定sampler重建的160题曝光前缀，其四项实际forward位置总量均吻合；原题ID清单保留本机私有文件，不把重建清单称为逐条运行时记录。见 `zh_seeded_cost_checkpoint5_20261020.PUBLIC.json`。
