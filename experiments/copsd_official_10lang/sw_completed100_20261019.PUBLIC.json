@@ -1,0 +1,58 @@
+{
+  "observed_at": "2026-10-19T18:25:01.980205+08:00",
+  "language": "sw",
+  "model": "Qwen3-1.7B",
+  "global_step": 100,
+  "training_status": "completed",
+  "exit_code": 0,
+  "started_at": "2026-10-15 17:17:32",
+  "finished_at": "2026-10-19 18:23:12",
+  "actual_completed_rollouts": 3188,
+  "generated_tokens": 5717658,
+  "capped_at_2048_count": 2146,
+  "train_runtime_seconds": 349524.9499,
+  "allocated_single_gpu_hours_training_clock": 97.09026386111111,
+  "nominal_effective_batch_size": 32,
+  "exposure_note": "Epoch tail contains 20 rather than 32 questions; 3188 actual trajectories, not 3200 unique questions.",
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state.pth"
+  ],
+  "final_saved_adapter_matches_checkpoint100": true,
+  "adapter_changed_from_checkpoint95": true,
+  "logged_metrics_finite": true,
+  "recent_log_history": [
+    {
+      "epoch": 1.0551724137931036,
+      "grad_norm": 0.10825259238481522,
+      "learning_rate": 2.5000000000000004e-07,
+      "loss": -0.0308,
+      "on_policy_loss": -0.0308,
+      "step": 96
+    },
+    {
+      "epoch": 1.0772413793103448,
+      "grad_norm": 0.11516259610652924,
+      "learning_rate": 1.5000000000000002e-07,
+      "loss": -0.0298,
+      "on_policy_loss": -0.0298,
+      "step": 98
+    },
+    {
+      "epoch": 1.0993103448275863,
+      "grad_norm": 0.1299314945936203,
+      "learning_rate": 5.0000000000000004e-08,
+      "loss": -0.0314,
+      "on_policy_loss": -0.0314,
+      "step": 100
+    }
+  ],
+  "th_current_step_at_snapshot": 93,
+  "formal_generation_backend": "Transformers/SDPA",
+  "final_checkpoint_dev100_evaluation": "Manually queued with identical previous dev protocol; not yet GPU-started, account cap4.",
+  "effectiveness": "No new final-checkpoint development or official-test score. Training completion does not prove mathematical improvement."
+}
