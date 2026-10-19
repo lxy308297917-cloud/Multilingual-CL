@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-10-19T12:04:37.304890+08:00",
+  "language": "th",
+  "parent_step": 70,
+  "completed_step": 72,
+  "completed_post_resume_updates": 2,
+  "completed_post_resume_rollouts": 64,
+  "completed_post_resume_generated_tokens": 126996,
+  "capped_2048": 58,
+  "post_resume_elapsed_seconds": 2292,
+  "first_update_seconds": 1094,
+  "second_update_seconds": 1198,
+  "remaining_updates_at_step72": 28,
+  "remaining_training_seconds_using_latest_single_update": 33544,
+  "estimate_limitations": "Only two resumed updates; 9h19m rough remaining training estimate, excludes evaluation/save delays and variation. Restored tqdm ETA/rate is invalid.",
+  "generation_backend": "Transformers/SDPA",
+  "engineering_status": "Actual two optimizer updates completed after restore; checkpoint75 not yet saved",
+  "method_effectiveness": "No new development or test scores",
+  "recent_logged_metrics": [
+    {
+      "loss": -0.0189,
+      "grad_norm": 0.04665650054812431,
+      "learning_rate": 1.45e-06,
+      "on_policy_loss": -0.0189,
+      "epoch": 0.79
+    }
+  ],
+  "finite_logged_metrics": true,
+  "next_gpu_probe": "One-GPU vLLM colocate probe queued; not yet GPU validated; new tasks default account cap4",
+  "prompt_check_correction": "Official and local trainer already use skip_special_tokens=False. No prompt bug or new patch; earlier contrary chat claim corrected. Source unchanged."
+}
