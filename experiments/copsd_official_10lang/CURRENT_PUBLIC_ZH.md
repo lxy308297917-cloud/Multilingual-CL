@@ -1,6 +1,6 @@
 # COPSD 当前实验进展
 
-更新：2026-10-20 04:26（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
+更新：2026-10-20 04:57（Asia/Shanghai）。目标仍为十语言独立single OPD，再按独立开发集选择三语言，完成正反顺序OPD与逐阶段遗忘矩阵。以下是当前快照，历史配置、失败与结果保存在各独立记录中。
 
 ## 当前任务
 
@@ -8,10 +8,10 @@
 |---|---|
 | SW single | 100/100更新完成，checkpoint100及最终adapter保存，正常退出 |
 | TH 四卡single | 100/100更新完成，checkpoint100及最终adapter保存，正常退出 |
-| TE single | 已核实35/100更新，已保存checkpoint35；原逐题vLLM训练继续 |
+| TE single | 已核实39/100更新，已保存checkpoint35；原逐题vLLM训练继续 |
 | BN single | 100/100更新正常完成；最终开发Base8/100→训练后0/100 |
 | JA single | 卡住：4次更新、142个microstep后停滞，尚无checkpoint；进程仍活着，不能计为有效训练 |
-| ZH single | 已核实67/100更新，已保存checkpoint65；批量rollout训练继续 |
+| ZH single | 已核实82/100更新，已保存checkpoint80；批量rollout训练继续 |
 | RU / DE / FR / ES | RU等待监控已停止，先排查BN退步；DE／FR／ES仅配置，未启动 |
 | 新vLLM开发评测cohort | 六种Base及SW／TH checkpoint20／100全部完成，父队列exit0 |
 | SW MGSM-Rev2主评 | Base8/250（3.2%）→100更新9/250（3.6%），父队列exit0 |
@@ -75,7 +75,7 @@ JA日志停在00:44:28，第4次更新后第142个microstep；检查时GPU利用
 
 当前配对开发评测及SW MGSM-Rev2正式主评已完成。新v2入口已补上初始化前seed和有效token／教师成本记录；ZH已从Base独立启动，RU／DE／FR／ES后续逐项推进；其余四种配置已预检但未启动，见 `remaining_single_batch32_grid_20261020.PUBLIC.json`。未启动全部后续阶段，没有自动失败重试或开机启动。
 
-PolyMath四档补评和剩余single正式结果仍未完成。Base／SW100／TH100英语GSM8K1319题0-shot正式保持对照已手动排队，当前四卡上限下等待；冻结报告用途，不用于选语言或checkpoint。顺序数据接口已有967／967／966个互不重叠原题池，与开发集隔离，十语言英文问题／参考／答案对齐；字符长度不是难度标签。尚未选择三语言或训练顺序模型。后续依据独立开发集、必要的训练seed复测和成本选择，不能用正式测试挑语言、训练题或checkpoint，也不因目前缺少收益而强行进入顺序阶段。
+PolyMath四档补评和剩余single正式结果仍未完成。Base／SW100／TH100英语GSM8K1319题0-shot正式保持对照已全部完成，后续SW／TH主评与PolyMath补评按同一单卡队列继续；冻结报告用途，不用于选语言或checkpoint。顺序数据接口已有967／967／966个互不重叠原题池，与开发集隔离，十语言英文问题／参考／答案对齐；字符长度不是难度标签。尚未选择三语言或训练顺序模型。后续依据独立开发集、必要的训练seed复测和成本选择，不能用正式测试挑语言、训练题或checkpoint，也不因目前缺少收益而强行进入顺序阶段。
 
 ## 新完成的正式主评与教师诊断
 
@@ -114,3 +114,15 @@ SW、TH、BN已有的最终开发结果均未提供稳定增益证据，目前�
 对既有逐题输出的CPU复核显示，Base／checkpoint5／checkpoint100含Unicode十进制数字的回答为94／93／0条，数字总数5234／4596／0，含所选LaTeX数学命令为49／46／0条。最后100条不仅未给出可提取答案，生成内容也发生明显变化；这些统计不是独立数学或流利度分数，不证明因果，也不能覆盖用文字表达的数值。结果与可复算脚本见 `bn_dev100_output_content_20261020.PUBLIC.json`、`audit_dev_math_content.py`。
 
 为先排查而不是继续铺开退步实验，尚未分配GPU的RU等待监控已停止；未取消任何运行中的训练。原始冻结1.7B在官方学生前缀／英文参考特权教师前缀下的100题条件生成检查已手动排队，最多四卡，目前waiting、没有GPU结果。输入直接由固定官方collator构造，CPU已核对100对前缀均未截断，源码和私有输入另行冻结。教师条件看到参考解答，不能当公平benchmark分数，也不代表所有on-policy位置的教师信号；不制作SFT标签、不暗改损失。见 `BN_FAILURE_ANALYSIS_ZH.md`、`bn_teacher_context_prepared_20261020.PUBLIC.json`。
+
+## 英语GSM8K正式保持对照已完成
+
+固定1319题、0-shot、每题一次、2048生成上限及`project_single_vllm_v1`协议；三模型全部完成并成功返回原父脚本，已接SW PolyMath正式评测。
+
+| 模型 | 正确题数 | 正确率 | 相对Base |
+|---|---:|---:|---:|
+| Base | 1113/1319 | 84.38% | — |
+| SW100 | 1056/1319 | 80.06% | −4.32个百分点 |
+| TH100 | 1068/1319 | 80.97% | −3.41个百分点 |
+
+SW相对Base新增58题、失去115题；TH新增58题、失去103题。题目、答案、prompt及配置除adapter／输出目录外相同，冻结评分源码与逐题seed规则相同；正式ITEMS没有独立保存sample seed字段，因此这里不声称从样本字段直接验过实际seed值。两项训练均存在英语数学下降，单seed保持对照不等于顺序遗忘实验，不用于挑语言或checkpoint。见 `english_gsm8k_completed_singles_20261020.PUBLIC.json`。ZH与TE仍运行，教师条件检查仍等待四卡上限内资源，RU等待监控已停止。
