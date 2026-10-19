@@ -1,0 +1,56 @@
+{
+  "observed_at": "2026-10-19T18:50:01.046731+08:00",
+  "checkpoint_step": 95,
+  "parent_step": 70,
+  "post_resume_updates": 25,
+  "post_resume_rollouts": 788,
+  "post_resume_generated_tokens": 1571922,
+  "post_resume_capped_2048": 698,
+  "exposure_note": "Epoch-tail update91 contains 20 questions, so25 updates after70 yield788 rather than800 trajectories.",
+  "post_resume_training_elapsed_seconds": 26622,
+  "allocated_gpu_hours_since_resume_clock_start": 29.58,
+  "mean_seconds_per_resumed_update": 1064.88,
+  "remaining_training_seconds_from_twenty_five_update_mean": 5324.400000000001,
+  "eta_caveat": "Mean only, excludes evaluation and future variation; epoch-tail shorter update included. Ignore restored tqdm ETA/rate.",
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state_0.pth",
+    "rng_state_1.pth",
+    "rng_state_2.pth",
+    "rng_state_3.pth"
+  ],
+  "adapter_changed_from_checkpoint90": true,
+  "logged_metrics_finite": true,
+  "recent_log_history": [
+    {
+      "epoch": 1.0110344827586206,
+      "grad_norm": 0.043446727097034454,
+      "learning_rate": 4.5000000000000003e-07,
+      "loss": -0.0197,
+      "on_policy_loss": -0.0243,
+      "step": 92
+    },
+    {
+      "epoch": 1.033103448275862,
+      "grad_norm": 0.04259597882628441,
+      "learning_rate": 3.5000000000000004e-07,
+      "loss": -0.0195,
+      "on_policy_loss": -0.0195,
+      "step": 94
+    }
+  ],
+  "sw_training_status": "completed100_exit0",
+  "waiting_queues": {
+    "copsd-sw-17b-vllm-colocate-probe-v1": "waiting",
+    "copsd-sw-17b-dev100-ckpt65-v1": "waiting",
+    "copsd-th-17b-dev100-base-4gpu-v2": "waiting",
+    "copsd-th-17b-dev100-ckpt20-4gpu-v2": "waiting",
+    "copsd-sw-17b-dev100-ckpt100-v1": "waiting"
+  },
+  "formal_generation_backend": "Transformers/SDPA",
+  "effectiveness": "No new development or official-test score; engineering progress only."
+}
