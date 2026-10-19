@@ -1,6 +1,6 @@
 # COPSD 当前实验进展
 
-更新：2026-10-20 00:36（Asia/Shanghai）。目标保持为十语言 single OPD，依据独立开发集选择三语言，再做正反顺序 OPD 与逐阶段遗忘评测。服务器进程、绝对路径和内部指纹保留本机。
+更新：2026-10-20 00:44（Asia/Shanghai）。目标保持为十语言 single OPD，依据独立开发集选择三语言，再做正反顺序 OPD 与逐阶段遗忘评测。服务器进程、绝对路径和内部指纹保留本机。
 
 | 项目 | 已核实状态 |
 |---|---|
@@ -8,9 +8,9 @@
 | TH 四卡 single | 100更新完成，checkpoint100、最终adapter及恢复文件保存，正常退出 |
 | TE single | vLLM正式训练运行，已完成10更新并保存checkpoint10；继续训练 |
 | JA single | 新vLLM正式训练运行，从原始Base独立开始；00:20完成1更新、44个microstep |
-| BN single | 批量rollout正式100更新任务已实际启动，原始Base独立初始化，仍在启动阶段 |
+| BN single | 批量rollout正式100更新任务已实际启动，原始Base独立初始化，已执行96次microstep，前两次更新已完成，继续运行 |
 | ZH / RU / DE / FR / ES | 尚未新启动 |
-| 开发集 | TE Base已完成4/100；TH20运行；JA Base已手动排队，账号四卡上限下等待 |
+| 开发集 | TE Base已完成4/100；TH20运行；新vLLM开发集配对cohort已手动排队，账号四卡上限下等待 |
 | 批量rollout工程验证 | SW两更新完整长度GPU检查通过并正常退出，断点恢复验证完成并正常退出；已用于新BN正式任务 |
 | 三语言顺序 OPD | 未达到稳定开发集收益与语言选择条件，未启动 |
 
@@ -55,4 +55,8 @@ Pass@12增加6题，平均回答正确率下降；单seed、低绝对水平，�
 
 TE Base独立开发集100题完成：4题正确、2题正常终止，204,143生成token，约5679秒。TE训练后尚无配对分数。详见 `te_dev100_base_20261020.PUBLIC.json`；批量GPU检查详见 `vllm_update_batch_probe_20261020.PUBLIC.json`。
 
-批量恢复证据见 `vllm_update_batch_resume_20261020.PUBLIC.json`。BN配套Base开发集已手动排队；JA Base及SW MGSM-Rev2主评仍在四卡上限下等待。工程验收通过不代表数学收益通过，仍需配对开发集和正式主评结果。
+批量恢复证据见 `vllm_update_batch_resume_20261020.PUBLIC.json`。SW MGSM-Rev2主评仍在四卡上限下等待。JA／BN旧HF Base等待队列已停止，改由独立新vLLM开发cohort覆盖，未停止运行中的TH20评测。工程验收通过不代表数学收益通过，仍需配对开发集和正式主评结果。
+
+开发评测提速已实现并手动排队：先评当前五种目标语言与英语Base，再补SW／TH checkpoint20和100的相同协议配对，固定原100题开发集、2048预算、原官方提示与评分；新vLLM开发协议与历史HF分开。六语言600个实际prompt已CPU核对一致，不代表采样结果或分数相同，尚无GPU新开发分数。见 `DEV_VLLM_ZH.md`。
+
+TE／JA批量rollout续训入口和独立队列已配置、CPU预检，尚未启动，也未停止原任务。AGENTS.md要求停止运行中的队列任务获得用户明确授权，已询问是否允许在下个完整checkpoint后迁移；答复前两项原训练继续。
