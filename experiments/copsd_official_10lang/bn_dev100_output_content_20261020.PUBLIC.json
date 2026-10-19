@@ -1,0 +1,45 @@
+{
+  "observed_at": "2026-10-20T04:29:15.953887+08:00",
+  "language": "bn",
+  "source": "Existing same-protocol held-out dev100 outputs; no new inference",
+  "measures": [
+    {
+      "checkpoint": "Base",
+      "items": 100,
+      "correct": 8,
+      "responses_with_any_Unicode_decimal_digit": 94,
+      "total_Unicode_decimal_digits": 5234,
+      "responses_with_selected_LaTex_math_commands": 49,
+      "selected_LaTex_math_command_count": 709,
+      "responses_with_close_think_tag": 22,
+      "responses_with_literal_boxed": 11
+    },
+    {
+      "checkpoint": "checkpoint5",
+      "items": 100,
+      "correct": 8,
+      "responses_with_any_Unicode_decimal_digit": 93,
+      "total_Unicode_decimal_digits": 4596,
+      "responses_with_selected_LaTex_math_commands": 46,
+      "selected_LaTex_math_command_count": 612,
+      "responses_with_close_think_tag": 14,
+      "responses_with_literal_boxed": 10
+    },
+    {
+      "checkpoint": "checkpoint100",
+      "items": 100,
+      "correct": 0,
+      "responses_with_any_Unicode_decimal_digit": 0,
+      "total_Unicode_decimal_digits": 0,
+      "responses_with_selected_LaTex_math_commands": 0,
+      "selected_LaTex_math_command_count": 0,
+      "responses_with_close_think_tag": 2,
+      "responses_with_literal_boxed": 0
+    }
+  ],
+  "regex": {
+    "Unicode_decimal_digits": "\\d",
+    "selected_LaTex_commands": "\\\\(?:frac|sqrt|sum|prod|begin|end|cdot|times|boxed|left|right|equiv|pmod|binom|log|sin|cos|tan)\\b"
+  },
+  "limitation": "Text diagnostics, not standalone correctness or fluency scores. Numbers may be written as words; selected commands do not cover all mathematics. Counts do not identify a causal training fault."
+}
