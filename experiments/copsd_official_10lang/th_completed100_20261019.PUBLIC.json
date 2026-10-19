@@ -1,0 +1,67 @@
+{
+  "observed_at": "2026-10-19T20:15:35.015155+08:00",
+  "language": "th",
+  "model": "Qwen3-1.7B",
+  "global_step": 100,
+  "training_status": "completed",
+  "exit_code": 0,
+  "resume_started_at": "2026-10-19 11:25:15",
+  "finished_at": "2026-10-19 20:14:05",
+  "original_segment_updates": 70,
+  "resumed_segment_updates": 30,
+  "original_segment_rollouts": 2240,
+  "resumed_segment_rollouts": 948,
+  "actual_completed_update_rollouts": 3188,
+  "generated_tokens_completed_updates": 6273851,
+  "capped_at_2048_count_completed_updates": 2732,
+  "original_segment_training_seconds_to_saved70_approx": 71559,
+  "resumed_train_runtime_seconds": 31699.1697,
+  "total_training_clock_hours_approx": 28.682824916666668,
+  "allocated_four_gpu_hours_training_clock_approx": 114.73129966666667,
+  "cost_scope": "Committed70-update original segment plus resumed30-update runtime; excludes authorized handoff benchmark, discarded in-flight work, startup and queue waiting. Allocated GPU-hours, not measured kernel-active hours.",
+  "exposure_note": "Epoch-tail update91 contains20 questions:3188 actual completed trajectories, not3200 unique questions.",
+  "checkpoint_required_files_nonempty": [
+    "adapter_model.safetensors",
+    "adapter_config.json",
+    "optimizer.pt",
+    "scheduler.pt",
+    "trainer_state.json",
+    "rng_state_0.pth",
+    "rng_state_1.pth",
+    "rng_state_2.pth",
+    "rng_state_3.pth"
+  ],
+  "final_saved_adapter_matches_checkpoint100": true,
+  "adapter_changed_from_checkpoint95": true,
+  "logged_metrics_finite": true,
+  "recent_log_history": [
+    {
+      "epoch": 1.0551724137931036,
+      "grad_norm": 0.044173967093229294,
+      "learning_rate": 2.5000000000000004e-07,
+      "loss": -0.0195,
+      "on_policy_loss": -0.0195,
+      "step": 96
+    },
+    {
+      "epoch": 1.0772413793103448,
+      "grad_norm": 0.0425943024456501,
+      "learning_rate": 1.5000000000000002e-07,
+      "loss": -0.0193,
+      "on_policy_loss": -0.0193,
+      "step": 98
+    },
+    {
+      "epoch": 1.0993103448275863,
+      "grad_norm": 0.043711595237255096,
+      "learning_rate": 5.0000000000000004e-08,
+      "loss": -0.0202,
+      "on_policy_loss": -0.0202,
+      "step": 100
+    }
+  ],
+  "formal_generation_backend": "Transformers/SDPA",
+  "runtime_note": "Original fixed official-derived core; explicit checkpoint70 continuation in isolated Torch2.8-compatible environment, not claimed bitwise equivalent to old runtime.",
+  "final_checkpoint_dev100_evaluation": "Manually queued with previous fixed dev protocol and account cap4; no score yet.",
+  "effectiveness": "No new final-checkpoint development or official-test score. Completion proves engineering execution, not mathematical improvement."
+}
