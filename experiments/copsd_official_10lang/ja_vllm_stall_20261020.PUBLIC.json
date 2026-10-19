@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-10-20T01:21:38.449368+08:00",
+  "language": "ja",
+  "queue_phase": "running",
+  "last_completed_optimizer_update": 4,
+  "last_completed_microstep": 142,
+  "last_log_timestamp": "2026-10-20 00:44:28 Asia/Shanghai",
+  "gpu_utilization_at_inspection_percent": 0,
+  "gpu_board_memory_mib": 15473,
+  "owned_python_cpu_percent_approx": 100,
+  "saved_checkpoint_count": 0,
+  "assessment": "Stalled, not training progress despite live parent and Python. No final failure/exit claimed. Exact cause not located.",
+  "read_only_diagnostics": "Own process and GPU inspected. Stack attachment denied by OS ptrace_scope1; system settings unchanged.",
+  "recovery_plan": "Separate fresh Base Japanese batch32 run configured and CPU-validated; not started. Requires cancelling the stalled owned queue, so awaiting explicit authorization required by AGENTS.md. All original logs and output retained.",
+  "other_work": "BN andTE trainings and paired development evaluation continue."
+}
