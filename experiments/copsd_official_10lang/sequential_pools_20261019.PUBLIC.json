@@ -1,0 +1,44 @@
+{
+  "protocol": "Project sequential-pool extension; no training or language selection",
+  "languages_checked": [
+    "sw",
+    "te",
+    "th",
+    "bn",
+    "zh",
+    "ja",
+    "ru",
+    "de",
+    "fr",
+    "es"
+  ],
+  "seed": 20261019,
+  "pool_sizes": [
+    967,
+    967,
+    966
+  ],
+  "union_size": 2900,
+  "pairwise_overlap": 0,
+  "development_overlap": 0,
+  "english_fields_equal_across_languages": true,
+  "source_counts": {
+    "olympiads": 2900
+  },
+  "stratification": "source x English question character-length quartile x English reference character-length quartile",
+  "difficulty_limit": "Released inputs have no difficulty labels. Length strata are proxies, not verified math difficulty or token budgets.",
+  "stratum_pool_count_max_difference": 1,
+  "binding_rule": "After independent-dev language selection, bind L1 to pool0, L2 to pool1, L3 to pool2. Reverse order reverses language/pool pairs together; it does not reassign pools by stage number.",
+  "matched_single_rule": "For each chosen language use the identical bound pool and stage exposure budget from Base. Existing2900-question singles are not the matched small-pool control.",
+  "exposure_note": "Pools have966/967 unique questions. A nominal3200-exposure stage repeats questions; actual exposure counts depend on epoch-end partial accumulation and must be logged.",
+  "training_started": false,
+  "languages_selected": false,
+  "normalized_english_question_overlap_between_pools": 0,
+  "materialized_interface_check": {
+    "language": "sw",
+    "pool": 0,
+    "records": 967,
+    "source_rows_identical": true,
+    "training_started": false
+  }
+}
