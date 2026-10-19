@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-10-20T03:01:27.468491+08:00",
+  "language": "zh",
+  "global_step": 25,
+  "completed_rollouts": 800,
+  "generated_tokens": 1446755,
+  "generation_seconds": 772.4871219471097,
+  "cost": {
+    "loss_calls": 800,
+    "valid_response_loss_positions": 1446755,
+    "masked_response_positions": 191645,
+    "student_forward_calls": 800,
+    "student_forward_cuda_seconds": 193.25455058288574,
+    "student_processed_input_positions": 1729651,
+    "student_attended_input_positions": 1538006,
+    "teacher_forward_calls": 800,
+    "teacher_forward_cuda_seconds": 197.7166296234131,
+    "teacher_processed_input_positions": 2437406,
+    "teacher_attended_input_positions": 2245761,
+    "start_step": 0,
+    "global_step": 25,
+    "seed_applied_before_model_and_PEFT": 42,
+    "loss_temperature": 1.1,
+    "scope": "This process segment only; parent continuation ledgers remain separate.",
+    "forward_timer_scope": "Outer model forward CUDA events; excludes rollout, KL, backward, optimizer and saving.",
+    "method": "Original official loss returned unchanged, exact shifted-label masks counted."
+  },
+  "scope": "Completed first25 updates only, not final effectiveness. Generation timing is actual grouped engine calls; CUDA forward events exclude KL/backward/optimizer/save. Timing categories must not be subtracted to infer all remaining work."
+}
