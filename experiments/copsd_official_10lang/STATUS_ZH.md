@@ -1,8 +1,17 @@
 # COPSD 官方源码十语言实验状态
 
-更新时间：2026-10-19 10:44（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。当前状态以最近日期的更新为准，较早段落保留为历史快照。
+更新时间：2026-10-19 11:35（Asia/Shanghai）。本轨道执行用户新目标：十语言独立 COPSD，再以独立开发集选择三语言做两条相反顺序的持续 LoRA OPD。此前自写 FFT、SFT 标签批量合成与自写 OPD 均为旧协议，不计入本轨道。当前状态以最近日期的更新为准，较早段落保留为历史快照。
 
 ## 2026-10-19 当前进展
+
+
+### 11:35 已完成生成测速，四卡恢复正在验证
+
+- 用户授权后，TH checkpoint-70完整落盘并通过针对该恢复点的真实Trainer CPU状态加载检查，随后仅用原TH队列的`stop --cancel-job`暂停其跟踪进程，SW GPU0保持运行。原70更新共2240条轨迹、4,380,754生成token；暂停时另有4条已完成生成但未进入保存状态，原日志保留，不混作训练更新。`th_17b_4gpu_checkpoint70_progress_20261019.json`与`checkpoint70_cpu_restore_20261019.json`保存证据。
+- 已完成固定四道SW训练题、同一1.7B revision、同一SW checkpoint20 LoRA、相同采样及2048上限的独立生成测速。同一GPU4的batch2：Transformers 32.46 token/s、vLLM 201.85 token/s，吞吐比6.22；实际生成时间比5.96，输出长度不同。batch4首轮为HF 63.31／vLLM 322.96 token/s，物理卡不同，单列为工程观察。原始输出、内存采样与身份哈希见 `rollout_benchmark_results_20261019.json`，不当作数学效果或完整OPD加速倍数。
+- 首轮vLLM在UUID转整数的NVML元数据解析处失败；保留原失败日志，新增进程级`compat/vllm011_uuid/sitecustomize.py`后补测成功，CUDA_VISIBLE_DEVICES仍为原队列UUID，未修改安装包、损失、教师、生成长度或数据。首次恢复也因TRL导入同一vLLM工具而在模型训练前退出，未发生新更新；诊断后手动启动新的恢复-only队列，没有重跑测速或自动重试服务。
+- 当前恢复队列 `copsd-th70-resume-uuid-20261019-v2`已取得GPU2–5，launcher PID4013784、四worker已加载模型并实际生成。新输出 `models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_resume70_torch28_uuid_20261019_v2`，日志 `logs/copsd_official_10lang/th70_resume_uuid_20261019_v2.run.log`；原100总更新、batch32、micro1×4rank×GA8、2048预算和冻结官方适配源码保持，仍用HF／SDPA正式训练。新Torch2.8／NumPy兼容与UUID元数据适配明确记录于 `th70_resume_uuid_manifest_20261019.json`。等待至少global step71才确认完成实际恢复更新；尚未把启动或生成当作恢复成功。
+- 三个先前仅waiting的开发集队列仍暂挂，确认首次恢复更新后手动恢复排队；SW未暂停。没有新的数学效果分数，完整十语言single和顺序阶段仍未完成。
 
 
 ### 10:43 已获暂停测速授权，等待 TH checkpoint-70
