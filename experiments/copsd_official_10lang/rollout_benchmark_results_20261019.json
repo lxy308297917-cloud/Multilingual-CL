@@ -1,0 +1,257 @@
+{
+  "observed_at": "2026-10-19T11:21:50.585139+08:00",
+  "scope": "Standalone fixed-four-prompt rollout benchmark, not end-to-end OPD or mathematical effectiveness",
+  "cases": [
+    {
+      "backend": "transformers",
+      "batch_size": 2,
+      "cuda_visible_devices": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+      "sampling": {
+        "temperature": 1.1,
+        "top_p": 0.95,
+        "top_k": 20,
+        "max_tokens": 2048,
+        "seed": 42,
+        "eos_token_ids": [
+          151645,
+          151643
+        ]
+      },
+      "adapter_sha256": "291685ad3ad5e75c7782f67a5863054b9dc6b190b166f25130713463586a0ad3",
+      "manifest_sha256": "628ca0ff173bd2d7eb053f178cce6153f3eb367fae12d62fc3178b06cbde2812",
+      "generation_seconds": 255.23376889154315,
+      "actual_tokens": 7855,
+      "actual_tokens_per_second": 30.77570822275416,
+      "observed_device_peak_generation_mib": 4821.0,
+      "load_seconds": 5.358494078740478,
+      "warmup_seconds": 4.776915673166513,
+      "packages": {
+        "torch": "2.8.0",
+        "transformers": "4.57.1",
+        "peft": "0.17.1"
+      },
+      "label": "hf2",
+      "raw_results": "/data0/users/lixiaoyang/logs/copsd_official_10lang/rollout_benchmark/th70_benchmark_resume_20261019_v1_hf2/RESULTS.json",
+      "raw_sha256": "53aaf0696bc1dbd2ccad883760f846068dbd7ade3b4723e1ad98f9c24592491c",
+      "item_ids": [
+        "b99fda61d8604367f871e4dbd9941597e84b75b78576e1cebba44fa92d3b92d7",
+        "cc002a271319643f63989c5672f7cafc51d73d4d7584e695abc6de4ea7dca00c",
+        "b8cccb9222814a546826fcd0484da70ada4e2a5104901eac479cef497a23b405",
+        "5249ebafe37c7e4008544b33ab8051da24061234de3c14d2719556b7033676a0"
+      ],
+      "item_lengths": [
+        2048,
+        2048,
+        1711,
+        2048
+      ],
+      "capped_count": 3,
+      "normal_termination_count": 1,
+      "think_end_count": 1,
+      "boxed_format_count": 1
+    },
+    {
+      "backend": "transformers",
+      "batch_size": 4,
+      "cuda_visible_devices": "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573",
+      "sampling": {
+        "temperature": 1.1,
+        "top_p": 0.95,
+        "top_k": 20,
+        "max_tokens": 2048,
+        "seed": 42,
+        "eos_token_ids": [
+          151645,
+          151643
+        ]
+      },
+      "adapter_sha256": "291685ad3ad5e75c7782f67a5863054b9dc6b190b166f25130713463586a0ad3",
+      "manifest_sha256": "628ca0ff173bd2d7eb053f178cce6153f3eb367fae12d62fc3178b06cbde2812",
+      "generation_seconds": 119.92533547058702,
+      "actual_tokens": 7592,
+      "actual_tokens_per_second": 63.30605597398575,
+      "observed_device_peak_generation_mib": 5689.0,
+      "load_seconds": 5.234734246507287,
+      "warmup_seconds": 4.275817411020398,
+      "packages": {
+        "torch": "2.8.0",
+        "transformers": "4.57.1",
+        "peft": "0.17.1"
+      },
+      "label": "hf4",
+      "raw_results": "/data0/users/lixiaoyang/logs/copsd_official_10lang/rollout_benchmark/th70_benchmark_resume_20261019_v1_hf4/RESULTS.json",
+      "raw_sha256": "12e8b4e37e94aa373c6195a7a68167989c564c78d2430e8dad19fe5ec59b22ba",
+      "item_ids": [
+        "b99fda61d8604367f871e4dbd9941597e84b75b78576e1cebba44fa92d3b92d7",
+        "cc002a271319643f63989c5672f7cafc51d73d4d7584e695abc6de4ea7dca00c",
+        "b8cccb9222814a546826fcd0484da70ada4e2a5104901eac479cef497a23b405",
+        "5249ebafe37c7e4008544b33ab8051da24061234de3c14d2719556b7033676a0"
+      ],
+      "item_lengths": [
+        2048,
+        2048,
+        2048,
+        1448
+      ],
+      "capped_count": 3,
+      "normal_termination_count": 1,
+      "think_end_count": 1,
+      "boxed_format_count": 1
+    },
+    {
+      "backend": "vllm",
+      "batch_size": 2,
+      "cuda_visible_devices": "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a",
+      "sampling": {
+        "temperature": 1.1,
+        "top_p": 0.95,
+        "top_k": 20,
+        "max_tokens": 2048,
+        "seed": 42,
+        "eos_token_ids": [
+          151645,
+          151643
+        ]
+      },
+      "adapter_sha256": "291685ad3ad5e75c7782f67a5863054b9dc6b190b166f25130713463586a0ad3",
+      "manifest_sha256": "628ca0ff173bd2d7eb053f178cce6153f3eb367fae12d62fc3178b06cbde2812",
+      "generation_seconds": 40.58460485562682,
+      "actual_tokens": 8192,
+      "actual_tokens_per_second": 201.84993864401827,
+      "observed_device_peak_generation_mib": 18792.0,
+      "load_seconds": 92.98479892872274,
+      "warmup_seconds": 1.6924152690917253,
+      "packages": {
+        "torch": "2.8.0",
+        "transformers": "4.57.1",
+        "peft": "0.17.1",
+        "vllm": "0.11.0"
+      },
+      "label": "vllm2_uuidcompat_v1",
+      "raw_results": "/data0/users/lixiaoyang/logs/copsd_official_10lang/rollout_benchmark/th70_benchmark_resume_20261019_v1_vllm2_uuidcompat_v1/RESULTS.json",
+      "raw_sha256": "d2a7e9b76ac09d69885d9d7df59c36aadd735bd27963fd6d587baae9a926fa92",
+      "item_ids": [
+        "b99fda61d8604367f871e4dbd9941597e84b75b78576e1cebba44fa92d3b92d7",
+        "cc002a271319643f63989c5672f7cafc51d73d4d7584e695abc6de4ea7dca00c",
+        "b8cccb9222814a546826fcd0484da70ada4e2a5104901eac479cef497a23b405",
+        "5249ebafe37c7e4008544b33ab8051da24061234de3c14d2719556b7033676a0"
+      ],
+      "item_lengths": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "capped_count": 4,
+      "normal_termination_count": 0,
+      "think_end_count": 0,
+      "boxed_format_count": 0
+    },
+    {
+      "backend": "vllm",
+      "batch_size": 4,
+      "cuda_visible_devices": "GPU-4d65516e-eaa6-0d50-ff59-a1c8d4a75df8",
+      "sampling": {
+        "temperature": 1.1,
+        "top_p": 0.95,
+        "top_k": 20,
+        "max_tokens": 2048,
+        "seed": 42,
+        "eos_token_ids": [
+          151645,
+          151643
+        ]
+      },
+      "adapter_sha256": "291685ad3ad5e75c7782f67a5863054b9dc6b190b166f25130713463586a0ad3",
+      "manifest_sha256": "628ca0ff173bd2d7eb053f178cce6153f3eb367fae12d62fc3178b06cbde2812",
+      "generation_seconds": 21.541217179968953,
+      "actual_tokens": 6957,
+      "actual_tokens_per_second": 322.96225147710186,
+      "observed_device_peak_generation_mib": 18894.0,
+      "load_seconds": 69.60957178287208,
+      "warmup_seconds": 1.6420793645083904,
+      "packages": {
+        "torch": "2.8.0",
+        "transformers": "4.57.1",
+        "peft": "0.17.1",
+        "vllm": "0.11.0"
+      },
+      "label": "vllm4_uuidcompat_v1",
+      "raw_results": "/data0/users/lixiaoyang/logs/copsd_official_10lang/rollout_benchmark/th70_benchmark_resume_20261019_v1_vllm4_uuidcompat_v1/RESULTS.json",
+      "raw_sha256": "99675e7b3306b5e9e2ba1c738fe306577ef96f7676ba3550389089578e3351cb",
+      "item_ids": [
+        "b99fda61d8604367f871e4dbd9941597e84b75b78576e1cebba44fa92d3b92d7",
+        "cc002a271319643f63989c5672f7cafc51d73d4d7584e695abc6de4ea7dca00c",
+        "b8cccb9222814a546826fcd0484da70ada4e2a5104901eac479cef497a23b405",
+        "5249ebafe37c7e4008544b33ab8051da24061234de3c14d2719556b7033676a0"
+      ],
+      "item_lengths": [
+        2048,
+        2048,
+        2048,
+        813
+      ],
+      "capped_count": 3,
+      "normal_termination_count": 1,
+      "think_end_count": 1,
+      "boxed_format_count": 1
+    },
+    {
+      "backend": "transformers",
+      "batch_size": 2,
+      "cuda_visible_devices": "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a",
+      "sampling": {
+        "temperature": 1.1,
+        "top_p": 0.95,
+        "top_k": 20,
+        "max_tokens": 2048,
+        "seed": 42,
+        "eos_token_ids": [
+          151645,
+          151643
+        ]
+      },
+      "adapter_sha256": "291685ad3ad5e75c7782f67a5863054b9dc6b190b166f25130713463586a0ad3",
+      "manifest_sha256": "628ca0ff173bd2d7eb053f178cce6153f3eb367fae12d62fc3178b06cbde2812",
+      "generation_seconds": 242.0243385117501,
+      "actual_tokens": 7855,
+      "actual_tokens_per_second": 32.45541356832857,
+      "observed_device_peak_generation_mib": 4821.0,
+      "load_seconds": 4.727147340774536,
+      "warmup_seconds": 4.1407988630235195,
+      "packages": {
+        "torch": "2.8.0",
+        "transformers": "4.57.1",
+        "peft": "0.17.1"
+      },
+      "label": "hf2_samegpu4_v1",
+      "raw_results": "/data0/users/lixiaoyang/logs/copsd_official_10lang/rollout_benchmark/th70_benchmark_resume_20261019_v1_hf2_samegpu4_v1/RESULTS.json",
+      "raw_sha256": "99f6bd4188ae5cdfc3015e9699296ef4bacef3126ffa1b9696fd525983d027cb",
+      "item_ids": [
+        "b99fda61d8604367f871e4dbd9941597e84b75b78576e1cebba44fa92d3b92d7",
+        "cc002a271319643f63989c5672f7cafc51d73d4d7584e695abc6de4ea7dca00c",
+        "b8cccb9222814a546826fcd0484da70ada4e2a5104901eac479cef497a23b405",
+        "5249ebafe37c7e4008544b33ab8051da24061234de3c14d2719556b7033676a0"
+      ],
+      "item_lengths": [
+        2048,
+        2048,
+        1711,
+        2048
+      ],
+      "capped_count": 3,
+      "normal_termination_count": 1,
+      "think_end_count": 1,
+      "boxed_format_count": 1
+    }
+  ],
+  "same_gpu_batch2_vllm_over_hf_token_throughput": 6.219299539014114,
+  "same_gpu_batch2_hf_over_vllm_generation_seconds": 5.96345188952098,
+  "different_gpu_batch4_throughput_ratio": 5.10160120557528,
+  "original_vllm_cases": "Failed UUID-to-int NVML mapping before generation; retained in original per-case logs, not represented as zero throughput",
+  "compatibility": "Process-local UUID NVML shim; installed packages and CUDA_VISIBLE_DEVICES UUIDs unchanged",
+  "full_on_policy_sync_teacher_backward_validated": false,
+  "formal_training_backend_changed_to_vllm": false,
+  "hf_batch2_original_and_same_gpu_cross_token_ids_equal": true,
+  "quality_scope": "Four fixed training prompts only; termination/format diagnostics are not development/test accuracy or language-fluency evidence"
+}
