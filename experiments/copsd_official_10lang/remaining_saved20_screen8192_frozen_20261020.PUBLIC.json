@@ -1,0 +1,90 @@
+{
+  "frozen_at": "2026-10-20T20:30:08.687849",
+  "scope": "Complete comparable target/English development screening on remaining existing20-update language checkpoints. No new training or formal tests, no final language choice. SW/BN/ZH/FR remain separately reported; JA training is running separately.",
+  "reason": "8192 results changed earlier2048 interpretation and FR failed the corrected-budget screen. Evaluate remaining candidates at a common fixed budget before selecting three.",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "items_each": 100,
+  "samples": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "evaluation_seed": 42,
+  "checkpoint_step": 20,
+  "original_training_horizon": 100,
+  "expected_exposures_to20": 640,
+  "model": "Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "cached_English_Base77_reused": true,
+  "historical_training_caveats": {
+    "th": "Historical four-GPU training; not a fresh unified seeded-v2 run.",
+    "te": "Original single-rollout entry and older PEFT initialization restriction.",
+    "de_es_ru": "Saved seeded-v2 independent runs."
+  },
+  "selection_caveat": "Fixed20 exploratory screen, not a complete8192 checkpoint grid or stable multiseed ranking. Positive candidates require further independent-seed/retention review.",
+  "new_training": false,
+  "formal_test": false,
+  "max_user_gpus": 4,
+  "no_automatic_failure_retry": true,
+  "languages": {
+    "de": {
+      "checkpoint_relative": "copsd_vllm_seeded_cost_single_v2/de_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-20",
+      "adapter_sha256": "d007005a680b2ae3c252074698232406a1d539777144e82bbd8e660b95542145",
+      "development_sha256": "5d7f47e7014e4d70abd0ef9663fd820cf812dfd3672e9bd71edd097053a53882",
+      "run_ids": {
+        "base": "de_saved20_screen_base_dev100_8192_20261020_v1",
+        "target20": "de_saved20_screen_target20_dev100_8192_20261020_v1",
+        "English20": "de_saved20_screen_English20_dev100_8192_20261020_v1"
+      },
+      "queue": "copsd-de-saved20-screen8192-v1"
+    },
+    "es": {
+      "checkpoint_relative": "copsd_vllm_seeded_cost_single_v2/es_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-20",
+      "adapter_sha256": "f4d843f7176ed9dcfba010169fbaa5a9ab57c8bce55f8c8abf472dbf198751fa",
+      "development_sha256": "9d45da14c3370a07cf2228052ace38203b30c07232338244dbcc9c27b610d551",
+      "run_ids": {
+        "base": "es_saved20_screen_base_dev100_8192_20261020_v1",
+        "target20": "es_saved20_screen_target20_dev100_8192_20261020_v1",
+        "English20": "es_saved20_screen_English20_dev100_8192_20261020_v1"
+      },
+      "queue": "copsd-es-saved20-screen8192-v1"
+    },
+    "ru": {
+      "checkpoint_relative": "copsd_vllm_seeded_cost_single_v2/ru_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-20",
+      "adapter_sha256": "7ba5f36a31b6c3649b5996ac6698012621daa41c010b95a614ef25f27ae0e066",
+      "development_sha256": "595d023ec470c99d41cc24caddb3a1386a0589e2ba9020c4a882a6a4d1b0f929",
+      "run_ids": {
+        "base": "ru_saved20_screen_base_dev100_8192_20261020_v1",
+        "target20": "ru_saved20_screen_target20_dev100_8192_20261020_v1",
+        "English20": "ru_saved20_screen_English20_dev100_8192_20261020_v1"
+      },
+      "queue": "copsd-ru-saved20-screen8192-v1"
+    },
+    "th": {
+      "checkpoint_relative": "copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2/checkpoint-20",
+      "adapter_sha256": "12a538416695209d5bb334dc925391841007fab5dd2f6e09a583b1ea3f3a900d",
+      "development_sha256": "970bd22921349b0d943d5229fcf852bb1582be11670fe61b9177168204f0c8a4",
+      "run_ids": {
+        "base": "th_saved20_screen_base_dev100_8192_20261020_v1",
+        "target20": "th_saved20_screen_target20_dev100_8192_20261020_v1",
+        "English20": "th_saved20_screen_English20_dev100_8192_20261020_v1"
+      },
+      "queue": "copsd-th-saved20-screen8192-v1"
+    },
+    "te": {
+      "checkpoint_relative": "copsd_vllm_single_v1/te_17b_project2900_vllm_seed42_20261019_v1/checkpoint-20",
+      "adapter_sha256": "b6efb9a253ae79e3dc37bbf9dc06db12980240faf81d56088133fac2baef9cb9",
+      "development_sha256": "a2d9c2691a07000340d13b8b4a2814d879b356526035d89eab4d11fbc87f6f54",
+      "run_ids": {
+        "base": "te_saved20_screen_base_dev100_8192_20261020_v1",
+        "target20": "te_saved20_screen_target20_dev100_8192_20261020_v1",
+        "English20": "te_saved20_screen_English20_dev100_8192_20261020_v1"
+      },
+      "queue": "copsd-te-saved20-screen8192-v1"
+    }
+  },
+  "code_sha256": {
+    "evaluate_saved20_screen8192.py": "7ee7261622b182deba136db509d3feb8e97aa456a9915f34e0e8a80eb56d5fa6",
+    "run_saved20_screen8192.sh": "3e8edfe95d1e7af7aff77d27c91301876701b1a3ecf4ac149cb57541b6491196",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c"
+  }
+}
