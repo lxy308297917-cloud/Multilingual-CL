@@ -1,0 +1,30 @@
+{
+  "language": "sw",
+  "engineering_smoke": {
+    "updates": 2,
+    "scheduler_horizon": 100,
+    "microsteps": 64,
+    "base_unchanged": true,
+    "sync_count": 3,
+    "loss_positions": 112051,
+    "ordered_runtime_shutdown": true,
+    "actual_CPU_checkpoint_acceptance_passed": true,
+    "full_optimizer_scheduler_RNG_and_adapter_files_verified": true,
+    "adapter_values_equal_final_and_checkpoint": true
+  },
+  "parent_pipeline_exit_code": 1,
+  "failure": "Post-training torch.load(training_args.bin) imports TRL/vLLM and fails GPU UUID conversion in the verifier process. Training had already completed and released its CUDA pools.",
+  "repair": "Separate pipeline verifier runs with CUDA_VISIBLE_DEVICES empty and UUID compatibility disabled; real checkpoint verification passed. Reuse this completed smoke, start fresh Base for20 updates after authorization.",
+  "prefix20_training_started": true,
+  "new_pipeline_configured_validated_not_started": false,
+  "failed_pipeline_allocation_GPU_hours_approx": 0.09555555555555556,
+  "cost_scope": "Queue job11:45:37 to11:51:21 collection, includes startup,2-update training, verification failure and shutdown; not active compute time. Keep failed parent cost even though its training smoke was valid.",
+  "user_authorized_pipeline_restart": true,
+  "new_pipeline_queue_manually_started": true,
+  "prefix20_first_batch": {
+    "rollouts": 32,
+    "generation_tokens": 54755,
+    "generation_seconds": 30.24437141790986
+  },
+  "scope": "Fresh20-update run has started and generated its first batch; not completed20 or evidence of benefit."
+}
