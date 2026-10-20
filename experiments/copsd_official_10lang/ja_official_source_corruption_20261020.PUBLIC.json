@@ -1,0 +1,79 @@
+{
+  "observed_at": "2026-10-20T11:45:47.299840",
+  "language": "ja",
+  "official_source_corruption_verified": true,
+  "affected_training_records": 1,
+  "all_training_languages_checked": 10,
+  "rows_per_language": 2900,
+  "all_language_raw_question_token_audit": {
+    "sw": {
+      "rows": 2900,
+      "max_raw_question_tokens": 680,
+      "over_17000": 0
+    },
+    "te": {
+      "rows": 2900,
+      "max_raw_question_tokens": 2079,
+      "over_17000": 0
+    },
+    "th": {
+      "rows": 2900,
+      "max_raw_question_tokens": 798,
+      "over_17000": 0
+    },
+    "bn": {
+      "rows": 2900,
+      "max_raw_question_tokens": 1419,
+      "over_17000": 0
+    },
+    "zh": {
+      "rows": 2900,
+      "max_raw_question_tokens": 644,
+      "over_17000": 0
+    },
+    "ja": {
+      "rows": 2900,
+      "max_raw_question_tokens": 70831,
+      "over_17000": 1
+    },
+    "ru": {
+      "rows": 2900,
+      "max_raw_question_tokens": 655,
+      "over_17000": 0
+    },
+    "de": {
+      "rows": 2900,
+      "max_raw_question_tokens": 650,
+      "over_17000": 0
+    },
+    "fr": {
+      "rows": 2900,
+      "max_raw_question_tokens": 654,
+      "over_17000": 0
+    },
+    "es": {
+      "rows": 2900,
+      "max_raw_question_tokens": 653,
+      "over_17000": 0
+    }
+  },
+  "corrupt_record": {
+    "raw_chars": 70892,
+    "raw_tokens": 70831,
+    "removed_prefix_chars": 70738,
+    "repetition_unit": "ーハン",
+    "retained_question_chars": 154,
+    "retained_question_tokens": 92
+  },
+  "old_single_rollout_position0": 142,
+  "new_batched_rollout_group_positions0": [
+    128,
+    159
+  ],
+  "collator_student_prompt_tokens": 20000,
+  "vllm_max_model_len": 20000,
+  "completion_budget": 2048,
+  "stack_evidence": "vLLM scheduler path during generation; get_num_common_prefix_blocks appears in the 600-second stack dump",
+  "interpretation": "Both runs stop at a group containing the same corrupted question. The original official parquet contains the identical runaway repetition. Strong input-trigger evidence; exact scheduler bug not independently reproduced. The sampled stack function itself is not asserted to be an infinite loop.",
+  "action_status": "Original data preserved. Targeted prefix removal proposed as a separate project data adaptation; not yet applied or restarted. New JA remains stalled; no successful100-update or mathematical effect claim."
+}
