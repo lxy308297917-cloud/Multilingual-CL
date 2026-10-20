@@ -1,0 +1,100 @@
+{
+  "observed_at": "2026-10-20T21:46:10.398730",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_language": "ru",
+  "checkpoint_step": 20,
+  "paired_development100": {
+    "target": {
+      "base_correct": 64,
+      "adapter20_correct": 59,
+      "gained": 10,
+      "lost": 15,
+      "delta_correct": -5
+    },
+    "English": {
+      "base_correct": 77,
+      "adapter20_correct": 72,
+      "gained": 4,
+      "lost": 9,
+      "delta_correct": -5
+    }
+  },
+  "metrics": {
+    "base": {
+      "items": 100,
+      "single_correct": 64,
+      "generated_tokens": 357948,
+      "truncated": 11,
+      "normal_terminations": 89,
+      "answer_extraction_failures": 11,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.64,
+      "generation_seconds": 478.79364758357406,
+      "model_load_seconds": 10.006367567926645,
+      "actual_max_num_seqs": 16
+    },
+    "target20": {
+      "items": 100,
+      "single_correct": 59,
+      "generated_tokens": 354110,
+      "truncated": 13,
+      "normal_terminations": 87,
+      "answer_extraction_failures": 10,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.59,
+      "generation_seconds": 1393.3519616611302,
+      "model_load_seconds": 10.852632308378816,
+      "actual_max_num_seqs": 16
+    },
+    "English20": {
+      "items": 100,
+      "single_correct": 72,
+      "generated_tokens": 420735,
+      "truncated": 23,
+      "normal_terminations": 77,
+      "answer_extraction_failures": 19,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.72,
+      "generation_seconds": 1651.1812862046063,
+      "model_load_seconds": 11.91140647791326,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "cached_English_Base_metrics": {
+    "items": 100,
+    "single_correct": 77,
+    "generated_tokens": 428429,
+    "truncated": 17,
+    "normal_terminations": 83,
+    "answer_extraction_failures": 12,
+    "protocol": "project_dev_single_vllm8192_v2",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 100,
+    "single_accuracy": 0.77,
+    "generation_seconds": 661.9746270235628,
+    "model_load_seconds": 9.65354778803885,
+    "actual_max_num_seqs": 16
+  },
+  "frozen_sources_checkpoint_raw_counts_configs_prompts_seeds_completed_exit0_verified": true,
+  "historical_training_caveat": "Saved seeded-v2 independent runs.",
+  "cost": {
+    "new_responses": 300,
+    "new_generated_tokens": 1132793,
+    "new_generation_seconds": 3523.3268954493105,
+    "new_allocated_GPU_hours_unique_parent_once": 1.0072222222222222,
+    "cached_English_Base_excluded": true,
+    "new_training": false,
+    "scope": "One parent covers fresh target Base, saved20 target and saved20 English. Count its allocated clock once, not once per evaluation."
+  },
+  "scope": "Exploratory fixed20 development screen at a common8192 budget. Not a complete checkpoint grid, officialpass12, final language selection or independent formal-test confirmation. Historical training differences are preserved."
+}
