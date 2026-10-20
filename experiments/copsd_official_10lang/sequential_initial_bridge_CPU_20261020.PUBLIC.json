@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-20T21:04:06.905228",
+  "scope": "CPU expectation-file construction using a real completed singleSW20 checkpoint; not sequential training or actual GPU handoff.",
+  "parent_completed_step": 20,
+  "next_stage_local_initial_step": 0,
+  "mapped_adapter_and_inference_hashes_equal_parent_final": true,
+  "mapped_hashes_differ_from_parent_initial_Base": true,
+  "source_parent_proof_unchanged": true,
+  "engineering_only_marker_present": true,
+  "production_builder_requires_same_order_previous_stage_and_model_revision_context": true,
+  "actual_optimizer_reset_teacher_disable_and_GPU_sync_not_retested_here": true,
+  "training_started": false,
+  "languages_selected": false
+}
