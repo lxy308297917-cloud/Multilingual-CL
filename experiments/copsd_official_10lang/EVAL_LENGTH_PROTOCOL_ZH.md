@@ -57,3 +57,18 @@ SW长预算下观察到目标语收益；BN在8192仍坍塌，FR仍低于Base。
 
 见[同一run完整曲线、配对与成本](sw_same_run_8192_curve_20261020.PUBLIC.json)、[验收源码](summarize_sw_8192_curve.py)。本项无新训练，仅新增三个已保存checkpoint的推理，Base缓存复用。
 
+## 完整正式套件的8192入口已实现，仅完成CPU预检
+
+新入口[evaluate_formal8192.py](evaluate_formal8192.py)及[启动脚本](run_formal8192.sh)保留官方模型加载、提示词／目标语前缀、boxed答案提取和评分函数。继续使用原冻结测试输入：十语各MGSM-Rev2全250题、PolyMath全500题（四档各125），英语GSM8K全1319题。21个输入组合、共8819题的CPU预检通过；TE实际checkpoint100的adapter路径／step／身份亦通过CPU预检。未启动此新入口的GPU任务，不能将CPU预检称为GPU验证或新正式成绩。见[实际预检清单](formal8192_CPU_preflight_20261020.PUBLIC.json)。
+
+协议名为`project_formal_single_vllm8192_v1`：8192生成上限、n=1、temperature1、top_p0.95、top_k−1、逐题seed42规则、max_num_seqs16、context40960。8192来自官方PolyMath发布脚本；n=1／逐题seed／本项目数据适配单独标记，不称官方pass@12。Base、single和后续阶段使用同一新协议。旧2048正式结果与官方AfriMGSM1024／pass@12均保留，不与本协议混合。
+
+先在独立开发题冻结配置和checkpoint，再生成正式报告；不得依据正式分数挑checkpoint或选语。这些仍是先前使用过的测试输入，不能把改变预算后的报告描述为一套从未查看过的新独立测试集。当前开发筛选及JA训练优先继续，尚未开启全十语8192正式评测。
+
+只做CPU预检的命令示例：
+
+```bash
+COPSD_FORMAL_PREPARE_ONLY=1 bash experiments/copsd_official_10lang/run_formal8192.sh mgsm_rev2 sw sw_formal8192_new_unique_id
+```
+
+实际执行须由单卡队列提供GPU UUID及账号合计四卡限制，并保留日志、GPU遥测、逐题原始token及配置。Base无需checkpoint参数；adapter在run ID后增加checkpoint目录和已冻结step。输出使用独立`evaluation_vllm8192`目录，不覆盖开发或旧正式结果。
