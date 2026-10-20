@@ -1,0 +1,160 @@
+{
+  "scope": "project language-ID supplement, not calibrated fluency or reasoning quality",
+  "target_label": "__label__swh_Latn",
+  "runs": {
+    "sw_17b_dev100_vllm_base_20261020_v1": {
+      "thinking": {
+        "total_items": 100,
+        "statuses": {
+          "predicted": 99,
+          "too_short": 1
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 64,
+          "__label__kng_Latn": 1,
+          "__label__kdc_Latn": 2,
+          "__label__swc_Latn": 7,
+          "__label__lol_Latn": 10,
+          "__label__wmw_Latn": 1,
+          "__label__fai_Latn": 1,
+          "__label__luo_Latn": 3,
+          "__label__tll_Latn": 1,
+          "__label__atj_Latn": 1,
+          "__label__ngp_Latn": 2,
+          "__label__nov_Latn": 1,
+          "__label__ktu_Latn": 2,
+          "__label__fuq_Latn": 1,
+          "__label__dan_Latn": 1,
+          "__label__eng_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 52,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 6
+        }
+      },
+      "final": {
+        "total_items": 100,
+        "statuses": {
+          "no_final_section": 83,
+          "predicted": 17
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 9,
+          "__label__eng_Latn": 1,
+          "__label__ktu_Latn": 1,
+          "__label__swc_Latn": 6
+        },
+        "target_top1_probability_ge_0_8": 2,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 3,
+          "__label__eng_Latn": 1,
+          "__label__swc_Latn": 2
+        }
+      }
+    },
+    "sw_17b_dev100_vllm_prefix20_seed42_20261020_v1": {
+      "thinking": {
+        "total_items": 100,
+        "statuses": {
+          "predicted": 100
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 85,
+          "__label__ndc_Latn": 1,
+          "__label__swc_Latn": 4,
+          "__label__eng_Latn": 5,
+          "__label__lol_Latn": 2,
+          "__label__kng_Latn": 1,
+          "__label__pww_Thai": 1,
+          "__label__snf_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 71,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 10
+        }
+      },
+      "final": {
+        "total_items": 100,
+        "statuses": {
+          "predicted": 45,
+          "no_final_section": 55
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 26,
+          "__label__ssw_Latn": 2,
+          "__label__swc_Latn": 15,
+          "__label__eng_Latn": 1,
+          "__label__kdc_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 13,
+        "correct_items_label_counts": {
+          "__label__ssw_Latn": 2,
+          "__label__swh_Latn": 3,
+          "no_final_section": 2,
+          "__label__swc_Latn": 3
+        }
+      }
+    },
+    "sw_17b_dev100_vllm_prefix20_unclipped_seed42_20261020_v1": {
+      "thinking": {
+        "total_items": 100,
+        "statuses": {
+          "predicted": 100
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 63,
+          "__label__fuq_Latn": 1,
+          "__label__kki_Latn": 1,
+          "__label__nyf_Latn": 4,
+          "__label__inh_Cyrl": 1,
+          "__label__lol_Latn": 7,
+          "__label__eng_Latn": 2,
+          "__label__ngp_Latn": 3,
+          "__label__wmw_Latn": 1,
+          "__label__kdc_Latn": 2,
+          "__label__fai_Latn": 1,
+          "__label__swc_Latn": 3,
+          "__label__ktu_Latn": 1,
+          "__label__kam_Latn": 1,
+          "__label__yom_Latn": 1,
+          "__label__luo_Latn": 2,
+          "__label__und_Guru": 1,
+          "__label__kwy_Latn": 1,
+          "__label__kng_Latn": 1,
+          "__label__nba_Latn": 1,
+          "__label__snf_Latn": 1,
+          "__label__lea_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 48,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 3
+        }
+      },
+      "final": {
+        "total_items": 100,
+        "statuses": {
+          "no_final_section": 80,
+          "predicted": 20
+        },
+        "top1_label_counts": {
+          "__label__kdc_Latn": 1,
+          "__label__lol_Latn": 4,
+          "__label__swh_Latn": 10,
+          "__label__swc_Latn": 3,
+          "__label__atj_Latn": 1,
+          "__label__ktu_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 6,
+        "correct_items_label_counts": {
+          "__label__atj_Latn": 1,
+          "__label__swh_Latn": 1,
+          "no_final_section": 1
+        }
+      }
+    }
+  },
+  "limits": [
+    "Language ID is not calibrated fluency or mathematical reasoning quality.",
+    "Same development outputs as the paired clipping control, no additional model inference."
+  ]
+}
