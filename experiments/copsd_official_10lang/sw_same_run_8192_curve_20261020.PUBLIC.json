@@ -1,0 +1,123 @@
+{
+  "observed_at": "2026-10-20T18:27:08.812868",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "same_historical_SW_training_run": true,
+  "correct_out_of100": {
+    "0": 6,
+    "20": 16,
+    "50": 21,
+    "100": 10
+  },
+  "metrics": {
+    "0": {
+      "items": 100,
+      "single_correct": 6,
+      "generated_tokens": 702182,
+      "truncated": 83,
+      "normal_terminations": 17,
+      "answer_extraction_failures": 84,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.06,
+      "generation_seconds": 992.2645966634154,
+      "model_load_seconds": 9.856362583115697,
+      "actual_max_num_seqs": 16
+    },
+    "20": {
+      "items": 100,
+      "single_correct": 16,
+      "generated_tokens": 402473,
+      "truncated": 33,
+      "normal_terminations": 67,
+      "answer_extraction_failures": 29,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.16,
+      "generation_seconds": 1550.3506321962923,
+      "model_load_seconds": 11.229352973401546,
+      "actual_max_num_seqs": 16
+    },
+    "50": {
+      "items": 100,
+      "single_correct": 21,
+      "generated_tokens": 320537,
+      "truncated": 11,
+      "normal_terminations": 89,
+      "answer_extraction_failures": 8,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.21,
+      "generation_seconds": 1285.134250478819,
+      "model_load_seconds": 11.442530838772655,
+      "actual_max_num_seqs": 16
+    },
+    "100": {
+      "items": 100,
+      "single_correct": 10,
+      "generated_tokens": 337212,
+      "truncated": 24,
+      "normal_terminations": 76,
+      "answer_extraction_failures": 33,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.1,
+      "generation_seconds": 1287.9135677479208,
+      "model_load_seconds": 10.925839755684137,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "paired_changes": {
+    "0_to_20": {
+      "gained": 12,
+      "lost": 2
+    },
+    "0_to_50": {
+      "gained": 16,
+      "lost": 1
+    },
+    "0_to_100": {
+      "gained": 6,
+      "lost": 2
+    },
+    "20_to_50": {
+      "gained": 10,
+      "lost": 5
+    },
+    "50_to_100": {
+      "gained": 2,
+      "lost": 13
+    }
+  },
+  "actual_parents_exit0_configs_inputs_prompts_seeds_and_raw_counts_verified": true,
+  "saved_training_scientific_fields_match": [
+    "seed",
+    "data_seed",
+    "learning_rate",
+    "max_steps",
+    "gradient_accumulation_steps",
+    "per_device_train_batch_size",
+    "optim",
+    "lr_scheduler_type",
+    "max_completion_length",
+    "max_length",
+    "beta",
+    "temperature"
+  ],
+  "cost": {
+    "new_responses": 300,
+    "new_generated_tokens": 1060222,
+    "new_generation_seconds": 4123.398450423032,
+    "new_allocated_GPU_hours": 1.1705555555555556,
+    "cached_Base_excluded": true,
+    "new_training": false
+  },
+  "scope": "Exploratory independent-development100, one historical training seed.0/20/50/100 are checkpoints of the same historical run, not the fresh SW20 loss-control run. Projectn1, not officialpass12/formal. No stable three-language selection."
+}
