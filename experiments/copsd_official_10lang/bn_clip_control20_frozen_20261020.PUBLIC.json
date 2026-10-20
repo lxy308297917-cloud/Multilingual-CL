@@ -1,0 +1,63 @@
+{
+  "frozen_at": "2026-10-20T17:59:08.480493",
+  "protocol": "project_BN_component_clip_matched20_v1",
+  "reason": "BN collapses; SW loss controls cannot identify a BN-specific cause. Direct BN matched test required before claiming component clipping causes or repairs the collapse.",
+  "branches": {
+    "clip": {
+      "beta": 0,
+      "jsd_token_clip": 0.05
+    },
+    "unclip": {
+      "beta": 0,
+      "jsd_token_clip": null
+    }
+  },
+  "model": "Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "seed": 42,
+  "fresh_Base_each_branch": true,
+  "same_initial_adapter_and_inference_fingerprint_enforced_against_saved_seed42_reference": true,
+  "official_core_loss_replaced": false,
+  "optimizer": "AdamW torch fused",
+  "learning_rate": 5e-06,
+  "lora_rank": 64,
+  "lora_alpha": 128,
+  "micro_batch": 1,
+  "gradient_accumulation": 32,
+  "effective_batch": 32,
+  "scheduler_horizon": 100,
+  "stop_after_updates": 20,
+  "question_exposures_per_branch": 640,
+  "training_max_completion_length": 2048,
+  "eval": {
+    "language": "bn",
+    "development_items": 100,
+    "n": 1,
+    "max_new_tokens": 8192,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": -1,
+    "seed": 42,
+    "max_num_seqs": 16,
+    "official_prompt_and_scorer": true,
+    "formal_test": false
+  },
+  "same_English_dev100_IDs_questions_gold_verified_with_SW": true,
+  "data_sha256": {
+    "project_train_2900_bn.json": "c59527c7daa1a44ee0d995e8b3002943db22ca71730d2f045f3acc7919741920",
+    "project_dev_100_bn.json": "9472e140de0736c14e6f879a3eb6eb40ddb3926dbbd73fb0750f474f87f1f020"
+  },
+  "code_sha256": {
+    "bn_clip_control_entry.py": "5793527ae7c088f0a3bafc9a14f1997156f0e51617ff805f3349120d3d5738b0",
+    "run_bn_clip_control20.sh": "3f37f977b2b4b0a54aba2dc678f305af8c948d479237b41e9222023859dee417",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1"
+  },
+  "save_steps": 5,
+  "tensorboard": true,
+  "max_user_gpus": 4,
+  "no_automatic_failure_retry": true,
+  "gate": "Compare target math, termination, language and retention with fixed Base.20 updates tests early failure only; no assertion about100-step stability. No sequential or large new-language sweep on this evidence alone.",
+  "status": "CPU hash/data/output preflight passed; real training not yet started at freeze."
+}
