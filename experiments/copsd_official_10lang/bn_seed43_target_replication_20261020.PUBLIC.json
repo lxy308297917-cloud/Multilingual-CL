@@ -1,0 +1,141 @@
+{
+  "observed_at": "2026-10-20T21:43:47.397197",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_language": "bn",
+  "training_seed": 43,
+  "evaluation_seed": 42,
+  "target_stage_only": true,
+  "English_and_complete_parent_exit_required": true,
+  "paired_development100": {
+    "clip": {
+      "target": {
+        "base_correct": 16,
+        "adapter20_correct": 5,
+        "gained": 2,
+        "lost": 13,
+        "delta_correct": -11
+      }
+    },
+    "unclip": {
+      "target": {
+        "base_correct": 16,
+        "adapter20_correct": 20,
+        "gained": 9,
+        "lost": 5,
+        "delta_correct": 4
+      }
+    }
+  },
+  "unclipped_vs_clipped_target": {
+    "gained": 17,
+    "lost": 2,
+    "delta_correct": 15
+  },
+  "metrics": {
+    "clip": {
+      "target": {
+        "items": 100,
+        "single_correct": 5,
+        "generated_tokens": 775154,
+        "truncated": 82,
+        "normal_terminations": 18,
+        "answer_extraction_failures": 79,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.05,
+        "generation_seconds": 2833.3995777945966,
+        "model_load_seconds": 11.376743867993355,
+        "actual_max_num_seqs": 16
+      }
+    },
+    "unclip": {
+      "target": {
+        "items": 100,
+        "single_correct": 20,
+        "generated_tokens": 562415,
+        "truncated": 41,
+        "normal_terminations": 59,
+        "answer_extraction_failures": 10,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.2,
+        "generation_seconds": 2163.676699679345,
+        "model_load_seconds": 11.100736668333411,
+        "actual_max_num_seqs": 16
+      }
+    }
+  },
+  "cached_Base_metrics": {
+    "BN": {
+      "items": 100,
+      "single_correct": 16,
+      "generated_tokens": 544364,
+      "truncated": 34,
+      "normal_terminations": 66,
+      "answer_extraction_failures": 32,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.16,
+      "generation_seconds": 695.5173301175237,
+      "model_load_seconds": 9.555646646767855,
+      "actual_max_num_seqs": 16
+    },
+    "English": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 428429,
+      "truncated": 17,
+      "normal_terminations": 83,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 661.9746270235628,
+      "model_load_seconds": 9.65354778803885,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "training_and_pipeline_cost": {
+    "clip": {
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "training_generated_tokens": 1303565,
+      "valid_response_loss_positions": 1303565,
+      "training_clock_seconds": 2886.201396295801,
+      "teacher_forward_cuda_seconds": 178.39189222717286,
+      "student_forward_cuda_seconds": 161.45082818603515,
+      "pipeline_GPU_hours_training_target_English_once": null
+    },
+    "unclip": {
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "training_generated_tokens": 1297595,
+      "valid_response_loss_positions": 1297595,
+      "training_clock_seconds": 2766.349427836016,
+      "teacher_forward_cuda_seconds": 177.37170799255372,
+      "student_forward_cuda_seconds": 156.14448875427246,
+      "pipeline_GPU_hours_training_target_English_once": null
+    }
+  },
+  "new_evaluation_cost": {
+    "responses": 200,
+    "generated_tokens": 1337569,
+    "generation_seconds": 4997.076277473941,
+    "new_pipeline_GPU_hours": null,
+    "cached_Base_costs_excluded": true,
+    "scope": "Two unique parent clocks include training plus both evaluations; never sum the same parent once per evaluation."
+  },
+  "parents_completed_exit0": false,
+  "completed_target_stages_scientific_args_initial_weights_recovery_state_verified": true,
+  "scope": "Second training-seed replication of the BN component-clip intervention; seed changes adapter initialization and training order. Same independent development100, not an additional test set or formal-test result. Policies may generate different trajectories and token costs. English retention must be reported beside target gains."
+}
