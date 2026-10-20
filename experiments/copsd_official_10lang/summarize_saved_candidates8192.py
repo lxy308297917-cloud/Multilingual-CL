@@ -77,7 +77,8 @@ def main():
         'common_original_IDs_gold_across_target_English_verified':True,
         'cost':{'new_responses':300,'new_generated_tokens':sum(v[1]['generated_tokens'] for v in costs.values()),
             'new_generation_seconds':sum(v[1]['generation_seconds'] for v in costs.values()),
-            'new_allocated_GPU_hours':sum(v[3] for v in costs.values()),'cached_English_Base_excluded':True,'new_training':False},
+            'new_allocated_GPU_hours':sum(v[3] for v in costs.values()),'cached_English_Base_excluded':True,'new_training':False,
+            'accounting_caveat':'Same frozen candidate eval runs as target-only partial reports; do not sum overlapping reports as additional inference.'},
         'scope':'Exploratory budget correction of previously development-selected saved20-update checkpoints; one training seed. Not final three-language selection, formal test, officialpass12, or sequential evidence.'}
     a.output.write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(pairs))
 
