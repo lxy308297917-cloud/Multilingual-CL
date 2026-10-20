@@ -1,0 +1,350 @@
+{
+  "observed_at": "2026-10-20T10:35:57.487198+08:00",
+  "protocol": "project_dev_single_vllm_v1",
+  "scope": "Existing paired independent development outputs, CPU GlotLID only. Separate from historical HF language report. Language ID is not fluency, coherence or math correctness. One training seed, exploratory checkpoint grid.",
+  "languages": {
+    "sw": {
+      "target_label": "__label__swh_Latn",
+      "models": [
+        {
+          "step": 0,
+          "math_correct": 6,
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 99,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 64,
+                "__label__kng_Latn": 1,
+                "__label__kdc_Latn": 2,
+                "__label__swc_Latn": 7,
+                "__label__lol_Latn": 10,
+                "__label__wmw_Latn": 1,
+                "__label__fai_Latn": 1,
+                "__label__luo_Latn": 3,
+                "__label__tll_Latn": 1,
+                "__label__atj_Latn": 1,
+                "__label__ngp_Latn": 2,
+                "__label__nov_Latn": 1,
+                "__label__ktu_Latn": 2,
+                "__label__fuq_Latn": 1,
+                "__label__dan_Latn": 1,
+                "__label__eng_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 52,
+              "correct_items_label_counts": {
+                "__label__swh_Latn": 6
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "no_final_section": 83,
+                "predicted": 17
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 9,
+                "__label__eng_Latn": 1,
+                "__label__ktu_Latn": 1,
+                "__label__swc_Latn": 6
+              },
+              "target_top1_probability_ge_0_8": 2,
+              "correct_items_label_counts": {
+                "__label__swh_Latn": 3,
+                "__label__eng_Latn": 1,
+                "__label__swc_Latn": 2
+              }
+            }
+          }
+        },
+        {
+          "step": 20,
+          "math_correct": 11,
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 81,
+                "__label__eng_Latn": 7,
+                "__label__swc_Latn": 5,
+                "__label__lol_Latn": 2,
+                "__label__ssw_Latn": 2,
+                "__label__kdc_Latn": 1,
+                "__label__swp_Latn": 1,
+                "__label__snf_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 68,
+              "correct_items_label_counts": {
+                "__label__swh_Latn": 10,
+                "__label__ssw_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 50,
+                "no_final_section": 50
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 27,
+                "__label__swc_Latn": 18,
+                "__label__wmw_Latn": 1,
+                "__label__ssw_Latn": 2,
+                "__label__eng_Latn": 1,
+                "__label__lol_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 14,
+              "correct_items_label_counts": {
+                "__label__swc_Latn": 4,
+                "__label__ssw_Latn": 2,
+                "no_final_section": 3,
+                "__label__eng_Latn": 1,
+                "__label__swh_Latn": 1
+              }
+            }
+          }
+        },
+        {
+          "step": 50,
+          "math_correct": 14,
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 96,
+                "__label__eng_Latn": 3,
+                "__label__swc_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 84,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1,
+                "__label__swh_Latn": 12,
+                "__label__swc_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 50,
+                "no_final_section": 50
+              },
+              "top1_label_counts": {
+                "__label__swc_Latn": 12,
+                "__label__swh_Latn": 34,
+                "__label__lin_Latn": 1,
+                "__label__ssw_Latn": 3
+              },
+              "target_top1_probability_ge_0_8": 13,
+              "correct_items_label_counts": {
+                "__label__lin_Latn": 1,
+                "__label__swc_Latn": 4,
+                "no_final_section": 4,
+                "__label__swh_Latn": 4,
+                "__label__ssw_Latn": 1
+              }
+            }
+          }
+        },
+        {
+          "step": 100,
+          "math_correct": 5,
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 95,
+                "__label__eng_Latn": 2,
+                "__label__mer_Latn": 1,
+                "__label__swc_Latn": 2
+              },
+              "target_top1_probability_ge_0_8": 85,
+              "correct_items_label_counts": {
+                "__label__swh_Latn": 5
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 76,
+                "no_final_section": 24
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 64,
+                "__label__fuv_Latn": 1,
+                "__label__ssw_Latn": 2,
+                "__label__swc_Latn": 6,
+                "__label__eng_Latn": 2,
+                "__label__vid_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 32,
+              "correct_items_label_counts": {
+                "__label__swh_Latn": 3,
+                "__label__swc_Latn": 1,
+                "no_final_section": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "th": {
+      "target_label": "__label__tha_Thai",
+      "models": [
+        {
+          "step": 0,
+          "math_correct": 41,
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 99,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 2,
+                "__label__tha_Thai": 97
+              },
+              "target_top1_probability_ge_0_8": 97,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 41
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 51,
+                "no_final_section": 49
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 51
+              },
+              "target_top1_probability_ge_0_8": 51,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 40,
+                "no_final_section": 1
+              }
+            }
+          }
+        },
+        {
+          "step": 20,
+          "math_correct": 26,
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 94,
+                "__label__eng_Latn": 6
+              },
+              "target_top1_probability_ge_0_8": 94,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 25,
+                "__label__eng_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 35,
+                "no_final_section": 65
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 35
+              },
+              "target_top1_probability_ge_0_8": 35,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 20,
+                "no_final_section": 6
+              }
+            }
+          }
+        },
+        {
+          "step": 50,
+          "math_correct": 11,
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 99,
+                "__label__eng_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 99,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 11
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "no_final_section": 85,
+                "predicted": 15
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 15
+              },
+              "target_top1_probability_ge_0_8": 15,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 4,
+                "no_final_section": 7
+              }
+            }
+          }
+        },
+        {
+          "step": 100,
+          "math_correct": 17,
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 100
+              },
+              "target_top1_probability_ge_0_8": 100,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 17
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "no_final_section": 85,
+                "predicted": 14,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 14
+              },
+              "target_top1_probability_ge_0_8": 14,
+              "correct_items_label_counts": {
+                "no_final_section": 16,
+                "too_short": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
