@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-20T16:47:54.351592",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "language": "sw",
+  "development_items": 100,
+  "model": "Qwen3-1.7B",
+  "models": [
+    "Base",
+    "beta0_clip0.05_step20",
+    "beta0_unclipped_step20",
+    "beta1_unclipped_step20"
+  ],
+  "max_new_tokens": 8192,
+  "sampling_n": 1,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "seed": 42,
+  "max_num_seqs": 16,
+  "queue_max_user_gpus": 4,
+  "new_training": false,
+  "status": "Four queues manually started; actual generation pending verification.",
+  "reason": "Recheck saved loss ablations at released PolyMath response budget before generalizing short-budget negative results.",
+  "scope": "Independent development100, one training seed, projectn1; not formaltest or officialpass12."
+}
