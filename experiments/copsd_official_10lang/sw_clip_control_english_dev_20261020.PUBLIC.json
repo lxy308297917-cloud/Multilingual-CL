@@ -1,0 +1,69 @@
+{
+  "protocol": "project_dev_single_vllm_v1",
+  "language": "en",
+  "training_language": "sw",
+  "correct_out_of100": {
+    "Base": 40,
+    "clipped20": 30,
+    "unclipped20": 33
+  },
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 40,
+      "generated_tokens": 185543,
+      "normal_terminations": 31,
+      "truncated": 69,
+      "answer_extraction_failures": 58,
+      "single_accuracy": 0.4,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 69.79343239404261,
+      "model_load_seconds": 9.966601835563779,
+      "generated_tokens_per_generation_second": 2658.459308211892
+    },
+    "clipped20": {
+      "items": 100,
+      "single_correct": 30,
+      "generated_tokens": 189305,
+      "normal_terminations": 25,
+      "truncated": 75,
+      "answer_extraction_failures": 66,
+      "single_accuracy": 0.3,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 152.2253354471177,
+      "model_load_seconds": 10.874533541500568,
+      "generated_tokens_per_generation_second": 1243.5840554660076
+    },
+    "unclipped20": {
+      "items": 100,
+      "single_correct": 33,
+      "generated_tokens": 188247,
+      "normal_terminations": 26,
+      "truncated": 74,
+      "answer_extraction_failures": 64,
+      "single_accuracy": 0.33,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 159.37618365511298,
+      "model_load_seconds": 11.258776539936662,
+      "generated_tokens_per_generation_second": 1181.148874836675
+    }
+  },
+  "inputs_prompts_answers_saved_seeds_and_configs_paired": true,
+  "new_inference": {
+    "responses": 200,
+    "generated_tokens": 377552,
+    "generation_seconds": 311.60151910223067,
+    "cached_Base_cost_excluded": true,
+    "clipped_reference_generated_in_separate_earlier_job_if_cached": true
+  },
+  "scope": "English independent development supplement on the same original100 problems; not GSM8K formal test, stable effect or sequential forgetting."
+}
