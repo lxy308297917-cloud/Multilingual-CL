@@ -1,0 +1,48 @@
+{
+  "observed_at": "2026-10-20T17:55:10.516759",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_language": "sw",
+  "evaluation_language": "en",
+  "correct_out_of100": {
+    "base": 77,
+    "official_clip20": 77
+  },
+  "gained": 7,
+  "lost": 7,
+  "metrics": {
+    "base": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 428429,
+      "truncated": 17,
+      "normal_terminations": 83,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 661.9746270235628,
+      "model_load_seconds": 9.65354778803885,
+      "actual_max_num_seqs": 16
+    },
+    "official_clip20": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 452886,
+      "truncated": 16,
+      "normal_terminations": 84,
+      "answer_extraction_failures": 11,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 1698.7399581018835,
+      "model_load_seconds": 11.276882041245699,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "parents_exit0_inputs_prompts_seeds_configs_raw_counts_and_actual_max_num_seqs_verified": true,
+  "scope": "Independent development100, one training seed, projectn1 not formal/pass12. Equal English totals do not imply every sample or other English tasks retained. Other saved loss controls pending; no new training."
+}
