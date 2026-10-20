@@ -1,0 +1,59 @@
+{
+  "protocol": "privileged_teacher_prefix_recovery_dev32_v1",
+  "conditions": {
+    "Base_history": {
+      "items": 32,
+      "correct": 6,
+      "truncated": 28,
+      "normal_terminations": 4,
+      "answer_extraction_failures": 25,
+      "generated_tokens": 64873,
+      "supplied_history_tokens": 8192,
+      "history_already_has_boxed": 0,
+      "teacher_prompt_tokens": 60127,
+      "generation_seconds": 106.02805734425783
+    },
+    "BN100_history": {
+      "items": 32,
+      "correct": 9,
+      "truncated": 24,
+      "normal_terminations": 8,
+      "answer_extraction_failures": 23,
+      "generated_tokens": 61476,
+      "supplied_history_tokens": 8192,
+      "history_already_has_boxed": 0,
+      "teacher_prompt_tokens": 60127,
+      "generation_seconds": 100.74948907084763
+    },
+    "No_student_history": {
+      "items": 32,
+      "correct": 3,
+      "truncated": 30,
+      "normal_terminations": 2,
+      "answer_extraction_failures": 29,
+      "generated_tokens": 64885,
+      "supplied_history_tokens": 0,
+      "history_already_has_boxed": 0,
+      "teacher_prompt_tokens": 51935,
+      "generation_seconds": 93.30838325619698
+    }
+  },
+  "teacher_scale": "4B",
+  "student_history_scale": "1.7B",
+  "teacher_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "clean_condition_total_budget_caveat": "Clean has2048 total response tokens; other conditions have256 supplied plus2048 new. Primary equal-budget contrast is Base_history versus BN100_history.",
+  "model_load_seconds": 11.354071216657758,
+  "teacher_adapter": null,
+  "formal_test": false,
+  "scope": "Frozen privileged Base continuation after equal256-token Base/BN100 development histories, with2048 new tokens. First32 fixed problems; not full training-distribution replay, a causal proof, fair benchmark or SFT synthesis.",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "same_fixed32_questions_seeds_histories_and_privileged_prompt_verified": true,
+  "all3_downloaded_weight_shards_LFS_SHA256_verified": true,
+  "cached_17b_teacher_correct": {
+    "Base_history": 18,
+    "BN100_history": 7,
+    "No_student_history_first32_of100": 18
+  },
+  "interpretation": "Larger teacher does not consistently improve this2048-token conditional generation diagnostic. High truncation and small sample preclude intrinsic capacity ranking or a training-method conclusion."
+}
