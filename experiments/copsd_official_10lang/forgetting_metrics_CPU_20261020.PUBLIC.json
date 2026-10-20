@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-10-20T23:21:28.320313",
+  "scope": "Synthetic CPU arithmetic verification only, not actual languages, models, sequential training, evaluation scores or final candidate selection.",
+  "checks": {
+    "negative_forgetting_preserved": true,
+    "current_stage_excluded_from_historical_max": true,
+    "learned_stage_decline_distinguished_from_historical_forgetting": true,
+    "English_excluded_from_target_macro_average": true,
+    "new_language_not_assigned_zero_forgetting": true,
+    "missing_scores_not_filled_with_zero": true
+  },
+  "invalid_matrices_rejected": [
+    "missing_language",
+    "missing_stage",
+    "missing_count",
+    "changed_denominator"
+  ],
+  "code_sha256": {
+    "forgetting_metrics.py": "8be9dcb3f9ffebeaa66dd714caa3e27869d7f261d312c94eb0b8018c62da1f16",
+    "check_forgetting_metrics_cpu.py": "af121aa81b173a4c7593220d0af5e3dfb4088bbee86f1becd430828389048e9b"
+  },
+  "GPU_used": false,
+  "new_training_or_generation": false
+}
