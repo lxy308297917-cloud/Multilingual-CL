@@ -1,0 +1,68 @@
+{
+  "observed_at": "2026-10-20T12:44:28.562006",
+  "language": "sw",
+  "model": "Qwen3-1.7B",
+  "protocol": "project_dev_single_vllm_v1",
+  "modern_seeded_clipped_reference": true,
+  "component_clip": 0.05,
+  "updates": 20,
+  "learning_rate_horizon": 100,
+  "completed_parent_exit0": true,
+  "question_exposures": 640,
+  "syncs": 21,
+  "Base_unchanged": true,
+  "restoration_files_present": true,
+  "raw_inputs_prompts_seeds_configs_and_counts_paired": true,
+  "development_metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 6,
+      "generated_tokens": 184835,
+      "normal_terminations": 14,
+      "truncated": 86,
+      "answer_extraction_failures": 84,
+      "single_accuracy": 0.06,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 78.90377578139305,
+      "model_load_seconds": 9.53094994649291,
+      "generated_tokens_per_generation_second": 2342.536819937424
+    },
+    "clip0.05_20": {
+      "items": 100,
+      "single_correct": 10,
+      "generated_tokens": 166367,
+      "normal_terminations": 44,
+      "truncated": 56,
+      "answer_extraction_failures": 54,
+      "single_accuracy": 0.1,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 122.38212308846414,
+      "model_load_seconds": 11.954775234684348,
+      "generated_tokens_per_generation_second": 1359.4060619437148
+    }
+  },
+  "paired_counts": {
+    "gained": 7,
+    "lost": 3,
+    "delta_correct": 4
+  },
+  "new_cost": {
+    "training_generated_tokens": 1179275,
+    "valid_response_loss_positions": 1179275,
+    "training_clock_seconds": 2521.2139749284834,
+    "teacher_forward_cuda_seconds": 162.47517510986327,
+    "student_forward_cuda_seconds": 146.71281719970702,
+    "pipeline_allocation_GPU_hours": 0.7691666666666667,
+    "new_development_generated_tokens": 166367,
+    "new_development_generation_seconds": 122.38212308846414,
+    "cached_Base_not_repeated": true,
+    "prior_smoke_and_failed_verifier_cost_separate": true
+  },
+  "scope": "One modern seed42 matched reference, prespecified20-update budget, not100-update reproduction or stable gain. Unclipped comparison not yet complete."
+}
