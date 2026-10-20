@@ -1,0 +1,96 @@
+{
+  "observed_at": "2026-10-20T09:35:28.668726+08:00",
+  "language": "de",
+  "protocol": "project_dev_single_vllm_v1",
+  "source": "Existing held-out dev100 saved outputs; CPU language/transition analysis, no new generation",
+  "target_label": "__label__deu_Latn",
+  "method": "Existing GlotLID math/control stripping, minimum20 alphabetic characters; related-language labels may be confused",
+  "models": [
+    {
+      "model": "Base",
+      "math_correct": 39,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__deu_Latn": 84,
+            "__label__gsw_Latn": 2,
+            "__label__eng_Latn": 14
+          },
+          "target_top1_probability_ge_0_8": 83,
+          "correct_items_label_counts": {
+            "__label__deu_Latn": 37,
+            "__label__eng_Latn": 2
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 60,
+            "no_final_section": 40
+          },
+          "top1_label_counts": {
+            "__label__deu_Latn": 52,
+            "__label__gsw_Latn": 8
+          },
+          "target_top1_probability_ge_0_8": 50,
+          "correct_items_label_counts": {
+            "__label__deu_Latn": 35,
+            "__label__gsw_Latn": 3,
+            "no_final_section": 1
+          }
+        }
+      }
+    },
+    {
+      "model": "checkpoint100_seeded_v2",
+      "math_correct": 22,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__deu_Latn": 99,
+            "__label__eng_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 98,
+          "correct_items_label_counts": {
+            "__label__deu_Latn": 22
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 39,
+            "no_final_section": 61
+          },
+          "top1_label_counts": {
+            "__label__deu_Latn": 38,
+            "__label__gsw_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 25,
+          "correct_items_label_counts": {
+            "__label__deu_Latn": 12,
+            "no_final_section": 9,
+            "__label__gsw_Latn": 1
+          }
+        }
+      }
+    }
+  ],
+  "answer_transition_diagnostics": {
+    "lost_no_extracted_answer": 13,
+    "lost_with_extracted_wrong_answer": 10,
+    "gained_from_no_extracted_answer": 2,
+    "gained_from_extracted_wrong_answer": 4,
+    "changed_examples_private_record_count": 29
+  },
+  "finding": "Thinking target-label count84 to99 while math39 to22; no evidence that increased English-language drift explains this regression. Missing final section40 to61. Language ID is not fluency or reasoning correctness; no causal training mechanism identified.",
+  "private_error_examples_saved": true,
+  "official_whole_output_math_score_unchanged": true
+}
