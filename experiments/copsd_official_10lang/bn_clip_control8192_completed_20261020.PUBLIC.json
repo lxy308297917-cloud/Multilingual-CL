@@ -1,0 +1,133 @@
+{
+  "observed_at": "2026-10-20T19:48:11.413108",
+  "protocol": "project_BN_component_clip_matched20_v1",
+  "paired_development_correct_out_of100": {
+    "Base": 16,
+    "clip0.05_20": 7,
+    "unclipped_20": 24
+  },
+  "unclipped_vs_clipped": {
+    "gained": 19,
+    "lost": 2,
+    "delta_correct": 17
+  },
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 16,
+      "generated_tokens": 544364,
+      "truncated": 34,
+      "normal_terminations": 66,
+      "answer_extraction_failures": 32,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.16,
+      "generation_seconds": 695.5173301175237,
+      "model_load_seconds": 9.555646646767855,
+      "actual_max_num_seqs": 16
+    },
+    "clipped": {
+      "items": 100,
+      "single_correct": 7,
+      "generated_tokens": 773140,
+      "truncated": 87,
+      "normal_terminations": 13,
+      "answer_extraction_failures": 83,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.07,
+      "generation_seconds": 2736.1800685450435,
+      "model_load_seconds": 11.058134391903877,
+      "actual_max_num_seqs": 16
+    },
+    "unclipped": {
+      "items": 100,
+      "single_correct": 24,
+      "generated_tokens": 542058,
+      "truncated": 40,
+      "normal_terminations": 60,
+      "answer_extraction_failures": 8,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.24,
+      "generation_seconds": 1940.1928637847304,
+      "model_load_seconds": 11.049200935289264,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "training_cost": {
+    "clipped": {
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "generated_tokens": 1305356,
+      "valid_response_loss_positions": 1305356,
+      "generation_tokens_minus_valid_loss_positions": 0,
+      "training_clock_seconds": 2732.503544481471,
+      "pipeline_GPU_hours_including_startup_training_development": 1.55,
+      "teacher_forward_cuda_seconds": 177.82445471191406,
+      "student_forward_cuda_seconds": 150.6150316619873
+    },
+    "unclipped": {
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "generated_tokens": 1300245,
+      "valid_response_loss_positions": 1300245,
+      "generation_tokens_minus_valid_loss_positions": 0,
+      "training_clock_seconds": 2792.1382586434484,
+      "pipeline_GPU_hours_including_startup_training_development": 1.3466666666666667,
+      "teacher_forward_cuda_seconds": 177.36945158386231,
+      "student_forward_cuda_seconds": 151.6386184539795
+    }
+  },
+  "target_evaluation_cost": {
+    "new_responses": 300,
+    "new_generated_tokens": 1859562,
+    "new_generation_seconds": 5371.890262447298,
+    "fresh_Base_allocated_GPU_hours": 0.20222222222222222,
+    "train_target_pipelines_plus_Base_GPU_hours": 3.098888888888889,
+    "English_supplement_not_included": true,
+    "accounting_caveat": "Same two frozen training runs as earlier completion reports; do not double-count overlapping records. Base here is newly evaluated at8192, not a cached older2048 run."
+  },
+  "source_script_and_completed_exit0_verified": true,
+  "initial_adapter_and_inference_weights_match": true,
+  "saved_adapter_configs_loss_temperature_and_initialization_seed_match": true,
+  "adapter_serialization_order_differences": [
+    "target_modules"
+  ],
+  "scientific_training_args_compared": [
+    "learning_rate",
+    "max_grad_norm",
+    "per_device_train_batch_size",
+    "gradient_accumulation_steps",
+    "max_steps",
+    "seed",
+    "data_seed",
+    "optim",
+    "lr_scheduler_type",
+    "lr_scheduler_kwargs",
+    "warmup_steps",
+    "warmup_ratio",
+    "weight_decay",
+    "adam_beta1",
+    "adam_beta2",
+    "adam_epsilon",
+    "gradient_checkpointing",
+    "gradient_checkpointing_kwargs",
+    "bf16",
+    "fp16",
+    "max_length",
+    "max_completion_length"
+  ],
+  "development_inputs_prompts_seeds_configs_match": true,
+  "new_core_loss_implementation": false,
+  "clip_only_scientific_factor": true,
+  "scope": "One training seed, independent development100, prespecified20-update budget. Not a stable multilingual effect, formal-test selection or sequential forgetting result. Online trajectories and generated token costs may differ after policies diverge. Fresh8192 Base costs are included separately; English supplement is not included."
+}
