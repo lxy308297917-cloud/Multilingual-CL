@@ -1,0 +1,41 @@
+{
+  "observed_at": "2026-10-20T11:10:05.756734+08:00",
+  "language": "ja",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "model": "Qwen3-1.7B",
+  "old_run": {
+    "user_authorized_cancel": true,
+    "queue_phase": "cancelled",
+    "completed_updates": 4,
+    "microsteps": 142,
+    "recoverable_checkpoints": 0,
+    "directory_and_log_retained": true,
+    "last_observed_operation": "vLLM wake weights/KV returned, then no further generation completion",
+    "root_cause": "Unknown. No logged Python traceback or CUDA OOM; OS denied prior read-only ptrace stack collection. Do not infer a specific CUDA/vLLM bug."
+  },
+  "new_run": {
+    "runtime": "seeded_cost_batch_v2",
+    "initialization": "fresh original Base, no debug/stalled weights",
+    "seed": 42,
+    "planned_updates": 100,
+    "effective_batch": 32,
+    "max_completion_length": 2048,
+    "cached_Base_development_correct_out_of100": 39,
+    "cached_Base_identity_verified": true,
+    "current_microstep": {
+      "global_step": 0,
+      "micro_step": 20,
+      "seconds": 1.9026896692812443,
+      "loss_finite": true
+    },
+    "first_batched_generation": {
+      "global_step": 0,
+      "rollouts": 32,
+      "generated_tokens": 60509,
+      "generation_seconds": 31.81208141334355
+    },
+    "scope": "Actual restart, not completed100 or evidence of mathematical gain. Batch adaptation is validated on other completed languages; original hang root cause remains unresolved."
+  },
+  "account_gpu_limit": 4,
+  "watchdog": "600-second Python faulthandler stack dump only, no automatic cancellation/retry"
+}
