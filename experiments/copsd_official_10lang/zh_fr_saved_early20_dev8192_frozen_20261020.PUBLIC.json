@@ -1,0 +1,69 @@
+{
+  "frozen_at": "2026-10-20T18:16:44.285889",
+  "scope": "Budget correction on previously development-selected ZH20/FR20 saved weights, not final three-language selection or new training. JA/TE and stable-effect gates remain incomplete.",
+  "selection_source": "dev_checkpoint_selection_20261020.PUBLIC.json",
+  "selection_caveat": "Exploratory choice from original2048 development before these8192 results, after observing100-update regressions. Do not claim confirmatory language selection.",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "items_each": 100,
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "evaluation_seed": 42,
+  "common_English_source_IDs_questions_gold_verified": true,
+  "English_Base77_of100_reused": true,
+  "official_prompt_and_scorer": true,
+  "formal_test": false,
+  "new_training": false,
+  "max_user_gpus": 4,
+  "no_automatic_failure_retry": true,
+  "jobs": [
+    {
+      "queue": "copsd-zh-base-candidate-dev8192-v1",
+      "run_id": "zh_base_candidate_dev100_8192_20261020_v1",
+      "training_language": null,
+      "evaluation_language": "zh",
+      "checkpoint_step": null,
+      "status_at_freeze": "not yet started"
+    },
+    {
+      "queue": "copsd-zh-early20-candidate-dev8192-v1",
+      "run_id": "zh_early20_candidate_dev100_8192_20261020_v1",
+      "training_language": "zh",
+      "evaluation_language": "zh",
+      "checkpoint_step": 20,
+      "status_at_freeze": "not yet started"
+    },
+    {
+      "queue": "copsd-zh-early20-en-candidate-dev8192-v1",
+      "run_id": "zh_early20_en_candidate_dev100_8192_20261020_v1",
+      "training_language": "zh",
+      "evaluation_language": "en",
+      "checkpoint_step": 20,
+      "status_at_freeze": "not yet started"
+    },
+    {
+      "queue": "copsd-fr-base-candidate-dev8192-v1",
+      "run_id": "fr_base_candidate_dev100_8192_20261020_v1",
+      "training_language": null,
+      "evaluation_language": "fr",
+      "checkpoint_step": null,
+      "status_at_freeze": "not yet started"
+    },
+    {
+      "queue": "copsd-fr-early20-candidate-dev8192-v1",
+      "run_id": "fr_early20_candidate_dev100_8192_20261020_v1",
+      "training_language": "fr",
+      "evaluation_language": "fr",
+      "checkpoint_step": 20,
+      "status_at_freeze": "not yet started"
+    },
+    {
+      "queue": "copsd-fr-early20-en-candidate-dev8192-v1",
+      "run_id": "fr_early20_en_candidate_dev100_8192_20261020_v1",
+      "training_language": "fr",
+      "evaluation_language": "en",
+      "checkpoint_step": 20,
+      "status_at_freeze": "not yet started"
+    }
+  ]
+}
