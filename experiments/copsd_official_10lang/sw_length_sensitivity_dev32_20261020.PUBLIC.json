@@ -110,5 +110,6 @@
     "cached_inference_excluded": true
   },
   "scope": "First32 independent development questions, one model seed and sampling seed; not formal test or official8192/pass12 reproduction. Short/long runs may diverge before2048 despite equal seeds; exact prefix censoring is separately reported. No checkpoint or language selection based on these outputs.",
-  "evaluator_source_commit": "2aae742"
+  "evaluator_source_commit": "2aae742",
+  "evaluator_source_public_commit": "eb7a7dab19e315d721e7f1a6a64a7a9c8590ba5a"
 }
