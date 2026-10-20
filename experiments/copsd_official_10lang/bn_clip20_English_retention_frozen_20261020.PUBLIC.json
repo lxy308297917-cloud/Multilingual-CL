@@ -1,0 +1,31 @@
+{
+  "frozen_at": "2026-10-20T18:41:00.078636",
+  "scope": "English retention supplement for the frozen BN20 component-clipping control. No new training or method.",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "evaluation_language": "en",
+  "items": 100,
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "seed": 42,
+  "cached_English_Base77_reused": true,
+  "formal_test": false,
+  "max_user_gpus": 4,
+  "gate": "Manually start only after actual checkpoint20 and training recovery/budget evidence exist; do not reserve GPUs for a missing checkpoint.",
+  "jobs": [
+    {
+      "queue": "copsd-bn-clip20-en-dev8192-v1",
+      "run_id": "en_bn_clip20_dev100_8192_20261020_v1",
+      "BN_training_clip_mode": "clip",
+      "checkpoint_step": 20,
+      "status": "configured only; not started before checkpoint20 is saved and verified"
+    },
+    {
+      "queue": "copsd-bn-unclip20-en-dev8192-v1",
+      "run_id": "en_bn_unclip20_dev100_8192_20261020_v1",
+      "BN_training_clip_mode": "unclip",
+      "checkpoint_step": 20,
+      "status": "configured only; not started before checkpoint20 is saved and verified"
+    }
+  ]
+}
