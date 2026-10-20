@@ -1,0 +1,169 @@
+{
+  "observed_at": "2026-10-20T21:25:48.387055",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_seed": 42,
+  "training_language": "bn",
+  "items_each": 100,
+  "completion_decomposition": {
+    "Base": {
+      "official_correct": 16,
+      "correct_and_normal_stop": 15,
+      "correct_and_length_stop": 1,
+      "cells": [
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 3
+        },
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": true,
+          "count": 30
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 49
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": true,
+          "count": 2
+        },
+        {
+          "correct": true,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 1
+        },
+        {
+          "correct": true,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 15
+        }
+      ]
+    },
+    "clip": {
+      "official_correct": 7,
+      "correct_and_normal_stop": 4,
+      "correct_and_length_stop": 3,
+      "cells": [
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 2
+        },
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": true,
+          "count": 82
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 8
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": true,
+          "count": 1
+        },
+        {
+          "correct": true,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 3
+        },
+        {
+          "correct": true,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 4
+        }
+      ]
+    },
+    "unclip": {
+      "official_correct": 24,
+      "correct_and_normal_stop": 12,
+      "correct_and_length_stop": 12,
+      "cells": [
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 20
+        },
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": true,
+          "count": 8
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 48
+        },
+        {
+          "correct": true,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 12
+        },
+        {
+          "correct": true,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 12
+        }
+      ]
+    }
+  },
+  "unclip_gained_correct_transitions": [
+    {
+      "clip_finish_reason": "length",
+      "clip_answer_missing": false,
+      "unclip_finish_reason": "length",
+      "count": 1
+    },
+    {
+      "clip_finish_reason": "length",
+      "clip_answer_missing": true,
+      "unclip_finish_reason": "length",
+      "count": 8
+    },
+    {
+      "clip_finish_reason": "length",
+      "clip_answer_missing": true,
+      "unclip_finish_reason": "stop",
+      "count": 9
+    },
+    {
+      "clip_finish_reason": "stop",
+      "clip_answer_missing": false,
+      "unclip_finish_reason": "length",
+      "count": 1
+    }
+  ],
+  "paired_official_scores": {
+    "base_correct": 7,
+    "adapter20_correct": 24,
+    "gained": 19,
+    "lost": 2,
+    "delta_correct": 17
+  },
+  "source_parents_exit0_configs_raw_counts_prompts_seeds_verified": true,
+  "new_training": false,
+  "new_inference": false,
+  "scope": "Diagnostic partition only: official answer extraction and scores are unchanged. Correct-and-normal-stop is an additional descriptive count, not a replacement benchmark. Conditional accuracy on stopped responses would be selection-biased and is not used to infer intrinsic mathematical ability. Correct boxes may exist in truncated output; target gain alone does not establish a complete or stable repair."
+}
