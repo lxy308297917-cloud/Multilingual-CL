@@ -1,0 +1,22 @@
+{
+  "actual_vllm_version": "0.11.0",
+  "CPython": "3.10",
+  "raw_five_native_remap_cycles_None_reference_delta": -10,
+  "repaired100_native_remap_cycles_None_reference_delta": 0,
+  "actual_allocator_sleep_wake_preserved_tensor_values_cycles": 3,
+  "model_loaded": false,
+  "optimizer_or_training_run": false,
+  "ordered_pool_release_completed": true,
+  "tensor_elements": 262144,
+  "tensor_dtype": "float32",
+  "compatibility": {
+    "process_local_only": true,
+    "installed_binary_unchanged": true,
+    "CPython": "3.10",
+    "known_binary_identity_verified": true,
+    "compensated_native_functions": 2,
+    "scope": "None return-reference ownership only. No CUDA kernel, model, loss, data or sampling change."
+  },
+  "scope": "Actual isolated GPU allocator verification; does not modify installed binary or running processes. Does not establish full OPD training stability or mathematical effectiveness. Queue exit0 confirmed separately.",
+  "parent_queue_completed_exit0": true
+}
