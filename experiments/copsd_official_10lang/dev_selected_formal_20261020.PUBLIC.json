@@ -1,0 +1,698 @@
+{
+  "observed_at": "2026-10-20T15:47:24.283245",
+  "selection_frozen_at": "2026-10-20T14:33:47.199718",
+  "rule": "Highest independent development correct on0/20/50/100; ties use earliest step, including Base.",
+  "selections": [
+    {
+      "language": "sw",
+      "step": 50,
+      "development_correct": 14,
+      "development_Base_correct": 6
+    },
+    {
+      "language": "th",
+      "step": 0,
+      "development_correct": 41,
+      "development_Base_correct": 41
+    },
+    {
+      "language": "bn",
+      "step": 0,
+      "development_correct": 8,
+      "development_Base_correct": 8
+    },
+    {
+      "language": "zh",
+      "step": 20,
+      "development_correct": 41,
+      "development_Base_correct": 25
+    },
+    {
+      "language": "de",
+      "step": 0,
+      "development_correct": 39,
+      "development_Base_correct": 39
+    },
+    {
+      "language": "fr",
+      "step": 20,
+      "development_correct": 44,
+      "development_Base_correct": 32
+    }
+  ],
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "protocol": "project_single_vllm_v1",
+  "pairs": [
+    {
+      "training_language": "sw",
+      "checkpoint_step": 50,
+      "benchmark": "mgsm_rev2",
+      "evaluation_language": "sw",
+      "metrics": [
+        {
+          "generated_tokens": 437415,
+          "normal_terminations": 54,
+          "truncated": 196,
+          "answer_extraction_failures": 194,
+          "single_correct": 8,
+          "pass_n_correct": 8,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.032,
+          "pass_n": 0.032,
+          "n": 1,
+          "model_load_seconds": 9.858391266316175,
+          "generation_seconds": 185.28401936031878,
+          "evaluation_seconds": 185.77077684924006,
+          "generated_tokens_per_generation_second": 2360.781040427271,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 375579,
+          "normal_terminations": 160,
+          "truncated": 90,
+          "answer_extraction_failures": 82,
+          "single_correct": 14,
+          "pass_n_correct": 14,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.056,
+          "pass_n": 0.056,
+          "n": 1,
+          "model_load_seconds": 10.821870505809784,
+          "generation_seconds": 262.3844806160778,
+          "evaluation_seconds": 263.2015666458756,
+          "generated_tokens_per_generation_second": 1431.407067667043,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": 6,
+      "gained": 11,
+      "lost": 5,
+      "inputs_prompts_and_configs_paired": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "Base_inference_reused": true
+    },
+    {
+      "training_language": "sw",
+      "checkpoint_step": 50,
+      "benchmark": "polymath",
+      "evaluation_language": "sw",
+      "metrics": [
+        {
+          "generated_tokens": 981594,
+          "normal_terminations": 36,
+          "truncated": 464,
+          "answer_extraction_failures": 458,
+          "single_correct": 9,
+          "pass_n_correct": 9,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.018,
+          "pass_n": 0.018,
+          "n": 1,
+          "model_load_seconds": 9.6855215318501,
+          "generation_seconds": 417.72485464066267,
+          "evaluation_seconds": 419.24958339706063,
+          "generated_tokens_per_generation_second": 2349.857781013274,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 1,
+              "single_accuracy": 0.008
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            }
+          }
+        },
+        {
+          "generated_tokens": 911405,
+          "normal_terminations": 160,
+          "truncated": 340,
+          "answer_extraction_failures": 292,
+          "single_correct": 12,
+          "pass_n_correct": 12,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.024,
+          "pass_n": 0.024,
+          "n": 1,
+          "model_load_seconds": 10.874594973400235,
+          "generation_seconds": 606.6321901269257,
+          "evaluation_seconds": 614.4188387487084,
+          "generated_tokens_per_generation_second": 1502.401314723023,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 7,
+              "single_accuracy": 0.056
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 1,
+              "single_accuracy": 0.008
+            }
+          }
+        }
+      ],
+      "delta_correct": 3,
+      "gained": 11,
+      "lost": 8,
+      "inputs_prompts_and_configs_paired": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "Base_inference_reused": true
+    },
+    {
+      "training_language": "sw",
+      "checkpoint_step": 50,
+      "benchmark": "gsm8k",
+      "evaluation_language": "en",
+      "metrics": [
+        {
+          "generated_tokens": 1234772,
+          "normal_terminations": 1181,
+          "truncated": 138,
+          "answer_extraction_failures": 108,
+          "single_correct": 1113,
+          "pass_n_correct": 1113,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.8438210765731615,
+          "pass_n": 0.8438210765731615,
+          "n": 1,
+          "model_load_seconds": 10.681749437004328,
+          "generation_seconds": 426.92153029330075,
+          "evaluation_seconds": 429.1413431689143,
+          "generated_tokens_per_generation_second": 2892.2692166677452,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 1549734,
+          "normal_terminations": 1054,
+          "truncated": 265,
+          "answer_extraction_failures": 198,
+          "single_correct": 1057,
+          "pass_n_correct": 1057,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.8013646702047005,
+          "pass_n": 0.8013646702047005,
+          "n": 1,
+          "model_load_seconds": 10.75010896101594,
+          "generation_seconds": 801.5120458584279,
+          "evaluation_seconds": 803.7578003611416,
+          "generated_tokens_per_generation_second": 1933.513049501606,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": -56,
+      "gained": 54,
+      "lost": 110,
+      "inputs_prompts_and_configs_paired": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "Base_inference_reused": true
+    },
+    {
+      "training_language": "zh",
+      "checkpoint_step": 20,
+      "benchmark": "mgsm_rev2",
+      "evaluation_language": "zh",
+      "metrics": [
+        {
+          "generated_tokens": 229880,
+          "normal_terminations": 218,
+          "truncated": 32,
+          "answer_extraction_failures": 28,
+          "single_correct": 203,
+          "pass_n_correct": 203,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.812,
+          "pass_n": 0.812,
+          "n": 1,
+          "model_load_seconds": 9.791990047320724,
+          "generation_seconds": 73.07924487628043,
+          "evaluation_seconds": 73.6771399602294,
+          "generated_tokens_per_generation_second": 3145.6263729760144,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 193868,
+          "normal_terminations": 230,
+          "truncated": 20,
+          "answer_extraction_failures": 18,
+          "single_correct": 194,
+          "pass_n_correct": 194,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.776,
+          "pass_n": 0.776,
+          "n": 1,
+          "model_load_seconds": 10.746732760220766,
+          "generation_seconds": 140.86141359992325,
+          "evaluation_seconds": 141.55313167907298,
+          "generated_tokens_per_generation_second": 1376.3030985236799,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": -9,
+      "gained": 16,
+      "lost": 25,
+      "inputs_prompts_and_configs_paired": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "Base_inference_reused": true
+    },
+    {
+      "training_language": "zh",
+      "checkpoint_step": 20,
+      "benchmark": "polymath",
+      "evaluation_language": "zh",
+      "metrics": [
+        {
+          "generated_tokens": 885843,
+          "normal_terminations": 114,
+          "truncated": 386,
+          "answer_extraction_failures": 373,
+          "single_correct": 101,
+          "pass_n_correct": 101,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.202,
+          "pass_n": 0.202,
+          "n": 1,
+          "model_load_seconds": 9.874322939664125,
+          "generation_seconds": 353.7402907740325,
+          "evaluation_seconds": 357.2332111634314,
+          "generated_tokens_per_generation_second": 2504.21855554439,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 90,
+              "single_accuracy": 0.72
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 8,
+              "single_accuracy": 0.064
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 3,
+              "single_accuracy": 0.024
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            }
+          }
+        },
+        {
+          "generated_tokens": 839725,
+          "normal_terminations": 166,
+          "truncated": 334,
+          "answer_extraction_failures": 308,
+          "single_correct": 112,
+          "pass_n_correct": 112,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.224,
+          "pass_n": 0.224,
+          "n": 1,
+          "model_load_seconds": 10.607292383909225,
+          "generation_seconds": 479.14470899291337,
+          "evaluation_seconds": 481.9721823781729,
+          "generated_tokens_per_generation_second": 1752.5498753079619,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 90,
+              "single_accuracy": 0.72
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 17,
+              "single_accuracy": 0.136
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 5,
+              "single_accuracy": 0.04
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            }
+          }
+        }
+      ],
+      "delta_correct": 11,
+      "gained": 21,
+      "lost": 10,
+      "inputs_prompts_and_configs_paired": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "Base_inference_reused": true
+    },
+    {
+      "training_language": "zh",
+      "checkpoint_step": 20,
+      "benchmark": "gsm8k",
+      "evaluation_language": "en",
+      "metrics": [
+        {
+          "generated_tokens": 1234772,
+          "normal_terminations": 1181,
+          "truncated": 138,
+          "answer_extraction_failures": 108,
+          "single_correct": 1113,
+          "pass_n_correct": 1113,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.8438210765731615,
+          "pass_n": 0.8438210765731615,
+          "n": 1,
+          "model_load_seconds": 10.681749437004328,
+          "generation_seconds": 426.92153029330075,
+          "evaluation_seconds": 429.1413431689143,
+          "generated_tokens_per_generation_second": 2892.2692166677452,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 1151679,
+          "normal_terminations": 1199,
+          "truncated": 120,
+          "answer_extraction_failures": 90,
+          "single_correct": 1111,
+          "pass_n_correct": 1111,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.8423047763457164,
+          "pass_n": 0.8423047763457164,
+          "n": 1,
+          "model_load_seconds": 10.7372888289392,
+          "generation_seconds": 546.831687875092,
+          "evaluation_seconds": 549.072940884158,
+          "generated_tokens_per_generation_second": 2106.0941154951283,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": -2,
+      "gained": 73,
+      "lost": 75,
+      "inputs_prompts_and_configs_paired": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "Base_inference_reused": true
+    },
+    {
+      "training_language": "fr",
+      "checkpoint_step": 20,
+      "benchmark": "mgsm_rev2",
+      "evaluation_language": "fr",
+      "metrics": [
+        {
+          "generated_tokens": 217317,
+          "normal_terminations": 218,
+          "truncated": 32,
+          "answer_extraction_failures": 28,
+          "single_correct": 190,
+          "pass_n_correct": 190,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.76,
+          "pass_n": 0.76,
+          "n": 1,
+          "model_load_seconds": 11.362843500450253,
+          "generation_seconds": 75.11493655107915,
+          "evaluation_seconds": 75.74677156098187,
+          "generated_tokens_per_generation_second": 2893.1263205184437,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 220900,
+          "normal_terminations": 220,
+          "truncated": 30,
+          "answer_extraction_failures": 27,
+          "single_correct": 175,
+          "pass_n_correct": 175,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.7,
+          "pass_n": 0.7,
+          "n": 1,
+          "model_load_seconds": 10.747887875884771,
+          "generation_seconds": 144.63626495935023,
+          "evaluation_seconds": 145.27656264975667,
+          "generated_tokens_per_generation_second": 1527.2794832062593,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": -15,
+      "gained": 16,
+      "lost": 31,
+      "inputs_prompts_and_configs_paired": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "Base_inference_reused": true
+    },
+    {
+      "training_language": "fr",
+      "checkpoint_step": 20,
+      "benchmark": "polymath",
+      "evaluation_language": "fr",
+      "metrics": [
+        {
+          "generated_tokens": 856244,
+          "normal_terminations": 147,
+          "truncated": 353,
+          "answer_extraction_failures": 331,
+          "single_correct": 114,
+          "pass_n_correct": 114,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.228,
+          "pass_n": 0.228,
+          "n": 1,
+          "model_load_seconds": 11.199343588203192,
+          "generation_seconds": 347.05342522263527,
+          "evaluation_seconds": 349.86489246971905,
+          "generated_tokens_per_generation_second": 2467.1821044576013,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 92,
+              "single_accuracy": 0.736
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 16,
+              "single_accuracy": 0.128
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 3,
+              "single_accuracy": 0.024
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 3,
+              "single_accuracy": 0.024
+            }
+          }
+        },
+        {
+          "generated_tokens": 852614,
+          "normal_terminations": 162,
+          "truncated": 338,
+          "answer_extraction_failures": 310,
+          "single_correct": 113,
+          "pass_n_correct": 113,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.226,
+          "pass_n": 0.226,
+          "n": 1,
+          "model_load_seconds": 10.931107003241777,
+          "generation_seconds": 495.43810546025634,
+          "evaluation_seconds": 499.42907927930355,
+          "generated_tokens_per_generation_second": 1720.929396837434,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 87,
+              "single_accuracy": 0.696
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 18,
+              "single_accuracy": 0.144
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 6,
+              "single_accuracy": 0.048
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 2,
+              "single_accuracy": 0.016
+            }
+          }
+        }
+      ],
+      "delta_correct": -1,
+      "gained": 20,
+      "lost": 21,
+      "inputs_prompts_and_configs_paired": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "Base_inference_reused": true
+    },
+    {
+      "training_language": "fr",
+      "checkpoint_step": 20,
+      "benchmark": "gsm8k",
+      "evaluation_language": "en",
+      "metrics": [
+        {
+          "generated_tokens": 1234772,
+          "normal_terminations": 1181,
+          "truncated": 138,
+          "answer_extraction_failures": 108,
+          "single_correct": 1113,
+          "pass_n_correct": 1113,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.8438210765731615,
+          "pass_n": 0.8438210765731615,
+          "n": 1,
+          "model_load_seconds": 10.681749437004328,
+          "generation_seconds": 426.92153029330075,
+          "evaluation_seconds": 429.1413431689143,
+          "generated_tokens_per_generation_second": 2892.2692166677452,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 1326170,
+          "normal_terminations": 1127,
+          "truncated": 192,
+          "answer_extraction_failures": 142,
+          "single_correct": 1095,
+          "pass_n_correct": 1095,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.8301743745261562,
+          "pass_n": 0.8301743745261562,
+          "n": 1,
+          "model_load_seconds": 10.808033054694533,
+          "generation_seconds": 610.7561185732484,
+          "evaluation_seconds": 613.0415140017867,
+          "generated_tokens_per_generation_second": 2171.357698549117,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": -18,
+      "gained": 65,
+      "lost": 83,
+      "inputs_prompts_and_configs_paired": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "Base_inference_reused": true
+    }
+  ],
+  "new_cost": {
+    "model_loads": 9,
+    "generated_responses": 6207,
+    "generated_tokens": 7421674,
+    "generation_seconds": 4088.197016062215,
+    "evaluation_seconds_including_grading_output": 4111.723616627976,
+    "single_GPU_hours_job_clock": 1.1969444444444444,
+    "all_Base_costs_excluded": true,
+    "new_training": false
+  },
+  "scope": "Exploratory secondary analysis after fixed100 regressions were known. Checkpoints selected only by development scores; no selected-checkpoint formal outputs existed at freezing. Not independent confirmatory replication, stable language selection or sequential training. Original fixed100 formal results retained; no sequential models or stable cross-seed evidence."
+}
