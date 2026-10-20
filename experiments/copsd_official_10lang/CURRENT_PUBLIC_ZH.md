@@ -109,3 +109,5 @@ RU保存的checkpoint20筛选父管线已exit0并验收，目标语新增10题�
 账号最多四张GPU，手动队列，无开机启动或失败自动重试。BN43独立机制复测已完成；当前继续JA参考，补齐其余语言同预算开发比较；不强行进入顺序阶段。后续须补足十语言状态、稳定三语言选择、同一持续adapter、原始Base教师、预先固定阶段optimizer／scheduler重置，以及全部入选语与英语的阶段矩阵。目前仅有967／967／966互不重叠原题池和CPU接续接口验证，尚无顺序模型或遗忘结果。
 
 [TE恢复验收](te_resume100_completed_20261020.PUBLIC.json) · [JA坏题证据](ja_official_source_corruption_20261020.PUBLIC.json) · [训练／seed成本说明](SEEDED_COST_RUN2026-10-20 20:04_ZH.md) · [批量rollout边界](VLLM_UPDATE_BATCH_ZH.md)
+
+完整正式套件8192入口已实现并完成21个输入组合及实际TE100 adapter的CPU预检，尚未启动新入口的GPU任务或产生新正式成绩。它复用官方加载／提示／评分与原测试输入，使用独立协议和输出，保留旧2048结果；当前仍先完成开发筛选。见[正式8192入口与边界](EVAL_LENGTH_PROTOCOL_ZH.md)、[CPU验收清单](formal8192_CPU_preflight_20261020.PUBLIC.json)。
