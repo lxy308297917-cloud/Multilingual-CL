@@ -1,0 +1,154 @@
+{
+  "observed_at": "2026-10-20T14:31:57.699835",
+  "protocol": "project_SW_KL_direction_one_factor_v1",
+  "evaluations": {
+    "sw": {
+      "correct_out_of100": {
+        "Base": 6,
+        "beta0": 3,
+        "beta1": 0
+      },
+      "metrics": {
+        "Base": {
+          "items": 100,
+          "single_correct": 6,
+          "generated_tokens": 184835,
+          "normal_terminations": 14,
+          "truncated": 86,
+          "answer_extraction_failures": 84,
+          "single_accuracy": 0.06,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 78.90377578139305,
+          "model_load_seconds": 9.53094994649291,
+          "generated_tokens_per_generation_second": 2342.536819937424
+        },
+        "beta0": {
+          "items": 100,
+          "single_correct": 3,
+          "generated_tokens": 188717,
+          "normal_terminations": 15,
+          "truncated": 85,
+          "answer_extraction_failures": 84,
+          "single_accuracy": 0.03,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 147.34935452789068,
+          "model_load_seconds": 10.815887697041035,
+          "generated_tokens_per_generation_second": 1280.7453456762794
+        },
+        "beta1": {
+          "items": 100,
+          "single_correct": 0,
+          "generated_tokens": 198869,
+          "normal_terminations": 5,
+          "truncated": 95,
+          "answer_extraction_failures": 98,
+          "single_accuracy": 0.0,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 177.52077723294497,
+          "model_load_seconds": 10.948334388434887,
+          "generated_tokens_per_generation_second": 1120.2576008274323
+        }
+      },
+      "beta1_vs_beta0": {
+        "gained": 0,
+        "lost": 3
+      }
+    },
+    "en": {
+      "correct_out_of100": {
+        "Base": 40,
+        "beta0": 33,
+        "beta1": 36
+      },
+      "metrics": {
+        "Base": {
+          "items": 100,
+          "single_correct": 40,
+          "generated_tokens": 185543,
+          "normal_terminations": 31,
+          "truncated": 69,
+          "answer_extraction_failures": 58,
+          "single_accuracy": 0.4,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 69.79343239404261,
+          "model_load_seconds": 9.966601835563779,
+          "generated_tokens_per_generation_second": 2658.459308211892
+        },
+        "beta0": {
+          "items": 100,
+          "single_correct": 33,
+          "generated_tokens": 188247,
+          "normal_terminations": 26,
+          "truncated": 74,
+          "answer_extraction_failures": 64,
+          "single_accuracy": 0.33,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 159.37618365511298,
+          "model_load_seconds": 11.258776539936662,
+          "generated_tokens_per_generation_second": 1181.148874836675
+        },
+        "beta1": {
+          "items": 100,
+          "single_correct": 36,
+          "generated_tokens": 191075,
+          "normal_terminations": 26,
+          "truncated": 74,
+          "answer_extraction_failures": 63,
+          "single_accuracy": 0.36,
+          "n": 1,
+          "generation_count": 100,
+          "protocol": "project_dev_single_vllm_v1",
+          "formal_test": false,
+          "generation_seconds": 135.34132524207234,
+          "model_load_seconds": 10.797275893390179,
+          "generated_tokens_per_generation_second": 1411.8008646526998
+        }
+      },
+      "beta1_vs_beta0": {
+        "gained": 8,
+        "lost": 5
+      }
+    }
+  },
+  "training_cost": {
+    "beta0": {
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "generated_tokens": 1210525,
+      "valid_response_loss_positions": 1210525,
+      "training_seconds": 2496.274390241131,
+      "teacher_forward_cuda_seconds": 160.75231826782226,
+      "student_forward_cuda_seconds": 148.85414666748048
+    },
+    "beta1": {
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "generated_tokens": 1225849,
+      "valid_response_loss_positions": 1225849,
+      "training_seconds": 2536.7383746132255,
+      "teacher_forward_cuda_seconds": 161.0969490814209,
+      "student_forward_cuda_seconds": 140.6839669494629
+    }
+  },
+  "initial_adapter_inference_weights_args_adapter_configs_and_dev_pairs_verified": true,
+  "actual_beta1_no_clip_verified": true,
+  "new_core_loss_implementation": false,
+  "scope": "Single seed,20 updates of100-step scheduler,640 exposures, independent SW/EN development100. Project ablation, not published beta0/clip0.05 reproduction, stable multilingual efficacy or sequential forgetting."
+}
