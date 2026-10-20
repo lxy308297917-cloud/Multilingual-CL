@@ -1,0 +1,45 @@
+{
+  "frozen_at": "2026-10-20T14:33:47.199718",
+  "rule": "Highest independent development correct on0/20/50/100; ties use earliest step, including Base.",
+  "selections": [
+    {
+      "language": "sw",
+      "step": 50,
+      "development_correct": 14,
+      "development_Base_correct": 6
+    },
+    {
+      "language": "th",
+      "step": 0,
+      "development_correct": 41,
+      "development_Base_correct": 41
+    },
+    {
+      "language": "bn",
+      "step": 0,
+      "development_correct": 8,
+      "development_Base_correct": 8
+    },
+    {
+      "language": "zh",
+      "step": 20,
+      "development_correct": 41,
+      "development_Base_correct": 25
+    },
+    {
+      "language": "de",
+      "step": 0,
+      "development_correct": 39,
+      "development_Base_correct": 39
+    },
+    {
+      "language": "fr",
+      "step": 20,
+      "development_correct": 44,
+      "development_Base_correct": 32
+    }
+  ],
+  "new_formal_runs": 9,
+  "new_training": false,
+  "scope": "Exploratory secondary analysis after fixed100 regressions were known. Checkpoints selected only by development scores; no selected-checkpoint formal outputs existed at freezing. Not independent confirmatory replication, stable language selection or sequential training."
+}
