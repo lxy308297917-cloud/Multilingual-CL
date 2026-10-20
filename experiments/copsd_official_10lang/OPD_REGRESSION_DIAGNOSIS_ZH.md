@@ -52,6 +52,12 @@
 
 见[同一run完整曲线、配对与成本](sw_same_run_8192_curve_20261020.PUBLIC.json)、[验收源码](summarize_sw_8192_curve.py)。本项无新训练，仅新增三个已保存checkpoint的推理，Base缓存复用。
 
+## SW20独立seed目标语复测已完成
+
+同100道独立开发题、n=1、8192预算及逐题eval seed42：Base6／训练seed42的18／训练seed43的13。seed43相对Base新增10题、失去3题，seed42为新增14、失去2。目标语阶段的原始计数、prompt／问题／gold／seed／配置与真实checkpoint身份已验收；seed43父管线仍在运行英语，未称整条管线完成。
+
+20更新配置由seed42开发选择，seed43同时改变初始化和训练题序；这是探索性开发复测，不是独立正式确认或稳定三语言证明。英语43尚待结果。见[复测与成本边界](sw_seed43_target8192_replication_20261020.PUBLIC.json)。
+
 ## 1. 监督到底怎样产生
 
 学生仅看到目标语题目，在线生成轨迹。固定原始Base教师通过禁用学生adapter取得，看到目标语题目、英文题目和英文参考解答，然后在学生相同历史token上预测下一个token。教师不需要另生成一份标准轨迹供本次KL训练。
