@@ -1,0 +1,7 @@
+{
+  "scope": "Native CPU borrowed-None fixture only; not actual vLLM CUDA allocation validation.",
+  "raw_five_calls_None_reference_delta": -5,
+  "repaired_10000_calls_None_reference_delta": 0,
+  "native_exception_propagates": true,
+  "GPU_used": false
+}
