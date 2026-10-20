@@ -1,0 +1,90 @@
+{
+  "observed_at": "2026-10-20T22:17:24.011675",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_seed": 43,
+  "items_each": 100,
+  "target_label": "__label__ben_Beng",
+  "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "analysis_script": "analyze_output_languages.py",
+  "analysis_script_sha256": "ef24d056341b51d4ae7f4a0d01baaf143b081ad6ff60373159ab59388f5f51a7",
+  "runs": {
+    "clip": {
+      "items_sha256": "5c750a72de44df5dde976b1923126d4177137185d7bf514d31d76565677c9908",
+      "section_language_summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 100
+          },
+          "target_top1_probability_ge_0_8": 100,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 5
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 31,
+            "no_final_section": 69
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 31
+          },
+          "target_top1_probability_ge_0_8": 31,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 4,
+            "no_final_section": 1
+          }
+        }
+      },
+      "official_correct": 5,
+      "correct_and_normal_stop": 4,
+      "correct_and_length_stop": 1
+    },
+    "unclip": {
+      "items_sha256": "cc09e75d6edb8622d8dfc54414c61808eaabdca3a8bf3e0417299e34feb4650d",
+      "section_language_summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 98,
+            "__label__mni_Beng": 2
+          },
+          "target_top1_probability_ge_0_8": 94,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 19,
+            "__label__mni_Beng": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 51,
+            "no_final_section": 48,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 51
+          },
+          "target_top1_probability_ge_0_8": 51,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 12,
+            "no_final_section": 8
+          }
+        }
+      },
+      "official_correct": 20,
+      "correct_and_normal_stop": 13,
+      "correct_and_length_stop": 7
+    }
+  },
+  "new_language_model_generation": false,
+  "official_math_scores_unchanged_and_not_language_filtered": true,
+  "scope": "CPU language-ID supplement to completed BN seed43 control. Whole-section top1 labels are not fluency, reasoning quality, or token-level language-switch detection. Missing final sections and too-short sections remain in the denominators. Correctness/termination partition is descriptive and does not replace official answer scoring. Same outputs and costs as full replication report; no new training or LLM generation."
+}
