@@ -1,0 +1,41 @@
+{
+  "protocol": "project_ja_literal_prefix_repair_v1",
+  "rows": 2900,
+  "modified_rows": 1,
+  "modified_field_only": "problem_ja",
+  "ids_order_english_reference_and_answers_unchanged": true,
+  "max_repaired_raw_question_tokens": 658,
+  "scope": "Project adaptation; preserve original official data and failed runs. Literal prefix removal only; no generated target-language labels.",
+  "cpu_integration": {
+    "official_collator_used": true,
+    "max_model_len": 20000,
+    "completion_budget": 2048,
+    "old_new_student_prompt_tokens": [
+      20000,
+      135
+    ],
+    "original_corrupt_prompt_rejected_before_generate": true,
+    "repaired_prompt_accepted": true,
+    "scope": "CPU integration using real tokenizer, official collator and actual UpdateBatch.prefetch/guard. No GPU training or complete recovery claim."
+  },
+  "training_started": false,
+  "core_algorithm_changed": false,
+  "original_data_and_failed_runs_preserved": true,
+  "queue_configured_and_validated_not_started": false,
+  "user_authorized_cancel_and_repaired_restart": true,
+  "queue_manually_started": true,
+  "cancelled_v2_parent": {
+    "user_requested_cancellation": true,
+    "queue_final_phase": "failed",
+    "exit_code": -15,
+    "scope_of_queue_phase": "Final monitor state reports failed on SIGTERM exit; explicit tracked cancellation succeeded. Not an unexplained new runtime failure.",
+    "completed_sync_step": 4,
+    "completed_rollout_groups": 4,
+    "completed_rollouts": 128,
+    "completed_generation_tokens": 228533,
+    "allocated_single_GPU_job_hours_approx": 0.8108333333333333,
+    "cost_scope": "Start to cancellation collection; includes stalled allocation, not active compute time. Preserve separately from repaired successful training costs.",
+    "recoverable_checkpoint_count": 0,
+    "original_directory_and_log_retained": true
+  }
+}
