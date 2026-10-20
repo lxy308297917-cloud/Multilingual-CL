@@ -1,0 +1,67 @@
+{
+  "observed_at": "2026-10-20T11:00:04.096975+08:00",
+  "protocol": "project_dev_single_vllm_v1",
+  "grid": [
+    0,
+    20,
+    50,
+    100
+  ],
+  "correct_out_of100": {
+    "sw": [
+      6,
+      11,
+      14,
+      5
+    ],
+    "th": [
+      41,
+      26,
+      11,
+      17
+    ],
+    "bn": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "zh": [
+      25,
+      41,
+      40,
+      38
+    ],
+    "de": [
+      39,
+      36,
+      23,
+      22
+    ],
+    "fr": [
+      32,
+      44,
+      25,
+      10
+    ]
+  },
+  "parent_queue_completed_exit0": true,
+  "raw_ids_questions_answers_prompts_seeds_and_configs_paired": true,
+  "same_original_question_ids_and_answers_across_languages": true,
+  "raw_token_ids_lengths_and_correct_counts_recomputed": true,
+  "new_inference": {
+    "engine_processes": 10,
+    "responses": 1000,
+    "generated_tokens": 1860191,
+    "generation_seconds": 1482.9776076637208,
+    "cached_Base_and100_and_SW_TH20_costs_excluded": true
+  },
+  "languages_with_any_observed_gain": [
+    "sw",
+    "zh",
+    "fr"
+  ],
+  "three_languages_selected": false,
+  "sequential_training_started": false,
+  "scope": "Held-out development only. Post-endpoint exploratory grid, one training seed per language, checkpoint selection bias; not stable-effectiveness or formal-test selection evidence. Earlier initialization/backend caveats remain documented. No new training."
+}
