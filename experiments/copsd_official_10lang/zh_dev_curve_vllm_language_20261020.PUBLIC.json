@@ -1,0 +1,163 @@
+{
+  "observed_at": "2026-10-20T10:47:55.085561+08:00",
+  "language": "zh",
+  "target_label": "__label__cmn_Hani",
+  "protocol": "project_dev_single_vllm_v1",
+  "models": [
+    {
+      "step": 0,
+      "math_correct": 25,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 99,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 96,
+            "__label__nan_Hani": 1,
+            "__label__lit_Latn": 1,
+            "__label__dan_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 88,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 24,
+            "__label__nan_Hani": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 37,
+            "no_final_section": 61,
+            "too_short": 2
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 37
+          },
+          "target_top1_probability_ge_0_8": 35,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 25
+          }
+        }
+      }
+    },
+    {
+      "step": 20,
+      "math_correct": 41,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 97,
+            "too_short": 3
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 94,
+            "__label__vie_Latn": 1,
+            "__label__nan_Hani": 1,
+            "__label__kaz_Cyrl": 1
+          },
+          "target_top1_probability_ge_0_8": 92,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 40,
+            "__label__vie_Latn": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 40,
+            "no_final_section": 59,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 40
+          },
+          "target_top1_probability_ge_0_8": 38,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 33,
+            "no_final_section": 8
+          }
+        }
+      }
+    },
+    {
+      "step": 50,
+      "math_correct": 40,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 88,
+            "too_short": 12
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 88
+          },
+          "target_top1_probability_ge_0_8": 87,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 35,
+            "too_short": 5
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 31,
+            "no_final_section": 69
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 30,
+            "__label__anp_Deva": 1
+          },
+          "target_top1_probability_ge_0_8": 30,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 18,
+            "no_final_section": 22
+          }
+        }
+      }
+    },
+    {
+      "step": 100,
+      "math_correct": 38,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 92,
+            "too_short": 8
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 91,
+            "__label__anp_Deva": 1
+          },
+          "target_top1_probability_ge_0_8": 90,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 33,
+            "too_short": 4,
+            "__label__anp_Deva": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 39,
+            "no_final_section": 61
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 39
+          },
+          "target_top1_probability_ge_0_8": 39,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 26,
+            "no_final_section": 12
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Existing paired held-out vLLM outputs only; CPU language ID not fluency, coherence or mathematics. Corrected actual model label cmn_Hani, not cmn_Hans; initial correction record retained. One training seed, exploratory grid."
+}
