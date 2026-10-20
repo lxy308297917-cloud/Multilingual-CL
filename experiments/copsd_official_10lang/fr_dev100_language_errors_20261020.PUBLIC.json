@@ -85,9 +85,16 @@
     "lost_no_extracted_answer": 20,
     "lost_with_extracted_unaccepted_answer": 3,
     "gained_from_no_extracted_answer": 1,
-    "gained_from_extracted_unaccepted_answer": 0
+    "gained_from_extracted_unaccepted_answer": 0,
+    "lost_truncated": 21,
+    "lost_without_end_think": 21
   },
   "private_changed_examples_saved": 24,
   "official_whole_output_math_score_unchanged": true,
-  "scope": "Transitions use original official grader, not human semantic ground truth. No causal explanation or corrected ranking claimed."
+  "scope": "Transitions use original official grader, not human semantic ground truth. No causal explanation or corrected ranking claimed.",
+  "limited_qualitative_check": {
+    "reviewed_first_lost_examples": 2,
+    "finding": "One simple-arithmetic example drifts into long unrelated prose and truncates; another probability example contains increasingly unrelated prose and ends with an answer not accepted by the unchanged official grader. Target-language classification alone does not establish coherent reasoning.",
+    "scope": "Two examples only; not a prevalence estimate or causal attribution. No corrected accuracy."
+  }
 }
