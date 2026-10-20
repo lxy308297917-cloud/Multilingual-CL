@@ -1,0 +1,47 @@
+{
+  "protocol": "privileged_teacher_prefix_recovery_dev32_v1",
+  "conditions": {
+    "Base_history": {
+      "items": 32,
+      "correct": 18,
+      "truncated": 26,
+      "normal_terminations": 6,
+      "answer_extraction_failures": 14,
+      "generated_tokens": 62989,
+      "supplied_history_tokens": 8192,
+      "history_already_has_boxed": 0,
+      "teacher_prompt_tokens": 60127,
+      "generation_seconds": 55.05687058530748
+    },
+    "BN100_history": {
+      "items": 32,
+      "correct": 7,
+      "truncated": 31,
+      "normal_terminations": 1,
+      "answer_extraction_failures": 25,
+      "generated_tokens": 65353,
+      "supplied_history_tokens": 8192,
+      "history_already_has_boxed": 0,
+      "teacher_prompt_tokens": 60127,
+      "generation_seconds": 55.189632438123226
+    }
+  },
+  "model_load_seconds": 9.854181880131364,
+  "teacher_adapter": null,
+  "formal_test": false,
+  "scope": "Frozen privileged Base continuation after equal256-token Base/BN100 development histories, with2048 new tokens. First32 fixed problems; not full training-distribution replay, a causal proof, fair benchmark or SFT synthesis.",
+  "observed_at": "2026-10-20T14:00:49.027810",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "input_IDs_answers_saved_seeds_equal_and_prefixes_verified": true,
+  "matched_new_generation_budget": 2048,
+  "matched_history_budget": 256,
+  "prefixes_with_preexisting_boxed_answer": 0,
+  "cached_clean_teacher_first32_correct": 18,
+  "clean_comparison_caveat": "Cached clean condition has2048 total response budget; continuation conditions have256 supplied plus2048 new response tokens. Primary equal-budget comparison is Base_history versus BN100_history.",
+  "BN100_history_vs_Base_history": {
+    "gained": 2,
+    "lost": 13
+  },
+  "interpretation": "Degraded student history weakens privileged teacher recovery in this fixed local probe; does not establish teacher failure at every training position or explain all languages."
+}
