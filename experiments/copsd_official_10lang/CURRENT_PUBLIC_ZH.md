@@ -132,3 +132,9 @@ DE亦完整exit0并验收，目标语新增12／失去18题，英语新增7／�
 [TE恢复验收](te_resume100_completed_20261020.PUBLIC.json) · [JA坏题证据](ja_official_source_corruption_20261020.PUBLIC.json) · [训练／seed成本说明](SEEDED_COST_RUN2026-10-20 20:04_ZH.md) · [批量rollout边界](VLLM_UPDATE_BATCH_ZH.md)
 
 完整正式套件8192入口已实现并完成21个输入组合及实际TE100 adapter的CPU预检，尚未启动新入口的GPU任务或产生新正式成绩。它复用官方加载／提示／评分与原测试输入，使用独立协议和输出，保留旧2048结果；当前仍先完成开发筛选。见[正式8192入口与边界](EVAL_LENGTH_PROTOCOL_ZH.md)、[CPU验收清单](formal8192_CPU_preflight_20261020.PUBLIC.json)。
+
+## 恢复结果验收与故障成本
+
+[恢复结果收集器](summarize_disk_recovery.py)只接受实际恢复父队列exit0、匹配的启动脚本／参数和完整阶段文件；JA还需真实初始同步匹配80、实际加载最终100的adapter／optimizer／scheduler／RNG，以及628条新增loss调用证据。TE只把新增27条Base加目标语／英语算作新生成，73条缓存单列。新父进程的时间及脚本身份用于成本去重，同一父管线不按阶段重复计费。四个真实未恢复队列均已被拒绝，未产生虚假完成报告；这只是[未完成状态拒绝验收](disk_recovery_collector_gate_CPU_20261020.PUBLIC.json)，不是恢复成功证据。
+
+归档日志核算本次受影响的GPU分配约3.795小时：JA2.852、TH0.681、TE0.262，JA20仅等待未分配GPU。它**不等于全部浪费**：JA80、TH两个完整阶段及TE73条输出仍保留；已知JA有80之后的2次更新需重算，TE27条未完整写盘需补生成，TH在途英语工作无法完整重建。分配时长按旧启动至服务故障事件估算，未把故障后等待人工授权的时间计入GPU。见[故障成本与可复用工作](disk_failure_cost_audit_20261020.PUBLIC.json)。恢复授权仍待回复，未重新启动GPU任务。
