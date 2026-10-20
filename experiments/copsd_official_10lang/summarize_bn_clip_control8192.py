@@ -83,6 +83,9 @@ def main():
         assert not actual['core_loss_replaced']
     base_queue=read(a.root/'gpu-queue/queues/copsd-bn-base-dev8192-v1/state.json')
     assert base_queue['phase']=='completed' and base_queue['job']['exit_code']==0
+    base_job=base_queue['job']
+    assert len(base_job['gpu_uuids'])==1 and base_job['config']['max_user_gpus']==4
+    base_hours=(datetime.datetime.fromisoformat(base_job['finished_at'])-datetime.datetime.fromisoformat(base_job['started_at'])).total_seconds()/3600
     root=a.root/'logs/copsd_official_10lang/development_vllm8192'
     devnames=['bn_base_dev100_8192_20261020_v1', *[n+'_dev8192' for n in names]]
     configs=[read(root/n/'CONFIG.json') for n in devnames]
@@ -113,6 +116,11 @@ def main():
             'lost':sum(x and not y for x,y in zip(c,u)),'delta_correct':sum(u)-sum(c)},
         'metrics':dict(zip(['Base','clipped','unclipped'],metrics)),
         'training_cost':dict(zip(['clipped','unclipped'],training)),
+        'target_evaluation_cost':{'new_responses':300,'new_generated_tokens':sum(m['generated_tokens'] for m in metrics),
+            'new_generation_seconds':sum(m['generation_seconds'] for m in metrics),'fresh_Base_allocated_GPU_hours':base_hours,
+            'train_target_pipelines_plus_Base_GPU_hours':base_hours+sum(x['pipeline_GPU_hours_including_startup_training_development'] for x in training),
+            'English_supplement_not_included':True,
+            'accounting_caveat':'Same two frozen training runs as earlier completion reports; do not double-count overlapping records. Base here is newly evaluated at8192, not a cached older2048 run.'},
         'source_script_and_completed_exit0_verified':True,
         'initial_adapter_and_inference_weights_match':True,
         'saved_adapter_configs_loss_temperature_and_initialization_seed_match':True,
@@ -122,7 +130,7 @@ def main():
         'new_core_loss_implementation':False,'clip_only_scientific_factor':True,
         'scope':'One training seed, independent development100, prespecified20-update budget. '
             'Not a stable multilingual effect, formal-test selection or sequential forgetting result. '
-            'Online trajectories and generated token costs may differ after policies diverge. Cached Base costs excluded.'}
+            'Online trajectories and generated token costs may differ after policies diverge. Fresh8192 Base costs are included separately; English supplement is not included.'}
     a.output.parent.mkdir(parents=True,exist_ok=True)
     with a.output.open('x') as f:json.dump(out,f,ensure_ascii=False,indent=2);f.write('\n')
     print(json.dumps({'scores':out['paired_development_correct_out_of100'],
