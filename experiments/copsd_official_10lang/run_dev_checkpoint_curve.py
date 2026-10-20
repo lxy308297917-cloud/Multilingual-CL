@@ -11,7 +11,7 @@ TRAINING = {
     'th': 'copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_20261018_v2',
     'bn': 'copsd_vllm_update_batch_single_v1/bn_17b_project2900_vllm_update_batch_seed42_20261020_v1',
     **{lang: f'copsd_vllm_seeded_cost_single_v2/{lang}_17b_project2900_vllm_seeded_cost_seed42_20261020_v2'
-       for lang in ['zh', 'de', 'fr']},
+       for lang in ['zh', 'de', 'fr', 'es', 'ru']},
 }
 
 
@@ -53,7 +53,7 @@ def main():
     for step, cp, run_id, cached in jobs:
         if not cached:
             subprocess.run(['bash', str(script), lang, 'adapter', run_id, str(cp)], check=True)
-    final_version = 'v2' if lang in ['zh', 'de', 'fr'] else 'v1'
+    final_version = 'v2' if lang in ['zh', 'de', 'fr', 'es', 'ru'] else 'v1'
     names = [f'{lang}_17b_dev100_vllm_base_20261020_v1',
              jobs[0][2], jobs[1][2], f'{lang}_17b_dev100_vllm_ckpt100_20261020_{final_version}']
     configs = [read(base / name / 'CONFIG.json') for name in names]
