@@ -1,0 +1,86 @@
+{
+  "observed_at": "2026-10-20T19:26:16.443765",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_language": "sw",
+  "updates_each": 20,
+  "scheduler_horizon": 100,
+  "exposures_each": 640,
+  "target_correct_out_of100": {
+    "Base": 6,
+    "seed42": 18,
+    "seed43": 13
+  },
+  "paired_with_Base": {
+    "seed42": {
+      "gained": 14,
+      "lost": 2,
+      "delta_correct": 12
+    },
+    "seed43": {
+      "gained": 10,
+      "lost": 3,
+      "delta_correct": 7
+    }
+  },
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 6,
+      "generated_tokens": 702182,
+      "truncated": 83,
+      "normal_terminations": 17,
+      "answer_extraction_failures": 84,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.06,
+      "generation_seconds": 992.2645966634154,
+      "model_load_seconds": 9.856362583115697,
+      "actual_max_num_seqs": 16
+    },
+    "seed42": {
+      "items": 100,
+      "single_correct": 18,
+      "generated_tokens": 441808,
+      "truncated": 40,
+      "normal_terminations": 60,
+      "answer_extraction_failures": 37,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.18,
+      "generation_seconds": 1709.6032475363463,
+      "model_load_seconds": 11.343001736328006,
+      "actual_max_num_seqs": 16
+    },
+    "seed43": {
+      "items": 100,
+      "single_correct": 13,
+      "generated_tokens": 385568,
+      "truncated": 31,
+      "normal_terminations": 69,
+      "answer_extraction_failures": 27,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.13,
+      "generation_seconds": 1518.2294933125377,
+      "model_load_seconds": 11.099627876654267,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "completed_target_stage_inputs_prompts_seeds_configs_checkpoint_and_raw_counts_verified": true,
+  "seed43_parent_live_continuing_English_not_terminal": true,
+  "English_seed43_result": null,
+  "cost": {
+    "new_seed43_target_responses": 100,
+    "new_seed43_target_generated_tokens": 385568,
+    "new_seed43_target_generation_seconds": 1518.2294933125377,
+    "cached_Base_seed42_excluded": true,
+    "scope": "Seed43 target stage will also appear in the final complete replication report; do not double-count."
+  },
+  "scope": "Two independently trained seeds on the same independent-development100; seed43 changes initialization and training shuffle, eval seed fixed42. Configuration20 was selected using seed42 development; exploratory replication, not independent formal confirmation or stable three-language proof. English43 still pending."
+}
