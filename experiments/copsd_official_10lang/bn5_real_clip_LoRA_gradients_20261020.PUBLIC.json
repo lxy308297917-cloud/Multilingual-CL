@@ -1,0 +1,33 @@
+{
+  "experiment": "real_Qwen3_1_7B_saved_training_trajectory_CPU_gradient_replay",
+  "checkpoint_global_step": 5,
+  "recorded_generation_global_step": 5,
+  "dtype": "float32 CPU inference/autograd",
+  "cases": [
+    {
+      "sample_index": 0,
+      "response_positions": 64,
+      "teacher_disabled_adapter_logits_equal_original_Base": true,
+      "unclipped_KL": 0.06287208199501038,
+      "official_clipped_loss": -0.012017977423965931,
+      "teacher_argmax_component_clipped_positions": 12,
+      "teacher_argmax_attraction_reversed_positions": 12,
+      "positions_gradient_opposes_unclipped_KL": 15,
+      "mean_per_position_gradient_cosine": 0.5674833655357361,
+      "overall_gradient_cosine": -0.4132172167301178,
+      "student_teacher_response_positions_equal": true,
+      "actual_pinned_compute_loss_response_mask_and_shift_verified": true,
+      "actual_pinned_compute_loss_teacher_no_grad_and_Base_logits_verified": true,
+      "LoRA_parameter_gradient_check": {
+        "trainable_parameter_elements": 69730304,
+        "all_trainable_parameters_are_LoRA": true,
+        "clipped_vs_unclipped_parameter_gradient_dot": -0.4996648937056621,
+        "clipped_vs_unclipped_parameter_gradient_cosine": -0.6037930050535235,
+        "opposite_true_KL_descent_direction_in_parameter_space": true,
+        "scope": "One fixed real recorded prefix, float32 CPU eval-mode LoRA gradient; not AdamW update, online training trajectory or downstream causal outcome."
+      }
+    }
+  ],
+  "elapsed_seconds": 49.29645081050694,
+  "scope": "Real model weights and saved training prompts/continuations, deterministic first records and response prefixes. Text retokenized; eval-mode CPU float32 replay, not original BF16 GPU logits or full trajectories. Direct mechanism evidence only, not proof of the cause of downstream regression or successful fix. No model update, new rollout, benchmark selection or GPU allocation."
+}
