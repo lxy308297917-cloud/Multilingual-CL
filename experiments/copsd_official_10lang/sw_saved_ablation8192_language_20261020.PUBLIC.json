@@ -1,0 +1,243 @@
+{
+  "observed_at": "2026-10-20T17:52:54.127288",
+  "scope": "CPU GlotLID supplement for the same saved SW8192 development100 outputs; not fluency, calibrated language quality, or formal accuracy.",
+  "target_label": "__label__swh_Latn",
+  "model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "runs": {
+    "sw_base_dev100_8192_20261020_v1": {
+      "items_sha256": "3fd3663c548a1752c3ba5c811f8ff8b3c6ad7115434ccf2d9fcbf296086022a7",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 63,
+            "__label__swc_Latn": 7,
+            "__label__kng_Latn": 3,
+            "__label__ngp_Latn": 1,
+            "__label__lol_Latn": 10,
+            "__label__kwy_Latn": 2,
+            "__label__kdc_Latn": 1,
+            "__label__snf_Latn": 2,
+            "__label__mgr_Latn": 1,
+            "__label__nnq_Latn": 1,
+            "__label__luo_Latn": 2,
+            "__label__snp_Latn": 1,
+            "__label__ktu_Latn": 1,
+            "__label__mmn_Latn": 1,
+            "__label__nov_Latn": 1,
+            "__label__eng_Latn": 2,
+            "__label__seh_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 47,
+          "correct_items_label_counts": {
+            "__label__swc_Latn": 2,
+            "__label__swh_Latn": 3,
+            "__label__eng_Latn": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "no_final_section": 81,
+            "predicted": 18,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__swc_Latn": 7,
+            "__label__lub_Latn": 1,
+            "__label__swh_Latn": 5,
+            "__label__nyf_Latn": 1,
+            "__label__eng_Latn": 1,
+            "__label__ktu_Latn": 1,
+            "__label__kam_Latn": 1,
+            "__label__ssw_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 5,
+          "correct_items_label_counts": {
+            "__label__swc_Latn": 2,
+            "__label__lub_Latn": 1,
+            "__label__swh_Latn": 1,
+            "__label__eng_Latn": 1,
+            "__label__ssw_Latn": 1
+          }
+        }
+      }
+    },
+    "sw_clip20_dev100_8192_20261020_v1": {
+      "items_sha256": "54e64fe74829034deac57da7f0bdf12d6e4a27c89d2b087334c7a21564966623",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 76,
+            "__label__eng_Latn": 7,
+            "__label__kdc_Latn": 2,
+            "__label__ktu_Latn": 5,
+            "__label__snf_Latn": 1,
+            "__label__bps_Latn": 1,
+            "__label__swc_Latn": 2,
+            "__label__hau_Latn": 1,
+            "__label__lol_Latn": 2,
+            "__label__inh_Cyrl": 1,
+            "__label__luo_Latn": 1,
+            "__label__leh_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 60,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 14,
+            "__label__swc_Latn": 1,
+            "__label__eng_Latn": 3
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 55,
+            "no_final_section": 45
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 28,
+            "__label__eng_Latn": 6,
+            "__label__kng_Latn": 1,
+            "__label__swc_Latn": 12,
+            "__label__pag_Latn": 1,
+            "__label__snf_Latn": 1,
+            "__label__nyf_Latn": 1,
+            "__label__kdc_Latn": 1,
+            "__label__ktu_Latn": 3,
+            "__label__sop_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 14,
+          "correct_items_label_counts": {
+            "__label__kng_Latn": 1,
+            "no_final_section": 3,
+            "__label__swh_Latn": 8,
+            "__label__eng_Latn": 3,
+            "__label__swc_Latn": 2,
+            "__label__ktu_Latn": 1
+          }
+        }
+      }
+    },
+    "sw_unclip20_dev100_8192_20261020_v1": {
+      "items_sha256": "131258f35279c4bbd41c303c0ef1c890c33ca2d3295a2a15ee32bde1a867c65b",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 60,
+            "__label__fuq_Latn": 1,
+            "__label__kng_Latn": 2,
+            "__label__swc_Latn": 9,
+            "__label__lub_Latn": 1,
+            "__label__eng_Latn": 4,
+            "__label__ngp_Latn": 6,
+            "__label__tap_Latn": 1,
+            "__label__kdc_Latn": 3,
+            "__label__old_Latn": 1,
+            "__label__ktu_Latn": 1,
+            "__label__atj_Latn": 2,
+            "__label__fai_Latn": 1,
+            "__label__luo_Latn": 2,
+            "__label__und_Guru": 1,
+            "__label__kwy_Latn": 1,
+            "__label__lww_Latn": 1,
+            "__label__snf_Latn": 1,
+            "__label__lol_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 43,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 1,
+            "__label__swh_Latn": 4
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "no_final_section": 80,
+            "predicted": 20
+          },
+          "top1_label_counts": {
+            "__label__swc_Latn": 5,
+            "__label__swh_Latn": 8,
+            "__label__eng_Latn": 4,
+            "__label__lol_Latn": 1,
+            "__label__ssw_Latn": 1,
+            "__label__kng_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 6,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 1,
+            "__label__swh_Latn": 2,
+            "__label__ssw_Latn": 1,
+            "__label__swc_Latn": 1
+          }
+        }
+      }
+    },
+    "sw_reverse20_dev100_8192_20261020_v1": {
+      "items_sha256": "f7b2f9931372ba98748ed0eaab70e0199dbfdd3f65537c88c1a2bf2c9669cec0",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 58,
+            "__label__lol_Latn": 7,
+            "__label__loz_Latn": 1,
+            "__label__ngp_Latn": 2,
+            "__label__slv_Latn": 1,
+            "__label__snf_Latn": 1,
+            "__label__nyf_Latn": 2,
+            "__label__ktu_Latn": 2,
+            "__label__kdc_Latn": 5,
+            "__label__ziw_Latn": 2,
+            "__label__swc_Latn": 8,
+            "__label__kng_Latn": 2,
+            "__label__wmw_Latn": 3,
+            "__label__inb_Latn": 1,
+            "__label__kwy_Latn": 1,
+            "__label__fuq_Latn": 1,
+            "__label__eng_Latn": 1,
+            "__label__atj_Latn": 1,
+            "__label__kwf_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 44,
+          "correct_items_label_counts": {}
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "no_final_section": 90,
+            "predicted": 10
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 5,
+            "__label__ktu_Latn": 1,
+            "__label__swc_Latn": 3,
+            "__label__kri_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 1,
+          "correct_items_label_counts": {}
+        }
+      }
+    }
+  },
+  "caveats": [
+    "No language filtering of the official boxed accuracy; keep the reported6/18/5/0 scores.",
+    "swh_Latn and swc_Latn are separate detector labels; no post-hoc merging.",
+    "Final section requires </think>; no-final is not necessarily absence of a scored boxed answer.",
+    "Thought target labels for Base/clip/unclip/reverse:63/76/60/58 of100; correct clip responses include3 English-labelled thoughts."
+  ]
+}
