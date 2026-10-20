@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-10-20T18:09:54.047202",
+  "protocol": "project_BN_component_clip_matched20_v1",
+  "official_clipped_reference": {
+    "actual_parent_live_and_owned": true,
+    "initial_adapter_and_inference_policy_match_saved_seed42_reference": true,
+    "actual_beta": 0,
+    "actual_component_clip": 0.05,
+    "last_observed_microstep": 35,
+    "all_observed_loss_finite": true,
+    "completed_training": false,
+    "development_result": null
+  },
+  "no_clip_branch_and_Base_development": "manually queued under total4 GPU limit; no results claimed",
+  "source": "bn_clip_control20_frozen_20261020.PUBLIC.json",
+  "scope": "Real startup and finite-loss evidence only; not effect or completed20 updates."
+}
