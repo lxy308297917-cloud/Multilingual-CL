@@ -1,0 +1,114 @@
+{
+  "observed_at": "2026-10-20T16:34:10.630263",
+  "language": "sw",
+  "protocol": "project_development_length_sensitivity32_v1",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "models": {
+    "base": {
+      "protocol": "project_development_length_sensitivity32_v1",
+      "language": "sw",
+      "mode": "base",
+      "metrics": {
+        "2048": {
+          "items": 32,
+          "single_correct": 1,
+          "generated_tokens": 58137,
+          "truncated": 27,
+          "normal_terminations": 5,
+          "answer_extraction_failures": 27,
+          "generation_seconds": 40.16854169778526
+        },
+        "8192": {
+          "items": 32,
+          "single_correct": 1,
+          "generated_tokens": 218616,
+          "truncated": 26,
+          "normal_terminations": 6,
+          "answer_extraction_failures": 26,
+          "generation_seconds": 270.68637575767934
+        }
+      },
+      "model_load_seconds": 9.83970009163022,
+      "gained": 0,
+      "lost": 0,
+      "identical_generated_prefixes_out_of32": 5,
+      "cached100_batch_first32_correct": 2,
+      "scope": "Exploratory independent development first32; two freshly run length budgets, same32 prompts/model/seeds. Not official pass12, formal test, stable multilingual efficacy or a training change.",
+      "generated_prefix_common_length_min_median_max": [
+        0,
+        52.0,
+        2048
+      ],
+      "same_long_trajectory_prefix_scoring": {
+        "first2048_correct": 1,
+        "full8192_correct": 1,
+        "gained_after2048": 0,
+        "lost_after2048": 0,
+        "full_decoded_scores_equal_original": true,
+        "CPU_grader_calls": 64,
+        "prefix_and_full_decoding_grading_wall_seconds": 0.3930599968880415,
+        "scope": "Exact censoring of the same long generated trajectories; distinct from independently sampled short-budget runs."
+      }
+    },
+    "ckpt100": {
+      "protocol": "project_development_length_sensitivity32_v1",
+      "language": "sw",
+      "mode": "ckpt100",
+      "metrics": {
+        "2048": {
+          "items": 32,
+          "single_correct": 2,
+          "generated_tokens": 53135,
+          "truncated": 15,
+          "normal_terminations": 17,
+          "answer_extraction_failures": 14,
+          "generation_seconds": 111.83480936288834
+        },
+        "8192": {
+          "items": 32,
+          "single_correct": 6,
+          "generated_tokens": 93774,
+          "truncated": 6,
+          "normal_terminations": 26,
+          "answer_extraction_failures": 8,
+          "generation_seconds": 434.676790503785
+        }
+      },
+      "model_load_seconds": 10.946406748145819,
+      "gained": 5,
+      "lost": 1,
+      "identical_generated_prefixes_out_of32": 0,
+      "cached100_batch_first32_correct": 1,
+      "scope": "Exploratory independent development first32; two freshly run length budgets, same32 prompts/model/seeds. Not official pass12, formal test, stable multilingual efficacy or a training change.",
+      "generated_prefix_common_length_min_median_max": [
+        0,
+        18.5,
+        217
+      ],
+      "same_long_trajectory_prefix_scoring": {
+        "first2048_correct": 4,
+        "full8192_correct": 6,
+        "gained_after2048": 2,
+        "lost_after2048": 0,
+        "full_decoded_scores_equal_original": true,
+        "CPU_grader_calls": 64,
+        "prefix_and_full_decoding_grading_wall_seconds": 2.3282129783183336,
+        "scope": "Exact censoring of the same long generated trajectories; distinct from independently sampled short-budget runs."
+      }
+    }
+  },
+  "inputs_prompts_seeds_and_source_configs_paired": true,
+  "all_raw_counts_and_same_long_trace_prefix_scores_verified": true,
+  "new_cost": {
+    "engine_loads": 2,
+    "responses": 128,
+    "generated_tokens": 423662,
+    "generation_seconds": 857.366517322138,
+    "single_GPU_hours_job_clock": 0.25166666666666665,
+    "new_training": false,
+    "cached_inference_excluded": true
+  },
+  "scope": "First32 independent development questions, one model seed and sampling seed; not formal test or official8192/pass12 reproduction. Short/long runs may diverge before2048 despite equal seeds; exact prefix censoring is separately reported. No checkpoint or language selection based on these outputs.",
+  "evaluator_source_commit": "2aae742"
+}
