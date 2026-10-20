@@ -1,0 +1,126 @@
+{
+  "observed_at": "2026-10-20T19:47:52.883526",
+  "scope": "CPU GlotLID supplement on exact BN8192 Base/clip20/unclip20 outputs. Not calibrated fluency or a replacement accuracy.",
+  "target_label": "__label__ben_Beng",
+  "model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "math_correct_out_of100": {
+    "Base": 16,
+    "clip20": 7,
+    "unclip20": 24
+  },
+  "runs": {
+    "Base": {
+      "items_sha256": "42a8280f822ec50f1cad26ab3190dee03847395b769cbca92bca37ebcb058b90",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 98,
+            "__label__eng_Latn": 1,
+            "__label__anp_Deva": 1
+          },
+          "target_top1_probability_ge_0_8": 98,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 16
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 66,
+            "no_final_section": 34
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 64,
+            "__label__mni_Beng": 2
+          },
+          "target_top1_probability_ge_0_8": 62,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 15,
+            "no_final_section": 1
+          }
+        }
+      }
+    },
+    "clip20": {
+      "items_sha256": "6cf60b6323c690a57f6180586fe13b1b41bcfccc4809df5e3a028f326734443e",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 100
+          },
+          "target_top1_probability_ge_0_8": 100,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 7
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "no_final_section": 79,
+            "predicted": 21
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 21
+          },
+          "target_top1_probability_ge_0_8": 21,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 4,
+            "no_final_section": 3
+          }
+        }
+      }
+    },
+    "unclip20": {
+      "items_sha256": "fbef7a05abce862ce2aba566c4c114077dcfdbe2410a7d120e214f5f0721059e",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 97,
+            "__label__awa_Deva": 1,
+            "__label__mni_Beng": 2
+          },
+          "target_top1_probability_ge_0_8": 92,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 22,
+            "__label__awa_Deva": 1,
+            "__label__mni_Beng": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 53,
+            "no_final_section": 47
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 52,
+            "__label__mni_Beng": 1
+          },
+          "target_top1_probability_ge_0_8": 50,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 10,
+            "no_final_section": 13,
+            "__label__mni_Beng": 1
+          }
+        }
+      }
+    }
+  },
+  "caveats": [
+    "No filtering or rescoring of official boxed correctness based on language.",
+    "Final classification requires </think> plus20 alphabetic characters after stripping math.",
+    "Language ID does not establish fluency or reasoning correctness; no-final does not necessarily mean no boxed answer."
+  ]
+}
