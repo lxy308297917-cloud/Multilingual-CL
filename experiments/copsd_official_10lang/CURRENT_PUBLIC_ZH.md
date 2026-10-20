@@ -189,3 +189,7 @@ ES父队列exit0，固定100更新正式结果：MGSM-Rev2 202→167/250，PolyM
 方向对照父队列exit0、严格配对通过：无裁剪beta0→beta1，SW3→0/100，英语33→36/100，Base分别6／40；未修复目标语效果。见[完整方向对照](sw_kl_direction_control_20261020.PUBLIC.json)。
 
 冻结开发网格选优规则后，SW50、ZH20、FR20既有checkpoint正式补充评测队列已手动启动；其它TH／BN／DE的网格最优为Base。保留100更新主表，不用正式测试改选checkpoint、不新增训练、不混入顺序结果。九项新推理均使用原正式协议，Base复用；当前尚无新正式分数。见[冻结规则](dev_checkpoint_selection_20261020.PUBLIC.json)。
+
+## ES固定开发曲线完成（15:03）
+
+Base／20／50／100更新正确44／38／22／16，截断58／73／79／85；早期已退步。只新增两个评测、373,360 token，父队列exit0，输入／prompt／seed及原始token计数通过。见[ES曲线](es_dev_fixed_curve_20261020.PUBLIC.json)。早期checkpoint正式补充仍运行，不据部分输出改选，RU保持原配置训练。
