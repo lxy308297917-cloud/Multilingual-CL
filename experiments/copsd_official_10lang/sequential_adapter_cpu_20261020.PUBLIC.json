@@ -1,0 +1,14 @@
+{
+  "previous_global_step": 1,
+  "adapter_count": 1,
+  "adapter_values_match_previous_checkpoint": true,
+  "parameter_objects_preserved": true,
+  "frozen_Base_unchanged": true,
+  "scope": "Synthetic CPU handoff only. No actual1.7B stage training, GPU rollout synchronization, recovery or method effectiveness established.",
+  "tiny_Qwen3_CPU_only": true,
+  "teacher_logits_unchanged": true,
+  "loaded_student_logits_match_previous": true,
+  "fresh_optimizer_empty": true,
+  "fresh_scheduler_last_epoch": 0,
+  "next_update_matches_reset_reference": true
+}
