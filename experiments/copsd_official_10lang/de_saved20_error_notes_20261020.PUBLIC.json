@@ -1,0 +1,124 @@
+{
+  "observed_at": "2026-10-20T22:55:26.550775",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_language": "de",
+  "step": 20,
+  "lost_Base_correct_questions": 18,
+  "lost_questions_normal_stop_with_box": 17,
+  "lost_questions_length_stop_without_box": 1,
+  "manual_review_selection": "First three lost items in frozen input order; not chosen by preferred explanation and not representative of all18.",
+  "reviewed_cases": [
+    {
+      "problem_id": "01987a36fc5151760158f0f4666ae75f3b99d1a9b67e77ab08c181c8ec032a7b",
+      "gold": "12",
+      "final_box": "6",
+      "finish_reason": "stop",
+      "diagnostic_type": "mathematical_error",
+      "analysis": "Claims maximum6 routes; a12-route construction meets the pair-count upper bound36/3=12.",
+      "checkable_witness": {
+        "routes_on_stops_0_to8": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "pair_count_upper_bound": 12
+      }
+    },
+    {
+      "problem_id": "0121e55a79873f92a78f8a660aceb12705f3ff52f7662d14fec41358febe8c05",
+      "gold": "12 R^2",
+      "final_box": "2nR^2",
+      "finish_reason": "stop",
+      "diagnostic_type": "context_and_final_box_difference",
+      "analysis": "Body explicitly computes12R^2 for n=6, but final box2nR^2 retains n. Official box-only grader rejects it against12R^2; this example cannot be treated as unequivocal loss of mathematical understanding.",
+      "checkable_witness": {
+        "official_generic_box_accepted": false,
+        "official_substituted_expression_accepted": true,
+        "official_score_unchanged": true
+      }
+    },
+    {
+      "problem_id": "03595522395e41cc9741f683a14879fcd93103a8b46ee321f67403a185739c48",
+      "gold": "203",
+      "final_box": "29",
+      "finish_reason": "stop",
+      "diagnostic_type": "mathematical_error",
+      "analysis": "Drops y in49x=28y and sets y=1. Reduced fractions12/35,8/63,16/105 meet the stated ratios and sum28/45; denominator sum203, not29.",
+      "checkable_witness": {
+        "reduced_fraction_witness": [
+          "12/35",
+          "8/63",
+          "16/105"
+        ],
+        "sum": "28/45",
+        "denominator_sum": 203
+      }
+    }
+  ],
+  "source_items_sha256": {
+    "Base": "920d307650e0a874d371c366384534d50cac367c8a730639ad5ccd2876a89fb4",
+    "target20": "89fe5163935a0a1e7192c33eb174e3aaffc6de5ee9aa1e5d6fc8fa42acba072f"
+  },
+  "official_scorer_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+  "official_scores_changed": false,
+  "new_LM_generation": false,
+  "new_training": false,
+  "scope": "Read-only development error diagnosis. At least two genuine mathematical errors and one context/final-box mismatch among three inspected lost cases; no extrapolated frequency for all errors or proof of a particular training cause. Complements completed paired scores64->58; does not replace the official answer protocol or rescore models."
+}
