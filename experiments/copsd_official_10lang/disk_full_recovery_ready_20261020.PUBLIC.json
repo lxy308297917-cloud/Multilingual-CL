@@ -1,0 +1,74 @@
+{
+  "observed_at": "2026-10-20T23:38:57.829045",
+  "incident_time": "2026-10-20 23:12 Asia/Shanghai",
+  "cause": "Shared data0 capacity exhausted. Queue monitor state writes failed with ENOSPC; affected services exited and their GPU children disappeared. Legacy state.json running entries are stale, not live-process evidence.",
+  "storage_recovery": {
+    "pip_cache_preserved_on_separate_filesystem": true,
+    "legacy_protocol_artifacts_migrated_GiB": 32.89745473768562,
+    "legacy_regular_files_verified": 40,
+    "legacy_links_preserved": 1,
+    "all_regular_file_SHA256_verified_before_releasing_duplicate_source": true,
+    "legacy_logical_path_preserved": true,
+    "models_checkpoints_data_and_logs_discarded": false,
+    "data0_available_GiB_at_audit": 37.93165969848633
+  },
+  "recovery_operations": {
+    "ja80": {
+      "last_observed_update": 82,
+      "saved_checkpoint_to_resume": 80,
+      "planned_final_update": 100,
+      "new_updates": 20,
+      "new_question_exposures": 628,
+      "unsaved_completed_updates_recomputed": 2,
+      "optimizer_scheduler_RNG_and_adapter_actually_loaded_on_CPU": true,
+      "actual_GPU_restore_and_first_sync_yet_unproven": true
+    },
+    "th": {
+      "cached_Base_and_target20_each100_verified": true,
+      "cached_target_Base_correct": 53,
+      "cached_target20_correct": 46,
+      "only_new_English100_required": true
+    },
+    "te": {
+      "serialized_Base_items_verified_and_regraded": 73,
+      "Base_items_to_generate": 27,
+      "then_target20_and_English100_each": true,
+      "partial_trailing_record_preserved_but_not_scored": true,
+      "fresh_full100_bitwise_sampling_equivalence_promised": false
+    },
+    "ja20": {
+      "old_waiting_job_never_started_GPU": true,
+      "saved_checkpoint20_unchanged": true,
+      "fresh_Base_target20_English_each100": true
+    }
+  },
+  "all_four_CPU_operation_preflights_passed": true,
+  "all_four_queue_configurations_validated_without_start": true,
+  "max_account_GPUs": 4,
+  "GPU_per_operation": 1,
+  "minimum_available_storage_before_start_GiB": 20,
+  "code_sha256": {
+    "disk_recovery_driver.py": "9bb8731b03b3f55ccdd61df38ed752aff046d1227996a92ca7cbcfbadd6cf1ff",
+    "run_disk_recovery.sh": "f961939799997079211ac81cdc14231de64b308e3adc476c190251db9ede4bd8",
+    "run_ja_resume80_nonefixed_17b.sh": "4aefb1739d663c86d6576d679b74e393900cbbae422097e0c6dce12e652edd1f",
+    "resume_te_base8192.py": "5ec3a3b4dd53e5a732d3b9d5f223c344f1df0a8bbee0de74956ddc0098d59583",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1",
+    "run_dev_vllm_17b.sh": "5418ac80579cc62599a0607a6a1adf4913b15ecc064e477bfaea14ff98d41da9",
+    "evaluate_dev_vllm.py": "a021522ed503771f0e736df4841cd57dd072ab6a97c41342cfa1ec1124a44732",
+    "run_ja_saved20_screen8192.sh": "f44ccb2caa5b982169735c3d7aa49850a6349b554e3d10218c678f59522d36d8",
+    "ja_saved20_screen8192_frozen_20261020.PUBLIC.json": "86aa5da43a955f40e42b257aeb05315a8d04cafd522b0a6dc9a9cdd91c432d25",
+    "repaired_data_nonefixed_entry.py": "89bbc173f1b53435b819f01f4c1c4f74171fd9061339f37c32833242153bf44d",
+    "allocator_compat_seeded_entry.py": "5589c48566886c154acf1a609fe122959582607f0e480c4545abe3238ade7f3c",
+    "prompt_budget_guard.py": "b2875c6c9482b27d7273fcfa7e07f22275733bbf0bb32f0dc109cae36eb91a4d",
+    "summarize_saved_candidates8192.py": "fa69f841c31c0a121d842b6d2d348dec396c43bb612fab8726f6095066d42890",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
+    "freeze_vllm_eval.py": "4794b541b8170dc95384747e8040bd7c5feb0b625be1f084ae4858f411cf4354",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d"
+  },
+  "failed_queues_restarted": false,
+  "no_automatic_retry": true,
+  "authorization_required_by_AGENTS_manual_restart_rule": true,
+  "scope": "Concrete recovery preparation, not successful resumed training or completed remaining evaluations. Old states/configurations/failure journals archived locally before queue reconfiguration. No scientific loss/optimizer/data/prompt/generation-budget change; checkpoint and cached-output identities frozen. Runtime restore, parent exit and actual costs still require verification."
+}
