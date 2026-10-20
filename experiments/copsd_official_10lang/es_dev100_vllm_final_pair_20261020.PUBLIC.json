@@ -1,0 +1,44 @@
+{
+  "observed_at": "2026-10-20T13:52:00.632260",
+  "language": "es",
+  "protocol": "project_dev_single_vllm_v1",
+  "checkpoint_updates": 100,
+  "paired_inputs_prompts_seeds_configs_and_counts_verified": true,
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 44,
+      "generated_tokens": 174743,
+      "normal_terminations": 42,
+      "truncated": 58,
+      "answer_extraction_failures": 42,
+      "single_accuracy": 0.44,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 69.48060809262097,
+      "model_load_seconds": 10.905687240883708,
+      "generated_tokens_per_generation_second": 2514.9895027841326
+    },
+    "final": {
+      "items": 100,
+      "single_correct": 16,
+      "generated_tokens": 195736,
+      "normal_terminations": 15,
+      "truncated": 85,
+      "answer_extraction_failures": 79,
+      "single_accuracy": 0.16,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 171.3044741563499,
+      "model_load_seconds": 11.107186809182167,
+      "generated_tokens_per_generation_second": 1142.6204771589994
+    }
+  },
+  "gained": 2,
+  "lost": 30,
+  "scope": "Independent development100; not formal benchmark or evidence of stable method gains. TE checkpoint90 is post-failure diagnostic, not completed100."
+}
