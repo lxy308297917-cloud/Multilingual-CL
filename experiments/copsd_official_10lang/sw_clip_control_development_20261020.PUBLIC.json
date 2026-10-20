@@ -1,0 +1,124 @@
+{
+  "observed_at": "2026-10-20T13:33:44.142448",
+  "protocol": "project_SW_component_clip_one_factor_v1",
+  "paired_development_correct_out_of100": {
+    "Base": 6,
+    "clip0.05_20": 10,
+    "unclipped_20": 3
+  },
+  "unclipped_vs_clipped": {
+    "gained": 1,
+    "lost": 8,
+    "delta_correct": -7
+  },
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 6,
+      "generated_tokens": 184835,
+      "normal_terminations": 14,
+      "truncated": 86,
+      "answer_extraction_failures": 84,
+      "single_accuracy": 0.06,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 78.90377578139305,
+      "model_load_seconds": 9.53094994649291,
+      "generated_tokens_per_generation_second": 2342.536819937424
+    },
+    "clipped": {
+      "items": 100,
+      "single_correct": 10,
+      "generated_tokens": 166367,
+      "normal_terminations": 44,
+      "truncated": 56,
+      "answer_extraction_failures": 54,
+      "single_accuracy": 0.1,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 122.38212308846414,
+      "model_load_seconds": 11.954775234684348,
+      "generated_tokens_per_generation_second": 1359.4060619437148
+    },
+    "unclipped": {
+      "items": 100,
+      "single_correct": 3,
+      "generated_tokens": 188717,
+      "normal_terminations": 15,
+      "truncated": 85,
+      "answer_extraction_failures": 84,
+      "single_accuracy": 0.03,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 147.34935452789068,
+      "model_load_seconds": 10.815887697041035,
+      "generated_tokens_per_generation_second": 1280.7453456762794
+    }
+  },
+  "training_cost": {
+    "clipped": {
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "generated_tokens": 1179275,
+      "valid_response_loss_positions": 1179275,
+      "generation_tokens_minus_valid_loss_positions": 0,
+      "training_clock_seconds": 2521.2139749284834,
+      "pipeline_GPU_hours_including_startup_training_development": 0.7691666666666667,
+      "teacher_forward_cuda_seconds": 162.47517510986327,
+      "student_forward_cuda_seconds": 146.71281719970702
+    },
+    "unclipped": {
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "generated_tokens": 1210525,
+      "valid_response_loss_positions": 1210525,
+      "generation_tokens_minus_valid_loss_positions": 0,
+      "training_clock_seconds": 2496.274390241131,
+      "pipeline_GPU_hours_including_startup_training_development": 0.7633333333333333,
+      "teacher_forward_cuda_seconds": 160.75231826782226,
+      "student_forward_cuda_seconds": 148.85414666748048
+    }
+  },
+  "source_script_and_completed_exit0_verified": true,
+  "initial_adapter_and_inference_weights_match": true,
+  "saved_adapter_configs_loss_temperature_and_initialization_seed_match": true,
+  "adapter_serialization_order_differences": [
+    "target_modules"
+  ],
+  "scientific_training_args_compared": [
+    "learning_rate",
+    "max_grad_norm",
+    "per_device_train_batch_size",
+    "gradient_accumulation_steps",
+    "max_steps",
+    "seed",
+    "data_seed",
+    "optim",
+    "lr_scheduler_type",
+    "lr_scheduler_kwargs",
+    "warmup_steps",
+    "warmup_ratio",
+    "weight_decay",
+    "adam_beta1",
+    "adam_beta2",
+    "adam_epsilon",
+    "gradient_checkpointing",
+    "gradient_checkpointing_kwargs",
+    "bf16",
+    "fp16",
+    "max_length",
+    "max_completion_length"
+  ],
+  "development_inputs_prompts_seeds_configs_match": true,
+  "new_core_loss_implementation": false,
+  "clip_only_scientific_factor": true,
+  "scope": "One training seed, independent development100, prespecified20-update budget. Not a stable multilingual effect, formal-test selection or sequential forgetting result. Online trajectories and generated token costs may differ after policies diverge. Cached Base costs excluded."
+}
