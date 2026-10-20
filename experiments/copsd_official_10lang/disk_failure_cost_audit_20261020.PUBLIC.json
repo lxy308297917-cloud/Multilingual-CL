@@ -1,0 +1,47 @@
+{
+  "observed_at": "2026-10-21T00:00:20.880244",
+  "interrupted_parent_costs": {
+    "ja80": {
+      "allocated_GPU_hours_approx": 2.8515770769444444,
+      "waiting_without_allocated_GPU": false,
+      "method": "Old job start to archived service-failure event, one GPU. Approximate allocation clock; old child normal exit was not collected.",
+      "unserialized_generation_work_not_reconstructed": true,
+      "old_parent_success_claimed": false
+    },
+    "th": {
+      "allocated_GPU_hours_approx": 0.6812242672222222,
+      "waiting_without_allocated_GPU": false,
+      "method": "Old job start to archived service-failure event, one GPU. Approximate allocation clock; old child normal exit was not collected.",
+      "unserialized_generation_work_not_reconstructed": true,
+      "old_parent_success_claimed": false
+    },
+    "te": {
+      "allocated_GPU_hours_approx": 0.2624761586111111,
+      "waiting_without_allocated_GPU": false,
+      "method": "Old job start to archived service-failure event, one GPU. Approximate allocation clock; old child normal exit was not collected.",
+      "unserialized_generation_work_not_reconstructed": true,
+      "old_parent_success_claimed": false
+    },
+    "ja20": {
+      "allocated_GPU_hours_approx": 0.0,
+      "waiting_without_allocated_GPU": true
+    }
+  },
+  "total_affected_allocated_GPU_hours_approx": 3.795277502777778,
+  "old_job_scripts_match_archived_source_identities": true,
+  "not_all_affected_compute_was_lost": true,
+  "retained_work": {
+    "JA_saved_checkpoint80_commits": 2560,
+    "JA_last_observed_completed_updates": 82,
+    "TH_Base100_and_target20_100": true,
+    "TE_complete_serialized_Base_outputs": 73,
+    "JA20_no_started_GPU_job": true
+  },
+  "known_uncommitted_or_unserialized_work": {
+    "JA_completed_updates_after_checkpoint80": 2,
+    "JA_logged_loss_calls_after_checkpoint80": 64,
+    "TE_Base_generated_but_not_fully_serialized_items": 27,
+    "TH_inflight_English_outputs_not_reconstructed": true
+  },
+  "scope": "Approximate allocation clock from archived original job starts to service failure, not a measure of GPU-active FLOPs or total wasted compute. Much work remains reusable. Waiting-for-human time after failure is excluded. No jobs started, no new language-model generation or training, and no successful old-parent exit is claimed."
+}
