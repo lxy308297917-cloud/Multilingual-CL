@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-10-21T00:04:25.246253",
+  "code_sha256": "349c955ce7162bf2cc48cdecc78ba804bbb5c9d0876457c6f7773c846305612d",
+  "actual_failed_queue_completion_gate_checks": [
+    {
+      "operation": "ja80",
+      "unfinished_parent_rejected": true,
+      "output_created": false
+    },
+    {
+      "operation": "th",
+      "unfinished_parent_rejected": true,
+      "output_created": false
+    },
+    {
+      "operation": "te",
+      "unfinished_parent_rejected": true,
+      "output_created": false
+    },
+    {
+      "operation": "ja20",
+      "unfinished_parent_rejected": true,
+      "output_created": false
+    }
+  ],
+  "GPU_used": false,
+  "scope": "Only verifies refusal on the four real unfinished recovery parents. No completed recovery, final checkpoint, cached-merge execution or cost total has yet been validated. Tests did not start or restart jobs."
+}
