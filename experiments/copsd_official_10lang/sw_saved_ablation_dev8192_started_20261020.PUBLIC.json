@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-20T16:47:54.351592",
+  "observed_at": "2026-10-20T16:50:36.768443",
   "protocol": "project_dev_single_vllm8192_v2",
   "language": "sw",
   "development_items": 100,
@@ -19,7 +19,13 @@
   "max_num_seqs": 16,
   "queue_max_user_gpus": 4,
   "new_training": false,
-  "status": "Four queues manually started; actual generation pending verification.",
+  "status": "All four actual parent processes and generation phases verified; scheduler max_num_seqs16 confirmed.",
   "reason": "Recheck saved loss ablations at released PolyMath response budget before generalizing short-budget negative results.",
-  "scope": "Independent development100, one training seed, projectn1; not formaltest or officialpass12."
+  "scope": "Independent development100, one training seed, projectn1; not formaltest or officialpass12.",
+  "verified_GPU_indices": [
+    0,
+    2,
+    3,
+    4
+  ]
 }
