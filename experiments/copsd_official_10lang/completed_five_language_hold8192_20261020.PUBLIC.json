@@ -1,0 +1,434 @@
+{
+  "observed_at": "2026-10-20T23:47:37.911237",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "items_per_output": 100,
+  "languages": {
+    "zh": {
+      "target_label": "__label__cmn_Hani",
+      "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+      "runs": {
+        "Base": {
+          "items_sha256": "97a4d35bc783f73ec0fa9f320b4f84584659ba9ce15c2a8bf9f9b197ea58e7ec",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 99,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 94,
+                "__label__som_Latn": 1,
+                "__label__nan_Hani": 2,
+                "__label__lit_Latn": 1,
+                "__label__lvs_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 84,
+              "correct_items_label_counts": {
+                "__label__cmn_Hani": 62,
+                "__label__som_Latn": 1,
+                "__label__nan_Hani": 2,
+                "__label__lit_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 82,
+                "no_final_section": 18
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 82
+              },
+              "target_top1_probability_ge_0_8": 82,
+              "correct_items_label_counts": {
+                "__label__cmn_Hani": 66
+              }
+            }
+          }
+        },
+        "target20": {
+          "items_sha256": "1708eb407293fe23c85d7518796422040ad145688e580a1305fe406a770a2ffa",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 95,
+                "too_short": 5
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 94,
+                "__label__amh_Ethi": 1
+              },
+              "target_top1_probability_ge_0_8": 90,
+              "correct_items_label_counts": {
+                "__label__cmn_Hani": 65,
+                "too_short": 3,
+                "__label__amh_Ethi": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 78,
+                "no_final_section": 21,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 76,
+                "__label__ayr_Latn": 2
+              },
+              "target_top1_probability_ge_0_8": 76,
+              "correct_items_label_counts": {
+                "__label__cmn_Hani": 57,
+                "no_final_section": 10,
+                "__label__ayr_Latn": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "fr": {
+      "target_label": "__label__fra_Latn",
+      "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+      "runs": {
+        "Base": {
+          "items_sha256": "9378eeba9e87169b88a350ceb563c44353959f1e7723b171063c2d160ece124d",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__fra_Latn": 48,
+                "__label__eng_Latn": 51,
+                "__label__sco_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 47,
+              "correct_items_label_counts": {
+                "__label__fra_Latn": 31,
+                "__label__eng_Latn": 40,
+                "__label__sco_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 89,
+                "no_final_section": 11
+              },
+              "top1_label_counts": {
+                "__label__fra_Latn": 88,
+                "__label__eng_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 85,
+              "correct_items_label_counts": {
+                "__label__fra_Latn": 69,
+                "no_final_section": 3
+              }
+            }
+          }
+        },
+        "target20": {
+          "items_sha256": "fad1ab5f438dde083a337834f82f4c884c9bbb9440063198eccde941950df8e5",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 99,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__fra_Latn": 86,
+                "__label__eng_Latn": 10,
+                "__label__wol_Latn": 1,
+                "__label__frp_Latn": 1,
+                "__label__lin_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 86,
+              "correct_items_label_counts": {
+                "__label__fra_Latn": 54,
+                "__label__wol_Latn": 1,
+                "__label__eng_Latn": 5,
+                "too_short": 1,
+                "__label__frp_Latn": 1,
+                "__label__lin_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "no_final_section": 25,
+                "predicted": 75
+              },
+              "top1_label_counts": {
+                "__label__fra_Latn": 74,
+                "__label__lin_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 63,
+              "correct_items_label_counts": {
+                "no_final_section": 13,
+                "__label__fra_Latn": 49,
+                "__label__lin_Latn": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "ru": {
+      "target_label": "__label__rus_Cyrl",
+      "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+      "runs": {
+        "Base": {
+          "items_sha256": "f5ef47959074f3e2e3f0db98305d3d830217a62d3a71a8615e77811494adb5b7",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__rus_Cyrl": 100
+              },
+              "target_top1_probability_ge_0_8": 100,
+              "correct_items_label_counts": {
+                "__label__rus_Cyrl": 64
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 87,
+                "no_final_section": 13
+              },
+              "top1_label_counts": {
+                "__label__rus_Cyrl": 87
+              },
+              "target_top1_probability_ge_0_8": 87,
+              "correct_items_label_counts": {
+                "__label__rus_Cyrl": 62,
+                "no_final_section": 2
+              }
+            }
+          }
+        },
+        "target20": {
+          "items_sha256": "9e92842d8f59ce46384260a0af9eb0bbf5a7978ecfaa208e36fd58d1857c7fa5",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__rus_Cyrl": 100
+              },
+              "target_top1_probability_ge_0_8": 100,
+              "correct_items_label_counts": {
+                "__label__rus_Cyrl": 59
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 81,
+                "no_final_section": 19
+              },
+              "top1_label_counts": {
+                "__label__rus_Cyrl": 81
+              },
+              "target_top1_probability_ge_0_8": 81,
+              "correct_items_label_counts": {
+                "__label__rus_Cyrl": 55,
+                "no_final_section": 4
+              }
+            }
+          }
+        }
+      }
+    },
+    "de": {
+      "target_label": "__label__deu_Latn",
+      "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+      "runs": {
+        "Base": {
+          "items_sha256": "920d307650e0a874d371c366384534d50cac367c8a730639ad5ccd2876a89fb4",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__deu_Latn": 81,
+                "__label__gsw_Latn": 1,
+                "__label__eng_Latn": 16,
+                "__label__nrm_Latn": 1,
+                "__label__sco_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 78,
+              "correct_items_label_counts": {
+                "__label__deu_Latn": 50,
+                "__label__gsw_Latn": 1,
+                "__label__eng_Latn": 13
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 95,
+                "no_final_section": 5
+              },
+              "top1_label_counts": {
+                "__label__deu_Latn": 86,
+                "__label__gsw_Latn": 6,
+                "__label__eng_Latn": 3
+              },
+              "target_top1_probability_ge_0_8": 83,
+              "correct_items_label_counts": {
+                "__label__deu_Latn": 59,
+                "__label__gsw_Latn": 2,
+                "__label__eng_Latn": 3
+              }
+            }
+          }
+        },
+        "target20": {
+          "items_sha256": "89fe5163935a0a1e7192c33eb174e3aaffc6de5ee9aa1e5d6fc8fa42acba072f",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__deu_Latn": 89,
+                "__label__eng_Latn": 11
+              },
+              "target_top1_probability_ge_0_8": 88,
+              "correct_items_label_counts": {
+                "__label__deu_Latn": 52,
+                "__label__eng_Latn": 6
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 95,
+                "no_final_section": 5
+              },
+              "top1_label_counts": {
+                "__label__gsw_Latn": 16,
+                "__label__deu_Latn": 77,
+                "__label__eng_Latn": 2
+              },
+              "target_top1_probability_ge_0_8": 67,
+              "correct_items_label_counts": {
+                "__label__gsw_Latn": 7,
+                "__label__deu_Latn": 51
+              }
+            }
+          }
+        }
+      }
+    },
+    "es": {
+      "target_label": "__label__spa_Latn",
+      "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+      "runs": {
+        "Base": {
+          "items_sha256": "8e3b84d54b131ea71158c135d05066cbaef1ffa51db9b9e2dae7df704687cc43",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__spa_Latn": 87,
+                "__label__eng_Latn": 11,
+                "__label__lvs_Latn": 1,
+                "__label__glg_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 84,
+              "correct_items_label_counts": {
+                "__label__spa_Latn": 60,
+                "__label__eng_Latn": 8,
+                "__label__glg_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 92,
+                "no_final_section": 8
+              },
+              "top1_label_counts": {
+                "__label__spa_Latn": 87,
+                "__label__cbk_Latn": 2,
+                "__label__gug_Latn": 3
+              },
+              "target_top1_probability_ge_0_8": 76,
+              "correct_items_label_counts": {
+                "__label__spa_Latn": 63,
+                "no_final_section": 2,
+                "__label__cbk_Latn": 2,
+                "__label__gug_Latn": 2
+              }
+            }
+          }
+        },
+        "target20": {
+          "items_sha256": "0e753adb4381c1b156440be32210aa535d258603f1ec2a5d5a846e920832fffe",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__spa_Latn": 96,
+                "__label__lvs_Latn": 1,
+                "__label__eng_Latn": 3
+              },
+              "target_top1_probability_ge_0_8": 95,
+              "correct_items_label_counts": {
+                "__label__spa_Latn": 61,
+                "__label__eng_Latn": 3
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 80,
+                "no_final_section": 20
+              },
+              "top1_label_counts": {
+                "__label__spa_Latn": 74,
+                "__label__ayr_Latn": 4,
+                "__label__cbk_Latn": 2
+              },
+              "target_top1_probability_ge_0_8": 54,
+              "correct_items_label_counts": {
+                "__label__spa_Latn": 51,
+                "no_final_section": 8,
+                "__label__ayr_Latn": 3,
+                "__label__cbk_Latn": 2
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "all_source_evaluation_pipelines_completed_exit0_and_counts_verified": true,
+  "analysis_script_sha256": "ef24d056341b51d4ae7f4a0d01baaf143b081ad6ff60373159ab59388f5f51a7",
+  "CPU_clock_seconds": 40.38988524489105,
+  "GPU_used": false,
+  "new_language_model_generation": false,
+  "math_scores_changed_or_language_filtered": false,
+  "scope": "CPU whole-section GlotLID supplement on already completed Base/saved20 development outputs. No new model training or language-model generation and no final three-language selection. Top1 labels are not fluency, reasoning quality or token-level language switching. Missing final sections and short prose must stay in denominators."
+}
