@@ -23,11 +23,27 @@ def main():
     parser.add_argument('--root', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--prepare-only', action='store_true')
+    parser.add_argument('--teacher-model', type=Path)
+    parser.add_argument('--include-clean', action='store_true')
     a = parser.parse_args()
     assert not a.output.exists()
     root = a.root
     prepared = root/'logs/copsd_official_10lang/teacher_context/bn_dev100_20261020_v1'
     cfg = read(prepared/'CONFIG.PRIVATE.json')
+    teacher_scale = '1.7B'
+    if a.teacher_model is not None:
+        # Independent teacher-capacity diagnostic, never a training substitution.
+        assert a.teacher_model.resolve() == (root/'models/Qwen3-4B').resolve()
+        for name in ['tokenizer.json', 'tokenizer_config.json']:
+            assert hashlib.sha256((a.teacher_model/name).read_bytes()).digest() == hashlib.sha256((Path(cfg['model'])/name).read_bytes()).digest()
+        shards = sorted(set(read(a.teacher_model/'model.safetensors.index.json')['weight_map'].values()))
+        for name in ['config.json', *shards]:
+            assert (a.teacher_model/name).stat().st_size > 0
+            metadata = a.teacher_model/'.cache/huggingface/download'/(name+'.metadata')
+            assert metadata.read_text().splitlines()[0] == '1cfa9a7208912126459214e8b04321603b3df60c'
+        cfg = {**cfg, 'model': str(a.teacher_model), 'teacher_revision': '1cfa9a7208912126459214e8b04321603b3df60c',
+               'teacher_tokenizer_identical_to_student': True, 'independent_teacher_capacity_diagnostic': True}
+        teacher_scale = '4B'
     rows = read(prepared/'PROMPTS.PRIVATE.json')
     assert hashlib.sha256((prepared/'PROMPTS.PRIVATE.json').read_bytes()).hexdigest() == cfg['prompts_sha256']
     source = Path(cfg['source'])
@@ -44,6 +60,8 @@ def main():
         assert [r['answer'] for r in rr] == [r['answer'] for r in rows]
         assert all(len(r['samples'][0]['token_ids']) >= 256 for r in rr[:32])
         histories[condition] = rr[:32]
+    if a.include_clean:
+        histories['No_student_history'] = histories['Base_history']
     if a.prepare_only:
         print('First32 IDs/answers aligned; both saved student histories have256 tokens. No GPU/model loaded.')
         return
@@ -58,7 +76,8 @@ def main():
         'question_selection': 'first32 in frozen development manifest, no outcome selection',
         'prefix_tokens': 256, 'new_continuation_tokens': 2048, 'samples': 1,
         'temperature': 1.0, 'top_p': 0.95, 'top_k': -1, 'seed': 42,
-        'conditions': names, 'teacher_adapter': None,
+        'conditions': names, 'teacher_adapter': None, 'teacher_scale': teacher_scale,
+        'include_clean': a.include_clean,
         'code_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest()})
     write_json(a.output/'PHASE.json', {'phase': 'model_load'})
     tick = time.monotonic()
@@ -67,7 +86,7 @@ def main():
     load_seconds = time.monotonic()-tick
     summaries = {}
     for condition, rr in histories.items():
-        prefixes = [r['samples'][0]['token_ids'][:256] for r in rr]
+        prefixes = [[] for _ in rr] if condition == 'No_student_history' else [r['samples'][0]['token_ids'][:256] for r in rr]
         inputs = [{'prompt_token_ids': row['teacher_prompt_token_ids']+prefix}
                   for row, prefix in zip(rows[:32], prefixes)]
         sampling = [SamplingParams(n=1, temperature=1.0, top_p=0.95, top_k=-1,
@@ -79,7 +98,7 @@ def main():
         assert len(outputs) == 32
         totals = {'items': 32, 'correct': 0, 'truncated': 0, 'normal_terminations': 0,
                   'answer_extraction_failures': 0, 'generated_tokens': 0,
-                  'supplied_history_tokens': 8192, 'history_already_has_boxed': 0,
+                  'supplied_history_tokens': sum(map(len, prefixes)), 'history_already_has_boxed': 0,
                   'teacher_prompt_tokens': sum(len(x['prompt_token_ids']) for x in inputs)}
         with (a.output/(condition+'_ITEMS.PRIVATE.jsonl')).open('x') as stream:
             for row, prefix, inp, output in zip(rows[:32], prefixes, inputs, outputs):
@@ -104,6 +123,9 @@ def main():
         summaries[condition] = totals
         write_json(a.output/(condition+'_DONE.json'), totals)
     result = {'protocol': 'privileged_teacher_prefix_recovery_dev32_v1', 'conditions': summaries,
+        'teacher_scale': teacher_scale, 'student_history_scale': '1.7B',
+        'teacher_revision': cfg.get('teacher_revision'),
+        'clean_condition_total_budget_caveat': 'Clean has2048 total response tokens; other conditions have256 supplied plus2048 new. Primary equal-budget contrast is Base_history versus BN100_history.',
         'model_load_seconds': load_seconds, 'teacher_adapter': None, 'formal_test': False,
         'scope': 'Frozen privileged Base continuation after equal256-token Base/BN100 development histories, with2048 new tokens. First32 fixed problems; not full training-distribution replay, a causal proof, fair benchmark or SFT synthesis.'}
     write_json(a.output/'DONE.json', result)
