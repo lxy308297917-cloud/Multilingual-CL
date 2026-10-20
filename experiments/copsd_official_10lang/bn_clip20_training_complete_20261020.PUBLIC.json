@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-10-20T18:53:51.036324",
+  "protocol": "project_BN_component_clip_matched20_v1",
+  "branch": "official_clip0.05",
+  "training_completed_updates": 20,
+  "scheduler_horizon": 100,
+  "exposures": 640,
+  "valid_response_loss_positions": 1305356,
+  "training_clock_seconds": 2732.503544481471,
+  "teacher_forward_cuda_seconds": 177.82445471191406,
+  "student_forward_cuda_seconds": 150.6150316619873,
+  "base_unchanged_bitwise": true,
+  "synchronizations": 21,
+  "optimizer20_scheduler20_RNG_and_final_checkpoint_identity_verified": true,
+  "ordered_runtime_shutdown_completed": true,
+  "target_development8192": "running in original pipeline; parent not yet claimed completed",
+  "English_development8192": "manually queued after checkpoint verification",
+  "efficacy_claim": null,
+  "scope": "Training-stage completion only, not completed evaluation, stable effects, or an official full100-update reproduction."
+}
