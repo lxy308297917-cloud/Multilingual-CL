@@ -1,0 +1,193 @@
+{
+  "observed_at": "2026-10-20T19:57:02.574207",
+  "scope": "CPU GlotLID supplement for the completed two-seed SW20 target development. Not fluency or filtered mathematical correctness.",
+  "model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "target_label": "__label__swh_Latn",
+  "runs": {
+    "Base": {
+      "items_sha256": "3fd3663c548a1752c3ba5c811f8ff8b3c6ad7115434ccf2d9fcbf296086022a7",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 63,
+            "__label__swc_Latn": 7,
+            "__label__kng_Latn": 3,
+            "__label__ngp_Latn": 1,
+            "__label__lol_Latn": 10,
+            "__label__kwy_Latn": 2,
+            "__label__kdc_Latn": 1,
+            "__label__snf_Latn": 2,
+            "__label__mgr_Latn": 1,
+            "__label__nnq_Latn": 1,
+            "__label__luo_Latn": 2,
+            "__label__snp_Latn": 1,
+            "__label__ktu_Latn": 1,
+            "__label__mmn_Latn": 1,
+            "__label__nov_Latn": 1,
+            "__label__eng_Latn": 2,
+            "__label__seh_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 47,
+          "correct_items_label_counts": {
+            "__label__swc_Latn": 2,
+            "__label__swh_Latn": 3,
+            "__label__eng_Latn": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "no_final_section": 81,
+            "predicted": 18,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__swc_Latn": 7,
+            "__label__lub_Latn": 1,
+            "__label__swh_Latn": 5,
+            "__label__nyf_Latn": 1,
+            "__label__eng_Latn": 1,
+            "__label__ktu_Latn": 1,
+            "__label__kam_Latn": 1,
+            "__label__ssw_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 5,
+          "correct_items_label_counts": {
+            "__label__swc_Latn": 2,
+            "__label__lub_Latn": 1,
+            "__label__swh_Latn": 1,
+            "__label__eng_Latn": 1,
+            "__label__ssw_Latn": 1
+          }
+        }
+      }
+    },
+    "seed42": {
+      "items_sha256": "54e64fe74829034deac57da7f0bdf12d6e4a27c89d2b087334c7a21564966623",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 76,
+            "__label__eng_Latn": 7,
+            "__label__kdc_Latn": 2,
+            "__label__ktu_Latn": 5,
+            "__label__snf_Latn": 1,
+            "__label__bps_Latn": 1,
+            "__label__swc_Latn": 2,
+            "__label__hau_Latn": 1,
+            "__label__lol_Latn": 2,
+            "__label__inh_Cyrl": 1,
+            "__label__luo_Latn": 1,
+            "__label__leh_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 60,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 14,
+            "__label__swc_Latn": 1,
+            "__label__eng_Latn": 3
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 55,
+            "no_final_section": 45
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 28,
+            "__label__eng_Latn": 6,
+            "__label__kng_Latn": 1,
+            "__label__swc_Latn": 12,
+            "__label__pag_Latn": 1,
+            "__label__snf_Latn": 1,
+            "__label__nyf_Latn": 1,
+            "__label__kdc_Latn": 1,
+            "__label__ktu_Latn": 3,
+            "__label__sop_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 14,
+          "correct_items_label_counts": {
+            "__label__kng_Latn": 1,
+            "no_final_section": 3,
+            "__label__swh_Latn": 8,
+            "__label__eng_Latn": 3,
+            "__label__swc_Latn": 2,
+            "__label__ktu_Latn": 1
+          }
+        }
+      }
+    },
+    "seed43": {
+      "items_sha256": "6aa84285edf079991d51759df19665694cc7ab825234cf0c46ad59d7ccc3c4ad",
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 72,
+            "__label__swc_Latn": 9,
+            "__label__eng_Latn": 7,
+            "__label__ktu_Latn": 1,
+            "__label__kdc_Latn": 2,
+            "__label__lol_Latn": 2,
+            "__label__bew_Latn": 1,
+            "__label__kmb_Latn": 1,
+            "__label__snp_Latn": 1,
+            "__label__pkb_Latn": 1,
+            "__label__bps_Latn": 1,
+            "__label__lun_Latn": 1,
+            "__label__snf_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 58,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 12,
+            "__label__eng_Latn": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 61,
+            "no_final_section": 39
+          },
+          "top1_label_counts": {
+            "__label__swc_Latn": 20,
+            "__label__swh_Latn": 28,
+            "__label__kdc_Latn": 3,
+            "__label__eng_Latn": 6,
+            "__label__ssw_Latn": 3,
+            "__label__ktu_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 13,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 6,
+            "__label__eng_Latn": 1,
+            "__label__swc_Latn": 4,
+            "no_final_section": 1,
+            "__label__ktu_Latn": 1
+          }
+        }
+      }
+    }
+  },
+  "math_correct_out_of100": {
+    "Base": 6,
+    "seed42": 18,
+    "seed43": 13
+  },
+  "caveats": [
+    "Keep swh_Latn and swc_Latn separate.",
+    "No language filtering of the official boxed score.",
+    "No-final section and language ID do not establish answer absence, fluency or reasoning quality."
+  ]
+}
