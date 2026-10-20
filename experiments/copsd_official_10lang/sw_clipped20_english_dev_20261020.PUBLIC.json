@@ -1,0 +1,55 @@
+{
+  "observed_at": "2026-10-20T13:09:52.724328",
+  "protocol": "project_dev_single_vllm_v1",
+  "evaluation_language": "en",
+  "training_language": "sw",
+  "training_clip": 0.05,
+  "training_updates": 20,
+  "parent_completed_exit0": true,
+  "paired_raw_inputs_prompts_seeds_configs_and_counts_verified": true,
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 40,
+      "generated_tokens": 185543,
+      "normal_terminations": 31,
+      "truncated": 69,
+      "answer_extraction_failures": 58,
+      "single_accuracy": 0.4,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 69.79343239404261,
+      "model_load_seconds": 9.966601835563779,
+      "generated_tokens_per_generation_second": 2658.459308211892
+    },
+    "clipped_SW20": {
+      "items": 100,
+      "single_correct": 30,
+      "generated_tokens": 189305,
+      "normal_terminations": 25,
+      "truncated": 75,
+      "answer_extraction_failures": 66,
+      "single_accuracy": 0.3,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 152.2253354471177,
+      "model_load_seconds": 10.874533541500568,
+      "generated_tokens_per_generation_second": 1243.5840554660076
+    }
+  },
+  "paired_counts": {
+    "gained": 5,
+    "lost": 15
+  },
+  "new_cost": {
+    "responses": 100,
+    "generated_tokens": 189305,
+    "generation_seconds": 152.2253354471177,
+    "cached_Base_generation_not_repeated": true
+  },
+  "scope": "Same held-out100 original math questions, English development supplement, not GSM8K formal test or sequential forgetting. Unclipped counterpart not completed."
+}
