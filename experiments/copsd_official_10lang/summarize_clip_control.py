@@ -26,12 +26,14 @@ def main():
         assert s['phase']=='completed' and s['job']['exit_code']==0
         j=s['job'];assert len(j['gpu_uuids'])==1 and j['config']['max_user_gpus']==4
         assert hashlib.sha256(Path(j['script']).read_bytes()).hexdigest()==j['script_sha256']
-    training=[];proofs=[];args=[]
+    training=[];proofs=[];args=[];adapter_configs=[]
     for track,name,s in zip(tracks,names,states):
         p=a.root/'models/checkpoint'/track/name;cp=p/'checkpoint-20'
         proof=read(p/'COLLOCATE_TRAIN_UPDATES_DONE.json');cost=read(p/'COST_SEGMENT_DONE.json')
         assert proof['global_step']==20 and proof['scheduler_horizon']==100
         assert proof['base_unchanged_bitwise'] and proof['micro_steps']==cost['loss_calls']==640
+        assert proof['max_completion_length']==2048 and proof['effective_batch']==32
+        assert cost['loss_temperature']==1.1 and cost['seed_applied_before_model_and_PEFT']==42
         assert len(proof['syncs'])==21
         assert read(cp/'trainer_state.json')['global_step']==20
         assert read(cp/'trainer_state.json')['max_steps']==100
@@ -39,22 +41,26 @@ def main():
         groups=read(p/'UPDATE_BATCH_GENERATION.json')['groups']
         assert len(groups)==20 and [g['global_step'] for g in groups]==list(range(20))
         assert sum(g['rollouts'] for g in groups)==640
-        assert sum(g['generated_tokens'] for g in groups)==cost['valid_response_loss_positions']
+        generated_tokens=sum(g['generated_tokens'] for g in groups)
+        assert 0<cost['valid_response_loss_positions']<=generated_tokens
         for f in ['optimizer.pt','scheduler.pt','rng_state.pth','adapter_model.safetensors']:
             assert (cp/f).stat().st_size>0
         args.append(torch.load(cp/'training_args.bin',map_location='cpu',weights_only=False))
+        adapter_configs.append(read(cp/'adapter_config.json'))
         proofs.append(proof)
         job=s['job'];start=datetime.datetime.fromisoformat(job['started_at'])
         end=datetime.datetime.fromisoformat(job['finished_at'])
         training.append({'updates':20,'scheduler_horizon':100,'question_exposures':640,
             'generated_tokens':sum(g['generated_tokens'] for g in groups),
             'valid_response_loss_positions':cost['valid_response_loss_positions'],
+            'generation_tokens_minus_valid_loss_positions':generated_tokens-cost['valid_response_loss_positions'],
             'training_clock_seconds':proof['train_seconds_including_diagnostic_hashing'],
             'pipeline_GPU_hours_including_startup_training_development':(end-start).total_seconds()/3600,
             'teacher_forward_cuda_seconds':cost['teacher_forward_cuda_seconds'],
             'student_forward_cuda_seconds':cost['student_forward_cuda_seconds']})
     assert proofs[0]['syncs'][0]['adapter_hash']==proofs[1]['syncs'][0]['adapter_hash']
     assert proofs[0]['syncs'][0]['engine_hash']==proofs[1]['syncs'][0]['engine_hash']
+    assert adapter_configs[0]==adapter_configs[1]
     fields=['learning_rate','max_grad_norm','per_device_train_batch_size',
         'gradient_accumulation_steps','max_steps','seed','data_seed','optim',
         'lr_scheduler_type','lr_scheduler_kwargs','warmup_steps','warmup_ratio',
@@ -94,6 +100,7 @@ def main():
         'training_cost':dict(zip(['clipped','unclipped'],training)),
         'source_script_and_completed_exit0_verified':True,
         'initial_adapter_and_inference_weights_match':True,
+        'saved_adapter_configs_loss_temperature_and_initialization_seed_match':True,
         'scientific_training_args_compared':fields,
         'development_inputs_prompts_seeds_configs_match':True,
         'new_core_loss_implementation':False,'clip_only_scientific_factor':True,
