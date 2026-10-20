@@ -1,0 +1,234 @@
+{
+  "observed_at": "2026-10-20T22:24:29.895899",
+  "protocol": "project_formal_single_vllm8192_v1",
+  "CPU_preflight_cases": [
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "sw",
+      "items": 250,
+      "input_sha256": "7a23573f28ab82504f5436f18f4168f1807103756905d82495828b69148739d5",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "sw",
+      "items": 500,
+      "input_sha256": "37a4629f84ac022539094acb74c5b0e26e1a0a5ebb1337444751ef755e47e468",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "te",
+      "items": 250,
+      "input_sha256": "61058bc0828478f7408ddeedd15f552902a1701de5de9ad3e9e03ab0c7a6392e",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "te",
+      "items": 500,
+      "input_sha256": "48a212230f3520a830e935ea0442aff01339748cb2fafa2ae36f702bb8fc55d5",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "th",
+      "items": 250,
+      "input_sha256": "473a0cd3711766ea4746899cf6993ec4d4b0ec2188922e3ecdc1df04bd64d8e4",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "th",
+      "items": 500,
+      "input_sha256": "e3da979457056a7ac32f47d133e873623325dffe1e327be602a112d5f316bf95",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "bn",
+      "items": 250,
+      "input_sha256": "9d3b404c099143ac54a33dc2d268b792937a3846bb2ae0fb2fdea8250d002d93",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "bn",
+      "items": 500,
+      "input_sha256": "ff62830942361fe3f1172432228adb9cbeb4691455e8dc5f01dbb75871f7c2f8",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "zh",
+      "items": 250,
+      "input_sha256": "115c306f1a58810f5949784cf749c48a12716e79fff2aab8f2225e4f02e38d41",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "zh",
+      "items": 500,
+      "input_sha256": "d2ed70a35186cc0259e44d19aef06115e5c3a858e069c82d62a5b2e5b10b6816",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "ja",
+      "items": 250,
+      "input_sha256": "7e2daf676deea614ea7945e8c301077d32916c8d6d1b7577d25d522a8d1a57dc",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "ja",
+      "items": 500,
+      "input_sha256": "0214efa3f7039d04283722c13dbf955e2437bc5c1e90881fb4808cb3b021cd79",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "ru",
+      "items": 250,
+      "input_sha256": "a7cd1a19c020512804597cd9d2fa50f01aabbce8dc59e59187d0096cad6a99cf",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "ru",
+      "items": 500,
+      "input_sha256": "c96a263c436124fd50b9cb03cc69058acf0b45ee536e0de6f4bdbf38d0f36a78",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "de",
+      "items": 250,
+      "input_sha256": "a752874e878e6d1a6083fa79baf0c130bb76c2830d90dc33b393fd7e56421977",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "de",
+      "items": 500,
+      "input_sha256": "a17f0d03f5ec30da9e0644cdb6e22132dd82c59037ccc4ad74f6121b2ad53123",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "fr",
+      "items": 250,
+      "input_sha256": "35ea07e63163c52349963a40ac9c6b557bff4e17fb6729158c005b8e6069cd7d",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "fr",
+      "items": 500,
+      "input_sha256": "2a31385c15e3dce3ea23824264a0ce83da146a5100b32d4942808afe5fb2947e",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "language": "es",
+      "items": 250,
+      "input_sha256": "10b976421c7b0e7cd54d77d77e2f77913be1d2afbba569e547637a1fc3f78195",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "language": "es",
+      "items": 500,
+      "input_sha256": "75a6e52c9e8cab89e5518160a5bcccf6633b049e199b0067650ea58912ccb7cf",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    },
+    {
+      "prepare_only": true,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "gsm8k",
+      "language": "en",
+      "items": 1319,
+      "input_sha256": "b6eac877fdf0fb2baf8273f3cb7771ea083ebbc4f1862056f771fc56daec72e2",
+      "adapter_provided": false,
+      "GPU_initialized": false
+    }
+  ],
+  "evaluator_sha256": "07e904913890bbd7488d5d2f8413fd6b34854e4fec4787cf64e417fd6890d1a6",
+  "official_prompt_loader_extractor_and_grader_reused": true,
+  "generation_budget": 8192,
+  "samples_per_problem": 1,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "max_num_seqs": 16,
+  "seed": 42,
+  "GPU_runtime_validation_completed": false,
+  "GPU_job_started": false,
+  "old_2048_results_preserved_and_not_mixed": true,
+  "official_AfriMGSM_pass12_reference_unchanged": true,
+  "scope": "CPU preparation of the full formal evaluation interface, not formal scores or evidence that this new entry has run on GPU. Same frozen source/test/model identities checked. Ten target languages each MGSM-Rev2/PolyMath plus English GSM8K, no test-based configuration selection. Operational rollout requires a frozen model/checkpoint and one queued GPU.",
+  "launcher_sha256": "741044c7a3ba5f8916c2d9983289d6ec0272eb84b9f1e177fbe2e234bcc17eed",
+  "launcher_bash_syntax_passed": true,
+  "actual_completed_TE_checkpoint100_CPU_preflight_passed": true,
+  "TE_checkpoint100_adapter_sha256": "dcc30a722d24dccb35b190f6550002763befbf00219c8ffa7fb02eb76c27b8fc"
+}
