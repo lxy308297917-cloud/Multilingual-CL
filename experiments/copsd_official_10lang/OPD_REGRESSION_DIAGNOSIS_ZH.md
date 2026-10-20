@@ -68,4 +68,6 @@ SW现代裁剪参考已正常完成20更新／640题次及开发评测：Base6�
 
 来源：[固定官方trainer](https://github.com/cisnlp/COPSD/blob/4f4410730e9b6775a30d20f4b6e141cba2e87590/multilingual_opsd_trainer.py)、[论文方法与超参数](https://arxiv.org/html/2605.09548v1)。
 
-配对结果将由 `summarize_clip_control.py` 在两组父队列均正常完成后从原始文件核验汇总，训练生成token与有效loss位置分开记录。`run_clip_control_english_dev.sh` 已配置预检，尚未启动，复用同100原题的英语Base40/100，只新增两个adapter评测；与GSM8K正式测试分开。
+配对结果将由 `summarize_clip_control.py` 在两组父队列均正常完成后从原始文件核验汇总，训练生成token与有效loss位置分开记录。裁剪参考的英语开发已先完成：同100原题Base40→30/100，新增5、失去15，Base不重复推理；与GSM8K正式测试分开。`run_clip_control_english_dev.sh` 已支持复用这份已完成参考，等无裁剪checkpoint20后只补对应英语评测，最终核对三者全部输入／prompt／seed／配置。
+
+另发现并在实际GPU验证TE的独立运行问题：已安装vLLM原生分配器成功返回缺少None引用，长时间循环后none_dealloc。新进程局部兼容修复通过tiny CUDA测试，不改共享环境／现有数学实验，完整TE恢复仍待授权及实测。见 `CUMEM_NONE_REF_ZH.md`。该兼容修复不构成数学退步原因或修复证据。
