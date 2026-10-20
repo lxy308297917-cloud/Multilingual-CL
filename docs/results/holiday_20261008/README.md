@@ -1,0 +1,39 @@
+# 国庆实验及后续收尾：完整报告入口
+
+更新2026-10-09；以仓库根目录[全局总览](../../../EXPERIMENT_RESULTS_OVERVIEW_ZH.md)为主入口。这里保存分项原文，成文时旧状态以较新最终报告为准。
+
+[正式结果JSON](FORMAL_RESULTS.json) · [CSV](FORMAL_RESULTS.csv) · [来源及验证清单](SOURCE_MANIFEST.json)
+
+## 分项报告
+
+- [sw_rollback_budget_20261002__FINAL_REPORT_ZH.md](reports/sw_rollback_budget_20261002__FINAL_REPORT_ZH.md)
+- [sw_holiday_20261003__SEED43_ELEMENT_REPORT_ZH.md](reports/sw_holiday_20261003__SEED43_ELEMENT_REPORT_ZH.md)
+- [sw_holiday_20261003__RESEARCH_DECISIONS_ZH.md](reports/sw_holiday_20261003__RESEARCH_DECISIONS_ZH.md)
+- [ig_sparse_location_20261004__FINAL_REPORT_ZH.md](reports/ig_sparse_location_20261004__FINAL_REPORT_ZH.md)
+- [ig_sparse_location_seed43_20261008__FINAL_REPORT_ZH.md](reports/ig_sparse_location_seed43_20261008__FINAL_REPORT_ZH.md)
+- [ig_sparse_location_seed43_20261008__CROSS_SEED_REPORT_ZH.md](reports/ig_sparse_location_seed43_20261008__CROSS_SEED_REPORT_ZH.md)
+- [ig_sparse_location_seed43_20261008__PAIRED_SAMPLE_REPORT_ZH.md](reports/ig_sparse_location_seed43_20261008__PAIRED_SAMPLE_REPORT_ZH.md)
+- [ig_sparse_location_seed43_20261008__IFEVAL_DETERMINISM_REPORT_ZH.md](reports/ig_sparse_location_seed43_20261008__IFEVAL_DETERMINISM_REPORT_ZH.md)
+- [ig_sparse_location_seed43_20261008__GSM8K_ERROR_AUDIT_V2_ZH.md](reports/ig_sparse_location_seed43_20261008__GSM8K_ERROR_AUDIT_V2_ZH.md)
+- [ig_sparse_location_seed43_20261008__SYNTHESIS_AND_NEXT_ZH.md](reports/ig_sparse_location_seed43_20261008__SYNTHESIS_AND_NEXT_ZH.md)
+- [sw_next_dev_eval_20261008__DEVELOPMENT_COMPARISON_ZH.md](reports/sw_next_dev_eval_20261008__DEVELOPMENT_COMPARISON_ZH.md)
+- [sw_next_dev_eval_20261008__EXISTING_BASELINES_COMPARISON_ZH.md](reports/sw_next_dev_eval_20261008__EXISTING_BASELINES_COMPARISON_ZH.md)
+- [sw_next_dev_eval_20261008__SEED42_ABLATION_COMPARISON_ZH.md](reports/sw_next_dev_eval_20261008__SEED42_ABLATION_COMPARISON_ZH.md)
+- [sw_next_dev_eval_20261008__DEVELOPMENT_TRANSFER_AUDIT_ZH.md](reports/sw_next_dev_eval_20261008__DEVELOPMENT_TRANSFER_AUDIT_ZH.md)
+- [sw_next_dev_eval_20261008__INSTRUCTION_SCORING_SENSITIVITY_ZH.md](reports/sw_next_dev_eval_20261008__INSTRUCTION_SCORING_SENSITIVITY_ZH.md)
+- [sw_fullschedule_prefix_probe_20261004__RESULTS_ZH.md](reports/sw_fullschedule_prefix_probe_20261004__RESULTS_ZH.md)
+- [sw_gradient_alignment_probe_20261004__RESULTS_ZH.md](reports/sw_gradient_alignment_probe_20261004__RESULTS_ZH.md)
+- [sw_gradient_alignment_trained_20261004__RESULTS_ZH.md](reports/sw_gradient_alignment_trained_20261004__RESULTS_ZH.md)
+- [sw_lp_translation_dev_20261003__RESULTS_ZH.md](reports/sw_lp_translation_dev_20261003__RESULTS_ZH.md)
+- [sw_lp_uniform_swap_20261003__RESULTS_ZH.md](reports/sw_lp_uniform_swap_20261003__RESULTS_ZH.md)
+- [sw_mask_ema_probe_20261004__RESULTS_ZH.md](reports/sw_mask_ema_probe_20261004__RESULTS_ZH.md)
+- [sw_mask_stability_probe_20261004__RESULTS_ZH.md](reports/sw_mask_stability_probe_20261004__RESULTS_ZH.md)
+- [sw_robust_budget_probe_20261003__RESULTS_ZH.md](reports/sw_robust_budget_probe_20261003__RESULTS_ZH.md)
+- [sw_specificity15_probe_20261003__RESULTS_ZH.md](reports/sw_specificity15_probe_20261003__RESULTS_ZH.md)
+- [sw_specificity_budget_probe_20261003__RESULTS_ZH.md](reports/sw_specificity_budget_probe_20261003__RESULTS_ZH.md)
+- [sw_task_gradient_probe_20261003__RESULTS_ZH.md](reports/sw_task_gradient_probe_20261003__RESULTS_ZH.md)
+- [sw_taskwise_english_protection_20261004__RESULTS_ZH.md](reports/sw_taskwise_english_protection_20261004__RESULTS_ZH.md)
+
+本次只重新核验DONE身份及轻量评分/身份文件哈希，没有重新训练、重新生成、重评正式输出，也没有重新读取全部模型权重。JSON保留来源路径，不代表仓库自包含全部模型/测试数据。
+
+分项报告是原文快照，其中指向未同步原始样本/脚本的相对链接须在来源清单记录的服务器原目录解析；本仓库同步汇总与证据索引，不宣称所有原始输入自包含。

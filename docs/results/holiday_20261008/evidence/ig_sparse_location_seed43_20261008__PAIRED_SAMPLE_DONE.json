@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    "sum_ig",
+    "mt_en2ig",
+    "mt_ig2en",
+    "belebele_ig",
+    "belebele_en",
+    "sum_en",
+    "ifeval",
+    "gsm8k"
+  ],
+  "detail_path": "/data0/users/lixiaoyang/reproductions/ig_sparse_location_seed43_20261008/PAIRED_SAMPLES.jsonl"
+}

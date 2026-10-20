@@ -1,0 +1,10 @@
+{
+  "audit": "/data0/users/lixiaoyang/reproductions/ig_sparse_location_seed43_20261008/FORMAL_INTEGRITY_AUDIT.json",
+  "models": [
+    "base",
+    "dense_fft",
+    "edge",
+    "spread"
+  ],
+  "tasks_verified": 44
+}

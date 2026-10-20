@@ -1,0 +1,22 @@
+{
+  "status": "proposal_cpu_prototype_only",
+  "launchable": false,
+  "candidate_model": "Qwen2.5-1.5B-Instruct",
+  "selection_fraction_per_matrix": 0.15,
+  "selection_scope": "existing_196_attention_mlp_2d_matrices",
+  "sampling_temperature": 1.0,
+  "sampling_top_p": 1.0,
+  "sampling_top_k": 0,
+  "rollout_max_updates_old": 0,
+  "mask_refresh_updates": 1,
+  "teacher": "frozen_stage_start_model_with_demonstration_context",
+  "references": ["frozen_base", "frozen_previous_stage"],
+  "distillation_direction": "forward",
+  "anchor_weight_proposal": 0.1,
+  "risk_weight_proposal": 1.0,
+  "initial_screening": "independent_supervised_translation_instruction_slice",
+  "clip_and_scheduler_parity": "not_implemented",
+  "real_data_manifests": null,
+  "real_training_output": null,
+  "gpu_launch_authorized_by_this_config": false
+}

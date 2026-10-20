@@ -1,0 +1,714 @@
+{
+  "sw_protocol": "e20abdffaa2a9cb97b722b9e8f8da9501d795da8f68a5d11ebf9720cd03ef3cc",
+  "gsm_protocol": "57e7d8825ce2c2769ef281bb7908d4c93dbb8394382e3852198df5abf23059c8",
+  "models": {
+    "element_protected": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_sparse_projection_v1/element_protected/final",
+      "model_hash_prefix": "03d6d9fc68d29e0d",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 44.0,
+        "sum_sw": 30.260912206804303,
+        "mt_en2sw": 36.18431385501581,
+        "mt_sw2en": 43.43276762213692,
+        "belebele_en": 78.11111111111111,
+        "sum_en": 21.920104972033325,
+        "ifeval_prompt_strict": 24.58410351201479,
+        "ifeval_instruction_strict": 36.810551558753,
+        "gsm8k_strict": 20.54586808188021,
+        "gsm8k_flexible": 43.214556482183475
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/belebele_sw-seed42/attempt-1790041602929373247/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/sum_sw-seed42/attempt-1790035639689442290/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/mt_en2sw-seed42/attempt-1790039644438418518/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/mt_sw2en-seed42/attempt-1790040933311996272/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/belebele_en-seed42/attempt-1790041849624886178/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/sum_en-seed42/attempt-1790037831917757737/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/03d6d9fc68d29e0d/ifeval-seed42/attempt-1790042015118696203/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/03d6d9fc68d29e0d/attempt-1790044255947306005/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": null,
+        "candidate_elements": null,
+        "total_gpu_hours": 7.496304472817315,
+        "peak_gpu_memory_bytes": 21438695424
+      }
+    },
+    "adaptive_unprotected": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_adaptive_modules_v1/adaptive_unprotected/final",
+      "model_hash_prefix": "0ceb998971f971ec",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 44.77777777777778,
+        "sum_sw": 32.112393355725054,
+        "mt_en2sw": 26.49710995964133,
+        "mt_sw2en": 42.02610556698024,
+        "belebele_en": 77.22222222222223,
+        "sum_en": 21.201699261558442,
+        "ifeval_prompt_strict": 27.911275415896487,
+        "ifeval_instruction_strict": 37.64988009592326,
+        "gsm8k_strict": 33.206974981046244,
+        "gsm8k_flexible": 37.14935557240334
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/0ceb998971f971ec/belebele_sw-seed42/attempt-1790297855708673962/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/0ceb998971f971ec/sum_sw-seed42/attempt-1790290380687746851/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/0ceb998971f971ec/mt_en2sw-seed42/attempt-1790295678005279591/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/0ceb998971f971ec/mt_sw2en-seed42/attempt-1790297188824211582/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/0ceb998971f971ec/belebele_en-seed42/attempt-1790298102932866452/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/0ceb998971f971ec/sum_en-seed42/attempt-1790293213825901213/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/0ceb998971f971ec/ifeval-seed42/attempt-1790298268681679859/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/0ceb998971f971ec/attempt-1790301046056545864/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 4.208549502227042,
+        "peak_gpu_memory_bytes": 14232619008
+      }
+    },
+    "lp_risk_protected": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_lp_risk_v1/lp_risk_protected/final",
+      "model_hash_prefix": "1b4db16558ae4dac",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 45.44444444444444,
+        "sum_sw": 31.986689223380555,
+        "mt_en2sw": 16.339079994043818,
+        "mt_sw2en": 43.15389729253134,
+        "belebele_en": 81.88888888888889,
+        "sum_en": 21.523382638564122,
+        "ifeval_prompt_strict": 37.52310536044362,
+        "ifeval_instruction_strict": 49.040767386091126,
+        "gsm8k_strict": 23.805913570887036,
+        "gsm8k_flexible": 44.124336618650496
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1b4db16558ae4dac/belebele_sw-seed42/attempt-1790743014912004679/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1b4db16558ae4dac/sum_sw-seed42/attempt-1790736952873149394/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1b4db16558ae4dac/mt_en2sw-seed42/attempt-1790740879644036000/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1b4db16558ae4dac/mt_sw2en-seed42/attempt-1790742352708347321/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1b4db16558ae4dac/belebele_en-seed42/attempt-1790743262123785724/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1b4db16558ae4dac/sum_en-seed42/attempt-1790739626335194490/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1b4db16558ae4dac/ifeval-seed42/attempt-1790743429895471077/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/1b4db16558ae4dac/attempt-1790747409012177308/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 4.292768471307225,
+        "peak_gpu_memory_bytes": 10417637376
+      }
+    },
+    "mofo15": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_sparse_baselines_v1/mofo15/final",
+      "model_hash_prefix": "1d48a0086239db93",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 43.888888888888886,
+        "sum_sw": 29.80028660570877,
+        "mt_en2sw": 37.10599049621819,
+        "mt_sw2en": 35.29070584245159,
+        "belebele_en": 71.55555555555554,
+        "sum_en": 21.756394795779403,
+        "ifeval_prompt_strict": 14.048059149722736,
+        "ifeval_instruction_strict": 23.621103117505996,
+        "gsm8k_strict": 9.931766489764973,
+        "gsm8k_flexible": 26.383623957543595
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1d48a0086239db93/belebele_sw-seed42/attempt-1790265085493215123/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1d48a0086239db93/sum_sw-seed42/attempt-1790258643108180288/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1d48a0086239db93/mt_en2sw-seed42/attempt-1790262893542958875/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1d48a0086239db93/mt_sw2en-seed42/attempt-1790264301984593547/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1d48a0086239db93/belebele_en-seed42/attempt-1790265334092502167/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1d48a0086239db93/sum_en-seed42/attempt-1790260599048578050/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/1d48a0086239db93/ifeval-seed42/attempt-1790265501728549697/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/1d48a0086239db93/attempt-1790267683896331114/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": null,
+        "candidate_elements": null,
+        "total_gpu_hours": 6.896000734832552,
+        "peak_gpu_memory_bytes": 21438695424
+      }
+    },
+    "lp_risk_unprotected_seed43": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_lp_risk_seed43_v1/lp_risk_unprotected_seed43/final",
+      "model_hash_prefix": "2ae94c22b474a319",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 44.333333333333336,
+        "sum_sw": 31.840320016298158,
+        "mt_en2sw": 17.257554089799143,
+        "mt_sw2en": 42.507471944339606,
+        "belebele_en": 79.88888888888889,
+        "sum_en": 21.53662692671324,
+        "ifeval_prompt_strict": 36.04436229205176,
+        "ifeval_instruction_strict": 47.3621103117506,
+        "gsm8k_strict": 33.88931008339651,
+        "gsm8k_flexible": 41.62244124336619
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/2ae94c22b474a319/belebele_sw-seed42/attempt-1790970023493788208/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/2ae94c22b474a319/sum_sw-seed42/attempt-1790963381475189649/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/2ae94c22b474a319/mt_en2sw-seed42/attempt-1790967935523507394/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/2ae94c22b474a319/mt_sw2en-seed42/attempt-1790969373240291330/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/2ae94c22b474a319/belebele_en-seed42/attempt-1790970266904760646/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/2ae94c22b474a319/sum_en-seed42/attempt-1790966068112940655/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/2ae94c22b474a319/ifeval-seed42/attempt-1790970430011375099/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/2ae94c22b474a319/attempt-1790974419220268245/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 3.4689851199918325,
+        "peak_gpu_memory_bytes": 10417637376
+      }
+    },
+    "base": {
+      "model_path": "/data0/users/lixiaoyang/models/Qwen2.5-1.5B-Instruct",
+      "model_hash_prefix": "6ea4a4edab8e22ce",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 37.55555555555555,
+        "sum_sw": 25.043021061435212,
+        "mt_en2sw": 17.197629793444587,
+        "mt_sw2en": 20.978663075284697,
+        "belebele_en": 81.77777777777779,
+        "sum_en": 21.966187854750096,
+        "ifeval_prompt_strict": 41.0351201478743,
+        "ifeval_instruction_strict": 50.47961630695443,
+        "gsm8k_strict": 31.69067475360121,
+        "gsm8k_flexible": 53.449583017437455
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/6ea4a4edab8e22ce/belebele_sw-seed42/attempt-1790021010308828849/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/6ea4a4edab8e22ce/sum_sw-seed42/attempt-1790013299519160622/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/6ea4a4edab8e22ce/mt_en2sw-seed42/attempt-1790018833590140688/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/6ea4a4edab8e22ce/mt_sw2en-seed42/attempt-1790020336198713682/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/6ea4a4edab8e22ce/belebele_en-seed42/attempt-1790021258330020721/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/6ea4a4edab8e22ce/sum_en-seed42/attempt-1790016217369871488/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/6ea4a4edab8e22ce/ifeval-seed42/attempt-1790021425497910041/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/6ea4a4edab8e22ce/attempt-1790027445513011975/DONE.json"
+      },
+      "training": null
+    },
+    "edge_projected_rows": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_sparse_projection_v1/edge_projected_rows/final",
+      "model_hash_prefix": "7468acfcb4a7e5bf",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 46.22222222222222,
+        "sum_sw": 31.77612656195982,
+        "mt_en2sw": 37.154272648272816,
+        "mt_sw2en": 43.64848267676542,
+        "belebele_en": 81.22222222222221,
+        "sum_en": 22.673892115659285,
+        "ifeval_prompt_strict": 33.64140480591497,
+        "ifeval_instruction_strict": 43.52517985611511,
+        "gsm8k_strict": 37.9833206974981,
+        "gsm8k_flexible": 45.109931766489765
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/7468acfcb4a7e5bf/belebele_sw-seed42/attempt-1790070776368581259/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/7468acfcb4a7e5bf/sum_sw-seed42/attempt-1790065296470960051/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/7468acfcb4a7e5bf/mt_en2sw-seed42/attempt-1790068748884617974/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/7468acfcb4a7e5bf/mt_sw2en-seed42/attempt-1790070092747263472/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/7468acfcb4a7e5bf/belebele_en-seed42/attempt-1790071023553144612/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/7468acfcb4a7e5bf/sum_en-seed42/attempt-1790068008162160369/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/7468acfcb4a7e5bf/ifeval-seed42/attempt-1790071189543895134/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/7468acfcb4a7e5bf/attempt-1790074703141132172/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": null,
+        "candidate_elements": null,
+        "total_gpu_hours": 3.735453201002545,
+        "peak_gpu_memory_bytes": 11699762176
+      }
+    },
+    "adaptive_protected": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_adaptive_modules_v1/adaptive_protected/final",
+      "model_hash_prefix": "88517790a6563b2d",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 45.55555555555556,
+        "sum_sw": 31.456178522467635,
+        "mt_en2sw": 27.740939805330292,
+        "mt_sw2en": 42.62797827026484,
+        "belebele_en": 80.33333333333333,
+        "sum_en": 22.039915281538004,
+        "ifeval_prompt_strict": 36.78373382624769,
+        "ifeval_instruction_strict": 47.24220623501199,
+        "gsm8k_strict": 32.752084912812734,
+        "gsm8k_flexible": 46.019711902956786
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/88517790a6563b2d/belebele_sw-seed42/attempt-1790280078982228697/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/88517790a6563b2d/sum_sw-seed42/attempt-1790273386640630879/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/88517790a6563b2d/mt_en2sw-seed42/attempt-1790277949831539100/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/88517790a6563b2d/mt_sw2en-seed42/attempt-1790279405234677859/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/88517790a6563b2d/belebele_en-seed42/attempt-1790280324978760928/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/88517790a6563b2d/sum_en-seed42/attempt-1790276059564223520/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/88517790a6563b2d/ifeval-seed42/attempt-1790280490853602594/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/88517790a6563b2d/attempt-1790283528806236062/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 5.118084820244047,
+        "peak_gpu_memory_bytes": 14232619008
+      }
+    },
+    "uniform_unprotected": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_uniform_budget_v1/uniform_unprotected/final",
+      "model_hash_prefix": "8c44c4cbc1909838",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 44.888888888888886,
+        "sum_sw": 30.395257674683116,
+        "mt_en2sw": 32.61582486951853,
+        "mt_sw2en": 40.31989231524049,
+        "belebele_en": 79.33333333333333,
+        "sum_en": 21.63521005780229,
+        "ifeval_prompt_strict": 23.844731977818853,
+        "ifeval_instruction_strict": 33.33333333333333,
+        "gsm8k_strict": 21.30401819560273,
+        "gsm8k_flexible": 35.329795299469296
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8c44c4cbc1909838/belebele_sw-seed42/attempt-1790607254664713604/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8c44c4cbc1909838/sum_sw-seed42/attempt-1790601131423549484/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8c44c4cbc1909838/mt_en2sw-seed42/attempt-1790605195333339744/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8c44c4cbc1909838/mt_sw2en-seed42/attempt-1790606562099620044/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8c44c4cbc1909838/belebele_en-seed42/attempt-1790607500406746229/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8c44c4cbc1909838/sum_en-seed42/attempt-1790603549194361086/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8c44c4cbc1909838/ifeval-seed42/attempt-1790607666253360486/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/8c44c4cbc1909838/attempt-1790609590926452986/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 5.693124891850683,
+        "peak_gpu_memory_bytes": 21438695424
+      }
+    },
+    "uniform_protected_seed43": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_uniform_seed43_v1/uniform_protected_seed43/final",
+      "model_hash_prefix": "8d7a43f58bfb2d98",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 44.888888888888886,
+        "sum_sw": 31.19509195185289,
+        "mt_en2sw": 33.04003479296886,
+        "mt_sw2en": 41.99711785600093,
+        "belebele_en": 81.33333333333333,
+        "sum_en": 22.009877199891065,
+        "ifeval_prompt_strict": 33.45656192236599,
+        "ifeval_instruction_strict": 44.36450839328538,
+        "gsm8k_strict": 25.17058377558757,
+        "gsm8k_flexible": 47.005307050796056
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8d7a43f58bfb2d98/belebele_sw-seed42/attempt-1790727999898976582/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8d7a43f58bfb2d98/sum_sw-seed42/attempt-1790721939918971134/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8d7a43f58bfb2d98/mt_en2sw-seed42/attempt-1790726110371407737/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8d7a43f58bfb2d98/mt_sw2en-seed42/attempt-1790727374658060175/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8d7a43f58bfb2d98/belebele_en-seed42/attempt-1790728245707731825/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8d7a43f58bfb2d98/sum_en-seed42/attempt-1790724456173809824/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/8d7a43f58bfb2d98/ifeval-seed42/attempt-1790728410517115367/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/8d7a43f58bfb2d98/attempt-1790731109642622421/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 7.988622380097707,
+        "peak_gpu_memory_bytes": 21438695424
+      }
+    },
+    "adaptive_unprotected_seed43": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_adaptive_seed43_v1/adaptive_unprotected_seed43/final",
+      "model_hash_prefix": "993b211d95984257",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 43.888888888888886,
+        "sum_sw": 31.82375386704531,
+        "mt_en2sw": 26.75879677778742,
+        "mt_sw2en": 42.78201702170856,
+        "belebele_en": 76.55555555555556,
+        "sum_en": 21.381055965628956,
+        "ifeval_prompt_strict": 28.650646950092423,
+        "ifeval_instruction_strict": 40.16786570743405,
+        "gsm8k_strict": 32.14556482183472,
+        "gsm8k_flexible": 37.225170583775586
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/993b211d95984257/belebele_sw-seed42/attempt-1790657104311661726/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/993b211d95984257/sum_sw-seed42/attempt-1790649614084716766/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/993b211d95984257/mt_en2sw-seed42/attempt-1790654881428319012/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/993b211d95984257/mt_sw2en-seed42/attempt-1790656443978507697/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/993b211d95984257/belebele_en-seed42/attempt-1790657350439620772/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/993b211d95984257/sum_en-seed42/attempt-1790652313208604025/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/993b211d95984257/ifeval-seed42/attempt-1790657515288617770/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/993b211d95984257/attempt-1790660395236415755/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 4.364628976782163,
+        "peak_gpu_memory_bytes": 14232619008
+      }
+    },
+    "lp_risk_protected_seed43": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_lp_risk_seed43_v1/lp_risk_protected_seed43/final",
+      "model_hash_prefix": "a558f8b6a880b072",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 47.333333333333336,
+        "sum_sw": 31.06881135578703,
+        "mt_en2sw": 16.559278212654984,
+        "mt_sw2en": 43.49390061169646,
+        "belebele_en": 81.55555555555556,
+        "sum_en": 22.497357870848017,
+        "ifeval_prompt_strict": 37.707948243992604,
+        "ifeval_instruction_strict": 48.92086330935252,
+        "gsm8k_strict": 25.246398786959816,
+        "gsm8k_flexible": 46.7778620166793
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a558f8b6a880b072/belebele_sw-seed42/attempt-1790986784798251582/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a558f8b6a880b072/sum_sw-seed42/attempt-1790981220480567324/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a558f8b6a880b072/mt_en2sw-seed42/attempt-1790984719974711141/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a558f8b6a880b072/mt_sw2en-seed42/attempt-1790986126337629370/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a558f8b6a880b072/belebele_en-seed42/attempt-1790987030885899612/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a558f8b6a880b072/sum_en-seed42/attempt-1790983545594705134/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a558f8b6a880b072/ifeval-seed42/attempt-1790987195590610823/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/a558f8b6a880b072/attempt-1790991091930328516/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 3.865071509083112,
+        "peak_gpu_memory_bytes": 10417637376
+      }
+    },
+    "adaptive_protected_seed43": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_adaptive_seed43_v1/adaptive_protected_seed43/final",
+      "model_hash_prefix": "a761c6a3e6936863",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 43.77777777777778,
+        "sum_sw": 30.93675903087446,
+        "mt_en2sw": 27.590019038204364,
+        "mt_sw2en": 43.3853921417112,
+        "belebele_en": 81.0,
+        "sum_en": 21.88518612075203,
+        "ifeval_prompt_strict": 36.59889094269871,
+        "ifeval_instruction_strict": 46.52278177458034,
+        "gsm8k_strict": 34.11675511751327,
+        "gsm8k_flexible": 47.30856709628507
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a761c6a3e6936863/belebele_sw-seed42/attempt-1790638860208947350/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a761c6a3e6936863/sum_sw-seed42/attempt-1790632229400569489/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a761c6a3e6936863/mt_en2sw-seed42/attempt-1790636694661583786/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a761c6a3e6936863/mt_sw2en-seed42/attempt-1790638183814025621/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a761c6a3e6936863/belebele_en-seed42/attempt-1790639107177502225/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a761c6a3e6936863/sum_en-seed42/attempt-1790634772141178643/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a761c6a3e6936863/ifeval-seed42/attempt-1790639273398863972/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/a761c6a3e6936863/attempt-1790642977137081658/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 5.503027983837658,
+        "peak_gpu_memory_bytes": 14232619008
+      }
+    },
+    "element_unprotected": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_sparse_projection_v1/element_unprotected/final",
+      "model_hash_prefix": "a8f97bffa7d87e44",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 45.88888888888889,
+        "sum_sw": 29.590691238314378,
+        "mt_en2sw": 34.572540200071195,
+        "mt_sw2en": 38.93993868104671,
+        "belebele_en": 75.33333333333333,
+        "sum_en": 22.018898523398022,
+        "ifeval_prompt_strict": 22.181146025878004,
+        "ifeval_instruction_strict": 32.13429256594724,
+        "gsm8k_strict": 4.094010614101592,
+        "gsm8k_flexible": 30.09855951478393
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a8f97bffa7d87e44/belebele_sw-seed42/attempt-1790056904260724129/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a8f97bffa7d87e44/sum_sw-seed42/attempt-1790050973073429329/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a8f97bffa7d87e44/mt_en2sw-seed42/attempt-1790054867289606844/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a8f97bffa7d87e44/mt_sw2en-seed42/attempt-1790056210507659726/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a8f97bffa7d87e44/belebele_en-seed42/attempt-1790057152812212001/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a8f97bffa7d87e44/sum_en-seed42/attempt-1790053024971200071/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/a8f97bffa7d87e44/ifeval-seed42/attempt-1790057321028047030/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/a8f97bffa7d87e44/attempt-1790059427646085671/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": null,
+        "candidate_elements": null,
+        "total_gpu_hours": 5.724830938710107,
+        "peak_gpu_memory_bytes": 21438695424
+      }
+    },
+    "uniform_unprotected_seed43": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_uniform_seed43_v1/uniform_unprotected_seed43/final",
+      "model_hash_prefix": "adc0733d75942e7b",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 42.0,
+        "sum_sw": 31.76065615045024,
+        "mt_en2sw": 31.60139928152866,
+        "mt_sw2en": 40.984057361498294,
+        "belebele_en": 77.66666666666666,
+        "sum_en": 21.621877078191165,
+        "ifeval_prompt_strict": 24.953789279112755,
+        "ifeval_instruction_strict": 35.4916067146283,
+        "gsm8k_strict": 24.791508718726305,
+        "gsm8k_flexible": 37.9833206974981
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/adc0733d75942e7b/belebele_sw-seed42/attempt-1790712585590316874/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/adc0733d75942e7b/sum_sw-seed42/attempt-1790704984152347879/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/adc0733d75942e7b/mt_en2sw-seed42/attempt-1790710535359082494/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/adc0733d75942e7b/mt_sw2en-seed42/attempt-1790711908133452289/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/adc0733d75942e7b/belebele_en-seed42/attempt-1790712833246041748/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/adc0733d75942e7b/sum_en-seed42/attempt-1790708278780416838/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/adc0733d75942e7b/ifeval-seed42/attempt-1790713000396269957/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/adc0733d75942e7b/attempt-1790715209262784194/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 5.677098582519426,
+        "peak_gpu_memory_bytes": 21438695424
+      }
+    },
+    "fft_fp32_matched": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_sparse_projection_v1/fft_fp32_matched/final",
+      "model_hash_prefix": "b50bcee507e974c4",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 45.88888888888889,
+        "sum_sw": 24.415598477555605,
+        "mt_en2sw": 18.470168134234285,
+        "mt_sw2en": 40.40421181268853,
+        "belebele_en": 72.11111111111111,
+        "sum_en": 21.631180015992346,
+        "ifeval_prompt_strict": 15.89648798521257,
+        "ifeval_instruction_strict": 24.700239808153476,
+        "gsm8k_strict": 1.1372251705837757,
+        "gsm8k_flexible": 16.67930250189538
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b50bcee507e974c4/belebele_sw-seed42/attempt-1790100775528776798/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b50bcee507e974c4/sum_sw-seed42/attempt-1790096217044726591/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b50bcee507e974c4/mt_en2sw-seed42/attempt-1790099421323816205/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b50bcee507e974c4/mt_sw2en-seed42/attempt-1790100137104127493/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b50bcee507e974c4/belebele_en-seed42/attempt-1790101022486976771/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b50bcee507e974c4/sum_en-seed42/attempt-1790097646595270834/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b50bcee507e974c4/ifeval-seed42/attempt-1790101187911139922/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/b50bcee507e974c4/attempt-1790103117129336321/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": null,
+        "candidate_elements": null,
+        "total_gpu_hours": 6.8205335346857705,
+        "peak_gpu_memory_bytes": 23209185280
+      }
+    },
+    "lp_risk_unprotected": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_lp_risk_v1/lp_risk_unprotected/final",
+      "model_hash_prefix": "b918c9e81f88b392",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 42.66666666666667,
+        "sum_sw": 31.81082144159591,
+        "mt_en2sw": 16.65985879132843,
+        "mt_sw2en": 42.76306487188643,
+        "belebele_en": 79.11111111111111,
+        "sum_en": 21.822422816343106,
+        "ifeval_prompt_strict": 34.93530499075786,
+        "ifeval_instruction_strict": 45.563549160671464,
+        "gsm8k_strict": 32.82789992418499,
+        "gsm8k_flexible": 44.806671721000754
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b918c9e81f88b392/belebele_sw-seed42/attempt-1790760288973770761/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b918c9e81f88b392/sum_sw-seed42/attempt-1790753625191277955/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b918c9e81f88b392/mt_en2sw-seed42/attempt-1790758281614680499/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b918c9e81f88b392/mt_sw2en-seed42/attempt-1790759625057940805/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b918c9e81f88b392/belebele_en-seed42/attempt-1790760534879935897/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b918c9e81f88b392/sum_en-seed42/attempt-1790756356871880385/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b918c9e81f88b392/ifeval-seed42/attempt-1790760699273328086/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/b918c9e81f88b392/attempt-1790764311590273405/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 3.729347367750274,
+        "peak_gpu_memory_bytes": 10417637376
+      }
+    },
+    "hft15_matched": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_sparse_baselines_v1/hft15_matched/final",
+      "model_hash_prefix": "b937afe7201698b0",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 43.111111111111114,
+        "sum_sw": 30.734648305878544,
+        "mt_en2sw": 23.15054926532142,
+        "mt_sw2en": 38.542191380444464,
+        "belebele_en": 81.88888888888889,
+        "sum_en": 21.664929685916498,
+        "ifeval_prompt_strict": 35.12014787430684,
+        "ifeval_instruction_strict": 45.44364508393286,
+        "gsm8k_strict": 32.97952994692949,
+        "gsm8k_flexible": 46.24715693707354
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b937afe7201698b0/belebele_sw-seed42/attempt-1790196702245191619/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b937afe7201698b0/sum_sw-seed42/attempt-1790190722382859634/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b937afe7201698b0/mt_en2sw-seed42/attempt-1790194617941127319/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b937afe7201698b0/mt_sw2en-seed42/attempt-1790196016079402614/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b937afe7201698b0/belebele_en-seed42/attempt-1790196947161532682/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b937afe7201698b0/sum_en-seed42/attempt-1790193298947829890/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/b937afe7201698b0/ifeval-seed42/attempt-1790197111195527200/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/b937afe7201698b0/attempt-1790199977229432324/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": null,
+        "candidate_elements": null,
+        "total_gpu_hours": 3.262724017633332,
+        "peak_gpu_memory_bytes": 9189230592
+      }
+    },
+    "uniform_protected": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_uniform_budget_v1/uniform_protected/final",
+      "model_hash_prefix": "d48c43733097c2db",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 45.22222222222222,
+        "sum_sw": 30.52682256562155,
+        "mt_en2sw": 33.87035415305283,
+        "mt_sw2en": 43.03230217040698,
+        "belebele_en": 81.44444444444444,
+        "sum_en": 21.936574210667168,
+        "ifeval_prompt_strict": 30.31423290203327,
+        "ifeval_instruction_strict": 42.20623501199041,
+        "gsm8k_strict": 22.820318423047762,
+        "gsm8k_flexible": 46.24715693707354
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/d48c43733097c2db/belebele_sw-seed42/attempt-1790622542021112552/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/d48c43733097c2db/sum_sw-seed42/attempt-1790616557751114467/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/d48c43733097c2db/mt_en2sw-seed42/attempt-1790620599919945074/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/d48c43733097c2db/mt_sw2en-seed42/attempt-1790621871799350030/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/d48c43733097c2db/belebele_en-seed42/attempt-1790622788675424430/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/d48c43733097c2db/sum_en-seed42/attempt-1790618835860639623/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/d48c43733097c2db/ifeval-seed42/attempt-1790622954087179300/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/d48c43733097c2db/attempt-1790625687650097172/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": 75969304,
+        "candidate_elements": 1310195712,
+        "total_gpu_hours": 7.571831421785885,
+        "peak_gpu_memory_bytes": 21438695424
+      }
+    },
+    "edge_rows_no_projection": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_sparse_projection_v1/edge_rows_no_projection/final",
+      "model_hash_prefix": "dcab24bcf4c1a3be",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 47.66666666666667,
+        "sum_sw": 31.577266408716596,
+        "mt_en2sw": 38.18133165000146,
+        "mt_sw2en": 42.941890085158974,
+        "belebele_en": 79.55555555555556,
+        "sum_en": 22.13788811500647,
+        "ifeval_prompt_strict": 29.944547134935306,
+        "ifeval_instruction_strict": 41.60671462829736,
+        "gsm8k_strict": 39.19636087945413,
+        "gsm8k_flexible": 42.91129643669447
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/dcab24bcf4c1a3be/belebele_sw-seed42/attempt-1790086439487022476/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/dcab24bcf4c1a3be/sum_sw-seed42/attempt-1790080740934964920/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/dcab24bcf4c1a3be/mt_en2sw-seed42/attempt-1790084466474078372/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/dcab24bcf4c1a3be/mt_sw2en-seed42/attempt-1790085760901869651/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/dcab24bcf4c1a3be/belebele_en-seed42/attempt-1790086687025149377/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/dcab24bcf4c1a3be/sum_en-seed42/attempt-1790083601982016288/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/dcab24bcf4c1a3be/ifeval-seed42/attempt-1790086853289393644/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/dcab24bcf4c1a3be/attempt-1790089861785643468/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": null,
+        "candidate_elements": null,
+        "total_gpu_hours": 3.633658093545172,
+        "peak_gpu_memory_bytes": 11699762176
+      }
+    },
+    "ssu15": {
+      "model_path": "/data0/users/lixiaoyang/models/checkpoint/sw_sparse_baselines_v1/ssu15/final",
+      "model_hash_prefix": "ff0ed1f7baa7fde4",
+      "complete": true,
+      "scores": {
+        "belebele_sw": 42.44444444444444,
+        "sum_sw": 30.207494158399143,
+        "mt_en2sw": 26.6559697863426,
+        "mt_sw2en": 39.00185995123923,
+        "belebele_en": 81.77777777777779,
+        "sum_en": 23.08186596892576,
+        "ifeval_prompt_strict": 38.632162661737524,
+        "ifeval_instruction_strict": 50.0,
+        "gsm8k_strict": 28.885519332827904,
+        "gsm8k_flexible": 50.49279757391963
+      },
+      "evidence": {
+        "belebele_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/ff0ed1f7baa7fde4/belebele_sw-seed42/attempt-1790256501799343798/DONE.json",
+        "sum_sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/ff0ed1f7baa7fde4/sum_sw-seed42/attempt-1790250845840182692/DONE.json",
+        "mt_en2sw": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/ff0ed1f7baa7fde4/mt_en2sw-seed42/attempt-1790254448563265172/DONE.json",
+        "mt_sw2en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/ff0ed1f7baa7fde4/mt_sw2en-seed42/attempt-1790255819950215798/DONE.json",
+        "belebele_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/ff0ed1f7baa7fde4/belebele_en-seed42/attempt-1790256749626419167/DONE.json",
+        "sum_en": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/ff0ed1f7baa7fde4/sum_en-seed42/attempt-1790253332784042382/DONE.json",
+        "ifeval": "/data0/users/lixiaoyang/logs/sw_d2-evaluation/ff0ed1f7baa7fde4/ifeval-seed42/attempt-1790256915938399821/DONE.json",
+        "gsm8k": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/eval_project/experiments/ig_gsm8k_harness048_v1/evaluation/ff0ed1f7baa7fde4/attempt-1790260736982405636/DONE.json"
+      },
+      "training": {
+        "global_step": 22146,
+        "selected_elements_per_step": null,
+        "candidate_elements": null,
+        "total_gpu_hours": 5.263521252142058,
+        "peak_gpu_memory_bytes": 21438695424
+      }
+    }
+  }
+}
