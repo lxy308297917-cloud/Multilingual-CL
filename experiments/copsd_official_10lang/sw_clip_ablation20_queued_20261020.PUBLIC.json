@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-10-20T12:12:26.400896",
+  "protocol": "project_SW_component_clip_one_factor_v1",
+  "model": "Qwen3-1.7B",
+  "reference_clip": 0.05,
+  "diagnostic_clip": null,
+  "official_supported_flag": "--jsd_token_clip 0",
+  "core_loss_replaced": false,
+  "updates_each": 20,
+  "scheduler_horizon_each": 100,
+  "question_exposures_each": 640,
+  "max_completion_length_each": 2048,
+  "seed_each": 42,
+  "new_queue_manually_started": true,
+  "new_queue_phase": "waiting",
+  "account_max_GPUs": 4,
+  "new_GPU_training_started": false,
+  "baseline_completion_gate": true,
+  "initial_adapter_and_inference_weights_matching_required": true,
+  "comparison_uses_independent_development100": true,
+  "JA_waiting_monitor_stopped_for_regression_priority": true,
+  "scope": "Controlled diagnostic queued, no outcome or successful-fix claim. Fixed-published clip reference remains separate."
+}
