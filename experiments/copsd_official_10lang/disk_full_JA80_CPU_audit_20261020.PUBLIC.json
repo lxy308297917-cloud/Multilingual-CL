@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-20T23:26:24.410704",
+  "failure": "Shared data0 filesystem filled; queue service ENOSPC led to process exit, not CUDA OOM",
+  "JA_last_observed_update": 82,
+  "JA_recovery_checkpoint": 80,
+  "JA_optimizer_steps_loaded": [
+    80
+  ],
+  "JA_scheduler_loaded_last_epoch": 80,
+  "JA_rng_payload_loaded_and_present": true,
+  "JA_adapter_and_optimizer_values_finite": true,
+  "JA_checkpoint_loss_calls": 2560,
+  "JA_new_exposures_if_restored80_to100": 628,
+  "JA_expected_new_updates": 20,
+  "JA_unsaved_completed_updates_to_recompute": 2,
+  "parent80_policy_reference_created": true,
+  "GPU_restart_started": false,
+  "scientific_configuration_unchanged": true,
+  "sampling_stream_bitwise_continuation_promised": false,
+  "scope": "CPU recovery audit only. Model weights, optimizer, scheduler and RNG actually loaded; runtime first-sync comparison and normal resumed exit remain unproven. Do not restart failed queues without the required explicit authorization."
+}
