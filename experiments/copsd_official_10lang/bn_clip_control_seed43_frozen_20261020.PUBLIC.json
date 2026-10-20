@@ -1,0 +1,63 @@
+{
+  "frozen_at": "2026-10-20T19:55:44.697857",
+  "scope": "Independent seed43 replication of the matched BN component-clipping diagnosis after seed42 Base16/clip7/unclip24. Not replacement of official full100 results or final language selection.",
+  "model": "Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "training_seed": 43,
+  "data_seed": 43,
+  "evaluation_seed": 42,
+  "fresh_Base_each_branch": true,
+  "initial_adapter_and_inference_guard": "shared seed43 initial fingerprint from completed SW43 reference",
+  "updates": 20,
+  "scheduler_horizon": 100,
+  "exposures_each": 640,
+  "training_max_new_tokens": 2048,
+  "optimizer": "AdamW torch fused",
+  "learning_rate": 5e-06,
+  "effective_batch": 32,
+  "micro_batch": 1,
+  "gradient_accumulation": 32,
+  "beta": 0,
+  "clip_modes": [
+    0.05,
+    null
+  ],
+  "official_loss_replaced": false,
+  "evaluation": {
+    "languages": [
+      "bn",
+      "en"
+    ],
+    "items_each": 100,
+    "max_new_tokens": 8192,
+    "n": 1,
+    "max_num_seqs": 16,
+    "cached_Base_BN16_EN77_reused": true,
+    "formal_test": false
+  },
+  "seed_caveat": "Training initialization and question shuffle both change. Match the two seed43 branches to each other, not identical online trajectories across training seeds.",
+  "max_user_gpus": 4,
+  "no_additional_smoke": true,
+  "no_automatic_failure_retry": true,
+  "jobs": [
+    {
+      "queue": "copsd-bn-clip20-seed43-dev8192-v2",
+      "run_id": "bn_17b_clip20_horizon100_seed43_20261020_v2",
+      "mode": "clip",
+      "status": "not started at freeze"
+    },
+    {
+      "queue": "copsd-bn-unclip20-seed43-dev8192-v2",
+      "run_id": "bn_17b_unclip20_horizon100_seed43_20261020_v2",
+      "mode": "unclip",
+      "status": "not started at freeze"
+    }
+  ],
+  "code_sha256": {
+    "run_bn_clip_control20_seed43.sh": "b4f2d12ce73c039f2cf5b095b99fc4359427ee60dfb2ec2ccad578e8c1f92dc3",
+    "bn_clip_control_entry.py": "5793527ae7c088f0a3bafc9a14f1997156f0e51617ff805f3349120d3d5738b0",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1"
+  }
+}
