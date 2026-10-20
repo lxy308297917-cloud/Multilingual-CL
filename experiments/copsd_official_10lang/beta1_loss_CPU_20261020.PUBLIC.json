@@ -1,0 +1,8 @@
+{
+  "scope": "CPU exact pinned beta1 dense loss and autograd/mask check, not GPU training or math efficacy",
+  "official_beta1_equals_KL_student_to_teacher": true,
+  "student_gradient_equals_explicit_reverse_KL": true,
+  "masked_position_gradient_zero": true,
+  "actual_loss": 0.692201355895026,
+  "new_core_loss_written": false
+}
