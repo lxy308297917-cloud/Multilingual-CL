@@ -1,0 +1,86 @@
+{
+  "language": "zh",
+  "protocol": "project_dev_single_vllm_v1",
+  "grid": [
+    {
+      "step": 0,
+      "metrics": {
+        "items": 100,
+        "single_correct": 25,
+        "generated_tokens": 185308,
+        "normal_terminations": 24,
+        "truncated": 76,
+        "answer_extraction_failures": 73,
+        "single_accuracy": 0.25,
+        "n": 1,
+        "generation_count": 100,
+        "protocol": "project_dev_single_vllm_v1",
+        "formal_test": false,
+        "generation_seconds": 72.14719809964299,
+        "model_load_seconds": 9.571281777694821,
+        "generated_tokens_per_generation_second": 2568.4711933520944
+      }
+    },
+    {
+      "step": 20,
+      "metrics": {
+        "items": 100,
+        "single_correct": 41,
+        "generated_tokens": 176367,
+        "normal_terminations": 38,
+        "truncated": 62,
+        "answer_extraction_failures": 49,
+        "single_accuracy": 0.41,
+        "n": 1,
+        "generation_count": 100,
+        "protocol": "project_dev_single_vllm_v1",
+        "formal_test": false,
+        "generation_seconds": 123.46509504690766,
+        "model_load_seconds": 10.83696517534554,
+        "generated_tokens_per_generation_second": 1428.476606550163
+      }
+    },
+    {
+      "step": 50,
+      "metrics": {
+        "items": 100,
+        "single_correct": 40,
+        "generated_tokens": 166212,
+        "normal_terminations": 44,
+        "truncated": 56,
+        "answer_extraction_failures": 44,
+        "single_accuracy": 0.4,
+        "n": 1,
+        "generation_count": 100,
+        "protocol": "project_dev_single_vllm_v1",
+        "formal_test": false,
+        "generation_seconds": 138.0348156671971,
+        "model_load_seconds": 11.222073120996356,
+        "generated_tokens_per_generation_second": 1204.1309954782587
+      }
+    },
+    {
+      "step": 100,
+      "metrics": {
+        "items": 100,
+        "single_correct": 38,
+        "generated_tokens": 168267,
+        "normal_terminations": 44,
+        "truncated": 56,
+        "answer_extraction_failures": 42,
+        "single_accuracy": 0.38,
+        "n": 1,
+        "generation_count": 100,
+        "protocol": "project_dev_single_vllm_v1",
+        "formal_test": false,
+        "generation_seconds": 123.8835604544729,
+        "model_load_seconds": 11.391653846949339,
+        "generated_tokens_per_generation_second": 1358.267387397523
+      }
+    }
+  ],
+  "paired_inputs_prompts_seeds_configs_verified": true,
+  "new_generation_seconds": 261.4999107141048,
+  "new_generated_tokens": 342579,
+  "scope": "Independent development only; saved checkpoints, no new training. Fixed grid chosen after endpoint regression; single seed, exploratory checkpoint selection with winner bias. Formal tests not used for selection. Cached Base/20/final costs excluded from new cost."
+}
