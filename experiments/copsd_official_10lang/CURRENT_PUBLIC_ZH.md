@@ -183,3 +183,9 @@ ES已完成100更新及最终开发，44→16/100，85条截断、79条答案提
 ## ES完整正式套件验收（14:11）
 
 ES父队列exit0，固定100更新正式结果：MGSM-Rev2 202→167/250，PolyMath124→90/500，英语GSM8K1113→1039/1319。逐题ID／题目／答案／prompt与配置已配对，PolyMath四难度计数复算。五次新增推理2819条回答、3,839,503生成token、1957.91秒纯生成，复用英语Base不重复计费。仍为退步，不能因此进入顺序实验。见[ES完整正式结果及成本](es_completed_formal_suite_20261020.PUBLIC.json)。
+
+## 方向消融负结果与早期checkpoint正式补充（14:35）
+
+方向对照父队列exit0、严格配对通过：无裁剪beta0→beta1，SW3→0/100，英语33→36/100，Base分别6／40；未修复目标语效果。见[完整方向对照](sw_kl_direction_control_20261020.PUBLIC.json)。
+
+冻结开发网格选优规则后，SW50、ZH20、FR20既有checkpoint正式补充评测队列已手动启动；其它TH／BN／DE的网格最优为Base。保留100更新主表，不用正式测试改选checkpoint、不新增训练、不混入顺序结果。九项新推理均使用原正式协议，Base复用；当前尚无新正式分数。见[冻结规则](dev_checkpoint_selection_20261020.PUBLIC.json)。
