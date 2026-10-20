@@ -1,0 +1,43 @@
+{
+  "language": "ru",
+  "checkpoint_updates": 100,
+  "protocol": "project_dev_single_vllm_v1",
+  "paired_inputs_prompts_seeds_configs_and_counts_verified": true,
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 39,
+      "generated_tokens": 176640,
+      "normal_terminations": 37,
+      "truncated": 63,
+      "answer_extraction_failures": 50,
+      "single_accuracy": 0.39,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 68.03760785423219,
+      "model_load_seconds": 9.9633210003376,
+      "generated_tokens_per_generation_second": 2596.2112068731753
+    },
+    "final": {
+      "items": 100,
+      "single_correct": 28,
+      "generated_tokens": 192780,
+      "normal_terminations": 21,
+      "truncated": 79,
+      "answer_extraction_failures": 67,
+      "single_accuracy": 0.28,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 147.56187009997666,
+      "model_load_seconds": 10.853852262720466,
+      "generated_tokens_per_generation_second": 1306.4350558134495
+    }
+  },
+  "gained": 7,
+  "lost": 18,
+  "scope": "Independent development100, not formal benchmark or stable seed evidence."
+}
