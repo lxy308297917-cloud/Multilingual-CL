@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-10-20T12:46:27.059238",
+  "language": "sw",
+  "protocol": "project_SW_component_clip_one_factor_v1",
+  "queue_phase": "running",
+  "published_reference_clip": 0.05,
+  "actual_clip": null,
+  "core_loss_replaced": false,
+  "official_supported_flag": "--jsd_token_clip 0",
+  "planned_updates": 20,
+  "scheduler_horizon": 100,
+  "exposures": 640,
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "seed": 42,
+  "initial_adapter_and_inference_weights_match_clipped_reference": true,
+  "matched_reference_training_and_development_complete": true,
+  "reference_dev_correct_out_of100": 10,
+  "Base_dev_correct_out_of100": 6,
+  "first_batched_generation": {
+    "global_step": 0,
+    "rollouts": 32,
+    "generated_tokens": 54755,
+    "generation_seconds": 30.25132019072771
+  },
+  "last_microstep": {
+    "global_step": 0,
+    "micro_step": 10,
+    "seconds": 1.9266851469874382,
+    "loss_finite": true
+  },
+  "scope": "Actual GPU training startup and exact initial weight identities verified; no unclipped development result or successful fix claim."
+}
