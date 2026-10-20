@@ -11,7 +11,13 @@
     "recoverable_checkpoints": 0,
     "directory_and_log_retained": true,
     "last_observed_operation": "vLLM wake weights/KV returned, then no further generation completion",
-    "root_cause": "Unknown. No logged Python traceback or CUDA OOM; OS denied prior read-only ptrace stack collection. Do not infer a specific CUDA/vLLM bug."
+    "root_cause": "Unknown. No logged Python traceback or CUDA OOM; OS denied prior read-only ptrace stack collection. Do not infer a specific CUDA/vLLM bug.",
+    "allocation_cost": {
+      "accounted_at": "2026-10-20T11:26:43.497428+08:00",
+      "single_GPU_job_clock_hours_approx": 10.979444444444445,
+      "hours_since_last_logged_progress_to_cancel_approx": 10.360277777777778,
+      "scope": "Queue job start to cancellation collection; includes model startup, CPU busy/wait and stalled GPU allocation, not active GPU compute hours. Pre-job reservation excluded. Retained in failed/cancelled costs, not silently charged to successful new JA training."
+    }
   },
   "new_run": {
     "runtime": "seeded_cost_batch_v2",
