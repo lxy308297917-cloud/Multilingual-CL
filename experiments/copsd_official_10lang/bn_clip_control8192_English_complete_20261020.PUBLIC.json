@@ -1,0 +1,82 @@
+{
+  "observed_at": "2026-10-20T20:24:49.603099",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_language": "bn",
+  "updates_each": 20,
+  "paired_English_development100": {
+    "clip": {
+      "base_correct": 77,
+      "adapter20_correct": 73,
+      "gained": 6,
+      "lost": 10,
+      "delta_correct": -4
+    },
+    "unclip": {
+      "base_correct": 77,
+      "adapter20_correct": 69,
+      "gained": 6,
+      "lost": 14,
+      "delta_correct": -8
+    }
+  },
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 428429,
+      "truncated": 17,
+      "normal_terminations": 83,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 661.9746270235628,
+      "model_load_seconds": 9.65354778803885,
+      "actual_max_num_seqs": 16
+    },
+    "clip": {
+      "items": 100,
+      "single_correct": 73,
+      "generated_tokens": 441378,
+      "truncated": 21,
+      "normal_terminations": 79,
+      "answer_extraction_failures": 15,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.73,
+      "generation_seconds": 1678.29482671991,
+      "model_load_seconds": 11.516538238152862,
+      "actual_max_num_seqs": 16
+    },
+    "unclip": {
+      "items": 100,
+      "single_correct": 69,
+      "generated_tokens": 393429,
+      "truncated": 14,
+      "normal_terminations": 86,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.69,
+      "generation_seconds": 1466.6344176605344,
+      "model_load_seconds": 10.886168761178851,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "actual_parents_exit0_fixed_checkpoints_inputs_prompts_seeds_configs_and_raw_counts_verified": true,
+  "cost": {
+    "new_responses": 200,
+    "new_generated_tokens": 834807,
+    "new_generation_seconds": 3144.9292443804443,
+    "new_allocated_GPU_hours": 0.8902777777777777,
+    "cached_English_Base_excluded": true,
+    "scope": "English supplement only. Same BN20 training runs as target-control report; no additional training."
+  },
+  "scope": "One training seed, independent-development100. Keep target benefits and English retention separate; not officialpass12/formal or stable-language selection."
+}
