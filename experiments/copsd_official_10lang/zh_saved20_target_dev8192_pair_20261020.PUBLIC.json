@@ -1,0 +1,57 @@
+{
+  "observed_at": "2026-10-20T19:03:43.616016",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_language": "zh",
+  "checkpoint_step": 20,
+  "paired_development100": {
+    "base_correct": 66,
+    "adapter20_correct": 69,
+    "gained": 11,
+    "lost": 8,
+    "delta_correct": 3
+  },
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 66,
+      "generated_tokens": 411575,
+      "truncated": 18,
+      "normal_terminations": 82,
+      "answer_extraction_failures": 18,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.66,
+      "generation_seconds": 540.5487179029733,
+      "model_load_seconds": 9.740757932886481,
+      "actual_max_num_seqs": 16
+    },
+    "ZH20": {
+      "items": 100,
+      "single_correct": 69,
+      "generated_tokens": 339577,
+      "truncated": 10,
+      "normal_terminations": 90,
+      "answer_extraction_failures": 6,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.69,
+      "generation_seconds": 1417.09552561678,
+      "model_load_seconds": 10.575771046802402,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "actual_parents_exit0_expected_checkpoint_inputs_prompts_seeds_configs_and_raw_counts_verified": true,
+  "English_retention": "queued, not yet paired",
+  "cost": {
+    "new_responses": 200,
+    "new_generated_tokens": 751152,
+    "new_generation_seconds": 1957.6442435197532,
+    "new_allocated_GPU_hours": 0.5591666666666667,
+    "scope": "Same two runs already included in the planned full candidate report; do not double-count this partial report."
+  },
+  "scope": "Exploratory independent-development100 at8192; one training seed and target-only result. Not stable three-language selection or formal/pass12."
+}
