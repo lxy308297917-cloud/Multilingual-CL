@@ -1,0 +1,252 @@
+{
+  "observed_at": "2026-10-20T14:09:08.798862+08:00",
+  "training_language": "es",
+  "model": "Qwen3-1.7B",
+  "checkpoint_selection": "Fixed100-update reference",
+  "protocol": "project_single_vllm_v1",
+  "formal_full_tests": true,
+  "parent_suite_phase": "completed",
+  "parent_suite_exit_code": 0,
+  "pairs": [
+    {
+      "benchmark": "mgsm_rev2",
+      "evaluation_language": "es",
+      "items": 250,
+      "metrics": [
+        {
+          "generated_tokens": 199340,
+          "normal_terminations": 232,
+          "truncated": 18,
+          "answer_extraction_failures": 15,
+          "single_correct": 202,
+          "pass_n_correct": 202,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.808,
+          "pass_n": 0.808,
+          "n": 1,
+          "model_load_seconds": 9.953164217993617,
+          "generation_seconds": 66.04995962232351,
+          "evaluation_seconds": 66.66132917068899,
+          "generated_tokens_per_generation_second": 3018.018499024596,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 344673,
+          "normal_terminations": 173,
+          "truncated": 77,
+          "answer_extraction_failures": 40,
+          "single_correct": 167,
+          "pass_n_correct": 167,
+          "items": 250,
+          "generation_count": 250,
+          "single_accuracy": 0.668,
+          "pass_n": 0.668,
+          "n": 1,
+          "model_load_seconds": 10.81070121563971,
+          "generation_seconds": 229.0362107399851,
+          "evaluation_seconds": 229.6973182093352,
+          "generated_tokens_per_generation_second": 1504.8843101551847,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": -35,
+      "delta_percentage_points": -14.000000000000002,
+      "paired_counts": {
+        "gained": 14,
+        "lost": 49,
+        "retained": 153
+      },
+      "configs_equal_except_adapter_output": true,
+      "problem_ids_questions_answers_prompts_match": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "difficulty_counts_recomputed_from_items": false,
+      "Base_reused_from_existing_formal_run": false
+    },
+    {
+      "benchmark": "polymath",
+      "evaluation_language": "es",
+      "items": 500,
+      "metrics": [
+        {
+          "generated_tokens": 853530,
+          "normal_terminations": 148,
+          "truncated": 352,
+          "answer_extraction_failures": 322,
+          "single_correct": 124,
+          "pass_n_correct": 124,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.248,
+          "pass_n": 0.248,
+          "n": 1,
+          "model_load_seconds": 9.644667206332088,
+          "generation_seconds": 350.76092853955925,
+          "evaluation_seconds": 355.5068565029651,
+          "generated_tokens_per_generation_second": 2433.3668050024503,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 97,
+              "single_accuracy": 0.776
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 20,
+              "single_accuracy": 0.16
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 6,
+              "single_accuracy": 0.048
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 1,
+              "single_accuracy": 0.008
+            }
+          }
+        },
+        {
+          "generated_tokens": 944806,
+          "normal_terminations": 92,
+          "truncated": 408,
+          "answer_extraction_failures": 364,
+          "single_correct": 90,
+          "pass_n_correct": 90,
+          "items": 500,
+          "generation_count": 500,
+          "single_accuracy": 0.18,
+          "pass_n": 0.18,
+          "n": 1,
+          "model_load_seconds": 10.937376860529184,
+          "generation_seconds": 593.028457859531,
+          "evaluation_seconds": 596.8157668914646,
+          "generated_tokens_per_generation_second": 1593.188298939599,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 80,
+              "single_accuracy": 0.64
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 10,
+              "single_accuracy": 0.08
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            }
+          }
+        }
+      ],
+      "delta_correct": -34,
+      "delta_percentage_points": -6.800000000000001,
+      "paired_counts": {
+        "gained": 10,
+        "lost": 44,
+        "retained": 80
+      },
+      "configs_equal_except_adapter_output": true,
+      "problem_ids_questions_answers_prompts_match": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "difficulty_counts_recomputed_from_items": true,
+      "Base_reused_from_existing_formal_run": false
+    },
+    {
+      "benchmark": "gsm8k",
+      "evaluation_language": "en",
+      "items": 1319,
+      "metrics": [
+        {
+          "generated_tokens": 1234772,
+          "normal_terminations": 1181,
+          "truncated": 138,
+          "answer_extraction_failures": 108,
+          "single_correct": 1113,
+          "pass_n_correct": 1113,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.8438210765731615,
+          "pass_n": 0.8438210765731615,
+          "n": 1,
+          "model_load_seconds": 10.681749437004328,
+          "generation_seconds": 426.92153029330075,
+          "evaluation_seconds": 429.1413431689143,
+          "generated_tokens_per_generation_second": 2892.2692166677452,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        },
+        {
+          "generated_tokens": 1497154,
+          "normal_terminations": 1071,
+          "truncated": 248,
+          "answer_extraction_failures": 184,
+          "single_correct": 1039,
+          "pass_n_correct": 1039,
+          "items": 1319,
+          "generation_count": 1319,
+          "single_accuracy": 0.7877179681576952,
+          "pass_n": 0.7877179681576952,
+          "n": 1,
+          "model_load_seconds": 11.236888026818633,
+          "generation_seconds": 719.0343590080738,
+          "evaluation_seconds": 721.4437429271638,
+          "generated_tokens_per_generation_second": 2082.1730995795,
+          "protocol": "project_single_vllm_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "scores_by_difficulty": {}
+        }
+      ],
+      "delta_correct": -74,
+      "delta_percentage_points": -5.610310841546628,
+      "paired_counts": {
+        "gained": 56,
+        "lost": 130,
+        "retained": 983
+      },
+      "configs_equal_except_adapter_output": true,
+      "problem_ids_questions_answers_prompts_match": true,
+      "same_frozen_per_question_seed_rule": true,
+      "per_sample_seed_field_saved": false,
+      "difficulty_counts_recomputed_from_items": false,
+      "Base_reused_from_existing_formal_run": true
+    }
+  ],
+  "new_run_cost": {
+    "engine_processes": 5,
+    "generated_responses": 2819,
+    "generated_tokens": 3839503,
+    "generation_seconds": 1957.9099157694727,
+    "evaluation_seconds_including_grading_and_output": 1970.1250137016177,
+    "cached_English_Base_generation_not_repeated": true,
+    "job_wall_seconds_to_queue_collection_approx": 2079.0,
+    "single_GPU_hours_job_clock_approx": 0.5775,
+    "scope": "Five new evaluators. Parent job clock includes startup/grading and queue exit collection; excludes reservation preparation and queue waiting. Engine generation/evaluation timings exclude model cold startup. Evaluation includes output, not isolated grader CPU time."
+  },
+  "scope": "Frozen formal report only; not language/checkpoint selection or sequential forgetting evidence. Cached English Base is excluded from new costs."
+}
