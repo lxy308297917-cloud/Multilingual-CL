@@ -1,0 +1,117 @@
+{
+  "observed_at": "2026-10-20T18:02:24.341182",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "language": "en",
+  "training_language": "sw",
+  "correct_out_of100": {
+    "base": 77,
+    "clip20": 77,
+    "unclip20": 72,
+    "reverse20": 77
+  },
+  "metrics": {
+    "base": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 428429,
+      "truncated": 17,
+      "normal_terminations": 83,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 661.9746270235628,
+      "model_load_seconds": 9.65354778803885,
+      "actual_max_num_seqs": 16
+    },
+    "clip20": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 452886,
+      "truncated": 16,
+      "normal_terminations": 84,
+      "answer_extraction_failures": 11,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 1698.7399581018835,
+      "model_load_seconds": 11.276882041245699,
+      "actual_max_num_seqs": 16
+    },
+    "unclip20": {
+      "items": 100,
+      "single_correct": 72,
+      "generated_tokens": 434064,
+      "truncated": 19,
+      "normal_terminations": 81,
+      "answer_extraction_failures": 17,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.72,
+      "generation_seconds": 1851.6212945636362,
+      "model_load_seconds": 10.924910547211766,
+      "actual_max_num_seqs": 16
+    },
+    "reverse20": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 444625,
+      "truncated": 19,
+      "normal_terminations": 81,
+      "answer_extraction_failures": 17,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 1627.957945447415,
+      "model_load_seconds": 10.870768539607525,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "paired_changes": {
+    "base_to_clip20": {
+      "gained": 7,
+      "lost": 7,
+      "delta_correct": 0
+    },
+    "base_to_unclip20": {
+      "gained": 6,
+      "lost": 11,
+      "delta_correct": -5
+    },
+    "base_to_reverse20": {
+      "gained": 7,
+      "lost": 7,
+      "delta_correct": 0
+    },
+    "clip20_to_unclip20": {
+      "gained": 10,
+      "lost": 15,
+      "delta_correct": -5
+    },
+    "unclip20_to_reverse20": {
+      "gained": 10,
+      "lost": 5,
+      "delta_correct": 5
+    }
+  },
+  "all_parent_queues_exit0_and_actual_scheduler_verified": true,
+  "initial_training_adapter_inference_policy_and_20update_budget_matched": true,
+  "evaluation_inputs_prompts_seeds_configs_and_raw_counts_paired": true,
+  "cost": {
+    "model_loads": 4,
+    "responses": 400,
+    "generated_tokens": 1760004,
+    "generation_seconds": 5840.293825136498,
+    "allocated_GPU_hours_job_clocks_sum": 1.6536111111111111,
+    "new_training": false
+  },
+  "scope": "Independent development100, one training seed; saved clipped/unclipped/direction controls at the same8192 budget. Projectn1, not officialpass12 or formal-test evidence. No stable multilingual or sequential effect established."
+}
