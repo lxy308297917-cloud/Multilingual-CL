@@ -60,7 +60,16 @@ def main():
             'student_forward_cuda_seconds':cost['student_forward_cuda_seconds']})
     assert proofs[0]['syncs'][0]['adapter_hash']==proofs[1]['syncs'][0]['adapter_hash']
     assert proofs[0]['syncs'][0]['engine_hash']==proofs[1]['syncs'][0]['engine_hash']
-    assert adapter_configs[0]==adapter_configs[1]
+    # PEFT serializes target_modules from a set; JSON list order can differ.
+    adapter_serialization_differences=[k for k in adapter_configs[0]
+        if adapter_configs[0].get(k)!=adapter_configs[1].get(k)]
+    canonical_adapters=[]
+    for config in adapter_configs:
+        canonical=dict(config)
+        for field in ['target_modules','exclude_modules','modules_to_save']:
+            if isinstance(canonical.get(field),list):canonical[field]=sorted(canonical[field])
+        canonical_adapters.append(canonical)
+    assert canonical_adapters[0]==canonical_adapters[1]
     fields=['learning_rate','max_grad_norm','per_device_train_batch_size',
         'gradient_accumulation_steps','max_steps','seed','data_seed','optim',
         'lr_scheduler_type','lr_scheduler_kwargs','warmup_steps','warmup_ratio',
@@ -101,6 +110,7 @@ def main():
         'source_script_and_completed_exit0_verified':True,
         'initial_adapter_and_inference_weights_match':True,
         'saved_adapter_configs_loss_temperature_and_initialization_seed_match':True,
+        'adapter_serialization_order_differences':adapter_serialization_differences,
         'scientific_training_args_compared':fields,
         'development_inputs_prompts_seeds_configs_match':True,
         'new_core_loss_implementation':False,'clip_only_scientific_factor':True,
