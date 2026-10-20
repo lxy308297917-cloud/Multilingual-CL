@@ -1,0 +1,74 @@
+{
+  "observed_at": "2026-10-20T10:32:58.825514+08:00",
+  "language": "bn",
+  "protocol": "project_dev_single_vllm_v1",
+  "source": "Existing paired held-out100 Base/final outputs; CPU GlotLID, no new generation",
+  "target_label": "__label__ben_Beng",
+  "models": [
+    {
+      "model": "Base",
+      "math_correct": 8,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 100
+          },
+          "target_top1_probability_ge_0_8": 99,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 8
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 22,
+            "no_final_section": 78
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 20,
+            "__label__mni_Beng": 2
+          },
+          "target_top1_probability_ge_0_8": 20,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 7,
+            "no_final_section": 1
+          }
+        }
+      }
+    },
+    {
+      "model": "checkpoint100",
+      "math_correct": 0,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 100
+          },
+          "target_top1_probability_ge_0_8": 100,
+          "correct_items_label_counts": {}
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "no_final_section": 98,
+            "predicted": 2
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 2
+          },
+          "target_top1_probability_ge_0_8": 2,
+          "correct_items_label_counts": {}
+        }
+      }
+    }
+  ],
+  "scope": "Language identification after math/control stripping with minimum20 alphabetic characters; not fluency, coherence or mathematical correctness. Original official math scores unchanged, no causal claim."
+}
