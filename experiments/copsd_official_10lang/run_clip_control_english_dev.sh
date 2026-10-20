@@ -29,7 +29,13 @@ for k in ['input','source']:
  assert hashlib.sha256(Path(c[k]).read_bytes()).hexdigest()==c[k+'_sha256' if k=='input' else 'official_source_sha256']
 print('Completed pair and cached English Base identity verified.',flush=True)
 CHECK
-bash "$script_dir/run_dev_vllm_17b.sh" en adapter "$ref_id" "$ref"
+if [[ -d "$root/logs/copsd_official_10lang/development_vllm/$ref_id" ]]; then
+  # Actual cached metrics and all pair identities are checked by PAIR below.
+  test -s "$root/logs/copsd_official_10lang/development_vllm/$ref_id/DONE.json"
+  printf 'Reusing completed clipped English development; no repeated generation.\n'
+else
+  bash "$script_dir/run_dev_vllm_17b.sh" en adapter "$ref_id" "$ref"
+fi
 bash "$script_dir/run_dev_vllm_17b.sh" en adapter "$alt_id" "$alt"
 CUDA_VISIBLE_DEVICES='' "$python_bin" - "$root" "$base_id" "$ref_id" "$alt_id" <<'PAIR'
 import json,sys
@@ -53,7 +59,7 @@ result={'protocol':'project_dev_single_vllm_v1','language':'en','training_langua
  'metrics':dict(zip(['Base','clipped20','unclipped20'],metrics)),
  'inputs_prompts_answers_saved_seeds_and_configs_paired':True,
  'new_inference':{'responses':200,'generated_tokens':sum(m['generated_tokens'] for m in metrics[1:]),
- 'generation_seconds':sum(m['generation_seconds'] for m in metrics[1:]),'cached_Base_cost_excluded':True},
+ 'generation_seconds':sum(m['generation_seconds'] for m in metrics[1:]),'cached_Base_cost_excluded':True,'clipped_reference_generated_in_separate_earlier_job_if_cached':True},
  'scope':'English independent development supplement on the same original100 problems; not GSM8K formal test, stable effect or sequential forgetting.'}
 with output.open('x') as f:json.dump(result,f,indent=2);f.write('\n')
 print(json.dumps(result['correct_out_of100']),flush=True)
