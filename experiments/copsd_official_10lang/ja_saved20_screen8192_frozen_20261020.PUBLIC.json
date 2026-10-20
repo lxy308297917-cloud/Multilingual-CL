@@ -1,0 +1,33 @@
+{
+  "frozen_at": "2026-10-20T21:08:26.370223",
+  "scope": "Uniform JA saved20 target/English development screen from the still-running repairedJA100 reference. No training interruption, restart or new training; not completed100 effects or final language selection.",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "checkpoint_step": 20,
+  "training_horizon": 100,
+  "saved_checkpoint_loss_calls": 640,
+  "adapter_sha256": "4e727d85c81e3bc8e037261735446565c385e5d5ad7da049a699c2bd78a1aa8e",
+  "development_sha256": "8e555949c37c879f65e7b8e326c3ec19eadf95a9cb6fc3b0037471b6b92a41cf",
+  "model": "Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "development_items_each": 100,
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "evaluation_seed": 42,
+  "fresh_JA_Base8192": true,
+  "cached_English_Base77_reused": true,
+  "training_data_repair_reference": "ja_nonefixed_single_frozen_20261020.PUBLIC.json",
+  "run_ids": {
+    "Base": "ja_v4_saved20_base_dev100_8192_20261020_v1",
+    "target20": "ja_v4_saved20_target_dev100_8192_20261020_v1",
+    "English20": "ja_v4_saved20_English_dev100_8192_20261020_v1"
+  },
+  "queue": "copsd-ja-saved20-screen8192-v4",
+  "max_user_gpus": 4,
+  "no_automatic_failure_retry": true,
+  "code_sha256": {
+    "run_ja_saved20_screen8192.sh": "f44ccb2caa5b982169735c3d7aa49850a6349b554e3d10218c678f59522d36d8",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1"
+  }
+}
