@@ -1,0 +1,62 @@
+{
+  "observed_at": "2026-10-20T18:22:02.988963",
+  "scope": "Actual matched BN-control and independent SW-seed replication startup; finite losses are engineering evidence, not downstream efficacy.",
+  "BN_branches_initial_adapter_and_inference_identical": true,
+  "SW43_initial_adapter_different_but_initial_inference_same_Base": true,
+  "initialization_caveat": "LoRA initialization changes adapter parameters with seed; zero initial B leaves the effective initial Base policy identical.",
+  "max_user_gpus": 4,
+  "runs": {
+    "BN_clip": {
+      "queue": "copsd-bn-clip20-dev8192-v1",
+      "parent_live_and_owned": true,
+      "initial_adapter_hash": "b0c5de3173efa50478c7eb50c75e5277403bb8c080c43e4cd368e09940921f6e",
+      "initial_inference_hash": "94f89957152f413bd10682509f1a524552fc74aa214bea8483bee2c5f82a269e",
+      "budget": {
+        "scheduler_horizon": 100,
+        "stop_after_updates": 20,
+        "fresh_Base": true,
+        "seed": 42,
+        "data_seed": 42
+      },
+      "last_observed_micro": 220,
+      "all_observed_losses_finite": true,
+      "completed": false,
+      "actual_beta": 0,
+      "actual_clip": 0.05
+    },
+    "BN_unclip": {
+      "queue": "copsd-bn-unclip20-dev8192-v1",
+      "parent_live_and_owned": true,
+      "initial_adapter_hash": "b0c5de3173efa50478c7eb50c75e5277403bb8c080c43e4cd368e09940921f6e",
+      "initial_inference_hash": "94f89957152f413bd10682509f1a524552fc74aa214bea8483bee2c5f82a269e",
+      "budget": {
+        "scheduler_horizon": 100,
+        "stop_after_updates": 20,
+        "fresh_Base": true,
+        "seed": 42,
+        "data_seed": 42
+      },
+      "last_observed_micro": 128,
+      "all_observed_losses_finite": true,
+      "completed": false,
+      "actual_beta": 0,
+      "actual_clip": null
+    },
+    "SW_seed43": {
+      "queue": "copsd-sw-seed43-prefix20-dev8192-v1",
+      "parent_live_and_owned": true,
+      "initial_adapter_hash": "fd89110f11129da05ca54c1cc4d3d0885bba2c86c4e0469b3a1c95334bb04d61",
+      "initial_inference_hash": "94f89957152f413bd10682509f1a524552fc74aa214bea8483bee2c5f82a269e",
+      "budget": {
+        "scheduler_horizon": 100,
+        "stop_after_updates": 20,
+        "fresh_Base": true,
+        "seed": 43,
+        "data_seed": 43
+      },
+      "last_observed_micro": 93,
+      "all_observed_losses_finite": true,
+      "completed": false
+    }
+  }
+}
