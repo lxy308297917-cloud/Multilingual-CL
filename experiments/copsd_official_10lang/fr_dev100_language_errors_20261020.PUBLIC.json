@@ -1,0 +1,93 @@
+{
+  "observed_at": "2026-10-20T10:18:11.527915+08:00",
+  "language": "fr",
+  "protocol": "project_dev_single_vllm_v1",
+  "source": "Existing held-out dev100 saved outputs; CPU language/transition analysis, no new generation",
+  "target_label": "__label__fra_Latn",
+  "method": "Existing GlotLID math/control stripping, minimum20 alphabetic characters; language ID is not fluency or math quality",
+  "models": [
+    {
+      "model": "Base",
+      "math_correct": 32,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__fra_Latn": 46,
+            "__label__eng_Latn": 53,
+            "__label__sco_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 46,
+          "correct_items_label_counts": {
+            "__label__fra_Latn": 16,
+            "__label__eng_Latn": 16
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 42,
+            "no_final_section": 57,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__fra_Latn": 42
+          },
+          "target_top1_probability_ge_0_8": 40,
+          "correct_items_label_counts": {
+            "__label__fra_Latn": 31,
+            "no_final_section": 1
+          }
+        }
+      }
+    },
+    {
+      "model": "checkpoint100_seeded_v2",
+      "math_correct": 10,
+      "summary": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 4,
+            "__label__fra_Latn": 96
+          },
+          "target_top1_probability_ge_0_8": 96,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 3,
+            "__label__fra_Latn": 7
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 13,
+            "no_final_section": 87
+          },
+          "top1_label_counts": {
+            "__label__fra_Latn": 13
+          },
+          "target_top1_probability_ge_0_8": 12,
+          "correct_items_label_counts": {
+            "__label__fra_Latn": 6,
+            "no_final_section": 4
+          }
+        }
+      }
+    }
+  ],
+  "answer_transition_diagnostics": {
+    "lost_no_extracted_answer": 20,
+    "lost_with_extracted_unaccepted_answer": 3,
+    "gained_from_no_extracted_answer": 1,
+    "gained_from_extracted_unaccepted_answer": 0
+  },
+  "private_changed_examples_saved": 24,
+  "official_whole_output_math_score_unchanged": true,
+  "scope": "Transitions use original official grader, not human semantic ground truth. No causal explanation or corrected ranking claimed."
+}
