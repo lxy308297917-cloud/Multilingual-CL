@@ -85,12 +85,25 @@
   ],
   "answer_transition_diagnostics": {
     "lost_no_extracted_answer": 13,
-    "lost_with_extracted_wrong_answer": 10,
     "gained_from_no_extracted_answer": 2,
-    "gained_from_extracted_wrong_answer": 4,
-    "changed_examples_private_record_count": 29
+    "changed_examples_private_record_count": 29,
+    "lost_with_extracted_unaccepted_answer": 10,
+    "gained_from_extracted_unaccepted_answer": 4,
+    "category_definition": "Lost/gained are transitions under the unchanged official scorer, not a complete semantic judgement."
   },
   "finding": "Thinking target-label count84 to99 while math39 to22; no evidence that increased English-language drift explains this regression. Missing final section40 to61. Language ID is not fluency or reasoning correctness; no causal training mechanism identified.",
   "private_error_examples_saved": true,
-  "official_whole_output_math_score_unchanged": true
+  "official_whole_output_math_score_unchanged": true,
+  "qualitative_spotcheck": {
+    "reviewed_first_three_extracted_lost_examples": 3,
+    "semantically_equivalent_paraphrase_rejected": 1,
+    "clearly_different_answers": 2,
+    "anonymous_equivalence_example": {
+      "gold": "MB = NB",
+      "trained_boxed_text": "M und N sind von B gleich weit entfernt.",
+      "meaning": "M and N are equally far from B.",
+      "official_grade": false
+    },
+    "scope": "A limited semantic spot-check, not an estimate of all grader errors. Original39/100 and22/100 remain unchanged; no post-hoc corrected accuracy or ranking is claimed."
+  }
 }
