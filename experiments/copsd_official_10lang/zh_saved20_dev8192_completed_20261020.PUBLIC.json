@@ -1,0 +1,100 @@
+{
+  "observed_at": "2026-10-20T20:00:50.795969",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_language": "zh",
+  "checkpoint_step": 20,
+  "paired_development100": {
+    "target": {
+      "base_correct": 66,
+      "adapter20_correct": 69,
+      "gained": 11,
+      "lost": 8,
+      "delta_correct": 3
+    },
+    "English": {
+      "base_correct": 77,
+      "adapter20_correct": 72,
+      "gained": 7,
+      "lost": 12,
+      "delta_correct": -5
+    }
+  },
+  "metrics": {
+    "base": {
+      "items": 100,
+      "single_correct": 66,
+      "generated_tokens": 411575,
+      "truncated": 18,
+      "normal_terminations": 82,
+      "answer_extraction_failures": 18,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.66,
+      "generation_seconds": 540.5487179029733,
+      "model_load_seconds": 9.740757932886481,
+      "actual_max_num_seqs": 16
+    },
+    "early20": {
+      "items": 100,
+      "single_correct": 69,
+      "generated_tokens": 339577,
+      "truncated": 10,
+      "normal_terminations": 90,
+      "answer_extraction_failures": 6,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.69,
+      "generation_seconds": 1417.09552561678,
+      "model_load_seconds": 10.575771046802402,
+      "actual_max_num_seqs": 16
+    },
+    "early20_en": {
+      "items": 100,
+      "single_correct": 72,
+      "generated_tokens": 378720,
+      "truncated": 18,
+      "normal_terminations": 82,
+      "answer_extraction_failures": 14,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.72,
+      "generation_seconds": 1479.4395997337997,
+      "model_load_seconds": 11.202270146459341,
+      "actual_max_num_seqs": 16
+    },
+    "English_Base": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 428429,
+      "truncated": 17,
+      "normal_terminations": 83,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 661.9746270235628,
+      "model_load_seconds": 9.65354778803885,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "actual_parents_exit0_fixed_checkpoints_raw_counts_configs_prompts_and_seeds_verified": true,
+  "common_original_IDs_gold_across_target_English_verified": true,
+  "cost": {
+    "new_responses": 300,
+    "new_generated_tokens": 1129872,
+    "new_generation_seconds": 3437.083843253553,
+    "new_allocated_GPU_hours": 0.9780555555555556,
+    "cached_English_Base_excluded": true,
+    "new_training": false,
+    "accounting_caveat": "Same frozen candidate eval runs as target-only partial reports; do not sum overlapping reports as additional inference."
+  },
+  "scope": "Exploratory budget correction of previously development-selected saved20-update checkpoints; one training seed. Not final three-language selection, formal test, officialpass12, or sequential evidence."
+}
