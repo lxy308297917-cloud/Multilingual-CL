@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-10-20T20:32:33.227633",
+  "scope": "JA repaired independent100-update reference actual startup; finite loss is engineering evidence only, not math effectiveness or completed training.",
+  "run_id": "ja_17b_project2900_prefixrepair_nonefixed_seed42_20261020_v4",
+  "queue_alias": "copsd-ja-repaired-v3",
+  "actual_parent_live_and_owned": true,
+  "allocated_GPU_indices": [
+    3
+  ],
+  "initial_adapter_and_inference_match_completed_seed42_reference": true,
+  "known_allocator_compatibility_active_process_local_only": true,
+  "last_observed_microstep": 160,
+  "last_observed_optimizer_step_before_this_micro": 4,
+  "all_observed_losses_finite": true,
+  "max_user_gpus": 4,
+  "training_complete": false,
+  "formal_or_final_effects": null,
+  "frozen_protocol": "ja_nonefixed_single_frozen_20261020.PUBLIC.json"
+}
