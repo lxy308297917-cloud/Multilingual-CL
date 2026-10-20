@@ -1,0 +1,50 @@
+{
+  "frozen_at": "2026-10-20T18:13:30.696874",
+  "scope": "Independent training-seed repeat of the official-clipped freshSW20 development signal, before stable language selection; no new algorithm.",
+  "training_seed": 43,
+  "data_seed": 43,
+  "evaluation_seed": 42,
+  "model": "Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "official_source": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "updates": 20,
+  "scheduler_horizon": 100,
+  "exposures": 640,
+  "training_completion_budget": 2048,
+  "effective_batch": 32,
+  "micro_batch": 1,
+  "gradient_accumulation": 32,
+  "optimizer": "AdamW torch fused",
+  "learning_rate": 5e-06,
+  "beta": 0,
+  "component_clip": 0.05,
+  "lora_rank": 64,
+  "lora_alpha": 128,
+  "fixed_original_Base_teacher": true,
+  "same_official_core_and_online_rollout": true,
+  "development": {
+    "languages": [
+      "sw",
+      "en"
+    ],
+    "items_each": 100,
+    "max_new_tokens": 8192,
+    "n": 1,
+    "seed": 42,
+    "max_num_seqs": 16,
+    "cached_Base_reused": true,
+    "formal_test": false
+  },
+  "seeding_caveat": "Both adapter initialization and training question shuffle change with seed43. Policies need not share exact online trajectories.",
+  "selection_caveat": "20-update configuration was chosen from independent seed42 development; not formal-test selection or an independent confirmatory multiseed study.",
+  "max_user_gpus": 4,
+  "no_extra_smoke": true,
+  "no_automatic_failure_retry": true,
+  "code_sha256": {
+    "run_sw_seed43_prefix20_dev8192.sh": "80ce8b5343230d9f8799c8b7409ebf733825c46d4efbf838ada491a803f1d65a",
+    "run_prefix20_17b.sh": "0bfc12449e90f300a76ac6c0e1f497246420f1bc90cf28f3bffba5ba3b8d5fc7",
+    "prefix20_entry.py": "81ba90b135cdd88288e15d89bcc621233a5d690ee6bcfbafab5e578e10a1b2e4",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1"
+  }
+}
