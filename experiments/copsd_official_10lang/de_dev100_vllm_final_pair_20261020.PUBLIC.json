@@ -1,0 +1,55 @@
+{
+  "observed_at": "2026-10-20T09:27:57.688787+08:00",
+  "language": "de",
+  "protocol": "project_dev_single_vllm_v1",
+  "development_items": 100,
+  "compared_models": [
+    "Base",
+    "checkpoint100_seeded_v2"
+  ],
+  "metrics": [
+    {
+      "items": 100,
+      "single_correct": 39,
+      "generated_tokens": 166965,
+      "normal_terminations": 46,
+      "truncated": 54,
+      "answer_extraction_failures": 41,
+      "single_accuracy": 0.39,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 63.99591991491616,
+      "model_load_seconds": 9.882645403966308,
+      "generated_tokens_per_generation_second": 2608.994451864795
+    },
+    {
+      "items": 100,
+      "single_correct": 22,
+      "generated_tokens": 188595,
+      "normal_terminations": 32,
+      "truncated": 68,
+      "answer_extraction_failures": 40,
+      "single_accuracy": 0.22,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 145.50351489894092,
+      "model_load_seconds": 13.325039841234684,
+      "generated_tokens_per_generation_second": 1296.1542553180805
+    }
+  ],
+  "configs_equal_except_adapter_output": true,
+  "problem_ids_questions_answers_prompts_and_sample_seeds_match": true,
+  "paired_counts": {
+    "gained": 6,
+    "lost": 23,
+    "retained": 16
+  },
+  "delta_percentage_points": -17,
+  "initial_LoRA_and_inference_weights_match_seeded_ZH": true,
+  "parent_pipeline_exit_code": 0,
+  "assessment": "Observed dev regression39/100 to22/100. v2 pre-PEFT seed was applied; original loss retained. Matching ZH initialization does not identify a causal language effect. No stable-three-language selection or sequential training gate passed."
+}
