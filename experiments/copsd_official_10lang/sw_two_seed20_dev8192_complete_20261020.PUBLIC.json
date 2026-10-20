@@ -1,0 +1,130 @@
+{
+  "observed_at": "2026-10-20T19:53:33.011397",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_language": "sw",
+  "updates_each": 20,
+  "scheduler_horizon": 100,
+  "exposures_each": 640,
+  "paired_development100": {
+    "42": {
+      "sw": {
+        "base_correct": 6,
+        "adapter20_correct": 18,
+        "gained": 14,
+        "lost": 2,
+        "delta_correct": 12
+      },
+      "en": {
+        "base_correct": 77,
+        "adapter20_correct": 77,
+        "gained": 7,
+        "lost": 7,
+        "delta_correct": 0
+      }
+    },
+    "43": {
+      "sw": {
+        "base_correct": 6,
+        "adapter20_correct": 13,
+        "gained": 10,
+        "lost": 3,
+        "delta_correct": 7
+      },
+      "en": {
+        "base_correct": 77,
+        "adapter20_correct": 74,
+        "gained": 4,
+        "lost": 7,
+        "delta_correct": -3
+      }
+    }
+  },
+  "metrics": {
+    "42": {
+      "sw": {
+        "items": 100,
+        "single_correct": 18,
+        "generated_tokens": 441808,
+        "truncated": 40,
+        "normal_terminations": 60,
+        "answer_extraction_failures": 37,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.18,
+        "generation_seconds": 1709.6032475363463,
+        "model_load_seconds": 11.343001736328006,
+        "actual_max_num_seqs": 16
+      },
+      "en": {
+        "items": 100,
+        "single_correct": 77,
+        "generated_tokens": 452886,
+        "truncated": 16,
+        "normal_terminations": 84,
+        "answer_extraction_failures": 11,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.77,
+        "generation_seconds": 1698.7399581018835,
+        "model_load_seconds": 11.276882041245699,
+        "actual_max_num_seqs": 16
+      }
+    },
+    "43": {
+      "sw": {
+        "items": 100,
+        "single_correct": 13,
+        "generated_tokens": 385568,
+        "truncated": 31,
+        "normal_terminations": 69,
+        "answer_extraction_failures": 27,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.13,
+        "generation_seconds": 1518.2294933125377,
+        "model_load_seconds": 11.099627876654267,
+        "actual_max_num_seqs": 16
+      },
+      "en": {
+        "items": 100,
+        "single_correct": 74,
+        "generated_tokens": 450586,
+        "truncated": 19,
+        "normal_terminations": 81,
+        "answer_extraction_failures": 16,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.74,
+        "generation_seconds": 1651.4317470211536,
+        "model_load_seconds": 11.345822541043162,
+        "actual_max_num_seqs": 16
+      }
+    }
+  },
+  "training_and_eval_cost_by_existing_run": {
+    "42": {
+      "training_seconds": 2521.2139749284834,
+      "training_generated_valid_tokens": 1179275,
+      "SW_EN_generated_tokens": 894694,
+      "SW_EN_generation_seconds": 3408.34320563823
+    },
+    "43": {
+      "training_seconds": 2518.41947963275,
+      "training_generated_valid_tokens": 1160329,
+      "SW_EN_generated_tokens": 836154,
+      "SW_EN_generation_seconds": 3169.6612403336912,
+      "unique_train_SW_EN_parent_GPU_hours": 1.6180555555555556
+    }
+  },
+  "all_actual_parents_exit0_expected_checkpoints_inputs_prompts_seeds_configs_raw_counts_and_common_original_IDs_verified": true,
+  "accounting_caveat": "Same frozen seed42 and seed43 runs as earlier reports. Base/seed42 cached, no additional training. Seed43 pipeline clock counts its single train+two-eval parent once, not twice; do not sum overlapping partial reports.",
+  "scope": "Exploratory two-training-seed development replication;20-update choice used seed42 development, seed43 changes initialization and training shuffle. Not independent formal confirmation, officialpass12, final three-language selection, or sequential evidence."
+}
