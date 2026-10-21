@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-21T12:22:00.055117",
+  "reason": "Prioritize the queued controlled ZH43 development repeat for language-selection evidence before long formal suites.",
+  "paused_waiting_monitors": [
+    "copsd-sw20-formal8192-confirm-v1",
+    "copsd-sw20-formal8192-seed43-v1",
+    "copsd-te100-complete-formal-v1"
+  ],
+  "resume_condition": "Manually restart these same three monitors once ZH43 has acquired a GPU; no user-stopped tasks are resumed.",
+  "running_experiments_cancelled": false,
+  "max_user_gpus": 4,
+  "completed_at": "2026-10-21T12:24:16.332809",
+  "ZH43_phase": "running",
+  "ZH43_GPU_indices": [
+    3
+  ],
+  "all_three_waiting_monitors_restarted": true
+}
