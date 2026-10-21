@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-10-21T16:08:25.727000",
+  "collector_sha256": "5dcf2e58ac8c595fd8a8677a42bb91052d677ad358ff9f88cb6aae6311ba58b6",
+  "cached_Base_results": {
+    "metrics": {
+      "generated_tokens": 2797919,
+      "normal_terminations": 614,
+      "truncated": 2386,
+      "answer_extraction_failures": 2364,
+      "single_correct": 6,
+      "pass_n_correct": 34,
+      "items": 250,
+      "generation_count": 3000,
+      "single_accuracy": 0.024,
+      "pass_n": 0.136,
+      "n": 12,
+      "model_load_seconds": 9.710334407165647,
+      "generation_seconds": 821.8315557334572,
+      "evaluation_seconds": 826.0572049748152,
+      "generated_tokens_per_generation_second": 3404.492052514278,
+      "protocol": "afrimgsm_release_vllm_v1",
+      "benchmark": "afrimgsm",
+      "formal_full_test": true,
+      "scores_by_difficulty": {}
+    },
+    "average_at12_correct_of3000": 90,
+    "majority_vote_at12_correct_of250": 20,
+    "source_sha256": {
+      "CONFIG.json": "cae25f72d0e1100de083f7d4321f6d2b6b375bc15b67d11c7fdf018743e65e1c",
+      "DONE.json": "8e50d739f235414f6f2aa6b36e7fd6447228527d96a30d5537f10632c71681ca",
+      "ITEMS.jsonl": "5e398b2c05a641326a43ef616b0ae43e79e027daac3c203599c87f5f22c95247",
+      "OFFICIAL_RESULTS.json": "e9611dc47f1511b80f795b11a01861a5be5ea41a07b80a75f87eeef83c5179e2"
+    }
+  },
+  "official3000_generation_records_matched": true,
+  "new_generation": false,
+  "scope": "Existing official Base output audit only; no SW20 adapter scores or pipeline completion claimed. Base cost remains excluded from new two-adapter evaluation cost."
+}
