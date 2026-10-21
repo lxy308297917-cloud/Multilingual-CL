@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-21T20:10:29.351523",
+  "queue": "copsd-te-teacher-conditioning8192-v1",
+  "phase": "running",
+  "launcher_pid": 139290,
+  "gpu_uuids": [
+    "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+  ],
+  "max_new_tokens": 8192,
+  "actual_max_num_seqs": 256,
+  "CPU_same_wrapper_preflight_exit0": true,
+  "same_prepared_prompt_sha256_as2048": "b3eefb2cd896296feef11384f5ae46b23acd1b9a6df57ae8ad57ae24d1d492ec",
+  "scope": "Finite diagnosis underway, no effect results, train updates or SFT labels."
+}

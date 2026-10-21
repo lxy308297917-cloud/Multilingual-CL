@@ -1,0 +1,34 @@
+{
+  "frozen_at": "2026-10-21T20:06:51.722769",
+  "protocol": "privileged_teacher_conditioning_length8192_v1",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "language": "te",
+  "question_IDs_and_official_collator_prompts_identical_to_2048": true,
+  "prepared_prompts_sha256": "b3eefb2cd896296feef11384f5ae46b23acd1b9a6df57ae8ad57ae24d1d492ec",
+  "conditions": [
+    "student",
+    "teacher"
+  ],
+  "items_each": 100,
+  "samples": 1,
+  "max_new_tokens": 8192,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "seed": 42,
+  "adapter": null,
+  "max_num_seqs_explicitly_passed": false,
+  "actual_max_num_seqs_will_be_saved": true,
+  "code_sha256": {
+    "run_te_teacher_conditioning8192.sh": "fae015a2ac4ae8cca28d3b344fc1ec24e33262183142302447528e80357f61dc",
+    "evaluate_teacher_conditioning8192.py": "bd90dde58c1870456ec47d8f8a93a82d94a8b14a628344571d65641179db5658",
+    "prepare_teacher_context_check.py": "e40cd5703c349707bfa45c6912c9f7375130529708e035756e143f6823d97a19",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9"
+  },
+  "reason": "At2048 same-collator student1/100 and privileged teacher13/100, both97 truncated. Determine whether a longer shared generation budget changes clean-context teacher advantage; do not change training yet.",
+  "analysis_policy": "Report both complete conditions; also grade first2048 generated tokens of each same long trajectory to partition answer availability, without claiming separate2048 runs are identical prefixes. No test or checkpoint selection, automatic extra seeds or new training based on partial outputs.",
+  "scope": "Finite generation diagnosis only, no training or target-language SFT labels. Even strong clean-context teacher performance would not verify supervision on wrong on-policy histories. Preserve2048 data and source unchanged.",
+  "censor_analysis_prepared_at": "2026-10-21T20:10:29.351797",
+  "censor_analysis_source_sha256": "b372e4f5c5ef6a4db80ed7472749257d15ddf0869c8e605651096cce83d7ada4"
+}
