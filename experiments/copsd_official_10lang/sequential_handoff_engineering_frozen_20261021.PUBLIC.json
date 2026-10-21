@@ -1,0 +1,29 @@
+{
+  "frozen_at": "2026-10-21T13:35:40.021819",
+  "run_id": "sw17b_stage_handoff20_to_local2_20261021_v1",
+  "queue": "copsd-stage-handoff-engineering-v1",
+  "engineering_only": true,
+  "new_updates": 2,
+  "scheduler_horizon": 100,
+  "parent_step": 20,
+  "parent_reused_without_retraining": true,
+  "language": "sw",
+  "source_pool_index": 0,
+  "source_pool_rows": 967,
+  "question_exposures": 64,
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "learning_rate": 5e-06,
+  "beta": 0,
+  "component_clip": 0.05,
+  "teacher": "Original frozen1.7B via disabled same student adapter",
+  "source_sha256": {
+    "sequential_stage_entry.py": "29a796f6430fc7a47e0e08538cc1b3dcad9163b9f5430b3df5a0c8cfe2791110",
+    "run_sequential_stage.sh": "c0747baa29d2135128827afbc883937d99a5bb1c0960c39ad9eb40c60bd8aaec",
+    "sequential_adapter.py": "dfc289435b43662fa4cf85fc1129d0cc3559344fdbc8a4e2a70042a0daebf744",
+    "build_stage_initial_reference.py": "5f11caa9bf2951403b069a59042d3e8ca7d35e4a040c759e66d09d686f6a924c"
+  },
+  "CPU_Trainer_reset_check": "sequential_Trainer_integration_CPU_20261021.PUBLIC.json",
+  "max_user_gpus": 4,
+  "scope": "Engineering-only GPU handoff planned from cached SW20 into two new local updates. Not research-stage language selection, a three-language sequence, disjoint-question evidence or effectiveness. Parent single used full2900 questions, so pool0 may overlap parent exposure. No extra starting-stage training. Production stages remain gated by frozen independent-development selection and parent seven-benchmark evaluation marker."
+}
