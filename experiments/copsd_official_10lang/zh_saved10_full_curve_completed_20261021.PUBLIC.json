@@ -1,0 +1,286 @@
+{
+  "observed_at": "2026-10-21T17:35:07.170241",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "prespecified_checkpoint_grid": [
+    0,
+    10,
+    20
+  ],
+  "results": {
+    "seed42": {
+      "zh": {
+        "correct_out_of100": {
+          "0": 66,
+          "10": 65,
+          "20": 69
+        },
+        "paired_comparisons": {
+          "Base_to10": {
+            "from_correct": 66,
+            "to_correct": 65,
+            "gained": 8,
+            "lost": 9,
+            "delta_correct": -1
+          },
+          "Base_to20": {
+            "from_correct": 66,
+            "to_correct": 69,
+            "gained": 11,
+            "lost": 8,
+            "delta_correct": 3
+          },
+          "10_to20": {
+            "from_correct": 65,
+            "to_correct": 69,
+            "gained": 12,
+            "lost": 8,
+            "delta_correct": 4
+          }
+        },
+        "metrics10": {
+          "items": 100,
+          "single_correct": 65,
+          "generated_tokens": 394227,
+          "truncated": 11,
+          "normal_terminations": 89,
+          "answer_extraction_failures": 9,
+          "protocol": "project_dev_single_vllm8192_v2",
+          "formal_test": false,
+          "n": 1,
+          "generation_count": 100,
+          "single_accuracy": 0.65,
+          "generation_seconds": 1487.4332818575203,
+          "model_load_seconds": 10.874053474515676,
+          "actual_max_num_seqs": 16
+        }
+      },
+      "en": {
+        "correct_out_of100": {
+          "0": 77,
+          "10": 74,
+          "20": 72
+        },
+        "paired_comparisons": {
+          "Base_to10": {
+            "from_correct": 77,
+            "to_correct": 74,
+            "gained": 7,
+            "lost": 10,
+            "delta_correct": -3
+          },
+          "Base_to20": {
+            "from_correct": 77,
+            "to_correct": 72,
+            "gained": 7,
+            "lost": 12,
+            "delta_correct": -5
+          },
+          "10_to20": {
+            "from_correct": 74,
+            "to_correct": 72,
+            "gained": 7,
+            "lost": 9,
+            "delta_correct": -2
+          }
+        },
+        "metrics10": {
+          "items": 100,
+          "single_correct": 74,
+          "generated_tokens": 400664,
+          "truncated": 15,
+          "normal_terminations": 85,
+          "answer_extraction_failures": 13,
+          "protocol": "project_dev_single_vllm8192_v2",
+          "formal_test": false,
+          "n": 1,
+          "generation_count": 100,
+          "single_accuracy": 0.74,
+          "generation_seconds": 1489.6176749877632,
+          "model_load_seconds": 10.63394146040082,
+          "actual_max_num_seqs": 16
+        }
+      }
+    },
+    "seed43": {
+      "zh": {
+        "correct_out_of100": {
+          "0": 66,
+          "10": 65,
+          "20": 64
+        },
+        "paired_comparisons": {
+          "Base_to10": {
+            "from_correct": 66,
+            "to_correct": 65,
+            "gained": 8,
+            "lost": 9,
+            "delta_correct": -1
+          },
+          "Base_to20": {
+            "from_correct": 66,
+            "to_correct": 64,
+            "gained": 9,
+            "lost": 11,
+            "delta_correct": -2
+          },
+          "10_to20": {
+            "from_correct": 65,
+            "to_correct": 64,
+            "gained": 13,
+            "lost": 14,
+            "delta_correct": -1
+          }
+        },
+        "metrics10": {
+          "items": 100,
+          "single_correct": 65,
+          "generated_tokens": 398097,
+          "truncated": 17,
+          "normal_terminations": 83,
+          "answer_extraction_failures": 13,
+          "protocol": "project_dev_single_vllm8192_v2",
+          "formal_test": false,
+          "n": 1,
+          "generation_count": 100,
+          "single_accuracy": 0.65,
+          "generation_seconds": 1538.6694396603853,
+          "model_load_seconds": 11.350675594061613,
+          "actual_max_num_seqs": 16
+        }
+      },
+      "en": {
+        "correct_out_of100": {
+          "0": 77,
+          "10": 75,
+          "20": 75
+        },
+        "paired_comparisons": {
+          "Base_to10": {
+            "from_correct": 77,
+            "to_correct": 75,
+            "gained": 4,
+            "lost": 6,
+            "delta_correct": -2
+          },
+          "Base_to20": {
+            "from_correct": 77,
+            "to_correct": 75,
+            "gained": 6,
+            "lost": 8,
+            "delta_correct": -2
+          },
+          "10_to20": {
+            "from_correct": 75,
+            "to_correct": 75,
+            "gained": 9,
+            "lost": 9,
+            "delta_correct": 0
+          }
+        },
+        "metrics10": {
+          "items": 100,
+          "single_correct": 75,
+          "generated_tokens": 384376,
+          "truncated": 15,
+          "normal_terminations": 85,
+          "answer_extraction_failures": 15,
+          "protocol": "project_dev_single_vllm8192_v2",
+          "formal_test": false,
+          "n": 1,
+          "generation_count": 100,
+          "single_accuracy": 0.75,
+          "generation_seconds": 1461.1371236424893,
+          "model_load_seconds": 10.70883197709918,
+          "actual_max_num_seqs": 16
+        }
+      }
+    }
+  },
+  "source_records": {
+    "seed42": {
+      "zh": {
+        "0": {
+          "run_id": "zh_base_candidate_dev100_8192_20261020_v1",
+          "raw_items_sha256": "97a4d35bc783f73ec0fa9f320b4f84584659ba9ce15c2a8bf9f9b197ea58e7ec",
+          "config_sha256": "24648c7962d846920520025d23a70dfd3110dcf5473e5554e30b9fb384ce25a2"
+        },
+        "10": {
+          "run_id": "zh_zh_saved10_seed42_dev100_8192_20261021_v1",
+          "raw_items_sha256": "bc1742e9729a569d84a67c0af2c1e0cfac81776930e6afec637431ba4116cf17",
+          "config_sha256": "a88f786f66e6f2c1fcc587db227d8a5c23711e0663117764501c67cc7f1db5e0"
+        },
+        "20": {
+          "run_id": "zh_early20_candidate_dev100_8192_20261020_v1",
+          "raw_items_sha256": "1708eb407293fe23c85d7518796422040ad145688e580a1305fe406a770a2ffa",
+          "config_sha256": "d5fcb6952dfbcd3e68bb035195862f63a810753b3cf8ece1ee7340aae25f7908"
+        }
+      },
+      "en": {
+        "0": {
+          "run_id": "en_sw_base_dev100_8192_20261020_v1",
+          "raw_items_sha256": "c1a4ad76d350446e6d1d0bb1fd8b374c5cbf6d3e35fe38e7e476a8bb091c9bc7",
+          "config_sha256": "1c9852e055cc90afbc5b320fa1cc81df4d9db5c53c1e5d38e1a4f4ee15a923d6"
+        },
+        "10": {
+          "run_id": "en_zh_saved10_seed42_dev100_8192_20261021_v1",
+          "raw_items_sha256": "1511b37a7ab44dd1227364c55d8a354c9aad59d12fe2f769116e4caa3dcd8e62",
+          "config_sha256": "eaa3531bcccd9b623fce5f64a5011bb575207e0d7094cb1da3e3c5090970da99"
+        },
+        "20": {
+          "run_id": "zh_early20_en_candidate_dev100_8192_20261020_v1",
+          "raw_items_sha256": "2aba4ebc1b89591b3c40f1935da51352cabf7b2201715bc70a4fc594e02ee3a2",
+          "config_sha256": "a1b72ccbf8c11a19dc177f15e7a4ca40e77a9fbebd94af40b16c7c89fd50f2d5"
+        }
+      }
+    },
+    "seed43": {
+      "zh": {
+        "0": {
+          "run_id": "zh_base_candidate_dev100_8192_20261020_v1",
+          "raw_items_sha256": "97a4d35bc783f73ec0fa9f320b4f84584659ba9ce15c2a8bf9f9b197ea58e7ec",
+          "config_sha256": "24648c7962d846920520025d23a70dfd3110dcf5473e5554e30b9fb384ce25a2"
+        },
+        "10": {
+          "run_id": "zh_zh_saved10_seed43_dev100_8192_20261021_v1",
+          "raw_items_sha256": "c2220003fa381dddbb102eb26f47ddb310242ec536ca48f37b788d06b953a7d2",
+          "config_sha256": "290a8fd644ee739316fdc405948d54367d894770d5f0ac6d89286cd41521afa8"
+        },
+        "20": {
+          "run_id": "zh_17b_seed43_prefix20_dev100_8192_20261021_v1",
+          "raw_items_sha256": "d207703406d8807f9d8b88fd48162c86bd4de6ee57034ad691cb1b2f4d486c6f",
+          "config_sha256": "30adeb6088a7b489359102b1e92e031806f65990a4c8697514335805b2a01c47"
+        }
+      },
+      "en": {
+        "0": {
+          "run_id": "en_sw_base_dev100_8192_20261020_v1",
+          "raw_items_sha256": "c1a4ad76d350446e6d1d0bb1fd8b374c5cbf6d3e35fe38e7e476a8bb091c9bc7",
+          "config_sha256": "1c9852e055cc90afbc5b320fa1cc81df4d9db5c53c1e5d38e1a4f4ee15a923d6"
+        },
+        "10": {
+          "run_id": "en_zh_saved10_seed43_dev100_8192_20261021_v1",
+          "raw_items_sha256": "312f5658b4dd6919d0c2582f44580c8123cd089ef666e2e79ee9891997ab5577",
+          "config_sha256": "93f989d61dc06e8a179ce1f216c93b4ad5305f270d23c5ccb4b6114202c99670"
+        },
+        "20": {
+          "run_id": "en_zh_seed43_prefix20_dev100_8192_20261021_v1",
+          "raw_items_sha256": "ad39a33106953a753484096c2822a12aab49017634ec7becd47626726c82d6e7",
+          "config_sha256": "744562f562229d945a1c1d6b7ab24114ab1953f478fbb897c96b897071b503ce"
+        }
+      }
+    }
+  },
+  "parents_completed_exit0": true,
+  "English_evaluations_included": true,
+  "new_cost_excluding_cached_Base_and20": {
+    "responses": 400,
+    "generated_tokens": 1577364,
+    "generation_seconds": 5976.857520148158,
+    "GPU_hours_two_unique_parents": 1.6941666666666666,
+    "cost_scope": "Completed requested stages only; full parent allocation is reported only with complete target/English suites. Partial stages overlap the later complete report.",
+    "new_training": false
+  },
+  "run_comparison_caveat": "Historical seed42 and controlled seed43 differ in initialization/order handling, so these are two within-run stage comparisons, not a strict seed-only causal contrast.",
+  "selection_policy": "Independent development only, before seeing saved10 scores. Evaluate target and English for both existing runs. Inconsistent/small effects do not establish a stable third language; do not extend checkpoint grid or use formal tests to pick favorable results.",
+  "scope": "Finite development-only within-run checkpoint diagnosis. Does not establish a common10-update benefit across languages, replace the20-update comparison, choose final languages or generate a forgetting matrix. Changing the subsequent common stage budget requires matched controls."
+}

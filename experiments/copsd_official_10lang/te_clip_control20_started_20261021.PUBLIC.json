@@ -1,0 +1,45 @@
+{
+  "observed_at": "2026-10-21T17:44:04.115197",
+  "protocol": "project_TE_component_clip_matched20_v1",
+  "status": "running_not_completed",
+  "conditions": {
+    "clip": {
+      "gpu": 0,
+      "launcher_pid": 122179,
+      "log_relative": "logs/copsd_official_10lang/te_clip_control20_clip_20261021_v1.run.log",
+      "initial_sync": {
+        "global_step": 0,
+        "adapter_hash": "b0c5de3173efa50478c7eb50c75e5277403bb8c080c43e4cd368e09940921f6e",
+        "engine_hash": "94f89957152f413bd10682509f1a524552fc74aa214bea8483bee2c5f82a269e",
+        "seconds_including_diagnostic_hashing": 22.041493540629745
+      },
+      "first_update_sync": {
+        "global_step": 1,
+        "adapter_hash": "d93d2e16da021d1136a7234283d3d13efc31c4b61bf37308f2548721a8adcd8f",
+        "engine_hash": "5c9d2623c698a4e6ade4af5e5729302a7ff20aa57c1c61e288deda0490b232cb",
+        "seconds_including_diagnostic_hashing": 37.816345416009426
+      },
+      "first_update_32_finite_microsteps": true
+    },
+    "unclip": {
+      "gpu": 2,
+      "launcher_pid": 122216,
+      "log_relative": "logs/copsd_official_10lang/te_clip_control20_unclip_20261021_v1.run.log",
+      "initial_sync": {
+        "global_step": 0,
+        "adapter_hash": "b0c5de3173efa50478c7eb50c75e5277403bb8c080c43e4cd368e09940921f6e",
+        "engine_hash": "94f89957152f413bd10682509f1a524552fc74aa214bea8483bee2c5f82a269e",
+        "seconds_including_diagnostic_hashing": 21.902768386527896
+      },
+      "first_update_sync": {
+        "global_step": 1,
+        "adapter_hash": "c4777923e761522879215db11640fc694a8d12445d2c0b541c3a2ae364e76ab2",
+        "engine_hash": "34c081f61457bc5057b5455599dc6f975d22629a216a23a0ebc636ccdcaaef33",
+        "seconds_including_diagnostic_hashing": 27.467250555753708
+      },
+      "first_update_32_finite_microsteps": true
+    }
+  },
+  "scope": "Startup evidence only; no evaluation result or method effectiveness claim.",
+  "initial_policy_fingerprints_equal": true
+}

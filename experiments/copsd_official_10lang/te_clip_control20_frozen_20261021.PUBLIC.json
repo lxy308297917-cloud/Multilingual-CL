@@ -1,0 +1,71 @@
+{
+  "frozen_at": "2026-10-21T17:37:07.437029",
+  "protocol": "project_TE_component_clip_matched20_v1",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "conditions": {
+    "clip": {
+      "run_id": "te_17b_clip_control20_seed42_20261021_v1",
+      "component_clip": 0.05,
+      "checkpoint_output_relative": "models/checkpoint/copsd_te_clip_control_v1/te_17b_clip_control20_seed42_20261021_v1",
+      "evaluation_run_ids": {
+        "te": "te_17b_clip_control20_seed42_20261021_v1_te_dev8192",
+        "en": "te_17b_clip_control20_seed42_20261021_v1_en_dev8192"
+      },
+      "queue": "copsd-te-clip20-clip-v1"
+    },
+    "unclip": {
+      "run_id": "te_17b_unclip_control20_seed42_20261021_v1",
+      "component_clip": null,
+      "checkpoint_output_relative": "models/checkpoint/copsd_te_clip_control_v1/te_17b_unclip_control20_seed42_20261021_v1",
+      "evaluation_run_ids": {
+        "te": "te_17b_unclip_control20_seed42_20261021_v1_te_dev8192",
+        "en": "te_17b_unclip_control20_seed42_20261021_v1_en_dev8192"
+      },
+      "queue": "copsd-te-clip20-unclip-v1"
+    }
+  },
+  "training_seed": 42,
+  "fresh_Base_each_condition": true,
+  "updates": 20,
+  "scheduler_horizon": 100,
+  "effective_batch": 32,
+  "question_exposures": 640,
+  "training_max_completion_length": 2048,
+  "learning_rate": 5e-06,
+  "optimizer": "Inherited official-core AdamW; actual optimizer serialized and audited after training",
+  "beta": 0,
+  "fixed_teacher": true,
+  "teacher_adapter_disabled": true,
+  "loss_implementation_replaced": false,
+  "training_data_relative": "data/copsd_official_20261015/adapted_v2_ordered/project_train_2900_te.json",
+  "training_data_sha256": "56c54b36ee3f6a66bd0afc26fe360d8a4a9fbdceeb7e0ed9828adf44fca93695",
+  "initial_reference_sha256": {
+    "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed42_20261020_v1/COLLOCATE_TRAIN_UPDATES_DONE.json": "2c691376346fe18257b669d32c68e635e7781999e7f32cee3776f7b13f67c944"
+  },
+  "evaluation_protocol": "project_dev_single_vllm8192_v2",
+  "development_languages": [
+    "te",
+    "en"
+  ],
+  "development_items_each": 100,
+  "evaluation_samples": 1,
+  "evaluation_budget": 8192,
+  "evaluation_max_num_seqs": 16,
+  "code_sha256": {
+    "run_te_clip_control20.sh": "5fc142ab627d9b898e49dc0b465ae7b949e15df028d54f78000f6ef1575c087a",
+    "te_clip_control_entry.py": "3c1c82d4272f86784874ef145e7ea601012439398330ec5d2dadc81e08878b0c",
+    "prefix20_entry.py": "81ba90b135cdd88288e15d89bcc621233a5d690ee6bcfbafab5e578e10a1b2e4",
+    "seeded_cost_batch_entry.py": "090a01059fe6b0c1bdf6ae2a0d4fb65886a73af8cf8ce98e6904e90b53baeb15",
+    "cumem_none_ref_compat.py": "758f21a55478d282e067f27b2ac29fa7aa2e17dfe79e2112cae3ed09ff2020ee",
+    "prompt_budget_guard.py": "b2875c6c9482b27d7273fcfa7e07f22275733bbf0bb32f0dc109cae36eb91a4d",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1",
+    "ja_nonefixed_runtime_20261020.CONFIG.json": "6352e89e368a8cde7e81655d38f98fef2cd6300ba8e74c3bb0c9d7edee9e552e"
+  },
+  "max_user_gpus": 4,
+  "reason": "BN component-clip intervention replicated across two seeds; TE default100 and saved20 regress. Test whether this mechanism extends to another low-resource language using a matched fresh control, without treating legacy20 initialization as matched.",
+  "engineering_adaptations": "Same process-local verified None-reference allocator compatibility and prompt guard in both conditions; no installed binary mutation, optimizer/loss simplification or teacher CPU offload.",
+  "decision_policy": "One prespecified seed42 pair, target and English both required. No test-based language/checkpoint selection, no automatic seed expansion, no claim that unclipping universally repairs OPD. If target improves but English drops, report the tradeoff.",
+  "scope": "Finite causal diagnostic, separate from default official-derived ten-language100 reference and three-language sequential work. No new target-language SFT labels or new protection mechanism."
+}
