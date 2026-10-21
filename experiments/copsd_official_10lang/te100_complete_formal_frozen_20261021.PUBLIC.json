@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-10-21T11:40:24.896554",
+  "protocol": "project_single_vllm_v1",
+  "scope": "Complete the still-missing TE fixed100 formal report at the same old2048/n1 protocol as eight completed languages. Not developmental selection, officialpass12,8192 confirmation or new training.",
+  "queue": "copsd-te100-complete-formal-v1",
+  "tag": "20261021_te100_v1",
+  "checkpoint_relative": "models/checkpoint/copsd_vllm_seeded_cost_single_v2/te_17b_resume90_batch_seeded_cost_20261020_v2/checkpoint-100",
+  "checkpoint_adapter_sha256": "dcc30a722d24dccb35b190f6550002763befbf00219c8ffa7fb02eb76c27b8fc",
+  "training_reference": "te_resume100_completed_20261020.PUBLIC.json",
+  "outputs": [
+    "te_17b_mgsm_rev2_base_20261021_te100_v1",
+    "te_17b_mgsm_rev2_ckpt100_20261021_te100_v1",
+    "te_17b_polymath_base_20261021_te100_v1",
+    "te_17b_polymath_ckpt100_20261021_te100_v1",
+    "en_17b_gsm8k_te100_20261021_te100_v1"
+  ],
+  "cached_English_Base_correct": 1113,
+  "cached_English_Base_items": 1319,
+  "new_responses_planned": 2819,
+  "max_user_gpus": 4,
+  "one_GPU_parent": true,
+  "source_sha256": {
+    "run_completed_single_formal_suite.sh": "b961f34a608b27eb3228832f8bc1c694ac3733cd999ed055a5568233918d7c2d",
+    "run_vllm_math_eval.sh": "8f585593154b0d2e2d4f2b5f4699133af6156dbedee2ecb080e30220914cdb4c",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "summarize_completed_single_formal.py": "7b717e4f8e3ab7dc9d288abc1580707c99d9d3a98a596fa29c3c02d1d087fbed"
+  },
+  "CPU_input_hashes_and_checkpoint_files_verified": true,
+  "new_results_available": false
+}
