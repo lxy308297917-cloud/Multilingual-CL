@@ -28,6 +28,12 @@ SW20 seed42与Base的PolyMath相同500题／n1／8192阶段已完成并通过原
 
 本分析无新增模型生成或GPU占用，原始输出与语言预测身份已校验，见[难度、收尾与语言完整计数](sw20_polymath_tiers_language_20261021.PUBLIC.json)、[复核脚本](decompose_sw20_polymath.py)。
 
+## 2026-10-21 15:45：SW PolyMath第二训练seed已完成
+
+三个完整500题阶段已按相同prompt／seed／8192预算／官方评分逐题验收：Base8，seed42为29，seed43为20；seed43新增16／失去4，提升方向重复。seed43四档各125题为6／7／5／2，对应Base3／3／2／0；正常终止291／500。其新增16道正确中15道Base没有提取答案，1道由错误答案变正确，均正常停止。两seed有相同收尾改善现象，但这些关联计数不证明纯数学推理的独立改善，也不代表英语保持。
+
+seed43思考区swh标签353／500（Base304），正确20道中swh16／swc2／英语2；最终区缺失251／500，另1条过短。区段语言ID仍不代表流利度或逐token保持，不筛选／重算数学分数。来源见[两seed正式配对](sw20_polymath_two_seed_formal8192_stage_20261021.PUBLIC.json)、[seed43分解](sw20_polymath_seed43_tiers_language_20261021.PUBLIC.json)。前文15:33中“seed43仍运行”是当时阶段快照；本段更新其PolyMath完成状态，英语仍未完成。
+
 ## 历史排查与阶段记录（保留原日期）
 
 **2026-10-21 11:34当前运行更新：** 用户已取消已授权实验故障恢复的重复确认限制，四项恢复均已实际运行（JA续训GPU0、TH英语GPU2、JA20评测GPU3、TE评测GPU4），没有等待恢复授权。TE Base已复用73条并补27条完成，7／100；JA Base新完成47／100，十语及英语Base8192开发比较已经齐备。SW Base及20更新两seed的固定正式比较队列已启动、等待四卡总量内资源；尚无新正式成绩。下文10月20日的故障及等待记录保留为历史。见[当前完整状态](CURRENT_PUBLIC_ZH.md)、[完整Base开发表](base_all10plusEN8192_completed_20261021.PUBLIC.json)。
