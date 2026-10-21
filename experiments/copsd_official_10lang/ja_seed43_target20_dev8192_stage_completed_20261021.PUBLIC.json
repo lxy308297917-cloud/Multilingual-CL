@@ -1,0 +1,53 @@
+{
+  "observed_at": "2026-10-21T16:21:36.517111",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "training_seed": 43,
+  "evaluation_seed": 42,
+  "paired_target_development100": {
+    "base_correct": 47,
+    "adapter20_correct": 51,
+    "gained": 16,
+    "lost": 12,
+    "delta_correct": 4
+  },
+  "metrics": {
+    "items": 100,
+    "single_correct": 51,
+    "generated_tokens": 317616,
+    "truncated": 12,
+    "normal_terminations": 88,
+    "answer_extraction_failures": 9,
+    "protocol": "project_dev_single_vllm8192_v2",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 100,
+    "single_accuracy": 0.51,
+    "generation_seconds": 1455.5322610996664,
+    "model_load_seconds": 10.777259362861514,
+    "actual_max_num_seqs": 16
+  },
+  "cached_Base_metrics": {
+    "items": 100,
+    "single_correct": 47,
+    "generated_tokens": 374549,
+    "truncated": 16,
+    "normal_terminations": 84,
+    "answer_extraction_failures": 14,
+    "protocol": "project_dev_single_vllm8192_v2",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 100,
+    "single_accuracy": 0.47,
+    "generation_seconds": 488.93936017528176,
+    "model_load_seconds": 9.622698793187737,
+    "actual_max_num_seqs": 16
+  },
+  "checkpoint_adapter_sha256": "5a82446829c9b3cafa5306714aa3ee011814b36d565d122a86b78bdd9910c041",
+  "raw_items_sha256": {
+    "Base": "098bf617e7b712a8b2add442df4ca80b043ecd441bd9e15ce91ae2a06181d697",
+    "JA43": "40a3d254547c890e5ec6ac679c99d786d2a1c9cda98fbdaa5e7f6ee1f72993b0"
+  },
+  "parent_pipeline_completed_exit0": false,
+  "English_stage_completed": false,
+  "scope": "Completed target-language stage only; parent continues English. Same existing independent development100 and documented JA prefix repair. Small gain repeats direction of historical20 reference47->50, not independent test evidence or final language selection."
+}

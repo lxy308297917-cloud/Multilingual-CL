@@ -1,0 +1,90 @@
+{
+  "observed_at": "2026-10-21T16:21:41.610694",
+  "protocol": "afrimgsm_release_vllm_v1",
+  "parent_completed_exit0": false,
+  "results": {
+    "base": {
+      "metrics": {
+        "generated_tokens": 2797919,
+        "normal_terminations": 614,
+        "truncated": 2386,
+        "answer_extraction_failures": 2364,
+        "single_correct": 6,
+        "pass_n_correct": 34,
+        "items": 250,
+        "generation_count": 3000,
+        "single_accuracy": 0.024,
+        "pass_n": 0.136,
+        "n": 12,
+        "model_load_seconds": 9.710334407165647,
+        "generation_seconds": 821.8315557334572,
+        "evaluation_seconds": 826.0572049748152,
+        "generated_tokens_per_generation_second": 3404.492052514278,
+        "protocol": "afrimgsm_release_vllm_v1",
+        "benchmark": "afrimgsm",
+        "formal_full_test": true,
+        "scores_by_difficulty": {}
+      },
+      "average_at12_correct_of3000": 90,
+      "majority_vote_at12_correct_of250": 20,
+      "source_sha256": {
+        "CONFIG.json": "cae25f72d0e1100de083f7d4321f6d2b6b375bc15b67d11c7fdf018743e65e1c",
+        "DONE.json": "8e50d739f235414f6f2aa6b36e7fd6447228527d96a30d5537f10632c71681ca",
+        "ITEMS.jsonl": "5e398b2c05a641326a43ef616b0ae43e79e027daac3c203599c87f5f22c95247",
+        "OFFICIAL_RESULTS.json": "e9611dc47f1511b80f795b11a01861a5be5ea41a07b80a75f87eeef83c5179e2"
+      }
+    },
+    "seed42": {
+      "metrics": {
+        "generated_tokens": 2693577,
+        "normal_terminations": 1298,
+        "truncated": 1702,
+        "answer_extraction_failures": 1474,
+        "single_correct": 14,
+        "pass_n_correct": 54,
+        "items": 250,
+        "generation_count": 3000,
+        "single_accuracy": 0.056,
+        "pass_n": 0.216,
+        "n": 12,
+        "model_load_seconds": 10.720101961866021,
+        "generation_seconds": 902.0248585119843,
+        "evaluation_seconds": 906.5556294154376,
+        "generated_tokens_per_generation_second": 2986.1449765846037,
+        "protocol": "afrimgsm_release_vllm_v1",
+        "benchmark": "afrimgsm",
+        "formal_full_test": true,
+        "scores_by_difficulty": {}
+      },
+      "average_at12_correct_of3000": 147,
+      "majority_vote_at12_correct_of250": 25,
+      "source_sha256": {
+        "CONFIG.json": "2d3e57057e74b87714d7913e55628761e319e8914995be403ab4411c5b182696",
+        "DONE.json": "fd108e5a4f72ff683624e9cc876060dd298f4c276b80b2fdb87e49e746cba4cb",
+        "ITEMS.jsonl": "36c2886e34f3d4bfc17a3dcc1d33d9563485dc8422fdc911ec7b3529d6432917",
+        "OFFICIAL_RESULTS.json": "ee14525514eb1dc253b6ac0625f0a1170e230778cd3bd1e55fa628148a20e8a9"
+      }
+    }
+  },
+  "paired_pass12": {
+    "seed42": {
+      "gained_pass12": 24,
+      "lost_pass12": 4,
+      "net_pass12_correct": 20
+    }
+  },
+  "requested_models": [
+    "seed42"
+  ],
+  "both_training_seeds_included": false,
+  "new_cost_excluding_cached_Base": {
+    "responses": 3000,
+    "generated_tokens": 2693577,
+    "generation_seconds": 902.0248585119843,
+    "parent_GPU_hours_counted_once": null,
+    "scope": "Requested completed benchmark stages only. Parent allocation is included only when both seeds and parentexit0 are complete; subset reports overlap the eventual full report."
+  },
+  "scope": "Original released12-sample1024-token evaluation, fixed project1.7B checkpoints. Reuse cached Base, no training or new SFT labels. Official-code training/data/resource adaptations remain documented separately.",
+  "selection_policy": "Both20-update models already selected on independent development before these tests; no test-based language/checkpoint selection.",
+  "overlap_caveat": "AfriMGSM shares207 exact SW questions with MGSM-Rev2; not independent test evidence."
+}

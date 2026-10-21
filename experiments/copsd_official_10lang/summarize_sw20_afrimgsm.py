@@ -66,13 +66,19 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--models', nargs='+', choices=['seed42', 'seed43'], default=['seed42', 'seed43'])
     a = p.parse_args()
+    assert len(a.models) == len(set(a.models))
     code = Path(__file__).parent
     frozen = read(code / 'sw20_afrimgsm_frozen_20261021.PUBLIC.json')
     for name, sha in frozen['code_sha256'].items():
         assert digest(code / name) == sha
     state = read(a.root / 'gpu-queue/queues' / frozen['queue'] / 'state.json')
-    assert state['phase'] == 'completed' and state['job']['exit_code'] == 0
+    complete = state['phase'] == 'completed' and state['job']['exit_code'] == 0
+    if set(a.models) == {'seed42', 'seed43'}:
+        assert complete
+    else:
+        assert complete or state['phase'] == 'running'
     job = state['job']
     assert Path(job['script']).resolve() == code / 'run_sw20_afrimgsm_pair.sh'
     assert job['script_sha256'] == frozen['code_sha256']['run_sw20_afrimgsm_pair.sh']
@@ -84,6 +90,8 @@ def main():
     paired = {}
     for stage in frozen['stages']:
         model = stage['model']
+        if model not in a.models:
+            continue
         adapter = a.root / stage['checkpoint_relative']
         assert digest(adapter / 'adapter_model.safetensors') == stage['adapter_sha256']
         assert read(adapter / 'trainer_state.json')['global_step'] == 20
@@ -97,13 +105,16 @@ def main():
             gained += not b and t
             lost += b and not t
         paired[model] = {'gained_pass12': gained, 'lost_pass12': lost, 'net_pass12_correct': gained - lost}
-    wall = (datetime.datetime.fromisoformat(job['finished_at']) - datetime.datetime.fromisoformat(job['started_at'])).total_seconds()
+    wall = ((datetime.datetime.fromisoformat(job['finished_at']) - datetime.datetime.fromisoformat(job['started_at'])).total_seconds()
+        if complete else None)
     write_new(a.output, {'observed_at': datetime.datetime.now().isoformat(), 'protocol': frozen['protocol'],
-        'parent_completed_exit0': True, 'results': results, 'paired_pass12': paired,
-        'new_cost_excluding_cached_Base': {'responses': 6000,
-            'generated_tokens': sum(results[k]['metrics']['generated_tokens'] for k in ['seed42', 'seed43']),
-            'generation_seconds': sum(results[k]['metrics']['generation_seconds'] for k in ['seed42', 'seed43']),
-            'parent_GPU_hours_counted_once': wall / 3600},
+        'parent_completed_exit0': complete, 'results': results, 'paired_pass12': paired,
+        'requested_models': a.models, 'both_training_seeds_included': set(a.models) == {'seed42', 'seed43'},
+        'new_cost_excluding_cached_Base': {'responses': 3000 * len(a.models),
+            'generated_tokens': sum(results[k]['metrics']['generated_tokens'] for k in a.models),
+            'generation_seconds': sum(results[k]['metrics']['generation_seconds'] for k in a.models),
+            'parent_GPU_hours_counted_once': wall / 3600 if complete and len(a.models) == 2 else None,
+            'scope': 'Requested completed benchmark stages only. Parent allocation is included only when both seeds and parentexit0 are complete; subset reports overlap the eventual full report.'},
         'scope': frozen['scope'], 'selection_policy': frozen['selection_policy'],
         'overlap_caveat': frozen['overlap_caveat']})
     print(json.dumps({k: v['metrics']['pass_n_correct'] for k, v in results.items()}))
