@@ -1,0 +1,46 @@
+{
+  "frozen_at": "2026-10-21T11:55:54.130692",
+  "language": "zh",
+  "new_training_seed": 43,
+  "run_id": "zh_17b_prefix20_horizon100_seed43_20261021_v1",
+  "queue": "copsd-zh-seed43-prefix20-dev8192-v1",
+  "selection_basis": "Previous independent development100: ZH Base66 -> saved20 69, English77->72. Small3-item target gain requires independent controlled initialization/order repeat before sequential selection. JA20 just completed47->50 target; English pending. No formal tests used to select this run.",
+  "training": {
+    "fresh_Base": true,
+    "model": "Qwen3-1.7B",
+    "updates": 20,
+    "scheduler_horizon": 100,
+    "exposures": 640,
+    "effective_batch": 32,
+    "max_completion_length": 2048,
+    "learning_rate": 5e-06,
+    "beta": 0,
+    "component_clip": 0.05,
+    "LoRA_rank": 64,
+    "LoRA_alpha": 128,
+    "optimizer": "AdamW inherited unchanged from existing prefix entry; saved optimizer arguments verified after completion",
+    "seed_applied_before_PEFT": 43,
+    "max_grad_norm": 0.1,
+    "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  },
+  "development": {
+    "target_items": 100,
+    "English_items": 100,
+    "max_new_tokens": 8192,
+    "samples": 1,
+    "max_num_seqs": 16,
+    "per_request_seed_rule": "SHA256(42:language:id:0)"
+  },
+  "smoke_repeated": false,
+  "existing_runtime_reused": true,
+  "code_sha256": {
+    "run_zh_seed43_prefix20_dev8192.sh": "270b868d618f154e2042e7a20dcd2a4e7b7022d2df8ff1d8f68b059b3fb594b8",
+    "run_prefix20_17b.sh": "0bfc12449e90f300a76ac6c0e1f497246420f1bc90cf28f3bffba5ba3b8d5fc7",
+    "prefix20_entry.py": "81ba90b135cdd88288e15d89bcc621233a5d690ee6bcfbafab5e578e10a1b2e4",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1"
+  },
+  "initialization_caveat": "Previous ZH reference used legacy PEFT initializer not guaranteed seeded before adapter creation. This controlled seed43 rerun changes initializer and training order; differences cannot be attributed solely to seed/order or treated as an exact matched one-variable control.",
+  "max_user_gpus": 4,
+  "scope": "Exploratory development replication, not stable benefit, formal scores, final three-language selection or sequential experiment."
+}
