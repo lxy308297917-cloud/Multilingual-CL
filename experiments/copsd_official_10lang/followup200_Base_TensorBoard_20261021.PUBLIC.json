@@ -1,0 +1,11 @@
+{
+  "observed_at": "2026-10-21T22:23:32.312391",
+  "case": "base",
+  "TensorBoard_relative": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/base",
+  "scalar_tags": 31,
+  "five_accuracy_values_and_step0_readback_match_audited_metrics": true,
+  "unique_parent_cost_readback_matches": true,
+  "exporter_sha256": "ce6c7627fc2cd9dd9e190b0ae1210e62b22b65e4a64c734ebdfea61951274342",
+  "new_inference_or_training": false,
+  "scope": "Completed Base control export only; model comparisons and final three-language selection remain pending."
+}

@@ -1,10 +1,10 @@
 # 多语言适配与遗忘实验总览
 
-> 最近更新：2026-10-21 21:22（北京时间）。新增第0节为Qwen3-1.7B官方COPSD基础上的OPD阶段总结；后续第1—5节保留2026-09-24历史轨道快照，不代表旧任务在今天的最新状态。不同模型、任务和协议不横向混比。具体结果以各实验目录的原始记录、`DONE`、哈希和协议为准。
+> 最近更新：2026-10-21 22:27（北京时间）。新增第0节为Qwen3-1.7B官方COPSD基础上的OPD阶段总结；后续第1—5节保留2026-09-24历史轨道快照，不代表旧任务在今天的最新状态。不同模型、任务和协议不横向混比。具体结果以各实验目录的原始记录、`DONE`、哈希和协议为准。
 
 ## 0. 当前OPD轨道：十语言single、退步诊断与SW短程确认
 
-**截至2026-10-21 21:22：十语言独立100更新及原项目正式评测全部完成；默认配置整体退步。SW20有双训练seed的局部收益，两seed正式英语均未下降；JA收益小并伴随英语损失。最终三语言未选定，研究顺序OPD及遗忘矩阵尚未开始。**
+**截至2026-10-21 22:27：十语言独立100更新及原项目正式评测全部完成；默认配置整体退步。SW20有双训练seed的局部收益，两seed正式英语均未下降；JA收益小并伴随英语损失。最终三语言未选定，研究顺序OPD及遗忘矩阵尚未开始。**
 
 完整阶段总结、协议、成本和待办见[2026.10.21 OPD日报](docs/daily/实验日报_2026.10.21.md)；持续更新的细节见[OPD当前状态](experiments/copsd_official_10lang/CURRENT_PUBLIC_ZH.md)。前一日快照见[2026.10.20日报](docs/daily/实验日报_2026.10.20.md)。
 
@@ -60,7 +60,7 @@ MGSM语言平均56.32%→43.12%，PolyMath15.72%→11.52%；十个模型英语�
 
 后续顺序池已另建为3×900题，排除原100＋新200开发题；池间ID和规范化英文题干无重叠，CPU导出／现有接口校验通过。尚未确定三语或启动研究顺序训练。[新池证据](experiments/copsd_official_10lang/sequential_pools_followup200_20261021.PUBLIC.json)。
 
-已固定一次额外独立开发200题，用已有SW／JA／ZH各两份20步模型确认候选收益；BN无裁剪另列。Base已在GPU4实际评测，其余8个模型队列按全账号四卡总限等待；完整分数待完成，原开发100和正式测试不变。[预先固定的题目清单与确认规则](experiments/copsd_official_10lang/followup200_frozen_20261021.PUBLIC.json)。
+已固定一次额外独立开发200题，用已有SW／JA／ZH各两份20步模型确认候选收益；BN无裁剪另列。额外200题的Base五语言已全部完成：SW8、JA105、ZH146、BN40、EN147正确（各200题）；SW42已接续GPU4，其他模型按全账号四卡总限等待。候选配对尚未完成，原开发100和正式测试不变。[Base核验](experiments/copsd_official_10lang/followup200_Base_completed_20261021.PUBLIC.json)。[预先固定的题目清单与确认规则](experiments/copsd_official_10lang/followup200_frozen_20261021.PUBLIC.json)。
 
 TE两种上下文8192诊断已完成：同100开发题／同Base，学生14、特权教师64正确，教师65正常终止；同一长教师轨迹前2048只答对13，后续新增52、失去1。证明长预算下存在条件优势及后段答案可用性，不证明OPD已修复或错误历史监督有效。[完整结果](experiments/copsd_official_10lang/te_teacher_conditioning8192_completed_20261021.PUBLIC.json) · [同轨迹分解](experiments/copsd_official_10lang/te_teacher_conditioning8192_prefix_decomposition_20261021.PUBLIC.json)。
 

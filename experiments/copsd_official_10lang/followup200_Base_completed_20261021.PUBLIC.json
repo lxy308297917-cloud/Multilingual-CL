@@ -1,0 +1,128 @@
+{
+  "observed_at": "2026-10-21T22:17:36.064755",
+  "protocol": "project_followup_dev200_single8192_c64_v1",
+  "data_freeze_sha256": "7347ab481206f5c6a63736e30711eaebed767ad95d1d9ad7d24bee264f0561ff",
+  "Base_parent_completed_exit0": true,
+  "all_five_actual_raw_stages_verified": true,
+  "metrics": {
+    "sw": {
+      "items": 200,
+      "single_correct": 8,
+      "generated_tokens": 1383433,
+      "truncated": 164,
+      "normal_terminations": 36,
+      "answer_extraction_failures": 162,
+      "protocol": "project_followup_dev200_single8192_c64_v1",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 200,
+      "single_accuracy": 0.04,
+      "generation_seconds": 1507.6962859667838,
+      "model_load_seconds": 10.943898977711797,
+      "actual_max_num_seqs": 64
+    },
+    "ja": {
+      "items": 200,
+      "single_correct": 105,
+      "generated_tokens": 692041,
+      "truncated": 27,
+      "normal_terminations": 173,
+      "answer_extraction_failures": 24,
+      "protocol": "project_followup_dev200_single8192_c64_v1",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 200,
+      "single_accuracy": 0.525,
+      "generation_seconds": 559.8446758631617,
+      "model_load_seconds": 11.891997488215566,
+      "actual_max_num_seqs": 64
+    },
+    "zh": {
+      "items": 200,
+      "single_correct": 146,
+      "generated_tokens": 770593,
+      "truncated": 23,
+      "normal_terminations": 177,
+      "answer_extraction_failures": 20,
+      "protocol": "project_followup_dev200_single8192_c64_v1",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 200,
+      "single_accuracy": 0.73,
+      "generation_seconds": 610.9815690573305,
+      "model_load_seconds": 11.436541397124529,
+      "actual_max_num_seqs": 64
+    },
+    "bn": {
+      "items": 200,
+      "single_correct": 40,
+      "generated_tokens": 1164902,
+      "truncated": 86,
+      "normal_terminations": 114,
+      "answer_extraction_failures": 78,
+      "protocol": "project_followup_dev200_single8192_c64_v1",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 200,
+      "single_accuracy": 0.2,
+      "generation_seconds": 1150.4985542036593,
+      "model_load_seconds": 12.291747987270355,
+      "actual_max_num_seqs": 64
+    },
+    "en": {
+      "items": 200,
+      "single_correct": 147,
+      "generated_tokens": 801485,
+      "truncated": 33,
+      "normal_terminations": 167,
+      "answer_extraction_failures": 24,
+      "protocol": "project_followup_dev200_single8192_c64_v1",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 200,
+      "single_accuracy": 0.735,
+      "generation_seconds": 651.4912069756538,
+      "model_load_seconds": 9.819086136296391,
+      "actual_max_num_seqs": 64
+    }
+  },
+  "source_records": {
+    "sw": {
+      "run_id": "followup200_base_sw_20261021_v1",
+      "items_sha256": "637878df5bfcf23c32dc9d9eaae852dd884877b53e2d6fe1504005535c0c25b8",
+      "config_sha256": "4b050c554c9d301d2d25793d18c935d3b644fe75488b7ef878fe83cf5e51ae38"
+    },
+    "ja": {
+      "run_id": "followup200_base_ja_20261021_v1",
+      "items_sha256": "7137b68b220688444d0599287673e8f744928ebfade1eb362c1858062b7112c0",
+      "config_sha256": "a67e80a173c590281969e7991a428c8d58989af15d4cd82888f674fe4f7b640a"
+    },
+    "zh": {
+      "run_id": "followup200_base_zh_20261021_v1",
+      "items_sha256": "6878072450a0379892393b1827f84c375675a3247635a1c66eb7b089b46bb1ac",
+      "config_sha256": "328135c2af7325c43d0bfcea0a119a56cfd7da8e7edc848c9c87eb32b5790368"
+    },
+    "bn": {
+      "run_id": "followup200_base_bn_20261021_v1",
+      "items_sha256": "b6dba595deba5f59d1e87c1e5a76fbc9306c1b1bf0bc11fe0c70f09b844b0b8a",
+      "config_sha256": "1fe0ae2053d7eeb1acc7abc9de254f93368a0aea7784c7999b84a088e277be6b"
+    },
+    "en": {
+      "run_id": "followup200_base_en_20261021_v1",
+      "items_sha256": "28dd6c822144a062c87e4635e29ee0cdbce7545abd7cd6e3715eaf4b14a48bd2",
+      "config_sha256": "e7c76e0fc87589e9724ea4b14202a784f5d1350255850823235620bc01de0b82"
+    }
+  },
+  "cost": {
+    "queue": "copsd-followup200-base-v1",
+    "parent_GPU_hours_counted_once": 1.2880555555555555,
+    "evaluation_cases": 5,
+    "training_updates": 0,
+    "new_responses": 1000,
+    "generated_tokens": 4812454,
+    "generation_seconds": 4480.512292066589,
+    "scope": "One Base parent covers five languages; count its allocation once. This record overlaps later primary/full followup reports and must not be added to them."
+  },
+  "collector_sha256": "6e96d7737fbb563c0687401993efaf908ce6c1581adb814299e8e1c2a3a11bce",
+  "scope": "Base control only for the fixed additional development200. Same original200 English IDs across five languages, not1000 independent questions. No OPD-effect, final three-language or sequential result claim."
+}

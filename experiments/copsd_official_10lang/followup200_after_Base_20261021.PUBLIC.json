@@ -1,0 +1,63 @@
+{
+  "observed_at": "2026-10-21T22:27:08.852579",
+  "Base_report_sha256": "e1e94a01a306be157d016bb454131a59f0a089b73dfeaa25361a968247e8366d",
+  "Base_parent_exit0": true,
+  "next_case": "sw42",
+  "queue": "copsd-followup200-sw42-v1",
+  "phase": "running",
+  "launcher_pid": 162584,
+  "GPU_UUIDs": [
+    "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a"
+  ],
+  "checkpoint_step": 20,
+  "actual_max_num_seqs": 64,
+  "scope": "Completed Base control and verified next model generation only; no paired OPD-effect or final language selection.",
+  "queue_snapshot_at": "2026-10-21T22:28:00.331161",
+  "queue_snapshot": {
+    "base": {
+      "phase": "completed",
+      "pid": 148997,
+      "exit": 0
+    },
+    "sw42": {
+      "phase": "running",
+      "pid": 162584,
+      "exit": null
+    },
+    "ja42": {
+      "phase": "waiting",
+      "pid": null,
+      "exit": null
+    },
+    "zh42": {
+      "phase": "waiting",
+      "pid": null,
+      "exit": null
+    },
+    "sw43": {
+      "phase": "waiting",
+      "pid": null,
+      "exit": null
+    },
+    "ja43": {
+      "phase": "waiting",
+      "pid": null,
+      "exit": null
+    },
+    "zh43": {
+      "phase": "waiting",
+      "pid": null,
+      "exit": null
+    },
+    "bn_unclip42": {
+      "phase": "waiting",
+      "pid": null,
+      "exit": null
+    },
+    "bn_unclip43": {
+      "phase": "waiting",
+      "pid": null,
+      "exit": null
+    }
+  }
+}
