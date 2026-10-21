@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-21T21:15:58.537349",
+  "new_manifest_sha256": "26e317451ff8716ce1e0d065b50184058555c80e9d84bedb52547ab6f3579aae",
+  "real_CPU_export_rows": {
+    "sw_pool0": 900,
+    "ja_pool1": 900
+  },
+  "existing_matched_pool_validator_accepts900_rows": true,
+  "pairwise_ID_overlap": 0,
+  "existing_validator_sha256": "ac916c04df9c550bb4ff79a24ae87f6cd290a76575d8faf0bb8ca983c5b080d6",
+  "GPU_used": false,
+  "languages_selected": false,
+  "scope": "Two actual exports and existing validator only; no new training, model handoff or final research language binding."
+}

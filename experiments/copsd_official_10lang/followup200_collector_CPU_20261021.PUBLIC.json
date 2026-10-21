@@ -1,0 +1,9 @@
+{
+  "observed_at": "2026-10-21T21:25:19.934200",
+  "collector_sha256": "6e96d7737fbb563c0687401993efaf908ce6c1581adb814299e8e1c2a3a11bce",
+  "syntax_compile_passed": true,
+  "actual_running_Base_parent_rejected_before_scores_bootstrap_and_output": true,
+  "complete_data_branch_verified": false,
+  "scope": "CPU preparation and actual incomplete-parent rejection in both modes only. Default all21-case or staged17-case raw/statistics paths require their real completed parents. BN jobs remain active; no efficacy, final language selection or disjoint cost claim.",
+  "both_full_and_primary_only_reject_actual_running_Base": true
+}

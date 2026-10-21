@@ -1,0 +1,49 @@
+{
+  "observed_at": "2026-10-21T21:14:32.863452",
+  "protocol": "project_sequential_pools_excluding_followup200_v1",
+  "seed": 20261021,
+  "languages_checked": [
+    "sw",
+    "te",
+    "th",
+    "bn",
+    "zh",
+    "ja",
+    "ru",
+    "de",
+    "fr",
+    "es"
+  ],
+  "pool_sizes": [
+    900,
+    900,
+    900
+  ],
+  "union_size": 2700,
+  "development_ids_excluded": 300,
+  "additional_training_IDs_excluded": 200,
+  "pairwise_ID_overlap": 0,
+  "pairwise_normalized_English_overlap": 0,
+  "development_overlap": 0,
+  "english_fields_equal_across_languages": true,
+  "source_counts": {
+    "olympiads": 2700
+  },
+  "stratification": "source x English question character-length quartile x English reference character-length quartile",
+  "difficulty_limit": "Length strata are proxies, not verified mathematical difficulty or equal token costs; semantic near-duplicates are not exhaustively ruled out.",
+  "stratum_pool_count_max_difference": 1,
+  "binding_rule": "After supported independent-development selection, bind chosen L1/L2/L3 to pools0/1/2; reverse the language/pool pairs together.",
+  "matched_single_rule": "Each language reference must start from Base with its identical bound900-question pool and same stage budget; old2900-question singles are not matched controls.",
+  "exposure_note": "20updates x effectivebatch32 gives640 unique exposures inside each900-question pool, before its first epoch boundary. Longer budgets require actual epoch-end exposure accounting.",
+  "followup_data_freeze_sha256": "7347ab481206f5c6a63736e30711eaebed767ad95d1d9ad7d24bee264f0561ff",
+  "followup_exclusion_sha256": "a40f87cea46c3d9b4a57a1e6418aedb80fb77f706f69b243f25275b36497c489",
+  "training_started": false,
+  "languages_selected": false,
+  "JA_note": "Manifest retains original input identity. Materialization must use the existing audited literal-prefix-repair option for JA; no new text repair.",
+  "private_manifest_sha256": "26e317451ff8716ce1e0d065b50184058555c80e9d84bedb52547ab6f3579aae",
+  "source_sha256": {
+    "prepare_followup_sequential_pools.py": "093ba1ad24b411d8beff9f071165225c6f6690c6cc74897bcdc73c65c84786c1",
+    "prepare_sequential_pools.py": "54d4663445d55b4344925e35383284747e0baf893b2125c55f5023efb8206bea",
+    "prepare_followup200.py": "8d758fe5e60a9a86afc6b2134950723916566aac79e2d399b0f7f7dec38de3e4"
+  }
+}
