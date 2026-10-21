@@ -1,0 +1,260 @@
+{
+  "observed_at": "2026-10-21T19:48:08.081685",
+  "protocol": "project_TE_component_clip_matched20_v1",
+  "target_items_each": 100,
+  "completion_and_language": {
+    "Base": {
+      "correct": 7,
+      "normal_terminations": 32,
+      "truncated": 68,
+      "answer_extraction_failures": 67,
+      "cells": [
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 1
+        },
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": true,
+          "count": 66
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 25
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": true,
+          "count": 1
+        },
+        {
+          "correct": true,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 1
+        },
+        {
+          "correct": true,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 6
+        }
+      ],
+      "language": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 98,
+            "__label__kff_Telu": 1,
+            "__label__und_Armn": 1
+          },
+          "target_top1_probability_ge_0_8": 98,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 7
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 34,
+            "no_final_section": 66
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 34
+          },
+          "target_top1_probability_ge_0_8": 34,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 6,
+            "no_final_section": 1
+          }
+        }
+      },
+      "items_sha256": "65adc2bec631565e128e5e2f497c4624a50f520eeb5750fb4f3f61a6fd796549"
+    },
+    "clip": {
+      "correct": 3,
+      "normal_terminations": 10,
+      "truncated": 90,
+      "answer_extraction_failures": 87,
+      "cells": [
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 3
+        },
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": true,
+          "count": 87
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 7
+        },
+        {
+          "correct": true,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 3
+        }
+      ],
+      "language": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 100
+          },
+          "target_top1_probability_ge_0_8": 100,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 3
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 15,
+            "no_final_section": 85
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 15
+          },
+          "target_top1_probability_ge_0_8": 15,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 3
+          }
+        }
+      },
+      "items_sha256": "ab301fa1311cf24bafa55cb68190a46be241150cc2e494e20596a3bd459ef5a8"
+    },
+    "unclip": {
+      "correct": 9,
+      "normal_terminations": 46,
+      "truncated": 54,
+      "answer_extraction_failures": 49,
+      "cells": [
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 5
+        },
+        {
+          "correct": false,
+          "finish_reason": "length",
+          "answer_missing": true,
+          "count": 47
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 37
+        },
+        {
+          "correct": false,
+          "finish_reason": "stop",
+          "answer_missing": true,
+          "count": 2
+        },
+        {
+          "correct": true,
+          "finish_reason": "length",
+          "answer_missing": false,
+          "count": 2
+        },
+        {
+          "correct": true,
+          "finish_reason": "stop",
+          "answer_missing": false,
+          "count": 7
+        }
+      ],
+      "language": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 99,
+            "__label__eng_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 99,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 9
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 52,
+            "no_final_section": 48
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 51,
+            "__label__eng_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 51,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 7,
+            "no_final_section": 2
+          }
+        }
+      },
+      "items_sha256": "1ae8ea168be52e65aa6ca6e2c1208452fcacfefdb350574ba405a8c62bb58392"
+    }
+  },
+  "unclip_gained_correct_transitions": [
+    {
+      "clip_finish": "length",
+      "clip_answer_missing": true,
+      "unclip_finish": "length",
+      "count": 2
+    },
+    {
+      "clip_finish": "length",
+      "clip_answer_missing": true,
+      "unclip_finish": "stop",
+      "count": 6
+    }
+  ],
+  "paired_target": {
+    "clip": {
+      "base_correct": 7,
+      "adapter20_correct": 3,
+      "gained": 3,
+      "lost": 7,
+      "delta_correct": -4
+    },
+    "unclip": {
+      "base_correct": 7,
+      "adapter20_correct": 9,
+      "gained": 9,
+      "lost": 7,
+      "delta_correct": 2
+    }
+  },
+  "language_detector_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "source_sha256": {
+    "analyze_output_languages.py": "ef24d056341b51d4ae7f4a0d01baaf143b081ad6ff60373159ab59388f5f51a7",
+    "decompose_te_clip20.py": "6b21e6ec631b20c038d8ccb441586c660be92ffe33bbc8e7156cf0a2753c80a1"
+  },
+  "new_training_or_inference": false,
+  "scope": "Descriptive CPU partitions of completed fixed development outputs. No score filtering, formal test or checkpoint selection. A GlotLID top1 language label is not fluency, per-token language purity or reasoning quality. Better termination and answer availability do not establish intrinsic mathematical gains; English retention is separately reported in the full paired collector."
+}

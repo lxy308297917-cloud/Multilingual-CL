@@ -1,0 +1,214 @@
+{
+  "observed_at": "2026-10-21T19:46:28.557348",
+  "protocol": "project_TE_component_clip_matched20_v1",
+  "parents_completed_exit0": true,
+  "training_seed": 42,
+  "paired_development100": {
+    "clip": {
+      "target": {
+        "base_correct": 7,
+        "adapter20_correct": 3,
+        "gained": 3,
+        "lost": 7,
+        "delta_correct": -4
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 78,
+        "gained": 7,
+        "lost": 6,
+        "delta_correct": 1
+      }
+    },
+    "unclip": {
+      "target": {
+        "base_correct": 7,
+        "adapter20_correct": 9,
+        "gained": 9,
+        "lost": 7,
+        "delta_correct": 2
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 71,
+        "gained": 4,
+        "lost": 10,
+        "delta_correct": -6
+      }
+    }
+  },
+  "unclipped_vs_clipped": {
+    "target": {
+      "base_correct": 3,
+      "adapter20_correct": 9,
+      "gained": 8,
+      "lost": 2,
+      "delta_correct": 6
+    },
+    "English": {
+      "base_correct": 78,
+      "adapter20_correct": 71,
+      "gained": 5,
+      "lost": 12,
+      "delta_correct": -7
+    }
+  },
+  "metrics": {
+    "clip": {
+      "target": {
+        "items": 100,
+        "single_correct": 3,
+        "generated_tokens": 791638,
+        "truncated": 90,
+        "normal_terminations": 10,
+        "answer_extraction_failures": 87,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.03,
+        "generation_seconds": 2804.7403662726283,
+        "model_load_seconds": 10.98445319570601,
+        "actual_max_num_seqs": 16
+      },
+      "English": {
+        "items": 100,
+        "single_correct": 78,
+        "generated_tokens": 477003,
+        "truncated": 19,
+        "normal_terminations": 81,
+        "answer_extraction_failures": 14,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.78,
+        "generation_seconds": 1691.3640961423516,
+        "model_load_seconds": 10.606585199013352,
+        "actual_max_num_seqs": 16
+      }
+    },
+    "unclip": {
+      "target": {
+        "items": 100,
+        "single_correct": 9,
+        "generated_tokens": 619405,
+        "truncated": 54,
+        "normal_terminations": 46,
+        "answer_extraction_failures": 49,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.09,
+        "generation_seconds": 2186.166315900162,
+        "model_load_seconds": 10.775632061064243,
+        "actual_max_num_seqs": 16
+      },
+      "English": {
+        "items": 100,
+        "single_correct": 71,
+        "generated_tokens": 403442,
+        "truncated": 15,
+        "normal_terminations": 85,
+        "answer_extraction_failures": 13,
+        "protocol": "project_dev_single_vllm8192_v2",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 100,
+        "single_accuracy": 0.71,
+        "generation_seconds": 1539.8830472789705,
+        "model_load_seconds": 11.442983670160174,
+        "actual_max_num_seqs": 16
+      }
+    }
+  },
+  "cached_Base_metrics": {
+    "TE": {
+      "items": 100,
+      "single_correct": 7,
+      "generated_tokens": 690779,
+      "truncated": 68,
+      "normal_terminations": 32,
+      "answer_extraction_failures": 67,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.07,
+      "generation_seconds": 310.19710598513484,
+      "model_load_seconds": 9.892388368025422,
+      "actual_max_num_seqs": 16
+    },
+    "English": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 428429,
+      "truncated": 17,
+      "normal_terminations": 83,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 661.9746270235628,
+      "model_load_seconds": 9.65354778803885,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "training_and_pipeline_cost": {
+    "clip": {
+      "updates": 20,
+      "question_exposures": 640,
+      "generated_training_tokens": 1307935,
+      "valid_response_loss_positions": 1307935,
+      "training_clock_seconds": 2985.8406949676573,
+      "teacher_forward_cuda_seconds": 198.7811413116455,
+      "student_forward_cuda_seconds": 163.78728733825685,
+      "pipeline_GPU_hours_training_and_both_evals_counted_once": 2.117777777777778
+    },
+    "unclip": {
+      "updates": 20,
+      "question_exposures": 640,
+      "generated_training_tokens": 1305710,
+      "valid_response_loss_positions": 1305710,
+      "training_clock_seconds": 2927.10882139951,
+      "teacher_forward_cuda_seconds": 198.03244380187988,
+      "student_forward_cuda_seconds": 165.70031466674806,
+      "pipeline_GPU_hours_training_and_both_evals_counted_once": 1.8872222222222221
+    }
+  },
+  "source_records": {
+    "clip": {
+      "te": {
+        "run_id": "te_17b_clip_control20_seed42_20261021_v1_te_dev8192",
+        "items_sha256": "ab301fa1311cf24bafa55cb68190a46be241150cc2e494e20596a3bd459ef5a8"
+      },
+      "en": {
+        "run_id": "te_17b_clip_control20_seed42_20261021_v1_en_dev8192",
+        "items_sha256": "dc06751dc32afdd1db44efe5347b4fbcef73d25b5739c4e11a4f0de663c041bd"
+      }
+    },
+    "unclip": {
+      "te": {
+        "run_id": "te_17b_unclip_control20_seed42_20261021_v1_te_dev8192",
+        "items_sha256": "1ae8ea168be52e65aa6ca6e2c1208452fcacfefdb350574ba405a8c62bb58392"
+      },
+      "en": {
+        "run_id": "te_17b_unclip_control20_seed42_20261021_v1_en_dev8192",
+        "items_sha256": "57ccdb3ca934b652bcda2b46091671e348e89171b2451b80e7aa968dab8860cb"
+      }
+    }
+  },
+  "new_evaluation_cost": {
+    "responses": 400,
+    "generated_tokens": 2291488,
+    "generation_seconds": 8222.153825594112,
+    "cached_Base_cost_excluded": true,
+    "pipeline_GPU_hours": 4.005
+  },
+  "fixed_Base_initial_policy_recovery_state_and_scientific_args_verified": true,
+  "scope": "Finite causal diagnostic, separate from default official-derived ten-language100 reference and three-language sequential work. No new target-language SFT labels or new protection mechanism.",
+  "interpretation_limits": "One prespecified seed42 pair, target and English both required. No test-based language/checkpoint selection, no automatic seed expansion, no claim that unclipping universally repairs OPD. If target improves but English drops, report the tradeoff."
+}
