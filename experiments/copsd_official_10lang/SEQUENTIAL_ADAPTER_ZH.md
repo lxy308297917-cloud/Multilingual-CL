@@ -41,14 +41,18 @@
 
 `check_sequential_trainer_cpu.py`已经运行实际Transformers Trainer：微型随机Qwen3上父阶段一次AdamW更新，子阶段通过上述同一加载接口接续；观察真实Trainer新建优化器为空、scheduler／global step为0。再更新一次，与保留同一父模型但显式新建Trainer的独立参考全部参数逐位一致；学生logits接续一致，禁用adapter后的原Base教师不变。结果见[实际Trainer CPU验收](sequential_Trainer_integration_CPU_20261021.PUBLIC.json)。这是CPU合成工程证据，尚未验证真实1.7B GPU rollout或恢复完整性。
 
-已手动启动`copsd-stage-handoff-engineering-v1`等待队列：复用已完成SW20，仅新增2个本地更新／64题次，仍为原2048长度、AdamW及官方损失。它单独验证接续、优化器重置和初始生成策略同步，不是新语言选择或三语研究结果；父single与工程池可能重叠，不声称题目独立。冻结设置见[工程任务清单](sequential_handoff_engineering_frozen_20261021.PUBLIC.json)。GPU任务完成后仍须核验真实checkpoint、优化状态、策略同步、冻结Base、完整64次损失调用与父进程exit0；目前仍在排队。
+已手动启动`copsd-stage-handoff-engineering-v1`等待队列：复用已完成SW20，仅新增2个本地更新／64题次，仍为原2048长度、AdamW及官方损失。它单独验证接续、优化器重置和初始生成策略同步，不是新语言选择或三语研究结果；父single与工程池可能重叠，不声称题目独立。冻结设置见[工程任务清单](sequential_handoff_engineering_frozen_20261021.PUBLIC.json)。GPU任务完成后仍须核验真实checkpoint、优化状态、策略同步、冻结Base、完整64次损失调用与父进程exit0；15:00已在GPU3实际计算梯度，尚未完成验收。
 
 ## 七套评测编排与真实结果收集（2026-10-21）
 
-`sequential_evaluation.py`与`run_sequential_evaluation.sh`复用现有冻结`run_formal8192.sh`：每个Base／阶段必须包含三种入选语各自MGSM-Rev2与PolyMath，加英语GSM8K，共七套。仅接受SHA固定的独立开发选择记录；不会从正式成绩选语。当前预设仍为n=1／8192／并发16，若以后采用性能测试的新并发或合并权重后端，须另建冻结协议并对Base及全部模型一致评测，不能混用旧分数。
+`sequential_evaluation.py`与`run_sequential_evaluation.sh`复用现有冻结`run_formal8192.sh`：每个Base／阶段必须包含三种入选语各自MGSM-Rev2与PolyMath，加英语GSM8K，共七套。仅接受SHA固定的独立开发选择记录；不会从正式成绩选语。现支持n=1／8192的原并发16预设，以及实测提速后另建的并发64协议`project_formal_single_vllm8192_c64_v2`。由冻结选择记录固定一种，Base及全部模型必须一致；显式拒绝将旧16输出重贴64标签。独立密集合并后端未接入科学评测。
 
 接口按`plan → prepare → run → collect`执行，不自行启动GPU队列或重试。`plan`保存准确的checkpoint、模型／输入／源码身份和显式缓存列表；缓存必须是同一实际adapter、预算和协议的完整输出，不能按分数选择。`prepare`仅检查一次共同环境与七套输入，不反复冷启动Python。`run`调用原正式评测入口；新输出不得已存在，失败后保留目录、另建恢复计划并显式复用已完成阶段。七套输出完成不等于父队列退出；`collect`须确认指定队列exit0及冻结plan一致，逐题核对输入、seed、token／正确数和PolyMath四档计数后，才在当前stage目录写出供下一阶段读取的`STAGE_EVALUATIONS_DONE.json`。
 
 已用真实保存的SW MGSM Base／两个SW20输出在CPU上执行收集核验，共750条，正确数8／13／14与此前独立阶段报告一致。错adapter、错误输入SHA、错语言、不完整七套集合，以及把正式报告当作开发选择证据均被拒绝，见[实际输出CPU验收](sequential_evaluation_real_outputs_CPU_20261021.PUBLIC.json)。这没有创建生产选择记录、启动GPU、生成新回答或证明真实七套阶段管线成功。
 
 `build_sequential_matrix.py`接收Base＋三个阶段的四份完成标记，再复核其实际plan、checkpoint链、共同输入／prompt／seed／评分配置和训练题池。它分别生成MGSM／PolyMath的完整矩阵，调用已有遗忘计算器保留负遗忘；同一英语GSM8K列在两个矩阵中展示，成本不重复加倍。Base结果可以由正反顺序共享。该收集器目前仅完成语法／CLI检查，真实三阶段尚不存在，不能声称端到端验收通过。语言保持、匹配题池single对照和完整恢复成本账目仍须另行完成；输出中的最终进程段成本明确不冒充恢复前后的总成本。
+
+### 并发64预设的验收边界
+
+同GPU的完整预算192回答测速已完成，64并发相对16约2.30倍token吞吐、2.04倍同批题墙钟速度，输出并非逐位一致。新正式评测入口已在真实三类数据上CPU预检；共享收集器复核现有750条真实16并发输出并拒绝跨协议重贴标签，见[协议隔离CPU记录](sequential_evaluation_protocol_isolation_CPU_20261021.PUBLIC.json)。这不等于新的七套64并发正式任务或完整顺序矩阵已实际执行；既有冻结任务和其源码继续保留。

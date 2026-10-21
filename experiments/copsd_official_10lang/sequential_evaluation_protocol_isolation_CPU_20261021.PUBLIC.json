@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-10-21T14:53:42.290069",
+  "real_saved_SW_MGSM_outputs_audited": 3,
+  "real_saved_responses": 750,
+  "correct_counts_match_independently_saved_report": {
+    "base": 8,
+    "seed42": 13,
+    "seed43": 14
+  },
+  "rejected": {
+    "other_checkpoint_adapter": true,
+    "changed_input_identity": true,
+    "wrong_language": true,
+    "old16_outputs_relabelled_as64_protocol": true,
+    "incomplete_seven_case_stage": true,
+    "formal_report_as_development_selection": true
+  },
+  "collector_sha256": "5b14d8c29095a90e7ac785ac41599b6f15d3d7d5ab7effac4bbc188553bbedb2",
+  "check_script_sha256": "7b00ce7d3e29cb4c84b6274f82193cceaee98d2c82eb2c737e294a9c34882ffe",
+  "GPU_used": false,
+  "new_language_model_generation": false,
+  "production_selection_created": false,
+  "scope": "Read-only CPU provenance/completeness validation on real saved MGSM outputs. Not a seven-benchmark stage run, checkpoint handoff, three-language selection, full sequential evaluation or forgetting result. Does not rerun mathematical grading."
+}

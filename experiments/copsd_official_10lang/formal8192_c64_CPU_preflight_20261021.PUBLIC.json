@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-10-21T14:50:14.381095",
+  "protocol": "project_formal_single_vllm8192_c64_v2",
+  "evaluator_sha256": "80c53ec7b2438f4206e18e97c1eb4c0309b788d20d2e84d60b1af7fd69910120",
+  "reference_evaluator_sha256": "07e904913890bbd7488d5d2f8413fd6b34854e4fec4787cf64e417fd6890d1a6",
+  "performance_evidence": "eval_concurrency8192_completed_20261021.PUBLIC.json",
+  "max_num_seqs": 64,
+  "sampling_or_math_scoring_changes": false,
+  "scope": "New frozen resource preset derived from measured same-GPU concurrency benchmark. Only protocol label and16-to64 concurrency change; batch numerics can change sampled outputs, so compare all models under this preset and keep16-concurrency results separate. CPU input preflight recorded separately; actual full formal GPU evaluator remains to be run.",
+  "CPU_input_preflight_completed": true,
+  "prepared_cases": [
+    {
+      "benchmark": "gsm8k",
+      "language": "en",
+      "items": 1319,
+      "adapter_provided": false
+    },
+    {
+      "benchmark": "mgsm_rev2",
+      "language": "sw",
+      "items": 250,
+      "adapter_provided": true
+    },
+    {
+      "benchmark": "polymath",
+      "language": "zh",
+      "items": 500,
+      "adapter_provided": true
+    }
+  ],
+  "GPU_initialized_by_preflight": false
+}

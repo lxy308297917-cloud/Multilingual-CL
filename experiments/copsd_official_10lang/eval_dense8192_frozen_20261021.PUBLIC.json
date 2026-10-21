@@ -1,0 +1,25 @@
+{
+  "frozen_at": "2026-10-21T14:39:23.402338",
+  "model": "Qwen3-1.7B",
+  "training_language": "sw",
+  "source_checkpoint_step": 20,
+  "source_training_seed": 42,
+  "queue": "copsd-eval8192-dense-v1",
+  "export_relative": "models/checkpoint/copsd_eval_dense_exports_v1/sw20_seed42_bf16_20261021_v1",
+  "export_manifest_sha256": "03ae72136b7e939e4f246ae4afe4c4e5d7976109ba2a598db9322de65bfc75e9",
+  "native16_output_relative": "logs/copsd_official_10lang/performance_vllm8192/sw20_concurrency64prompts_20261021_v1/concurrency16",
+  "native16_items_sha256": "87bc35f858055eacf77a2e889ca89e6edded394de4b0e9ceebeb613acd02e588",
+  "output_relative": "logs/copsd_official_10lang/performance_vllm8192/sw20_dense16_64prompts_20261021_v1",
+  "code_sha256": {
+    "benchmark_eval_dense8192.py": "462ea343968c4f794070ed42b6a173d405860207fda67ef6cb8b3b714a9cad1a",
+    "run_eval_dense8192.sh": "bcd5281af05d779b172d3a4a6693f5b5e613b4750b3ab15abc12832d2ada0d33",
+    "export_eval_dense_cpu.py": "2e56cec8df37ae88eeb66fce1b46cd8ad615f6a89b2ecd28fe0f3332762cf53e"
+  },
+  "items": 64,
+  "max_new_tokens": 8192,
+  "concurrency": 16,
+  "effective_scientific_budget_change": false,
+  "math_scoring": false,
+  "max_user_gpus": 4,
+  "scope": "Engineering throughput comparison of independent BF16 merged model against saved native-LoRA16; identical64 development prompts and sampling budgets. Not a new OPD training or efficacy experiment. CPU merge numerical differences are explicitly recorded; no native-LoRA score is replaced. Real dense throughput and sampled outputs remain unverified."
+}

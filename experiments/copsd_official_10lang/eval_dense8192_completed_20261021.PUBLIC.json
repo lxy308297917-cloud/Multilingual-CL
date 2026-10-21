@@ -1,0 +1,53 @@
+{
+  "backend": "independent_BF16_merged_dense",
+  "items": 64,
+  "generated_tokens": 325080,
+  "generation_seconds": 474.44298556260765,
+  "load_seconds": 9.8435218911618,
+  "tokens_per_generation_second": 685.1824347545388,
+  "samples_per_generation_second": 0.13489502837544753,
+  "observed_token_throughput_ratio_to_native16": 2.9572047430165647,
+  "observed_sample_throughput_ratio_to_native16": 2.1500228454610526,
+  "native16_metrics": {
+    "concurrency": 16,
+    "items": 64,
+    "generated_tokens": 236348,
+    "generation_seconds": 1020.0632578283548,
+    "load_seconds": 11.254819246008992,
+    "tokens_per_generation_second": 231.6993560802972,
+    "samples_per_generation_second": 0.06274120698774274,
+    "sampled_physical_GPU_peak_MiB": 22087.0,
+    "sampled_GPU_util_mean_percent": 33.81395348837209,
+    "truncated": 17,
+    "items_sha256": "87bc35f858055eacf77a2e889ca89e6edded394de4b0e9ceebeb613acd02e588",
+    "scope": "Full-budget native-LoRA engineering benchmark, not a mathematics accuracy report. Physical telemetry includes load/display overhead."
+  },
+  "same_physical_GPU_as_native16": true,
+  "sampled_physical_GPU_peak_MiB": 22065.0,
+  "sampled_GPU_util_mean_percent": 76.65020576131687,
+  "token_sequences_identical_to_native16": 0,
+  "finish_reasons_identical_to_native16": 36,
+  "truncated": 33,
+  "items_sha256": "19c57fc723465df775a783064dfc84fb75f552374e93d6c3d03e6aa7eee68167",
+  "scope": "Engineering throughput only on64 identical development prompts. BF16 merge changes numerics and can change trajectory lengths, so token/s and samples/s are both reported. Not mathematics efficacy, native-LoRA equivalence or a replacement protocol. Compare device identity and observed operating conditions before interpreting speed ratios. Source training checkpoints and existing formal outputs unchanged.",
+  "collected_at": "2026-10-21T14:58:44.902530",
+  "parent_completed_exit0": true,
+  "raw64_inputs_prompts_seeds_counts_and_same_GPU_verified": true,
+  "comparison_to_best_native64": {
+    "native_generation_seconds": 501.16034877859056,
+    "dense16_generation_seconds": 474.44298556260765,
+    "batch_wall_speedup_dense16_vs_native64": 1.056313116705268,
+    "native_generated_tokens": 266961,
+    "dense_generated_tokens": 325080,
+    "native_truncated": 22,
+    "dense_truncated": 33
+  },
+  "resource_decision": "Use native-LoRA64 for the next separately frozen evaluation preset. Dense16 saves only about5% batch wall time over native64 on this run, requires independent weight exports and changes BF16 model numerics. No math accuracy was measured; do not claim dense efficacy or adopt it as a score-compatible replacement.",
+  "new_dense_cost_only": {
+    "responses": 64,
+    "generated_tokens": 325080,
+    "generation_seconds": 474.44298556260765,
+    "parent_GPU_hours_counted_once": 0.13972222222222222,
+    "cached_native16_and_native64_costs_excluded": true
+  }
+}

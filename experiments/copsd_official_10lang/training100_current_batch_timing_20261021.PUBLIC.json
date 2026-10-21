@@ -1,0 +1,110 @@
+{
+  "observed_at": "2026-10-21T14:45:25.993143",
+  "model": "Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "training_generation_budget": 2048,
+  "effective_batch": 32,
+  "scientific_optimizer_or_loss_budget_reduced": false,
+  "source_inventory_sha256": "f3aded0a66f2e8fb0f5e9e095c13a36f5c1896860867b4b0fef994f4e58154d8",
+  "completed_full100_run_count": 5,
+  "results": {
+    "de": {
+      "run_id": "de_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
+      "updates": 100,
+      "question_exposures": 3188,
+      "training_loop_seconds": 12796.557150537148,
+      "training_loop_hours": 3.554599208482541,
+      "training_generated_tokens": 5813313,
+      "valid_response_loss_positions": 5813313,
+      "teacher_forward_calls": 3188,
+      "teacher_forward_cuda_seconds": 819.443310546875,
+      "student_forward_cuda_seconds": 735.2674393463135,
+      "policy_sync_seconds_including_diagnostic_hashing": 2643.492831181735,
+      "source_sha256": {
+        "COLLOCATE_TRAIN_UPDATES_DONE.json": "e35091e1bb75717aed22d5599e52d184953d4ad379c28b63f4ce1cff47358cfe",
+        "COST_SEGMENT_DONE.json": "237097613e87c8b7b506dc7261eb0fc6925211c11395924807bf8894af956c9b",
+        "UPDATE_BATCH_GENERATION.json": "3685c68a3fd4143045dcb102268d706eb90963a361adb0e90ea7796c4df3ed7a"
+      }
+    },
+    "es": {
+      "run_id": "es_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
+      "updates": 100,
+      "question_exposures": 3188,
+      "training_loop_seconds": 12254.142513902858,
+      "training_loop_hours": 3.4039284760841273,
+      "training_generated_tokens": 5950030,
+      "valid_response_loss_positions": 5950030,
+      "teacher_forward_calls": 3188,
+      "teacher_forward_cuda_seconds": 794.9697229309082,
+      "student_forward_cuda_seconds": 707.9658675994873,
+      "policy_sync_seconds_including_diagnostic_hashing": 2328.786126062274,
+      "source_sha256": {
+        "COLLOCATE_TRAIN_UPDATES_DONE.json": "4cfa6286b33a6bda22a6575ae952706a6e208a5bf33980410c400b17fec6edf8",
+        "COST_SEGMENT_DONE.json": "991ea43d9086adf14213a616a3c6a063ab67872ac868da308d27e757f100a6ea",
+        "UPDATE_BATCH_GENERATION.json": "cc9d2809c35318f33561afebbba510fea2551026d2292744bb9cab54562d49eb"
+      }
+    },
+    "fr": {
+      "run_id": "fr_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
+      "updates": 100,
+      "question_exposures": 3188,
+      "training_loop_seconds": 12372.991735471413,
+      "training_loop_hours": 3.436942148742059,
+      "training_generated_tokens": 5938403,
+      "valid_response_loss_positions": 5938403,
+      "teacher_forward_calls": 3188,
+      "teacher_forward_cuda_seconds": 793.0197735900879,
+      "student_forward_cuda_seconds": 715.7188960723877,
+      "policy_sync_seconds_including_diagnostic_hashing": 2394.145400730893,
+      "source_sha256": {
+        "COLLOCATE_TRAIN_UPDATES_DONE.json": "7d8039338c0614a26396e5717fafe3d092e8aa51707931cabbc7d454f8398b14",
+        "COST_SEGMENT_DONE.json": "7a80f6b22b2754a797ef9016ac2a7624f5f84594cf01e8cb8ef2427dbbbfa05f",
+        "UPDATE_BATCH_GENERATION.json": "26463d6bae5c3609d494e79146bb2842541bf4012b86875e6547558a4edaf5c2"
+      }
+    },
+    "ru": {
+      "run_id": "ru_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
+      "updates": 100,
+      "question_exposures": 3188,
+      "training_loop_seconds": 12127.393487203866,
+      "training_loop_hours": 3.368720413112185,
+      "training_generated_tokens": 5833797,
+      "valid_response_loss_positions": 5833797,
+      "teacher_forward_calls": 3188,
+      "teacher_forward_cuda_seconds": 810.3619312438965,
+      "student_forward_cuda_seconds": 717.3390847167968,
+      "policy_sync_seconds_including_diagnostic_hashing": 2266.3839607574046,
+      "source_sha256": {
+        "COLLOCATE_TRAIN_UPDATES_DONE.json": "afb4fca7468d494878aac786fcae6a9fa7c4859debe9a1f9eb2edb500b22e302",
+        "COST_SEGMENT_DONE.json": "4efc994135c05e4d06df6fb4b24e11cb6aab7031c1e3a3cf98eb3d403101f002",
+        "UPDATE_BATCH_GENERATION.json": "8f3f2f268f2c3147cae200695ad2b264c3cbcc1df963b95dfbebc8bd4f66c75e"
+      }
+    },
+    "zh": {
+      "run_id": "zh_17b_project2900_vllm_seeded_cost_seed42_20261020_v2",
+      "updates": 100,
+      "question_exposures": 3188,
+      "training_loop_seconds": 12342.774277564138,
+      "training_loop_hours": 3.428548410434483,
+      "training_generated_tokens": 5651145,
+      "valid_response_loss_positions": 5651145,
+      "teacher_forward_calls": 3188,
+      "teacher_forward_cuda_seconds": 792.5188369598388,
+      "student_forward_cuda_seconds": 735.633410736084,
+      "policy_sync_seconds_including_diagnostic_hashing": 2380.5827759113163,
+      "source_sha256": {
+        "COLLOCATE_TRAIN_UPDATES_DONE.json": "a1a9039a83b970adfc10bea038a79574fc9c0329c5f0ad2a652cdacb113e0b75",
+        "COST_SEGMENT_DONE.json": "66918913811b1f88401c0b9c06214453ea3307734b25be6de671c384aa2de413",
+        "UPDATE_BATCH_GENERATION.json": "3f6ffdbf20870f74df6aaef0eeca8b077d43ea2c30562fb47225242edb0abc31"
+      }
+    }
+  },
+  "training_loop_hours_range": [
+    3.368720413112185,
+    3.554599208482541
+  ],
+  "new_training": false,
+  "new_generation": false,
+  "GPU_used": false,
+  "scope": "Five unique full0-to100 single-GPU batched-vLLM training loops, from actual completion proofs. Includes updates, rollout, saves and diagnostic hashing inside the observed loop; excludes initial model/engine startup, queue waiting, later development/formal evaluation and failed/discarded work. Sync timing includes real weight synchronization as well as hashing, not a pure removable-check overhead. Counts3188 include the short epoch-boundary update; do not report nominal3200 as actual exposures. This is not the old serial single-GPU SW runtime, a future completion guarantee, or proof of method effectiveness. Costs overlap earlier reports and must not be added twice."
+}

@@ -9,18 +9,19 @@ import json
 from pathlib import Path
 
 from forgetting_metrics import calculate
-from sequential_evaluation import (PROTOCOL, audit_benchmark, digest, read,
+from sequential_evaluation import (PRESETS, audit_benchmark, digest, read,
                                    selection, verify_plan, write_new)
 
 
 def audit_marker(root, code, path, selection_sha):
     marker = read(path)
-    assert marker['completed'] and marker['protocol'] == PROTOCOL
+    assert marker['completed'] and marker['protocol'] in PRESETS
     assert marker['selection_record_sha256'] == selection_sha
     assert marker['evaluation_parent_exit_code'] == 0
     plan_path = Path(marker['plan_path_PRIVATE'])
     assert digest(plan_path) == marker['plan_sha256']
     plan = read(plan_path)
+    assert marker['protocol'] == plan['protocol']
     _, checkpoint = verify_plan(root, code, plan)
     assert plan['selection_record_sha256'] == selection_sha
     assert marker['checkpoint_adapter_sha256'] == plan['checkpoint_adapter_sha256']
@@ -94,7 +95,7 @@ def build(root, code, selection_path, selection_sha, direction, markers):
     assert all(not actual_pool_ids[i] & actual_pool_ids[j] for i in range(3) for j in range(i + 1, 3))
     assert len({x['pool_manifest_sha256'] for x in training_sources}) == 1
     return {'observed_at': datetime.datetime.now().isoformat(), 'order_id': order_id,
-        'selection_record_sha256': selection_sha, 'protocol': PROTOCOL,
+        'selection_record_sha256': selection_sha, 'protocol': s['stage_evaluation_protocol'],
         'matrices': {benchmark: calculate({'order': order, 'scores': matrix}) for benchmark, matrix in scores.items()},
         'source_markers': [{'stage_index': i, 'marker_sha256': digest(path),
             'plan_sha256': audits[i][0]['plan_sha256']} for i, path in enumerate(markers)],

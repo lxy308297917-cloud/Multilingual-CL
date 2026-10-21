@@ -48,6 +48,8 @@ def main():
         dict(cases['seed42'], input_sha256='0' * 64), checkpoints['seed42']))
     wrong_language = rejects(lambda: audit_benchmark(a.root, code,
         dict(cases['seed42'], language='ja'), checkpoints['seed42']))
+    mixed_protocol = rejects(lambda: audit_benchmark(a.root, code,
+        dict(cases['seed42'], protocol='project_formal_single_vllm8192_c64_v2'), checkpoints['seed42']))
     # Only checks the completeness gate, never constructs a language selection.
     incomplete = rejects(lambda: validate_case_set(['sw', 'zh', 'ja'], list(cases.values())))
     formal = code / 'ten_language_formal100_completed_20261021.PUBLIC.json'
@@ -57,8 +59,10 @@ def main():
         'correct_counts_match_independently_saved_report': audited,
         'rejected': {'other_checkpoint_adapter': wrong_adapter,
             'changed_input_identity': changed_input, 'wrong_language': wrong_language,
+            'old16_outputs_relabelled_as64_protocol': mixed_protocol,
             'incomplete_seven_case_stage': incomplete, 'formal_report_as_development_selection': formal_selection},
         'collector_sha256': digest(code / 'sequential_evaluation.py'),
+        'check_script_sha256': digest(Path(__file__)),
         'GPU_used': False, 'new_language_model_generation': False, 'production_selection_created': False,
         'scope': 'Read-only CPU provenance/completeness validation on real saved MGSM outputs. Not a seven-benchmark stage run, checkpoint handoff, three-language selection, full sequential evaluation or forgetting result. Does not rerun mathematical grading.'})
     print(json.dumps({'counts': audited, 'all_negative_evidence_rejected': True, 'GPU_used': False}))

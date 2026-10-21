@@ -16,12 +16,21 @@ import shutil
 import subprocess
 
 PROTOCOL = 'project_formal_single_vllm8192_v1'
+PRESETS = {
+    PROTOCOL: {'concurrency': 16, 'evaluator': 'evaluate_formal8192.py',
+        'wrapper': 'run_formal8192.sh', 'preflight': 'formal8192_CPU_preflight_20261020.PUBLIC.json'},
+    'project_formal_single_vllm8192_c64_v2': {'concurrency': 64,
+        'evaluator': 'evaluate_formal8192_c64.py', 'wrapper': 'run_formal8192_c64.sh',
+        'preflight': 'formal8192_c64_CPU_preflight_20261021.PUBLIC.json'},
+}
 REVISION = '70d244cc86ccca08cf5af4e1e306ecf908b1ad5e'
 LANGUAGES = set('sw te th bn zh ja ru de fr es'.split())
 CODE_FILES = ['sequential_evaluation.py', 'run_sequential_evaluation.sh',
               'evaluate_formal8192.py', 'run_formal8192.sh',
               'evaluate_transformers.py', 'evaluate_vllm.py',
               'formal8192_CPU_preflight_20261020.PUBLIC.json',
+              'evaluate_formal8192_c64.py', 'run_formal8192_c64.sh',
+              'formal8192_c64_CPU_preflight_20261021.PUBLIC.json',
               'compat/vllm011_uuid/sitecustomize.py']
 
 
@@ -48,7 +57,7 @@ def selection(path, sha):
     chosen = s['selected_languages']
     assert len(chosen) == len(set(chosen)) == 3 and set(chosen) <= LANGUAGES
     assert s['pool_by_language'] == {lang: i for i, lang in enumerate(chosen)}
-    assert s['stage_updates'] == 20 and s['stage_evaluation_protocol'] == PROTOCOL
+    assert s['stage_updates'] == 20 and s['stage_evaluation_protocol'] in PRESETS
     assert re.fullmatch(r'[A-Za-z0-9_-]+', s['experiment_id'])
     assert s['evidence_reports']
     for evidence in s['evidence_reports']:
@@ -83,19 +92,21 @@ def audit_benchmark(root, code, case, checkpoint):
     from evaluate_vllm import question_seed
     directory = root / 'logs/copsd_official_10lang/evaluation_vllm8192' / case['run_id']
     c, m = read(directory / 'CONFIG.json'), read(directory / 'DONE.json')
-    assert c['protocol'] == m['protocol'] == PROTOCOL
+    protocol = case.get('protocol', PROTOCOL)
+    preset = PRESETS[protocol]
+    assert c['protocol'] == m['protocol'] == protocol
     assert c['benchmark'] == case['benchmark'] and c['language'] == case['language']
     assert c['model'] == str(root / 'models/Qwen3-1.7B') and c['model_revision'] == REVISION
     data, count = benchmark_input(root, case['benchmark'], case['language'])
     assert Path(c['input']).resolve() == data.resolve() and c['input_sha256'] == case['input_sha256'] == digest(data)
-    assert c['evaluator_sha256'] == digest(code / 'evaluate_formal8192.py')
+    assert c['evaluator_sha256'] == digest(code / preset['evaluator'])
     official = root / 'COPSD-official-20261015/polymath_eval/evaluate_math.py'
     assert c['official_source_sha256'] == digest(official)
     release = official.with_name('run_eval_4b_all_checkpoints.sh')
     assert c['released_length_script_sha256'] == digest(release)
     assert c['samples'] == m['n'] == 1 and c['max_new_tokens'] == 8192
     assert c['temperature'] == 1 and c['top_p'] == .95 and c['top_k'] == -1
-    assert c['seed'] == 42 and c['max_num_seqs'] == m['actual_max_num_seqs'] == 16
+    assert c['seed'] == 42 and c['max_num_seqs'] == m['actual_max_num_seqs'] == preset['concurrency']
     assert c['model_context_limit'] == 40960
     if checkpoint:
         checkpoint = Path(checkpoint)
@@ -145,7 +156,8 @@ def audit_benchmark(root, code, case, checkpoint):
 
 def verify_plan(root, code, plan):
     s = selection(plan['selection_record'], plan['selection_record_sha256'])
-    assert plan['protocol'] == PROTOCOL and plan['model_revision'] == REVISION
+    assert plan['protocol'] == s['stage_evaluation_protocol'] and plan['model_revision'] == REVISION
+    preset = PRESETS[plan['protocol']]
     assert plan['code_sha256'] == {name: digest(code / name) for name in CODE_FILES}
     assert plan['direction'] in ['forward', 'reverse'] and 0 <= plan['stage_index'] <= 3
     order = s['selected_languages'] if plan['direction'] == 'forward' else list(reversed(s['selected_languages']))
@@ -156,10 +168,11 @@ def verify_plan(root, code, plan):
     assert digest(runtime_lock['model_lock']['path']) == runtime_lock['model_lock']['sha256']
     official = root / 'COPSD-official-20261015/polymath_eval/evaluate_math.py'
     assert digest(official) == runtime_lock['source_sha256']['polymath_eval/evaluate_math.py']
-    prepared = read(code / 'formal8192_CPU_preflight_20261020.PUBLIC.json')
-    assert prepared['evaluator_sha256'] == digest(code / 'evaluate_formal8192.py')
+    prepared = read(code / preset['preflight'])
+    assert prepared['evaluator_sha256'] == digest(code / preset['evaluator'])
     for c in plan['cases']:
         assert re.fullmatch(r'[A-Za-z0-9_-]+', c['run_id'])
+        assert c.get('protocol', PROTOCOL) == plan['protocol']
         path, count = benchmark_input(root, c['benchmark'], c['language'])
         assert c['input_sha256'] == digest(path) and c['items'] == count
         assert c['input_sha256'] == runtime_lock['input_sha256'][str(path.relative_to(root))]
@@ -202,11 +215,12 @@ def create_plan(root, code, a):
         key = f'{benchmark}:{language}'
         path, count = benchmark_input(root, benchmark, language)
         cases.append({'benchmark': benchmark, 'language': language, 'items': count,
+            'protocol': s['stage_evaluation_protocol'],
             'input_sha256': digest(path), 'cached_before_execution': key in cache,
             'run_id': cache.get(key, f'{a.run_label}_{benchmark}_{language}')})
     checkpoint = a.checkpoint.resolve() if a.checkpoint else None
     plan = {'selection_record': str(a.selection.resolve()), 'selection_record_sha256': a.selection_sha,
-        'protocol': PROTOCOL, 'model_revision': REVISION, 'direction': a.direction,
+        'protocol': s['stage_evaluation_protocol'], 'model_revision': REVISION, 'direction': a.direction,
         'stage_index': a.stage, 'order_id': s['experiment_id'] + '_' + a.direction,
         'checkpoint': str(checkpoint) if checkpoint else None,
         'checkpoint_adapter_sha256': digest(checkpoint / 'adapter_model.safetensors') if checkpoint else None,
@@ -235,7 +249,7 @@ def run_plan(root, code, path, prepare_only):
             audit_benchmark(root, code, case, checkpoint)
             continue
         assert not destination.exists(), 'Preserve partial output; recover with a new plan and explicit completed cache'
-        command = ['bash', str(code / 'run_formal8192.sh'), case['benchmark'], case['language'], case['run_id']]
+        command = ['bash', str(code / PRESETS[plan['protocol']]['wrapper']), case['benchmark'], case['language'], case['run_id']]
         if checkpoint:
             command += [str(checkpoint), '20']
         commands.append((case, command))
@@ -278,7 +292,7 @@ def collect(root, code, path, queue, output):
     fresh = [row for row, case in zip(completed, plan['cases']) if not case['cached_before_execution']]
     wall = (datetime.datetime.fromisoformat(job['finished_at']) - datetime.datetime.fromisoformat(job['started_at'])).total_seconds()
     write_new(output, {'completed': True, 'selection_record_sha256': plan['selection_record_sha256'],
-        'protocol': PROTOCOL, 'order_id': plan['order_id'], 'stage_index': plan['stage_index'],
+        'protocol': plan['protocol'], 'order_id': plan['order_id'], 'stage_index': plan['stage_index'],
         'checkpoint_adapter_sha256': plan['checkpoint_adapter_sha256'],
         'plan_sha256': digest(path), 'plan_path_PRIVATE': str(path), 'evaluation_parent_exit_code': 0,
         'completed_benchmarks': completed,

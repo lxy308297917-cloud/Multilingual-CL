@@ -1,0 +1,67 @@
+{
+  "observed_at": "2026-10-21T14:46:01.754281",
+  "metrics": {
+    "16": {
+      "concurrency": 16,
+      "items": 64,
+      "generated_tokens": 236348,
+      "generation_seconds": 1020.0632578283548,
+      "load_seconds": 11.254819246008992,
+      "tokens_per_generation_second": 231.6993560802972,
+      "samples_per_generation_second": 0.06274120698774274,
+      "sampled_physical_GPU_peak_MiB": 22087.0,
+      "sampled_GPU_util_mean_percent": 33.81395348837209,
+      "truncated": 17,
+      "items_sha256": "87bc35f858055eacf77a2e889ca89e6edded394de4b0e9ceebeb613acd02e588",
+      "scope": "Full-budget native-LoRA engineering benchmark, not a mathematics accuracy report. Physical telemetry includes load/display overhead.",
+      "generation_time_speedup_vs16": 1.0,
+      "exact_token_sequence_matches_vs16": 64
+    },
+    "32": {
+      "concurrency": 32,
+      "items": 64,
+      "generated_tokens": 294002,
+      "generation_seconds": 817.3966525923461,
+      "load_seconds": 11.637482749298215,
+      "tokens_per_generation_second": 359.6809444565041,
+      "samples_per_generation_second": 0.07829736003570133,
+      "sampled_physical_GPU_peak_MiB": 22633.0,
+      "sampled_GPU_util_mean_percent": 42.920481927710846,
+      "truncated": 29,
+      "items_sha256": "d6f83e817fa7ac19c6c4c2e125757c96916a61f6ce4ac299d33d8fc697c98484",
+      "scope": "Full-budget native-LoRA engineering benchmark, not a mathematics accuracy report. Physical telemetry includes load/display overhead.",
+      "generation_time_speedup_vs16": 1.2479415649590178,
+      "exact_token_sequence_matches_vs16": 0
+    },
+    "64": {
+      "concurrency": 64,
+      "items": 64,
+      "generated_tokens": 266961,
+      "generation_seconds": 501.16034877859056,
+      "load_seconds": 10.838295193389058,
+      "tokens_per_generation_second": 532.6857973712954,
+      "samples_per_generation_second": 0.12770363847814065,
+      "sampled_physical_GPU_peak_MiB": 22419.0,
+      "sampled_GPU_util_mean_percent": 50.48443579766537,
+      "truncated": 22,
+      "items_sha256": "ac4e7c2af087db7a7ebe6a50ffa17cb154de8fbd11755e8a198e151f9f123fe2",
+      "scope": "Full-budget native-LoRA engineering benchmark, not a mathematics accuracy report. Physical telemetry includes load/display overhead.",
+      "generation_time_speedup_vs16": 2.0354029609772906,
+      "exact_token_sequence_matches_vs16": 1
+    }
+  },
+  "new_generation_responses": 192,
+  "same_GPU": "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573",
+  "scope": "Engineering comparison only; not a training or formal efficacy result. Batch changes may alter sampled outputs despite equal per-request seeds; exact-match counts are measured rather than assumed. Existing frozen runs are separate; future scientific comparisons must use one fixed adopted configuration for all models. Raw192 responses and successful parent verified. Same questions/seeds do not make differing batch outputs identical. Resource64 was chosen only by measured throughput/memory, without math scoring or formal-test selection. Cost overlaps the saved benchmark and is not additional generation.",
+  "collected_at": "2026-10-21T14:50:57.069637",
+  "parent_completed_exit0": true,
+  "raw_prompts_IDs_seeds_tokens_and_counts_verified": true,
+  "best_observed_resource_concurrency": 64,
+  "new_cost": {
+    "responses": 192,
+    "generated_tokens": 797311,
+    "generation_seconds": 2338.6202591992915,
+    "parent_GPU_hours_counted_once": 0.6688888888888889
+  },
+  "source_summary_sha256": "98c7a69545eb6f12325b64f7a0d193d07e50430296848ce28c736cc5e5a7170c"
+}
