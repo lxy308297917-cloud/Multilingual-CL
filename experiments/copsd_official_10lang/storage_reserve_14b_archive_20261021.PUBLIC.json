@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-10-21T13:56:58.697104",
+  "logical_model_path": "/data0/users/lixiaoyang/models/Qwen3-14B",
+  "physical_model_path": "/data1/lixiaoyang/copsd-archives/models/Qwen3-14B_20261021_v1",
+  "model": "Qwen3-14B (paused legacy direction)",
+  "verified_regular_files": 37,
+  "verified_total_bytes": 29552617178,
+  "verified_total_GiB": 27.523019516840577,
+  "source_free_before_GiB": 30.50475311279297,
+  "source_free_after_GiB": 58.02755355834961,
+  "current_free_GiB": 57.99908447265625,
+  "all_source_stream_hashes_matched_independent_destination_SHA256": true,
+  "source_metadata_unchanged_during_copy": true,
+  "original_path_preserved_as_symlink": true,
+  "only_redundant_source_copy_removed_after_verification": true,
+  "model_index_and_all_shard_paths_readable_through_original_path": true,
+  "GPU_experiments_cancelled": false,
+  "migration_script_sha256": "456c91418cb9e3fdff9e8460cdcbbf98059f871fadbff7573551080b0f1328ab",
+  "scope": "Storage-reserve maintenance only; no model content/precision conversion or scientific outcome. Private per-file manifest remains beside the physical archive. Logical models path retained; active1.7B and current checkpoint locations unchanged."
+}
