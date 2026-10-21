@@ -93,3 +93,5 @@ GPU工程结果见[接续2更新](sequential_handoff_GPU_completed_20261021.PUBL
 本机训练checkpoint：`/data0/users/lixiaoyang/models/checkpoint/`；日志、逐题输出及性能记录：`/data0/users/lixiaoyang/logs/copsd_official_10lang/`。公开配置、适配源码、报告均在本目录；私有运行CONFIG、逐题数据和模型权重保留本机。旧FFT／批量SFT标签／旧协议结果继续归档，不混入本轮。
 
 2026-10-21补充：匹配题池single入口已复用固定官方核心执行器，独立输出与评测角色已接通；真实967条题池／错误输入及已有750条正式输出CPU验收通过。没有创建最终语言选择、生产配置或新增GPU实验。见[同题池single接口及边界](SEQUENTIAL_ADAPTER_ZH.md)。
+
+SW PolyMath seed42补充：四档各125题正确数3→12／3→9／2→6／0→2；正常终止55→297／500，新增25道正确中21道的Base原输出没有提取答案。整段思考区swh标签304→373／500，但不能据语言ID证明推理质量。完整[难度与语言分解](sw20_polymath_tiers_language_20261021.PUBLIC.json)未改原数学评分，不代表seed43或英语已完成。
