@@ -1,0 +1,124 @@
+{
+  "observed_at": "2026-10-21T14:12:07.071657",
+  "protocol": "project_formal_single_vllm8192_v1",
+  "benchmark": "mgsm_rev2",
+  "metrics": {
+    "base": {
+      "items": 250,
+      "single_correct": 8,
+      "generated_tokens": 1624159,
+      "truncated": 193,
+      "normal_terminations": 57,
+      "answer_extraction_failures": 192,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 250,
+      "single_accuracy": 0.032,
+      "generation_seconds": 2157.8273316919804,
+      "model_load_seconds": 11.61459919437766,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    },
+    "seed42": {
+      "items": 250,
+      "single_correct": 13,
+      "generated_tokens": 712890,
+      "truncated": 61,
+      "normal_terminations": 189,
+      "answer_extraction_failures": 66,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 250,
+      "single_accuracy": 0.052,
+      "generation_seconds": 2611.8668661173433,
+      "model_load_seconds": 10.781515050679445,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    },
+    "seed43": {
+      "items": 250,
+      "single_correct": 14,
+      "generated_tokens": 781733,
+      "truncated": 68,
+      "normal_terminations": 182,
+      "answer_extraction_failures": 68,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 250,
+      "single_accuracy": 0.056,
+      "generation_seconds": 3104.2056320551783,
+      "model_load_seconds": 10.779143944382668,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    }
+  },
+  "paired_counts": {
+    "seed42": {
+      "Base_correct": 8,
+      "trained20_correct": 13,
+      "gained": 8,
+      "lost": 3,
+      "delta_correct": 5
+    },
+    "seed43": {
+      "Base_correct": 8,
+      "trained20_correct": 14,
+      "gained": 9,
+      "lost": 3,
+      "delta_correct": 6
+    }
+  },
+  "sources": {
+    "base": {
+      "run_id": "sw20confirm_base_mgsm_rev2_8192_20261021_v1",
+      "raw_items_sha256": "206b422af976f95b5918ecb3e9495289d23ce63a99ff840f633fcb3a57b91fb9",
+      "config_sha256": "81c5b2b8eb42bc395ae1a41fd76fad6d91d7cd2686cfd02d9e604cefd5605b00",
+      "DONE_sha256": "c51ef44a04ed8cab7092b530ea79aaf3da7e017ae0e0d06aaaad23cc343e7af9"
+    },
+    "seed42": {
+      "run_id": "sw20confirm_seed42_mgsm_rev2_8192_20261021_v1",
+      "raw_items_sha256": "96fa851efd3fb50df36826b95f711501f867a1575fc2d56ab78244a15ab3aa9c",
+      "config_sha256": "99ab69cc0076d889878089d004f48b1ceb3b915b8861c832769fce8bc10f6616",
+      "DONE_sha256": "0d48f1c611cd0e2ba6c761d9659e839616b42172c0fe5bf9ca404e5ca6d65da3"
+    },
+    "seed43": {
+      "run_id": "sw20confirm_seed43_mgsm_rev2_8192_20261021_v1",
+      "raw_items_sha256": "da0e9e3c29db77f7af8b0e3bd2f62ac4b575048168672b78d4f5b935f4e13164",
+      "config_sha256": "89da75280e3a95ca75f6644650e3b645361d1ab8753b53e6b1254ad872224872",
+      "DONE_sha256": "90e193fefb1fa2a9376230ce2782f822937fc7f9141a3dae08ea537ea7d3615b"
+    }
+  },
+  "parents": {
+    "base": {
+      "queue": "copsd-sw20-formal8192-confirm-v1",
+      "observed_phase": "running",
+      "exit_code": null
+    },
+    "seed42": {
+      "queue": "copsd-sw20-formal8192-seed42-v1",
+      "observed_phase": "running",
+      "exit_code": null
+    },
+    "seed43": {
+      "queue": "copsd-sw20-formal8192-seed43-v1",
+      "observed_phase": "running",
+      "exit_code": null
+    }
+  },
+  "all_requested_stage_outputs_verified": true,
+  "all_three_parent_suites_completed_exit0": false,
+  "stage_cost_only": {
+    "responses": 750,
+    "generated_tokens": 3118782,
+    "generation_seconds": 7873.899829864502,
+    "scope": "Unique completed requested benchmark stages only; excludes other suites, training, loading and parent-clock allocation. Do not add to overlapping later aggregate reports."
+  },
+  "new_generation_from_this_analysis": false,
+  "scope": "Frozen project n1/8192 stage comparison, not official pass12. Completed benchmark stages do not imply the other benchmark stages or English have completed. Both checkpoints were preselected using independent development; the formal inputs are existing project test sets, not newly held-out tests. No language selection from these formal scores."
+}
