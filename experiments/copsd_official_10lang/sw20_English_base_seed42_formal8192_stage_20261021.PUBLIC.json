@@ -1,0 +1,94 @@
+{
+  "observed_at": "2026-10-21T16:31:04.398649",
+  "protocol": "project_formal_single_vllm8192_v1",
+  "benchmark": "gsm8k",
+  "metrics": {
+    "base": {
+      "items": 1319,
+      "single_correct": 1180,
+      "generated_tokens": 1467825,
+      "truncated": 2,
+      "normal_terminations": 1317,
+      "answer_extraction_failures": 1,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "gsm8k",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 1319,
+      "single_accuracy": 0.8946171341925702,
+      "generation_seconds": 1769.6380216553807,
+      "model_load_seconds": 9.625618781894445,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    },
+    "seed42": {
+      "items": 1319,
+      "single_correct": 1190,
+      "generated_tokens": 1857898,
+      "truncated": 11,
+      "normal_terminations": 1308,
+      "answer_extraction_failures": 9,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "gsm8k",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 1319,
+      "single_accuracy": 0.9021986353297953,
+      "generation_seconds": 6286.769205426797,
+      "model_load_seconds": 10.905600491911173,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    }
+  },
+  "paired_counts": {
+    "seed42": {
+      "Base_correct": 1180,
+      "trained20_correct": 1190,
+      "gained": 51,
+      "lost": 41,
+      "delta_correct": 10
+    }
+  },
+  "sources": {
+    "base": {
+      "run_id": "sw20confirm_base_gsm8k_8192_20261021_v1",
+      "raw_items_sha256": "3409c3e78bee84a0b62eb864eba4de6e5f51680103c423b1aa9437b8ccff7b1f",
+      "config_sha256": "749272950e4b76862841a6fd3c8cad4b37f54d7521838aecd64933e43c4777b8",
+      "DONE_sha256": "653d7f217aacda8624ed3dd707d285401e1cdffb414d9ca2d6270924004cb087"
+    },
+    "seed42": {
+      "run_id": "sw20confirm_seed42_gsm8k_8192_20261021_v1",
+      "raw_items_sha256": "1208ea353dd6e238230aa49df3c45fe8d8b81cd3811bf2bbba4c165de8d90d36",
+      "config_sha256": "053dca0e8931d8c89f7c54b2770b5666bf72a60f7f9cfe0b90a406c84d9c15a1",
+      "DONE_sha256": "23e262ee013ed846b6e1a41986344cb46f88e4c0c1dafc6a0f1932794fa94296"
+    }
+  },
+  "parents": {
+    "base": {
+      "queue": "copsd-sw20-formal8192-confirm-v1",
+      "observed_phase": "completed",
+      "exit_code": 0
+    },
+    "seed42": {
+      "queue": "copsd-sw20-formal8192-seed42-v1",
+      "observed_phase": "completed",
+      "exit_code": 0
+    }
+  },
+  "all_requested_stage_outputs_verified": true,
+  "requested_models": [
+    "base",
+    "seed42"
+  ],
+  "all_three_models_included": false,
+  "all_requested_parent_suites_completed_exit0": true,
+  "all_three_parent_suites_completed_exit0": false,
+  "stage_cost_only": {
+    "responses": 2638,
+    "generated_tokens": 3325723,
+    "generation_seconds": 8056.407227082178,
+    "scope": "Unique completed requested benchmark stages only; excludes other suites, training, loading and parent-clock allocation. Do not add to overlapping later aggregate reports."
+  },
+  "new_generation_from_this_analysis": false,
+  "scope": "Frozen project n1/8192 stage comparison, not official pass12. Completed benchmark stages do not imply the other benchmark stages or English have completed. Both checkpoints were preselected using independent development; the formal inputs are existing project test sets, not newly held-out tests. No language selection from these formal scores."
+}

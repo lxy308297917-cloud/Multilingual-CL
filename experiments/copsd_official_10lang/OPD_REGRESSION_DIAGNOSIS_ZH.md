@@ -42,6 +42,12 @@ SW20 seed42在官方发布AfriMGSM1024／12回答协议下，pass@12从Base34→
 
 两个阶段均已复核原始数据、prompt、gold、模型身份和逐题／逐回答计数，父管线尚未结束。见[JA阶段](ja_seed43_target20_dev8192_stage_completed_20261021.PUBLIC.json)、[SW官方阶段](sw20_afrimgsm_seed42_stage_completed_20261021.PUBLIC.json)。
 
+## 2026-10-21 16:32：SW20 seed42的英语正式保持结果已完成
+
+相同1319题、n1／8192正式协议下，Base1180题（89.46%），SW20 seed42为1190题（90.22%）；目标语同支MGSM8→13、PolyMath8→29，父管线已exit0。它修正“本轮所有OPD配置都会损伤英语”的笼统说法：旧100更新／2048的十语表仍全部英语下降，但这支20更新／8192对照未出现英语总分下降。不能跨两种预算和不同历史run直接归因为步数，也不能将总分提高视为每道题完全保持。
+
+seed43英语未完成，暂不称两seed稳定英语保持；JA英语仍待结果。现有证据支持SW作为局部受益候选，但没有三种最终入选语言或研究顺序实验。见[完整管线及原始计数](sw20_seed42_formal8192_completed_20261021.PUBLIC.json)、[英语配对报告](sw20_English_base_seed42_formal8192_stage_20261021.PUBLIC.json)。
+
 ## 历史排查与阶段记录（保留原日期）
 
 **2026-10-21 11:34当前运行更新：** 用户已取消已授权实验故障恢复的重复确认限制，四项恢复均已实际运行（JA续训GPU0、TH英语GPU2、JA20评测GPU3、TE评测GPU4），没有等待恢复授权。TE Base已复用73条并补27条完成，7／100；JA Base新完成47／100，十语及英语Base8192开发比较已经齐备。SW Base及20更新两seed的固定正式比较队列已启动、等待四卡总量内资源；尚无新正式成绩。下文10月20日的故障及等待记录保留为历史。见[当前完整状态](CURRENT_PUBLIC_ZH.md)、[完整Base开发表](base_all10plusEN8192_completed_20261021.PUBLIC.json)。
