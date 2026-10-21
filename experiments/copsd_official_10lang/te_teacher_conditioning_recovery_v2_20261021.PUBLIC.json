@@ -1,0 +1,45 @@
+{
+  "frozen_at": "2026-10-21T19:52:10.481912",
+  "protocol": "privileged_teacher_conditioning_diagnostic_v1",
+  "language": "te",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "conditions": [
+    "student_prompt",
+    "privileged_teacher_prompt"
+  ],
+  "items_each": 100,
+  "samples": 1,
+  "max_new_tokens": 2048,
+  "max_num_seqs": 16,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "seed": 42,
+  "adapter": null,
+  "prepared": {
+    "language": "te",
+    "items": 100,
+    "inference_performed": false,
+    "student_prefix_tokens": 45848,
+    "teacher_prefix_tokens": 200450,
+    "all_prefixes_untruncated": true,
+    "official_collator_used_directly": true,
+    "teacher_receives_English_problem_and_reference": true,
+    "student_receives_target_problem_only": true,
+    "formal_test": false,
+    "GPU_validation": "Not yet run; private prompts prepared only."
+  },
+  "code_sha256": {
+    "evaluate_teacher_conditioning.py": "dd9d8899e45cae14a277ed634a11bddb67096dc8868cab3c26679225304743f2",
+    "prepare_teacher_context_check.py": "e40cd5703c349707bfa45c6912c9f7375130529708e035756e143f6823d97a19",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "run_te_teacher_conditioning_recovery_v2.sh": "5b02ab68f2c765f447cbc5dc52685d66b91ac5922c8a88c09c6567ffeb8917d0"
+  },
+  "private_prompts_sha256": "b3eefb2cd896296feef11384f5ae46b23acd1b9a6df57ae8ad57ae24d1d492ec",
+  "reason": "TE matched clip control yielded3 versus9 target correct (Base7) and78 versus71 English (Base77), insufficient stable benefit. Check whether privileged English conditioning has a clean-context advantage for TE before adding training variants.",
+  "scope": "One finite diagnostic, no SFT labels, train updates, official benchmark claim or automatic expansion. Same2048 budget within both conditions, matching training length; not comparable to earlier8192 development scores. A teacher conditional-generation advantage does not prove useful supervision on wrong student histories.",
+  "recovery_prepared_at": "2026-10-21T19:54:46.662484",
+  "recovery_reason": "v1 failed before model load: wrong dated path to existing shared dev_vllm runtime lock. v2 keeps the20261020 common lock, preserves original failure and script, uses a separate output/log/queue. Same frozen prepared contexts and scientific settings.",
+  "output_relative": "logs/copsd_official_10lang/teacher_context/te_conditioning_dev100_20261021_v2"
+}

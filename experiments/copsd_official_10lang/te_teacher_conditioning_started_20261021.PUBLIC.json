@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-21T19:57:12.627979",
+  "queue": "copsd-te-teacher-conditioning-v2",
+  "phase": "running",
+  "launcher_pid": 137804,
+  "gpu_uuids": [
+    "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+  ],
+  "model_loaded": true,
+  "output_relative": "logs/copsd_official_10lang/teacher_context/te_conditioning_dev100_20261021_v2",
+  "CPU_actual_wrapper_prepare_only_exit0": true,
+  "previous_failure": "v1 wrong common runtime-lock date; before model load, original logs and entry preserved.",
+  "scope": "Diagnostic generation only, no training or SFT labels; no teacher advantage or on-policy quality conclusion until both student/teacher outputs are audited."
+}
