@@ -178,3 +178,7 @@ JA已从80接续至100，训练与有序释放完成，最终adapter／optimizer
 JA恢复父管线已exit0，随后完成旧2048预算开发100题Base39→100更新27（新增6、失去18）。其20更新8192的47→50属于不同checkpoint与预算，不能把两者拼作同协议曲线。完整恢复报告明确按实际checkpoint100标分；共享内部配对函数的adapter20键已在报告层转换为adapter100，训练与冻结评测源码未改。见[恢复完整开发比较和成本](ja100_full_recovery_completed_20261021.PUBLIC.json)。
 
 缺失的JA100固定正式套件已沿用既有入口启动`copsd-ja100-complete-formal-v1`，并已取得GPU0实际运行；与已完成八语同n1／2048、MGSM250／PolyMath500各测Base与JA100、英语只新测JA100并复用1319题Base，新增2819回答，不重训。配置及源代码身份见[冻结设置](ja100_complete_formal_frozen_20261021.PUBLIC.json)。当前GPU2运行SW seed42正式8192确认，GPU3／4继续JA20英语与TE20评测；其余已授权队列在四卡上限内等待。最终三语言尚未选定，不提前启动顺序训练。
+
+## 顺序数据接口的已知JA坏前缀隔离
+
+原始967／967／966题池引用修复前JA输入，已确认坏前缀位于pool1。导出接口已支持并校验现有JA修复版：所有原题ID及顺序不变、全2900行仅一处`problem_ja`严格删除已确认重复前缀，其余字段不变；不改官方源或旧题池。三个实际池临时导出比对通过，缺少修复的旧JA输入会在写输出前拒绝，无GPU或新训练。若JA入选，使用修复参数导出其绑定池；当前未选择最终三语言。见[具体接口与边界](SEQUENTIAL_ADAPTER_ZH.md)、[实际数据CPU验收](sequential_JA_repaired_pool_export_CPU_20261021.PUBLIC.json)。
