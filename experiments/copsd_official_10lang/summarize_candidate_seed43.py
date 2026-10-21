@@ -18,7 +18,8 @@ def main():
     assert not a.output.exists()
     root, lang, code = a.root, a.language, Path(__file__).parent
     frozen = read(code / f'{lang}_seed43_prefix20_frozen_20261021.PUBLIC.json')
-    for name, sha in frozen['code_sha256'].items():
+    source_hashes = frozen['source_sha256'] if lang == 'ja' else frozen['code_sha256']
+    for name, sha in source_hashes.items():
         assert digest(code / name) == sha, name
     queue = f'copsd-{lang}-seed43-prefix20-dev8192-v1'
     track = 'copsd_prefix20_replicates_v1' if lang == 'zh' else 'copsd_ja_prefix20_replicates_v1'
