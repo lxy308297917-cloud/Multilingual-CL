@@ -1,0 +1,110 @@
+{
+  "frozen_at": "2026-10-21T11:24:07.124953",
+  "protocol": "project_formal_single_vllm8192_v1",
+  "selection_basis": "SW20 target-language gains on independent development100 repeated for training seeds42/43. Fix both models before this suite, no selection using these formal outputs.",
+  "scope": "Project n1/8192 formal confirmation, not official pass12 or fresh untouched test dataset. Same public test inputs were previously used for old100-update models at2048. Prior scores cannot select or change these frozen stages.",
+  "models_retrained": false,
+  "training_configuration": "Official beta0 componentclip0.05,20 updates,100-update LR horizon,640 exposures; two already completed seeded runs.",
+  "stages": [
+    {
+      "model": "base",
+      "adapter_relative": null,
+      "step": null,
+      "benchmark": "mgsm_rev2",
+      "language": "sw",
+      "items": 250,
+      "run_id": "sw20confirm_base_mgsm_rev2_8192_20261021_v1"
+    },
+    {
+      "model": "base",
+      "adapter_relative": null,
+      "step": null,
+      "benchmark": "polymath",
+      "language": "sw",
+      "items": 500,
+      "run_id": "sw20confirm_base_polymath_8192_20261021_v1"
+    },
+    {
+      "model": "base",
+      "adapter_relative": null,
+      "step": null,
+      "benchmark": "gsm8k",
+      "language": "en",
+      "items": 1319,
+      "run_id": "sw20confirm_base_gsm8k_8192_20261021_v1"
+    },
+    {
+      "model": "seed42",
+      "adapter_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed42_20261020_v1/checkpoint-20",
+      "step": 20,
+      "benchmark": "mgsm_rev2",
+      "language": "sw",
+      "items": 250,
+      "run_id": "sw20confirm_seed42_mgsm_rev2_8192_20261021_v1",
+      "adapter_sha256": "eb12d3b8dd22249fc0d5744ef56d83cf4db0ffe8495357f59ea618db52195c6c"
+    },
+    {
+      "model": "seed42",
+      "adapter_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed42_20261020_v1/checkpoint-20",
+      "step": 20,
+      "benchmark": "polymath",
+      "language": "sw",
+      "items": 500,
+      "run_id": "sw20confirm_seed42_polymath_8192_20261021_v1",
+      "adapter_sha256": "eb12d3b8dd22249fc0d5744ef56d83cf4db0ffe8495357f59ea618db52195c6c"
+    },
+    {
+      "model": "seed42",
+      "adapter_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed42_20261020_v1/checkpoint-20",
+      "step": 20,
+      "benchmark": "gsm8k",
+      "language": "en",
+      "items": 1319,
+      "run_id": "sw20confirm_seed42_gsm8k_8192_20261021_v1",
+      "adapter_sha256": "eb12d3b8dd22249fc0d5744ef56d83cf4db0ffe8495357f59ea618db52195c6c"
+    },
+    {
+      "model": "seed43",
+      "adapter_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed43_20261020_v1/checkpoint-20",
+      "step": 20,
+      "benchmark": "mgsm_rev2",
+      "language": "sw",
+      "items": 250,
+      "run_id": "sw20confirm_seed43_mgsm_rev2_8192_20261021_v1",
+      "adapter_sha256": "62f5a10a195fa60d7d5d03fe7ad480384e05c1d75adced9d06f7e256f320ab27"
+    },
+    {
+      "model": "seed43",
+      "adapter_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed43_20261020_v1/checkpoint-20",
+      "step": 20,
+      "benchmark": "polymath",
+      "language": "sw",
+      "items": 500,
+      "run_id": "sw20confirm_seed43_polymath_8192_20261021_v1",
+      "adapter_sha256": "62f5a10a195fa60d7d5d03fe7ad480384e05c1d75adced9d06f7e256f320ab27"
+    },
+    {
+      "model": "seed43",
+      "adapter_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed43_20261020_v1/checkpoint-20",
+      "step": 20,
+      "benchmark": "gsm8k",
+      "language": "en",
+      "items": 1319,
+      "run_id": "sw20confirm_seed43_gsm8k_8192_20261021_v1",
+      "adapter_sha256": "62f5a10a195fa60d7d5d03fe7ad480384e05c1d75adced9d06f7e256f320ab27"
+    }
+  ],
+  "total_generated_responses_planned": 6207,
+  "max_generated_tokens_upper_bound": 50847744,
+  "max_user_gpus": 4,
+  "one_GPU_per_parent": true,
+  "minimum_free_bytes": 21474836480,
+  "failure_policy": "Stop failing parent, retain partial results. Diagnose before recovery; no blind retry.",
+  "code_sha256": {
+    "run_formal8192.sh": "741044c7a3ba5f8916c2d9983289d6ec0272eb84b9f1e177fbe2e234bcc17eed",
+    "evaluate_formal8192.py": "07e904913890bbd7488d5d2f8413fd6b34854e4fec4787cf64e417fd6890d1a6",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d"
+  }
+}
