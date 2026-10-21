@@ -1,0 +1,117 @@
+{
+  "observed_at": "2026-10-21T11:47:32.675115",
+  "operation": "th",
+  "new_parent_identity_for_cost_deduplication": {
+    "queue": "copsd-th-saved20-screen8192-v1",
+    "started_at": "2026-10-21 11:18:43",
+    "script_sha256": "f961939799997079211ac81cdc14231de64b308e3adc476c190251db9ede4bd8"
+  },
+  "old_cost_reference_not_additional_compute": "disk_failure_cost_audit_20261020.PUBLIC.json#th",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "paired_development100": {
+    "target": {
+      "base_correct": 53,
+      "adapter20_correct": 46,
+      "gained": 10,
+      "lost": 17,
+      "delta_correct": -7
+    },
+    "English": {
+      "base_correct": 77,
+      "adapter20_correct": 77,
+      "gained": 5,
+      "lost": 5,
+      "delta_correct": 0
+    }
+  },
+  "metrics": {
+    "base": {
+      "items": 100,
+      "single_correct": 53,
+      "generated_tokens": 315000,
+      "truncated": 9,
+      "normal_terminations": 91,
+      "answer_extraction_failures": 7,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.53,
+      "generation_seconds": 446.4394735582173,
+      "model_load_seconds": 10.04498215019703,
+      "actual_max_num_seqs": 16
+    },
+    "target": {
+      "items": 100,
+      "single_correct": 46,
+      "generated_tokens": 393062,
+      "truncated": 10,
+      "normal_terminations": 90,
+      "answer_extraction_failures": 4,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.46,
+      "generation_seconds": 1727.9783439449966,
+      "model_load_seconds": 11.31630770675838,
+      "actual_max_num_seqs": 16
+    },
+    "English": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 420555,
+      "truncated": 15,
+      "normal_terminations": 85,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 1624.178582560271,
+      "model_load_seconds": 11.169642029330134,
+      "actual_max_num_seqs": 16
+    },
+    "English_Base": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 428429,
+      "truncated": 17,
+      "normal_terminations": 83,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 661.9746270235628,
+      "model_load_seconds": 9.65354778803885,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "new_generation_cost": {
+    "new_responses": 100,
+    "new_generated_tokens": 420555,
+    "new_generation_seconds": 1624.178582560271,
+    "reused_responses_excluded": {
+      "base": 100,
+      "target": 100,
+      "English_Base": 100
+    }
+  },
+  "new_unique_parent_allocated_GPU_hours": 0.46,
+  "old_interrupted_parent_cost": {
+    "allocated_GPU_hours_approx": 0.6812242672222222,
+    "waiting_without_allocated_GPU": false,
+    "method": "Old job start to archived service-failure event, one GPU. Approximate allocation clock; old child normal exit was not collected.",
+    "unserialized_generation_work_not_reconstructed": true,
+    "old_parent_success_claimed": false
+  },
+  "old_plus_recovery_parent_GPU_hours_approx": 1.1412242672222221,
+  "new_parent_exit0_scientific_sources_inputs_prompts_seeds_counts_and_marker_verified": true,
+  "cached_English_Base_cost_not_added_again": true,
+  "TE_partial_cost_uses_only_new27": false,
+  "new_training": false,
+  "scope": "Recovered development report, not new formal tests, stable final language selection or sequential results. Old failed parent costs are approximated from failure events, not normal exits. Cached outputs retain their old cost attribution; TE full100 scored-token totals are not all new tokens. Do not sum this report with its own overlapping preflight/partial reports as additional compute."
+}
