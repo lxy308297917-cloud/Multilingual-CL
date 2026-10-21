@@ -82,7 +82,7 @@ PolyMath已有Base与seed42的完整500题阶段：8→29题（1.6%→5.8%），
 
 GPU工程结果见[接续2更新](sequential_handoff_GPU_completed_20261021.PUBLIC.json)、[第1步恢复至第2步](sequential_resume_GPU_completed_20261021.PUBLIC.json)。两项合计只新增3更新／96题次，未重复SW20、未创建三语言研究或新SFT标签；不承诺在线随机生成逐位复现。
 
-后续按顺序推进：完成候选重复及SW8192正式比较；依据独立开发证据决定语言与预算；落实匹配题池single启动配置及逐阶段七套评测；满足条件后启动两条三语言顺序。若凑不齐稳定受益的三语言，先报告具体缺口，继续定位问题，不能将负结果包装成方法有效。
+后续按顺序推进：完成候选重复及SW8192正式比较；依据独立开发证据决定语言与预算；基于已补齐的匹配题池single及七套评测接口生成真实启动配置；满足条件后启动两条三语言顺序。若凑不齐稳定受益的三语言，先报告具体缺口，继续定位问题，不能将负结果包装成方法有效。
 
 ## 6. 故障恢复、存储与产物
 
@@ -91,3 +91,5 @@ GPU工程结果见[接续2更新](sequential_handoff_GPU_completed_20261021.PUBL
 为给后续checkpoint留空间，暂停旧方向的14B模型已逐文件SHA256校验后无损归档到大容量盘，原模型路径保留软链接：37文件、27.52GiB；没有改动模型精度、当前1.7B或正在运行的checkpoint。共享数据盘可用空间约58GiB（会随其他用户变化），启动预检至少保留20GiB。见[存储验收](storage_reserve_14b_archive_20261021.PUBLIC.json)。
 
 本机训练checkpoint：`/data0/users/lixiaoyang/models/checkpoint/`；日志、逐题输出及性能记录：`/data0/users/lixiaoyang/logs/copsd_official_10lang/`。公开配置、适配源码、报告均在本目录；私有运行CONFIG、逐题数据和模型权重保留本机。旧FFT／批量SFT标签／旧协议结果继续归档，不混入本轮。
+
+2026-10-21补充：匹配题池single入口已复用固定官方核心执行器，独立输出与评测角色已接通；真实967条题池／错误输入及已有750条正式输出CPU验收通过。没有创建最终语言选择、生产配置或新增GPU实验。见[同题池single接口及边界](SEQUENTIAL_ADAPTER_ZH.md)。

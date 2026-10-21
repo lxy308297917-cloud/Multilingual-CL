@@ -63,3 +63,11 @@
 - [阶段内恢复结果](sequential_resume_GPU_completed_20261021.PUBLIC.json)：保留原目录，从checkpoint1另建目录，仅新增1→2的一次更新／32题次。初始学生与engine均匹配已保存step1；真实optimizer非空且状态step1、scheduler1，再保存step2。32次损失有限、Base不变、完整恢复状态及TensorBoard验收、父队列exit0；训练循环156.4秒。
 
 合计仅新增3更新／96题次；没有重训SW20，没有选定三语言，也不证明数学收益、父子题目独立或完整七套科学评测通过。阶段内HF优化状态／RNG与初始策略恢复有实际证据；在线引擎采样流不承诺逐位复现，未声称恢复后最终权重等于未中断训练。训练题ID顺序及seed保存在私有DATA_ORDER记录中。真实研究阶段仍需冻结选择记录、对应题池／预算single参考及逐阶段评测，不能把这次同语言工程验收称为三语言顺序结果。
+
+## 同题池独立single接口（2026-10-21）
+
+`matched_pool_single_entry.py`和`run_matched_pool_single.sh`复用已通过GPU接续／恢复验证的原`sequential_stage_entry.py`执行器，仅替换进程内数据与实验上下文准备函数；未修改该执行器、官方trainer、损失、优化器、2048训练预算或教师语义。每个single从Base独立开始，固定20更新／640题次／100更新LR日程，使用最终选择记录绑定的原967／967／966题池和训练seed，checkpoint隔离在`models/checkpoint/copsd_matched_singles_v1/`。恢复仅接续本角色有效checkpoint并写新目录。
+
+七套评测编排新增显式`--direction matched --stage 1 --reference-language <lang>`，允许对三个入选语言中的任意一个（含中间语言）评全部三语MGSM／PolyMath及英语。需要真实训练队列exit0、选择记录与adapter／pool身份；独立写`MATCHED_SINGLE_EVALUATIONS_DONE.json`。遗忘矩阵拒绝把这些single参考当成顺序阶段。旧顺序角色默认值保持兼容，但新计划必须冻结更新后的收集器源码身份。
+
+CPU边界：真实SW池0与已有修复JA池1各967条通过，错误pool、未修复JA乱码与修改英文参考均拒绝；三种single身份与角色重贴标签拒绝检查通过，见[题池与角色验收](matched_single_pool_and_role_CPU_20261021.PUBLIC.json)。更新后的共享评测收集器仍能复核已有750条SW正式输出，并拒绝跨adapter／输入／语言／并发协议，见[已有真实输出回归检查](sequential_evaluation_with_matched_roles_CPU_20261021.PUBLIC.json)。这些是接口验证；没有最终语言选择、生产配置、同题池single训练或实际七套评测。后续仍须建立对应single与顺序结果比较、语言保持和完整恢复成本报告。

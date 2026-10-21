@@ -154,14 +154,29 @@ def audit_benchmark(root, code, case, checkpoint):
         'canonical_config': {k: v for k, v in c.items() if k not in ['adapter', 'adapter_sha256', 'checkpoint_step']}}
 
 
+def evaluation_identity(s, plan):
+    """Keep independent matched singles distinct from sequential stages."""
+    role = plan.get('experiment_role', 'sequential_stage')
+    if role == 'matched_single_reference':
+        language = plan['reference_language']
+        assert language in s['selected_languages']
+        assert plan['direction'] == 'matched' and plan['stage_index'] == 1
+        assert plan['order_id'] == s['experiment_id'] + '_matched_' + language
+        return role, language
+    assert role == 'sequential_stage'
+    assert plan.get('reference_language') is None
+    assert plan['direction'] in ['forward', 'reverse'] and 0 <= plan['stage_index'] <= 3
+    order = s['selected_languages'] if plan['direction'] == 'forward' else list(reversed(s['selected_languages']))
+    assert plan['order_id'] == s['experiment_id'] + '_' + plan['direction']
+    return role, order[plan['stage_index'] - 1] if plan['stage_index'] else None
+
+
 def verify_plan(root, code, plan):
     s = selection(plan['selection_record'], plan['selection_record_sha256'])
     assert plan['protocol'] == s['stage_evaluation_protocol'] and plan['model_revision'] == REVISION
     preset = PRESETS[plan['protocol']]
     assert plan['code_sha256'] == {name: digest(code / name) for name in CODE_FILES}
-    assert plan['direction'] in ['forward', 'reverse'] and 0 <= plan['stage_index'] <= 3
-    order = s['selected_languages'] if plan['direction'] == 'forward' else list(reversed(s['selected_languages']))
-    assert plan['order_id'] == s['experiment_id'] + '_' + plan['direction']
+    role, trained_language = evaluation_identity(s, plan)
     validate_case_set(s['selected_languages'], plan['cases'])
     runtime_lock = read(root / 'logs/copsd_official_10lang/eval_vllm_runtime_20261019.CONFIG.json')
     assert runtime_lock['official_commit'] == '4f4410730e9b6775a30d20f4b6e141cba2e87590'
@@ -180,15 +195,19 @@ def verify_plan(root, code, plan):
     if plan['stage_index'] == 0:
         assert checkpoint is None and plan['training_queue'] is None
     else:
-        assert checkpoint and checkpoint.resolve().is_relative_to((root / 'models/checkpoint/copsd_sequential_stages_v1').resolve())
+        namespace = 'copsd_matched_singles_v1' if role == 'matched_single_reference' else 'copsd_sequential_stages_v1'
+        assert checkpoint and checkpoint.resolve().is_relative_to((root / 'models/checkpoint' / namespace).resolve())
         assert digest(checkpoint / 'adapter_model.safetensors') == plan['checkpoint_adapter_sha256']
         assert read(checkpoint / 'trainer_state.json')['global_step'] == 20
         proof = read(checkpoint.parent / 'COLLOCATE_TRAIN_UPDATES_DONE.json')
         context = proof['sequential_context']
         assert not context['engineering_only'] and proof['base_unchanged_bitwise']
+        assert context.get('experiment_role', 'sequential_stage') == role
+        if role == 'matched_single_reference':
+            assert context['parent_checkpoint'] is None
         assert context['selection_record_sha256'] == plan['selection_record_sha256']
         assert context['order_id'] == plan['order_id'] and context['stage_index'] == plan['stage_index']
-        assert context['language'] == order[plan['stage_index'] - 1] and context['seed'] == s['training_seed']
+        assert context['language'] == trained_language and context['seed'] == s['training_seed']
         assert context['pool_index'] == s['pool_by_language'][context['language']]
         assert read(checkpoint.parent / 'RUNTIME_SHUTDOWN_DONE.json')['ordered_pool_release_completed']
         state = read(root / 'gpu-queue/queues' / plan['training_queue'] / 'state.json')
@@ -196,6 +215,7 @@ def verify_plan(root, code, plan):
         arguments = state['job']['config']['job']['args']
         assert len(arguments) == 1
         config = read(arguments[0])
+        assert config.get('experiment_role', 'sequential_stage') == role
         assert config['run_id'] == checkpoint.parent.name and not config.get('engineering_only', False)
         assert digest(arguments[0]) == read(checkpoint.parent / 'STAGE_CONTEXT.PRIVATE.json')['stage_spec_sha256']
     return s, checkpoint
@@ -204,7 +224,8 @@ def verify_plan(root, code, plan):
 def create_plan(root, code, a):
     s = selection(a.selection, a.selection_sha)
     assert re.fullmatch(r'[A-Za-z0-9_-]+', a.run_label)
-    assert a.direction in ['forward', 'reverse'] and 0 <= a.stage <= 3
+    role = 'matched_single_reference' if a.direction == 'matched' else 'sequential_stage'
+    order_id = s['experiment_id'] + ('_matched_' + a.reference_language if role == 'matched_single_reference' and a.reference_language else '_' + a.direction)
     assert (a.stage == 0) == (a.checkpoint is None)
     assert (a.stage == 0) == (a.training_queue is None)
     cache = read(a.cache) if a.cache else {}
@@ -221,7 +242,8 @@ def create_plan(root, code, a):
     checkpoint = a.checkpoint.resolve() if a.checkpoint else None
     plan = {'selection_record': str(a.selection.resolve()), 'selection_record_sha256': a.selection_sha,
         'protocol': s['stage_evaluation_protocol'], 'model_revision': REVISION, 'direction': a.direction,
-        'stage_index': a.stage, 'order_id': s['experiment_id'] + '_' + a.direction,
+        'stage_index': a.stage, 'order_id': order_id,
+        'experiment_role': role, 'reference_language': a.reference_language,
         'checkpoint': str(checkpoint) if checkpoint else None,
         'checkpoint_adapter_sha256': digest(checkpoint / 'adapter_model.safetensors') if checkpoint else None,
         'training_queue': a.training_queue, 'cases': cases,
@@ -286,13 +308,16 @@ def collect(root, code, path, queue, output):
     assert len(job['gpu_uuids']) == 1 and job['config']['max_user_gpus'] == 4
     assert [str(Path(x).resolve()) for x in job['config']['job']['args']] == [str(path.resolve())]
     assert read(path.with_suffix('.STAGES_DONE.json'))['plan_sha256'] == digest(path)
-    expected = checkpoint.parent / 'STAGE_EVALUATIONS_DONE.json' if checkpoint else path.parent / 'STAGE_EVALUATIONS_DONE.json'
+    marker_name = 'MATCHED_SINGLE_EVALUATIONS_DONE.json' if plan.get('experiment_role') == 'matched_single_reference' else 'STAGE_EVALUATIONS_DONE.json'
+    expected = checkpoint.parent / marker_name if checkpoint else path.parent / marker_name
     assert output.resolve() == expected.resolve()
     completed = [audit_benchmark(root, code, case, checkpoint) for case in plan['cases']]
     fresh = [row for row, case in zip(completed, plan['cases']) if not case['cached_before_execution']]
     wall = (datetime.datetime.fromisoformat(job['finished_at']) - datetime.datetime.fromisoformat(job['started_at'])).total_seconds()
     write_new(output, {'completed': True, 'selection_record_sha256': plan['selection_record_sha256'],
         'protocol': plan['protocol'], 'order_id': plan['order_id'], 'stage_index': plan['stage_index'],
+        'experiment_role': plan.get('experiment_role', 'sequential_stage'),
+        'reference_language': plan.get('reference_language'),
         'checkpoint_adapter_sha256': plan['checkpoint_adapter_sha256'],
         'plan_sha256': digest(path), 'plan_path_PRIVATE': str(path), 'evaluation_parent_exit_code': 0,
         'completed_benchmarks': completed,
@@ -312,7 +337,8 @@ def main():
     plan = sub.add_parser('plan')
     plan.add_argument('--selection', type=Path, required=True)
     plan.add_argument('--selection-sha', required=True)
-    plan.add_argument('--direction', choices=['forward', 'reverse'], required=True)
+    plan.add_argument('--direction', choices=['forward', 'reverse', 'matched'], required=True)
+    plan.add_argument('--reference-language', choices=sorted(LANGUAGES))
     plan.add_argument('--stage', type=int, choices=range(4), required=True)
     plan.add_argument('--checkpoint', type=Path)
     plan.add_argument('--training-queue')

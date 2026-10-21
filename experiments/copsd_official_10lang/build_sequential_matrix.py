@@ -21,6 +21,8 @@ def audit_marker(root, code, path, selection_sha):
     plan_path = Path(marker['plan_path_PRIVATE'])
     assert digest(plan_path) == marker['plan_sha256']
     plan = read(plan_path)
+    assert plan.get('experiment_role', 'sequential_stage') == 'sequential_stage', 'Matched singles are references, not sequential stages'
+    assert marker.get('experiment_role', 'sequential_stage') == 'sequential_stage'
     assert marker['protocol'] == plan['protocol']
     _, checkpoint = verify_plan(root, code, plan)
     assert plan['selection_record_sha256'] == selection_sha

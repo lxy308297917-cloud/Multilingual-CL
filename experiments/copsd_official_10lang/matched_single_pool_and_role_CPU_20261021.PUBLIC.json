@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-10-21T15:35:18.424645",
+  "real_pool_bindings_validated_for_interface_only": {
+    "sw_pool0": 967,
+    "ja_pool1_repaired": 967
+  },
+  "bound_pool_ID_sets_disjoint": true,
+  "rejected": {
+    "wrong_pool_index": true,
+    "known_unrepaired_JA_prefix": true,
+    "changed_English_teacher_reference": true
+  },
+  "entry_sha256": "ac916c04df9c550bb4ff79a24ae87f6cd290a76575d8faf0bb8ca983c5b080d6",
+  "all_three_matched_language_identities_and_seven_suite_case_set_checked": true,
+  "role_relabeling_rejected": true,
+  "sequential_evaluator_sha256": "f45bc6d330c06015abaf1ddb20271ee586d4eb394166ba88b55d85e2513185f1",
+  "preserved_GPU_validated_executor_sha256": "29a796f6430fc7a47e0e08538cc1b3dcad9163b9f5430b3df5a0c8cfe2791110",
+  "GPU_used": false,
+  "new_generation": false,
+  "production_selection_created": false,
+  "scope": "Real967-row pool checks and negative corrupt-input cases in temporary files only. SW0/JA1 are interface test bindings, not final selected languages. No full production config, new matched-single GPU run, seven-suite evaluation or effectiveness claim. Original datasets and source pools unchanged; temporary files removed."
+}
