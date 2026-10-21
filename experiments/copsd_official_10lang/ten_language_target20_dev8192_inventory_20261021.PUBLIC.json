@@ -1,0 +1,298 @@
+{
+  "observed_at": "2026-10-21T12:15:56.840946",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "results": {
+    "sw": {
+      "paired": {
+        "base_correct": 6,
+        "adapter20_correct": 18,
+        "gained": 14,
+        "lost": 2,
+        "delta_correct": 12
+      },
+      "base_run_id": "sw_base_dev100_8192_20261020_v1",
+      "target20_run_id": "sw_clip20_dev100_8192_20261020_v1",
+      "target20_items_sha256": "54e64fe74829034deac57da7f0bdf12d6e4a27c89d2b087334c7a21564966623",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 6,
+          "truncated": 83,
+          "normal_terminations": 17,
+          "answer_extraction_failures": 84
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 18,
+          "truncated": 40,
+          "normal_terminations": 60,
+          "answer_extraction_failures": 37
+        }
+      }
+    },
+    "te": {
+      "paired": {
+        "base_correct": 7,
+        "adapter20_correct": 2,
+        "gained": 1,
+        "lost": 6,
+        "delta_correct": -5
+      },
+      "base_run_id": "te_saved20_screen_base_recovered_dev100_8192_20261020_v2",
+      "target20_run_id": "te_saved20_screen_target20_recovered_dev100_8192_20261020_v2",
+      "target20_items_sha256": "7dedbc1414d733dfbc5d48fcb413e1c1787b7782578b3f037016bb20e8eecdb3",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 7,
+          "truncated": 68,
+          "normal_terminations": 32,
+          "answer_extraction_failures": 67
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 2,
+          "truncated": 93,
+          "normal_terminations": 7,
+          "answer_extraction_failures": 93
+        }
+      }
+    },
+    "th": {
+      "paired": {
+        "base_correct": 53,
+        "adapter20_correct": 46,
+        "gained": 10,
+        "lost": 17,
+        "delta_correct": -7
+      },
+      "base_run_id": "th_saved20_screen_base_dev100_8192_20261020_v1",
+      "target20_run_id": "th_saved20_screen_target20_dev100_8192_20261020_v1",
+      "target20_items_sha256": "11533927ee9eb6b7bca169167a0b44db50ad5970c40fdbf96485d1c2f7064241",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 53,
+          "truncated": 9,
+          "normal_terminations": 91,
+          "answer_extraction_failures": 7
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 46,
+          "truncated": 10,
+          "normal_terminations": 90,
+          "answer_extraction_failures": 4
+        }
+      }
+    },
+    "bn": {
+      "paired": {
+        "base_correct": 16,
+        "adapter20_correct": 7,
+        "gained": 2,
+        "lost": 11,
+        "delta_correct": -9
+      },
+      "base_run_id": "bn_base_dev100_8192_20261020_v1",
+      "target20_run_id": "bn_17b_clip20_horizon100_seed42_20261020_v1_dev8192",
+      "target20_items_sha256": "6cf60b6323c690a57f6180586fe13b1b41bcfccc4809df5e3a028f326734443e",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 16,
+          "truncated": 34,
+          "normal_terminations": 66,
+          "answer_extraction_failures": 32
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 7,
+          "truncated": 87,
+          "normal_terminations": 13,
+          "answer_extraction_failures": 83
+        }
+      }
+    },
+    "zh": {
+      "paired": {
+        "base_correct": 66,
+        "adapter20_correct": 69,
+        "gained": 11,
+        "lost": 8,
+        "delta_correct": 3
+      },
+      "base_run_id": "zh_base_candidate_dev100_8192_20261020_v1",
+      "target20_run_id": "zh_early20_candidate_dev100_8192_20261020_v1",
+      "target20_items_sha256": "1708eb407293fe23c85d7518796422040ad145688e580a1305fe406a770a2ffa",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 66,
+          "truncated": 18,
+          "normal_terminations": 82,
+          "answer_extraction_failures": 18
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 69,
+          "truncated": 10,
+          "normal_terminations": 90,
+          "answer_extraction_failures": 6
+        }
+      }
+    },
+    "ja": {
+      "paired": {
+        "base_correct": 47,
+        "adapter20_correct": 50,
+        "gained": 13,
+        "lost": 10,
+        "delta_correct": 3
+      },
+      "base_run_id": "ja_v4_saved20_base_dev100_8192_20261020_v1",
+      "target20_run_id": "ja_v4_saved20_target_dev100_8192_20261020_v1",
+      "target20_items_sha256": "ba66c73244ebf77003ad2313329486b2a2a391a5b83f59ec5839111927bc0d85",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 47,
+          "truncated": 16,
+          "normal_terminations": 84,
+          "answer_extraction_failures": 14
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 50,
+          "truncated": 14,
+          "normal_terminations": 86,
+          "answer_extraction_failures": 7
+        }
+      }
+    },
+    "ru": {
+      "paired": {
+        "base_correct": 64,
+        "adapter20_correct": 59,
+        "gained": 10,
+        "lost": 15,
+        "delta_correct": -5
+      },
+      "base_run_id": "ru_saved20_screen_base_dev100_8192_20261020_v1",
+      "target20_run_id": "ru_saved20_screen_target20_dev100_8192_20261020_v1",
+      "target20_items_sha256": "9e92842d8f59ce46384260a0af9eb0bbf5a7978ecfaa208e36fd58d1857c7fa5",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 64,
+          "truncated": 11,
+          "normal_terminations": 89,
+          "answer_extraction_failures": 11
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 59,
+          "truncated": 13,
+          "normal_terminations": 87,
+          "answer_extraction_failures": 10
+        }
+      }
+    },
+    "de": {
+      "paired": {
+        "base_correct": 64,
+        "adapter20_correct": 58,
+        "gained": 12,
+        "lost": 18,
+        "delta_correct": -6
+      },
+      "base_run_id": "de_saved20_screen_base_dev100_8192_20261020_v1",
+      "target20_run_id": "de_saved20_screen_target20_dev100_8192_20261020_v1",
+      "target20_items_sha256": "89fe5163935a0a1e7192c33eb174e3aaffc6de5ee9aa1e5d6fc8fa42acba072f",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 64,
+          "truncated": 6,
+          "normal_terminations": 94,
+          "answer_extraction_failures": 5
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 58,
+          "truncated": 5,
+          "normal_terminations": 95,
+          "answer_extraction_failures": 3
+        }
+      }
+    },
+    "fr": {
+      "paired": {
+        "base_correct": 72,
+        "adapter20_correct": 63,
+        "gained": 7,
+        "lost": 16,
+        "delta_correct": -9
+      },
+      "base_run_id": "fr_base_candidate_dev100_8192_20261020_v1",
+      "target20_run_id": "fr_early20_candidate_dev100_8192_20261020_v1",
+      "target20_items_sha256": "fad1ab5f438dde083a337834f82f4c884c9bbb9440063198eccde941950df8e5",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 72,
+          "truncated": 9,
+          "normal_terminations": 91,
+          "answer_extraction_failures": 6
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 63,
+          "truncated": 16,
+          "normal_terminations": 84,
+          "answer_extraction_failures": 7
+        }
+      }
+    },
+    "es": {
+      "paired": {
+        "base_correct": 69,
+        "adapter20_correct": 64,
+        "gained": 6,
+        "lost": 11,
+        "delta_correct": -5
+      },
+      "base_run_id": "es_saved20_screen_base_dev100_8192_20261020_v1",
+      "target20_run_id": "es_saved20_screen_target20_dev100_8192_20261020_v1",
+      "target20_items_sha256": "0e753adb4381c1b156440be32210aa535d258603f1ec2a5d5a846e920832fffe",
+      "metrics": {
+        "base": {
+          "items": 100,
+          "single_correct": 69,
+          "truncated": 7,
+          "normal_terminations": 93,
+          "answer_extraction_failures": 6
+        },
+        "target20": {
+          "items": 100,
+          "single_correct": 64,
+          "truncated": 11,
+          "normal_terminations": 89,
+          "answer_extraction_failures": 9
+        }
+      }
+    }
+  },
+  "all10_actual_complete_target_pairs_verified": true,
+  "same100_original_ID_order_and_gold_across_languages": true,
+  "positive_single_reference_deltas_not_final_selection": [
+    "sw",
+    "zh",
+    "ja"
+  ],
+  "English_TE_JA_and_parent_completion_not_claimed": true,
+  "new_generation": false,
+  "new_training": false,
+  "GPU_used": false,
+  "scope": "Independent development100 target-side screening inventory only, not formal scores, stable language selection or sequential results. Original historical4GPU/initializer and JA repair caveats remain. BN no-clip intervention and additional seeds are separate experiments, not substituted into this official-clip reference inventory. All outputs overlap previous run reports; no additional compute or cost sum."
+}
