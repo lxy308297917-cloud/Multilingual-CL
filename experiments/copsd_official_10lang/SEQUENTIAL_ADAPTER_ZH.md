@@ -11,7 +11,7 @@
 
 结果见 `sequential_adapter_cpu_20261020.PUBLIC.json`。这是合成 CPU 工程验证，不是1.7B顺序训练、GPU rollout 同步、checkpoint恢复或数学效果证据；没有占用GPU或选择三语言，没有修改运行中的训练源码。
 
-顺序训练入口尚未接入此接口。正式接入还需：固定三语言／数据池和每阶段预算；新阶段重新建立 Trainer optimizer、scheduler及global step；首次生成前同步已接续的学生并与上一阶段最终 adapter／推理权重核对；独立验证原始Base身份与禁用adapter的教师路径；各阶段保留完整恢复状态，并评全部入选语及英语。继续沿用同一adapter、语言与原题池绑定一起反转，两条顺序从相同原始模型开始。未满足语言选择条件时不启动顺序实验。
+2026-10-21：`sequential_stage_entry.py`与`run_sequential_stage.sh`已接入此接口，复用固定官方核心及现有批量vLLM运行时。它在官方Trainer完成唯一LoRA创建后、建立optimizer前加载父adapter；新阶段global step／optimizer／scheduler重置，首轮rollout必须匹配父最终策略桥。阶段内恢复则加载本阶段有效checkpoint及其优化状态，强制新输出目录，保留旧文件。研究模式还要求冻结的独立开发选择记录、语言绑定题池及前一阶段七套评测完成标记；当前最终三语言未确定，外层完整评测编排仍待补齐，未启动研究顺序实验。
 
 ## 新阶段step0的初始同步参考桥
 
@@ -36,3 +36,9 @@
 `prepare_sequential_pools.py materialize`已支持`--ja-repaired-input`和`--ja-repair-manifest`。显式传入已有修复版及其原验收清单，核对原输入与修复版SHA、2900条ID顺序、唯一一条差异、该行除`problem_ja`外全部字段相同，且差异必须严格等于删除已确认的70738字符重复前缀。原池ID、语言绑定规则、英文题目／参考／gold与独立开发集隔离均保持。包含已知坏记录的JA原输入在缺少这些修复参数时拒绝导出；不改写官方源文件或旧池清单。
 
 已将三个实际JA池临时导出并与现有修复版逐条比较：967／967／966、并集2900、池间零重叠，且未修复源被拒绝、没有写出不安全输出。无GPU、模型更新或新增标签；临时文件测试后删除。见[实际数据导出验收](sequential_JA_repaired_pool_export_CPU_20261021.PUBLIC.json)。这没有选择最终三语言或启动顺序训练，后续仍须完成adapter接续的实际训练入口和GPU验证。
+
+## 实际Trainer接续CPU验证与GPU工程任务
+
+`check_sequential_trainer_cpu.py`已经运行实际Transformers Trainer：微型随机Qwen3上父阶段一次AdamW更新，子阶段通过上述同一加载接口接续；观察真实Trainer新建优化器为空、scheduler／global step为0。再更新一次，与保留同一父模型但显式新建Trainer的独立参考全部参数逐位一致；学生logits接续一致，禁用adapter后的原Base教师不变。结果见[实际Trainer CPU验收](sequential_Trainer_integration_CPU_20261021.PUBLIC.json)。这是CPU合成工程证据，尚未验证真实1.7B GPU rollout或恢复完整性。
+
+已手动启动`copsd-stage-handoff-engineering-v1`等待队列：复用已完成SW20，仅新增2个本地更新／64题次，仍为原2048长度、AdamW及官方损失。它单独验证接续、优化器重置和初始生成策略同步，不是新语言选择或三语研究结果；父single与工程池可能重叠，不声称题目独立。冻结设置见[工程任务清单](sequential_handoff_engineering_frozen_20261021.PUBLIC.json)。GPU任务完成后仍须核验真实checkpoint、优化状态、策略同步、冻结Base、完整64次损失调用与父进程exit0；目前仍在排队。
