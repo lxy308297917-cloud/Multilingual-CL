@@ -1,0 +1,431 @@
+{
+  "observed_at": "2026-10-21T13:41:42.166403",
+  "protocol": "project_single_vllm_v1",
+  "model": "Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "max_new_tokens": 2048,
+  "samples": 1,
+  "training_updates": 100,
+  "completed_languages": 10,
+  "results": {
+    "sw": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 8,
+        "single100_correct": 9,
+        "delta_percentage_points": 0.3999999999999997,
+        "raw_run_ids": [
+          "sw_17b_mgsm_rev2_base_20261020_v1",
+          "sw_17b_mgsm_rev2_ckpt100_20261020_v1"
+        ],
+        "paired_gained": 7,
+        "paired_lost": 6
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 9,
+        "single100_correct": 15,
+        "delta_percentage_points": 1.2,
+        "raw_run_ids": [
+          "sw_17b_polymath_base_20261020_v1",
+          "sw_17b_polymath_ckpt100_20261020_v1"
+        ],
+        "paired_gained": 14,
+        "paired_lost": 8
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1056,
+        "delta_percentage_points": -4.321455648218353,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_sw100_20261020_v1"
+        ],
+        "paired_gained": 58,
+        "paired_lost": 115
+      }
+    },
+    "te": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 18,
+        "single100_correct": 0,
+        "delta_percentage_points": -7.199999999999999,
+        "raw_run_ids": [
+          "te_17b_mgsm_rev2_base_20261021_te100_v1",
+          "te_17b_mgsm_rev2_ckpt100_20261021_te100_v1"
+        ],
+        "paired_gained": 0,
+        "paired_lost": 18
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 5,
+        "single100_correct": 0,
+        "delta_percentage_points": -1.0,
+        "raw_run_ids": [
+          "te_17b_polymath_base_20261021_te100_v1",
+          "te_17b_polymath_ckpt100_20261021_te100_v1"
+        ],
+        "paired_gained": 0,
+        "paired_lost": 5
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1050,
+        "delta_percentage_points": -4.776345716451857,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_te100_20261021_te100_v1"
+        ],
+        "paired_gained": 45,
+        "paired_lost": 108
+      }
+    },
+    "th": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 165,
+        "single100_correct": 91,
+        "delta_percentage_points": -29.600000000000005,
+        "raw_run_ids": [
+          "th_17b_mgsm_rev2_base_20261020_v1",
+          "th_17b_mgsm_rev2_ckpt100_20261020_v1"
+        ],
+        "paired_gained": 10,
+        "paired_lost": 84
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 86,
+        "single100_correct": 42,
+        "delta_percentage_points": -8.799999999999999,
+        "raw_run_ids": [
+          "th_17b_polymath_base_20261020_v1",
+          "th_17b_polymath_ckpt100_20261020_v1"
+        ],
+        "paired_gained": 6,
+        "paired_lost": 50
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1068,
+        "delta_percentage_points": -3.411675511751333,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_th100_20261020_v1"
+        ],
+        "paired_gained": 58,
+        "paired_lost": 103
+      }
+    },
+    "bn": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 80,
+        "single100_correct": 0,
+        "delta_percentage_points": -32.0,
+        "raw_run_ids": [
+          "bn_17b_mgsm_rev2_base_20261020_v2",
+          "bn_17b_mgsm_rev2_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 0,
+        "paired_lost": 80
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 41,
+        "single100_correct": 0,
+        "delta_percentage_points": -8.200000000000001,
+        "raw_run_ids": [
+          "bn_17b_polymath_base_20261020_v2",
+          "bn_17b_polymath_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 0,
+        "paired_lost": 41
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1015,
+        "delta_percentage_points": -7.429871114480669,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_bn100_20261020_v2"
+        ],
+        "paired_gained": 47,
+        "paired_lost": 145
+      }
+    },
+    "zh": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 203,
+        "single100_correct": 196,
+        "delta_percentage_points": -2.8000000000000025,
+        "raw_run_ids": [
+          "zh_17b_mgsm_rev2_base_20261020_v1",
+          "zh_17b_mgsm_rev2_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 18,
+        "paired_lost": 25
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 101,
+        "single100_correct": 108,
+        "delta_percentage_points": 1.3999999999999986,
+        "raw_run_ids": [
+          "zh_17b_polymath_base_20261020_v1",
+          "zh_17b_polymath_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 18,
+        "paired_lost": 11
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1093,
+        "delta_percentage_points": -1.5163002274450332,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_zh100_20261020_v2"
+        ],
+        "paired_gained": 66,
+        "paired_lost": 86
+      }
+    },
+    "ja": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 161,
+        "single100_correct": 132,
+        "delta_percentage_points": -11.6,
+        "raw_run_ids": [
+          "ja_17b_mgsm_rev2_base_20261021_ja100_v1",
+          "ja_17b_mgsm_rev2_ckpt100_20261021_ja100_v1"
+        ],
+        "paired_gained": 24,
+        "paired_lost": 53
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 87,
+        "single100_correct": 74,
+        "delta_percentage_points": -2.5999999999999996,
+        "raw_run_ids": [
+          "ja_17b_polymath_base_20261021_ja100_v1",
+          "ja_17b_polymath_ckpt100_20261021_ja100_v1"
+        ],
+        "paired_gained": 21,
+        "paired_lost": 34
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1042,
+        "delta_percentage_points": -5.382865807429871,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_ja100_20261021_ja100_v1"
+        ],
+        "paired_gained": 54,
+        "paired_lost": 125
+      }
+    },
+    "ru": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 196,
+        "single100_correct": 186,
+        "delta_percentage_points": -4.0000000000000036,
+        "raw_run_ids": [
+          "ru_17b_mgsm_rev2_base_20261020_v2",
+          "ru_17b_mgsm_rev2_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 21,
+        "paired_lost": 31
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 116,
+        "single100_correct": 96,
+        "delta_percentage_points": -4.000000000000001,
+        "raw_run_ids": [
+          "ru_17b_polymath_base_20261020_v2",
+          "ru_17b_polymath_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 11,
+        "paired_lost": 31
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1067,
+        "delta_percentage_points": -3.487490523123582,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_ru100_20261020_v2"
+        ],
+        "paired_gained": 65,
+        "paired_lost": 111
+      }
+    },
+    "de": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 185,
+        "single100_correct": 155,
+        "delta_percentage_points": -12.0,
+        "raw_run_ids": [
+          "de_17b_mgsm_rev2_base_20261020_v2",
+          "de_17b_mgsm_rev2_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 17,
+        "paired_lost": 47
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 103,
+        "single100_correct": 82,
+        "delta_percentage_points": -4.199999999999998,
+        "raw_run_ids": [
+          "de_17b_polymath_base_20261020_v2",
+          "de_17b_polymath_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 17,
+        "paired_lost": 38
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1095,
+        "delta_percentage_points": -1.3646702047005355,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_de100_20261020_v2"
+        ],
+        "paired_gained": 71,
+        "paired_lost": 89
+      }
+    },
+    "fr": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 190,
+        "single100_correct": 142,
+        "delta_percentage_points": -19.200000000000006,
+        "raw_run_ids": [
+          "fr_17b_mgsm_rev2_base_20261020_v2",
+          "fr_17b_mgsm_rev2_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 12,
+        "paired_lost": 60
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 114,
+        "single100_correct": 69,
+        "delta_percentage_points": -9.0,
+        "raw_run_ids": [
+          "fr_17b_polymath_base_20261020_v2",
+          "fr_17b_polymath_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 3,
+        "paired_lost": 48
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1024,
+        "delta_percentage_points": -6.747536012130406,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_fr100_20261020_v2"
+        ],
+        "paired_gained": 46,
+        "paired_lost": 135
+      }
+    },
+    "es": {
+      "mgsm_rev2": {
+        "items": 250,
+        "Base_correct": 202,
+        "single100_correct": 167,
+        "delta_percentage_points": -14.000000000000002,
+        "raw_run_ids": [
+          "es_17b_mgsm_rev2_base_20261020_v2",
+          "es_17b_mgsm_rev2_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 14,
+        "paired_lost": 49
+      },
+      "polymath": {
+        "items": 500,
+        "Base_correct": 124,
+        "single100_correct": 90,
+        "delta_percentage_points": -6.800000000000001,
+        "raw_run_ids": [
+          "es_17b_polymath_base_20261020_v2",
+          "es_17b_polymath_ckpt100_20261020_v2"
+        ],
+        "paired_gained": 10,
+        "paired_lost": 44
+      },
+      "gsm8k": {
+        "items": 1319,
+        "Base_correct": 1113,
+        "single100_correct": 1039,
+        "delta_percentage_points": -5.610310841546628,
+        "raw_run_ids": [
+          "en_17b_gsm8k_base_20261020_v1",
+          "en_17b_gsm8k_es100_20261020_v2"
+        ],
+        "paired_gained": 56,
+        "paired_lost": 130
+      }
+    }
+  },
+  "descriptive_mean_accuracy": {
+    "mgsm_rev2": {
+      "Base_accuracy": 0.5631999999999999,
+      "single100_accuracy": 0.4312
+    },
+    "polymath": {
+      "Base_accuracy": 0.15719999999999998,
+      "single100_accuracy": 0.1152
+    },
+    "gsm8k": {
+      "Base_accuracy": 0.8438210765731615,
+      "single100_accuracy": 0.7997725549658833
+    }
+  },
+  "all10_English_scores_below_Base": true,
+  "source_report_sha256": {
+    "te_completed_formal_suite_20261021.PUBLIC.json": "606063c7b2a1b9cc7cd916d9a4bc1e4c5c7cb27a09ad8e1099dfdb3118231f6e",
+    "bn_completed_formal_suite_20261020.PUBLIC.json": "76c3e84641f08bed248312b10e4067ddc05a98cbe573c84403885d3d5a54eb5e",
+    "zh_completed_formal_suite_20261020.PUBLIC.json": "155a88814d662910ed56e2384686888b55f790e205f40622311a85d249da6f2a",
+    "ja_completed_formal_suite_20261021.PUBLIC.json": "c3fb05312fa38293dd7cee9ae0fa5f2133c8358eca3780dba4ad7b982d7366ab",
+    "ru_completed_formal_suite_20261020.PUBLIC.json": "0d0cee7feca7c16ac0c5dcc5f8ddd8614d6f2d30915223ed975bf2a76fc54ee7",
+    "de_completed_formal_suite_20261020.PUBLIC.json": "11504f7e627a92d96332db8bdee068af12608966421cde169d29b3c8f61c19de",
+    "fr_completed_formal_suite_20261020.PUBLIC.json": "97468bba9a96e0b19c7ebac214658066ccff8cdcb8ca6b670990714be3055efb",
+    "es_completed_formal_suite_20261020.PUBLIC.json": "b5bb83ba5481eb1762bbfa42db3ab972dd3de854e5851c8687fed17e2357d568",
+    "sw_th_remaining_formal_pairs_20261020.PUBLIC.json": "66d159c50e3b4fcc9ed12a5c0d0bcdba522befdd005c024a0ea3bced7292ab1d",
+    "sw_mgsm_rev2_vllm_pair_20261020.PUBLIC.json": "626a3184d43fca823e749baacb827a2aefefc2a266d7ae74d1f17cd536537e1b",
+    "english_gsm8k_completed_singles_20261020.PUBLIC.json": "436934f2103f3b06ede57480c127938c8e45078bfd682e09479c13403930b3de"
+  },
+  "existing_unique_engine_output_cost_not_additional_work": {
+    "unique_runs": 51,
+    "generated_responses": 29509,
+    "generated_tokens": 40200177,
+    "generation_seconds": 20570.05102752708,
+    "evaluation_seconds_including_generation_grading_output": 20713.92910220474,
+    "scope": "Unique saved engines only; cached English Base counted once. Engine generation is included in evaluation, so these two times must not be added. Parent allocation clocks/training/failed work/other protocols are excluded."
+  },
+  "new_generation": false,
+  "GPU_used": false,
+  "scope": "Complete fixed100 project n1/2048 formal accuracy inventory, not officialpass12, released8192 confirmation, checkpoint/language selection, or sequential results. Raw reported runs resolved by exact full DONE dictionaries, never highest scores, and actual rows/configs/input/source/checkpoint identities checked. Historical4GPU/initializer/JA repair/recovery caveats remain. Translated questions and English questions recur across models; mean accuracies are descriptive, not independent pooled trials. Older formal rows do not all save the per-request seed field; equality uses frozen code, seed rule, IDs and prompts. No new compute or cost sum with overlapping source reports."
+}
