@@ -2,7 +2,8 @@
 set -euo pipefail
 root="${COPSD_PROJECT_ROOT:-$HOME}"
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-exec "$root/envs/copsd-vllm011-20261018/bin/python" - "$root" "$script_dir" <<'PY'
+model="${1:?base,seed42,seed43}"
+exec "$root/envs/copsd-vllm011-20261018/bin/python" - "$root" "$script_dir" "$model" <<'PY'
 import hashlib
 import json
 import os
@@ -11,10 +12,14 @@ import shutil
 import subprocess
 import sys
 
-root, code = map(Path, sys.argv[1:])
+root, code = map(Path, sys.argv[1:3])
+model = sys.argv[3]
+assert model in ['base', 'seed42', 'seed43']
 manifest_path = code / 'sw20_formal8192_frozen_20261021.PUBLIC.json'
 manifest = json.loads(manifest_path.read_text())
 prepare_only = os.environ.get('COPSD_SW_FORMAL_PREPARE_ONLY') == '1'
+stages = [stage for stage in manifest['stages'] if stage['model'] == model]
+assert len(stages) == 3 and sum(stage['items'] for stage in stages) == 2069
 for name, sha in manifest['code_sha256'].items():
     assert hashlib.sha256((code / name).read_bytes()).hexdigest() == sha, name
 assert shutil.disk_usage(root).free >= manifest['minimum_free_bytes']
@@ -22,7 +27,7 @@ if not prepare_only:
     assert os.environ.get('GPU_QUEUE_GPU_COUNT') == '1'
     visible = os.environ.get('CUDA_VISIBLE_DEVICES', '')
     assert visible.startswith('GPU-') and ',' not in visible
-for stage in manifest['stages']:
+for stage in stages:
     target = root / 'logs/copsd_official_10lang/evaluation_vllm8192' / stage['run_id']
     assert not target.exists(), target
     adapter = stage['adapter_relative']
@@ -32,10 +37,10 @@ for stage in manifest['stages']:
         assert hashlib.sha256((cp / 'adapter_model.safetensors').read_bytes()).hexdigest() == stage['adapter_sha256']
 if prepare_only:
     print(json.dumps({'CPU_identity_preflight': True, 'GPU_started': False,
-                      'stages': len(manifest['stages']),
-                      'planned_responses': manifest['total_generated_responses_planned']}))
+                      'model': model, 'stages': len(stages),
+                      'planned_responses': sum(stage['items'] for stage in stages)}))
     sys.exit(0)
-for stage in manifest['stages']:
+for stage in stages:
     assert shutil.disk_usage(root).free >= manifest['minimum_free_bytes']
     command = ['bash', str(code / 'run_formal8192.sh'), stage['benchmark'], stage['language'], stage['run_id']]
     if stage['adapter_relative']:
