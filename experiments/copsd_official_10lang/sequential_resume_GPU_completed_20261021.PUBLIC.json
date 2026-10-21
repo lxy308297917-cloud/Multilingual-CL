@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-10-21T15:14:04.671273",
+  "model": "Qwen3-1.7B",
+  "run_id": "sw17b_stage_handoff_resume1_to2_20261021_v1",
+  "queue": "copsd-stage-resume1-engineering-v1",
+  "engineering_only": true,
+  "parent_completed_exit0": true,
+  "start_local_step": 1,
+  "end_local_step": 2,
+  "actual_new_updates": 1,
+  "actual_question_exposures": 32,
+  "source_checkpoint_step": 1,
+  "actual_loaded_adapter_and_rollout_engine_match_source_checkpoint": true,
+  "one_continual_adapter_and_original_frozen_Base_verified": true,
+  "actual_optimization_start": {
+    "global_step": 1,
+    "optimizer_state_empty": false,
+    "scheduler_last_epoch": 1,
+    "mode": "within_stage_resume"
+  },
+  "saved_checkpoint_optimizer_scheduler_RNG_loaded_on_CPU": true,
+  "all_actual_microstep_losses_finite": true,
+  "tensorboard_events_written": true,
+  "training_generated_tokens": 52010,
+  "valid_response_loss_positions": 52010,
+  "teacher_forward_calls": 32,
+  "teacher_forward_cuda_seconds": 8.487970092773438,
+  "training_loop_seconds": 156.394045105204,
+  "parent_GPU_hours_counted_once": 0.06666666666666667,
+  "source_spec_sha256": "e310ecfe57a73439a168be4d785cd239509f2f96e819799cf023e8ca62e2b61f",
+  "checkpoint_adapter_sha256": "ba6ec664c1bc40d89b0c0ce36e93d534a0a6743ec5290de1548507ab20f1c17b",
+  "scope": "Actual1.7B GPU engineering validation using existing SW20 parent. Same-language handoff only, not selected three-language training, disjoint-parent question evidence or mathematics efficacy. Resume preserves actual HF optimizer/scheduler/RNG and initial policy; online engine sampling is not promised bitwise identical. Data ID order/seed are saved; no claim that final resumed weights equal uninterrupted stochastic training."
+}
