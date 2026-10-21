@@ -1,0 +1,213 @@
+{
+  "observed_at": "2026-10-21T12:43:08.568567",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "results": {
+    "sw": {
+      "target": {
+        "base_correct": 6,
+        "adapter20_correct": 18,
+        "gained": 14,
+        "lost": 2,
+        "delta_correct": 12
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 77,
+        "gained": 7,
+        "lost": 7,
+        "delta_correct": 0
+      },
+      "target_run_id": "sw_clip20_dev100_8192_20261020_v1",
+      "English_run_id": "en_sw_clip20_dev100_8192_20261020_v1",
+      "English_items_sha256": "c82adb1d698905231c2e49d3c22fab18be8deda94d7f7f6a55424282140cca15",
+      "checkpoint_global_step_actually_checked": 20
+    },
+    "te": {
+      "target": {
+        "base_correct": 7,
+        "adapter20_correct": 2,
+        "gained": 1,
+        "lost": 6,
+        "delta_correct": -5
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 70,
+        "gained": 1,
+        "lost": 8,
+        "delta_correct": -7
+      },
+      "target_run_id": "te_saved20_screen_target20_recovered_dev100_8192_20261020_v2",
+      "English_run_id": "te_saved20_screen_English20_recovered_dev100_8192_20261020_v2",
+      "English_items_sha256": "f28c2ffed3f18b4bad78a045bbc96f2709f40d00d2fa78d1d444db6a9bb91b56",
+      "checkpoint_global_step_actually_checked": 20
+    },
+    "th": {
+      "target": {
+        "base_correct": 53,
+        "adapter20_correct": 46,
+        "gained": 10,
+        "lost": 17,
+        "delta_correct": -7
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 77,
+        "gained": 5,
+        "lost": 5,
+        "delta_correct": 0
+      },
+      "target_run_id": "th_saved20_screen_target20_dev100_8192_20261020_v1",
+      "English_run_id": "th_saved20_screen_English20_recovered_dev100_8192_20261020_v2",
+      "English_items_sha256": "86e393281a95f420bcd6fd2ed5dd295f27ca9c761b4ac031378d1a20401acb14",
+      "checkpoint_global_step_actually_checked": 20
+    },
+    "bn": {
+      "target": {
+        "base_correct": 16,
+        "adapter20_correct": 7,
+        "gained": 2,
+        "lost": 11,
+        "delta_correct": -9
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 73,
+        "gained": 6,
+        "lost": 10,
+        "delta_correct": -4
+      },
+      "target_run_id": "bn_17b_clip20_horizon100_seed42_20261020_v1_dev8192",
+      "English_run_id": "en_bn_clip20_dev100_8192_20261020_v1",
+      "English_items_sha256": "f7d9dc213e695c1844eb86a39d1dc0e6a5cfa19c68f01ad22cb1a36356715c2b",
+      "checkpoint_global_step_actually_checked": 20
+    },
+    "zh": {
+      "target": {
+        "base_correct": 66,
+        "adapter20_correct": 69,
+        "gained": 11,
+        "lost": 8,
+        "delta_correct": 3
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 72,
+        "gained": 7,
+        "lost": 12,
+        "delta_correct": -5
+      },
+      "target_run_id": "zh_early20_candidate_dev100_8192_20261020_v1",
+      "English_run_id": "zh_early20_en_candidate_dev100_8192_20261020_v1",
+      "English_items_sha256": "2aba4ebc1b89591b3c40f1935da51352cabf7b2201715bc70a4fc594e02ee3a2",
+      "checkpoint_global_step_actually_checked": 20
+    },
+    "ja": {
+      "target": {
+        "base_correct": 47,
+        "adapter20_correct": 50,
+        "gained": 13,
+        "lost": 10,
+        "delta_correct": 3
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 74,
+        "gained": 4,
+        "lost": 7,
+        "delta_correct": -3
+      },
+      "target_run_id": "ja_v4_saved20_target_dev100_8192_20261020_v1",
+      "English_run_id": "ja_v4_saved20_English_dev100_8192_20261020_v1",
+      "English_items_sha256": "45c5d521229100df7217692db78d0f39c68c4f221aa7decbd6e9dfecad79e323",
+      "checkpoint_global_step_actually_checked": 20
+    },
+    "ru": {
+      "target": {
+        "base_correct": 64,
+        "adapter20_correct": 59,
+        "gained": 10,
+        "lost": 15,
+        "delta_correct": -5
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 72,
+        "gained": 4,
+        "lost": 9,
+        "delta_correct": -5
+      },
+      "target_run_id": "ru_saved20_screen_target20_dev100_8192_20261020_v1",
+      "English_run_id": "ru_saved20_screen_English20_dev100_8192_20261020_v1",
+      "English_items_sha256": "c80dd10143e0a7e28d8aaf3d80af7112aaaf80ad6fcc46baaa88d4aa43d1979c",
+      "checkpoint_global_step_actually_checked": 20
+    },
+    "de": {
+      "target": {
+        "base_correct": 64,
+        "adapter20_correct": 58,
+        "gained": 12,
+        "lost": 18,
+        "delta_correct": -6
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 76,
+        "gained": 7,
+        "lost": 8,
+        "delta_correct": -1
+      },
+      "target_run_id": "de_saved20_screen_target20_dev100_8192_20261020_v1",
+      "English_run_id": "de_saved20_screen_English20_dev100_8192_20261020_v1",
+      "English_items_sha256": "c3001abf54611b46b09fdcc2fb6c257883e843e12a88af7bcffbb8e7153a186a",
+      "checkpoint_global_step_actually_checked": 20
+    },
+    "fr": {
+      "target": {
+        "base_correct": 72,
+        "adapter20_correct": 63,
+        "gained": 7,
+        "lost": 16,
+        "delta_correct": -9
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 76,
+        "gained": 7,
+        "lost": 8,
+        "delta_correct": -1
+      },
+      "target_run_id": "fr_early20_candidate_dev100_8192_20261020_v1",
+      "English_run_id": "fr_early20_en_candidate_dev100_8192_20261020_v1",
+      "English_items_sha256": "11b2c8b36697a56e7813d036f1211ebabe33a627362f3c00384be0e83744d14f",
+      "checkpoint_global_step_actually_checked": 20
+    },
+    "es": {
+      "target": {
+        "base_correct": 69,
+        "adapter20_correct": 64,
+        "gained": 6,
+        "lost": 11,
+        "delta_correct": -5
+      },
+      "English": {
+        "base_correct": 77,
+        "adapter20_correct": 73,
+        "gained": 3,
+        "lost": 7,
+        "delta_correct": -4
+      },
+      "target_run_id": "es_saved20_screen_target20_dev100_8192_20261020_v1",
+      "English_run_id": "es_saved20_screen_English20_dev100_8192_20261020_v1",
+      "English_items_sha256": "1faf196106a232649a14947f860f8f50572a1f751e4b3d2196ae556ebe231f20",
+      "checkpoint_global_step_actually_checked": 20
+    }
+  },
+  "all10_target_and_English_complete100_item_pairs_verified": true,
+  "English_comparison_uses_same_actual_target20_checkpoint": true,
+  "English_output_selection": "Unique completed same-adapter match; reject ambiguity, never choose by accuracy.",
+  "new_generation": false,
+  "new_training": false,
+  "GPU_used": false,
+  "scope": "Complete paired independent-development inventory only. Parent success and scientific training caveats remain documented in individual reports. Historical4GPU/initializer differences and JA literal-prefix repair remain; not an exact paper-reproduction ranking, stable final language selection, formal results or sequential evidence. Uses official-clip reference runs; no-clip interventions and extra seeds stay separate. All outputs/costs overlap earlier reports; no cost sum or additional compute."
+}
