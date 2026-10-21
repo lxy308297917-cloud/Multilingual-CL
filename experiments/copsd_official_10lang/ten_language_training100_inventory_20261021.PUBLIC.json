@@ -1,0 +1,70 @@
+{
+  "observed_at": "2026-10-21T12:02:21.481854",
+  "model": "Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "completed_training_languages": 10,
+  "languages": {
+    "ru": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_seeded_cost_single_v2/ru_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-100",
+      "global_step": 100,
+      "completed_formal_output_example": "ru_17b_polymath_ckpt100_20261020_v2",
+      "status": "training100 complete; original formal suite already reported"
+    },
+    "zh": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_seeded_cost_single_v2/zh_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-100",
+      "global_step": 100,
+      "completed_formal_output_example": "zh_17b_polymath_ckpt100_20261020_v2",
+      "status": "training100 complete; original formal suite already reported"
+    },
+    "th": {
+      "checkpoint_relative": "models/checkpoint/copsd_official_17b_single_4gpu_v1/th_17b_project2900_seed42_4gpu_resume70_torch28_uuid_20261019_v2/checkpoint-100",
+      "global_step": 100,
+      "completed_formal_output_example": "th_17b_mgsm_rev2_ckpt100_20261020_v1",
+      "status": "training100 complete; original formal suite already reported"
+    },
+    "sw": {
+      "checkpoint_relative": "models/checkpoint/copsd_official_17b_single_v1/sw_17b_project2900_seed42_20261015_v1/checkpoint-100",
+      "global_step": 100,
+      "completed_formal_output_example": "sw_17b_mgsm_rev2_ckpt100_20261020_v1",
+      "status": "training100 complete; original formal suite already reported"
+    },
+    "fr": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_seeded_cost_single_v2/fr_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-100",
+      "global_step": 100,
+      "completed_formal_output_example": "fr_17b_mgsm_rev2_ckpt100_20261020_v2",
+      "status": "training100 complete; original formal suite already reported"
+    },
+    "bn": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_update_batch_single_v1/bn_17b_project2900_vllm_update_batch_seed42_20261020_v1/checkpoint-100",
+      "global_step": 100,
+      "completed_formal_output_example": "bn_17b_polymath_ckpt100_20261020_v2",
+      "status": "training100 complete; original formal suite already reported"
+    },
+    "es": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_seeded_cost_single_v2/es_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-100",
+      "global_step": 100,
+      "completed_formal_output_example": "es_17b_mgsm_rev2_ckpt100_20261020_v2",
+      "status": "training100 complete; original formal suite already reported"
+    },
+    "de": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_seeded_cost_single_v2/de_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-100",
+      "global_step": 100,
+      "completed_formal_output_example": "de_17b_polymath_ckpt100_20261020_v2",
+      "status": "training100 complete; original formal suite already reported"
+    },
+    "te": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_seeded_cost_single_v2/te_17b_resume90_batch_seeded_cost_20261020_v2/checkpoint-100",
+      "global_step": 100,
+      "training_audit_report": "te_resume100_completed_20261020.PUBLIC.json",
+      "status": "training100 complete; formal suite still pending"
+    },
+    "ja": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_ja_data_repair_resume_v5/ja_17b_prefixrepair_resume80_nonefixed_seed42_20261020_v5/checkpoint-100",
+      "global_step": 100,
+      "training_audit_report": "ja100_training_recovered_20261021.PUBLIC.json",
+      "status": "training100 complete; formal suite still pending"
+    }
+  },
+  "verification_scope": "Current100 global-step checkpoint states and nonempty adapter artifacts. Existing eight languages also have completed formal output references; TE/JA training-recovery audits are linked. This inventory does not newly reload all eight historical optimizers or redo their previous audits.",
+  "scientific_caveats": "Historical single/4GPU and initializer limitations, JA one-record prefix repair, TE/JA resumed execution and sampling continuity limits remain separately recorded. Not a claim of exact paper numeric replication, efficacy, ten-language full formal completion or sequential training."
+}
