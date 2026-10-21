@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-10-21T17:48:06.971150",
+  "collector": "summarize_te_clip_control20.py",
+  "collector_sha256": "b8c9585e0f8932a942c1c2be5940d56e0ec9e49548a9e61f74997b28e739321a",
+  "CPU_validation": {
+    "actual_cached_TE_Base_correct": 7,
+    "actual_cached_EN_Base_correct": 77,
+    "TE_recovered_Base_not_interrupted_original_used": true,
+    "actual_running_TE_parent_refused_before_scores": true,
+    "no_completed_TE_claim": true,
+    "no_GPU_job_started_by_collector": true,
+    "actual_cached_raw_counts_token_counts_config_evaluator_identity_audited": true
+  },
+  "pending": "Completion-only branches, training states and four TE/EN outputs will be audited against real saved files after both parent jobs exit0. This is not a completed training/effect result."
+}
