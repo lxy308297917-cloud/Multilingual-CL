@@ -1,0 +1,144 @@
+{
+  "observed_at": "2026-10-21T23:15:41.878864",
+  "protocol": "project_followup200_SW42_English_loss_review_v1",
+  "followup_protocol": "project_followup_dev200_single8192_c64_v1",
+  "source_items_sha256": {
+    "base": "28dd6c822144a062c87e4635e29ee0cdbce7545abd7cd6e3715eaf4b14a48bd2",
+    "sw42": "7bab70b2296d712ab5ef54c008c42bf01978c6ba46bb9753daa197ae328cb913"
+  },
+  "paired_report_sha256": "f84870fedbf39430cf78eb19279f9021c5af7bd298781aae01b0f82bae07fda0",
+  "official_score": {
+    "Base_correct": 147,
+    "SW42_correct": 137,
+    "gained": 13,
+    "lost": 23,
+    "items": 200,
+    "changed": false
+  },
+  "lost_after_model_truncation": 12,
+  "lost_after_model_stop": 11,
+  "stop_review_counts": {
+    "mathematical_or_reading_error": 6,
+    "proof_and_answer_representation_mixed": 1,
+    "answer_representation_mismatch": 3,
+    "context_interpretation_ambiguity": 1
+  },
+  "stop_reviews": [
+    {
+      "id": "ee7a01f8752c21868c027f7b57bf55a4846a74ce397159061ac6ad0e312c8cf7",
+      "gold": "\\frac{25}{4}",
+      "Base_box": "\\dfrac{25}{4}",
+      "SW42_box": "\\dfrac{25}{3}",
+      "category": "mathematical_or_reading_error",
+      "review_rationale": "最后联立化简写成-50r²+2500=14r²，却得36r²=2500；应为64r²=2500，半径25/4。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "7c1ee7d7911876f10cee030489ee1c3f02aae159cbe8d6e1f379d09bb1c50546",
+      "gold": "AB = 2 \\times AC",
+      "Base_box": "AB = 2AC",
+      "SW42_box": "\\text{One of the sides is half the length of another.}",
+      "category": "proof_and_answer_representation_mixed",
+      "review_rationale": "正文给出AC=AB/2但末box仅复述命题；坐标设AB水平、AC垂直无题设依据，不能据正文相同关系认定证明正确。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "4906e54005bd1f2d4695cfe931d1f7ac056b042b82f6d5965a4e8d6b8b517a00",
+      "gold": "\\text{C}",
+      "Base_box": "C",
+      "SW42_box": "\\text{C. Isosceles Trapezoid}",
+      "category": "answer_representation_mismatch",
+      "review_rationale": "正文与box均选C等腰梯形，gold为C；box包含C. Isosceles Trapezoid，官方判错。这是确定的选项表示差异。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "860660dfa2d51142cb8f86dc2eee3c1a4d6d3b9a60d62f3f10dc83dee90b48ea",
+      "gold": "A",
+      "Base_box": "A",
+      "SW42_box": "6",
+      "category": "answer_representation_mismatch",
+      "review_rationale": "正文正确算出6并明确对应Option A；box为6，gold为A，官方判错。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "cebff5f7028c8eb0a074e7ff4374707e2188d6f91e799042a6888e22fc279400",
+      "gold": "75",
+      "Base_box": "75",
+      "SW42_box": "1",
+      "category": "mathematical_or_reading_error",
+      "review_rationale": "正文正确推出p=5和所求数75，最终却回答唯一解的数量1；属于问题目标／最终答案选择错误，不直接加回分数。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "86be2bd5ab244d197282b66614ecda10b2f64343a088b5fc116f0463ace8dba6",
+      "gold": "\\frac{1999}{9000}",
+      "Base_box": "\\frac{1999}{9000}",
+      "SW42_box": "\\frac{66667}{300000}",
+      "category": "mathematical_or_reading_error",
+      "review_rationale": "列出的前三位2、第四位起1与后续写出的0.222211...不一致，之后级数分解也错误，所得66667/300000不等于gold1999/9000。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "4e944086198e9ab4687d4a658be3486a84dd1c4bc2c9c187bc3c0d0e196a1afe",
+      "gold": "21:10",
+      "Base_box": "21:10",
+      "SW42_box": "19:40",
+      "category": "mathematical_or_reading_error",
+      "review_rationale": "速度提高25%时用时应为T/1.25=0.8T，模型写成0.75T，得到19:40而非21:10。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "ac4de84d960f87819b35e2cddea9a467b46e9c22f9e8b89d9ff4ec7c75c28059",
+      "gold": "1",
+      "Base_box": "1",
+      "SW42_box": "\\dfrac{6}{11}",
+      "category": "mathematical_or_reading_error",
+      "review_rationale": "由q³=r⁶应得r=q^(1/2)，模型写成q²，并在乘积中重复错用q²；应pqr=x，d=1。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "8e240f60ab80582f46e8e5a7290623eda1d0c2c82287a8b772153d6fdc99155c",
+      "gold": "\\left(2 + a_{1}\\right)\\left(2 + a_{2}\\right) \\cdots\\left(2 + a_{n}\\right) \\geqslant 3^{n}",
+      "Base_box": "(2 + a_1)(2 + a_2) \\cdots (2 + a_n) \\geq 3^n",
+      "SW42_box": "3^n",
+      "category": "answer_representation_mismatch",
+      "review_rationale": "正文以逐项AM-GM给出完整正确不等式证明；box只写下界3^n，gold要求完整不等式，官方判错。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "60db0878e41fd22ff8ac882863b37f931c50c42f9d725c07aabc0ede65ce0a06",
+      "gold": "3537",
+      "Base_box": "3537",
+      "SW42_box": "1561",
+      "category": "mathematical_or_reading_error",
+      "review_rationale": "排除数字7仍可用8和9，共9种数字；模型误设只能0至6共7种，算出1561而非9^4-9*8*7*6=3537。",
+      "official_correct_unchanged": false
+    },
+    {
+      "id": "c7b2ea10fa9b621ac457d44c0af737060508727b644f98f7776717dd596d4d3b",
+      "gold": "14",
+      "Base_box": "14",
+      "SW42_box": "18",
+      "category": "context_interpretation_ambiguity",
+      "review_rationale": "模型先按Masha为女孩推出14，再假设其为男孩而改答18；英文问题代词／背景约束的解释与参考不同，不能单独归因算术能力损失。",
+      "official_correct_unchanged": false
+    }
+  ],
+  "truncated_loss_IDs": [
+    "483402994ec70e6ff1712ab25aa8a093475456f20d61582bf240e1660f993466",
+    "28952de2d525f34b8e975d745e7fac65b3948d1539fe770f2d35c78bd9bfcbc8",
+    "a6583b0a7e65cde01dd5c03829dbdb659c98fab098ff07afede41271a92994bf",
+    "c4e918ad3d1d2c48053b108e73958df59373d41b5f1d2a583dc26f849fb95fef",
+    "104134cdea1216a44bfa6c09d22919508e505bf7b56daa24f8176ea4c226928e",
+    "13b19c3843e81e6eba565a8ba84da1edc1e0ad94272caf436d8eb38c6ae685a9",
+    "9aeecd59b175d364fb0ac3637614be17feccf00883ffb6304fbc6bc628e32bb8",
+    "822d31fdce0051377f807a9a0db7b709f287608303e5f3a03350dc4fe29c0c42",
+    "a29b19652e76f09aeca05890fe8fd16c14889efc3199c0759ebd24f98109c680",
+    "41ea6a60d4e5c3aeee7b668265ffee106fe1e11c9d45536dcc7789b688802cb5",
+    "dddaff0c5209658119dca01044086debc73b68ec303a9ce2ee02bb79eca32bc9",
+    "5a7b8f0465dd984fe73b2a3d16b4c4847120fe5e2c2b633224de553890358adb"
+  ],
+  "no_new_inference_or_training": true,
+  "no_alternative_accuracy_computed": true,
+  "scope": "Assistant descriptive review of all11 normal-stop English losses, not a validated replacement scorer or regraded benchmark. Three representation mismatches are not all losses; truncation12 and substantive answer errors remain. No claim that full200 gains/non-losses are exhaustively human-scored. Do not adjust the frozen official147→137 result or use this subset to pick checkpoints."
+}
