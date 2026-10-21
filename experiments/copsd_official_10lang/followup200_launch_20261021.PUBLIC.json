@@ -1,0 +1,87 @@
+{
+  "observed_at": "2026-10-21T21:01:16.129324",
+  "protocol": "project_followup_dev200_single8192_c64_v1",
+  "states": {
+    "base": {
+      "queue": "copsd-followup200-base-v1",
+      "phase": "running",
+      "monitor_pid": 148927,
+      "launcher_pid": 148997,
+      "GPU_UUIDs": [
+        "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a"
+      ],
+      "exit_code": null
+    },
+    "sw42": {
+      "queue": "copsd-followup200-sw42-v1",
+      "phase": "waiting",
+      "monitor_pid": 148942,
+      "launcher_pid": null,
+      "GPU_UUIDs": null,
+      "exit_code": null
+    },
+    "ja42": {
+      "queue": "copsd-followup200-ja42-v1",
+      "phase": "waiting",
+      "monitor_pid": 148956,
+      "launcher_pid": null,
+      "GPU_UUIDs": null,
+      "exit_code": null
+    },
+    "zh42": {
+      "queue": "copsd-followup200-zh42-v1",
+      "phase": "waiting",
+      "monitor_pid": 148988,
+      "launcher_pid": null,
+      "GPU_UUIDs": null,
+      "exit_code": null
+    },
+    "sw43": {
+      "queue": "copsd-followup200-sw43-v1",
+      "phase": "waiting",
+      "monitor_pid": 149019,
+      "launcher_pid": null,
+      "GPU_UUIDs": null,
+      "exit_code": null
+    },
+    "ja43": {
+      "queue": "copsd-followup200-ja43-v1",
+      "phase": "waiting",
+      "monitor_pid": 149032,
+      "launcher_pid": null,
+      "GPU_UUIDs": null,
+      "exit_code": null
+    },
+    "zh43": {
+      "queue": "copsd-followup200-zh43-v1",
+      "phase": "waiting",
+      "monitor_pid": 149051,
+      "launcher_pid": null,
+      "GPU_UUIDs": null,
+      "exit_code": null
+    },
+    "bn_unclip42": {
+      "queue": "copsd-followup200-bn-unclip42-v1",
+      "phase": "waiting",
+      "monitor_pid": 149068,
+      "launcher_pid": null,
+      "GPU_UUIDs": null,
+      "exit_code": null
+    },
+    "bn_unclip43": {
+      "queue": "copsd-followup200-bn-unclip43-v1",
+      "phase": "waiting",
+      "monitor_pid": 149086,
+      "launcher_pid": null,
+      "GPU_UUIDs": null,
+      "exit_code": null
+    }
+  },
+  "account_distinct_compute_GPUs_observed": 4,
+  "this_batch_compute_GPUs": [
+    "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a"
+  ],
+  "other_account_training_GPUs_observed": 3,
+  "scope": "This Base pipeline is actually computing; other8 cases are manually started monitors waiting under global4-GPU quota. Three existing same-account training jobs are separate existing work and are left untouched. No new training or follow-up efficacy result claimed.",
+  "Base_first_case_actual_max_num_seqs": 64
+}
