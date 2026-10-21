@@ -1,0 +1,151 @@
+{
+  "observed_at": "2026-10-21T11:33:28.311099",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "results": {
+    "sw": {
+      "items": 100,
+      "single_correct": 6,
+      "single_accuracy": 0.06,
+      "generated_tokens": 702182,
+      "truncated": 83,
+      "normal_terminations": 17,
+      "answer_extraction_failures": 84,
+      "run_id": "sw_base_dev100_8192_20261020_v1",
+      "input_sha256": "cf2c0e6b802e5c88de9398a859a894c96d99b9207618211359c796134c24a87c",
+      "output_items_sha256": "3fd3663c548a1752c3ba5c811f8ff8b3c6ad7115434ccf2d9fcbf296086022a7"
+    },
+    "te": {
+      "items": 100,
+      "single_correct": 7,
+      "single_accuracy": 0.07,
+      "generated_tokens": 690779,
+      "truncated": 68,
+      "normal_terminations": 32,
+      "answer_extraction_failures": 67,
+      "run_id": "te_saved20_screen_base_recovered_dev100_8192_20261020_v2",
+      "input_sha256": "a2d9c2691a07000340d13b8b4a2814d879b356526035d89eab4d11fbc87f6f54",
+      "output_items_sha256": "65adc2bec631565e128e5e2f497c4624a50f520eeb5750fb4f3f61a6fd796549",
+      "recovery_reused73_new27": true
+    },
+    "th": {
+      "items": 100,
+      "single_correct": 53,
+      "single_accuracy": 0.53,
+      "generated_tokens": 315000,
+      "truncated": 9,
+      "normal_terminations": 91,
+      "answer_extraction_failures": 7,
+      "run_id": "th_saved20_screen_base_dev100_8192_20261020_v1",
+      "input_sha256": "970bd22921349b0d943d5229fcf852bb1582be11670fe61b9177168204f0c8a4",
+      "output_items_sha256": "5e972aade9b28156121a140e0051dee24cecc0049c6784903890a1330262bc4b"
+    },
+    "bn": {
+      "items": 100,
+      "single_correct": 16,
+      "single_accuracy": 0.16,
+      "generated_tokens": 544364,
+      "truncated": 34,
+      "normal_terminations": 66,
+      "answer_extraction_failures": 32,
+      "run_id": "bn_base_dev100_8192_20261020_v1",
+      "input_sha256": "9472e140de0736c14e6f879a3eb6eb40ddb3926dbbd73fb0750f474f87f1f020",
+      "output_items_sha256": "42a8280f822ec50f1cad26ab3190dee03847395b769cbca92bca37ebcb058b90"
+    },
+    "zh": {
+      "items": 100,
+      "single_correct": 66,
+      "single_accuracy": 0.66,
+      "generated_tokens": 411575,
+      "truncated": 18,
+      "normal_terminations": 82,
+      "answer_extraction_failures": 18,
+      "run_id": "zh_base_candidate_dev100_8192_20261020_v1",
+      "input_sha256": "2c0758562a8bf18c836125e936f0773cf1bb5531c229fef44b9f8a17828a9853",
+      "output_items_sha256": "97a4d35bc783f73ec0fa9f320b4f84584659ba9ce15c2a8bf9f9b197ea58e7ec"
+    },
+    "ja": {
+      "items": 100,
+      "single_correct": 47,
+      "single_accuracy": 0.47,
+      "generated_tokens": 374549,
+      "truncated": 16,
+      "normal_terminations": 84,
+      "answer_extraction_failures": 14,
+      "run_id": "ja_v4_saved20_base_dev100_8192_20261020_v1",
+      "input_sha256": "8e555949c37c879f65e7b8e326c3ec19eadf95a9cb6fc3b0037471b6b92a41cf",
+      "output_items_sha256": "098bf617e7b712a8b2add442df4ca80b043ecd441bd9e15ce91ae2a06181d697"
+    },
+    "ru": {
+      "items": 100,
+      "single_correct": 64,
+      "single_accuracy": 0.64,
+      "generated_tokens": 357948,
+      "truncated": 11,
+      "normal_terminations": 89,
+      "answer_extraction_failures": 11,
+      "run_id": "ru_saved20_screen_base_dev100_8192_20261020_v1",
+      "input_sha256": "595d023ec470c99d41cc24caddb3a1386a0589e2ba9020c4a882a6a4d1b0f929",
+      "output_items_sha256": "f5ef47959074f3e2e3f0db98305d3d830217a62d3a71a8615e77811494adb5b7"
+    },
+    "de": {
+      "items": 100,
+      "single_correct": 64,
+      "single_accuracy": 0.64,
+      "generated_tokens": 286187,
+      "truncated": 6,
+      "normal_terminations": 94,
+      "answer_extraction_failures": 5,
+      "run_id": "de_saved20_screen_base_dev100_8192_20261020_v1",
+      "input_sha256": "5d7f47e7014e4d70abd0ef9663fd820cf812dfd3672e9bd71edd097053a53882",
+      "output_items_sha256": "920d307650e0a874d371c366384534d50cac367c8a730639ad5ccd2876a89fb4"
+    },
+    "fr": {
+      "items": 100,
+      "single_correct": 72,
+      "single_accuracy": 0.72,
+      "generated_tokens": 357542,
+      "truncated": 9,
+      "normal_terminations": 91,
+      "answer_extraction_failures": 6,
+      "run_id": "fr_base_candidate_dev100_8192_20261020_v1",
+      "input_sha256": "4285a96e4c2f22f57ef36cc8571a88922f2437fdb2d7b9b93df7eef008c079b9",
+      "output_items_sha256": "9378eeba9e87169b88a350ceb563c44353959f1e7723b171063c2d160ece124d"
+    },
+    "es": {
+      "items": 100,
+      "single_correct": 69,
+      "single_accuracy": 0.69,
+      "generated_tokens": 311708,
+      "truncated": 7,
+      "normal_terminations": 93,
+      "answer_extraction_failures": 6,
+      "run_id": "es_saved20_screen_base_dev100_8192_20261020_v1",
+      "input_sha256": "9d45da14c3370a07cf2228052ace38203b30c07232338244dbcc9c27b610d551",
+      "output_items_sha256": "8e3b84d54b131ea71158c135d05066cbaef1ffa51db9b9e2dae7df704687cc43"
+    },
+    "en": {
+      "items": 100,
+      "single_correct": 77,
+      "single_accuracy": 0.77,
+      "generated_tokens": 428429,
+      "truncated": 17,
+      "normal_terminations": 83,
+      "answer_extraction_failures": 12,
+      "run_id": "en_sw_base_dev100_8192_20261020_v1",
+      "input_sha256": "cf2c0e6b802e5c88de9398a859a894c96d99b9207618211359c796134c24a87c",
+      "output_items_sha256": "c1a4ad76d350446e6d1d0bb1fd8b374c5cbf6d3e35fe38e7e476a8bb091c9bc7"
+    }
+  },
+  "target_languages": 10,
+  "English_retention_languages": 1,
+  "same100_original_ID_order_and_gold_across_all11": true,
+  "packages": {
+    "torch": "2.8.0",
+    "transformers": "4.57.1",
+    "vllm": "0.11.0",
+    "math-verify": "0.8.0"
+  },
+  "no_new_generation": true,
+  "no_GPU_used": true,
+  "scope": "Existing independent development100 Base outputs only, not formal tests or trained-model efficacy. Cached stages can be complete while their parent pipelines remain running/failed; this inventory does not claim those parents succeeded. Output token counts describe scored answers, not additional compute. No cost sum; all outputs overlap existing run reports, TE includes73 cached responses."
+}
