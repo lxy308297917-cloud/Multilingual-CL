@@ -1,0 +1,136 @@
+{
+  "observed_at": "2026-10-21T15:30:58.313922",
+  "protocol": "project_formal_single_vllm8192_v1",
+  "benchmark": "polymath",
+  "metrics": {
+    "base": {
+      "items": 500,
+      "single_correct": 8,
+      "generated_tokens": 3730056,
+      "truncated": 445,
+      "normal_terminations": 55,
+      "answer_extraction_failures": 441,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 500,
+      "single_accuracy": 0.016,
+      "generation_seconds": 5011.436255199835,
+      "model_load_seconds": 9.54234336875379,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 3,
+          "single_accuracy": 0.024
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 3,
+          "single_accuracy": 0.024
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 2,
+          "single_accuracy": 0.016
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 0,
+          "single_accuracy": 0.0
+        }
+      }
+    },
+    "seed42": {
+      "items": 500,
+      "single_correct": 29,
+      "generated_tokens": 2238366,
+      "truncated": 203,
+      "normal_terminations": 297,
+      "answer_extraction_failures": 182,
+      "protocol": "project_formal_single_vllm8192_v1",
+      "benchmark": "polymath",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 500,
+      "single_accuracy": 0.058,
+      "generation_seconds": 7911.9305599387735,
+      "model_load_seconds": 10.811849320307374,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 12,
+          "single_accuracy": 0.096
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 9,
+          "single_accuracy": 0.072
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 6,
+          "single_accuracy": 0.048
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 2,
+          "single_accuracy": 0.016
+        }
+      }
+    }
+  },
+  "paired_counts": {
+    "seed42": {
+      "Base_correct": 8,
+      "trained20_correct": 29,
+      "gained": 25,
+      "lost": 4,
+      "delta_correct": 21
+    }
+  },
+  "sources": {
+    "base": {
+      "run_id": "sw20confirm_base_polymath_8192_20261021_v1",
+      "raw_items_sha256": "3691cf65a99dc2dccf2674971da3782cc529888515307c0387fb61053ae8e4eb",
+      "config_sha256": "c19af0bf9896abd07b741452a46b16fabd4e5e98beab2f1dc18e9883e0454b86",
+      "DONE_sha256": "9035815e0af375b84cc4a50fdfcbc65fcbffad478b5a268f58200a6a337dfa7d"
+    },
+    "seed42": {
+      "run_id": "sw20confirm_seed42_polymath_8192_20261021_v1",
+      "raw_items_sha256": "29a3540a22c9d1f6389c1198d19ad7d628106e7cc9c0bf6e439ef6a2f243130a",
+      "config_sha256": "31df05c1c2058ac8273d1b574e989955a4b0e2f6cd081011f4697aead2688bac",
+      "DONE_sha256": "83f7a1cd608f514c5e93c5df01ffe7503af0c6ee110c6852fdb3052dadd8031c"
+    }
+  },
+  "parents": {
+    "base": {
+      "queue": "copsd-sw20-formal8192-confirm-v1",
+      "observed_phase": "running",
+      "exit_code": null
+    },
+    "seed42": {
+      "queue": "copsd-sw20-formal8192-seed42-v1",
+      "observed_phase": "running",
+      "exit_code": null
+    }
+  },
+  "all_requested_stage_outputs_verified": true,
+  "requested_models": [
+    "base",
+    "seed42"
+  ],
+  "all_three_models_included": false,
+  "all_requested_parent_suites_completed_exit0": false,
+  "all_three_parent_suites_completed_exit0": false,
+  "stage_cost_only": {
+    "responses": 1000,
+    "generated_tokens": 5968422,
+    "generation_seconds": 12923.366815138608,
+    "scope": "Unique completed requested benchmark stages only; excludes other suites, training, loading and parent-clock allocation. Do not add to overlapping later aggregate reports."
+  },
+  "new_generation_from_this_analysis": false,
+  "scope": "Frozen project n1/8192 stage comparison, not official pass12. Completed benchmark stages do not imply the other benchmark stages or English have completed. Both checkpoints were preselected using independent development; the formal inputs are existing project test sets, not newly held-out tests. No language selection from these formal scores."
+}

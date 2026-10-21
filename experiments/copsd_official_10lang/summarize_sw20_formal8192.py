@@ -23,15 +23,19 @@ def main():
     p.add_argument('--root', type=Path, required=True)
     p.add_argument('--benchmark', choices=['mgsm_rev2', 'polymath', 'gsm8k'], required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--models', nargs='+', choices=['base', 'seed42', 'seed43'],
+                   default=['base', 'seed42', 'seed43'],
+                   help='Explicit completed subset; Base plus at least one trained model.')
     a = p.parse_args()
+    assert len(set(a.models)) == len(a.models) and 'base' in a.models and len(a.models) >= 2
     assert not a.output.exists()
     code = Path(__file__).parent
     frozen = read(code / 'sw20_formal8192_frozen_20261021.PUBLIC.json')
     for name, sha in frozen['code_sha256'].items():
         assert digest(code / name) == sha, name
     configurations, records, metrics, sources, parents = {}, {}, {}, {}, {}
-    stages = [s for s in frozen['stages'] if s['benchmark'] == a.benchmark]
-    assert {s['model'] for s in stages} == {'base', 'seed42', 'seed43'} and len(stages) == 3
+    stages = [s for s in frozen['stages'] if s['benchmark'] == a.benchmark and s['model'] in a.models]
+    assert {s['model'] for s in stages} == set(a.models) and len(stages) == len(a.models)
     for stage in stages:
         model = stage['model']
         directory = a.root / 'logs/copsd_official_10lang/evaluation_vllm8192' / stage['run_id']
@@ -86,7 +90,7 @@ def main():
                           'exit_code': state['job'].get('exit_code')}
     assert all(c == configurations['base'] for c in configurations.values())
     paired = {}
-    for model in ['seed42', 'seed43']:
+    for model in [name for name in a.models if name != 'base']:
         gained = lost = 0
         for base, trained in zip(records['base'], records[model]):
             assert all(base[k] == trained[k] for k in ['id', 'question', 'answer', 'prompt'])
@@ -99,7 +103,10 @@ def main():
     out = {'observed_at': datetime.datetime.now().isoformat(), 'protocol': frozen['protocol'],
         'benchmark': a.benchmark, 'metrics': metrics, 'paired_counts': paired,
         'sources': sources, 'parents': parents, 'all_requested_stage_outputs_verified': True,
-        'all_three_parent_suites_completed_exit0': all(p['observed_phase'] == 'completed' and p['exit_code'] == 0 for p in parents.values()),
+        'requested_models': a.models,
+        'all_three_models_included': set(a.models) == {'base', 'seed42', 'seed43'},
+        'all_requested_parent_suites_completed_exit0': all(p['observed_phase'] == 'completed' and p['exit_code'] == 0 for p in parents.values()),
+        'all_three_parent_suites_completed_exit0': set(a.models) == {'base', 'seed42', 'seed43'} and all(p['observed_phase'] == 'completed' and p['exit_code'] == 0 for p in parents.values()),
         'stage_cost_only': {'responses': sum(m['items'] for m in metrics.values()),
             'generated_tokens': sum(m['generated_tokens'] for m in metrics.values()),
             'generation_seconds': sum(m['generation_seconds'] for m in metrics.values()),
