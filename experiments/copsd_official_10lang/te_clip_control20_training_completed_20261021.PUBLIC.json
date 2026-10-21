@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-10-21T18:31:33.039647",
+  "protocol": "project_TE_component_clip_matched20_v1",
+  "training_complete": true,
+  "full_parents_completed": false,
+  "development_results_pending": true,
+  "conditions": {
+    "clip": {
+      "run_id": "te_17b_clip_control20_seed42_20261021_v1",
+      "checkpoint_relative": "models/checkpoint/copsd_te_clip_control_v1/te_17b_clip_control20_seed42_20261021_v1/checkpoint-20",
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "training_generated_tokens": 1307935,
+      "valid_response_loss_positions": 1307935,
+      "teacher_attended_input_positions": 2610401,
+      "teacher_forward_cuda_seconds": 198.7811413116455,
+      "training_seconds_including_diagnostic_hashing": 2985.8406949676573,
+      "physical_memory_peak_MiB_through_observation": 22497,
+      "memory_scope": "External nvidia-smi samples; includes training and live development up to this observation, not a completed-pipeline peak.",
+      "adapter_sha256": "41484a63ca32b43ceec177f607a39bc7348d765c1f20a121a237256c8c96c348",
+      "development_TE_config_matches_saved_adapter": true
+    },
+    "unclip": {
+      "run_id": "te_17b_unclip_control20_seed42_20261021_v1",
+      "checkpoint_relative": "models/checkpoint/copsd_te_clip_control_v1/te_17b_unclip_control20_seed42_20261021_v1/checkpoint-20",
+      "updates": 20,
+      "scheduler_horizon": 100,
+      "question_exposures": 640,
+      "training_generated_tokens": 1305710,
+      "valid_response_loss_positions": 1305710,
+      "teacher_attended_input_positions": 2608176,
+      "teacher_forward_cuda_seconds": 198.03244380187988,
+      "training_seconds_including_diagnostic_hashing": 2927.10882139951,
+      "physical_memory_peak_MiB_through_observation": 22497,
+      "memory_scope": "External nvidia-smi samples; includes training and live development up to this observation, not a completed-pipeline peak.",
+      "adapter_sha256": "316ceeaa9a0bc2b5cbc5d4bed849bc348be6b76f1d2f1df727078d87ae97d05c",
+      "development_TE_config_matches_saved_adapter": true
+    }
+  },
+  "scope": "Two matched20 training stages complete; live TE then EN evaluation parents are not complete. No efficacy or final three-language selection claim. Training clocks overlap later full pipeline allocation; do not add them to that allocation.",
+  "matched_initial_policy_and_frozen_Base_verified": true
+}
