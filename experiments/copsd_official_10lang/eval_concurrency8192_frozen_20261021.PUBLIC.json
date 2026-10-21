@@ -1,0 +1,30 @@
+{
+  "frozen_at": "2026-10-21T12:49:16.864069",
+  "reference_config_relative": "logs/copsd_official_10lang/development_vllm8192/sw_clip20_dev100_8192_20261020_v1/CONFIG.json",
+  "reference_config_sha256": "9cc882865316ffa9cd4d29da58419b9359f7b47d8fb76ffbb528a56d365a9b38",
+  "input_sha256": "cf2c0e6b802e5c88de9398a859a894c96d99b9207618211359c796134c24a87c",
+  "adapter_sha256": "eb12d3b8dd22249fc0d5744ef56d83cf4db0ffe8495357f59ea618db52195c6c",
+  "output_relative": "logs/copsd_official_10lang/performance_vllm8192/sw20_concurrency64prompts_20261021_v1",
+  "model": "Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "concurrencies": [
+    16,
+    32,
+    64
+  ],
+  "items_each": 64,
+  "selection": "First64 already-held-out development questions in original order; no formal questions or correctness-based sample selection.",
+  "max_new_tokens": 8192,
+  "native_LoRA": true,
+  "fresh_engine_process_each": true,
+  "same_one_GPU_for_all": true,
+  "max_user_gpus": 4,
+  "no_training": true,
+  "scope": "Performance-only complete-length comparison for future stage evaluation settings. Does not change existing frozen experiments or establish method efficacy.",
+  "code_sha256": {
+    "benchmark_eval_concurrency8192.py": "2b97abc43ad8ed7c1bed73d741525081d47facf6fefa607cc71ee2a621a1c242",
+    "run_eval_concurrency8192.sh": "1c9faa4d49f0a6514a1a45495262cdd4f3e849a60c5b1112ff580f5b1b9341bc",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d"
+  }
+}
