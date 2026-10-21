@@ -1,0 +1,211 @@
+{
+  "observed_at": "2026-10-21T17:29:16.462028",
+  "model": "seed43",
+  "protocol": "project_formal_single_vllm8192_v1",
+  "queue": "copsd-sw20-formal8192-seed43-v1",
+  "parent_completed_exit0": true,
+  "results": [
+    {
+      "benchmark": "mgsm_rev2",
+      "language": "sw",
+      "run_id": "sw20confirm_seed43_mgsm_rev2_8192_20261021_v1",
+      "items": 250,
+      "correct": 14,
+      "metrics": {
+        "items": 250,
+        "single_correct": 14,
+        "generated_tokens": 781733,
+        "truncated": 68,
+        "normal_terminations": 182,
+        "answer_extraction_failures": 68,
+        "protocol": "project_formal_single_vllm8192_v1",
+        "benchmark": "mgsm_rev2",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 250,
+        "single_accuracy": 0.056,
+        "generation_seconds": 3104.2056320551783,
+        "model_load_seconds": 10.779143944382668,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "config_sha256": "89da75280e3a95ca75f6644650e3b645361d1ab8753b53e6b1254ad872224872",
+      "raw_items_sha256": "da0e9e3c29db77f7af8b0e3bd2f62ac4b575048168672b78d4f5b935f4e13164",
+      "done_sha256": "90e193fefb1fa2a9376230ce2782f822937fc7f9141a3dae08ea537ea7d3615b",
+      "input_sha256": "7a23573f28ab82504f5436f18f4168f1807103756905d82495828b69148739d5",
+      "canonical_config": {
+        "protocol": "project_formal_single_vllm8192_v1",
+        "benchmark": "mgsm_rev2",
+        "language": "sw",
+        "model": "/data0/users/lixiaoyang/models/Qwen3-1.7B",
+        "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "input": "/data0/users/lixiaoyang/data/math_single_10lang_20261015/mgsm_rev2/MGSM-Rev2/mgsm_sw.tsv",
+        "input_sha256": "7a23573f28ab82504f5436f18f4168f1807103756905d82495828b69148739d5",
+        "items": 250,
+        "samples": 1,
+        "max_new_tokens": 8192,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": -1,
+        "seed": 42,
+        "seed_policy": "SHA256(seed:language:id:0), per request",
+        "max_num_seqs": 16,
+        "model_context_limit": 40960,
+        "official_source_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+        "released_length_script_sha256": "70b2d3060286f2c4de7fa497669bb071dee4fb7da207d54bdf6f1c3ad0b67610",
+        "evaluator_sha256": "07e904913890bbd7488d5d2f8413fd6b34854e4fec4787cf64e417fd6890d1a6",
+        "scope": "Full project formal single-answer report at released length, not officialpass12. Configuration/checkpoint selection must use development only.",
+        "packages": {
+          "torch": "2.8.0",
+          "transformers": "4.57.1",
+          "vllm": "0.11.0",
+          "math-verify": "0.8.0"
+        }
+      }
+    },
+    {
+      "benchmark": "polymath",
+      "language": "sw",
+      "run_id": "sw20confirm_seed43_polymath_8192_20261021_v1",
+      "items": 500,
+      "correct": 20,
+      "metrics": {
+        "items": 500,
+        "single_correct": 20,
+        "generated_tokens": 2293905,
+        "truncated": 209,
+        "normal_terminations": 291,
+        "answer_extraction_failures": 185,
+        "protocol": "project_formal_single_vllm8192_v1",
+        "benchmark": "polymath",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 500,
+        "single_accuracy": 0.04,
+        "generation_seconds": 7782.391277695075,
+        "model_load_seconds": 10.825517224147916,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {
+          "low": {
+            "items": 125,
+            "single_correct": 6,
+            "single_accuracy": 0.048
+          },
+          "medium": {
+            "items": 125,
+            "single_correct": 7,
+            "single_accuracy": 0.056
+          },
+          "high": {
+            "items": 125,
+            "single_correct": 5,
+            "single_accuracy": 0.04
+          },
+          "top": {
+            "items": 125,
+            "single_correct": 2,
+            "single_accuracy": 0.016
+          }
+        }
+      },
+      "config_sha256": "431ba6740346aea8d278ec9881a03dc7af490be8a1c20b98ebcd1d7a03c8068f",
+      "raw_items_sha256": "1514ac0d28f8ee30caaa9f224c8e30aa6ccc353b6f7bbc7bde943e28270d0101",
+      "done_sha256": "64072f45bb0086c2ff73a53f0f9f7f04a7e7db6f29732d4eec1742fed9322f01",
+      "input_sha256": "37a4629f84ac022539094acb74c5b0e26e1a0a5ebb1337444751ef755e47e468",
+      "canonical_config": {
+        "protocol": "project_formal_single_vllm8192_v1",
+        "benchmark": "polymath",
+        "language": "sw",
+        "model": "/data0/users/lixiaoyang/models/Qwen3-1.7B",
+        "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "input": "/data0/users/lixiaoyang/data/copsd_official_20261015/polymath_project_eval_v1/polymath_all500_sw.json",
+        "input_sha256": "37a4629f84ac022539094acb74c5b0e26e1a0a5ebb1337444751ef755e47e468",
+        "items": 500,
+        "samples": 1,
+        "max_new_tokens": 8192,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": -1,
+        "seed": 42,
+        "seed_policy": "SHA256(seed:language:id:0), per request",
+        "max_num_seqs": 16,
+        "model_context_limit": 40960,
+        "official_source_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+        "released_length_script_sha256": "70b2d3060286f2c4de7fa497669bb071dee4fb7da207d54bdf6f1c3ad0b67610",
+        "evaluator_sha256": "07e904913890bbd7488d5d2f8413fd6b34854e4fec4787cf64e417fd6890d1a6",
+        "scope": "Full project formal single-answer report at released length, not officialpass12. Configuration/checkpoint selection must use development only.",
+        "packages": {
+          "torch": "2.8.0",
+          "transformers": "4.57.1",
+          "vllm": "0.11.0",
+          "math-verify": "0.8.0"
+        }
+      }
+    },
+    {
+      "benchmark": "gsm8k",
+      "language": "en",
+      "run_id": "sw20confirm_seed43_gsm8k_8192_20261021_v1",
+      "items": 1319,
+      "correct": 1190,
+      "metrics": {
+        "items": 1319,
+        "single_correct": 1190,
+        "generated_tokens": 1846543,
+        "truncated": 9,
+        "normal_terminations": 1310,
+        "answer_extraction_failures": 6,
+        "protocol": "project_formal_single_vllm8192_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9021986353297953,
+        "generation_seconds": 6271.19329318963,
+        "model_load_seconds": 10.93731982447207,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "config_sha256": "9c568814badacdffc243220ebf5bb1f829244465ce2c8d1725f53afd7f54a40f",
+      "raw_items_sha256": "469cc8ba9236bdd29161b79e13dbcc637427aa965112a25fffd387c24711be2d",
+      "done_sha256": "c31b733b40e55232719a39a5b952f5210b46220e90a657287ab5564406f519e3",
+      "input_sha256": "b6eac877fdf0fb2baf8273f3cb7771ea083ebbc4f1862056f771fc56daec72e2",
+      "canonical_config": {
+        "protocol": "project_formal_single_vllm8192_v1",
+        "benchmark": "gsm8k",
+        "language": "en",
+        "model": "/data0/users/lixiaoyang/models/Qwen3-1.7B",
+        "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "input": "/data0/users/lixiaoyang/data/copsd_official_20261015/gsm8k_project_en_zeroshot_v1/gsm8k_en_test_1319.json",
+        "input_sha256": "b6eac877fdf0fb2baf8273f3cb7771ea083ebbc4f1862056f771fc56daec72e2",
+        "items": 1319,
+        "samples": 1,
+        "max_new_tokens": 8192,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": -1,
+        "seed": 42,
+        "seed_policy": "SHA256(seed:language:id:0), per request",
+        "max_num_seqs": 16,
+        "model_context_limit": 40960,
+        "official_source_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+        "released_length_script_sha256": "70b2d3060286f2c4de7fa497669bb071dee4fb7da207d54bdf6f1c3ad0b67610",
+        "evaluator_sha256": "07e904913890bbd7488d5d2f8413fd6b34854e4fec4787cf64e417fd6890d1a6",
+        "scope": "Full project formal single-answer report at released length, not officialpass12. Configuration/checkpoint selection must use development only.",
+        "packages": {
+          "torch": "2.8.0",
+          "transformers": "4.57.1",
+          "vllm": "0.11.0",
+          "math-verify": "0.8.0"
+        }
+      }
+    }
+  ],
+  "cost": {
+    "responses": 2069,
+    "generated_tokens": 4922181,
+    "generation_seconds": 17157.790202939883,
+    "allocated_GPU_hours_parent_counted_once": 4.791666666666667
+  },
+  "scope": "One complete SW MGSM/PolyMath plus English pipeline, project n1/8192, not official pass12. Other model pipelines may still be running. This cost overlaps benchmark-stage reports; never sum both. No training or generation performed by this analysis."
+}

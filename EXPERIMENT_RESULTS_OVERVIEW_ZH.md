@@ -1,10 +1,10 @@
 # 多语言适配与遗忘实验总览
 
-> 最近更新：2026-10-21 17:18（北京时间）。新增第0节为Qwen3-1.7B官方COPSD基础上的OPD阶段总结；后续第1—5节保留2026-09-24历史轨道快照，不代表旧任务在今天的最新状态。不同模型、任务和协议不横向混比。具体结果以各实验目录的原始记录、`DONE`、哈希和协议为准。
+> 最近更新：2026-10-21 17:29（北京时间）。新增第0节为Qwen3-1.7B官方COPSD基础上的OPD阶段总结；后续第1—5节保留2026-09-24历史轨道快照，不代表旧任务在今天的最新状态。不同模型、任务和协议不横向混比。具体结果以各实验目录的原始记录、`DONE`、哈希和协议为准。
 
 ## 0. 当前OPD轨道：十语言single、退步诊断与SW短程确认
 
-**截至2026-10-21 16:53：十语言独立100更新及原项目正式评测全部完成；默认配置整体退步。SW20有双训练seed的局部收益，其中seed42正式英语未下降；JA收益小并伴随英语损失。最终三语言未选定，研究顺序OPD及遗忘矩阵尚未开始。**
+**截至2026-10-21 17:29：十语言独立100更新及原项目正式评测全部完成；默认配置整体退步。SW20有双训练seed的局部收益，两seed正式英语均未下降；JA收益小并伴随英语损失。最终三语言未选定，研究顺序OPD及遗忘矩阵尚未开始。**
 
 完整阶段总结、协议、成本和待办见[2026.10.21 OPD日报](docs/daily/实验日报_2026.10.21.md)；持续更新的细节见[OPD当前状态](experiments/copsd_official_10lang/CURRENT_PUBLIC_ZH.md)。前一日快照见[2026.10.20日报](docs/daily/实验日报_2026.10.20.md)。
 
@@ -42,9 +42,9 @@ MGSM语言平均56.32%→43.12%，PolyMath15.72%→11.52%；十个模型英语�
 |---|---:|---:|---:|
 | MGSM /250 | 8（3.2%） | 13（5.2%） | 14（5.6%） |
 | PolyMath /500 | 8（1.6%） | 29（5.8%） | 20（4.0%） |
-| 英语GSM8K /1319 | 1180（89.46%） | 1190（90.22%） | 尚未完成 |
+| 英语GSM8K /1319 | 1180（89.46%） | 1190（90.22%） | 1190（90.22%） |
 
-seed42三套及父管线已exit0；英语新增51题、失去41题，总分未降不等于逐题完全保持。seed43英语仍运行，不能提前写成双seed保持成功。与上方100更新／2048表同时改变步数、生成预算且有历史运行差异，不能把全部变化直接归因于训练变短。[完整seed42套件](experiments/copsd_official_10lang/sw20_seed42_formal8192_completed_20261021.PUBLIC.json) · [双seed MGSM](experiments/copsd_official_10lang/sw20_mgsm_formal8192_stage_completed_20261021.PUBLIC.json) · [双seed PolyMath](experiments/copsd_official_10lang/sw20_polymath_two_seed_formal8192_stage_20261021.PUBLIC.json)。
+两seed三套及Base父管线均已exit0；英语seed42新增51／失去41题、seed43新增48／失去38题，总分未降不等于逐题完全保持。两seed共享同一正式题集，英语净增10／1319不作显著性结论。见[完整双seed英语配对](experiments/copsd_official_10lang/sw20_English_two_seed_formal8192_completed_20261021.PUBLIC.json)。与上方100更新／2048表同时改变步数、生成预算且有历史运行差异，不能把全部变化直接归因于训练变短。[完整seed42套件](experiments/copsd_official_10lang/sw20_seed42_formal8192_completed_20261021.PUBLIC.json) · [双seed MGSM](experiments/copsd_official_10lang/sw20_mgsm_formal8192_stage_completed_20261021.PUBLIC.json) · [双seed PolyMath](experiments/copsd_official_10lang/sw20_polymath_two_seed_formal8192_stage_20261021.PUBLIC.json)。
 
 官方发布AfriMGSM协议另列：250题、每题12回答、每次1024生成token，原始9000回答和官方逐回答结果已核验，两adapter父管线exit0：
 
@@ -69,9 +69,9 @@ seed42三套及父管线已exit0；英语新增51题、失去41题，总分未�
 
 当前批量vLLM路径的五次100更新实际训练循环为3.37–3.55小时，不含排队、冷加载和评测；旧串行SW数天的估计不能继续套用。保留官方核心LoRA／AdamW／损失和2048训练预算。并发64推理预设已测得同批约2倍墙钟加速，但采样输出改变，冻结中的任务未切换配置。[性能、范围与实际成本](experiments/copsd_official_10lang/PERFORMANCE_ZH.md)。
 
-另按唯一队列凭证盘点，116份已关闭任务累计329.60 GPU小时，含早期串行／四卡／诊断／评测；6份未封口及hold等未计入，不是完整总成本，也不与分段报告再相加。[分配时间账及缺口](experiments/copsd_official_10lang/queue_allocated_cost_20261021_1720.PUBLIC.json)。
+另按唯一队列凭证盘点，116份已关闭任务累计329.60 GPU小时，含早期串行／四卡／诊断／评测；该成本快照的6份未封口及hold等未计入，不是完整总成本，也不与分段报告再相加。[分配时间账及缺口](experiments/copsd_official_10lang/queue_allocated_cost_20261021_1720.PUBLIC.json)。
 
-实际1.7B接续和恢复工程验证已通过；共同题池single、七套阶段评测和遗忘矩阵接口已准备，**尚无真实三语言研究阶段结果**。当前等待SW43英语与ZH10两条开发管线的英语阶段；最终语言、共同预算和正反顺序尚未冻结。先取得稳定能力获得及保持证据，未满足条件时继续诊断，不把工程成功或SW局部收益写成全方法有效。[阶段接口及验收边界](experiments/copsd_official_10lang/SEQUENTIAL_ADAPTER_ZH.md)。
+实际1.7B接续和恢复工程验证已通过；共同题池single、七套阶段评测和遗忘矩阵接口已准备，**尚无真实三语言研究阶段结果**。当前等待ZH10两条开发管线的英语阶段；最终语言、共同预算和正反顺序尚未冻结。先取得稳定能力获得及保持证据，未满足条件时继续诊断，不把工程成功或SW局部收益写成全方法有效。[阶段接口及验收边界](experiments/copsd_official_10lang/SEQUENTIAL_ADAPTER_ZH.md)。
 
 ## 历史轨道一页读懂（2026-09-24快照）
 
