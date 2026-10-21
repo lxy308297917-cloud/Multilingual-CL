@@ -1,0 +1,121 @@
+{
+  "observed_at": "2026-10-21T16:48:13.676886",
+  "training_language": "ja",
+  "training_seed": 43,
+  "evaluation_seed": 42,
+  "protocol": "project_dev_single_vllm8192_v2",
+  "parents_completed_exit0": true,
+  "paired_development100": {
+    "target": {
+      "base_correct": 47,
+      "adapter20_correct": 51,
+      "gained": 16,
+      "lost": 12,
+      "delta_correct": 4
+    },
+    "English": {
+      "base_correct": 77,
+      "adapter20_correct": 73,
+      "gained": 6,
+      "lost": 10,
+      "delta_correct": -4
+    }
+  },
+  "metrics": {
+    "target": {
+      "items": 100,
+      "single_correct": 51,
+      "generated_tokens": 317616,
+      "truncated": 12,
+      "normal_terminations": 88,
+      "answer_extraction_failures": 9,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.51,
+      "generation_seconds": 1455.5322610996664,
+      "model_load_seconds": 10.777259362861514,
+      "actual_max_num_seqs": 16
+    },
+    "English": {
+      "items": 100,
+      "single_correct": 73,
+      "generated_tokens": 423984,
+      "truncated": 21,
+      "normal_terminations": 79,
+      "answer_extraction_failures": 18,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.73,
+      "generation_seconds": 1597.9586561266333,
+      "model_load_seconds": 11.376216683536768,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "cached_Base_metrics": {
+    "target": {
+      "items": 100,
+      "single_correct": 47,
+      "generated_tokens": 374549,
+      "truncated": 16,
+      "normal_terminations": 84,
+      "answer_extraction_failures": 14,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.47,
+      "generation_seconds": 488.93936017528176,
+      "model_load_seconds": 9.622698793187737,
+      "actual_max_num_seqs": 16
+    },
+    "English": {
+      "items": 100,
+      "single_correct": 77,
+      "generated_tokens": 428429,
+      "truncated": 17,
+      "normal_terminations": 83,
+      "answer_extraction_failures": 12,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.77,
+      "generation_seconds": 661.9746270235628,
+      "model_load_seconds": 9.65354778803885,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "actual_initial_policy_matches_cached_seed43_original_Base_LoRA": true,
+  "frozen_Base_optimizer_scheduler_RNG_and_budget_verified": true,
+  "actual_loss_settings": {
+    "beta": 0,
+    "component_clip": 0.05,
+    "scope": "Inherited frozen official-core source and launcher; no loss intervention."
+  },
+  "actual_optimizer": "adamw_torch_fused",
+  "frozen_launcher_source_hashes_verified": true,
+  "raw_items_sha256": {
+    "ja_17b_seed43_prefix20_dev100_8192_20261021_v1": "40a3d254547c890e5ec6ac679c99d786d2a1c9cda98fbdaa5e7f6ee1f72993b0",
+    "en_ja_seed43_prefix20_dev100_8192_20261021_v1": "0c5eaaf4bec2f76143030d6a3501a727002ba00510b0648df7b9ac79b396c6ef"
+  },
+  "checkpoint_adapter_sha256": "5a82446829c9b3cafa5306714aa3ee011814b36d565d122a86b78bdd9910c041",
+  "cost": {
+    "updates": 20,
+    "scheduler_horizon": 100,
+    "question_exposures": 640,
+    "training_generated_tokens": 1088310,
+    "valid_response_loss_positions": 1088310,
+    "training_seconds_including_diagnostic_hashing": 2437.6476506888866,
+    "teacher_forward_cuda_seconds": 165.8677484893799,
+    "new_eval_responses": 200,
+    "new_eval_generated_tokens": 741600,
+    "new_eval_generation_seconds": 3053.4909172262996,
+    "parent_pipeline_GPU_hours_counted_once": 1.5647222222222221,
+    "cached_Base_cost_excluded": true
+  },
+  "scope": "Controlled fresh-Base seed43 prefix20 follow-up on the same independent development100. Seed changes initialization and training order; historical seed42 references are not guaranteed identically seeded before PEFT. Not another independent test set, final language selection, a formal result or a sequential run. JA retains the established single-record literal-prefix repair."
+}
