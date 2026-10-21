@@ -1,0 +1,52 @@
+{
+  "observed_at": "2026-10-21T11:57:10.440172",
+  "language": "ja",
+  "checkpoint_step": 20,
+  "protocol": "project_dev_single_vllm8192_v2",
+  "paired_target_development100": {
+    "base_correct": 47,
+    "adapter20_correct": 50,
+    "gained": 13,
+    "lost": 10,
+    "delta_correct": 3
+  },
+  "metrics": {
+    "base": {
+      "items": 100,
+      "single_correct": 47,
+      "generated_tokens": 374549,
+      "truncated": 16,
+      "normal_terminations": 84,
+      "answer_extraction_failures": 14,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.47,
+      "generation_seconds": 488.93936017528176,
+      "model_load_seconds": 9.622698793187737,
+      "actual_max_num_seqs": 16
+    },
+    "target": {
+      "items": 100,
+      "single_correct": 50,
+      "generated_tokens": 307426,
+      "truncated": 14,
+      "normal_terminations": 86,
+      "answer_extraction_failures": 7,
+      "protocol": "project_dev_single_vllm8192_v2",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.5,
+      "generation_seconds": 1259.009173285216,
+      "model_load_seconds": 11.122990956529975,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "complete_parent_claimed": false,
+  "English_result_available": false,
+  "source_reference": "ja_saved20_screen8192_frozen_20261020.PUBLIC.json",
+  "training_data_adaptation": "Existing repaired official JA data: one repeated corrupted prefix removed, same2900 original IDs/order and English/gold fields.",
+  "scope": "Only Base and target20 development stages completed and audited. Target gain3/100 is exploratory; no stable benefit, final language selection, formal result or sequential effect claimed. English evaluation and parent continue. These are the same outputs as the later full JA20 report, not additional generation costs."
+}
