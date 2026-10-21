@@ -11,7 +11,6 @@
   "items_each": 100,
   "samples": 1,
   "max_new_tokens": 2048,
-  "max_num_seqs": 16,
   "temperature": 1.0,
   "top_p": 0.95,
   "top_k": -1,
@@ -38,5 +37,11 @@
   },
   "private_prompts_sha256": "b3eefb2cd896296feef11384f5ae46b23acd1b9a6df57ae8ad57ae24d1d492ec",
   "reason": "TE matched clip control yielded3 versus9 target correct (Base7) and78 versus71 English (Base77), insufficient stable benefit. Check whether privileged English conditioning has a clean-context advantage for TE before adding training variants.",
-  "scope": "One finite diagnostic, no SFT labels, train updates, official benchmark claim or automatic expansion. Same2048 budget within both conditions, matching training length; not comparable to earlier8192 development scores. A teacher conditional-generation advantage does not prove useful supervision on wrong student histories."
+  "scope": "One finite diagnostic, no SFT labels, train updates, official benchmark claim or automatic expansion. Same2048 budget within both conditions, matching training length; not comparable to earlier8192 development scores. A teacher conditional-generation advantage does not prove useful supervision on wrong student histories.",
+  "intended_max_num_seqs_not_applied": 16,
+  "max_num_seqs_explicitly_passed": false,
+  "max_num_seqs_runtime_recorded": null,
+  "max_num_seqs_source_inference": 256,
+  "scheduling_erratum_at": "2026-10-21T20:00:51.743480",
+  "scheduling_erratum": "Initial public metadata incorrectly said16. The unchanged existing teacher diagnostic calls the official loader without max_num_seqs, so vLLM0.11 LLM_CLASS default is used (source-inferred256 on24GiB3090; actual scheduler object was not saved). Both student and teacher use the same engine. This is not the separate dev8192 evaluator with explicit16. No running source, private prompt or scientific setting changed."
 }

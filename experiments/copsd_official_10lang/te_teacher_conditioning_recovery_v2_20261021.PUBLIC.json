@@ -11,7 +11,6 @@
   "items_each": 100,
   "samples": 1,
   "max_new_tokens": 2048,
-  "max_num_seqs": 16,
   "temperature": 1.0,
   "top_p": 0.95,
   "top_k": -1,
@@ -41,5 +40,11 @@
   "scope": "One finite diagnostic, no SFT labels, train updates, official benchmark claim or automatic expansion. Same2048 budget within both conditions, matching training length; not comparable to earlier8192 development scores. A teacher conditional-generation advantage does not prove useful supervision on wrong student histories.",
   "recovery_prepared_at": "2026-10-21T19:54:46.662484",
   "recovery_reason": "v1 failed before model load: wrong dated path to existing shared dev_vllm runtime lock. v2 keeps the20261020 common lock, preserves original failure and script, uses a separate output/log/queue. Same frozen prepared contexts and scientific settings.",
-  "output_relative": "logs/copsd_official_10lang/teacher_context/te_conditioning_dev100_20261021_v2"
+  "output_relative": "logs/copsd_official_10lang/teacher_context/te_conditioning_dev100_20261021_v2",
+  "intended_max_num_seqs_not_applied": 16,
+  "max_num_seqs_explicitly_passed": false,
+  "max_num_seqs_runtime_recorded": null,
+  "max_num_seqs_source_inference": 256,
+  "scheduling_erratum_at": "2026-10-21T20:00:51.743869",
+  "scheduling_erratum": "Initial public metadata incorrectly said16. The unchanged existing teacher diagnostic calls the official loader without max_num_seqs, so vLLM0.11 LLM_CLASS default is used (source-inferred256 on24GiB3090; actual scheduler object was not saved). Both student and teacher use the same engine. This is not the separate dev8192 evaluator with explicit16. No running source, private prompt or scientific setting changed."
 }

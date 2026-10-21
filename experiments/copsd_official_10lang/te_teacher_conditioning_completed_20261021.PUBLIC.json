@@ -1,0 +1,59 @@
+{
+  "protocol": "privileged_teacher_conditioning_diagnostic_v1",
+  "language": "te",
+  "formal_test": false,
+  "conditions": {
+    "student": {
+      "items": 100,
+      "correct": 1,
+      "normal_terminations": 3,
+      "truncated": 97,
+      "answer_extraction_failures": 96,
+      "generated_tokens": 204309,
+      "generation_seconds": 104.56790470145643
+    },
+    "teacher": {
+      "items": 100,
+      "correct": 13,
+      "normal_terminations": 3,
+      "truncated": 97,
+      "answer_extraction_failures": 86,
+      "generated_tokens": 202948,
+      "generation_seconds": 175.4115321394056
+    }
+  },
+  "model_load_seconds": 9.219410257413983,
+  "teacher_adapter": null,
+  "same_original_Base": true,
+  "scope": "Teacher receives English reference. Conditional-generation diagnostic only; not fair benchmark accuracy, not training-label synthesis, and not an evaluation of all on-policy teacher-token distributions.",
+  "observed_at": "2026-10-21T20:01:28.290927",
+  "queue": "copsd-te-teacher-conditioning-v2",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "paired_counts": {
+    "gained_under_privileged_context": 13,
+    "lost_under_privileged_context": 1,
+    "correct_under_both": 0
+  },
+  "source_records_sha256": {
+    "student": "5089ce41269cb98c1ef231074d6d3d2e5d561831bc65d8909061414085efd2f5",
+    "teacher": "7ddbc83b56eec041d6945893a5fec7ed9019b724e74a8ce1adde8836ce4596e7"
+  },
+  "cost": {
+    "completed_parent_GPU_hours": 0.08361111111111111,
+    "new_responses": 200,
+    "generated_tokens": 407257,
+    "generation_seconds": 279.97943684086204,
+    "preceding_failed_parent_GPU_hours": 0.0016666666666666668,
+    "completed_plus_failed_parent_GPU_hours": 0.08527777777777777
+  },
+  "paired_IDs_answers_seeds_raw_counts_source_and_prompt_hashes_verified": true,
+  "comparison_boundary": "Both conditions use the official training collator and2048 tokens. Not comparable to8192 development scores or a fair reference-free teacher benchmark. Clean-context advantage does not establish supervision quality on on-policy wrong histories.",
+  "new_training_or_SFT_labels": false,
+  "scheduling": {
+    "max_num_seqs_explicitly_passed": false,
+    "runtime_scheduler_capacity_saved": false,
+    "source_inferred_vllm011_LLM_CLASS_default_on_3090": 256,
+    "boundary": "Official loader default used, not the explicit16 dev8192 evaluator. Initial TE freeze metadata16 was corrected as an erratum; do not claim runtime16."
+  }
+}
