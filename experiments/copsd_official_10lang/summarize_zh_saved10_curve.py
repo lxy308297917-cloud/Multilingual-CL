@@ -18,6 +18,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--target-only', action='store_true', help='Audit completed ZH stages while English parents continue.')
     a = p.parse_args()
     code = Path(__file__).parent
     frozen = read(code / 'zh_saved10_development_frozen_20261021.PUBLIC.json')
@@ -28,11 +29,15 @@ def main():
         return audit_stage({'directory': str(folder / run), 'language': lang,
             'adapter': str(adapter) if adapter else None, 'step': step,
             'protocol': frozen['protocol'], 'budget': 8192, 'evaluator': 'evaluate_dev8192.py'}, a.root, code)
-    base = {lang: load(RUNS[lang], lang) for lang in ['zh', 'en']}
+    languages = ['zh'] if a.target_only else ['zh', 'en']
+    base = {lang: load(RUNS[lang], lang) for lang in languages}
     results, sources, fresh, hours = {}, {}, [], 0
+    parents_complete = True
     for model, entry in frozen['models'].items():
         state = read(a.root / 'gpu-queue/queues' / entry['queue'] / 'state.json')
-        assert state['phase'] == 'completed' and state['job']['exit_code'] == 0
+        complete = state['phase'] == 'completed' and state['job']['exit_code'] == 0
+        assert complete or (a.target_only and state['phase'] == 'running')
+        parents_complete = parents_complete and complete
         job = state['job']
         assert job['config']['job']['args'] == [model] and job['config']['max_user_gpus'] == 4
         assert len(job['gpu_uuids']) == 1
@@ -48,7 +53,7 @@ def main():
             {'zh': 'zh_17b_seed43_prefix20_dev100_8192_20261021_v1',
              'en': 'en_zh_seed43_prefix20_dev100_8192_20261021_v1'})
         results[model], sources[model] = {}, {}
-        for lang in ['zh', 'en']:
+        for lang in languages:
             ten = load(entry['run_ids'][lang], lang, cp10, 10)
             twenty = load(run20[lang], lang, cp20, 20)
             key = 'target' if lang == 'zh' else 'English'
@@ -72,14 +77,17 @@ def main():
                 'config_sha256': digest(folder / run / 'CONFIG.json')}
                 for step, run in [('0', RUNS[lang]), ('10', entry['run_ids'][lang]), ('20', run20[lang])]}
             fresh.append(ten[1])
-        hours += (datetime.datetime.fromisoformat(job['finished_at']) - datetime.datetime.fromisoformat(job['started_at'])).total_seconds() / 3600
+        if complete:
+            hours += (datetime.datetime.fromisoformat(job['finished_at']) - datetime.datetime.fromisoformat(job['started_at'])).total_seconds() / 3600
     write_new(a.output, {'observed_at': datetime.datetime.now().isoformat(), 'protocol': frozen['protocol'],
         'prespecified_checkpoint_grid': frozen['fixed_checkpoint_grid'], 'results': results,
-        'source_records': sources, 'parents_completed_exit0': True,
-        'new_cost_excluding_cached_Base_and20': {'responses': 400,
+        'source_records': sources, 'parents_completed_exit0': parents_complete,
+        'English_evaluations_included': not a.target_only,
+        'new_cost_excluding_cached_Base_and20': {'responses': 100 * len(fresh),
             'generated_tokens': sum(m['generated_tokens'] for m in fresh),
             'generation_seconds': sum(m['generation_seconds'] for m in fresh),
-            'GPU_hours_two_unique_parents': hours, 'new_training': False},
+            'GPU_hours_two_unique_parents': hours if parents_complete and not a.target_only else None,
+            'cost_scope': 'Completed requested stages only; full parent allocation is reported only with complete target/English suites. Partial stages overlap the later complete report.', 'new_training': False},
         'run_comparison_caveat': frozen['run_comparison_caveat'],
         'selection_policy': frozen['selection_policy'],
         'scope': 'Finite development-only within-run checkpoint diagnosis. Does not establish a common10-update benefit across languages, replace the20-update comparison, choose final languages or generate a forgetting matrix. Changing the subsequent common stage budget requires matched controls.'})

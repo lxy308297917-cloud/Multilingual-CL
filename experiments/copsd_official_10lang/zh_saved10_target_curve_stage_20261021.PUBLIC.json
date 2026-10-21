@@ -1,0 +1,160 @@
+{
+  "observed_at": "2026-10-21T17:10:26.802828",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "prespecified_checkpoint_grid": [
+    0,
+    10,
+    20
+  ],
+  "results": {
+    "seed42": {
+      "zh": {
+        "correct_out_of100": {
+          "0": 66,
+          "10": 65,
+          "20": 69
+        },
+        "paired_comparisons": {
+          "Base_to10": {
+            "from_correct": 66,
+            "to_correct": 65,
+            "gained": 8,
+            "lost": 9,
+            "delta_correct": -1
+          },
+          "Base_to20": {
+            "from_correct": 66,
+            "to_correct": 69,
+            "gained": 11,
+            "lost": 8,
+            "delta_correct": 3
+          },
+          "10_to20": {
+            "from_correct": 65,
+            "to_correct": 69,
+            "gained": 12,
+            "lost": 8,
+            "delta_correct": 4
+          }
+        },
+        "metrics10": {
+          "items": 100,
+          "single_correct": 65,
+          "generated_tokens": 394227,
+          "truncated": 11,
+          "normal_terminations": 89,
+          "answer_extraction_failures": 9,
+          "protocol": "project_dev_single_vllm8192_v2",
+          "formal_test": false,
+          "n": 1,
+          "generation_count": 100,
+          "single_accuracy": 0.65,
+          "generation_seconds": 1487.4332818575203,
+          "model_load_seconds": 10.874053474515676,
+          "actual_max_num_seqs": 16
+        }
+      }
+    },
+    "seed43": {
+      "zh": {
+        "correct_out_of100": {
+          "0": 66,
+          "10": 65,
+          "20": 64
+        },
+        "paired_comparisons": {
+          "Base_to10": {
+            "from_correct": 66,
+            "to_correct": 65,
+            "gained": 8,
+            "lost": 9,
+            "delta_correct": -1
+          },
+          "Base_to20": {
+            "from_correct": 66,
+            "to_correct": 64,
+            "gained": 9,
+            "lost": 11,
+            "delta_correct": -2
+          },
+          "10_to20": {
+            "from_correct": 65,
+            "to_correct": 64,
+            "gained": 13,
+            "lost": 14,
+            "delta_correct": -1
+          }
+        },
+        "metrics10": {
+          "items": 100,
+          "single_correct": 65,
+          "generated_tokens": 398097,
+          "truncated": 17,
+          "normal_terminations": 83,
+          "answer_extraction_failures": 13,
+          "protocol": "project_dev_single_vllm8192_v2",
+          "formal_test": false,
+          "n": 1,
+          "generation_count": 100,
+          "single_accuracy": 0.65,
+          "generation_seconds": 1538.6694396603853,
+          "model_load_seconds": 11.350675594061613,
+          "actual_max_num_seqs": 16
+        }
+      }
+    }
+  },
+  "source_records": {
+    "seed42": {
+      "zh": {
+        "0": {
+          "run_id": "zh_base_candidate_dev100_8192_20261020_v1",
+          "raw_items_sha256": "97a4d35bc783f73ec0fa9f320b4f84584659ba9ce15c2a8bf9f9b197ea58e7ec",
+          "config_sha256": "24648c7962d846920520025d23a70dfd3110dcf5473e5554e30b9fb384ce25a2"
+        },
+        "10": {
+          "run_id": "zh_zh_saved10_seed42_dev100_8192_20261021_v1",
+          "raw_items_sha256": "bc1742e9729a569d84a67c0af2c1e0cfac81776930e6afec637431ba4116cf17",
+          "config_sha256": "a88f786f66e6f2c1fcc587db227d8a5c23711e0663117764501c67cc7f1db5e0"
+        },
+        "20": {
+          "run_id": "zh_early20_candidate_dev100_8192_20261020_v1",
+          "raw_items_sha256": "1708eb407293fe23c85d7518796422040ad145688e580a1305fe406a770a2ffa",
+          "config_sha256": "d5fcb6952dfbcd3e68bb035195862f63a810753b3cf8ece1ee7340aae25f7908"
+        }
+      }
+    },
+    "seed43": {
+      "zh": {
+        "0": {
+          "run_id": "zh_base_candidate_dev100_8192_20261020_v1",
+          "raw_items_sha256": "97a4d35bc783f73ec0fa9f320b4f84584659ba9ce15c2a8bf9f9b197ea58e7ec",
+          "config_sha256": "24648c7962d846920520025d23a70dfd3110dcf5473e5554e30b9fb384ce25a2"
+        },
+        "10": {
+          "run_id": "zh_zh_saved10_seed43_dev100_8192_20261021_v1",
+          "raw_items_sha256": "c2220003fa381dddbb102eb26f47ddb310242ec536ca48f37b788d06b953a7d2",
+          "config_sha256": "290a8fd644ee739316fdc405948d54367d894770d5f0ac6d89286cd41521afa8"
+        },
+        "20": {
+          "run_id": "zh_17b_seed43_prefix20_dev100_8192_20261021_v1",
+          "raw_items_sha256": "d207703406d8807f9d8b88fd48162c86bd4de6ee57034ad691cb1b2f4d486c6f",
+          "config_sha256": "30adeb6088a7b489359102b1e92e031806f65990a4c8697514335805b2a01c47"
+        }
+      }
+    }
+  },
+  "parents_completed_exit0": false,
+  "English_evaluations_included": false,
+  "new_cost_excluding_cached_Base_and20": {
+    "responses": 200,
+    "generated_tokens": 792324,
+    "generation_seconds": 3026.1027215179056,
+    "GPU_hours_two_unique_parents": null,
+    "cost_scope": "Completed requested stages only; full parent allocation is reported only with complete target/English suites. Partial stages overlap the later complete report.",
+    "new_training": false
+  },
+  "run_comparison_caveat": "Historical seed42 and controlled seed43 differ in initialization/order handling, so these are two within-run stage comparisons, not a strict seed-only causal contrast.",
+  "selection_policy": "Independent development only, before seeing saved10 scores. Evaluate target and English for both existing runs. Inconsistent/small effects do not establish a stable third language; do not extend checkpoint grid or use formal tests to pick favorable results.",
+  "scope": "Finite development-only within-run checkpoint diagnosis. Does not establish a common10-update benefit across languages, replace the20-update comparison, choose final languages or generate a forgetting matrix. Changing the subsequent common stage budget requires matched controls."
+}
