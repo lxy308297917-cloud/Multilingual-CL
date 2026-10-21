@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-10-21T12:10:14.964625",
+  "actual_JA_pools_exported_and_compared_to_audited_repair": true,
+  "pool_sizes": [
+    967,
+    967,
+    966
+  ],
+  "union_size": 2900,
+  "pairwise_overlap": 0,
+  "original_pool_IDs_order_and_dev_disjointness_preserved": true,
+  "all_exported_rows_equal_corresponding_existing_repaired_input_rows": true,
+  "known_unrepaired_source_rejected_before_output": true,
+  "materializer_sha256": "54d4663445d55b4344925e35383284747e0baf893b2125c55f5023efb8206bea",
+  "training_started": false,
+  "languages_selected": false,
+  "GPU_used": false,
+  "scope": "CPU export of actual JA inputs into temporary files only. Existing pool IDs and official source unchanged. No synthetic labels, model update, final language choice or sequential effect."
+}
