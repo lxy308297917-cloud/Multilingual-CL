@@ -1,0 +1,37 @@
+{
+  "observed_at": "2026-10-21T11:27:36.418940",
+  "language": "te",
+  "role": "Base",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "complete_stage_metrics": {
+    "items": 100,
+    "single_correct": 7,
+    "generated_tokens": 690779,
+    "truncated": 68,
+    "normal_terminations": 32,
+    "answer_extraction_failures": 67,
+    "protocol": "project_dev_single_vllm8192_v2",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 100,
+    "single_accuracy": 0.07,
+    "generation_seconds": 310.19710598513484,
+    "model_load_seconds": 9.892388368025422,
+    "actual_max_num_seqs": 16
+  },
+  "recovery_provenance": {
+    "new_generated_items": 27,
+    "new_generated_tokens": 179950,
+    "new_generation_seconds": 310.1958970371634,
+    "reused_items": 73,
+    "reused_generated_tokens": 510829,
+    "old_partial_items_sha256": "6579b2bfe948fec1ce069dc3767576c1d5673623c3d2b20c821650bef99a5a47",
+    "old_config_sha256": "fa26dda6b986897057e0541c6db2993c56edb1621cde563e5676466b8d786041",
+    "wrapper_sha256": "5ec3a3b4dd53e5a732d3b9d5f223c344f1df0a8bbee0de74956ddc0098d59583",
+    "original_evaluator_sha256": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1",
+    "cached_records_preserved_exactly": true,
+    "scope": "DONE generated_tokens counts all100 scored responses, not new compute. Cost must use new_generated_items/tokens/seconds here. Only missing27 requests generated; same per-ID seeds/config, no promise of bitwise equivalence to a fresh all100 continuous batch. Original interrupted outputs remain intact."
+  },
+  "actual100_rows_source_ids_answers_prompts_seed_counts_and_first73_exact_cache_equality_verified": true,
+  "scope": "Only recovered Base stage completed, target20/English and parent still running. No target improvement claim. Same job as forthcoming TE complete report; do not add overlapping costs."
+}
