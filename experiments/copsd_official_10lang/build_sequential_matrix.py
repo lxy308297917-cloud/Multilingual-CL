@@ -13,7 +13,7 @@ from sequential_evaluation import (PRESETS, audit_benchmark, digest, read,
                                    selection, verify_plan, write_new)
 
 
-def audit_marker(root, code, path, selection_sha):
+def audit_marker(root, code, path, selection_sha, expected_role='sequential_stage'):
     marker = read(path)
     assert marker['completed'] and marker['protocol'] in PRESETS
     assert marker['selection_record_sha256'] == selection_sha
@@ -21,8 +21,9 @@ def audit_marker(root, code, path, selection_sha):
     plan_path = Path(marker['plan_path_PRIVATE'])
     assert digest(plan_path) == marker['plan_sha256']
     plan = read(plan_path)
-    assert plan.get('experiment_role', 'sequential_stage') == 'sequential_stage', 'Matched singles are references, not sequential stages'
-    assert marker.get('experiment_role', 'sequential_stage') == 'sequential_stage'
+    assert expected_role in ['sequential_stage', 'matched_single_reference']
+    assert plan.get('experiment_role', 'sequential_stage') == expected_role, 'Unexpected experiment role'
+    assert marker.get('experiment_role', 'sequential_stage') == expected_role
     assert marker['protocol'] == plan['protocol']
     _, checkpoint = verify_plan(root, code, plan)
     assert plan['selection_record_sha256'] == selection_sha

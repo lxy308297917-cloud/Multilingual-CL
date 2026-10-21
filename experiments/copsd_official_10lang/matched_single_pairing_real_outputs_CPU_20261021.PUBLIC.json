@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-21T15:50:27.712748",
+  "source_report_sha256": "a4a11d4b853889b98bf2dd39608806d995c931a3e20b87686d8dc65dbed57156",
+  "comparator_sha256": "5d9d0769e148cc13e54ffa59af9d775273f9814f66379404b595ecad36ca1ffe",
+  "existing_real_formal_pairs": {
+    "seed42": {
+      "gained_vs_single": 25,
+      "lost_vs_single": 4,
+      "net_correct_vs_single": 21
+    },
+    "seed43": {
+      "gained_vs_single": 16,
+      "lost_vs_single": 4,
+      "net_correct_vs_single": 12
+    }
+  },
+  "changed_prompt_rejected": true,
+  "GPU_used": false,
+  "production_matched_comparison_created": false,
+  "scope": "Pairing arithmetic and input-identity component exercised on existing SW formal Base and two seed outputs. These historical models are not matched-pool single references or sequential stages. Does not validate real training budget or seven-suite provenance, which require actual future production markers."
+}

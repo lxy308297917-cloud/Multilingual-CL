@@ -71,3 +71,11 @@
 七套评测编排新增显式`--direction matched --stage 1 --reference-language <lang>`，允许对三个入选语言中的任意一个（含中间语言）评全部三语MGSM／PolyMath及英语。需要真实训练队列exit0、选择记录与adapter／pool身份；独立写`MATCHED_SINGLE_EVALUATIONS_DONE.json`。遗忘矩阵拒绝把这些single参考当成顺序阶段。旧顺序角色默认值保持兼容，但新计划必须冻结更新后的收集器源码身份。
 
 CPU边界：真实SW池0与已有修复JA池1各967条通过，错误pool、未修复JA乱码与修改英文参考均拒绝；三种single身份与角色重贴标签拒绝检查通过，见[题池与角色验收](matched_single_pool_and_role_CPU_20261021.PUBLIC.json)。更新后的共享评测收集器仍能复核已有750条SW正式输出，并拒绝跨adapter／输入／语言／并发协议，见[已有真实输出回归检查](sequential_evaluation_with_matched_roles_CPU_20261021.PUBLIC.json)。这些是接口验证；没有最终语言选择、生产配置、同题池single训练或实际七套评测。后续仍须建立对应single与顺序结果比较、语言保持和完整恢复成本报告。
+
+### 同题池single与顺序阶段的结果比较
+
+`compare_matched_single.py`接收独立开发选择记录、一份真实顺序阶段七套评测完成标记和一份独立single七套完成标记。共享来源收集器默认只接受顺序角色；比较器显式要求single角色，检查父训练／评测退出、checkpoint与原始七套输出，另核对当前语言实际题池行序／数据哈希／池清单、训练seed、20更新／100步LR日程／有效batch32／2048预算及优化器等保存参数相同。逐题计算三语MGSM／PolyMath及英语相对single的新增／失去正确题和百分点差。
+
+同题池single从Base独立开始；顺序模型含此前语言的额外训练，不将两者声称为相同累计预算。每个当前阶段均640题次，实际在线生成token可能不同；恢复成本仅列最终checkpoint所在片段，未假称已汇总全部失败和历史片段。跨方向复用single时不重复累加其评测成本。此比较不能代替完整阶段遗忘矩阵。
+
+[CPU组件检查](matched_single_pairing_real_outputs_CPU_20261021.PUBLIC.json)使用已有SW正式三组真实输出复核配对计数，并拒绝改变prompt；这些模型没有被重贴为matched single或顺序阶段。真实研究选择、同题池single训练、七套完整标记与研究比较结果仍未产生，不能将组件通过称为完整管线通过。
