@@ -9,6 +9,7 @@ import hashlib
 import json
 from pathlib import Path
 import random
+import re
 
 LANGUAGES = ("sw", "te", "th", "bn", "zh", "ja", "ru", "de", "fr", "es")
 ENGLISH_FIELDS = ("source", "problem", "solution", "Answer")
@@ -112,13 +113,45 @@ def materialize(args):
     item = manifest["inputs"][args.language]
     assert sha(item["path"]) == item["sha256"], "Original input changed"
     ids = manifest["pool_ids"][args.pool]
-    lookup = {row["problem_id"]: row for row in read(item["path"])}
+    original = read(item["path"])
+    selected = original
+    adaptation = None
+    if args.ja_repaired_input or args.ja_repair_manifest:
+        assert args.language == 'ja' and args.ja_repaired_input and args.ja_repair_manifest
+        evidence = read(args.ja_repair_manifest)
+        assert evidence['protocol'] == 'project_ja_literal_prefix_repair_v1'
+        assert evidence['original_dataset_sha256'] == item['sha256']
+        assert evidence['repaired_dataset_sha256'] == sha(args.ja_repaired_input)
+        selected = read(args.ja_repaired_input)
+        assert len(selected) == len(original) == 2900
+        assert [r['problem_id'] for r in selected] == [r['problem_id'] for r in original]
+        changed = [i for i, (before, after) in enumerate(zip(original, selected)) if before != after]
+        assert len(changed) == evidence['modified_rows'] == 1
+        i = changed[0]
+        before, after = original[i], selected[i]
+        assert {k: v for k, v in before.items() if k != 'problem_ja'} == {
+            k: v for k, v in after.items() if k != 'problem_ja'}
+        prefix = re.match(r'^(?:ーハン)+ー?', before['problem_ja'])
+        assert prefix and prefix.end() == evidence['evidence']['removed_prefix_chars'] == 70738
+        assert after['problem_ja'] == before['problem_ja'][prefix.end():]
+        assert len(after['problem_ja']) == 154
+        adaptation = {'protocol': evidence['protocol'],
+                      'input_sha256': evidence['repaired_dataset_sha256'],
+                      'repair_manifest_sha256': sha(args.ja_repair_manifest),
+                      'modified_rows_in_full_input': 1,
+                      'modified_rows_in_this_pool': int(before['problem_id'] in ids),
+                      'original_IDs_order_and_all_other_fields_preserved': True}
+    elif args.language == 'ja' and any(len(r['problem_ja']) > 60000 for r in original):
+        raise ValueError('JA source contains the known corrupt prefix; supply the already audited '
+                         '--ja-repaired-input and --ja-repair-manifest before exporting a pool')
+    lookup = {row["problem_id"]: row for row in selected}
     assert len(set(ids)) == len(ids) and not set(ids) & set(manifest["development_ids"])
     rows = [lookup[identifier] for identifier in ids]
     assert all(row.get(f"problem_{args.language}") for row in rows)
     save(args.output, rows)
     print(json.dumps({"language": args.language, "pool": args.pool, "records": len(rows),
-                      "fields_preserved": True, "training_started": False}))
+                      "fields_preserved": adaptation is None or adaptation['modified_rows_in_this_pool'] == 0,
+                      "documented_JA_prefix_adaptation": adaptation, "training_started": False}))
 
 
 def main():
@@ -133,6 +166,8 @@ def main():
     exporter.add_argument("--language", choices=LANGUAGES, required=True)
     exporter.add_argument("--pool", type=int, choices=range(3), required=True)
     exporter.add_argument("--output", type=Path, required=True)
+    exporter.add_argument("--ja-repaired-input", type=Path)
+    exporter.add_argument("--ja-repair-manifest", type=Path)
     args = parser.parse_args()
     if args.command == "build":
         build(args)
