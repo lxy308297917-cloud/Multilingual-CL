@@ -1,0 +1,104 @@
+{
+  "observed_at": "2026-10-21T20:25:18.458488",
+  "models_audited": {
+    "sw42": {
+      "checkpoint_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed42_20261020_v1/checkpoint-20",
+      "adapter_sha256": "eb12d3b8dd22249fc0d5744ef56d83cf4db0ffe8495357f59ea618db52195c6c",
+      "training_args_sha256": "f42123acc57208daa0102b9939555302d7b0cef71ad7079d738e9668cf0a4338",
+      "training_data_sha256": "59ea3c059d637cfb203c1abe9203764489dca06d66b3afaf624f8c4b917ad403",
+      "seed": 42,
+      "reconstructed_model_exposures": 640,
+      "reconstructed_ID_sequence_sha256": "13de1a84adf08d1a41d6c43a983ae5dcaf81cdff7c6b10ef4571c52b92e3d348"
+    },
+    "sw43": {
+      "checkpoint_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed43_20261020_v1/checkpoint-20",
+      "adapter_sha256": "62f5a10a195fa60d7d5d03fe7ad480384e05c1d75adced9d06f7e256f320ab27",
+      "training_args_sha256": "f1da2a418147c9826a6d94d8634af1b47845a78cf1d5e591e1f997e73f04f30d",
+      "training_data_sha256": "59ea3c059d637cfb203c1abe9203764489dca06d66b3afaf624f8c4b917ad403",
+      "seed": 43,
+      "reconstructed_model_exposures": 640,
+      "reconstructed_ID_sequence_sha256": "b07817f999da08dcb28854c84065f1eab025a7da92bcdac7b700d3bbb4a2ae44"
+    },
+    "ja42": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_ja_data_repair_v4/ja_17b_project2900_prefixrepair_nonefixed_seed42_20261020_v4/checkpoint-20",
+      "adapter_sha256": "4e727d85c81e3bc8e037261735446565c385e5d5ad7da049a699c2bd78a1aa8e",
+      "training_args_sha256": "fcfcd793401bdfcbe923237bf2ce9bc625710cc338148590bf339b48face7a72",
+      "training_data_sha256": "a147945234873b7706a0fe9d03e7f27c663b64b425c561ddf8b2f28dc429769e",
+      "seed": 42,
+      "reconstructed_model_exposures": 640,
+      "reconstructed_ID_sequence_sha256": "13de1a84adf08d1a41d6c43a983ae5dcaf81cdff7c6b10ef4571c52b92e3d348"
+    },
+    "ja43": {
+      "checkpoint_relative": "models/checkpoint/copsd_ja_prefix20_replicates_v1/ja_17b_prefix20_horizon100_seed43_repaired_20261021_v1/checkpoint-20",
+      "adapter_sha256": "5a82446829c9b3cafa5306714aa3ee011814b36d565d122a86b78bdd9910c041",
+      "training_args_sha256": "14ee1db6ac53a63fe1bd53f3a22b65a251da886aa9a0ab71a1597fc41ebb998f",
+      "training_data_sha256": "a147945234873b7706a0fe9d03e7f27c663b64b425c561ddf8b2f28dc429769e",
+      "seed": 43,
+      "reconstructed_model_exposures": 640,
+      "reconstructed_ID_sequence_sha256": "b07817f999da08dcb28854c84065f1eab025a7da92bcdac7b700d3bbb4a2ae44"
+    },
+    "zh42": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_seeded_cost_single_v2/zh_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-20",
+      "adapter_sha256": "26ebcfcb78aa02a8b0f41467f8cfbe9f72e2e043cbb2f344ee928dd1bbb4823b",
+      "training_args_sha256": "d184ac8fbd43682e10834b87b94d7c45b6193d064867ca26984495ee4bf2a078",
+      "training_data_sha256": "4088bc4342f65c04806bc89c2051f9efb7e44b316c7ecb523200a45375b26e2b",
+      "seed": 42,
+      "reconstructed_model_exposures": 640,
+      "reconstructed_ID_sequence_sha256": "13de1a84adf08d1a41d6c43a983ae5dcaf81cdff7c6b10ef4571c52b92e3d348"
+    },
+    "zh43": {
+      "checkpoint_relative": "models/checkpoint/copsd_prefix20_replicates_v1/zh_17b_prefix20_horizon100_seed43_20261021_v1/checkpoint-20",
+      "adapter_sha256": "93132b46a3a188ca786006a5b8320715ce649ca1b70808d164faa6bea40dd093",
+      "training_args_sha256": "b4888168d00dbf9a60b88857f209aafe609152052b106365b2a0762411dd6c44",
+      "training_data_sha256": "4088bc4342f65c04806bc89c2051f9efb7e44b316c7ecb523200a45375b26e2b",
+      "seed": 43,
+      "reconstructed_model_exposures": 640,
+      "reconstructed_ID_sequence_sha256": "b07817f999da08dcb28854c84065f1eab025a7da92bcdac7b700d3bbb4a2ae44"
+    },
+    "bn_unclip42": {
+      "checkpoint_relative": "models/checkpoint/copsd_bn_clip_control_v1/bn_17b_unclip20_horizon100_seed42_20261020_v1/checkpoint-20",
+      "adapter_sha256": "6a3cfc6570b9471b2d6daa815f1590e28fb09fb5c440ee5e32ae46b11f4aa137",
+      "training_args_sha256": "7296568a838e3fe28c1d0e2f8afd5655e9036ff9c3e4191906928b351288dcbc",
+      "training_data_sha256": "c59527c7daa1a44ee0d995e8b3002943db22ca71730d2f045f3acc7919741920",
+      "seed": 42,
+      "reconstructed_model_exposures": 640,
+      "reconstructed_ID_sequence_sha256": "13de1a84adf08d1a41d6c43a983ae5dcaf81cdff7c6b10ef4571c52b92e3d348"
+    },
+    "bn_unclip43": {
+      "checkpoint_relative": "models/checkpoint/copsd_bn_clip_control_v1/bn_17b_unclip20_horizon100_seed43_20261020_v2/checkpoint-20",
+      "adapter_sha256": "79526cb316927701f61d8a02109b6c33f68e5f559575c8a67f3a3eeaf384c59f",
+      "training_args_sha256": "c2f736cf7d80b7db17c93651545bb9ec41a45ab12054905b94343969143fad57",
+      "training_data_sha256": "c59527c7daa1a44ee0d995e8b3002943db22ca71730d2f045f3acc7919741920",
+      "seed": 43,
+      "reconstructed_model_exposures": 640,
+      "reconstructed_ID_sequence_sha256": "b07817f999da08dcb28854c84065f1eab025a7da92bcdac7b700d3bbb4a2ae44"
+    }
+  },
+  "common_ordered_training_IDs": 2900,
+  "union_reconstructed_exposed_IDs": 1140,
+  "remaining_unexposed_IDs": 1760,
+  "original_dev100_disjoint": true,
+  "new_dev_or_training_split_created": false,
+  "new_evaluation_or_GPU_task": false,
+  "exposure_provenance": "Reconstruction via actual saved seedable-sampler settings and CPU Accelerate DataLoader, epoch0,640 examples, same ordered data; not direct per-row training logs.",
+  "scope": "Feasibility only for these frozen20-update checkpoints. NOT unseen for historical100-update models. No new question selection, scores, final languages or claim of stable benefit. Any future follow-up split must be frozen before scoring and excluded from subsequent training/pools; cannot repeatedly resample to seek positive results.",
+  "current_source_sha256": {
+    "analysis": "7e982c60ed8e1ed36b9f6511e16ae7e515dc077e2d5ecf0cd7a361a5db5a0440",
+    "HF_Trainer": "c3eac8fa28bda6330fd4dee131e7fe7d9bdc0fa35d9de944fce52cb97b379bab",
+    "Accelerate_DataLoader": "8debfb20c6ae58eff3a466cfd67244a12cc8b8d3de00316a6c1d54b0310ee6ca",
+    "OPSD_trainer": "61ac661d2bbea66988d1b7adc671bcd35c210f7aeb7e43a27e6e2f8872b7ffa6",
+    "official_training_entry": "134e09adfa449fde36c3daf8bf08646073fdce414fab84418ab0325b5f1dbf3d"
+  },
+  "packages": {
+    "torch": "2.8.0",
+    "transformers": "4.57.1",
+    "accelerate": "1.11.0"
+  },
+  "pending_before_any_new_confirmation_split": [
+    "Audit normalized English-question duplicates against all reconstructed exposed IDs and originaldev100.",
+    "Freeze one deterministic extra development set before inspecting its scores; do not repeatedly resample.",
+    "Restrict unseen claim to these20-update checkpoints, never historical100-update models.",
+    "Exclude any new development IDs from subsequent sequential training and matched single pools; existing pools would need a new version."
+  ],
+  "interpretation": "ID-level reconstruction feasibility only; no new independent development set is claimed ready, no labels scored and no three languages selected."
+}

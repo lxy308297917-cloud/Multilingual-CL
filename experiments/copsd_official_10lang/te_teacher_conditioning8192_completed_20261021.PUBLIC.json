@@ -1,0 +1,60 @@
+{
+  "protocol": "privileged_teacher_conditioning_length8192_v1",
+  "max_new_tokens": 8192,
+  "actual_max_num_seqs": 256,
+  "language": "te",
+  "formal_test": false,
+  "conditions": {
+    "student": {
+      "items": 100,
+      "correct": 14,
+      "normal_terminations": 41,
+      "truncated": 59,
+      "answer_extraction_failures": 57,
+      "generated_tokens": 660195,
+      "generation_seconds": 709.0692553725094
+    },
+    "teacher": {
+      "items": 100,
+      "correct": 64,
+      "normal_terminations": 65,
+      "truncated": 35,
+      "answer_extraction_failures": 32,
+      "generated_tokens": 550424,
+      "generation_seconds": 792.7258765827864
+    }
+  },
+  "model_load_seconds": 9.897890811786056,
+  "teacher_adapter": null,
+  "same_original_Base": true,
+  "scope": "Teacher receives English reference. Conditional-generation diagnostic only; not fair benchmark accuracy, not training-label synthesis, and not an evaluation of all on-policy teacher-token distributions.",
+  "observed_at": "2026-10-21T20:34:03.787518",
+  "queue": "copsd-te-teacher-conditioning8192-v1",
+  "queue_phase": "completed",
+  "exit_code": 0,
+  "paired_counts": {
+    "gained_under_privileged_context": 54,
+    "lost_under_privileged_context": 4,
+    "correct_under_both": 10
+  },
+  "source_records_sha256": {
+    "student": "29a1c4732f95a6d02639827c933e3b0018b558d8869dccd8420cd826136e56db",
+    "teacher": "bef94dbd61736ec13e419a3affff42544fc92c4a0f830171fef7e65ebfe3de62"
+  },
+  "cost": {
+    "completed_parent_GPU_hours": 0.42388888888888887,
+    "new_responses": 200,
+    "generated_tokens": 1210619,
+    "generation_seconds": 1501.7951319552958
+  },
+  "paired_IDs_answers_seeds_raw_counts_source_and_prompt_hashes_verified": true,
+  "comparison_boundary": "Both conditions use the official training collator and8192 tokens. Not the standard dev-evaluator prompt or a fair reference-free teacher benchmark. Clean-context advantage does not establish supervision quality on on-policy wrong histories.",
+  "new_training_or_SFT_labels": false,
+  "scheduling": {
+    "max_num_seqs_explicitly_passed": false,
+    "runtime_scheduler_capacity_saved": true,
+    "actual_max_num_seqs": 256,
+    "source_inferred_vllm011_LLM_CLASS_default_on_3090": 256,
+    "boundary": "Official loader default used, not the explicit16 dev8192 evaluator. Initial2048 TE freeze metadata16 was corrected as an erratum.8192 diagnostic separately saves the actual scheduler capacity."
+  }
+}

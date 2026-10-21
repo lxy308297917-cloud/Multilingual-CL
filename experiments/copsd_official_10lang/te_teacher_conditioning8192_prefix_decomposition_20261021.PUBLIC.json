@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-10-21T20:34:10.484503",
+  "items_each": 100,
+  "same_trajectory_answer_availability": {
+    "student": {
+      "same_long_trajectory_correct_first2048": 2,
+      "same_long_trajectory_correct_full8192": 14,
+      "gained_correct_after2048": 12,
+      "lost_correct_after2048": 0,
+      "boxed_answer_available_first2048": 3,
+      "separate_short_run_correct": 1,
+      "separate_short_vs_long_prefix_exact_matches": 35
+    },
+    "teacher": {
+      "same_long_trajectory_correct_first2048": 13,
+      "same_long_trajectory_correct_full8192": 64,
+      "gained_correct_after2048": 52,
+      "lost_correct_after2048": 1,
+      "boxed_answer_available_first2048": 14,
+      "separate_short_run_correct": 13,
+      "separate_short_vs_long_prefix_exact_matches": 39
+    }
+  },
+  "official_scorer_source_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+  "long_report_sha256": "bbb3d59b4d9e70a607bfa67ec1ebd14982bbf097eec04a2a986c277499f3de8f",
+  "analysis_source_sha256": "b372e4f5c5ef6a4db80ed7472749257d15ddf0869c8e605651096cce83d7ada4",
+  "new_training_or_inference": false,
+  "scope": "CPU censoring only, not additional generation, model quality ranking or SFT labels. Earlier separate2048 runs may differ in generated prefixes despite equal per-ID seeds; same-long-trajectory censoring isolates later answer availability without proving intrinsic mathematical gain or on-policy supervision quality."
+}
