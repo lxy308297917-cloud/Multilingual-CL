@@ -1,0 +1,259 @@
+{
+  "observed_at": "2026-10-21T12:55:30.692064",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "items_per_output": 100,
+  "languages": {
+    "ja": {
+      "target_label": "__label__jpn_Jpan",
+      "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+      "runs": {
+        "Base": {
+          "run_id": "ja_v4_saved20_base_dev100_8192_20261020_v1",
+          "items_sha256": "098bf617e7b712a8b2add442df4ca80b043ecd441bd9e15ce91ae2a06181d697",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 92,
+                "too_short": 8
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 77,
+                "__label__eng_Latn": 14,
+                "__label__tog_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 77,
+              "correct_items_label_counts": {
+                "__label__jpn_Jpan": 36,
+                "too_short": 1,
+                "__label__eng_Latn": 9,
+                "__label__tog_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 79,
+                "no_final_section": 21
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 76,
+                "__label__eng_Latn": 3
+              },
+              "target_top1_probability_ge_0_8": 76,
+              "correct_items_label_counts": {
+                "__label__jpn_Jpan": 39,
+                "no_final_section": 5,
+                "__label__eng_Latn": 3
+              }
+            }
+          }
+        },
+        "target20": {
+          "run_id": "ja_v4_saved20_target_dev100_8192_20261020_v1",
+          "items_sha256": "ba66c73244ebf77003ad2313329486b2a2a391a5b83f59ec5839111927bc0d85",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 94,
+                "too_short": 6
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 82,
+                "__label__eng_Latn": 10,
+                "__label__cmn_Hani": 1,
+                "__label__yor_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 80,
+              "correct_items_label_counts": {
+                "__label__jpn_Jpan": 41,
+                "__label__eng_Latn": 6,
+                "too_short": 1,
+                "__label__cmn_Hani": 1,
+                "__label__yor_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 71,
+                "no_final_section": 29
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 67,
+                "__label__eng_Latn": 4
+              },
+              "target_top1_probability_ge_0_8": 67,
+              "correct_items_label_counts": {
+                "__label__jpn_Jpan": 37,
+                "no_final_section": 11,
+                "__label__eng_Latn": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "te": {
+      "target_label": "__label__tel_Telu",
+      "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+      "runs": {
+        "Base": {
+          "run_id": "te_saved20_screen_base_recovered_dev100_8192_20261020_v2",
+          "items_sha256": "65adc2bec631565e128e5e2f497c4624a50f520eeb5750fb4f3f61a6fd796549",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__tel_Telu": 98,
+                "__label__kff_Telu": 1,
+                "__label__und_Armn": 1
+              },
+              "target_top1_probability_ge_0_8": 98,
+              "correct_items_label_counts": {
+                "__label__tel_Telu": 7
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 34,
+                "no_final_section": 66
+              },
+              "top1_label_counts": {
+                "__label__tel_Telu": 34
+              },
+              "target_top1_probability_ge_0_8": 34,
+              "correct_items_label_counts": {
+                "__label__tel_Telu": 6,
+                "no_final_section": 1
+              }
+            }
+          }
+        },
+        "target20": {
+          "run_id": "te_saved20_screen_target20_recovered_dev100_8192_20261020_v2",
+          "items_sha256": "7dedbc1414d733dfbc5d48fcb413e1c1787b7782578b3f037016bb20e8eecdb3",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__tel_Telu": 100
+              },
+              "target_top1_probability_ge_0_8": 100,
+              "correct_items_label_counts": {
+                "__label__tel_Telu": 2
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "no_final_section": 89,
+                "predicted": 11
+              },
+              "top1_label_counts": {
+                "__label__tel_Telu": 11
+              },
+              "target_top1_probability_ge_0_8": 11,
+              "correct_items_label_counts": {
+                "__label__tel_Telu": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "th": {
+      "target_label": "__label__tha_Thai",
+      "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+      "runs": {
+        "Base": {
+          "run_id": "th_saved20_screen_base_dev100_8192_20261020_v1",
+          "items_sha256": "5e972aade9b28156121a140e0051dee24cecc0049c6784903890a1330262bc4b",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 99,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 1,
+                "__label__tha_Thai": 97,
+                "__label__tir_Ethi": 1
+              },
+              "target_top1_probability_ge_0_8": 97,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1,
+                "__label__tha_Thai": 52
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 87,
+                "no_final_section": 13
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 86,
+                "__label__tir_Ethi": 1
+              },
+              "target_top1_probability_ge_0_8": 85,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 49,
+                "__label__tir_Ethi": 1,
+                "no_final_section": 3
+              }
+            }
+          }
+        },
+        "target20": {
+          "run_id": "th_saved20_screen_target20_dev100_8192_20261020_v1",
+          "items_sha256": "11533927ee9eb6b7bca169167a0b44db50ad5970c40fdbf96485d1c2f7064241",
+          "summary": {
+            "thinking": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 100
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 95,
+                "__label__eng_Latn": 5
+              },
+              "target_top1_probability_ge_0_8": 95,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 43,
+                "__label__eng_Latn": 3
+              }
+            },
+            "final": {
+              "total_items": 100,
+              "statuses": {
+                "predicted": 74,
+                "no_final_section": 26
+              },
+              "top1_label_counts": {
+                "__label__tha_Thai": 74
+              },
+              "target_top1_probability_ge_0_8": 74,
+              "correct_items_label_counts": {
+                "__label__tha_Thai": 33,
+                "no_final_section": 13
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "new_generation": false,
+  "GPU_used": false,
+  "scope": "CPU language-ID supplement on existing completed target-side outputs only. Whole-section top1 labels do not establish fluency, token-level switching or reasoning quality. Missing final and too-short denominators are retained. Mathematical scores remain unfiltered and unchanged; no new formal scores, final language choice or sequential evidence. All outputs overlap already reported runs."
+}
