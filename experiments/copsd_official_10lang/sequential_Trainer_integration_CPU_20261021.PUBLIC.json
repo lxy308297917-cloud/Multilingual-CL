@@ -1,0 +1,31 @@
+{
+  "actual_Transformers_Trainer_CPU_used": true,
+  "initialization_before_optimizer_creation": true,
+  "handoff": {
+    "previous_global_step": 1,
+    "adapter_count": 1,
+    "adapter_values_match_previous_checkpoint": true,
+    "parameter_objects_preserved": true,
+    "frozen_Base_unchanged": true,
+    "scope": "Adapter handoff only; caller must separately prove fresh optimizer/scheduler, teacher disabling and current-policy rollout synchronization."
+  },
+  "actual_parent_optimizer_steps": [
+    1
+  ],
+  "child_train_begin": {
+    "global_step": 0,
+    "optimizer_state_empty": true,
+    "scheduler_last_epoch": 0,
+    "mode": "stage_reset"
+  },
+  "independent_reference_train_begin": {
+    "global_step": 0,
+    "optimizer_state_empty": true,
+    "scheduler_last_epoch": 0,
+    "mode": "stage_reset"
+  },
+  "loaded_student_logits_match_parent_before_next_stage": true,
+  "child_next_update_equals_existing_parent_with_new_Trainer_bitwise": true,
+  "disabled_adapter_teacher_logits_unchanged_through_both_updates": true,
+  "scope": "Tiny synthetic FP32 CPU Trainer initialization/reset integration only. Does not validate actual1.7B GPU rollout, within-stage checkpoint recovery, selected research languages, stage evaluations or effectiveness."
+}
