@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-10-21T11:37:19.526386",
+  "scientific_manifest": "sw20_formal8192_frozen_20261021.PUBLIC.json",
+  "scientific_manifest_sha256": "6afe0a8685bfea90dc45f4ac603754f787fde5c9758c04b6887f969b063684b6",
+  "scientific_settings_changed": false,
+  "new_training": false,
+  "scheduling_change": "Split previously waiting serial nine-stage suite into three independent one-model parents, each evaluating MGSM250/PolyMath500/English1319. All six trained stages and three Base stages are unchanged; total6207 responses. Parent jobs may run in parallel only within account-wide GPU cap4.",
+  "wrapper_sha256": "80d47dd43db0c0cc398486f84877607649f87cfcdc12239817e41a9310d5fa3f",
+  "max_user_gpus": 4,
+  "queue_to_model": {
+    "copsd-sw20-formal8192-confirm-v1": "base",
+    "copsd-sw20-formal8192-seed42-v1": "seed42",
+    "copsd-sw20-formal8192-seed43-v1": "seed43"
+  },
+  "CPU_identity_preflight_passed_each_model": true,
+  "formal_results_available": false,
+  "scope": "Scheduling and preflight only, not GPU execution or new formal results. Count each eventual parent allocation once, never each stage as an independent full-parent clock."
+}
