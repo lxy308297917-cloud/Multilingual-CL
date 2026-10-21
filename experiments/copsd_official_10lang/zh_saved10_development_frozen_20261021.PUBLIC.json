@@ -1,0 +1,60 @@
+{
+  "frozen_at": "2026-10-21T16:40:19.578596",
+  "protocol": "project_dev_single_vllm8192_v2",
+  "language": "zh",
+  "models": {
+    "seed42": {
+      "checkpoint_relative": "models/checkpoint/copsd_vllm_seeded_cost_single_v2/zh_17b_project2900_vllm_seeded_cost_seed42_20261020_v2/checkpoint-10",
+      "adapter_sha256": "cfbb9d8fb57fe0ff57708f24060747240fd6847c6d96b1d26344fd3672ab3074",
+      "run_ids": {
+        "zh": "zh_zh_saved10_seed42_dev100_8192_20261021_v1",
+        "en": "en_zh_saved10_seed42_dev100_8192_20261021_v1"
+      },
+      "queue": "copsd-zh-saved10-seed42-dev8192-v1"
+    },
+    "seed43": {
+      "checkpoint_relative": "models/checkpoint/copsd_prefix20_replicates_v1/zh_17b_prefix20_horizon100_seed43_20261021_v1/checkpoint-10",
+      "adapter_sha256": "6caa73c1fc0d168750db23b3e68feb6f07904f4db7a0cf9131da67714d76dc0c",
+      "run_ids": {
+        "zh": "zh_zh_saved10_seed43_dev100_8192_20261021_v1",
+        "en": "en_zh_saved10_seed43_dev100_8192_20261021_v1"
+      },
+      "queue": "copsd-zh-saved10-seed43-dev8192-v1"
+    }
+  },
+  "development_languages": [
+    "zh",
+    "en"
+  ],
+  "items_each": 100,
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "code_sha256": {
+    "run_zh_saved10_dev8192.sh": "835da3dc9ec7938af665705f7c13e2badd526003d96c0007d7751a1d6b61bcaa",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1",
+    "freeze_vllm_eval.py": "4794b541b8170dc95384747e8040bd7c5feb0b625be1f084ae4858f411cf4354",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d"
+  },
+  "fixed_checkpoint_grid": [
+    0,
+    10,
+    20
+  ],
+  "cached_steps": [
+    0,
+    20
+  ],
+  "newly_evaluated_steps": [
+    10
+  ],
+  "new_training": false,
+  "max_user_gpus": 4,
+  "selection_policy": "Independent development only, before seeing saved10 scores. Evaluate target and English for both existing runs. Inconsistent/small effects do not establish a stable third language; do not extend checkpoint grid or use formal tests to pick favorable results.",
+  "run_comparison_caveat": "Historical seed42 and controlled seed43 differ in initialization/order handling, so these are two within-run stage comparisons, not a strict seed-only causal contrast.",
+  "scope": "Finite earlier-checkpoint diagnosis for third-language gap and possible late degradation. Reuse existing Base/20 development outputs, no training, SFT synthesis, final language selection or sequential experiment."
+}

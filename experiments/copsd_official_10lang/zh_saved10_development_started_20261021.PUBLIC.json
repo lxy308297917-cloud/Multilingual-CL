@@ -1,0 +1,36 @@
+{
+  "observed_at": "2026-10-21T16:42:42.228360",
+  "models": {
+    "seed42": {
+      "queue": "copsd-zh-saved10-seed42-dev8192-v1",
+      "phase": "running",
+      "pid": 116393,
+      "gpu_indices": [
+        0
+      ],
+      "gpu_uuids": [
+        "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+      ],
+      "script_sha256": "835da3dc9ec7938af665705f7c13e2badd526003d96c0007d7751a1d6b61bcaa",
+      "CPU_data_checkpoint_preflight_passed": true,
+      "completed_results": false
+    },
+    "seed43": {
+      "queue": "copsd-zh-saved10-seed43-dev8192-v1",
+      "phase": "running",
+      "pid": 116543,
+      "gpu_indices": [
+        2
+      ],
+      "gpu_uuids": [
+        "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39"
+      ],
+      "script_sha256": "835da3dc9ec7938af665705f7c13e2badd526003d96c0007d7751a1d6b61bcaa",
+      "CPU_data_checkpoint_preflight_passed": true,
+      "completed_results": false
+    }
+  },
+  "new_training": false,
+  "final_language_selection_created": false,
+  "scope": "Manual one-shot evaluations of two saved checkpoint10 models, each ZH100 and English100 independent development. Base and20 outputs cached. Launcher running is not a result or full GPU calculation proof."
+}

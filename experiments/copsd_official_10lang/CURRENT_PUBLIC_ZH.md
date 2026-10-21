@@ -123,3 +123,5 @@ SW8192正式Base完整三套已完成并exit0：SW MGSM8／250、PolyMath8／500
 相对Base，seed42新增24／失去4，seed43新增25／失去5道pass@12正确题。两支方向一致，绝对水平仍低。两训练seed用同一题集；AfriMGSM与MGSM-Rev2共享207题，不算两套独立确认。模型20更新均在测试前由独立开发选定，测试不用于重新选语言／checkpoint。原100更新官方参考保持单独记录。
 
 本次新增6000回答、5,399,299生成token、0.5153 GPU小时（含两个评测及加载，缓存Base成本不重复计）；阶段报告与本全量报告有重叠，不相加。GPU0队列已正常结束，SW seed43英语及JA英语继续。见[完整官方配对与成本](sw20_afrimgsm_two_seed_completed_20261021.PUBLIC.json)。
+
+2026-10-21 16:42：为排查ZH20收益不稳定和第三语言缺口，手动启动两个既有checkpoint10的ZH／英语各100题开发评测，GPU0／2；原SW43英语与JA43英语继续，总预留四卡。比较范围在出分前固定为Base／10／20，缓存Base及20，不新增训练、不按正式测试选语、不在看到10步结果后追加其他checkpoint。两份历史run有初始化／题序处理差异，不能称严格seed-only对照；10步诊断不能直接替代共同20更新预算，若之后改变阶段预算需统一匹配对照。尚无10步新分数或最终三语言。见[冻结范围](zh_saved10_development_frozen_20261021.PUBLIC.json)、[实际启动](zh_saved10_development_started_20261021.PUBLIC.json)。
