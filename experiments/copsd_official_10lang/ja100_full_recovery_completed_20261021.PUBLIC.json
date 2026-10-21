@@ -1,0 +1,120 @@
+{
+  "observed_at": "2026-10-21T12:04:47.952550",
+  "operation": "ja80",
+  "new_parent_identity_for_cost_deduplication": {
+    "queue": "copsd-ja-repaired-v3",
+    "started_at": "2026-10-21 11:18:34",
+    "script_sha256": "f961939799997079211ac81cdc14231de64b308e3adc476c190251db9ede4bd8"
+  },
+  "old_cost_reference_not_additional_compute": "disk_failure_cost_audit_20261020.PUBLIC.json#ja80",
+  "protocol": "project_dev_single_vllm_v1",
+  "paired_development100": {
+    "target": {
+      "base_correct": 39,
+      "gained": 6,
+      "lost": 18,
+      "delta_correct": -12,
+      "adapter100_correct": 27,
+      "checkpoint_step": 100
+    }
+  },
+  "metrics": {
+    "base": {
+      "items": 100,
+      "single_correct": 39,
+      "generated_tokens": 168081,
+      "normal_terminations": 42,
+      "truncated": 58,
+      "answer_extraction_failures": 46,
+      "single_accuracy": 0.39,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 64.45777904242277,
+      "model_load_seconds": 9.919875575229526,
+      "generated_tokens_per_generation_second": 2607.6138907823333
+    },
+    "target": {
+      "items": 100,
+      "single_correct": 27,
+      "generated_tokens": 168970,
+      "normal_terminations": 47,
+      "truncated": 53,
+      "answer_extraction_failures": 33,
+      "single_accuracy": 0.27,
+      "n": 1,
+      "generation_count": 100,
+      "protocol": "project_dev_single_vllm_v1",
+      "formal_test": false,
+      "generation_seconds": 121.10136889852583,
+      "model_load_seconds": 11.204708866775036,
+      "generated_tokens_per_generation_second": 1395.2773741276583
+    }
+  },
+  "new_generation_cost": {
+    "new_responses": 100,
+    "new_generated_tokens": 168970,
+    "new_generation_seconds": 121.10136889852583,
+    "reused_responses_excluded": {
+      "base": 100
+    }
+  },
+  "new_unique_parent_allocated_GPU_hours": 0.7380555555555556,
+  "old_interrupted_parent_cost": {
+    "allocated_GPU_hours_approx": 2.8515770769444444,
+    "waiting_without_allocated_GPU": false,
+    "method": "Old job start to archived service-failure event, one GPU. Approximate allocation clock; old child normal exit was not collected.",
+    "unserialized_generation_work_not_reconstructed": true,
+    "old_parent_success_claimed": false
+  },
+  "old_plus_recovery_parent_GPU_hours_approx": 3.5896326325,
+  "new_parent_exit0_scientific_sources_inputs_prompts_seeds_counts_and_marker_verified": true,
+  "cached_English_Base_cost_not_added_again": true,
+  "TE_partial_cost_uses_only_new27": false,
+  "new_training": {
+    "new_updates": 20,
+    "start_step": 80,
+    "global_step": 100,
+    "new_question_exposures": 628,
+    "new_generated_tokens": 1096504,
+    "new_valid_response_loss_positions": 1096504,
+    "new_training_clock_seconds": 2446.8228859808296,
+    "new_teacher_forward_cuda_seconds": 163.95101647949218,
+    "new_student_forward_cuda_seconds": 140.2070271759033,
+    "actual_initial_student_and_rollout_sync_match_saved80": true,
+    "final_adapter_actually_loaded_and_finite": true,
+    "final_optimizer_scheduler_RNG_actually_loaded": true,
+    "saved_scientific_fields_match_parent80": [
+      "learning_rate",
+      "max_grad_norm",
+      "per_device_train_batch_size",
+      "gradient_accumulation_steps",
+      "max_steps",
+      "seed",
+      "data_seed",
+      "optim",
+      "lr_scheduler_type",
+      "lr_scheduler_kwargs",
+      "warmup_steps",
+      "warmup_ratio",
+      "weight_decay",
+      "adam_beta1",
+      "adam_beta2",
+      "adam_epsilon",
+      "gradient_checkpointing",
+      "gradient_checkpointing_kwargs",
+      "bf16",
+      "fp16",
+      "max_length",
+      "max_completion_length"
+    ],
+    "frozen_Base_unchanged_new_segment": true,
+    "final_committed_exposure_chain": 3188,
+    "known_discarded_completed_updates": 2,
+    "known_attempted_loss_calls_lower_bound_including_discarded_work": 3252,
+    "sampling_stream_bitwise_continuation_promised": false,
+    "scope": "New80-to100 process only. Old saved80 plus new20 commits3188 exposures; actual interrupted work additionally includes at least64 discarded loss calls and unreconstructed rollout work."
+  },
+  "scope": "Recovered development report, not new formal tests, stable final language selection or sequential results. Old failed parent costs are approximated from failure events, not normal exits. Cached outputs retain their old cost attribution; TE full100 scored-token totals are not all new tokens. Do not sum this report with its own overlapping preflight/partial reports as additional compute."
+}
