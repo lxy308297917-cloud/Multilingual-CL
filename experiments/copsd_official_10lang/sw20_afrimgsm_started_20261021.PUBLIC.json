@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-10-21T16:04:58.391208",
+  "queue": "copsd-sw20-afrimgsm-pass12-v1",
+  "phase": "running",
+  "pid": 111846,
+  "gpu_indices": [
+    0
+  ],
+  "gpu_uuids": [
+    "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+  ],
+  "script_sha256": "364a19514a37f2bbfb36614f5ef5d7ae78cc40c99ada33b80a075381b1b5101f",
+  "run_record": "gpu-queue/queues/copsd-sw20-afrimgsm-pass12-v1/runs/20261021-160405-31ea10f3",
+  "CPU_preflight_passed": true,
+  "account_GPU_limit": 4,
+  "cached_Base_reused": true,
+  "no_new_training": true,
+  "completed_results": false,
+  "scope": "Manual one-shot queue. Two previously development-selected SW20 adapters evaluated sequentially using unchanged official12-sample1024 AfriMGSM pathway. This startup record is not completion or effectiveness evidence."
+}

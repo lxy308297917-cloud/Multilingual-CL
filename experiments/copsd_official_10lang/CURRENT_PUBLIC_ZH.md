@@ -101,3 +101,5 @@ SW PolyMath seed43分解：四档正确数3→6／3→7／2→5／0→2；正常
 JA seed43训练阶段已完成：20更新／640题次／1,088,310有效生成token，训练循环40.63分钟（含诊断）；冻结Base、初始策略与checkpoint20优化状态通过既定入口验收。已转入JA／英语开发评测，父管线未结束，不称完整重复收益已确认。见[训练阶段证据](ja_seed43_prefix20_training_completed_20261021.PUBLIC.json)。
 
 SW8192正式Base完整三套已完成并exit0：SW MGSM8／250、PolyMath8／500、英语1180／1319（89.46%）。输入、原始输出、模型／协议及父管线身份已核验；旧2048英语1113／1319（84.38%）保持原协议记录，不能充当新版8192的训练模型对照。训练seed42／43英语仍未完成，暂不判断英语保留。见[完整Base管线与成本](sw20_base_formal8192_completed_20261021.PUBLIC.json)。
+
+2026-10-21 16:04：Base正式管线释放GPU0后，已按四卡总量限制手动启动`copsd-sw20-afrimgsm-pass12-v1`，顺序评估既定SW20 seed42／43的官方AfriMGSM pass@12（250题×12、1024预算）。复用旧Base同协议34／250 pass@12输出，不重跑Base、不重训、不根据测试重新选checkpoint。新队列在GPU0加载模型，原三个英语／JA评测继续；暂无新pass@12成绩。它与MGSM-Rev2共享207题，不能作为独立测试集证据。见[冻结配置](sw20_afrimgsm_frozen_20261021.PUBLIC.json)、[启动记录](sw20_afrimgsm_started_20261021.PUBLIC.json)。
