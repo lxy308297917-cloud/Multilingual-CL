@@ -136,6 +136,17 @@ def main():
     for records in zip(*[v[2] for v in stages.values()]):
         assert len({r['id'] for r in records}) == len({str(r['answer']) for r in records}) == 1
     assert read(op['completion_marker'])['paired_scores'] == comparisons
+    # The shared development helper names its trained score adapter20_correct.
+    # JA80 recovery ends at100; preserve the frozen marker audit, then label
+    # the public report with the actual evaluated checkpoint step.
+    if a.operation == 'ja80':
+        # The older2048 evaluator has no checkpoint_step config field.
+        # Verify the actual evaluated adapter path and its saved Trainer state.
+        evaluated = Path(stages['target'][0]['adapter']).resolve()
+        assert evaluated == (Path(op['new_model_directory']) / 'checkpoint-100').resolve()
+        assert read(evaluated / 'trainer_state.json')['global_step'] == 100
+        comparisons['target']['adapter100_correct'] = comparisons['target'].pop('adapter20_correct')
+        comparisons['target']['checkpoint_step'] = 100
     new_roles = {'ja80': ['target'], 'th': ['English'], 'te': ['base', 'target', 'English'],
                  'ja20': ['base', 'target', 'English']}[a.operation]
     responses, tokens, seconds = 0, 0, 0.
