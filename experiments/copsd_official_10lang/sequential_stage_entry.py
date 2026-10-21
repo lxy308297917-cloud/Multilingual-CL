@@ -79,7 +79,8 @@ def prepare(root, config_path):
         selection_path = Path(spec['selection_record'])
         selection_sha = digest(selection_path)
         assert selection_sha == spec['selection_record_sha256']
-        selection = read(selection_path)
+        from sequential_evaluation import selection as validated_selection
+        selection = validated_selection(selection_path, selection_sha)
         chosen = selection['selected_languages']
         assert selection['source_protocol'] == 'independent_development_only'
         assert len(chosen) == len(set(chosen)) == 3 and set(chosen) <= set(LANGUAGES)
@@ -100,6 +101,9 @@ def prepare(root, config_path):
     assert isinstance(spec['seed'], int) and spec['seed'] >= 0
     pools = read(spec['pool_manifest'])
     assert digest(spec['pool_manifest']) == spec['pool_manifest_sha256']
+    if not engineering:
+        assert spec['pool_manifest_sha256'] == selection['pool_manifest_sha256']
+        assert Path(spec['pool_manifest']).resolve() == Path(selection['pool_manifest']).resolve()
     item = pools['inputs'][language]
     assert digest(item['path']) == item['sha256']
     data = Path(spec['training_data'])

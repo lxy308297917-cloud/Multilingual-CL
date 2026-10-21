@@ -25,7 +25,7 @@ PRESETS = {
 }
 REVISION = '70d244cc86ccca08cf5af4e1e306ecf908b1ad5e'
 LANGUAGES = set('sw te th bn zh ja ru de fr es'.split())
-CODE_FILES = ['sequential_evaluation.py', 'run_sequential_evaluation.sh',
+CODE_FILES = ['sequential_evaluation.py', 'followup_selection_guard.py', 'run_sequential_evaluation.sh',
               'evaluate_formal8192.py', 'run_formal8192.sh',
               'evaluate_transformers.py', 'evaluate_vllm.py',
               'formal8192_CPU_preflight_20261020.PUBLIC.json',
@@ -60,10 +60,22 @@ def selection(path, sha):
     assert s['stage_updates'] == 20 and s['stage_evaluation_protocol'] in PRESETS
     assert re.fullmatch(r'[A-Za-z0-9_-]+', s['experiment_id'])
     assert s['evidence_reports']
+    code = Path(__file__).parent
+    from followup_selection_guard import validate_math_evidence, validate_output_review, validate_pool_binding
+    assert s['followup_guard_sha256'] == digest(code / 'followup_selection_guard.py')
+    assert s['selection_validator_sha256'] == digest(Path(__file__))
+    validate_pool_binding(s, code)
+    paired_reports = {}
     for evidence in s['evidence_reports']:
         assert digest(evidence['path']) == evidence['sha256']
         report = read(evidence['path'])
-        assert report['protocol'] == 'project_dev_single_vllm8192_v2', 'Selection evidence must be development, not formal tests'
+        if report['protocol'] == 'project_followup_dev200_single8192_c64_v1':
+            validate_math_evidence(s, report, code)
+            paired_reports[evidence['sha256']] = report
+        else:
+            assert report['protocol'] == 'project_dev_single_vllm8192_v2', 'Selection evidence must be development, not formal tests'
+    assert paired_reports, 'Current research selection requires the completed fixed followup200 confirmation'
+    validate_output_review(s, paired_reports)
     return s
 
 

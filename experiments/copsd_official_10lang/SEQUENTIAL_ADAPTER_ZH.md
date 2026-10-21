@@ -90,3 +90,20 @@ CPU边界：真实SW池0与已有修复JA池1各967条通过，错误pool、未�
 10语言的English字段与ID对应已核验；SW池0和JA池1各900题经现有导出器实际导出，现有匹配single数据校验器接受，JA沿用已审计的一题字面前缀修复。900题足以在首次epoch内进行20更新／640次曝光。未来确定L1／L2／L3后分别绑定池0／1／2，反序同时反转语言和其绑定池；对应single须从Base使用同一900题池及预算。此时尚未绑定最终语言、启动研究顺序训练或验证新900题池的GPU接续。旧967／966题池保留，不能用于本轮新增开发确认后的研究阶段。
 
 证据：`followup200_collector_CPU_20261021.PUBLIC.json`、`sequential_pools_followup200_20261021.PUBLIC.json`、`sequential_pools_followup200_CPU_20261021.PUBLIC.json`。完整阶段实验等待独立开发确认与最终选语记录；新的manifest需按SHA绑定到阶段和匹配single配置。
+
+
+## 2026-10-21 22:53 后续研究的选语与训练池校验
+
+已把额外200题确认结果接入顺序训练和匹配single的预检：必须使用完整候选配对证据、预先固定的双模型正增益及区间规则，并记录目标语言／终止表现和英语代价的逐题输出复核。仅有Base、正式测试分数或旧100题开发报告不能创建本轮最终三语记录。此复核由助手执行，不新增用户批准环节。
+
+阶段配置必须绑定已剔除原100及新增200开发题的900／900／900池及其SHA。真实旧967／966池包含新增开发集全部200题，已在CPU校验中被拒绝；真实新池及SW／JA导出仍被接受。选语创建命令也已实际拒绝Base-only报告，未写出生产选语记录。核心trainer、损失及当前运行评测的冻结源码均未修改；尚未验证完整候选通过后的正向选语路径或新池GPU训练。
+
+22:53核对：SW42目标语200题的单项输出已结束，英语仍在生成，父任务尚未完成；其余7个候选队列等待，不把单项分数当作完整配对或双seed确认。当前仍无最终三语和研究遗忘矩阵。
+
+证据：[选语与题池CPU校验](followup_selection_guard_CPU_20261021.PUBLIC.json)；实现为`followup_selection_guard.py`、`freeze_followup_selection.py`及共享阶段预检。
+
+### 本轮生产选语文件的创建
+
+`freeze_followup_selection.py --root /data0/users/lixiaoyang --languages L1 L2 L3 --math-report 完整候选配对报告 --output-review 实际输出复核报告 --private-output 新私有选语文件 --public-output 新公开选语摘要`
+
+复核报告协议为`project_followup200_output_review_v1`，绑定同一数据freeze、配对报告SHA和对应Base／两份候选模型在目标语及EN上的source_records；记录`languages_reviewed`、逐语`eligible_for_sequential`和具体`rationale`，并确认`language_and_termination_reviewed`与`English_tradeoff_recorded`。这不是空白勾选表，须依据实际逐题输出填写。选语、guard、validator与新池SHA由入口再次核对。不满足条件时继续保留缺口，不创建虚构三语记录或启动研究阶段。

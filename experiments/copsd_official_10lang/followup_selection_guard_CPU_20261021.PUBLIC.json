@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-10-21T22:42:18.751273",
+  "real_new_pool_sizes": [
+    900,
+    900,
+    900
+  ],
+  "real_SW_and_JA_exports_still_accepted": true,
+  "actual_old_pool_union_contains_followup_IDs": 200,
+  "rejected": {
+    "old967_966_pool_manifest": true,
+    "actual_completed_Base_only_report": true,
+    "actual_formal_test_report": true
+  },
+  "source_sha256": {
+    "followup_selection_guard.py": "214f8b07086b60eb324dde7d1a57418d0062a78245da341393bfcfc83345984e",
+    "sequential_evaluation.py": "3f1b263a24501b4cf8af18c3cf4ba1e70a7d98cdc6ae378d9630098c1c45b49d",
+    "sequential_stage_entry.py": "3ff4cf0ae56bc91ff4006be89eec5c5ab7faab6351f9e3b56c3d8789435f0418",
+    "matched_pool_single_entry.py": "2e35e1f8ff86025b7eb13ad53a0d7ee2f9b66d10e0660dad30d04cedd2017e63",
+    "freeze_followup_selection.py": "993528af784983da9ee88438d375ec73097212d6223960346e25b8fd9836c183"
+  },
+  "production_three_language_record_created": false,
+  "real_paired_positive_selection_and_output_review_path_verified": false,
+  "training_core_or_running_eval_modified": false,
+  "GPU_used": false,
+  "scope": "Data-binding positive case and actual ineligible-evidence rejection only. In-memory field probes do not choose languages; production selection requires real completed paired evidence and reviewed outputs. No new training, generation or GPU stage-resume validation.",
+  "freeze_CLI_rejects_real_Base_only_before_review_or_production_output": true
+}

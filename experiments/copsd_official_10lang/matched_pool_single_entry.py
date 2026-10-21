@@ -70,6 +70,8 @@ def prepare(root, config_path):
     assert re.fullmatch(r'[A-Za-z0-9_-]+', spec['run_id'])
     output = root / 'models/checkpoint/copsd_matched_singles_v1' / spec['run_id']
     assert not output.exists(), 'Use a new segment directory, preserving previous results'
+    assert spec['pool_manifest_sha256'] == s['pool_manifest_sha256']
+    assert Path(spec['pool_manifest']).resolve() == Path(s['pool_manifest']).resolve()
     ids = load_pool(root, code, language, spec['pool_index'], spec['pool_manifest'],
         spec['pool_manifest_sha256'], spec['training_data'], spec['training_data_sha256'], spec['updates'])
     validate_assets(root, code)
