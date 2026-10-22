@@ -1,0 +1,167 @@
+{
+  "passed": true,
+  "alpha": 21.79455955895524,
+  "probes": [
+    {
+      "batch": 0,
+      "event": 398,
+      "checkpoint_step": 2146,
+      "stats": {
+        "main": {
+          "main_CE": 1.3568885624408722,
+          "raw_aux_loss": 0.0,
+          "scale": 0.0,
+          "preclip_norm_BF16": 18.0,
+          "clip_factor": 0.055555552469135974
+        },
+        "D0": {
+          "main_CE": 1.3568885624408722,
+          "raw_aux_loss": 7.591197729110718,
+          "scale": 0.1,
+          "preclip_norm_BF16": 18.0,
+          "clip_factor": 0.055555552469135974
+        },
+        "D1": {
+          "main_CE": 1.3568885624408722,
+          "raw_aux_loss": 7.591197729110718,
+          "scale": 21.79455955895524,
+          "preclip_norm_BF16": 18.375,
+          "clip_factor": 0.05442176574575424
+        },
+        "B": {
+          "main_CE": 1.3568885624408722,
+          "raw_aux_loss": 2.242893099784851,
+          "scale": 0.1,
+          "preclip_norm_BF16": 18.125,
+          "clip_factor": 0.05517241074910837
+        }
+      },
+      "candidate": {
+        "D0": {
+          "weight_changed_vs_main": 16676,
+          "moment_changed_vs_main": 19748014,
+          "actual_delta_sq": 0.025992636153193693,
+          "difference_vs_main_sq": 1.2221458984967848e-06,
+          "gradient_difference_vs_main_sq": 9.261496699464579e-07,
+          "gradient_main_dot": 1.0072846127083253,
+          "gradient_sq": 1.0072828215770713,
+          "finite": true,
+          "relative_update_difference_vs_main": 0.006857056307014155,
+          "clipped_gradient_main_cosine": 0.9999995533454781
+        },
+        "D1": {
+          "weight_changed_vs_main": 6969248,
+          "moment_changed_vs_main": 1231298851,
+          "actual_delta_sq": 0.02593975040558605,
+          "difference_vs_main_sq": 0.001096143177096609,
+          "gradient_difference_vs_main_sq": 0.042284066979558436,
+          "gradient_main_dot": 0.982703114581879,
+          "gradient_sq": 1.00040297528842,
+          "finite": true,
+          "relative_update_difference_vs_main": 0.20535715114442918,
+          "clipped_gradient_main_cosine": 0.9789447129352996
+        },
+        "B": {
+          "weight_changed_vs_main": 7695905,
+          "moment_changed_vs_main": 1413069460,
+          "actual_delta_sq": 0.026193811115331478,
+          "difference_vs_main_sq": 0.0010617867215696464,
+          "gradient_difference_vs_main_sq": 0.0036162765119317694,
+          "gradient_main_dot": 1.00060564377441,
+          "gradient_sq": 0.9975402559380324,
+          "finite": true,
+          "relative_update_difference_vs_main": 0.20211327220106196,
+          "clipped_gradient_main_cosine": 0.998208015292687
+        }
+      },
+      "main_only_actual_delta_L2": 0.16122181706627775,
+      "D1_vs_D0_effect_L2_multiplier": 29.948295879438415,
+      "passed": true
+    },
+    {
+      "batch": 1,
+      "event": 322,
+      "checkpoint_step": 2146,
+      "stats": {
+        "main": {
+          "main_CE": 2.9399389028549194,
+          "raw_aux_loss": 0.0,
+          "scale": 0.0,
+          "preclip_norm_BF16": 26.125,
+          "clip_factor": 0.03827751049655462
+        },
+        "D0": {
+          "main_CE": 2.9399389028549194,
+          "raw_aux_loss": 7.592869520187378,
+          "scale": 0.1,
+          "preclip_norm_BF16": 26.125,
+          "clip_factor": 0.03827751049655462
+        },
+        "D1": {
+          "main_CE": 2.9399389028549194,
+          "raw_aux_loss": 7.592869520187378,
+          "scale": 21.79455955895524,
+          "preclip_norm_BF16": 26.25,
+          "clip_factor": 0.03809523664399098
+        },
+        "B": {
+          "main_CE": 2.9399389028549194,
+          "raw_aux_loss": 2.223610818386078,
+          "scale": 0.1,
+          "preclip_norm_BF16": 26.125,
+          "clip_factor": 0.03827751049655462
+        }
+      },
+      "candidate": {
+        "D0": {
+          "weight_changed_vs_main": 3682,
+          "moment_changed_vs_main": 5879005,
+          "actual_delta_sq": 0.025156550295597713,
+          "difference_vs_main_sq": 2.0366079023573236e-07,
+          "gradient_difference_vs_main_sq": 1.555231193711188e-07,
+          "gradient_main_dot": 1.0044492640559568,
+          "gradient_sq": 1.004448922004542,
+          "finite": true,
+          "relative_update_difference_vs_main": 0.002845301512544053,
+          "clipped_gradient_main_cosine": 0.9999999418576853
+        },
+        "D1": {
+          "weight_changed_vs_main": 3312095,
+          "moment_changed_vs_main": 921146330,
+          "actual_delta_sq": 0.02520302567475352,
+          "difference_vs_main_sq": 0.0004499674132540932,
+          "gradient_difference_vs_main_sq": 0.008518012561663176,
+          "gradient_main_dot": 0.9982633662313347,
+          "gradient_sq": 1.0005950154834302,
+          "finite": true,
+          "relative_update_difference_vs_main": 0.13374116872614453,
+          "clipped_gradient_main_cosine": 0.9957535529495488
+        },
+        "B": {
+          "weight_changed_vs_main": 5805824,
+          "moment_changed_vs_main": 1357233266,
+          "actual_delta_sq": 0.025455585339584808,
+          "difference_vs_main_sq": 0.0008079968220109368,
+          "gradient_difference_vs_main_sq": 0.001905601335441126,
+          "gradient_main_dot": 1.004649738243561,
+          "gradient_sq": 1.0067553097765298,
+          "finite": true,
+          "relative_update_difference_vs_main": 0.17921708483619775,
+          "clipped_gradient_main_cosine": 0.9990531865772001
+        }
+      },
+      "main_only_actual_delta_L2": 0.15860812004835723,
+      "D1_vs_D0_effect_L2_multiplier": 47.004216648577014,
+      "passed": true
+    }
+  ],
+  "hypothetical_read_only_copied_state": true,
+  "original_checkpoint_untouched": true,
+  "no_trajectory_guarantee": true,
+  "calibration_sha256": "b0e59715fec4c92af2db7a6be84f87bb8867472cb8cd834ef76007d43e4643f2",
+  "code_sha256": "ba73a71a7628755a33d15bf2cc0e6c23d97eff4fcba06c52edfa83f2d516632a",
+  "wall_seconds": 65.22419238090515,
+  "gpu_hours": 0.018117831415600246,
+  "peak_allocated_bytes": 13440934400,
+  "gpu_uuid": "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573"
+}

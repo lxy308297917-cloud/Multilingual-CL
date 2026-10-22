@@ -1,0 +1,6 @@
+{
+  "original_sha256": "8b13835e21e2a65882aaba8878a6f829ee931befa9d04f878fcd606209c2dba7",
+  "D1_sha256": "cf52867c31f7bed6049e18abd4322860ca8f165d4a49265a76d0241978d3a94c",
+  "reverse_whitelist_exact_byte_parity": true,
+  "sole_training_arithmetic_change": "auxiliary backward multiplier .1 -> fixed ALPHA; inactive B branch same textual replacement. No other arithmetic or precision/order changes."
+}

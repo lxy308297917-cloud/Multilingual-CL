@@ -1,0 +1,23 @@
+{
+  "n": 16,
+  "selection": "16 lowest SHA256(strength-calibration-20261022:+event), event1..1073; original exact scheduled main2/aux8; all at Base",
+  "batches_sha256": "366cb883f894053715de05ba653fc9cc1958686115d0936863da374deb65428d",
+  "events": [
+    398,
+    322,
+    501,
+    756,
+    404,
+    723,
+    1039,
+    65,
+    313,
+    532,
+    796,
+    859,
+    496,
+    910,
+    1056,
+    644
+  ]
+}

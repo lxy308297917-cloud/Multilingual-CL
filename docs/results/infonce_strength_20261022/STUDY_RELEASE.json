@@ -1,0 +1,24 @@
+{
+  "git_commit": "2e1b36122f2f6225c6a5437bec219855d26a35a1",
+  "branch": "research/infonce-strength-20261022",
+  "original_numeric_commit": "8794d9d3b411d34ae4c4033d15523fb32e454f0c",
+  "frozen_unix": 1792655241.0812345,
+  "scope": "D1 only; original B/D0 reused after actual hash/state audit; no raw-data publication",
+  "sources": {
+    "analyze.py": "d0d5e3e118b602c3d476d2b9b193fafe97a3f1e86c455d177c996098b25097d7",
+    "aux_scoring.py": "048df01251d0325b0a5ad7c55371296be270ac1b89ad10afccf9b008fcc40d12",
+    "calibrate.py": "00664b6e9424d13b9b2e5c61394d45b66179942d87cfbc71737277adc892655d",
+    "endpoint_pipeline.py": "1fe99cd12f1d592a07faf773335eae37475b424bcdbcc31864fac01c6e15f533",
+    "evaluate_d1.py": "18fb78ee2dad737910f0058794ae66d7262cdd1f1c86972a4f9bea052b157dd4",
+    "evaluation_common.py": "962844531caccd6bca050e827629283773e6d82be7d02ae4063166f479a4d4de",
+    "numeric_check.py": "ba73a71a7628755a33d15bf2cc0e6c23d97eff4fcba06c52edfa83f2d516632a",
+    "pipeline.py": "5aa1bc515ff20d654fec37152069b725d6fa536811b89b6903a2d77f7c4d8e12",
+    "reading_scoring.py": "5a00549e060cf903d81b82f404fe6eaa9e88d407d0926258b3de2d738484b6c9",
+    "representation_d1.py": "eb4579f27882782c139668b8fb194d633905960c92cce84b29c2ae412cd24b61",
+    "reuse_evaluation.py": "c43cd46f3c286bb7f2807bf4412f11bb9fff18ff126ffb4260432a3bd58baacb",
+    "settings.py": "59cf16ac17cec0d1e0a41615dbd3a6bf209e06a1a4c7488764cf6d8aa0040e83",
+    "technical_parity.py": "04e6c7b66742beb7e4d1a8037c98f4d3483cdd2dbee508c1bf073591f9830d23",
+    "train_d1.py": "cf52867c31f7bed6049e18abd4322860ca8f165d4a49265a76d0241978d3a94c",
+    "worker.py": "4901ed8fb39f6c512615bce6159e758ed05661775907d5fe8175c88f8229afde"
+  }
+}

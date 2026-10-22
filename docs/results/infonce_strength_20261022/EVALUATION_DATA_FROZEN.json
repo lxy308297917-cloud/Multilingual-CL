@@ -1,0 +1,46 @@
+{
+  "frozen_unix": 1792654880.4004767,
+  "rows": 512,
+  "scored_rows": 511,
+  "counts": {
+    "sw_reading": 64,
+    "en_reading_generated": 64,
+    "en_reading_scored": 63,
+    "en_to_sw": 128,
+    "sw_to_en": 128,
+    "en_instruction": 128
+  },
+  "data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+  "source_inputs": {
+    "v2_reading_comparison": {
+      "path": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/evaluation_audit_v2/comparison.jsonl",
+      "sha256": "b2005fbdd1f61bd961fc3084540faf96629c348bc2e00a70cf1862a63a8e0653"
+    },
+    "translation": {
+      "path": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/translation.jsonl",
+      "sha256": "7be119951d3386eb3cc8852bd04320631062c2fb723e55af28caf4b95d64bf41"
+    },
+    "en_instruction": {
+      "path": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/en_instruction.jsonl",
+      "sha256": "85d035f1c96d9c9a6a828f64bbc775649e5f0ade6cc273deafd987ab678ac04c"
+    }
+  },
+  "accepted_reading_functions_sha256": "5a00549e060cf903d81b82f404fe6eaa9e88d407d0926258b3de2d738484b6c9",
+  "reading_original_source_sha256": "32541d93b5382874bd3197a0f40bf1eb6261933c28eaa27b5bbd7d2087d0976a",
+  "aux_scoring_byte_identical_sha256": "048df01251d0325b0a5ad7c55371296be270ac1b89ad10afccf9b008fcc40d12",
+  "caps": {
+    "sw_reading": 256,
+    "en_reading": 256,
+    "translation": 256,
+    "en_instruction": 1280
+  },
+  "batch": 4,
+  "generation": "identical old function call; greedy, model generation config inherited, explicit EOS/pad/use_cache; no math",
+  "original_generation_code": {
+    "reading": "f9ad9f3dd9cc3b90e613a089a9099eed906989b35a42bcdb4531dd89a5a20932",
+    "other": "ac52f3162fd089d4c536fc7d4d461887eb1df1da83903a809e42f7f9f539cabd"
+  },
+  "not_formal_test": true,
+  "source_exclusion_count": 1,
+  "source_exclusion_reason": "Source options contain embedded E/F/G; passage/stem mismatch. Flagged before D1 generation; full original batch64 still generated and retained."
+}

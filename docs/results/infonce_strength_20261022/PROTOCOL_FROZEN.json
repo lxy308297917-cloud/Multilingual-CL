@@ -1,0 +1,98 @@
+{
+  "frozen_unix": 1792654443.7740285,
+  "study": "one final fixed InfoNCE strength revision; exploratory, no official test",
+  "groups": {
+    "B": "original translationCE alpha.1",
+    "D0": "originalInfoNCE alpha.1",
+    "D1": "sameInfoNCE fixed calibratedalpha"
+  },
+  "reuse": "Require original numeric source+common+protocol+mainprefix+teacher hashes, state receipts,4293step token budgets and counts. No reuse if fails.",
+  "unchanged": {
+    "steps": 4293,
+    "input_tokens": 1536351,
+    "supervised_tokens": 599469,
+    "seed": 42,
+    "micro_batch": 1,
+    "gradient_accumulation": 2,
+    "full_lr_schedule_steps": 42465,
+    "warmup_steps": 2124,
+    "peak_lr": 5e-05,
+    "weight_decay": 0.01,
+    "clip_norm": 1,
+    "loss": "equal per-example mean shifted CE",
+    "AdamW_moments": "BF16, same torchAdamW policy as verified previous dense recipe",
+    "deterministic_algorithms": true,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "auxiliary": {
+    "layer": 10,
+    "pool": "content token mean",
+    "bank": 2000,
+    "temperature": 0.07,
+    "frequency": 4,
+    "pairs": 8,
+    "microbatch": 4
+  },
+  "calibration": {
+    "batches_sha256": "366cb883f894053715de05ba653fc9cc1958686115d0936863da374deb65428d",
+    "n": 16,
+    "model": "Base only; no optimizer advancement",
+    "formula": "alpha=median(.1*L2(g_CE)/L2(g_main))/median(L2(g_InfoNCE)/L2(g_main))",
+    "gradient_norm": "FP32 sum of squares of actual BF16 gradients over all338 unique trainable parameters; raw auxiliary gradients; no developer labels or task scores",
+    "fixed_after_once": true
+  },
+  "numeric_checks": {
+    "finite": true,
+    "actual_joint_gradients": "Original BF16 accumulation order main2 then auxiliarychunks; globalclip norm1; same AdamW BF16state; read-only copied state replay at D0 checkpoint2146 on calibration batches0 and1",
+    "strength_check": "D1 versus main-only candidate difference L2 must exceed D0-versus-main by >=2 on both fixed probes; nonzero BF16 differences required, no coefficient retry if fails",
+    "technical": "4step true longest-sample smoke plus checkpoint serialized reload; 4step/8step resume parity remains exact original engine requirement; separate from scientific train"
+  },
+  "training": {
+    "updates": 4293,
+    "main_input": 1536351,
+    "main_supervised": 599469,
+    "seed": 42,
+    "from": "same Base; independent zero optimizer; separate process RNG seed42",
+    "checkpoint_steps": [
+      2146,
+      4293
+    ],
+    "no_intermediate_task_selection": true,
+    "nonfinite": "stop",
+    "persistent_numerical_anomaly": "stop if mainCE>20 for100 consecutive steps; log all, never silently change precision"
+  },
+  "evaluation": {
+    "reading": "v2 accepted reading scorer; SW64,EN64generated in original batch4; known malformed RACE high17110 excluded from scoring beforeD1 scores:validEN63; retain all64raw",
+    "translation": "original frozen FLORES original dev128 sourcegroups bidirectional256; original prompt/generation256/batch4; chrF++",
+    "instruction": "original frozen train-source128 strict; original prompt/cap1280/batch4",
+    "math": "excluded; scorer failed",
+    "generation": "same inherited config and greedy batch4, use same cached B/D0 answers only with prompt/data/model/code identity verified",
+    "representation": "fixed1000 independent diagnostic pairs; hiddenstate10mean, fixed BaseEN/currentSW. Pairwise P@1 average bidirectional fixed1000candidatepool, positive-negative mean gap, currentEN/SW secondary",
+    "bootstrap": "10000 paired source-cluster resamples seed42; retrieval uses fixedcandidatepool correctness indicators; no mixed-task average",
+    "all_endpoints": "evaluate complete budget regardless alignment gate outcome; no checkpoint selection"
+  },
+  "decision": {
+    "alignment": "D1 minus D0 fixedanchor bidirectional P@1 paired95CI lower>0 and positive-negativegap lower>0",
+    "primary": "D1 minus B ENtoSWchrF++ paired95CI lower>0",
+    "constraints_vs_B": {
+      "SWreading_F1_lower": -2,
+      "SWtoEN_chrFpp_lower": -1,
+      "ENreading_accuracy_lower": -2,
+      "ENinstruction_strict_lower": -2
+    },
+    "interpretation": "Exploratory one-seed noninferiority relative B, not comprehensive English retention. Wide intervals mean uncertain. Only pass permits discussion secondseed; no automatic expansion.",
+    "failure": "No independent alignment improvement or no task gain beyondB ->stop fixedprototype; no alpha/layer/pool/temperature search"
+  },
+  "budget": {
+    "calibration_GPUh": 1,
+    "numeric_technical_GPUh": 0.75,
+    "D1_training_GPUh": 3,
+    "evaluation_GPUh": 1.5,
+    "representation_GPUh": 0.5,
+    "total_new_GPUh": 6.75,
+    "conditional_reference_reruns": "Not authorized under this cap; if reuse fails report concrete mismatch and freeze matching plan before score, do not silently mix.",
+    "account_gpu_cap": 4,
+    "disk_GB_ceiling": 45
+  },
+  "historical_protocol": "Original B/D0 run identity frozen; original deadline and temporary5GPU exception NOT inherited"
+}

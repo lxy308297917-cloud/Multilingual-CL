@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "all_model_coordinates_bitwise_equal": 1543714304,
+  "optimizer_tensors": 338,
+  "optimizer_scheduler_counts_auxcursor_rng_bitwise_equal": true,
+  "continuous8": "/data0/users/lixiaoyang/models/checkpoint/infonce_strength_20261022/technical/continuous8/checkpoint_000008",
+  "resumed8": "/data0/users/lixiaoyang/models/checkpoint/infonce_strength_20261022/technical/resume4to8/checkpoint_000008",
+  "checkpoints_sha256": {
+    "/data0/users/lixiaoyang/models/checkpoint/infonce_strength_20261022/technical/first4/checkpoint_000004": "1fc52d08bcc2dd05e0ea0dbeb3cefc227c7cc188dcb8d95c709fe706a48412b5",
+    "/data0/users/lixiaoyang/models/checkpoint/infonce_strength_20261022/technical/continuous8/checkpoint_000008": "e0b9ce54dbcfeadc977881e3418ed22722578f31a54293adf66f83b0b1c3fb26",
+    "/data0/users/lixiaoyang/models/checkpoint/infonce_strength_20261022/technical/resume4to8/checkpoint_000008": "15f6c4ca3626065bddfaeed0067eaf49db3e729689197fb4fd93cadc355d1f70"
+  },
+  "wall_seconds": 218.2498905658722,
+  "gpu_hours": 0.060624970131450226,
+  "alpha": 21.79455955895524
+}

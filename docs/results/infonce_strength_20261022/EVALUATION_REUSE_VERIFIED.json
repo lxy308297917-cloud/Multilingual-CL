@@ -1,0 +1,56 @@
+{
+  "models": {
+    "Base": {
+      "model_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+      "data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+      "source_receipts": {
+        "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/Base": {
+          "prediction_sha256": "9e57a8a8509a68ab071d46e93f640fe16d61b30a18c07e944724be7d783f06a4",
+          "config_sha256": "a069e506219940c7549ad1f1dc55302d80fe930bcb3877f37e0b88b8ff5289d4",
+          "done_sha256": "2ae23afd319b63c49cd8769d916891e85d9dd115772566203b11b79bda7bfcbf"
+        },
+        "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/evaluation_audit_v2/generation/Base": {
+          "prediction_sha256": "a80f92ca379742e8f1b999a01559c5d12fa2b4d72a24e89895a0b8455dc606c7",
+          "config_sha256": "d9343b06c2506c20b1fb623216f04843b510a84f473ef0b6e629ef6cd3e14cf5",
+          "done_sha256": "13f6df2733a26091a4c9aac714f9ce2cba3c483a1c22ddabdb03a493310854df"
+        }
+      },
+      "512_unique_predictions_rescored_unchanged": true
+    },
+    "B": {
+      "model_sha256": "a3ded2e2b4aa15c4a99d6a8b0f5c0e082fd9bd419fc98c6d4369daa7e650469e",
+      "data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+      "source_receipts": {
+        "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/B": {
+          "prediction_sha256": "46b6ddb9294b6f16cc1feeec4ce80d47f163f3ae60d8fe4aa6f03fc9dbf85d43",
+          "config_sha256": "654e53b34b8917e87114d58190d5159777cdb63eb23f292c2e131b8129530c02",
+          "done_sha256": "3952c1791cb9d1921f0db095ddda82c321f43bf21f7266067704cbd68d481b6c"
+        },
+        "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/evaluation_audit_v2/generation/B": {
+          "prediction_sha256": "a218f8e2cc937924325ab6660db0c78c3162ea6fd6c12403c4f605b026780550",
+          "config_sha256": "540d8b10e4909d0d59e6e499b02fb340e1a8b7ac3bbeea84c67a17258066673a",
+          "done_sha256": "f8da8cfc45434ce15934103573ad3f298a690cb501bf04bb614c33021d0bcc92"
+        }
+      },
+      "512_unique_predictions_rescored_unchanged": true
+    },
+    "D0": {
+      "model_sha256": "03482666be35b0c35c235a2bc3739c13e83b963e5b1c3c44a232489c6e943344",
+      "data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+      "source_receipts": {
+        "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/D": {
+          "prediction_sha256": "8ad7001d5770b872604aaba10bd5464705a43a36c5a1244405e9090ad0410d58",
+          "config_sha256": "4712e2c1776ceb9fa2c93c9a979bfdc69b695982825adbf33826d601a19fbb6d",
+          "done_sha256": "0d51110b9fe0dab2ede572fc1a85820756036e435be2305051be1aa49b770130"
+        },
+        "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/evaluation_audit_v2/generation/D": {
+          "prediction_sha256": "1d901c16bea56ac2f4c6b1d3b61be0da54f49cd53cd77b98313e8770684c777a",
+          "config_sha256": "f4f8b1456002ac661217ad37c5550b6e805885c1c4aecaf1ea6fa6f11376e894",
+          "done_sha256": "33b11ce000f14269c36e404a4f6b72f750e9962f68e1301d5a79cd340e1ae86d"
+        }
+      },
+      "512_unique_predictions_rescored_unchanged": true
+    }
+  },
+  "limitations": "Reused exact historical prompt/order/batch/cap policy, preserved512subset. Deterministic CUDA policy and config verified by code and manifests; not new replay of every cached answer. No cross-protocol pooling within any task."
+}

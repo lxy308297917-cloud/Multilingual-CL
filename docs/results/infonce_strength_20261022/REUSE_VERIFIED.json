@@ -1,0 +1,72 @@
+{
+  "checked_unix": 1792654510.9682243,
+  "original_code_sha256": {
+    "train.py": "8b13835e21e2a65882aaba8878a6f829ee931befa9d04f878fcd606209c2dba7",
+    "common.py": "f49d670d54eec0fbfdc7d6f219bef20a48ac978d16f976da1f33811ea132b093",
+    "protocol.json": "05edd4187fd29dbcb16e1c3175fb89bed8eb1d2729aecee17c7d439afb2bc242"
+  },
+  "numeric_commit": "8794d9d3b411d34ae4c4033d15523fb32e454f0c",
+  "models": {
+    "B": {
+      "config_sha256": "6eb60c4866cdfb0dcea9a1166eaf0219de6390984633f2f9fa1235fbdd0c4ce5",
+      "steps_sha256": "59ea9b2399c22f40666815f14141f76152d9b30d968c00f8c29d576f45acbeaf",
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "aux_input": 1735058,
+        "aux_supervised": 472665,
+        "aux_pairs": 8584,
+        "aux_padded_processed": 1928288
+      },
+      "checkpoints": {
+        "2146": {
+          "receipt_sha256": "353b451b4d6ce3f6ba88329d5d8cf8a621b924d8a316e219c7023c367bcbaaf6",
+          "model_sha256": "3bdac43de1846e72d8c745ef07829ef7a6336b132609a5f328628c3ddd2abf49",
+          "state_sha256": "2a7329961e27a0b38d601f2e6058e2c46aec9aa5291db72123d93d2646cfc255",
+          "state_step_scheduler_verified": true,
+          "moments": "BF16 all338"
+        },
+        "4293": {
+          "receipt_sha256": "19714c68103d0144a9d3c45fc46854487d8fc6d1a06c2b9c8814f67c0b1ed703",
+          "model_sha256": "a3ded2e2b4aa15c4a99d6a8b0f5c0e082fd9bd419fc98c6d4369daa7e650469e",
+          "state_sha256": "2713b5575758fbeb20dcfbadbec5ee25641a34f94daee12e15a4d754ee4bcd7e",
+          "state_step_scheduler_verified": true,
+          "moments": "BF16 all338"
+        }
+      },
+      "elapsed_seconds": 6324.77351029031
+    },
+    "D0": {
+      "config_sha256": "c5a1b0e60f68daf8e99b236ab8457c61b13bcba34bf13583da4c3c80f57b4c63",
+      "steps_sha256": "f6932af344a4224981172db50e72cce404200e39eb9b0258c0ad77834664d978",
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "aux_input": 290693,
+        "aux_supervised": 0,
+        "aux_pairs": 8584,
+        "aux_padded_processed": 420168
+      },
+      "checkpoints": {
+        "2146": {
+          "receipt_sha256": "893859d9adc23a0411e0e5d5ff99c1303b979a90e48f2508b2c27e017cb8e5a2",
+          "model_sha256": "fa5167c88560eecd9523b4cca5b66703050c9daca3fd71a1d458bdaa815c4a64",
+          "state_sha256": "fa5b62be891f2bc95fab9b38c7f3180cdd20f2cb455494e353162e17f70eafe2",
+          "state_step_scheduler_verified": true,
+          "moments": "BF16 all338"
+        },
+        "4293": {
+          "receipt_sha256": "40b75fea2472be8c85353768e7aecd48520595045296a651b8112162894a3755",
+          "model_sha256": "03482666be35b0c35c235a2bc3739c13e83b963e5b1c3c44a232489c6e943344",
+          "state_sha256": "288bf0939b81e862266c089026af159a59d7701af5838d23dfa7a8f718cbae18",
+          "state_step_scheduler_verified": true,
+          "moments": "BF16 all338"
+        }
+      },
+      "elapsed_seconds": 4976.981690336019
+    }
+  },
+  "passed": true,
+  "reuse_training": true,
+  "limitation": "Verified manifests/raw files/state receipts and static exact code identity; not a fresh rerun of full historical trajectory."
+}
