@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-10-23T02:54:47.537133",
+  "freeze_sha256": "a4588e38175a0df8f76b9ff7508a97ff87a91c2d3749803d69f1cacb73875db5",
+  "collector_sha256": "f8a7c67019d1f21e12e451ef883fa8faeb9962888899ff00de79916fbeea9410",
+  "both_CPU_preflights_passed": true,
+  "both_queue_configurations_validated": true,
+  "Python_compile_passed": true,
+  "Base_actual_generation_concurrency": 32,
+  "items_each": 500,
+  "difficulty_tiers": 4,
+  "items_each_tier": 125,
+  "queue_snapshots": {
+    "copsd-sw4b-poly32-base-v1": {
+      "phase": "running",
+      "monitor_PID": 440558,
+      "parent_PID": 440594,
+      "GPU_indices": [
+        4
+      ],
+      "started_at": "2026-10-23 02:52:01"
+    },
+    "copsd-sw4b-poly32-sw20-v1": {
+      "phase": "waiting",
+      "monitor_PID": 440567,
+      "parent_PID": null,
+      "GPU_indices": null,
+      "started_at": null
+    }
+  },
+  "max_account_GPUs": 4,
+  "scope": "Twofixedformaltest reports, not newtraining. SW20waitsaccountquota, Basealreadygenerating. Newc32uniformpair, no relabelofMGSM/GSMc16 outputs, no test-drivenselection. No scores availableyet."
+}

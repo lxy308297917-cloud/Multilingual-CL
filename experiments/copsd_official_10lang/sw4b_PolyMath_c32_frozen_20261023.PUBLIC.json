@@ -1,0 +1,57 @@
+{
+  "frozen_at": "2026-10-23T02:50:06.892924",
+  "protocol": "project_SW4B_PolyMath500_single_vllm8192_c32_v1",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "model_lock_relative": "logs/copsd_official_10lang/qwen3_4b_resource_model_20261022.PRIVATE.json",
+  "model_lock_sha256": "da93cc99e733b95250ab5934e66413d3926580d20a2a43c8f8d2acf35a78cb7a",
+  "max_account_GPUs": 4,
+  "inputs": {
+    "polymath": {
+      "relative": "data/copsd_official_20261015/polymath_project_eval_v1/polymath_all500_sw.json",
+      "sha256": "37a4629f84ac022539094acb74c5b0e26e1a0a5ebb1337444751ef755e47e468",
+      "items": 500,
+      "language": "sw"
+    }
+  },
+  "cases": {
+    "Base": {
+      "adapter_relative": null,
+      "adapter_sha256": null,
+      "run_ids": {
+        "polymath": "sw4b_poly32_Base_polymath_sw_20261023_v1"
+      }
+    },
+    "SW20": {
+      "adapter_relative": "models/checkpoint/copsd_sw4b_server_pilot20_v1/sw_4b_server_pilot20_safe2700_horizon100_seed42_20261022_v1/checkpoint-20",
+      "adapter_sha256": "0d673e7df9b3f04f67fd5514be96f0039e0ede03e66eed3ef119a5cb7cc4f28b",
+      "run_ids": {
+        "polymath": "sw4b_poly32_SW20_polymath_sw_20261023_v1"
+      }
+    }
+  },
+  "max_new_tokens": 8192,
+  "max_num_seqs": 32,
+  "samples": 1,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "seed": 42,
+  "scope": "PredeclaredPolyMathsupplement fromoriginalresearchplan, fourtiers125each. One alreadyfixed4BBase/checkpoint20 pair, not test-drivencheckpoint/language selection. Newnative32 protocol uniformlyusedforbothmodels, originalprompts/scorer/n1/8192 unchanged. MGSM/GSMnative16 reportsstayseparate, no mixedprotocolaverage.",
+  "selection_status": "SWseed42/43developmenttargetgains observed, Englishseed43 andJAtrainingpending. Thisformaltest doesnotpromotecandidates orchoosehyperparameters.",
+  "runtime_code_sha256": {
+    "evaluate_sw4b_polymath8192_c32.py": "2d7290a03faabdf5ea3ae23304c8d948365813a5400d5b5484fe18ac641a4d89",
+    "run_sw4b_polymath8192_c32.sh": "110d26e8dc0ab5d520f6f7ffc0adf5f31d84760a032b5bfdcb9e17d11d730efe",
+    "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d"
+  },
+  "engineering_adoption_evidence": {
+    "report": "eval_concurrency4b_completed_20261022.PUBLIC.json",
+    "sha256": "7d2f5f1e66472a57e174bf2711228b262b214cb876143e24aa64d755243e90de",
+    "observed_generation_wall_speedup": 1.5688467798621437,
+    "sampled_minimum_free_MiB": 2019,
+    "scope": "Engineeringtrialnotqualityequivalence; sampledoutputschange despiteequalquestionseeds. BothnewPolyMathmodels use32, no relabel/reuseof16outputs."
+  },
+  "source_plan": "Original user requestedPolyMathfourtiers as formal mathematicalgeneralization supplement; thisboundedstage completesmissing4BPolyMath reporting only, no newtraining/promptgrid."
+}
