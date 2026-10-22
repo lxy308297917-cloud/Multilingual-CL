@@ -1,0 +1,7 @@
+{
+  "samples": 117,
+  "file_sha256": "ced3048f4dc077943e1f36c1be9c25b5b377c64fc7ce1a808293f17337a6e4e6",
+  "sampling_seconds": 5,
+  "coverage": "Remaining generation workers only, started after initial evaluation began; does not reconstruct earlier mechanism peaks",
+  "GPU_context_created": false
+}

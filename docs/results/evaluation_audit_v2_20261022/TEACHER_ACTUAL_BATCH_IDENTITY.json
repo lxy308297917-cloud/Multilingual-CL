@@ -1,0 +1,55 @@
+{
+  "original_batch_shape_replay": [
+    {
+      "max_abs": 0.0,
+      "relative_L2": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "relative_L2": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "relative_L2": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "relative_L2": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "relative_L2": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "relative_L2": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "relative_L2": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "relative_L2": 0.0,
+      "bitwise_equal": true
+    }
+  ],
+  "regrouped_eight": {
+    "max_abs": 2.469329833984375,
+    "mean_relative_L2": 0.0014256456634029746,
+    "mean_cosine_difference": 1.4826655387878418e-06
+  },
+  "all_original_shape_bitwise_equal": true,
+  "teacher_sha256": "0fa2f687663e5330b4f4f9f6f4d7d095230d35cbc4ab5fa886f02741e91e3b24",
+  "model_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+  "wall_seconds": 9.986526489257812,
+  "gpu_hours": 0.002774035864406162,
+  "note": "Original cache identity is tested with identical source batch size8 and right-padding shapes; regrouped BF16 SDPA variation is separately measured, not treated as row mismatch."
+}

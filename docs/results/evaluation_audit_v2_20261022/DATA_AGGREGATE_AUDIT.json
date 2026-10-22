@@ -1,0 +1,45 @@
+{
+  "data_manifest_sha256": "bfcf5a7b84ca6dc1c15d6895c50167d9373eec1a0e565f3a3895590ad1e2bac4",
+  "acceptance_rows": 36,
+  "comparison_rows": 192,
+  "same_source_role_overlap": 0,
+  "sources": {
+    "/data0/users/lixiaoyang/data/sw_d2_next_dev_20261008/sources/race-all-train-e37ee6f.parquet": "d9986432dc7b5ced3d3e9372573eafdcfa599920bb5e65bbbdc245df3abfd09e",
+    "/data0/users/lixiaoyang/data/sw_reading_kenswquad_20261009/train.parquet": "405daeda2b8be6f76749fcfc7421781f75a00d031ba1f405baadae807ac7974a",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/hf_cache/datasets/gsm8k/main/0.0.0/740312add88f781978c0658806c59bc2815b9866/gsm8k-train.arrow": "6146bca074f4c6c5e07de7e96cc968adab3833dbdafeda21830f27558eea3d9b"
+  },
+  "near_checks": {
+    "en_reading": {
+      "candidates": 350,
+      "threshold": 0.85,
+      "blocked_fields": 182102,
+      "max_selected": 0.5648196935653687
+    },
+    "sw_reading": {
+      "candidates": 350,
+      "threshold": 0.85,
+      "blocked_fields": 182102,
+      "max_selected": 0.48947370052337646
+    },
+    "en_math": {
+      "threshold": 0.72,
+      "blocked_questions_and_main_fields": 179494,
+      "max_selected": 0.4642163813114166
+    }
+  },
+  "full_main_samples": 84930,
+  "prior_exclusion_unique_files": 244,
+  "scores_used_for_selection": false,
+  "no_formal_test": true,
+  "source_QA_counts": {
+    "gold_corrected": 1,
+    "question_clarified": 1,
+    "unit_annotated": 76,
+    "same_source_near_duplicate_families_excluded": 2
+  },
+  "limits": [
+    "Source-GSM training-side diagnostic with one disclosed answer correction and one clarified whole-hour question; not off-the-shelf official GSM8K",
+    "Assistant source review is not independent human gold; count noun semantics are not independently verified",
+    "Two pre-generation near-duplicate families excluded after top-neighbor review; lexical exclusion is not proof of complete semantic separation"
+  ]
+}

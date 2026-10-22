@@ -1,0 +1,262 @@
+{
+  "completed_unix": 1792647515.9630094,
+  "new_scientific_training": 0,
+  "new_generation_rows": 960,
+  "same192_per_model": true,
+  "all_five_models_complete": true,
+  "source_role_overlap": 0,
+  "acceptance_cases": 290,
+  "gradient_probes": 21,
+  "gradient_model_states": 7,
+  "representation_models": 5,
+  "raw_artifact_verified_original_training_endpoints": 7,
+  "raw_original_development_endpoints_rehashed": 9,
+  "models": {
+    "Base": {
+      "name": "Base",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 28661
+      },
+      "wall_seconds": 478.4385812282562,
+      "gpu_hours": 0.13289960622787475,
+      "physical_peak_mib_observed": 3829,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "a80f92ca379742e8f1b999a01559c5d12fa2b4d72a24e89895a0b8455dc606c7",
+      "not_formal_test": true
+    },
+    "A": {
+      "name": "A",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 9151
+      },
+      "wall_seconds": 273.5794937610626,
+      "gpu_hours": 0.07599430408742693,
+      "physical_peak_mib_observed": 3829,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "e9efac40260e425dd67a4b9a4cd1b76055cceff67417b0b78b7f5ae5bfe12539",
+      "not_formal_test": true
+    },
+    "B": {
+      "name": "B",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 7981
+      },
+      "wall_seconds": 195.19402241706848,
+      "gpu_hours": 0.05422056217988332,
+      "physical_peak_mib_observed": 3817,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "a218f8e2cc937924325ab6660db0c78c3162ea6fd6c12403c4f605b026780550",
+      "not_formal_test": true
+    },
+    "C": {
+      "name": "C",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 6797
+      },
+      "wall_seconds": 178.71995615959167,
+      "gpu_hours": 0.04964443253146278,
+      "physical_peak_mib_observed": 3821,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "8a3091d069a37aa0c348701ee3def604600c6d63fb1600da81b1dfd3fee35beb",
+      "not_formal_test": true
+    },
+    "D": {
+      "name": "D",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 7495
+      },
+      "wall_seconds": 180.84306168556213,
+      "gpu_hours": 0.05023418406645457,
+      "physical_peak_mib_observed": 3823,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "1d901c16bea56ac2f4c6b1d3b61be0da54f49cd53cd77b98313e8770684c777a",
+      "not_formal_test": true
+    }
+  },
+  "mechanism_costs": {
+    "Base": {
+      "wall_seconds": 89.9813380241394,
+      "gpu_hours": 0.02499481625027127,
+      "model": "Base",
+      "read_only": true,
+      "peak_allocated_bytes": 7666797056,
+      "model_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+    },
+    "A": {
+      "wall_seconds": 19.122125387191772,
+      "model": "A",
+      "read_only": true
+    },
+    "B": {
+      "wall_seconds": 117.15720987319946,
+      "gpu_hours": 0.03254366954167684,
+      "model": "B",
+      "read_only": true,
+      "peak_allocated_bytes": 9013471744,
+      "model_sha256": "a3ded2e2b4aa15c4a99d6a8b0f5c0e082fd9bd419fc98c6d4369daa7e650469e"
+    },
+    "C": {
+      "wall_seconds": 159.60001230239868,
+      "gpu_hours": 0.04433333688312106,
+      "model": "C",
+      "read_only": true,
+      "peak_allocated_bytes": 9013471744,
+      "model_sha256": "e13ec74ef4df9e2ded483d169c340d5a718775517aa7de29cd6cfc2126018161"
+    },
+    "D": {
+      "wall_seconds": 118.43485379219055,
+      "gpu_hours": 0.03289857063028547,
+      "model": "D",
+      "read_only": true,
+      "peak_allocated_bytes": 9013471744,
+      "model_sha256": "03482666be35b0c35c235a2bc3739c13e83b963e5b1c3c44a232489c6e943344"
+    },
+    "B-mid": {
+      "wall_seconds": 219.7520453929901,
+      "gpu_hours": 0.061042234897613526,
+      "model": "B-mid",
+      "read_only": true,
+      "peak_allocated_bytes": 9013471744,
+      "model_sha256": "3bdac43de1846e72d8c745ef07829ef7a6336b132609a5f328628c3ddd2abf49"
+    },
+    "C-mid": {
+      "wall_seconds": 211.10332369804382,
+      "gpu_hours": 0.058639812337027655,
+      "model": "C-mid",
+      "read_only": true,
+      "peak_allocated_bytes": 9013471744,
+      "model_sha256": "aec5c83c972b4f44e5b6f266988c11e7382cc5460a8d2d127398dd39449264e9"
+    },
+    "D-mid": {
+      "wall_seconds": 166.75548672676086,
+      "gpu_hours": 0.046320968667666114,
+      "model": "D-mid",
+      "read_only": true,
+      "peak_allocated_bytes": 9013471744,
+      "model_sha256": "fa5167c88560eecd9523b4cca5b66703050c9daca3fd71a1d458bdaa815c4a64"
+    }
+  },
+  "teacher_batch_identity": {
+    "original_batch_shape_replay": [
+      {
+        "max_abs": 0.0,
+        "relative_L2": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "max_abs": 0.0,
+        "relative_L2": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "max_abs": 0.0,
+        "relative_L2": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "max_abs": 0.0,
+        "relative_L2": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "max_abs": 0.0,
+        "relative_L2": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "max_abs": 0.0,
+        "relative_L2": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "max_abs": 0.0,
+        "relative_L2": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "max_abs": 0.0,
+        "relative_L2": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "regrouped_eight": {
+      "max_abs": 2.469329833984375,
+      "mean_relative_L2": 0.0014256456634029746,
+      "mean_cosine_difference": 1.4826655387878418e-06
+    },
+    "all_original_shape_bitwise_equal": true,
+    "teacher_sha256": "0fa2f687663e5330b4f4f9f6f4d7d095230d35cbc4ab5fa886f02741e91e3b24",
+    "model_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "wall_seconds": 9.986526489257812,
+    "gpu_hours": 0.002774035864406162,
+    "note": "Original cache identity is tested with identical source batch size8 and right-padding shapes; regrouped BF16 SDPA variation is separately measured, not treated as row mismatch."
+  },
+  "worker_accounted_gpu_hours": 0.6759553796052933,
+  "generation_gpu_hours": 0.36299308909310235,
+  "mechanism_and_representation_gpu_hours": 0.30885914656851027,
+  "workers": [
+    {
+      "gpu_uuid": "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573",
+      "pid": 261471,
+      "started_unix": 1792645084.598617,
+      "finished_unix": 1792645725.2719948,
+      "wall_gpu_hours": 0.1779648271534178
+    },
+    {
+      "gpu_uuid": "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a",
+      "pid": 261472,
+      "started_unix": 1792645090.8863387,
+      "finished_unix": 1792645561.1784124,
+      "wall_gpu_hours": 0.13063668714629278
+    },
+    {
+      "gpu_uuid": "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573",
+      "pid": 266008,
+      "started_unix": 1792645878.1261754,
+      "finished_unix": 1792646632.548245,
+      "wall_gpu_hours": 0.20956168598598904
+    },
+    {
+      "gpu_uuid": "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a",
+      "pid": 266009,
+      "started_unix": 1792645884.0794983,
+      "finished_unix": 1792646452.1313438,
+      "wall_gpu_hours": 0.15779217931959363
+    }
+  ],
+  "physical_generation_peak_mib_from_batches": 3829,
+  "physical_sampler_observed_peak_mib": {
+    "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573": 3829,
+    "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a": 3823
+  },
+  "physical_sampler_limits": "Sampler covers latter evaluation/identity block; per-model batch physical checks cover full individual evaluation. Earlier mechanism physical peaks were not sampled; torch allocator peaks are not physical peaks.",
+  "ceiling_gpu_hours": 8,
+  "all_jobs_started_before1630": true,
+  "all_jobs_finished_before1715": true,
+  "scorer_source_unchanged_since_acceptance": true,
+  "no_new_hyperparameter_selection": true,
+  "original_v1_POSTHOC_preserved": true,
+  "training_expansion_authorized": false,
+  "bounded_execution_and_reporting_complete": true,
+  "all_scientific_acceptance_conditions_met": false,
+  "validated_natural_math_automatic_scoring_obtained": false,
+  "independent_human_validation_obtained": false,
+  "math_validity": "FAILED; original frozen numbers preserved, no ability ranking",
+  "assistant_final_answer_reviewed_occurrences": 320,
+  "assistant_unique_response_reviews": 281,
+  "future_uncompleted_targets_not_executed": [
+    "Reliable natural-response mathematical automatic scoring on unused independent validation",
+    "Independent human confirmation of source labels and assistant judgments"
+  ],
+  "no_more_training_or_generations_released": true
+}

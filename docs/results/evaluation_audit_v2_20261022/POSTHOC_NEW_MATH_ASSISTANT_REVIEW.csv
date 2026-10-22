@@ -1,0 +1,6 @@
+model,denominator,correct_final_observed,wrong_or_no_target_observed,unclear_including_source_defect,assistant_correct_fraction_percent,assistant_correct_or_unclear_upper_percent,v2_frozen_scorer_missed_assistant_correct,v2_frozen_scorer_false_positive_vs_review,status
+Base,64,49,12,3,76.5625,81.25,1,0,"POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+A,64,22,39,3,34.375,39.0625,22,0,"POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+B,64,25,37,2,39.0625,42.1875,24,0,"POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+C,64,22,40,2,34.375,37.5,22,0,"POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+D,64,26,36,2,40.625,43.75,25,0,"POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"

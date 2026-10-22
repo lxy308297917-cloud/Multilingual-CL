@@ -1,0 +1,28 @@
+{
+  "teacher_sha256": "0fa2f687663e5330b4f4f9f6f4d7d095230d35cbc4ab5fa886f02741e91e3b24",
+  "rows": 2000,
+  "dimensions": 1536,
+  "layer": 10,
+  "raw_norm_quantiles": [
+    200.15394592285156,
+    399.93878173828125,
+    656.6322021484375,
+    1085.318115234375,
+    1632.623779296875
+  ],
+  "normalized_target_mean_norm_squared": 0.9987232089042664,
+  "off_diagonal_cosine_quantiles": [
+    0.9879124760627747,
+    0.9978532195091248,
+    0.998924732208252,
+    0.9993869066238403,
+    0.9998791813850403
+  ],
+  "off_diagonal_cosine_mean": 0.998722493648529,
+  "normalized_per_dimension_variance_mean": 8.317326205542486e-07,
+  "normalized_variance_trace": 0.0012775412760674953,
+  "candidate_uniform_cross_entropy_log2000": 7.600902557373047,
+  "temperature": 0.07,
+  "interpretation": "Descriptive common-direction dominance of original uncentered mean-pooled target vectors. Does not establish that centering or changing pooling improves tasks.",
+  "no_new_training_or_layer_selection": true
+}

@@ -1,0 +1,78 @@
+{
+  "methods": {
+    "Base": {
+      "name": "Base",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 28661
+      },
+      "wall_seconds": 478.4385812282562,
+      "gpu_hours": 0.13289960622787475,
+      "physical_peak_mib_observed": 3829,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "a80f92ca379742e8f1b999a01559c5d12fa2b4d72a24e89895a0b8455dc606c7",
+      "not_formal_test": true
+    },
+    "A": {
+      "name": "A",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 9151
+      },
+      "wall_seconds": 273.5794937610626,
+      "gpu_hours": 0.07599430408742693,
+      "physical_peak_mib_observed": 3829,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "e9efac40260e425dd67a4b9a4cd1b76055cceff67417b0b78b7f5ae5bfe12539",
+      "not_formal_test": true
+    },
+    "B": {
+      "name": "B",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 7981
+      },
+      "wall_seconds": 195.19402241706848,
+      "gpu_hours": 0.05422056217988332,
+      "physical_peak_mib_observed": 3817,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "a218f8e2cc937924325ab6660db0c78c3162ea6fd6c12403c4f605b026780550",
+      "not_formal_test": true
+    },
+    "C": {
+      "name": "C",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 6797
+      },
+      "wall_seconds": 178.71995615959167,
+      "gpu_hours": 0.04964443253146278,
+      "physical_peak_mib_observed": 3821,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "8a3091d069a37aa0c348701ee3def604600c6d63fb1600da81b1dfd3fee35beb",
+      "not_formal_test": true
+    },
+    "D": {
+      "name": "D",
+      "rows": 192,
+      "counts": {
+        "prompt_tokens": 84992,
+        "generated_tokens": 7495
+      },
+      "wall_seconds": 180.84306168556213,
+      "gpu_hours": 0.05023418406645457,
+      "physical_peak_mib_observed": 3823,
+      "peak_allocated_bytes": 3543827968,
+      "predictions_sha256": "1d901c16bea56ac2f4c6b1d3b61be0da54f49cd53cd77b98313e8770684c777a",
+      "not_formal_test": true
+    }
+  },
+  "new_answers": 960,
+  "all_models_complete_same192_ids": true,
+  "scorer_frozen_before_first_generation": true,
+  "v1_and_POSTHOC_are_separate_from_v2": true
+}

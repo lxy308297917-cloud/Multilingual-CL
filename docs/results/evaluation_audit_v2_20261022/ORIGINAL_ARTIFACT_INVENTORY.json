@@ -1,0 +1,148 @@
+{
+  "checked_unix": 1792646561.630332,
+  "public_snapshot": "67a16e0eae725d90b7217394fbd6116e4bbe4201",
+  "dense_training": {
+    "A": {
+      "steps": 4293,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/A/checkpoint_004293/model",
+      "model_bytes": 3087467144,
+      "actual_model_sha256_read_this_task": "5c7aa453b56138bdc6dac51e844d76a2c406a13684549f6216c97ee0cc7ad871",
+      "optimizer_state": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/A/checkpoint_004293/state.pt",
+      "optimizer_state_exists": true,
+      "optimizer_state_sha256_read_and_loaded_this_task": false,
+      "raw_step_log_sha256": "d36f20b98f8060cc343e3d59076d554c9e7abbd24f53427f9bf4b9713e55417e",
+      "scope": "Existing model loaded for fresh true-Qwen diagnostics/evaluation; original training not rerun"
+    },
+    "B": {
+      "steps": 4293,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/B/checkpoint_004293/model",
+      "model_bytes": 3087467144,
+      "actual_model_sha256_read_this_task": "a3ded2e2b4aa15c4a99d6a8b0f5c0e082fd9bd419fc98c6d4369daa7e650469e",
+      "optimizer_state": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/B/checkpoint_004293/state.pt",
+      "optimizer_state_exists": true,
+      "optimizer_state_sha256_read_and_loaded_this_task": true,
+      "raw_step_log_sha256": "59ea9b2399c22f40666815f14141f76152d9b30d968c00f8c29d576f45acbeaf",
+      "scope": "Existing model loaded for fresh true-Qwen diagnostics/evaluation; original training not rerun"
+    },
+    "C": {
+      "steps": 4293,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/C/checkpoint_004293/model",
+      "model_bytes": 3087467144,
+      "actual_model_sha256_read_this_task": "e13ec74ef4df9e2ded483d169c340d5a718775517aa7de29cd6cfc2126018161",
+      "optimizer_state": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/C/checkpoint_004293/state.pt",
+      "optimizer_state_exists": true,
+      "optimizer_state_sha256_read_and_loaded_this_task": true,
+      "raw_step_log_sha256": "ce41ef4dd8955f47ea989963ec1ac00bdd5ebaf96eb2a82078564a4d6ba506f0",
+      "scope": "Existing model loaded for fresh true-Qwen diagnostics/evaluation; original training not rerun"
+    },
+    "D": {
+      "steps": 4293,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/D/checkpoint_004293/model",
+      "model_bytes": 3087467144,
+      "actual_model_sha256_read_this_task": "03482666be35b0c35c235a2bc3739c13e83b963e5b1c3c44a232489c6e943344",
+      "optimizer_state": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/D/checkpoint_004293/state.pt",
+      "optimizer_state_exists": true,
+      "optimizer_state_sha256_read_and_loaded_this_task": true,
+      "raw_step_log_sha256": "f6932af344a4224981172db50e72cce404200e39eb9b0258c0ad77834664d978",
+      "scope": "Existing model loaded for fresh true-Qwen diagnostics/evaluation; original training not rerun"
+    }
+  },
+  "sparse_training": {
+    "A": {
+      "training_done": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/A/TRAINING_DONE.json",
+      "model": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/A/final/model.safetensors",
+      "model_exists": true,
+      "model_bytes": 3087467144,
+      "steps_log_exists": true,
+      "scope": "Today metadata/filesystem/raw-output verification only; original sparse weight tensors not reloaded or retrained today"
+    },
+    "D": {
+      "training_done": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/D/TRAINING_DONE.json",
+      "model": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/D/final/model.safetensors",
+      "model_exists": true,
+      "model_bytes": 3087467144,
+      "steps_log_exists": true,
+      "scope": "Today metadata/filesystem/raw-output verification only; original sparse weight tensors not reloaded or retrained today"
+    },
+    "R": {
+      "training_done": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/R/TRAINING_DONE.json",
+      "model": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/R/final/model.safetensors",
+      "model_exists": true,
+      "model_bytes": 3087467144,
+      "steps_log_exists": true,
+      "scope": "Today metadata/filesystem/raw-output verification only; original sparse weight tensors not reloaded or retrained today"
+    }
+  },
+  "original_development": {
+    "dense/Base": {
+      "predictions_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/Base/PREDICTIONS.jsonl",
+      "actual_sha256_read": "9e57a8a8509a68ab071d46e93f640fe16d61b30a18c07e944724be7d783f06a4",
+      "rows": 1024,
+      "done_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/Base/DONE.json",
+      "scope": "Raw output identity rechecked, original scoring retained; not new generation or rerun of original training"
+    },
+    "dense/A": {
+      "predictions_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/A/PREDICTIONS.jsonl",
+      "actual_sha256_read": "71de28caa8aaa65ee57543982668479c8ee40ebce407b04c81dbb783ff02d307",
+      "rows": 1024,
+      "done_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/A/DONE.json",
+      "scope": "Raw output identity rechecked, original scoring retained; not new generation or rerun of original training"
+    },
+    "dense/B": {
+      "predictions_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/B/PREDICTIONS.jsonl",
+      "actual_sha256_read": "46b6ddb9294b6f16cc1feeec4ce80d47f163f3ae60d8fe4aa6f03fc9dbf85d43",
+      "rows": 1024,
+      "done_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/B/DONE.json",
+      "scope": "Raw output identity rechecked, original scoring retained; not new generation or rerun of original training"
+    },
+    "dense/C": {
+      "predictions_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/C/PREDICTIONS.jsonl",
+      "actual_sha256_read": "0929330f7c995454df744350e0d85bdd443b48bb21117725cab74fc18f5196ca",
+      "rows": 1024,
+      "done_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/C/DONE.json",
+      "scope": "Raw output identity rechecked, original scoring retained; not new generation or rerun of original training"
+    },
+    "dense/D": {
+      "predictions_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/D/PREDICTIONS.jsonl",
+      "actual_sha256_read": "8ad7001d5770b872604aaba10bd5464705a43a36c5a1244405e9090ad0410d58",
+      "rows": 1024,
+      "done_path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/development/D/DONE.json",
+      "scope": "Raw output identity rechecked, original scoring retained; not new generation or rerun of original training"
+    },
+    "sparse/dev_Base": {
+      "predictions_path": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/dev_Base/PREDICTIONS.jsonl",
+      "actual_sha256_read": "9e57a8a8509a68ab071d46e93f640fe16d61b30a18c07e944724be7d783f06a4",
+      "rows": 1024,
+      "done_path": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/dev_Base/DONE.json",
+      "scope": "Raw output identity rechecked, original scoring retained; not new generation or rerun of original training"
+    },
+    "sparse/dev_A2048": {
+      "predictions_path": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/dev_A2048/PREDICTIONS.jsonl",
+      "actual_sha256_read": "ceb557d5892715cc72992ca79cdcb0aa22097579baa6f167a16657d1fc7c1ed8",
+      "rows": 1024,
+      "done_path": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/dev_A2048/DONE.json",
+      "scope": "Raw output identity rechecked, original scoring retained; not new generation or rerun of original training"
+    },
+    "sparse/dev_D2048": {
+      "predictions_path": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/dev_D2048/PREDICTIONS.jsonl",
+      "actual_sha256_read": "ff49c398f9212292b7486c94819a776654b5ef3dc761d738c2068e430308eabe",
+      "rows": 1024,
+      "done_path": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/dev_D2048/DONE.json",
+      "scope": "Raw output identity rechecked, original scoring retained; not new generation or rerun of original training"
+    },
+    "sparse/dev_R2048": {
+      "predictions_path": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/dev_R2048/PREDICTIONS.jsonl",
+      "actual_sha256_read": "0f2240f467b5d1368fda84fb6d0dba5ce7ff7fb569c12d2684399ff9460e3815",
+      "rows": 1024,
+      "done_path": "/data0/users/lixiaoyang/models/checkpoint/paired_capability_sparse_20261021/comparison/matched_v1/dev_R2048/DONE.json",
+      "scope": "Raw output identity rechecked, original scoring retained; not new generation or rerun of original training"
+    }
+  },
+  "today_execution_scope": [
+    "Scorer acceptance on36 new source groups and290 natural/controlled cases",
+    "Five existing Dense models loaded for192 fresh responses each",
+    "Actual fixed64 training-pair forwards and cached1000 independent-pair diagnostics",
+    "Seven gradient states,21 real fixed-batch probes; saved-state AdamW candidates on independent copies only",
+    "Original cache shapes replayed for8 teacher vectors; no new scientific training"
+  ]
+}

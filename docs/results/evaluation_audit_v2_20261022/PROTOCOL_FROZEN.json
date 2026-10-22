@@ -1,0 +1,94 @@
+{
+  "created_unix": 1792644881.9341598,
+  "source_public_commit": "67a16e0eae725d90b7217394fbd6116e4bbe4201",
+  "new_training": false,
+  "lora": false,
+  "opd": false,
+  "formal_test": false,
+  "max_account_gpus": 4,
+  "stop_new_jobs_unix": 1792657800.0,
+  "hard_finish_unix": 1792660500.0,
+  "report_deadline_unix": 1792662300.0,
+  "new_gpu_hour_ceiling": 8,
+  "max_new_generations": 960,
+  "models_priority": [
+    "Base",
+    "B",
+    "C",
+    "D",
+    "A"
+  ],
+  "fresh_comparison": {
+    "sw_reading": 64,
+    "en_reading": 64,
+    "en_math": 64
+  },
+  "scorer_acceptance_source_groups": 36,
+  "batch": 4,
+  "greedy": true,
+  "seed": 42,
+  "generation_caps": {
+    "sw_reading": 256,
+    "en_reading": 256,
+    "en_math": 1024
+  },
+  "caps_reason": "Short extractive reading target; 256 budget covers explanations beyond original64/16. Original math cap1024 retained. Same caps for all models, cap cases always counted. No score-dependent changes.",
+  "comparison_primary": [
+    "A-Base",
+    "B-A",
+    "C-B",
+    "D-B"
+  ],
+  "paired_bootstrap": {
+    "replicates": 10000,
+    "seed": 42,
+    "unit": "source_group",
+    "no_mixed_task_mean": true
+  },
+  "gradient_probe": {
+    "main_batch": "original main optimizer step4, identical two examples at all states",
+    "aux_batch": "first historical event eight pairs, identical B/C/D pair accesses",
+    "states": [
+      "Base",
+      "B-mid2146",
+      "B-end4293",
+      "C-mid2146",
+      "C-end4293",
+      "D-mid2146",
+      "D-end4293"
+    ],
+    "losses": [
+      "main",
+      "B translation CE",
+      "C fixedEN cosine",
+      "D fixed2000 InfoNCE"
+    ],
+    "raw_and_scaled_coefficient": 0.1,
+    "clip_norm": 1,
+    "state_replay": "saved-state copies only; hypothetical fixed-batch candidates, not historical next update",
+    "max_batches_per_loss_per_state": 1
+  },
+  "representation_probe": {
+    "layer": 10,
+    "train_pairs": 64,
+    "train_selection": "SHA256(audit-train20261022:+ID) first64, no scores",
+    "independent_pairs": 1000,
+    "independent_cache": "existing all-layer endpoint vectors; recompute first8 for actual identity check",
+    "losses": [
+      "fixed Base EN cosine",
+      "fixed training2000bank InfoNCE (training); positive + same2000bank held InfoNCE (held, 2001candidates)",
+      "positive-negative gap",
+      "bidirectional retrieval",
+      "normalized and raw variance"
+    ],
+    "no_layer_or_pooling_selection": true
+  },
+  "decision_rules": [
+    "Definite implementation error -> preserve history and report affected scope, no retraining",
+    "No training objective improvement -> insufficient implementation/signal test, no automatic coefficient increase",
+    "Training improves but held alignment not -> consider overfit or anchor/pooling mismatch, no posthoc selection",
+    "Held alignment improves but tasks do not -> proxy not supported, end prototype",
+    "C/D not above B under v2 -> keep stop decision",
+    "At most one falsifiable future candidate, not executed"
+  ]
+}

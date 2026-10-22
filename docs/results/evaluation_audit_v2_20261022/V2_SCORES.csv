@@ -1,0 +1,16 @@
+model,task,n,content_metric,content_score,content_correct_count,exact_count,format_compliant,extraction_failed,ambiguous,unit_needs_review,unit_incompatible,capped,repeated_4gram_over20pct,generated_tokens,prompt_tokens,language_diagnostic_counts,mean_generated_tokens
+Base,sw_reading,64,token_f1,2.206215590450291,,0,,0,0,0,0,27,12,10525,50781,"{'sw': 62, 'en': 1, 'ro': 1}",164.453125
+Base,en_reading,64,accuracy,82.8125,53,53,1,1,0,0,0,0,0,491,28166,"{'tl': 2, 'en': 41, 'da': 1, 'hr': 1, 'de': 9, 'cy': 2, 'hu': 5, 'sw': 1, 'ro': 1, 'af': 1}",7.671875
+Base,en_math,64,accuracy,75.0,48,48,63,0,2,0,0,0,5,17645,6045,{'en': 64},275.703125
+A,sw_reading,64,token_f1,19.655983774589497,,7,,0,0,0,0,5,1,2469,50781,"{'sw': 56, 'sq': 1, 'id': 2, 'sv': 1, 'lt': 1, 'hr': 1, 'de': 1, 'so': 1}",38.578125
+A,en_reading,64,accuracy,70.3125,45,45,0,0,0,0,0,0,0,518,28166,"{'tl': 1, 'cy': 2, 'en': 42, 'hu': 4, 'de': 9, 'nl': 1, 'sw': 1, 'ro': 1, 'pt': 2, 'af': 1}",8.09375
+A,en_math,64,accuracy,0.0,0,0,0,64,0,0,0,1,3,6164,6045,"{'en': 60, 'af': 1, 'so': 1, 'nl': 1, 'ca': 1}",96.3125
+B,sw_reading,64,token_f1,19.2351994304511,,7,,0,0,0,0,5,2,2670,50781,"{'sw': 53, 'id': 3, 'fr': 1, 'sq': 1, 'af': 1, 'lt': 1, 'so': 2, 'und': 1, 'de': 1}",41.71875
+B,en_reading,64,accuracy,79.6875,51,51,0,0,0,0,0,0,0,530,28166,"{'tl': 1, 'cy': 4, 'en': 46, 'hu': 3, 'sv': 1, 'de': 5, 'sw': 1, 'ro': 1, 'pt': 1, 'af': 1}",8.28125
+B,en_math,64,accuracy,1.5625,1,1,1,62,0,0,0,0,0,4781,6045,"{'en': 57, 'so': 1, 'af': 1, 'ca': 2, 'sv': 1, 'und': 1, 'nl': 1}",74.703125
+C,sw_reading,64,token_f1,15.914400716676177,,2,,0,0,0,0,5,3,2504,50781,"{'sw': 57, 'id': 1, 'und': 1, 'fi': 1, 'lt': 1, 'so': 2, 'de': 1}",39.125
+C,en_reading,64,accuracy,76.5625,49,49,0,0,0,0,0,0,0,474,28166,"{'tl': 1, 'cy': 3, 'de': 17, 'en': 33, 'hu': 7, 'sw': 1, 'ro': 1, 'pt': 1}",7.40625
+C,en_math,64,accuracy,0.0,0,0,0,63,0,0,0,0,1,3819,6045,"{'en': 59, 'so': 1, 'und': 3, 'ca': 1}",59.671875
+D,sw_reading,64,token_f1,17.54623029804201,,5,,0,0,0,0,3,2,2278,50781,"{'sw': 52, 'so': 4, 'fr': 1, 'sq': 1, 'id': 3, 'tl': 1, 'lt': 1, 'de': 1}",35.59375
+D,en_reading,64,accuracy,75.0,48,48,0,0,1,0,0,0,0,350,28166,"{'hu': 10, 'cy': 8, 'de': 24, 'en': 19, 'sw': 1, 'ro': 1, 'pt': 1}",5.46875
+D,en_math,64,accuracy,1.5625,1,1,1,63,0,0,0,0,2,4867,6045,"{'en': 56, 'und': 3, 'so': 1, 'af': 1, 'ca': 2, 'nl': 1}",76.046875

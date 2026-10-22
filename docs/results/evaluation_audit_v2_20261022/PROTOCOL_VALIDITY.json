@@ -1,0 +1,123 @@
+{
+  "controlled_acceptance_passed": true,
+  "controlled_cases": 290,
+  "natural_deployment_math_validity": "FAILED; cannot use frozen v2 mathematical accuracy for ability ranking",
+  "scorer_unchanged": true,
+  "math_implementation_bug": "Empty explicit-final heading followed by a correctly parsed multiline box is added as an invalid competing candidate. Historical results preserved; no scoring patch applied.",
+  "math_coverage_gap": "Natural complete narrative endings lack the narrow expected final marker; finite reference/controlled acceptance failed to cover adapted-model response styles.",
+  "synthetic_minimal_reproductions": [
+    {
+      "text": "The final answer is:\n\\[\\boxed{42}\\]",
+      "gold": "42",
+      "expected": "unambiguous correct final box",
+      "actual": {
+        "content_correct": 0,
+        "numeric_value_match_without_unit": 0,
+        "format_boxed": 1,
+        "status": "ambiguous",
+        "parsed": null,
+        "method": [
+          "boxed",
+          "explicit_final"
+        ],
+        "units": [],
+        "expected_unit": "",
+        "unit_status": "no_unit_gold",
+        "unit_gold_available": false,
+        "unit_correctness_verified": false
+      }
+    },
+    {
+      "text": "He has 6 dollars left.",
+      "gold": "6",
+      "expected": "unambiguous natural final quantity under question money context",
+      "actual": {
+        "content_correct": 0,
+        "numeric_value_match_without_unit": 0,
+        "format_boxed": 0,
+        "status": "extraction_failed",
+        "parsed": null,
+        "method": [],
+        "units": [],
+        "expected_unit": "dollars",
+        "unit_status": "implicit_question_unit",
+        "unit_gold_available": true,
+        "unit_correctness_verified": false
+      }
+    }
+  ],
+  "new_math_full_assistant_review": {
+    "unique_answers": 281,
+    "occurrences": 320,
+    "blindness": "Packet names hidden, but prior aggregate/labelled cases seen. Not independent or strictly blind.",
+    "scope": "Final requested-answer evidence only; reasoning may be wrong despite a correct final number.",
+    "counts": [
+      {
+        "model": "Base",
+        "denominator": 64,
+        "correct_final_observed": 49,
+        "wrong_or_no_target_observed": 12,
+        "unclear_including_source_defect": 3,
+        "assistant_correct_fraction_percent": 76.5625,
+        "assistant_correct_or_unclear_upper_percent": 81.25,
+        "v2_frozen_scorer_missed_assistant_correct": 1,
+        "v2_frozen_scorer_false_positive_vs_review": 0,
+        "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+      },
+      {
+        "model": "A",
+        "denominator": 64,
+        "correct_final_observed": 22,
+        "wrong_or_no_target_observed": 39,
+        "unclear_including_source_defect": 3,
+        "assistant_correct_fraction_percent": 34.375,
+        "assistant_correct_or_unclear_upper_percent": 39.0625,
+        "v2_frozen_scorer_missed_assistant_correct": 22,
+        "v2_frozen_scorer_false_positive_vs_review": 0,
+        "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+      },
+      {
+        "model": "B",
+        "denominator": 64,
+        "correct_final_observed": 25,
+        "wrong_or_no_target_observed": 37,
+        "unclear_including_source_defect": 2,
+        "assistant_correct_fraction_percent": 39.0625,
+        "assistant_correct_or_unclear_upper_percent": 42.1875,
+        "v2_frozen_scorer_missed_assistant_correct": 24,
+        "v2_frozen_scorer_false_positive_vs_review": 0,
+        "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+      },
+      {
+        "model": "C",
+        "denominator": 64,
+        "correct_final_observed": 22,
+        "wrong_or_no_target_observed": 40,
+        "unclear_including_source_defect": 2,
+        "assistant_correct_fraction_percent": 34.375,
+        "assistant_correct_or_unclear_upper_percent": 37.5,
+        "v2_frozen_scorer_missed_assistant_correct": 22,
+        "v2_frozen_scorer_false_positive_vs_review": 0,
+        "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+      },
+      {
+        "model": "D",
+        "denominator": 64,
+        "correct_final_observed": 26,
+        "wrong_or_no_target_observed": 36,
+        "unclear_including_source_defect": 2,
+        "assistant_correct_fraction_percent": 40.625,
+        "assistant_correct_or_unclear_upper_percent": 43.75,
+        "v2_frozen_scorer_missed_assistant_correct": 25,
+        "v2_frozen_scorer_false_positive_vs_review": 0,
+        "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+      }
+    ]
+  },
+  "reading_known_malformed_source_groups": 1,
+  "reading_source_uncertainty_bound_points_per_model": 1.5625,
+  "reading_primary_scores_unchanged": "All64 sources retained; known malformed item makes up1/64. Scores and intervals are small-sample diagnostics, not formal confirmation.",
+  "math_newly_flagged_source_groups": 2,
+  "new_training_or_generation_for_repairs": 0,
+  "next_step_priority": "Future natural-response acceptance and source QA on unused sources before another scoring freeze. No parameter changes or new training authorized."
+}

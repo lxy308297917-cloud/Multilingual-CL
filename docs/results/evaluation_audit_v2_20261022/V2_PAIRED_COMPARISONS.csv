@@ -1,0 +1,13 @@
+task,comparison,paired_difference_points,CI95_low,CI95_high,source_groups,bootstrap,seed,interpretation
+sw_reading,A-Base,17.44976818413921,10.381209504293473,25.34754156539681,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+sw_reading,B-A,-0.42078434413839877,-8.908662534177939,8.235386371156672,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+sw_reading,C-B,-3.320798713774921,-10.217536704322903,3.2998554282794705,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+sw_reading,D-B,-1.6889691324090887,-9.51400738831813,5.39464705217146,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+en_reading,A-Base,-12.5,-25.0,-1.5625,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+en_reading,B-A,9.375,3.125,17.1875,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+en_reading,C-B,-3.125,-7.8125,0.0,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+en_reading,D-B,-4.6875,-10.9375,1.5625,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+en_math,A-Base,-75.0,-85.9375,-64.0625,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+en_math,B-A,1.5625,0.0,4.6875,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+en_math,C-B,-1.5625,-4.6875,0.0,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"
+en_math,D-B,0.0,-4.6875,4.6875,64,10000,42,"small fresh development diagnostic, not confirmatory formal test"

@@ -1,0 +1,17 @@
+{
+  "total_cases": 290,
+  "failed_cases": 0,
+  "false_positive": 0,
+  "missed_correct": 0,
+  "source_groups": 36,
+  "cases_sha256": "bb9459e562e717ac3eba84dc9917d6f4d1a4c63c6c0275d9388bf4d7ba279d7e",
+  "scorer_sha256": "32541d93b5382874bd3197a0f40bf1eb6261933c28eaa27b5bbd7d2087d0976a",
+  "data_manifest_sha256": "bfcf5a7b84ca6dc1c15d6895c50167d9373eec1a0e565f3a3895590ad1e2bac4",
+  "frozen_unix": 1792645803.3854716,
+  "limits": [
+    "Controlled acceptance is finite, not a human gold evaluation of all future model answers",
+    "Assistant-reviewed test design; no independent human reviewer",
+    "Numeric-only reference cannot verify unit semantics; unit availability is separately recorded"
+  ],
+  "failed_case_kinds": []
+}

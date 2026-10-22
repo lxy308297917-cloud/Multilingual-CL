@@ -1,0 +1,62 @@
+[
+  {
+    "model": "Base",
+    "denominator": 64,
+    "correct_final_observed": 49,
+    "wrong_or_no_target_observed": 12,
+    "unclear_including_source_defect": 3,
+    "assistant_correct_fraction_percent": 76.5625,
+    "assistant_correct_or_unclear_upper_percent": 81.25,
+    "v2_frozen_scorer_missed_assistant_correct": 1,
+    "v2_frozen_scorer_false_positive_vs_review": 0,
+    "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+  },
+  {
+    "model": "A",
+    "denominator": 64,
+    "correct_final_observed": 22,
+    "wrong_or_no_target_observed": 39,
+    "unclear_including_source_defect": 3,
+    "assistant_correct_fraction_percent": 34.375,
+    "assistant_correct_or_unclear_upper_percent": 39.0625,
+    "v2_frozen_scorer_missed_assistant_correct": 22,
+    "v2_frozen_scorer_false_positive_vs_review": 0,
+    "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+  },
+  {
+    "model": "B",
+    "denominator": 64,
+    "correct_final_observed": 25,
+    "wrong_or_no_target_observed": 37,
+    "unclear_including_source_defect": 2,
+    "assistant_correct_fraction_percent": 39.0625,
+    "assistant_correct_or_unclear_upper_percent": 42.1875,
+    "v2_frozen_scorer_missed_assistant_correct": 24,
+    "v2_frozen_scorer_false_positive_vs_review": 0,
+    "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+  },
+  {
+    "model": "C",
+    "denominator": 64,
+    "correct_final_observed": 22,
+    "wrong_or_no_target_observed": 40,
+    "unclear_including_source_defect": 2,
+    "assistant_correct_fraction_percent": 34.375,
+    "assistant_correct_or_unclear_upper_percent": 37.5,
+    "v2_frozen_scorer_missed_assistant_correct": 22,
+    "v2_frozen_scorer_false_positive_vs_review": 0,
+    "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+  },
+  {
+    "model": "D",
+    "denominator": 64,
+    "correct_final_observed": 26,
+    "wrong_or_no_target_observed": 36,
+    "unclear_including_source_defect": 2,
+    "assistant_correct_fraction_percent": 40.625,
+    "assistant_correct_or_unclear_upper_percent": 43.75,
+    "v2_frozen_scorer_missed_assistant_correct": 25,
+    "v2_frozen_scorer_false_positive_vs_review": 0,
+    "status": "POSTHOC_ASSISTANT_REVIEW; not independent human gold; final answer only, not proof of correct full reasoning; no model selection"
+  }
+]

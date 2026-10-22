@@ -1,0 +1,80 @@
+{
+  "verified_unix": 1792647592.492855,
+  "source_data_hashes_match": true,
+  "acceptance_and_comparison_group_overlap": 0,
+  "comparison_rows_per_task": 64,
+  "all_math_expected_units_frozen": true,
+  "data_manifest_sha256": "bfcf5a7b84ca6dc1c15d6895c50167d9373eec1a0e565f3a3895590ad1e2bac4",
+  "scorer_sha256": "32541d93b5382874bd3197a0f40bf1eb6261933c28eaa27b5bbd7d2087d0976a",
+  "scorer_acceptance_sha256": "720b995bd4dc91fd4456ce303b66f86c88ab655dc87fa5aecdd518120318fad8",
+  "source_QA_changes_sha256": "bea15375363049b00b8d96d9d78d73502ac7a4d47df639127c42fee387087b75",
+  "models": {
+    "Base": {
+      "path": "/data0/users/lixiaoyang/models/Qwen2.5-1.5B-Instruct",
+      "config_sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+      "generation_config_sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+    },
+    "A": {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/A/checkpoint_004293/model",
+      "config_sha256": "742b0e3f90c2ef32aeb5e1b4cf2f897a1736032546d691b0d8d40a968738c22c",
+      "generation_config_sha256": "da7d43d773bb1c2606bbd062d9af2e8aa2b73de104b1f8f0a93e31bf3b1426a3"
+    },
+    "B": {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/B/checkpoint_004293/model",
+      "config_sha256": "742b0e3f90c2ef32aeb5e1b4cf2f897a1736032546d691b0d8d40a968738c22c",
+      "generation_config_sha256": "da7d43d773bb1c2606bbd062d9af2e8aa2b73de104b1f8f0a93e31bf3b1426a3"
+    },
+    "C": {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/C/checkpoint_004293/model",
+      "config_sha256": "742b0e3f90c2ef32aeb5e1b4cf2f897a1736032546d691b0d8d40a968738c22c",
+      "generation_config_sha256": "da7d43d773bb1c2606bbd062d9af2e8aa2b73de104b1f8f0a93e31bf3b1426a3"
+    },
+    "D": {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/comparison_v3/D/checkpoint_004293/model",
+      "config_sha256": "742b0e3f90c2ef32aeb5e1b4cf2f897a1736032546d691b0d8d40a968738c22c",
+      "generation_config_sha256": "da7d43d773bb1c2606bbd062d9af2e8aa2b73de104b1f8f0a93e31bf3b1426a3"
+    }
+  },
+  "effective_generation_config_identical": true,
+  "effective_generation_settings": {
+    "bos_token_id": 151643,
+    "pad_token_id": 151643,
+    "do_sample": false,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "repetition_penalty": 1.1,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20
+  },
+  "generation_hash_difference_reason": "Version metadata only; decoded settings identical after explicit greedy override.",
+  "code_sha256": {
+    "run_worker.sh": "8d4d9b4a6831d90aca1ea763a70132a6b951f5d729ccf8265f9349fff5a965fe",
+    "scoring_v2.py": "32541d93b5382874bd3197a0f40bf1eb6261933c28eaa27b5bbd7d2087d0976a",
+    "prepare_v2.py": "d7773adf81d6212b7c5c0e8dae4f1019e1994a6416ad59c6bede7b0c4523e9df",
+    "plot_v2.py": "cd16e482d0db7872c329689721db610d2be278426b84a7384b5240db1f1bf395",
+    "bank_geometry.py": "160fffae21a797c936e5f285c715cab7509314e8cbfa1f40778247b0c240f9f0",
+    "acceptance.py": "42f37f6fa3d974ba1709f65ba6fbdc831a2431ee10e882505919959db7193791",
+    "finalize_sources.py": "a47db6ba7440eb79b938d8565183ccde05a09143d63fc7b844a7724cff478ffb",
+    "sample_resources.py": "87bfb76aa0cf42d55f5a16149a47bf80a870778d121f1f5b68b62579945c5df7",
+    "mechanism_v2.py": "3485c0f4f12fa0dfd676bbc9de5075c8979a44a443d74204975a86018acc2aad",
+    "teacher_identity_probe.py": "a4020bae699ac911e09d2a301f1503e5ab04081c3d309d9f229f8621796a020b",
+    "verify_inputs.py": "282a2f73d3cba3751a3eb626a40a462fc29fced2782c56b4e48bd11cf2a05945",
+    "artifact_inventory.py": "4233253ef11f6e3d31cd403ab95903f43ddabfdf2311f1c4b8cc83da14369cfc",
+    "finish_audit.py": "3f18de8e7924e90f7331d7b1d51bba6edba559bd4bb2a5923a0ba05b5c74c9f8",
+    "summarize_mechanism.py": "8f6e65927e83325db105c08fbd129c592e7405ec4820b2a17b9bc289de970a55",
+    "validity_audit.py": "b967bb030d7ba004f2d6a351748e9fe0e0f7491e46f59bc0aa9d50cce1763f16",
+    "record_review.py": "9dad4064c118a796f7d342ab38744d0f3c2085073265a40e7c8edf1ccbe3412a",
+    "render_report.py": "040ee894fee24d6aa8a1423d9e5d4994dfad56dfa4aa0564a98b5f3e2503c600",
+    "prepare_manual_review.py": "9ba281dcf33ae36eb50c90571e54df687e68e5711ce4c64d81eeb18b155be8b2",
+    "evaluate_v2.py": "f9ad9f3dd9cc3b90e613a089a9099eed906989b35a42bcdb4531dd89a5a20932",
+    "summarize_v2.py": "eeedaad9bc49d119866a0f5e8b2a2622ecf1c27d31f40b971f3f0582a60fcfd8",
+    "settings.py": "a587f05005df1b103b0b4aaeed34f9ae2bb0e6a7e70a19dbfda5415f6df8e2be",
+    "audit_logs.py": "fba0544ed400f1644765fcfdbac27b4703c82a8fd1c1e0d0ca7bffc0167c22b8",
+    "freeze_plan.py": "179962b113cab56dd183dc9d29250648cb287e3861f11ae058efbac9597b3634",
+    "gpu_worker.py": "f6d74700e6258310e65957ce53381534ff2d6294732bd12596ec725919a043ff"
+  },
+  "scope": "Raw-source hashes and grouped files verified; lexical exclusion is not semantic decontamination proof. Model weight identities separately hashed in GPU CONFIG and original checkpoint receipts."
+}

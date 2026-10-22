@@ -1,0 +1,293 @@
+{
+  "methods": {
+    "A": {
+      "steps": 4293,
+      "aux_events": 0,
+      "log_sha256": "d36f20b98f8060cc343e3d59076d554c9e7abbd24f53427f9bf4b9713e55417e",
+      "code_matches_executed_config": true,
+      "aux_loss_quarters": [
+        {
+          "n": 268,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "q10": 0.0,
+          "q90": 0.0
+        },
+        {
+          "n": 268,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "q10": 0.0,
+          "q90": 0.0
+        },
+        {
+          "n": 268,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "q10": 0.0,
+          "q90": 0.0
+        },
+        {
+          "n": 269,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "q10": 0.0,
+          "q90": 0.0
+        }
+      ],
+      "global_grad_norm_aux_steps": {
+        "n": 1073,
+        "mean": 27.261387465051257,
+        "median": 23.625,
+        "min": 7.65625,
+        "max": 170.0,
+        "q10": 13.075,
+        "q90": 44.75
+      },
+      "global_grad_norm_non_aux": {
+        "n": 3220,
+        "mean": 28.341158773291927,
+        "median": 23.75,
+        "min": 7.375,
+        "max": 406.0,
+        "q10": 13.0,
+        "q90": 46.25
+      },
+      "global_clip_active_fraction": 1.0,
+      "cumulative_counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "aux_pairs": 0,
+        "aux_padded_processed": 0
+      }
+    },
+    "B": {
+      "steps": 4293,
+      "aux_events": 1073,
+      "log_sha256": "59ea9b2399c22f40666815f14141f76152d9b30d968c00f8c29d576f45acbeaf",
+      "code_matches_executed_config": true,
+      "aux_loss_quarters": [
+        {
+          "n": 268,
+          "mean": 3.0388998088996804,
+          "median": 2.962890148162842,
+          "min": 2.32791805267334,
+          "max": 4.041016578674316,
+          "q10": 2.6289044439792635,
+          "q90": 3.5602313756942747
+        },
+        {
+          "n": 268,
+          "mean": 2.5191073906955435,
+          "median": 2.5043468475341797,
+          "min": 1.9557171761989594,
+          "max": 3.2402884364128113,
+          "q10": 2.2604230403900147,
+          "q90": 2.812419629096985
+        },
+        {
+          "n": 268,
+          "mean": 2.1081004118296636,
+          "median": 2.0875299870967865,
+          "min": 1.5779971480369568,
+          "max": 2.7728917002677917,
+          "q10": 1.8275330781936645,
+          "q90": 2.415636104345322
+        },
+        {
+          "n": 269,
+          "mean": 1.7591404084490134,
+          "median": 1.749742031097412,
+          "min": 1.1751350164413452,
+          "max": 2.353702276945114,
+          "q10": 1.5208360433578492,
+          "q90": 2.0200284719467163
+        }
+      ],
+      "global_grad_norm_aux_steps": {
+        "n": 1073,
+        "mean": 27.620165424044735,
+        "median": 24.125,
+        "min": 7.0625,
+        "max": 167.0,
+        "q10": 13.0,
+        "q90": 45.25
+      },
+      "global_grad_norm_non_aux": {
+        "n": 3220,
+        "mean": 28.568740295031056,
+        "median": 24.125,
+        "min": 6.53125,
+        "max": 392.0,
+        "q10": 13.243750000000002,
+        "q90": 46.02499999999998
+      },
+      "global_clip_active_fraction": 1.0,
+      "cumulative_counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "aux_input": 1735058,
+        "aux_supervised": 472665,
+        "aux_pairs": 8584,
+        "aux_padded_processed": 1928288
+      }
+    },
+    "C": {
+      "steps": 4293,
+      "aux_events": 1073,
+      "log_sha256": "ce41ef4dd8955f47ea989963ec1ac00bdd5ebaf96eb2a82078564a4d6ba506f0",
+      "code_matches_executed_config": true,
+      "aux_loss_quarters": [
+        {
+          "n": 268,
+          "mean": 0.0040731789238417325,
+          "median": 0.0039071738719940186,
+          "min": 0.0018846318125724792,
+          "max": 0.007610693573951721,
+          "q10": 0.0028113417327404024,
+          "q90": 0.005729889124631882
+        },
+        {
+          "n": 268,
+          "mean": 0.004112456688907609,
+          "median": 0.0039048977196216583,
+          "min": 0.002051636576652527,
+          "max": 0.00780148059129715,
+          "q10": 0.0029151104390621185,
+          "q90": 0.005659064650535584
+        },
+        {
+          "n": 268,
+          "mean": 0.003971839907454021,
+          "median": 0.0037660226225852966,
+          "min": 0.002070590853691101,
+          "max": 0.00728057324886322,
+          "q10": 0.0028909295797348022,
+          "q90": 0.005369257926940919
+        },
+        {
+          "n": 269,
+          "mean": 0.0038898299728627544,
+          "median": 0.0037446022033691406,
+          "min": 0.002079792320728302,
+          "max": 0.006577752530574799,
+          "q10": 0.002901431918144226,
+          "q90": 0.00516800582408905
+        }
+      ],
+      "global_grad_norm_aux_steps": {
+        "n": 1073,
+        "mean": 27.34077935694315,
+        "median": 23.75,
+        "min": 7.71875,
+        "max": 170.0,
+        "q10": 12.8125,
+        "q90": 45.25
+      },
+      "global_grad_norm_non_aux": {
+        "n": 3220,
+        "mean": 28.389848602484474,
+        "median": 24.125,
+        "min": 6.59375,
+        "max": 392.0,
+        "q10": 13.0,
+        "q90": 46.0
+      },
+      "global_clip_active_fraction": 1.0,
+      "cumulative_counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "aux_input": 290693,
+        "aux_supervised": 0,
+        "aux_pairs": 8584,
+        "aux_padded_processed": 420168
+      }
+    },
+    "D": {
+      "steps": 4293,
+      "aux_events": 1073,
+      "log_sha256": "f6932af344a4224981172db50e72cce404200e39eb9b0258c0ad77834664d978",
+      "code_matches_executed_config": true,
+      "aux_loss_quarters": [
+        {
+          "n": 268,
+          "mean": 7.5938550224944725,
+          "median": 7.594074964523315,
+          "min": 7.582221746444702,
+          "max": 7.608173608779907,
+          "q10": 7.5905564546585085,
+          "q90": 7.596339368820191
+        },
+        {
+          "n": 268,
+          "mean": 7.592902514471937,
+          "median": 7.593302965164185,
+          "min": 7.58005166053772,
+          "max": 7.606788873672485,
+          "q10": 7.588866424560547,
+          "q90": 7.595966386795044
+        },
+        {
+          "n": 268,
+          "mean": 7.591948589282249,
+          "median": 7.5925798416137695,
+          "min": 7.578474044799805,
+          "max": 7.605588436126709,
+          "q10": 7.587178659439087,
+          "q90": 7.59537284374237
+        },
+        {
+          "n": 269,
+          "mean": 7.591142191762818,
+          "median": 7.591804265975952,
+          "min": 7.5782129764556885,
+          "max": 7.604278802871704,
+          "q10": 7.585429334640503,
+          "q90": 7.595034599304199
+        }
+      ],
+      "global_grad_norm_aux_steps": {
+        "n": 1073,
+        "mean": 27.404764678471576,
+        "median": 23.75,
+        "min": 6.96875,
+        "max": 185.0,
+        "q10": 12.8125,
+        "q90": 45.0
+      },
+      "global_grad_norm_non_aux": {
+        "n": 3220,
+        "mean": 28.381502329192546,
+        "median": 24.0,
+        "min": 7.25,
+        "max": 390.0,
+        "q10": 13.0,
+        "q90": 46.27499999999998
+      },
+      "global_clip_active_fraction": 1.0,
+      "cumulative_counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "aux_input": 290693,
+        "aux_supervised": 0,
+        "aux_pairs": 8584,
+        "aux_padded_processed": 420168
+      }
+    }
+  },
+  "limits": [
+    "Logged auxiliary value is unweighted; same0.1 does not equalize gradient or effective update",
+    "Quarter losses sample different sentence pairs and learning states; not paired same-input evidence",
+    "BF16 full-trajectory auxiliary survival cannot be established from step logs alone"
+  ]
+}

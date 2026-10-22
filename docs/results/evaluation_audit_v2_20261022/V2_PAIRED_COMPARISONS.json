@@ -1,0 +1,134 @@
+[
+  {
+    "task": "sw_reading",
+    "comparison": "A-Base",
+    "paired_difference_points": 17.44976818413921,
+    "CI95_low": 10.381209504293473,
+    "CI95_high": 25.34754156539681,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "sw_reading",
+    "comparison": "B-A",
+    "paired_difference_points": -0.42078434413839877,
+    "CI95_low": -8.908662534177939,
+    "CI95_high": 8.235386371156672,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "sw_reading",
+    "comparison": "C-B",
+    "paired_difference_points": -3.320798713774921,
+    "CI95_low": -10.217536704322903,
+    "CI95_high": 3.2998554282794705,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "sw_reading",
+    "comparison": "D-B",
+    "paired_difference_points": -1.6889691324090887,
+    "CI95_low": -9.51400738831813,
+    "CI95_high": 5.39464705217146,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "en_reading",
+    "comparison": "A-Base",
+    "paired_difference_points": -12.5,
+    "CI95_low": -25.0,
+    "CI95_high": -1.5625,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "en_reading",
+    "comparison": "B-A",
+    "paired_difference_points": 9.375,
+    "CI95_low": 3.125,
+    "CI95_high": 17.1875,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "en_reading",
+    "comparison": "C-B",
+    "paired_difference_points": -3.125,
+    "CI95_low": -7.8125,
+    "CI95_high": 0.0,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "en_reading",
+    "comparison": "D-B",
+    "paired_difference_points": -4.6875,
+    "CI95_low": -10.9375,
+    "CI95_high": 1.5625,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "en_math",
+    "comparison": "A-Base",
+    "paired_difference_points": -75.0,
+    "CI95_low": -85.9375,
+    "CI95_high": -64.0625,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "en_math",
+    "comparison": "B-A",
+    "paired_difference_points": 1.5625,
+    "CI95_low": 0.0,
+    "CI95_high": 4.6875,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "en_math",
+    "comparison": "C-B",
+    "paired_difference_points": -1.5625,
+    "CI95_low": -4.6875,
+    "CI95_high": 0.0,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  },
+  {
+    "task": "en_math",
+    "comparison": "D-B",
+    "paired_difference_points": 0.0,
+    "CI95_low": -4.6875,
+    "CI95_high": 4.6875,
+    "source_groups": 64,
+    "bootstrap": 10000,
+    "seed": 42,
+    "interpretation": "small fresh development diagnostic, not confirmatory formal test"
+  }
+]
