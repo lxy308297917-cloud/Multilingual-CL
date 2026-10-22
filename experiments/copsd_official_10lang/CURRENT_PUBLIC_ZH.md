@@ -1,6 +1,6 @@
 # 十语言官方 COPSD：当前状态与结果
 
-更新：2026-10-23 02:01（Asia/Shanghai）。完整目标仍为十语言独立 single，再由独立开发集选择三语言，完成正反顺序 OPD 与逐阶段遗忘矩阵。**十语言100更新训练及原项目正式套件全部完成；十语言20更新参考的目标语与英语开发配对全部完成。最终三语言未选定，研究性质的顺序训练尚未开始。** 历史记录保留在 Git 和各阶段报告中。
+更新：2026-10-23 02:08（Asia/Shanghai）。完整目标仍为十语言独立 single，再由独立开发集选择三语言，完成正反顺序 OPD 与逐阶段遗忘矩阵。**十语言100更新训练及原项目正式套件全部完成；十语言20更新参考的目标语与英语开发配对全部完成。最终三语言未选定，研究性质的顺序训练尚未开始。** 历史记录保留在 Git 和各阶段报告中。
 
 
 > **最新4B正式配对：SW MGSM-Rev2 34→54／250（+8pp）；英语GSM8K 1247→1246／1319（−0.076pp）。单seed正式目标收益成立，语言保持与跨seed未确认；seed43训练完成，SW200已得47/200（Base16、seed42为62），英语复验继续。固定200开发英语83%→79%的限制保留。**
@@ -828,3 +828,13 @@ SW新增31、失去11；新增中10道Base截断、11道Base未提取答案，**
 - 原JA20评测manifest不改指向v2，避免错绑失败权重；后续必须另行冻结v2训练后release/评测身份。SW seed43英语在GPU0继续，JA Base已释放GPU4；本账号当前三张实际任务GPU。
 
 证据：[SW第二种子目标语验收](sw4b_seed43_target200_partial_20261023.PUBLIC.json)、[JA Base200](ja4b_Base200_completed_20261023.PUBLIC.json)、[JA失败证据](ja4b_server20_failure_20261023.PUBLIC.json)、[v2配置](ja4b_server20_alloc_v2_frozen_20261023.PUBLIC.json)、[v2准备](ja4b_server20_alloc_v2_prepared_20261023.PUBLIC.json)、[v2启动](ja4b_server20_alloc_v2_started_20261023.PUBLIC.json)。
+
+## 2026-10-23 02:08：日语恢复版本的训练后评测已单独冻结
+
+- 为allocator v2新输出准备独立评测manifest、checkpoint20放行脚本、入口和汇总器，旧失败JA20的配置与输出身份不改写。
+- JA/EN仍各固定200题、官方语言前缀、n1/8192/native16；直接复用已验收日语Base140/200与匹配英语Base166/200，不重复生成。已静态核对同原题英文内容/答案、模型revision和生成设置。
+- 单卡队列`copsd-ja4b-followup-ja20-alloc-v2`仅配置/验证，未启动。观察器等v2训练exit0后只做CPU release与预检，不自动起GPU任务；实际adapter预检仍待checkpoint20。
+- 成本将分别记录第一次失败、v2训练、v2评测及前面延迟结算的日语Base父任务；英语Base不重计。
+- 当前没有新增效果结果；SW第二种子的英语复验与JA v2训练继续。尚未确认allocator策略越过旧失败位置。
+
+见[新评测冻结](ja4b_alloc_v2_eval_frozen_20261023.PUBLIC.json)、[准备证据](ja4b_alloc_v2_evaluation_prepared_20261023.PUBLIC.json)。

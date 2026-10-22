@@ -1,0 +1,13 @@
+{
+  "prepared_at": "2026-10-23T02:07:07.520390",
+  "frozen_sha256": "a63e994121761e119e780885cbf453307a8057e7c23f55347b14b92a34d17126",
+  "collector_sha256": "f00b3bb595c02d120b1fabef8101668d71c0562783cc6858af942e64d87fb1f4",
+  "Python_compile_and_shell_syntax_passed": true,
+  "queue_config_validate_passed": true,
+  "fixed200_IDs_inputs_and_cached_Base_settings_checked": true,
+  "JA20_GPU_evaluation_started": false,
+  "runtime_preflight": "Pending completedv2trainingandcheckpoint20release; adapterSHA notyetavailable, no claim of runtimepass.",
+  "source_identity": "Independentv2freeze/release/outputnames; oldJA/English Baseoutputs remainhashbound. All generation/scoringparameters native16/n1/8192 kept. FailedoriginalJA20 evaluationnotretargeted.",
+  "cost_policy": "EnglishBasealreadycounted, no regeneration/recount. JapaneseBasepartialdeferredcost countedonce infullcandidate report. FirstfailedJAtraining0.697222GPUh separatelyincluded; newv2train/evalparentcosts unique.",
+  "scope": "Preparation only; doesnotestablishmemoryfix, JAefficacy, seed43Englishretention or3-languageselection."
+}
