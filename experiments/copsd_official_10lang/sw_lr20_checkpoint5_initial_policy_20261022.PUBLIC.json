@@ -1,0 +1,47 @@
+{
+  "observed_at": "2026-10-22T12:06:35.676962",
+  "protocol": "project_SW_paired_learning_rate20_safe2700_v1",
+  "both_initial_adapter_and_rollout_engine_hashes_equal": true,
+  "conditions": {
+    "reference": {
+      "initial_sync": {
+        "global_step": 0,
+        "adapter_hash": "b0c5de3173efa50478c7eb50c75e5277403bb8c080c43e4cd368e09940921f6e",
+        "engine_hash": "94f89957152f413bd10682509f1a524552fc74aa214bea8483bee2c5f82a269e",
+        "seconds_including_diagnostic_hashing": 22.844879446551204
+      },
+      "first_update_generation": {
+        "global_step": 0,
+        "rollouts": 32,
+        "generated_tokens": 59870,
+        "generation_seconds": 32.61003082804382
+      },
+      "checkpoint5_optimizer_scheduler_RNG_args_loaded_and_verified": true,
+      "loss_calls_at5": 160,
+      "valid_response_positions_at5": 301802,
+      "actual_learning_rate": 5e-06,
+      "TensorBoard_loss_last_readable_step": 4
+    },
+    "lower_lr": {
+      "initial_sync": {
+        "global_step": 0,
+        "adapter_hash": "b0c5de3173efa50478c7eb50c75e5277403bb8c080c43e4cd368e09940921f6e",
+        "engine_hash": "94f89957152f413bd10682509f1a524552fc74aa214bea8483bee2c5f82a269e",
+        "seconds_including_diagnostic_hashing": 21.41082170419395
+      },
+      "first_update_generation": {
+        "global_step": 0,
+        "rollouts": 32,
+        "generated_tokens": 59870,
+        "generation_seconds": 33.02313847281039
+      },
+      "checkpoint5_optimizer_scheduler_RNG_args_loaded_and_verified": true,
+      "loss_calls_at5": 160,
+      "valid_response_positions_at5": 303680,
+      "actual_learning_rate": 1e-06,
+      "TensorBoard_loss_last_readable_step": 4
+    }
+  },
+  "full20_training_and_development_complete": false,
+  "scope": "Real initial-policy and checkpoint5 state validation only, not a resume experiment, completed20 run,640 prompt-order validation or efficacy result. Existing training continues unmodified."
+}
