@@ -75,3 +75,11 @@ adapter相对Base对所选token logprob的变化，在Transformers与native vLLM
 三阶段父管线exit0，32个固定输入key与160个概率记录已核验。vLLM请求各生成1个未评分占位token，仅为取得prompt logprobs，总计96 token；这不是缩短回答的数学实验。单卡完整父任务0.023889 GPU小时（86秒），无新训练或数学benchmark回答。
 
 [完整概率／adapter效应对比与费用](engine_probability_probe_completed_20261022.PUBLIC.json) · [计算前固定输入与范围](engine_probability_probe_frozen_20261022.PUBLIC.json)。这项检查缩小了工程疑点范围，未解决三语启动所需的稳定效果缺口。
+
+### 提速依据来自既有计时，无新增GPU测试
+
+复用seed42已保存完整训练计时：5495.63秒中，权重同步（含导出、传输及核验）1746.06秒／31.8%，批量vLLM生成950.82秒／17.3%。21次各398张量共8358个逐参数HTTP／broadcast／barrier调用。安装版TRL的`update_model_params`仍逐参数循环，不能仅换此函数就声称批量同步提速。
+
+同步计时没有拆开hash、HTTP、NCCL、设备搬运或等待，不能将31.8%全称不必要检查／承诺可全部省掉。未来可优先研究减少冗余观察器与逐参数控制开销，保留完整参考和权重同步验证；当前冻结运行未修改、未测新速度。
+
+[MGSM阶段](sw4b_formal_MGSM_pair_completed_20261022.PUBLIC.json) · [seed43真实训练快照](sw4b_server_seed43_training_started_20261022.PUBLIC.json) · [既有计时拆解](sw4b_recorded_timing_breakdown_20261022.PUBLIC.json)。

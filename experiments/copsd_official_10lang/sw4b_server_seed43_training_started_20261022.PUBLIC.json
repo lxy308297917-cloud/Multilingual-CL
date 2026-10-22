@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-22T23:30:56.962357",
+  "protocol": "independent_SW4B_dedicated_server_seed43_replication20_v1",
+  "parent_started_at": "2026-10-22 23:18:48",
+  "parent_pid": 425679,
+  "training_pid": 425842,
+  "rollout_server_pid": 425723,
+  "GPU_indices": [
+    0,
+    3
+  ],
+  "GPU_UUIDs": [
+    "GPU-38e7429c-59f4-0126-ca93-bdd12e526387",
+    "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573"
+  ],
+  "latest_logged_global_step": 1,
+  "latest_logged_microstep": 64,
+  "observed_microstep_losses_finite": true,
+  "verified_sync_count_so_far": 2,
+  "max_account_GPUs": 4,
+  "updates_target": 20,
+  "scheduler_horizon": 100,
+  "training_not_completed": true,
+  "scope": "Actualcurrentstudent rollout/finitebackprop observed, not merelyqueued/model-loaded. Partialprogress only; no seed43 math/retention results. Cachedper-microbatchgeneration speeds are not realrollout throughput."
+}
