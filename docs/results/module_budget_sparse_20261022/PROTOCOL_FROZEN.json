@@ -1,0 +1,112 @@
+{
+  "frozen_unix": 1792656375.7057228,
+  "scope": "Exactly3 real short trains: S-All,S-Attn,S-MLP; no LoRA/OPD/protection/auxiliaryreplay/alignment/layer-selection",
+  "budget_sha256": "a845e246283a09d99bb5013725cce8839057bafba01a4c8766bf16116491c335",
+  "base_model_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "main_manifest": {
+    "source": "/data0/users/lixiaoyang/data/sw-d2-inputs/d2_bilingual_v1/sw/train.jsonl",
+    "source_sha256": "9d55513d0080cb7a2bcb1aba9d33da8d9943aff00c9ea3b0b738b0e015e1ffbc",
+    "recipe_manifest_sha256": "db61ee8ce5f3ccb2d9dc2231aac388f6f66e426eb5f4cf37781c06fba2a269fd",
+    "indices_sha256": "99cf53c8b300b825095dfe0568cce2c0a79d5359c4d1401ce9583cfd503da8a3",
+    "steps": 4293,
+    "full_schedule_steps": 42465,
+    "warmup_steps": 2124,
+    "input_tokens": 1536351,
+    "supervised_tokens": 599469,
+    "main_prefix_sha256": "7fa28c5c5a14c27c3b0dc5c9ec3023f52d1a4ed9839c129469e306968359320e"
+  },
+  "main_prefix_sha256": "7fa28c5c5a14c27c3b0dc5c9ec3023f52d1a4ed9839c129469e306968359320e",
+  "training": {
+    "steps": 4293,
+    "main_input": 1536351,
+    "main_supervised": 599469,
+    "seed": 42,
+    "max_length": 2048,
+    "main_micro_batch": 1,
+    "effective_batch": 2,
+    "loss": "old sparse per_example_ce, equal2example shifted valid-answer CE",
+    "full_lr_schedule": 42465,
+    "warmup": 2124,
+    "peak_lr": 5e-05,
+    "learning_rate": "original sparse learning_rate(step), first updateLR0",
+    "weight_dtype": "BF16",
+    "moments": "FP32, all coordinates of eligible matrices advance once per update, including offmask",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": 0.01,
+    "clip_norm": 1,
+    "gradient_scope": "all196 matrices have gradients in every group for identical clipping definition; only quota-positive eligible matrices hold moments and receive writes; embedding/tiedhead/allNorm/allbias frozen. Excluded matrices get no weight or moment update.",
+    "mask_score": "original unprotected |m|/(mean|m|+1e-12), stable descending flat sort",
+    "mask_refresh": "before updates1,21,41,..., same20-step interval",
+    "quota": "per-matrix fixed Hamilton allocation; exactglobalK perstep inclLR0; no variable modules",
+    "BF16_write": "only mask coordinates; weight decay included only in selected candidate; no unselected write",
+    "checkpoints": [
+      2146,
+      4293
+    ],
+    "checkpoint_precision": "BF16 fullmodel + FP32 moments; masks/unions losslessly np.packbits, reconstruct indices; no extra final weight duplicate",
+    "state_recovery": "real longest-example preflight, all3 support checks; one true S-All4→8 serialized replay vscontinuous8; full state/weight/RNG checks, no extra scientific variants"
+  },
+  "evaluation": {
+    "source": "same frozen512endpoint generation and511scored as InfoNCE study; all3 new generations, Base cache only",
+    "data_manifest_sha256": "49ee3b263ba4b592102ede40b21f9a843f7a8989f01018fbbed20f22dbcc1ba6",
+    "raw_data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+    "tasks": {
+      "SWreading": 64,
+      "ENreading_generated": 64,
+      "ENreading_valid": 63,
+      "ENtoSW_translation": 128,
+      "SWtoEN_translation": 128,
+      "ENinstruction_strict": 128
+    },
+    "math": "excluded, automatic scorer unaccepted",
+    "no_formal_tests": true,
+    "same_prompt_generation_scoring": "frozen InfoNCE endpoint call/caps/order/batch4 and accepted reading/sourceexclusion, original chrF++/instructionstrict",
+    "bootstrap": "10000 paired sourcecluster resamples seed42; all3pairwise comparisons, no average taskscore"
+  },
+  "decision": {
+    "primary_comparison": "S-Attn minus S-All; S-MLP minus S-All and S-Attn minus S-MLP reported regardless outcome",
+    "SW_learning_close": "paired95CI lower ENtoSW>=-1chrF++, SWtoEN>=-1chrF++, SWreading>=-2F1points",
+    "English_retention_better": "ENreading contentaccuracy paired95CI lower>0; instructionstrict lower>=-2points versus S-All; other improvements descriptive only",
+    "interpretation": "exploratory seed42 screen, no equivalence from nonsignificance; no automatic secondseed or subspace training",
+    "displacement_confound": "If an apparent advantage accompanies cumulative path length or final Base displacementL2 ratio<.8 versus S-All, require later matched-displacement control before module attribution; do not run it now",
+    "if_MLP_better_or_no_Advantage": "do not assume Attention naturally better; retain negative/uncertain findings",
+    "small_sample": "uncertain intervals reported as uncertain, no automatic new checkpoints or seeds"
+  },
+  "records": [
+    "1,543,714,304 model parameters;196 gradient-enabled candidate matrices; eligible-only FP32 states",
+    "exactquota andmaskrefreshstep",
+    "actual BF16nonzero writes, displacements andcumulativepath",
+    "maskunion counts/finalBase delta bymodule",
+    "fullgradnorm and clipfactor",
+    "main input/supervised/padded tokens; zeroaux",
+    "TensorBoard, complete optimizer/scheduler/RNG checkpoint",
+    "physical GPU peak and walltime",
+    "raw peritem generations and grouped CIs"
+  ],
+  "resource_budget": {
+    "per_train_GPUh": 4,
+    "three_trains_GPUh": 12,
+    "technical_GPUh": 1,
+    "three_evaluations_GPUh": 4.5,
+    "total_new_GPUh_ceiling": 17.5,
+    "disk_GB_ceiling": 75,
+    "account_gpu_cap": 8,
+    "scheduling": "Any verified idle GPU, respecting actual owners and queue reservations; GPU5 initial, reserve D1endpoint handoff before taking GPU3.",
+    "no_autostart_or_auto_retry_service": true,
+    "temporary_exception": "User2026-10-22: 最近卡较空闲，可以使用所有经核实空闲的GPU。Scope: currentD1+3group experiments only; globaldefault remains4."
+  },
+  "training_stop": [
+    "nonfinite gradient/loss/state",
+    "observed support/budget/frozenweight violation",
+    "100consecutive mainCE>20",
+    "projected training budget failure or insufficient disk",
+    "resource owner conflict; preserve failed attempt, diagnose before authorized recovery"
+  ],
+  "historical15percent": "reference only, not matchedS-All",
+  "share_access": "Native thread lookup and sharedURL fetch unavailable; use complete experiment specification pasted by user."
+}

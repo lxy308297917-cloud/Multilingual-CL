@@ -1,0 +1,8 @@
+{
+  "time_unix": 1792657215.3351393,
+  "user_instruction": "还有一张gpu是空闲的，你可以占用上，最近的卡比较空闲，你可以用上所有空闲的卡",
+  "scope": "current module3group plusongoingD1, verifiedidle only",
+  "max_physical_GPUs": 8,
+  "global_queue_default_unchanged": 4,
+  "own_earlier_preflight": "resource acquisition safely refused before GPU/context, no scientific updates; reuse no partialweights"
+}
