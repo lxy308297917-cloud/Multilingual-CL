@@ -96,3 +96,16 @@ adapter相对Base对所选token logprob的变化，在Transformers与native vLLM
 同批提示完成墙钟速度为1.569倍，耗时减少36.26%；token吞吐提高48.22%。64条回答没有一条token序列完全相同，因此不是等输出性能基准，不能宣称精确等价。总生成482893 token，父队列一次性成本0.679722 GPU小时；11条TensorBoard性能/成本序列已回读。两档均exit0，并发32满足预先规定的实际加速且最低采样空闲≥1024MiB条件，可作为未来统一评测协议候选。单次试验、顺序固定16后32、共享服务器背景未控制，1秒采样不保证捕获瞬时峰值。
 
 当前seed42正式评测与seed43开发复验保持已冻结的并发16；不重贴旧结果标签、不改进行中的任务。本结果不等于OPD训练提速倍数。完整原始轨迹与遥测保留，见[验收报告](eval_concurrency4b_completed_20261022.PUBLIC.json)。
+
+
+## 2026-10-23：完整8192预算的评测吞吐实测
+
+固定64题（SW32／英语32）、相同SW20 checkpoint、提示和逐题种子：历史 native LoRA 并发32生成929.565秒（约15.5分钟），252.37 token/s；合并权重服务生成377.215秒（约6.3分钟），626.87 token/s。生成阶段墙时约快2.464倍，吞吐约2.484倍。
+
+新父任务计入准备与清理共586秒，同时分配两卡，成本0.32556 GPU小时。历史native32仅生成与加载的已测GPU时下界为0.26190，因此尚不能声称节省总GPU时。新服务最低采样空闲显存2187MiB，64个逐题种子及398个权重接收记录均验收通过；没有写出完整合并模型。辅助HF卡在生成期间闲置，是后续应消除的开销。
+
+这次比较同时改变了native LoRA／合并权重、eager／CUDA graphs、显存比例及运行时间和GPU；背景负载未受控，不将收益归因于单一改动。64个完整token轨迹均未逐条一致。仅作同一checkpoint的描述性评分：native32为SW9/32、英语30/32，新服务为SW7/32、英语29/32；不能证明质量等价或OPD成效。
+
+新路径达到后续完整配对协议先导的工程条件，未替换正式协议。当前BN native16固定评测继续。后续若采用，先消除辅助卡的长时间占用，再让Base与学生共同使用冻结的新后端评测，完整记录数值、质量和成本差异。
+
+证据：[性能验收](https://github.com/lxy308297917-cloud/Multilingual-CL/blob/main/experiments/copsd_official_10lang/seeded_server4b_benchmark_completed_20261023.PUBLIC.json)、[同模型64题描述性评分](https://github.com/lxy308297917-cloud/Multilingual-CL/blob/main/experiments/copsd_official_10lang/seeded_server4b_quality_smoke64_20261023.PUBLIC.json)。

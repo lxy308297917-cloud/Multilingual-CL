@@ -1,0 +1,49 @@
+{
+  "accepted_at": "2026-10-23T07:47:13.807849",
+  "protocol": "project_SW4B_seeded_merged_server64_throughput_v1",
+  "items": 64,
+  "input_languages": {
+    "sw": 32,
+    "en": 32
+  },
+  "max_new_tokens": 8192,
+  "max_num_seqs": 32,
+  "native32_generation_seconds": 929.5647639650851,
+  "native32_generated_tokens": 234592,
+  "native32_tokens_per_second": 252.36756931205213,
+  "merged_server_generation_HTTP_seconds": 377.2146228700876,
+  "merged_server_generated_tokens": 236463,
+  "merged_server_tokens_per_second": 626.865942260774,
+  "generation_wall_reference_speedup": 2.464286132102642,
+  "tokens_per_second_reference_ratio": 2.4839401669937042,
+  "new_allocated_parent_GPU_hours": 0.32555555555555554,
+  "new_parent_wall_seconds": 586.0,
+  "native32_generation_plus_load_GPU_hours_lower_bound": 0.261895077323748,
+  "HF_export_sync_audit_seconds": 44.195700362324715,
+  "per_question_seed_receipts_verified": true,
+  "all398_tensor_receipts_verified": true,
+  "exact_token_output_matches_native32": 0,
+  "normal_terminations": 56,
+  "truncated": 8,
+  "memory": {
+    "0": {
+      "sampled_peak_used_MiB": 9155.0,
+      "sampled_min_free_MiB": 15103.0,
+      "samples": 534,
+      "mean_util_percent": 1.0337078651685394
+    },
+    "1": {
+      "sampled_peak_used_MiB": 22071.0,
+      "sampled_min_free_MiB": 2187.0,
+      "samples": 534,
+      "mean_util_percent": 68.51685393258427
+    }
+  },
+  "eligible_for_future_paired_protocol_pilot": true,
+  "quality_or_effectiveness_equivalence_claimed": false,
+  "original_BN_native16_evaluation_modified": false,
+  "no_full_model_checkpoint_written": true,
+  "scope": "Onefixed64 full8192 engineeringtrial, SW20 same4Bcheckpoint andsameprompts/perquestionseeds aspriornative32. No fullmodelcheckpointexport; only398tensors streamed tooriginalserverloader. Server usesdensemergedweights,CUDAgraphs and.85memory; historicalnative32 usednativeLoRA/eager/.9memory. DifferentGPU/time/background andgenerationlength mayvary; not controlledisolation ofeachfactor or qualityequivalence. CountbothallocatedGPUs includingexportrole idleperiod. CurrentBNnative16assessment remainsunchanged. No automaticprotocolreplacement, benchmarkgrid or newtraining.",
+  "next_engineering_step": "If pursuingmergedserving, remove otherwiseidleHFexportGPU viaoneGPUstreamed canonicalLoRA initialization. Mustverifyallweightsagainstcanonicalreference andactualthroughput; no ad hocmethodscore mixing orhealthyBN cancellation.",
+  "TensorBoard_five_performance_series_read_back": true
+}

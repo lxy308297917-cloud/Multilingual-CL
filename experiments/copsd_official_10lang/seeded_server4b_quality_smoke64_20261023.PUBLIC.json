@@ -1,0 +1,30 @@
+{
+  "completed_at": "2026-10-23T07:47:19.892505",
+  "cases": {
+    "native32": {
+      "sw": {
+        "items": 32,
+        "correct": 9,
+        "no_extracted_answer": 3
+      },
+      "en": {
+        "items": 32,
+        "correct": 30,
+        "no_extracted_answer": 1
+      }
+    },
+    "merged_server32": {
+      "sw": {
+        "items": 32,
+        "correct": 7,
+        "no_extracted_answer": 6
+      },
+      "en": {
+        "items": 32,
+        "correct": 29,
+        "no_extracted_answer": 2
+      }
+    }
+  },
+  "scope": "Descriptive64-prompt inferenceimplementation smoke ononesameSW20checkpoint, no Basemodel comparison, method efficacy, checkpoint/language selection or qualityequivalence claim. Bothpaths gradedwithsamepinnedofficialextractor/scorer; rawoutputs/scores preserved. NottheactiveBNdevelopmentassessment."
+}
