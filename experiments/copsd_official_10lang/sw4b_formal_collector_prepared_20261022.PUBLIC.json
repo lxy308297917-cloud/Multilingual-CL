@@ -1,0 +1,7 @@
+{
+  "prepared_at": "2026-10-22T22:43:20.097906",
+  "collector_sha256": "48ffbd57420544c7c1de652cc294e1afa672ede59c380158bc09ebfdb0fd3a4f",
+  "compile_check_passed": true,
+  "functional_acceptance_pending_completed_outputs": true,
+  "scope": "Fourcase fixedcheckpoint formalreport acceptance, not testdriven selection. Gateall fourparentsexit0, all250/1319 items andsameprompt/seed perpair; countparentcost once."
+}

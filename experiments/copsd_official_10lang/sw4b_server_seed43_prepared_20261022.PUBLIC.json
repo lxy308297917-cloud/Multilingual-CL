@@ -1,0 +1,22 @@
+{
+  "prepared_at": "2026-10-22T22:38:35.618061",
+  "entry_only_seed_guard_scope_and_manifest_path_changed": true,
+  "parent_only_entry_module_filename_changed": true,
+  "CPU_preflight_passed": true,
+  "scientific_seed_changes": {
+    "Trainer_seed": [
+      42,
+      43
+    ],
+    "data_seed": [
+      42,
+      43
+    ]
+  },
+  "other_scientific_train_arguments_identical": true,
+  "no_GPU_training_started_at_preflight": true,
+  "not_selected_using_formal_test_results": true,
+  "seed43_frozen_sha256": "b4a81937f106d132c14ab76f5893b3639da1e038b3b88607d6883a935838a985",
+  "prelaunch_metadata_revision_prior_sha256": "ff73fde05a4308eb9804c0cca5605e68a1c73e2d8188d2da3d4148edfc1e449d",
+  "scientific_train_arguments_unchanged_after_CPU_preflight": true
+}
