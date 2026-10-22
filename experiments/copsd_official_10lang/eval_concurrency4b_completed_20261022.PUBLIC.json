@@ -1,0 +1,47 @@
+{
+  "protocol": "project_SW4B_nativeLoRA_eval_throughput16_32_v1",
+  "completed_at": "2026-10-23T00:32:03.299099",
+  "modes": {
+    "16": {
+      "concurrency": 16,
+      "items": 64,
+      "generated_tokens": 248301,
+      "generation_seconds": 1458.3446866199374,
+      "load_seconds": 15.028081616386771,
+      "tokens_per_generation_second": 170.26221734691333,
+      "samples_per_generation_second": 0.043885372633225214,
+      "sampled_physical_GPU_peak_MiB": 21909.0,
+      "minimum_sampled_GPU_free_MiB": 2349.0,
+      "sampled_GPU_util_mean_percent": 36.042062415196746,
+      "truncated": 6,
+      "items_sha256": "d6a45f7be3900b1dc98b068841caccdaf880227a9e31891f62d4d7fa6c20076c",
+      "scope": "4B64-prompt SW32/EN32 full8192 nativeLoRA engineering benchmark, no answergrading. Physical telemetry includes load/display overhead; sharedserver backgroundactivity andsingletrial order are not controlled."
+    },
+    "32": {
+      "concurrency": 32,
+      "items": 64,
+      "generated_tokens": 234592,
+      "generation_seconds": 929.5647639650851,
+      "load_seconds": 13.257514400407672,
+      "tokens_per_generation_second": 252.36756931205213,
+      "samples_per_generation_second": 0.06884942553868562,
+      "sampled_physical_GPU_peak_MiB": 22239.0,
+      "minimum_sampled_GPU_free_MiB": 2019.0,
+      "sampled_GPU_util_mean_percent": 41.224814422057264,
+      "truncated": 2,
+      "items_sha256": "e1a2538b415196c70cf8d5f31422f022bbeb7c3d7acae80ab33d47f82a85448c",
+      "scope": "4B64-prompt SW32/EN32 full8192 nativeLoRA engineering benchmark, no answergrading. Physical telemetry includes load/display overhead; sharedserver backgroundactivity andsingletrial order are not controlled."
+    }
+  },
+  "generation_wall_speedup32_vs16": 1.5688467798621437,
+  "measured_same_GPU": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+  "exact_token_sequence_matches": 0,
+  "candidate_for_future_uniform_protocol": true,
+  "threshold_minimum_sampled_free_MiB": 1024,
+  "new_generated_tokens": 482893,
+  "parent_GPU_hours": 0.6797222222222222,
+  "TensorBoard_ten_performance_series_one_cost_read_back": true,
+  "scope": "One two-mode engineeringtrial,64 SW32/EN32 full8192 prompts permode; no answergrading or qualityequivalence. Generatedlengths may differ; reporttoken andsamplethroughput. Sharedserver backgroundandmodeorder uncontrolled. Existingseed42/seed43 scientificprotocols remainnative16; futurecomparisons mustuseone uniformlyfixed adoptedprotocol, neverrelabel oldscores.",
+  "frozen_sha256": "16b2c9a493185a96c21e86568428ec18a8c1fb8288b01613a545b4d169bca3b7",
+  "summarizer_sha256": "51c5bc95c151b7d3d95010220f718f88ca6ebd2f5ccf9e01441de318b8d85549"
+}
