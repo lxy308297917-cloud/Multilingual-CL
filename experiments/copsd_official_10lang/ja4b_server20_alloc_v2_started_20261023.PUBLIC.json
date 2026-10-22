@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-10-23T02:01:47.140763",
+  "queue": "copsd-ja4b-server20-alloc-v2",
+  "parent_PID": 436491,
+  "started_at": "2026-10-23 01:58:19",
+  "GPU_indices": [
+    2,
+    3
+  ],
+  "GPU_uuids": [
+    "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+    "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573"
+  ],
+  "phase": "running",
+  "max_user_gpus": 4,
+  "checkpoint_relative": "models/checkpoint/copsd_ja4b_server_single20_alloc_v2/ja_4b_server_single20_safe2700_horizon100_seed42_alloc_v2_20261023",
+  "recovery_from_checkpoint": false,
+  "scope": "FreshBase independentallocatorrepairattempt; old4updates didnotyieldasavedcheckpoint. SWseed43Englishevaluationcontinues, JA Base200hascompleted."
+}

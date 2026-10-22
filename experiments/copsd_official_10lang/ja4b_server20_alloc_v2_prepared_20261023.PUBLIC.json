@@ -1,0 +1,14 @@
+{
+  "prepared_at": "2026-10-23T02:01:47.140438",
+  "CPU_preflight_passed": true,
+  "Python_compile_and_queue_validate_passed": true,
+  "same_train_arguments_and_pool_as_failed_attempt": true,
+  "freeze_sha256": "80c118397f4b9467174fe712ab47b4d7cc191bf24cf0684dbfc8805c1d4327d1",
+  "allocator_environment_verified_for_both_roles": true,
+  "roles_PID": {
+    "server": 436871,
+    "training": 436984
+  },
+  "phase": "Model initialized, first synchronization pending; not yet past priorOOM location.",
+  "scope": "One corrected recoveryattempt, not provenmemoryfix orqualityresult. No validcheckpoint4, restartedfreshBase. Originalfailure retained; do notblindlyrepeatifOOMrecurs. OriginalJA20evalfreeze notsilentlyretargeted; v2trained evalrelease mustbeexplicit."
+}

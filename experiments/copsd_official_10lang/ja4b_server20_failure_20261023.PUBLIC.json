@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-10-23T01:56:56.472441",
+  "queue": "copsd-ja4b-server20-v1",
+  "phase": "failed",
+  "exit_code": 1,
+  "completed_updates": 4,
+  "last_completed_micro_step": 129,
+  "failure_location": "Original F.kl_div fullvocabulary beta0 loss, before microstep130 completed.",
+  "CUDA_error": "Tried1.16GiB; driverfree1.11GiB;allocated20.71GiB;reservedunallocated1.45GiB.",
+  "valid_resume_checkpoint_present": false,
+  "reason_no_checkpoint": "Firstscheduledsaveat5updates, failedafter4. No claim of recoverablecheckpoint4.",
+  "parent_GPU_hours": 0.6972222222222222,
+  "log_sha256": "cf2c256c8d6e3ba78f70d880db10a0b8737b1f410156122a92e2224517bcb51f",
+  "next_action": "FreshBase independentv2, same scientificsettings and2048; enable expandable_segments CUDAallocator only. Retainfailedlogs/weightsdirectory, no overwriteorblindunchangedretry. IfOOMrecurs, stop thisallocatorstrategy anddiagnose alternateexactmemoryadaptation.",
+  "scope": "Resourcefailure, not JAeffectiveness or data-label rejection. No mathematical score produced."
+}

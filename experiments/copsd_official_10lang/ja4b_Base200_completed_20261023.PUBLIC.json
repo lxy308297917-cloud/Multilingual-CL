@@ -1,0 +1,30 @@
+{
+  "accepted_at": "2026-10-23T01:58:34.305645",
+  "protocol": "project_JA4B_followup_dev200_single8192_c16_v1",
+  "condition": "Base",
+  "language": "ja",
+  "metrics": {
+    "items": 200,
+    "single_correct": 140,
+    "generated_tokens": 796109,
+    "truncated": 35,
+    "normal_terminations": 165,
+    "answer_extraction_failures": 29,
+    "protocol": "project_JA4B_followup_dev200_single8192_c16_v1",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 200,
+    "single_accuracy": 0.7,
+    "generation_seconds": 1401.682800501585,
+    "model_load_seconds": 11.997067205607891,
+    "actual_max_num_seqs": 16
+  },
+  "source": {
+    "run_id": "ja4b_followup200_Base_ja_20261023_v1",
+    "items_sha256": "872905b4e832641e65b847ccd7766b79fe136d7e8449ec5611a5e13be72dbaf5",
+    "config_sha256": "03c22aa17a1fb67bcfaf5c6ad246208ef4332eee823f2b44e59310a79ea6d00a"
+  },
+  "TensorBoard_Base_accuracy_read_back": true,
+  "cost_deferred_to_complete_JA_pair_report": true,
+  "scope": "New4B BaseJA200 baseline only, no trainedJA score ormethod efficacy claim. Allsource/data/rows/seed/counts verified; parentallocation cost notadded asnewwhenlaterfullreport includesit."
+}

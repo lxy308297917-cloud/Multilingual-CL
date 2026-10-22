@@ -1,0 +1,40 @@
+{
+  "accepted_at": "2026-10-23T01:58:44.186326",
+  "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+  "status": "SWsubevaluationcompleted_Englishstillrunning",
+  "Base_correct": 16,
+  "seed42_correct": 62,
+  "seed43_correct": 47,
+  "items_each": 200,
+  "seed43_paired": {
+    "Base_correct": 16,
+    "checkpoint_correct": 47,
+    "gained": 38,
+    "lost": 7,
+    "delta_correct": 31
+  },
+  "seed43_metrics": {
+    "items": 200,
+    "single_correct": 47,
+    "generated_tokens": 785731,
+    "truncated": 41,
+    "normal_terminations": 159,
+    "answer_extraction_failures": 42,
+    "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 200,
+    "single_accuracy": 0.235,
+    "generation_seconds": 3523.2151931319386,
+    "model_load_seconds": 13.170924115926027,
+    "actual_max_num_seqs": 16
+  },
+  "source_sha256": {
+    "ITEMS": "3c7683afa006b80e69d120209043382ffe09172cb27e4762c6fa1726e8c3476b",
+    "CONFIG": "35c0cb348960f47a9aadfdd94019c0b353ef535d3e4ced50da200bba6ec486c6",
+    "DONE": "9ae9e393ff37cfc9ce910ca792e86845306018f89cc913fa8e78440e5cfd61ba"
+  },
+  "English_score_pending": true,
+  "parent_cost_deferred_to_full_report": true,
+  "scope": "Bothfixed4Btrainingseeds improve SW mathscore onpre-existing200 versusBase; seed43 smallerthan42. Onequestionpool, twofixedseeds, notpopulationstability, pureSWlanguage orEnglishpreservation claim. English/finalparent acceptance stillpending; no repeatedBase generation orcostrecount."
+}
