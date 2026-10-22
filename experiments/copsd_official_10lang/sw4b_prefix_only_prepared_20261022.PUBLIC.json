@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-22T18:39:51.449061",
+  "protocol": "project_SW4B_Base_thinkprefix_only_EN_originaldev100_v1",
+  "CPU_preflight_passed": true,
+  "actual_saved_Base_prompts_and_question_seeds_matched100": true,
+  "sole_edit_checked_for_all100": "assistant thinking suffix SW toreleasedEN; SWquestions anduserinstruction unchanged",
+  "original_evaluator_source_unchanged": true,
+  "new_GPU_work": false,
+  "queue_configured_and_validated": true,
+  "queue_started": false,
+  "primary_SW_EN_evaluation_priority_preserved": true,
+  "frozen_sha256": "d75287131ae91fdf5a38b333d93cb34adf070d428f941b4fe169550857939779",
+  "scope": "Posthoc mechanism control motivated by observed Englishswitch, no selection overpromptgrid andno replacementof officialnativeSWbaseline. Runtime refusesuntilprimaryevaluationparent exit0."
+}
