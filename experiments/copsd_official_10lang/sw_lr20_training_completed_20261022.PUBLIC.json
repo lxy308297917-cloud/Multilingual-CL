@@ -1,0 +1,50 @@
+{
+  "observed_at": "2026-10-22T12:38:32.739395",
+  "protocol": "project_SW_paired_learning_rate20_safe2700_v1",
+  "both_training20_completed_and_checkpoints_accepted": true,
+  "actual640_student_and_teacher_prompt_hash_sequences_identical": true,
+  "initial_adapter_and_engine_fingerprints_identical": true,
+  "compared_scientific_args_equal_except_learning_rate": true,
+  "conditions": {
+    "reference": {
+      "learning_rate": 5e-06,
+      "initial_sync": {
+        "global_step": 0,
+        "adapter_hash": "b0c5de3173efa50478c7eb50c75e5277403bb8c080c43e4cd368e09940921f6e",
+        "engine_hash": "94f89957152f413bd10682509f1a524552fc74aa214bea8483bee2c5f82a269e",
+        "seconds_including_diagnostic_hashing": 22.844879446551204
+      },
+      "prompt_sequence_sha256": "0834f4414a66e5bb9b8e3911d5b246f9aacd32cf76c03ee22e088f393c95dc49",
+      "question_exposures": 640,
+      "training_generated_tokens": 1177559,
+      "valid_response_loss_positions": 1177559,
+      "teacher_attended_input_positions": 1924836,
+      "teacher_forward_cuda_seconds": 163.76929431152342,
+      "student_forward_cuda_seconds": 146.19090159606932,
+      "train_seconds_including_diagnostic_hashing": 2486.100604325533,
+      "optimizer_scheduler_RNG_step20_verified": true,
+      "ordered_training_shutdown": true
+    },
+    "lower_lr": {
+      "learning_rate": 1e-06,
+      "initial_sync": {
+        "global_step": 0,
+        "adapter_hash": "b0c5de3173efa50478c7eb50c75e5277403bb8c080c43e4cd368e09940921f6e",
+        "engine_hash": "94f89957152f413bd10682509f1a524552fc74aa214bea8483bee2c5f82a269e",
+        "seconds_including_diagnostic_hashing": 21.41082170419395
+      },
+      "prompt_sequence_sha256": "0834f4414a66e5bb9b8e3911d5b246f9aacd32cf76c03ee22e088f393c95dc49",
+      "question_exposures": 640,
+      "training_generated_tokens": 1217035,
+      "valid_response_loss_positions": 1217035,
+      "teacher_attended_input_positions": 1964312,
+      "teacher_forward_cuda_seconds": 161.07944679260254,
+      "student_forward_cuda_seconds": 142.9513644256592,
+      "train_seconds_including_diagnostic_hashing": 2525.3874061331153,
+      "optimizer_scheduler_RNG_step20_verified": true,
+      "ordered_training_shutdown": true
+    }
+  },
+  "all_development_cases_complete": false,
+  "scope": "Actual training inputs and full20 state accepted, not downstream efficacy. Parent pipelines continue with SW/EN development. Training loop clocks are not parent pipeline clocks; do not double count overlapping completion ledgers."
+}
