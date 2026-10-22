@@ -1,0 +1,17 @@
+{
+  "all_passed": true,
+  "GPU_started": false,
+  "client_return_schema_adapted": true,
+  "presence_penalty_transported_via_generation_kwargs": true,
+  "rollouts_per_update": 32,
+  "groups": 2,
+  "guard_rejections": [
+    "unconsumed_batch",
+    "wrong_prompt_order",
+    "cross_update_stale",
+    "unsynchronized_policy",
+    "changed_sampling"
+  ],
+  "scope": "CPU fake transport and policy-cache invariants only. No NCCL, remote weights, CUDA memory or actual model-generation claim.",
+  "adapter_sha256": "210ca3f98144766761239724e3769b51d652ef5d4f90de3440cf0fba8438c489"
+}

@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-10-22T15:28:11.351667",
+  "protocol": "SW4B_official_server_resource2_v1",
+  "phase_snapshot": "running",
+  "queue": "copsd-sw4b-server-resource-v1",
+  "job_pid": 301854,
+  "monitor_pid": 301670,
+  "assigned_GPU_indices": [
+    0,
+    2
+  ],
+  "started_at": "2026-10-22 15:27:01",
+  "script_sha256": "fc44fedebe7ead78f0e90319ef91a15521e83d0c3ba495850f056980c85376b2",
+  "frozen_sha256": "d565b740705b761d994bde60b67f22426305acf510d86c1dc986d87344b5d516",
+  "max_account_GPUs": 4,
+  "allocated_GPUs": 2,
+  "official_server_mode": true,
+  "updates_target": 2,
+  "response_budget": 2048,
+  "actual_weights_or_NCCL_validated": false,
+  "training_completed": false,
+  "scope": "Manual single-job launch plus independently observed live monitor/parent; CPU schema/sampling/loader checks passed. Initialization/actual NCCL/2updates not yet accepted; no4B mathscores."
+}

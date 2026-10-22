@@ -1,0 +1,10 @@
+{
+  "all_passed": true,
+  "GPU_started": false,
+  "released_SamplingParams_accepts_full_budget": true,
+  "original_worker_loop_preserved_except_extension_class": true,
+  "original_CPU_loader_and_received_weight_receipt_match": true,
+  "scope": "OriginalTRLSampler construction and CPU fake broadcast/loader only; not actual NCCL or remote CUDA weight synchronization.",
+  "installed_server_source_sha256": "5ca7913edee122bb67212c0047580c1934ea1f033f832f4fd9893d2e4eeb6a06",
+  "audited_worker_sha256": "1e4b8e5f08dc35248b3413cc6f5f8b1ec5c6106c42665590ee474d3f58b5c83e"
+}

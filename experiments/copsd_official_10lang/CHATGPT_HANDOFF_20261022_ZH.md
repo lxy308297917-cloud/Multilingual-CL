@@ -138,3 +138,16 @@ checkpoint1的optimizer步数、scheduler、trainer_state均为1，RNG文件存�
 只读源码核对显示官方trainer提供vLLM server模式，可考虑将训练与rollout分配不同GPU；但当前TRL0.26客户端`generate`返回含`completion_ids`的字典，COPSD发布代码按列表消费，现有批量／同步／关闭适配也明确只支持colocate。因此分卡需要独立兼容与同步验证，不能仅改启动参数就称已可运行。尚未启动分卡任务。
 
 [最终失败证据](sw4b_resource2_v3_failed_20261022.PUBLIC.json) · [受资源条件约束的4B先导固定配置](sw4b_pilot20_frozen_20261022.PUBLIC.json)。完整目标未完成：1.7B额外开发集只支持SW默认收益，三语选择与正反顺序矩阵仍缺稳定候选。
+
+
+## 15:28 官方server分卡路径：独立两卡资源短跑已手动启动
+
+针对单卡4B在真实KL算子缺少显存，采用官方已有`vllm_mode=server`路径：一张GPU负责学生训练及禁用adapter的原始冻结教师前向，另一张GPU负责当前学生的在线生成。没有CPU教师前向或新的算法损失；默认账号总上限仍4卡，本次分配GPU0／2，其他用户GPU1／6／7不动。独立命名队列和输出，不恢复失败单卡v3或使用其调试adapter。
+
+兼容适配已独立实现：TRL0.26客户端返回字典转为COPSD所需completion-ID列表，presence_penalty通过generation_kwargs原值传输；仅合批同一优化器更新内的32条学生问题，保留原官方packing／causal mask。原有非原位LoRA导出送往官方NCCL更新接口；接收端在原loader返回后逐参数记录名称／形状／dtype／SHA，训练端每次同步逐项对照，并检查冻结Base位级不变。这里的传输验收不等于完整fused-layout概率等价。
+
+CPU检查通过：两组32个假请求的缓存／题序／采样守卫会拒绝跨更新、未同步权重、错题序与改变采样；真实安装版本SamplingParams接受2048／T1.1／p.95／k20；原worker loop只替换extension类，CPU假broadcast下原loader确实收到相同张量。发布入口的实际参数也经官方TrlParser接受，解析检查仅临时use_cpu，不加载模型。这些不是CUDA或NCCL验证。
+
+本次仍是64条固定普通／最长上下文压力题、2更新、100步日程、LoRA64／alpha128、AdamW5e-6、有效batch32、2048回答上限、原beta0／分量clip.05。保留前次已验证的等价mask归约以减少复制。两卡真实wrapper预检通过并已手动启动；实际远端权重同步、训练、显存、checkpoint与关闭仍待验收。资源通过后才能制定引用新资源验收的独立4B先导配置，不绕过旧单卡先导失败条件，不自动扩十语或选三语。
+
+[固定配置与源码身份](sw4b_server_resource_frozen_20261022.PUBLIC.json) · [启动快照](sw4b_server_resource_started_20261022.PUBLIC.json) · [缓存／客户端CPU证据](server_rollout_compat_CPU_20261022.PUBLIC.json) · [安装版采样与loaderCPU证据](server_runtime_compat_CPU_20261022.PUBLIC.json)。
