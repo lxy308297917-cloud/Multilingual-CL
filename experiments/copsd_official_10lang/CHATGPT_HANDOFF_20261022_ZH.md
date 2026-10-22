@@ -3,7 +3,7 @@
 
 
 
-## 0. 2026-10-23 02:01最新4B结论（先读本节）
+## 0. 2026-10-23 02:26最新4B结论（先读本节）
 
 - 正式SW MGSM-Rev2：固定Base／checkpoint20，单次回答34→54／250（13.6%→21.6%），新增31／失去11。这不是旧1.7B AfriMGSM pass12，虽恰好相同计数。正式英语GSM8K已成对验收1247→1246／1319（94.54%→94.47%），17道新增、18道失去；这不是英语总体无遗忘或训练seed稳定性的证明。
 - 原100开发题SW7→31、英语90→85；固定200开发题SW16→62（8%→31%）、英语166→158（83%→79%）。两题集同一训练seed，未宣称英语保持。
@@ -444,3 +444,11 @@ SW新增31、失去11；新增中10道Base截断、11道Base未提取答案，**
 - 原JA20评测manifest不改指向v2，避免错绑失败权重；后续必须另行冻结v2训练后release/评测身份。SW seed43英语在GPU0继续，JA Base已释放GPU4；本账号当前三张实际任务GPU。
 
 证据：[SW第二种子目标语验收](sw4b_seed43_target200_partial_20261023.PUBLIC.json)、[JA Base200](ja4b_Base200_completed_20261023.PUBLIC.json)、[JA失败证据](ja4b_server20_failure_20261023.PUBLIC.json)、[v2配置](ja4b_server20_alloc_v2_frozen_20261023.PUBLIC.json)、[v2准备](ja4b_server20_alloc_v2_prepared_20261023.PUBLIC.json)、[v2启动](ja4b_server20_alloc_v2_started_20261023.PUBLIC.json)。
+
+## 2026-10-23 02:26：JA恢复已越过旧OOM点并保存checkpoint5
+
+allocator v2已完成5次更新，并继续训练。checkpoint5的optimizer/scheduler均为5步、Trainer horizon100、seed/data_seed42、LR5e-6、RNG与adapter文件存在且CPU加载检查通过。这里未执行真实server恢复演练，不把文件存在表述为逐位恢复已验证。
+
+原/新首次160条学生与教师prompt tensor哈希一致。原来失败的第130条，两次都是2048个生成token；v2已通过并完成至少164个microstep。该条生成的token序列不完全相同，前160条仅28条完全相同，因此不是固定同一轨迹的严格显存对照。它支持分配器调整能推进当前任务，但不能保证后续不OOM或方法有效。前6次远端同步每次398参数通过，旧失败日志保留。
+
+SW第二种子的英语200题评测继续，当前没有完整英语分数，也没有JA训练后数学结果。见[checkpoint5与旧失败位置对照验收](ja4b_allocator_recovery_checkpoint5_20261023.PUBLIC.json)。

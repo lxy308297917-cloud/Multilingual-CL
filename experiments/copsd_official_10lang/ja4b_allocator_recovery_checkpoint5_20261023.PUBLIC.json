@@ -1,0 +1,19 @@
+{
+  "accepted_at": "2026-10-23T02:25:15.865221",
+  "protocol": "independent_JA4B_dedicated_server_single20_seed42_allocator_v2",
+  "checkpoint_step": 5,
+  "scheduler_horizon": 100,
+  "optimizer_and_scheduler_step5_verified": true,
+  "RNG_file_present": true,
+  "adapter_sha256": "19689cd74c3154b19e1a9af19a0918eccee8d59b4515a28c96417e92cb902ac7",
+  "past_original_failed_microstep130": true,
+  "first160_student_teacher_prompt_tensor_hashes_equal_previous_attempt": true,
+  "micro130_completion_lengths": [
+    2048,
+    2048
+  ],
+  "micro130_exact_completion_sequence_equal": false,
+  "completed_syncs_verified": 6,
+  "parameters_per_sync": 398,
+  "scope": "Allocator-only correctedattempt passedsameprompt/full2048previousOOMlocation andsavedcheckpoint5 withCPU-loadabletrainingstate. Sampledtrajectories differ, not anidenticaltensor controlledmemoryexperiment. Full20 completion, futurenonOOM, mathematicalefficacy andactualservercheckpointresume remainunproven. No coreloss/optimizer/responsebudget change."
+}
