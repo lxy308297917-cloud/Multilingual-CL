@@ -1,0 +1,180 @@
+{
+  "observed_at": "2026-10-22T14:02:22.120463",
+  "protocol": "fixed_prefix_HF_native_dense_probability_diagnostic32_v1",
+  "frozen_sha256": "2d9c6b7ac2ea47beb77e9dbcf94daafd0f706f8c7a82f71aab19da60521b1a42",
+  "parent_completed_exit0": true,
+  "all32_prefix_keys_and160_probability_records_verified": true,
+  "probability_comparison": {
+    "all": {
+      "HF_Base_vs_native_Base": {
+        "prefixes": 32,
+        "mean_signed_second_minus_first_logprob": -0.019863333424866347,
+        "mean_absolute_logprob_difference": 0.03150684254066416,
+        "max_absolute_logprob_difference": 0.2421894073486328,
+        "RMS_logprob_difference": 0.06361745139441535,
+        "argmax_agreement_count": 29
+      },
+      "HF_LoRA_vs_native_LoRA": {
+        "prefixes": 32,
+        "mean_signed_second_minus_first_logprob": 0.003652540070053334,
+        "mean_absolute_logprob_difference": 0.033772127823279874,
+        "max_absolute_logprob_difference": 0.22778010368347168,
+        "RMS_logprob_difference": 0.06085327952258357,
+        "argmax_agreement_count": 32
+      },
+      "HF_LoRA_vs_dense_vLLM": {
+        "prefixes": 32,
+        "mean_signed_second_minus_first_logprob": -0.00044108704240564123,
+        "mean_absolute_logprob_difference": 0.03994094020527861,
+        "max_absolute_logprob_difference": 0.22764062881469727,
+        "RMS_logprob_difference": 0.0687436205921598,
+        "argmax_agreement_count": 30
+      },
+      "native_LoRA_vs_dense_vLLM": {
+        "prefixes": 32,
+        "mean_signed_second_minus_first_logprob": -0.004093627112458975,
+        "mean_absolute_logprob_difference": 0.04266721989376698,
+        "max_absolute_logprob_difference": 0.1968371868133545,
+        "RMS_logprob_difference": 0.07049184038380998,
+        "argmax_agreement_count": 30
+      },
+      "adapter_minus_Base_effect_comparison": {
+        "prefixes": 32,
+        "HF_mean_absolute_effect": 0.2083612525387748,
+        "native_mean_absolute_effect": 0.22861016473087226,
+        "mean_absolute_effect_difference": 0.05758275268126756,
+        "max_absolute_effect_difference": 0.4699695110321045,
+        "Pearson_effect_correlation": 0.9623696481274958,
+        "effect_sign_agreement_count": 29
+      }
+    },
+    "sw": {
+      "HF_Base_vs_native_Base": {
+        "prefixes": 16,
+        "mean_signed_second_minus_first_logprob": -0.011162821613654117,
+        "mean_absolute_logprob_difference": 0.03299153078387285,
+        "max_absolute_logprob_difference": 0.16549134254455566,
+        "RMS_logprob_difference": 0.05744875139813893,
+        "argmax_agreement_count": 15
+      },
+      "HF_LoRA_vs_native_LoRA": {
+        "prefixes": 16,
+        "mean_signed_second_minus_first_logprob": 0.0011950054707767777,
+        "mean_absolute_logprob_difference": 0.02849287595961414,
+        "max_absolute_logprob_difference": 0.12833809852600098,
+        "RMS_logprob_difference": 0.04600086440958008,
+        "argmax_agreement_count": 16
+      },
+      "HF_LoRA_vs_dense_vLLM": {
+        "prefixes": 16,
+        "mean_signed_second_minus_first_logprob": -0.016148500620573714,
+        "mean_absolute_logprob_difference": 0.054471780011709825,
+        "max_absolute_logprob_difference": 0.18236160278320312,
+        "RMS_logprob_difference": 0.07651017673179829,
+        "argmax_agreement_count": 14
+      },
+      "native_LoRA_vs_dense_vLLM": {
+        "prefixes": 16,
+        "mean_signed_second_minus_first_logprob": -0.01734350609135049,
+        "mean_absolute_logprob_difference": 0.06714336185009984,
+        "max_absolute_logprob_difference": 0.1968371868133545,
+        "RMS_logprob_difference": 0.09214518782689457,
+        "argmax_agreement_count": 14
+      },
+      "adapter_minus_Base_effect_comparison": {
+        "prefixes": 16,
+        "HF_mean_absolute_effect": 0.27121682173367745,
+        "native_mean_absolute_effect": 0.3054646706543753,
+        "mean_absolute_effect_difference": 0.058684307890304765,
+        "max_absolute_effect_difference": 0.2420140504837036,
+        "Pearson_effect_correlation": 0.9769350757492274,
+        "effect_sign_agreement_count": 14
+      }
+    },
+    "en": {
+      "HF_Base_vs_native_Base": {
+        "prefixes": 16,
+        "mean_signed_second_minus_first_logprob": -0.028563845236078578,
+        "mean_absolute_logprob_difference": 0.030022154297455472,
+        "max_absolute_logprob_difference": 0.2421894073486328,
+        "RMS_logprob_difference": 0.06923872620605055,
+        "argmax_agreement_count": 14
+      },
+      "HF_LoRA_vs_native_LoRA": {
+        "prefixes": 16,
+        "mean_signed_second_minus_first_logprob": 0.00611007466932989,
+        "mean_absolute_logprob_difference": 0.03905137968694561,
+        "max_absolute_logprob_difference": 0.22778010368347168,
+        "RMS_logprob_difference": 0.07273351174581637,
+        "argmax_agreement_count": 16
+      },
+      "HF_LoRA_vs_dense_vLLM": {
+        "prefixes": 16,
+        "mean_signed_second_minus_first_logprob": 0.015266326535762431,
+        "mean_absolute_logprob_difference": 0.02541010039884739,
+        "max_absolute_logprob_difference": 0.22764062881469727,
+        "RMS_logprob_difference": 0.059979693236183046,
+        "argmax_agreement_count": 16
+      },
+      "native_LoRA_vs_dense_vLLM": {
+        "prefixes": 16,
+        "mean_signed_second_minus_first_logprob": 0.009156251866432541,
+        "mean_absolute_logprob_difference": 0.01819107793743413,
+        "max_absolute_logprob_difference": 0.10761070251464844,
+        "RMS_logprob_difference": 0.03804554483430892,
+        "argmax_agreement_count": 16
+      },
+      "adapter_minus_Base_effect_comparison": {
+        "prefixes": 16,
+        "HF_mean_absolute_effect": 0.14550568334387215,
+        "native_mean_absolute_effect": 0.1517556588073692,
+        "mean_absolute_effect_difference": 0.05648119747223035,
+        "max_absolute_effect_difference": 0.4699695110321045,
+        "Pearson_effect_correlation": 0.9488054704536961,
+        "effect_sign_agreement_count": 15
+      }
+    }
+  },
+  "actual_engine_details": {
+    "hf": {
+      "base_dtype": "torch.bfloat16",
+      "LoRA_dtypes": [
+        "torch.float32"
+      ],
+      "attention": "sdpa",
+      "adapter_merge_performed": false
+    },
+    "native": {
+      "actual_max_num_seqs": 16,
+      "model_dtype": "torch.bfloat16",
+      "prompt_logprobs_k": 20,
+      "dummy_max_new_tokens": 1
+    },
+    "dense": {
+      "actual_max_num_seqs": 16,
+      "model_dtype": "torch.bfloat16",
+      "prompt_logprobs_k": 20,
+      "dummy_max_new_tokens": 1
+    }
+  },
+  "stage_seconds_including_load": {
+    "hf": 7.101951466873288,
+    "native": 19.45441298931837,
+    "dense": 13.550169816240668
+  },
+  "raw_stage_sha256": {
+    "hf": "97a3148da0f0181d71900c68ecb9b294922a7ee310f004cb7e5a4b7fcdba3245",
+    "native": "f399113fe3573403eb81a14d7a550299d92b1b63e0c977f80d5d0d2bc1457f1d",
+    "dense": "7e13c246e779301b0ca5f7eee1aba9475c6dae09e873bffbef4ac4c1464abc03"
+  },
+  "cost": {
+    "unique_parent_GPU_hours_counted_once": 0.02388888888888889,
+    "dummy_generated_tokens": 96,
+    "training_updates": 0,
+    "new_math_benchmark_responses": 0,
+    "fixed_prefix_probability_records": 160
+  },
+  "analysis_source_sha256": "923f1ae64d33a89a9fc8580867015ba54fcb050eb859be79f62f568b0f828376",
+  "scope": "One fixed existingSW20 adapter,32 prefixes=4 original questions x2 languages x4 positions; not32 independent questions. Compare HFPEFT/Base with nativevLLM LoRA/Base andexisting BF16 denseexport vLLM. No model updates, source teacher change or new benchmark correctness. One dummy generated token pervLLM request only enables prompt-logprob extraction; not a short-answer efficacy experiment. HFSDPA, nativeLoRA and BF16 merging can differ numerically; measure rather than assume bitwise equality.",
+  "limitations": "32 correlated prefixes over4 shared originalquestions,1 SW20 checkpoint andshort fixed contexts. BF16 dense export is an existing CPUPEFT export, not a direct capture of active training-engine weights. HFSDPA andvLLM native/dense kernels/dtypes may differ. This cannot certify fullgeneration equivalence, all languages/checkpoints, teacher-loss correctness or math-effect causality. No arbitrary numerical pass/fail or benchmark regrading."
+}

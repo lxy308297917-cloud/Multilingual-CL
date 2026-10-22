@@ -1,0 +1,54 @@
+{
+  "frozen_at": "2026-10-22T13:57:35.285726",
+  "protocol": "fixed_prefix_HF_native_dense_probability_diagnostic32_v1",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "input_relative": "logs/copsd_official_10lang/engine_probability_probe_20261022_v1/INPUTS.PRIVATE.json",
+  "input_sha256": "417f513222b11c9805212df4e05fc4fa969034a280832efa4e54e8a05317aa93",
+  "adapter_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed42_20261020_v1/checkpoint-20",
+  "adapter_sha256": "eb12d3b8dd22249fc0d5744ef56d83cf4db0ffe8495357f59ea618db52195c6c",
+  "dense_export_relative": "models/checkpoint/copsd_eval_dense_exports_v1/sw20_seed42_bf16_20261021_v1",
+  "dense_export_manifest_sha256": "03ae72136b7e939e4f246ae4afe4c4e5d7976109ba2a598db9322de65bfc75e9",
+  "source_records": {
+    "sw": {
+      "relative": "logs/copsd_official_10lang/development_vllm8192/sw_clip20_dev100_8192_20261020_v1",
+      "items_sha256": "54e64fe74829034deac57da7f0bdf12d6e4a27c89d2b087334c7a21564966623",
+      "config_sha256": "9cc882865316ffa9cd4d29da58419b9359f7b47d8fb76ffbb528a56d365a9b38"
+    },
+    "en": {
+      "relative": "logs/copsd_official_10lang/development_vllm8192/en_sw_clip20_dev100_8192_20261020_v1",
+      "items_sha256": "c82adb1d698905231c2e49d3c22fab18be8deda94d7f7f6a55424282140cca15",
+      "config_sha256": "3a86a4113586fa1a064dc3c79bbc030cf48531bf09232d429b6a27f56e7d38a1"
+    }
+  },
+  "original_question_IDs": [
+    "01987a36fc5151760158f0f4666ae75f3b99d1a9b67e77ab08c181c8ec032a7b",
+    "05a809fb81b0a32b370933d6a5c9f338935e18ec8f0eb0e471a93208a7750cba",
+    "07c2a8913a8a6c3fb30a7018928febea09dcad5d9ec34752998e8bf3613590ad",
+    "0829f4464c6d805ef7957d2291b4489d99f6899bf6d9ee0b09b5ddbbf749b250"
+  ],
+  "response_positions": [
+    0,
+    32,
+    64,
+    128
+  ],
+  "prefixes": 32,
+  "distinct_original_questions": 4,
+  "languages": [
+    "sw",
+    "en"
+  ],
+  "output_relative": "logs/copsd_official_10lang/engine_probability_probe_20261022_v1/results",
+  "code_sha256": {
+    "engine_probability_probe.py": "1a7f39aceaf0453a71eabda5385053f99a3a65b0b5393139c5d39320aadf148f",
+    "run_engine_probability_probe.sh": "ca34d618cc6dc91ada8b58fe8002d8baf091b7e6f1251ae152bd60cbcc71df16",
+    "prepare_engine_probability_probe.py": "7a47b0f9144cce537a4ec4cb69bd38134e9101c5e468c5e491ad0a3658f8d717",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
+    "benchmark_eval_concurrency8192.py": "2b97abc43ad8ed7c1bed73d741525081d47facf6fefa607cc71ee2a621a1c242",
+    "freeze_vllm_eval.py": "4794b541b8170dc95384747e8040bd7c5feb0b625be1f084ae4858f411cf4354"
+  },
+  "analysis_policy": "Report sampled-token logprob andargmax differences, adapter-minusBase delta differences and correlations. Descriptive fixed-prefix software diagnostic; no arbitrary numerical pass criterion, answer scoring or condition/checkpoint selection. Do not infer full-generation equivalence.",
+  "scope": "One fixed existingSW20 adapter,32 prefixes=4 original questions x2 languages x4 positions; not32 independent questions. Compare HFPEFT/Base with nativevLLM LoRA/Base andexisting BF16 denseexport vLLM. No model updates, source teacher change or new benchmark correctness. One dummy generated token pervLLM request only enables prompt-logprob extraction; not a short-answer efficacy experiment. HFSDPA, nativeLoRA and BF16 merging can differ numerically; measure rather than assume bitwise equality."
+}

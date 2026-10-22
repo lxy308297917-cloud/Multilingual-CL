@@ -1,6 +1,6 @@
 # 十语言官方 COPSD：当前状态与结果
 
-更新：2026-10-22 13:48（Asia/Shanghai）。完整目标仍为十语言独立 single，再由独立开发集选择三语言，完成正反顺序 OPD 与逐阶段遗忘矩阵。**十语言100更新训练及原项目正式套件全部完成；十语言20更新参考的目标语与英语开发配对全部完成。最终三语言未选定，研究性质的顺序训练尚未开始。** 历史记录保留在 Git 和各阶段报告中。
+更新：2026-10-22 14:05（Asia/Shanghai）。完整目标仍为十语言独立 single，再由独立开发集选择三语言，完成正反顺序 OPD 与逐阶段遗忘矩阵。**十语言100更新训练及原项目正式套件全部完成；十语言20更新参考的目标语与英语开发配对全部完成。最终三语言未选定，研究性质的顺序训练尚未开始。** 历史记录保留在 Git 和各阶段报告中。
 
 ## 最新：额外200开发题全部结束
 
@@ -425,3 +425,23 @@ GlotLID思考区SW高置信top1为90→128/200，最终回答高置信SW为18→
 TensorBoard训练loss step20及新开发4条准确率、2条父任务成本均已读回。没有新三语选择或顺序模型；一训练seed、原开发集的探索结果不能证明其他学习率／语言均无效，也不构成独立修复确认。按已冻结边界，本轮不自动增加LR、seed或checkpoint搜索。
 
 [完整学习率对照／原始配对／成本／语言统计](sw_lr20_completed_20261022.PUBLIC.json) · [训练20步及640实际输入匹配验收](sw_lr20_training_completed_20261022.PUBLIC.json)。
+
+
+## 14:05 评测后端数值诊断：未见本探针中的明显adapter失载
+
+针对训练合并权重与评测native LoRA可能不一致的疑点，使用同一既有SW20 adapter和已有BF16密集合并导出，固定原开发集前4个共同原题×SW／EN×回答位置0／32／64／128，共32个相关前缀（不是32道独立题）。直接比较同一目标token的条件对数概率和最高概率token，不评分数学答案、不训练、不修改既有benchmark或checkpoint。
+
+| 固定前缀比较，32点 | 所选token平均绝对logprob差（nat） | 最大绝对差 | 最高概率token一致 |
+|---|---:|---:|---:|
+| Transformers Base ↔ vLLM Base | 0.03151 | 0.24219 | 29/32 |
+| Transformers LoRA ↔ vLLM native LoRA | 0.03377 | 0.22778 | 32/32 |
+| Transformers LoRA ↔ vLLM密集合并导出 | 0.03994 | 0.22764 | 30/32 |
+| vLLM native LoRA ↔ vLLM密集合并导出 | 0.04267 | 0.19684 | 30/32 |
+
+adapter相对Base对所选token logprob的变化，在Transformers与native vLLM间Pearson相关0.96237（SW0.97694／EN0.94881）；平均绝对变化分别0.20836／0.22861 nat，平均绝对变化差0.05758。说明此小探针中adapter效果确实出现且大体对应，未观察到明显的完全未加载现象；不是所有权重、所有checkpoint或长生成的等价性证明。HF采用SDPA、Base BF16／LoRA FP32；vLLM模型BF16、native LoRA及BF16密集合并的运算路径不同，不能假定逐位一致。
+
+密集合并副本来自此前CPU PEFT导出，不是直接捕获当前训练引擎的活跃权重；所以也不能宣称整个训练rollout路径数值验收完成。不能将本结果当作数学效果有效，或直接把密集输出替代原native输出混入结果表。
+
+三阶段父管线exit0，32个固定输入key与160个概率记录已核验。vLLM请求各生成1个未评分占位token，仅为取得prompt logprobs，总计96 token；这不是缩短回答的数学实验。单卡完整父任务0.023889 GPU小时（86秒），无新训练或数学benchmark回答。
+
+[完整概率／adapter效应对比与费用](engine_probability_probe_completed_20261022.PUBLIC.json) · [计算前固定输入与范围](engine_probability_probe_frozen_20261022.PUBLIC.json)。这项检查缩小了工程疑点范围，未解决三语启动所需的稳定效果缺口。
