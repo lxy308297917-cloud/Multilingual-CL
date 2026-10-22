@@ -1,0 +1,219 @@
+{
+  "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+  "completed_at": "2026-10-23T01:18:11.478395",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "cases": {
+    "mgsm_rev2": {
+      "Base": {
+        "metrics": {
+          "items": 250,
+          "single_correct": 34,
+          "generated_tokens": 809908,
+          "truncated": 70,
+          "normal_terminations": 180,
+          "answer_extraction_failures": 74,
+          "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 250,
+          "single_accuracy": 0.136,
+          "generation_seconds": 1449.9159821495414,
+          "model_load_seconds": 12.564919663593173,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {}
+        },
+        "ITEMS_sha256": "d35ab34b0e3f8316a909f631f584ce953c995eea041e9465e7d0196e223eb01e",
+        "CONFIG_sha256": "99005ac5d0d2c4af8007af90295611a9ef269ff547ff178b2f409e412c4c8925"
+      },
+      "SW20": {
+        "metrics": {
+          "items": 250,
+          "single_correct": 54,
+          "generated_tokens": 551535,
+          "truncated": 9,
+          "normal_terminations": 241,
+          "answer_extraction_failures": 11,
+          "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 250,
+          "single_accuracy": 0.216,
+          "generation_seconds": 2770.4561582077295,
+          "model_load_seconds": 13.382803002372384,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {}
+        },
+        "ITEMS_sha256": "7068514833ab4a8edad38541c963b80d99470da305d977723df6fd9b83040094",
+        "CONFIG_sha256": "bfa9ebc87858877156eb3c08b2391c939fe6bfde8272634f53fb2ac539f6c3fb"
+      }
+    },
+    "gsm8k": {
+      "Base": {
+        "metrics": {
+          "items": 1319,
+          "single_correct": 1247,
+          "generated_tokens": 2053312,
+          "truncated": 8,
+          "normal_terminations": 1311,
+          "answer_extraction_failures": 7,
+          "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 1319,
+          "single_accuracy": 0.9454131918119788,
+          "generation_seconds": 3083.4221956003457,
+          "model_load_seconds": 12.43439969420433,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {}
+        },
+        "ITEMS_sha256": "e8422f992c77d9c517a712eda80e154c2c0be0f60a7d71367fdfa26876606934",
+        "CONFIG_sha256": "913393c2454359a6ded84f3ace4790098ea490afc677b88689e09d09d894ac92"
+      },
+      "SW20": {
+        "metrics": {
+          "items": 1319,
+          "single_correct": 1246,
+          "generated_tokens": 2272878,
+          "truncated": 13,
+          "normal_terminations": 1306,
+          "answer_extraction_failures": 10,
+          "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 1319,
+          "single_accuracy": 0.9446550416982562,
+          "generation_seconds": 10142.304775161669,
+          "model_load_seconds": 13.96457538753748,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {}
+        },
+        "ITEMS_sha256": "e791b808b474069f874cd6be830e36cc33b142829c608cb589b2123dd7cf022f",
+        "CONFIG_sha256": "4c3296671bb6780b7460231f5f43ef81b8d1e90fab6e36f5aabc5ed464eb52f4"
+      }
+    }
+  },
+  "paired": {
+    "mgsm_rev2": {
+      "gained_IDs": [
+        "2",
+        "3",
+        "9",
+        "16",
+        "19",
+        "24",
+        "28",
+        "35",
+        "42",
+        "52",
+        "56",
+        "57",
+        "58",
+        "67",
+        "77",
+        "101",
+        "134",
+        "138",
+        "144",
+        "148",
+        "151",
+        "156",
+        "176",
+        "179",
+        "196",
+        "235",
+        "237",
+        "239",
+        "243",
+        "246",
+        "247"
+      ],
+      "lost_IDs": [
+        "1",
+        "61",
+        "112",
+        "129",
+        "166",
+        "171",
+        "190",
+        "202",
+        "213",
+        "230",
+        "248"
+      ],
+      "delta_correct": 20
+    },
+    "gsm8k": {
+      "gained_IDs": [
+        "gsm8k-test-0087",
+        "gsm8k-test-0140",
+        "gsm8k-test-0241",
+        "gsm8k-test-0494",
+        "gsm8k-test-0505",
+        "gsm8k-test-0510",
+        "gsm8k-test-0563",
+        "gsm8k-test-0752",
+        "gsm8k-test-0780",
+        "gsm8k-test-0781",
+        "gsm8k-test-0784",
+        "gsm8k-test-0966",
+        "gsm8k-test-1028",
+        "gsm8k-test-1161",
+        "gsm8k-test-1201",
+        "gsm8k-test-1247",
+        "gsm8k-test-1303"
+      ],
+      "lost_IDs": [
+        "gsm8k-test-0012",
+        "gsm8k-test-0184",
+        "gsm8k-test-0242",
+        "gsm8k-test-0288",
+        "gsm8k-test-0348",
+        "gsm8k-test-0357",
+        "gsm8k-test-0423",
+        "gsm8k-test-0425",
+        "gsm8k-test-0428",
+        "gsm8k-test-0506",
+        "gsm8k-test-0641",
+        "gsm8k-test-0711",
+        "gsm8k-test-0796",
+        "gsm8k-test-0888",
+        "gsm8k-test-1003",
+        "gsm8k-test-1019",
+        "gsm8k-test-1056",
+        "gsm8k-test-1166"
+      ],
+      "delta_correct": -1
+    }
+  },
+  "unique_parent_costs": [
+    {
+      "queue": "copsd-sw4b-formal-base-mgsm-v1",
+      "parent_GPU_hours": 0.42277777777777775,
+      "training_updates": 0
+    },
+    {
+      "queue": "copsd-sw4b-formal-base-gsm-v1",
+      "parent_GPU_hours": 0.8775,
+      "training_updates": 0
+    },
+    {
+      "queue": "copsd-sw4b-formal-sw20-mgsm-v1",
+      "parent_GPU_hours": 0.7919444444444445,
+      "training_updates": 0
+    },
+    {
+      "queue": "copsd-sw4b-formal-sw20-gsm-v1",
+      "parent_GPU_hours": 2.8402777777777777,
+      "training_updates": 0
+    }
+  ],
+  "parent_GPU_hours": 4.932499999999999,
+  "new_generated_tokens": 5687633,
+  "TensorBoard_four_accuracies_two_costs_read_back": true,
+  "scope": "FixedBase/checkpoint20 fullformal n1/8192/native16 SWMGSM250 andEnglishGSM8K1319 only; not officialpass12, PolyMath500, trainingseed confirmation or3-language selection. Test scores used forreporting, not config/checkpoint/language selection.",
+  "summarizer_sha256": "48ffbd57420544c7c1de652cc294e1afa672ede59c380158bc09ebfdb0fd3a4f"
+}

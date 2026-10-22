@@ -1,0 +1,165 @@
+{
+  "observed_at": "2026-10-23T01:20:01.024760",
+  "benchmark": "English GSM8K1319 formal n1/8192/native16",
+  "Base_correct": 1247,
+  "SW20_correct": 1246,
+  "gained": 17,
+  "lost": 18,
+  "net_delta_correct": -1,
+  "reviewed_loss_items": [
+    {
+      "id": "gsm8k-test-0012",
+      "reference": "13",
+      "trained_boxed_answer": "12",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Treats break-even year12 as starting positive profit, reference13."
+    },
+    {
+      "id": "gsm8k-test-0184",
+      "reference": "25",
+      "trained_boxed_answer": "100",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Computes relative increase100 instead of reference probability-point difference25."
+    },
+    {
+      "id": "gsm8k-test-0242",
+      "reference": "3",
+      "trained_boxed_answer": "2",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Resolves senders as two former penpals instead of three remaining penpals."
+    },
+    {
+      "id": "gsm8k-test-0288",
+      "reference": "3",
+      "trained_boxed_answer": null,
+      "finish_reason": "length",
+      "category": "truncation_without_extracted_answer",
+      "review": "8192 budget reached with no final extractedanswer. No inference about correctness of entire unfinished derivation."
+    },
+    {
+      "id": "gsm8k-test-0348",
+      "reference": "10",
+      "trained_boxed_answer": "10\\%",
+      "finish_reason": "stop",
+      "category": "percentage_representation_mismatch",
+      "review": "Saved arithmetic and boxed10percent match the verbal requested percentage; numeric reference10 was graded false by frozen official generalmath scorer. Retain original score; no posthoc percentage normalization."
+    },
+    {
+      "id": "gsm8k-test-0357",
+      "reference": "2",
+      "trained_boxed_answer": "12",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Treats arcade/go-kart costs as shared rather than per person."
+    },
+    {
+      "id": "gsm8k-test-0423",
+      "reference": "8",
+      "trained_boxed_answer": "6",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Ignores separate discount reconstruction and changes interpretation of requested difference."
+    },
+    {
+      "id": "gsm8k-test-0425",
+      "reference": "150",
+      "trained_boxed_answer": "120",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Assumes total birds stays120 and changes feeder allocation instead of adding homemade attraction."
+    },
+    {
+      "id": "gsm8k-test-0428",
+      "reference": "26",
+      "trained_boxed_answer": null,
+      "finish_reason": "length",
+      "category": "truncation_without_extracted_answer",
+      "review": "8192 budget reached with no final extractedanswer. No inference about correctness of entire unfinished derivation."
+    },
+    {
+      "id": "gsm8k-test-0506",
+      "reference": "144",
+      "trained_boxed_answer": "72",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Uses one pair per dog despite four legs, calls leg count a red herring."
+    },
+    {
+      "id": "gsm8k-test-0641",
+      "reference": "262500",
+      "trained_boxed_answer": "378000",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Adds half-month bonus every month rather than once in annual earnings."
+    },
+    {
+      "id": "gsm8k-test-0711",
+      "reference": "6",
+      "trained_boxed_answer": "4",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Returns four paid scoops rather than six total scoops including promotion."
+    },
+    {
+      "id": "gsm8k-test-0796",
+      "reference": "2880000",
+      "trained_boxed_answer": "2640000",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Pays starting200 employees month1 rather than including first month new hires."
+    },
+    {
+      "id": "gsm8k-test-0888",
+      "reference": "10",
+      "trained_boxed_answer": "6",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Interprets typo five-five as5*5 eaten rather than five cookies."
+    },
+    {
+      "id": "gsm8k-test-1003",
+      "reference": "480",
+      "trained_boxed_answer": "180",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Excludes fixed25 session fee from the benchmark expected earnings."
+    },
+    {
+      "id": "gsm8k-test-1019",
+      "reference": "98",
+      "trained_boxed_answer": "113",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Keeps late checkout guests in final occupancy rather than subtracting them."
+    },
+    {
+      "id": "gsm8k-test-1056",
+      "reference": "156",
+      "trained_boxed_answer": "104",
+      "finish_reason": "stop",
+      "category": "task_interpretation_or_modeling_difference",
+      "review": "Assumes twin and king sets can share loads under separate capacity limits."
+    },
+    {
+      "id": "gsm8k-test-1166",
+      "reference": "2350",
+      "trained_boxed_answer": null,
+      "finish_reason": "length",
+      "category": "truncation_without_extracted_answer",
+      "review": "8192 budget reached with no final extractedanswer. No inference about correctness of entire unfinished derivation."
+    }
+  ],
+  "categories": {
+    "task_interpretation_or_modeling_difference": 14,
+    "truncation_without_extracted_answer": 3,
+    "percentage_representation_mismatch": 1
+  },
+  "raw_ITEMS_sha256": {
+    "Base": "e8422f992c77d9c517a712eda80e154c2c0be0f60a7d71367fdfa26876606934",
+    "SW20": "e791b808b474069f874cd6be830e36cc33b142829c608cb589b2123dd7cf022f"
+  },
+  "scope": "Manual review of saved questions, references, boxedanswers and response endings for all18 paired losses, not a new evaluation. Categories describe observed behavior rather than a causal training explanation. Some source wordings permit alternative readings; keep fixed benchmark labels. No rescoring, generation or teacher call; unchanged near-equal aggregate conceals17gains/18losses, not proof of per-question or population noninferiority."
+}
