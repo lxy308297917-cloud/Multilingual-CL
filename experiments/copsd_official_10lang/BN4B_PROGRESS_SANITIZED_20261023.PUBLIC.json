@@ -1,0 +1,60 @@
+{
+  "updated_at": "2026-10-23T05:18:53.225386",
+  "status": "BN4B_independent20_candidate_started_JA_English_evaluation_in_progress",
+  "scope": "Existing1.7B ten-language single experiments complete; new4B screening is separate. No three-language cohort selected and no research sequential training started.",
+  "accepted_SW4B": {
+    "MGSM_Rev2_SW": {
+      "items": 250,
+      "Base_correct": 34,
+      "OPD20_correct": 54
+    },
+    "PolyMath_SW": {
+      "items": 500,
+      "Base_correct": 21,
+      "OPD20_correct": 63
+    },
+    "GSM8K_EN": {
+      "items": 1319,
+      "Base_correct": 1247,
+      "OPD20_correct": 1246
+    },
+    "dev_SW200": {
+      "Base_correct": 16,
+      "seed42_correct": 62,
+      "seed43_correct": 47
+    },
+    "limitations": [
+      "Target mathematical gains repeated; target language maintenance not established.",
+      "English development scores decline for bothSWtrainingseeds; formalGSM8K approximately unchanged.",
+      "Not strict official hardware replication, not universal multilingual efficacy."
+    ]
+  },
+  "JA4B_target_development": {
+    "items": 200,
+    "Base_correct": 140,
+    "OPD20_correct": 135,
+    "English_status": "running"
+  },
+  "BN4B_new_candidate": {
+    "training_updates": 20,
+    "scheduler_horizon": 100,
+    "effective_batch": 32,
+    "micro_batch": 1,
+    "gradient_accumulation": 32,
+    "response_token_limit": 2048,
+    "model": "Qwen3-4B",
+    "LoRA_rank": 64,
+    "LoRA_alpha": 128,
+    "optimizer": "AdamW",
+    "learning_rate": 5e-06,
+    "loss": "Officialbeta0 KLteacher_to_student withpervocabularycomponentclip0.05",
+    "roles": "one GPU training and one GPU online currentstudent vLLM rollout",
+    "pool_items": 2700,
+    "same_English_original_pool_as_SW_and_JA": true,
+    "development200_excluded_beforetraining": true,
+    "evaluation": "FixedBN200plusEN200 native16/n1/8192; separateBaseBN evaluationstarted, cachedBaseEnglish retained. No effectclaim until completed matchedpaired acceptance.",
+    "TensorBoard": true,
+    "account_GPU_limit": 4
+  },
+  "privacy": "Scientificstatus only; no hostpaths, processidentifiers, private data or executable implementation."
+}
