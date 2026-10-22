@@ -1,0 +1,25 @@
+{
+  "started_at": "2026-10-23 06:51:38",
+  "status": "paired_development_evaluation_started_not_completed",
+  "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+  "checkpoint_step": 20,
+  "training_seed": 42,
+  "items_each": 200,
+  "languages": [
+    "bn",
+    "en"
+  ],
+  "native_vLLM_concurrency": 16,
+  "samples_per_question": 1,
+  "max_generation_tokens": 8192,
+  "temperature": 1,
+  "top_p": 0.95,
+  "top_k": -1,
+  "question_seed": 42,
+  "GPU_per_parent": 1,
+  "account_GPU_cap": 4,
+  "Base_BN_correct": 90,
+  "cached_Base_English_correct": 166,
+  "cached_Base_English_regenerated": false,
+  "scope": "BothtrainedBN/EN preflightpassed aftercheckpointrelease. ExistingBaseBN200 accepted. No trainedscore, languagepromotion or sequentialstart claimed. ObserverperformsCPUacceptance only, noGPUauto restart."
+}

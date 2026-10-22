@@ -1,0 +1,36 @@
+{
+  "prepared_at": "2026-10-23T06:01:36.406623",
+  "seed": 20261023,
+  "selected_languages": null,
+  "training_started": false,
+  "scope": "Candidate stage-data interface only. No language selection, new training, final sequentialbudget or successclaim. Assign one pool per selected language, reuse same languagepool in reverse order and same-data Base single references. Requires independentdev language gate and frozencompleteconfiguration beforelaunch.",
+  "difficulty_gap": "Adapted2700 rows have source=olympiads and no difficulty label. Bins match English character lengths only; do notclaim mathematicaldifficulty matching. Before use document available source labels or seeded random allocation as limited balancing; do not claim observed mathematicaldifficulty matching or reorder pools based on evaluation outcomes.",
+  "pools": {
+    "A": {
+      "rows": 900,
+      "English_char_median": 202.0,
+      "source_counts": {
+        "olympiads": 900
+      }
+    },
+    "B": {
+      "rows": 900,
+      "English_char_median": 202.0,
+      "source_counts": {
+        "olympiads": 900
+      }
+    },
+    "C": {
+      "rows": 900,
+      "English_char_median": 202.0,
+      "source_counts": {
+        "olympiads": 900
+      }
+    }
+  },
+  "ID_and_normalized_English_cross_pool_overlap": 0,
+  "original_source_row_fields_preserved": true,
+  "reserved_development200_ID_overlap": 0,
+  "builder_sha256": "f56f11cd9016c011dc5cd13f8324f9f32a109704c3753f1b250dfc7f33d9b2a7",
+  "builder_reproduction_note": "Original preparation executed equivalent inline entry withsamefixedroot; preservedCLIimplementation onlyparameterizesroot/code location. Existingoutputs neveroverwritten."
+}

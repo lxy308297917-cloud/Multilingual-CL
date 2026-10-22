@@ -257,3 +257,16 @@ PLND 与 LAPE 不可彼此按目标综合直接排名。LAPE 在部分任务改�
 2026-10-22 17:39更新：原checkpoint评测队列已在GPU2取得名额并开始真实生成，仍限制全账号最多四卡，无需第五卡例外；当前分数待完成。见[启动凭证](experiments/copsd_official_10lang/sw4b_server_checkpoint_dev_started_20261022.PUBLIC.json)。
 
 2026-10-22 18:19：SW4B原开发100配对为7→31，新增27／失去3，收益伴终止改善与英语思考增加。英语下游待完成；单seed开发结果不外推正式测试或纯SW推理。见[完整SW局部报告](experiments/copsd_official_10lang/sw4b_server_SW_dev100_partial_20261022.PUBLIC.json)。
+
+
+## 2026-10-23：完整 JA 开发结果与 BN 训练完成
+
+最新验收的固定200题开发集：SW 4B 的两个训练 seed，目标语言从16题正确提升到62／47题，英语从166题降至158／161题；JA 4B 的日语从140题降至135题，英语从166题降至158题。JA 暂不晋级顺序训练候选。逐题检查发现真实算术／建模错误、截断及答案表示问题，所有原始官方分数保留，不通过选择性重评分宣称有效。
+
+BN 4B 已正常完成20次更新、640次问题曝光和1,304,104有效回答token，训练约88.9分钟，双角色父任务成本3.05389 GPU小时。原始Base逐位不变，21轮×398学生张量同步通过验收；checkpoint20的optimizer、scheduler与RNG文件已核验，实际进程恢复尚未验证。TensorBoard记录已回读。
+
+BN／英语各200题的固定开发评测已手动启动：native vLLM并发16、每题一次回答、8192生成上限，官方目标语言前缀与评分器保持一致。Base参考为BN90/200、英语166/200；缓存英语Base不重复生成或计费。训练后分数仍待评测，工程完成不等于方法有效。
+
+为后续阶段准备了三个各900题、原题ID与标准化英文问题跨池零重叠的候选数据接口。固定随机分配并匹配来源与题长；原数据无难度标签，因此不宣称数学难度已匹配。三语言尚未选定，正反顺序训练尚未启动。
+
+证据：[BN训练验收](https://github.com/lxy308297917-cloud/Multilingual-CL/blob/main/experiments/copsd_official_10lang/bn4b_training_completed_20261023.PUBLIC.json)、[配对评测启动记录](https://github.com/lxy308297917-cloud/Multilingual-CL/blob/main/experiments/copsd_official_10lang/bn4b_paired_eval_started_20261023.PUBLIC.json)。

@@ -942,3 +942,16 @@ JA allocator v2已到16/20更新，训练继续；SW20 PolyMath队列取得GPU0�
 汇总曾失败于`str.splitlines()`：一条模型输出包含两个合法U+2028字符，将500条JSONL误切成502段。改为文件逐行读取后完整解析500条；原始文件哈希未变、63题原始分数未变。同步修正两个CPU收集器和语言分析器，并用U+2028/U+2029/U+0085/转义换行fixture及实际500条验证。没有删字、过滤样本、改评分或重跑GPU；正在运行JA评测的冻结源码未动。
 
 证据：[正式配对](sw4b_PolyMath_c32_completed_20261023.PUBLIC.json)、[语言/终止统计](sw4b_PolyMath_c32_language_completed_20261023.PUBLIC.json)、[JSONL读取修复](jsonl_unicode_separator_fix_20261023.PUBLIC.json)。JA英语评测继续，三语言未选定。
+
+
+## 2026-10-23：完整 JA 开发结果与 BN 训练完成
+
+最新验收的固定200题开发集：SW 4B 的两个训练 seed，目标语言从16题正确提升到62／47题，英语从166题降至158／161题；JA 4B 的日语从140题降至135题，英语从166题降至158题。JA 暂不晋级顺序训练候选。逐题检查发现真实算术／建模错误、截断及答案表示问题，所有原始官方分数保留，不通过选择性重评分宣称有效。
+
+BN 4B 已正常完成20次更新、640次问题曝光和1,304,104有效回答token，训练约88.9分钟，双角色父任务成本3.05389 GPU小时。原始Base逐位不变，21轮×398学生张量同步通过验收；checkpoint20的optimizer、scheduler与RNG文件已核验，实际进程恢复尚未验证。TensorBoard记录已回读。
+
+BN／英语各200题的固定开发评测已手动启动：native vLLM并发16、每题一次回答、8192生成上限，官方目标语言前缀与评分器保持一致。Base参考为BN90/200、英语166/200；缓存英语Base不重复生成或计费。训练后分数仍待评测，工程完成不等于方法有效。
+
+为后续阶段准备了三个各900题、原题ID与标准化英文问题跨池零重叠的候选数据接口。固定随机分配并匹配来源与题长；原数据无难度标签，因此不宣称数学难度已匹配。三语言尚未选定，正反顺序训练尚未启动。
+
+证据：[BN训练验收](https://github.com/lxy308297917-cloud/Multilingual-CL/blob/main/experiments/copsd_official_10lang/bn4b_training_completed_20261023.PUBLIC.json)、[配对评测启动记录](https://github.com/lxy308297917-cloud/Multilingual-CL/blob/main/experiments/copsd_official_10lang/bn4b_paired_eval_started_20261023.PUBLIC.json)。
