@@ -1,0 +1,140 @@
+{
+  "protocol": "sw_privileged_teacher_equal_history256_continue8192_dev32_v1",
+  "conditions": {
+    "Base_history": {
+      "items": 32,
+      "correct": 9,
+      "censored2048_correct": 9,
+      "normal_terminations": 10,
+      "truncated": 22,
+      "answer_extraction_failures": 22,
+      "generated_tokens": 189136,
+      "supplied_history_tokens": 8192,
+      "teacher_input_tokens": 45222,
+      "generation_seconds": 290.5257593523711
+    },
+    "SW42_history": {
+      "items": 32,
+      "correct": 11,
+      "censored2048_correct": 11,
+      "normal_terminations": 12,
+      "truncated": 20,
+      "answer_extraction_failures": 20,
+      "generated_tokens": 176370,
+      "supplied_history_tokens": 8192,
+      "teacher_input_tokens": 45222,
+      "generation_seconds": 247.95140442624688
+    },
+    "SW43_history": {
+      "items": 32,
+      "correct": 16,
+      "censored2048_correct": 15,
+      "normal_terminations": 16,
+      "truncated": 16,
+      "answer_extraction_failures": 15,
+      "generated_tokens": 145891,
+      "supplied_history_tokens": 8192,
+      "teacher_input_tokens": 45222,
+      "generation_seconds": 192.14770223014057
+    },
+    "No_history": {
+      "items": 32,
+      "correct": 11,
+      "censored2048_correct": 11,
+      "normal_terminations": 11,
+      "truncated": 21,
+      "answer_extraction_failures": 20,
+      "generated_tokens": 179385,
+      "supplied_history_tokens": 0,
+      "teacher_input_tokens": 37030,
+      "generation_seconds": 268.5118991266936
+    }
+  },
+  "model_load_seconds": 9.762663962319493,
+  "teacher_adapter": null,
+  "actual_max_num_seqs": 64,
+  "formal_test": false,
+  "training_updates": 0,
+  "scope": "Fixed original1.7B teacher, privileged official training-collator context plus saved evaluation histories. No adapter, updates, training-label synthesis or algorithm change. Evaluate conditional recovery, not teacher-token correctness at every actual training position or a causal explanation of full English loss. Equal256-token history conditions are primary; No_history has a different total response budget and is supplemental. Original evaluation and training prompts are not identical; this is not actual on-policy training trajectory replay.",
+  "clean_budget_caveat": "No_history receives8192 total response tokens; all3 history conditions receive256 supplied plus8192 new. Primary matched comparisons are between equal history conditions. Censored2048 is a prefix of these same generated continuations, not a separately sampled2048 run.",
+  "observed_at": "2026-10-22T11:42:49.212245",
+  "frozen_sha256": "be0562af75727fdb431fac2739e8801389e21e1e6d0bde98cf1e7d31991f7381",
+  "parent_completed_exit0": true,
+  "all128_raw_conditions_prefix_ID_seed_token_budget_and_official_regrades_verified": true,
+  "Base_history_vs_SW_history": {
+    "SW42_history": {
+      "reference_correct": 9,
+      "comparison_correct": 11,
+      "gained": 5,
+      "lost": 3
+    },
+    "SW43_history": {
+      "reference_correct": 9,
+      "comparison_correct": 16,
+      "gained": 11,
+      "lost": 4
+    }
+  },
+  "same_trajectory_length_pairs": {
+    "Base_history": {
+      "censored2048_correct": 9,
+      "full8192_correct": 9,
+      "gained_after2048": 0,
+      "lost_after2048": 0
+    },
+    "SW42_history": {
+      "censored2048_correct": 11,
+      "full8192_correct": 11,
+      "gained_after2048": 0,
+      "lost_after2048": 0
+    },
+    "SW43_history": {
+      "censored2048_correct": 15,
+      "full8192_correct": 16,
+      "gained_after2048": 1,
+      "lost_after2048": 0
+    },
+    "No_history": {
+      "censored2048_correct": 11,
+      "full8192_correct": 11,
+      "gained_after2048": 0,
+      "lost_after2048": 0
+    }
+  },
+  "source_records": {
+    "Base_history": {
+      "items_sha256": "4c2b4b5b6c326b883d7aba4403c594449a846888ba7cbf98ed30c67e200210fb",
+      "config_sha256": "f9dcb9adf54920dc5a0890800ec74420245052c02650701bf3f530cce5cc6a90"
+    },
+    "SW42_history": {
+      "items_sha256": "fabdd894fdb5c2cc28be8c1ce3e29c7fd8e6efc62f8d80bd58c0ed47a1912ec4",
+      "config_sha256": "f9dcb9adf54920dc5a0890800ec74420245052c02650701bf3f530cce5cc6a90"
+    },
+    "SW43_history": {
+      "items_sha256": "e162d0f595648d0fd4c815b36fdcde337279a2856913792f2c7ce83e032675c9",
+      "config_sha256": "f9dcb9adf54920dc5a0890800ec74420245052c02650701bf3f530cce5cc6a90"
+    },
+    "No_history": {
+      "items_sha256": "e9a86169e144e9b7e86b55b141156e1e70be90a34888d10e4d0a91941dbee15e",
+      "config_sha256": "f9dcb9adf54920dc5a0890800ec74420245052c02650701bf3f530cce5cc6a90"
+    }
+  },
+  "cost": {
+    "new_responses": 128,
+    "generated_tokens": 690782,
+    "unique_parent_GPU_hours_counted_once": 0.2838888888888889,
+    "generation_seconds": 999.1367651354522,
+    "scope": "Parent allocation once, includes load/CPU/inference, excludes waiting/hold. No new training; input history was generated previously."
+  },
+  "TensorBoard_relative": "logs/copsd_official_10lang/tensorboard/sw_teacher_recovery32_20261022_v1",
+  "analysis_source_sha256": "226e2ec589d57b98694e1b3bed752c2e1bb61d514da89d834c975e48563931f2",
+  "TensorBoard_all8_accuracy_series_and_unique_parent_cost_read_back": true,
+  "original_saved_evaluation_histories_full_answer_correct_first32": {
+    "Base_history": 2,
+    "SW42_history": 6,
+    "SW43_history": 7
+  },
+  "saved_history_score_caveat": "Original unprivileged evaluation prompt and full8192 response differ from privileged teacher continuation with256 supplied plus8192 new tokens; contextual, not matched teacher advantage or causal training-effect comparison.",
+  "teacher_language_instruction": "Pinned official collator instructs the privileged teacher to reason and solve in Swahili despite receiving English question/reference; no English reasoning pivot substitution.",
+  "interpretation": "No replicated history-degradation finding in this fixed SW probe: equal-prefix teacher recovery9→11/16. Same-trajectory continuation length2048→8192 adds0/0/1 correct; No_history11→11. Thus neither universal history damage nor a sufficient length-only fix is established. Absolute conditional teacher recovery remains limited; no full training-token-distribution correctness or efficacy proof."
+}

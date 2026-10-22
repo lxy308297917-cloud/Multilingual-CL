@@ -1,6 +1,6 @@
 # 多语言适配与遗忘实验总览
 
-> 最近更新：2026-10-22 11:12（北京时间）。新增第0节为Qwen3-1.7B官方COPSD基础上的OPD阶段总结；后续第1—5节保留2026-09-24历史轨道快照，不代表旧任务在今天的最新状态。不同模型、任务和协议不横向混比。具体结果以各实验目录的原始记录、`DONE`、哈希和协议为准。
+> 最近更新：2026-10-22 11:43（北京时间）。新增第0节为Qwen3-1.7B官方COPSD基础上的OPD阶段总结；后续第1—5节保留2026-09-24历史轨道快照，不代表旧任务在今天的最新状态。不同模型、任务和协议不横向混比。具体结果以各实验目录的原始记录、`DONE`、哈希和协议为准。
 
 ## 0. 当前OPD轨道：十语言single、退步诊断与SW短程确认
 
@@ -76,6 +76,8 @@ TE裁剪开／关匹配20更新完整配对已结束：TE正确Base／裁剪／�
 - **收尾改善与数学能力不能等同。** SW PolyMath新增正确题多数来自Base无提取答案的题；DE有正常终止且有box的真实数学错误，不能把全部退步解释为截断。语言ID也不等于推理质量。
 
 依据：[JA完整复测](experiments/copsd_official_10lang/ja_seed43_prefix20_completed_20261021.PUBLIC.json) · [ZH完整复测](experiments/copsd_official_10lang/zh_seed43_prefix20_completed_20261021.PUBLIC.json) · [BN双seed干预](experiments/copsd_official_10lang/bn_seed43_full_replication_20261020.PUBLIC.json) · [完整退步诊断](experiments/copsd_official_10lang/OPD_REGRESSION_DIAGNOSIS_ZH.md)。
+
+SW教师等历史接续探针已完成：32题上Base／SW42／SW43历史条件正确9／11／16，未重复BN的历史恶化；同轨迹延长2048→8192仅增加0／0／1题，不能以长度作为充分修复。条件教师仍按官方要求使用SW推理，探针不是训练KL重放。[完整诊断](experiments/copsd_official_10lang/sw_teacher_recovery32_completed_20261022.PUBLIC.json)。
 
 ### 0.5 速度、工程边界与下一步
 
