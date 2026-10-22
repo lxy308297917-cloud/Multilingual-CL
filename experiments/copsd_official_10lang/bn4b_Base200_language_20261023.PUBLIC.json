@@ -1,0 +1,41 @@
+{
+  "accepted_at": "2026-10-23T05:58:39.882780",
+  "status": "BaseBN200_language_reference_only",
+  "items": 200,
+  "language": {
+    "thinking": {
+      "total_items": 200,
+      "statuses": {
+        "predicted": 200
+      },
+      "top1_label_counts": {
+        "__label__ben_Beng": 200
+      },
+      "target_top1_probability_ge_0_8": 199,
+      "correct_items_label_counts": {
+        "__label__ben_Beng": 90
+      }
+    },
+    "final": {
+      "total_items": 200,
+      "statuses": {
+        "no_final_section": 69,
+        "predicted": 131
+      },
+      "top1_label_counts": {
+        "__label__ben_Beng": 128,
+        "__label__mni_Beng": 3
+      },
+      "target_top1_probability_ge_0_8": 124,
+      "correct_items_label_counts": {
+        "__label__ben_Beng": 87,
+        "__label__mni_Beng": 2,
+        "no_final_section": 1
+      }
+    }
+  },
+  "math_correct": 90,
+  "math_items_sha256": "9f36e103ebd966be54a2a5eef9ffc4044b0a7d3d5c01835e435217fc3e075a4c",
+  "analysis_sha256": "f281352f35f659d7c2b59fef0567a53fdcaef904445aa01f6940c33282005ae1",
+  "scope": "Baselinewholepartlanguageclassifier reference only, not OPDeffect. Numericfinals/unreliablelabels not languagefailure; no rawscore changes."
+}

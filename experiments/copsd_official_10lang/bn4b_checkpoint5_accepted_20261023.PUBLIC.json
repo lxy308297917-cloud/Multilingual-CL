@@ -1,0 +1,16 @@
+{
+  "accepted_at": "2026-10-23T05:44:35.050955",
+  "global_step": 5,
+  "scheduler_horizon": 100,
+  "optimizer_steps": [
+    5
+  ],
+  "scheduler_last_epoch": 5,
+  "RNG_file_present": true,
+  "adapter_keys": 504,
+  "adapter_tensors_finite": true,
+  "adapter_sha256": "b19c9f56cd90e2f4cb69bfeedbc3072fbca0880f21fd48269bea95281550b84f",
+  "verified_first6_weight_syncs": true,
+  "free_disk_GiB": 15.305728912353516,
+  "scope": "Read-only CPU validation of actualBN checkpoint5. Trainingcontinues unchanged. Not actual process resume test, full20completion or efficacy. No checkpoint selection basedon dev/test."
+}

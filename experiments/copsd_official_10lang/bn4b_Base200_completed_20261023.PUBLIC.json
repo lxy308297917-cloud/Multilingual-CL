@@ -1,0 +1,29 @@
+{
+  "accepted_at": "2026-10-23T05:57:52.610235",
+  "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+  "status": "BaseBN200_completed_trainedpair_pending",
+  "metrics": {
+    "items": 200,
+    "single_correct": 90,
+    "generated_tokens": 1235623,
+    "truncated": 84,
+    "normal_terminations": 116,
+    "answer_extraction_failures": 71,
+    "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 200,
+    "single_accuracy": 0.45,
+    "generation_seconds": 2237.2054310571402,
+    "model_load_seconds": 12.017821373417974,
+    "actual_max_num_seqs": 16
+  },
+  "source": {
+    "run_id": "bn4b_followup200_Base_bn_20261023",
+    "items_sha256": "9f36e103ebd966be54a2a5eef9ffc4044b0a7d3d5c01835e435217fc3e075a4c",
+    "config_sha256": "145cadc246679c04054781afc6616fe6db30374982c972072ee919e2b278adb7"
+  },
+  "frozen_sha256": "f30486cdfb90a1db5f60973c081b3c50407ba0876e3839818f0e8ff9fdf4254e",
+  "parent_cost_deferred_to_complete_BN_pair_report": true,
+  "scope": "Fixed200 BaseBN reference only; not OPDefficacy. Native16,n1,8192,officialBNprefix/scorer. MatchedEnglishBase remains cached, no newEnglishBase generated. ParentGPUcost willbe countedonce withtrainedBN/ENpair."
+}
