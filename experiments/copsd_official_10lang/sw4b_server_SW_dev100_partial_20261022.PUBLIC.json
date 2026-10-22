@@ -1,0 +1,193 @@
+{
+  "observed_at": "2026-10-22T18:17:31.447026",
+  "protocol": "independent_SW4B_dedicated_server_fresh_pilot20_v1",
+  "scope": "SW-only originaldev100 paired result, Englishdownstream stillpending; not a formalbenchmark, seedreplication orpureSWreasoning proof. No mathematical rescoring or posthoc checkpoint selection.",
+  "same_prompts_questions_answers_and_question_seeds": true,
+  "metrics": {
+    "Base": {
+      "items": 100,
+      "single_correct": 7,
+      "generated_tokens": 570094,
+      "truncated": 63,
+      "normal_terminations": 37,
+      "answer_extraction_failures": 62,
+      "protocol": "project_dev_single_vllm8192_4b_serverpilot_v1",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.07,
+      "generation_seconds": 1110.1144316773862,
+      "model_load_seconds": 12.24936655536294,
+      "actual_max_num_seqs": 16
+    },
+    "SW20": {
+      "items": 100,
+      "single_correct": 31,
+      "generated_tokens": 360127,
+      "truncated": 11,
+      "normal_terminations": 89,
+      "answer_extraction_failures": 14,
+      "protocol": "project_dev_single_vllm8192_4b_serverpilot_v1",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 100,
+      "single_accuracy": 0.31,
+      "generation_seconds": 1819.0001264289021,
+      "model_load_seconds": 14.021465919911861,
+      "actual_max_num_seqs": 16
+    }
+  },
+  "source_items_sha256": {
+    "Base": "4dd8e16c1899ae841e9c1e91735a74935956625fe523417da3e6b7c5ab9ea876",
+    "SW20": "68182855cbd3d94034a31634ec1738556cc15b5c210e2f6bd0bff71b2a79dda2"
+  },
+  "paired_gains": [
+    "07c2a8913a8a6c3fb30a7018928febea09dcad5d9ec34752998e8bf3613590ad",
+    "05a809fb81b0a32b370933d6a5c9f338935e18ec8f0eb0e471a93208a7750cba",
+    "0829f4464c6d805ef7957d2291b4489d99f6899bf6d9ee0b09b5ddbbf749b250",
+    "05f07654fd8da1a9cd0ec3def0a3ae6759b4cddf58072d0112519fe7f95c30a9",
+    "006e80bf59a61c86bcc36314a3af02e0e3b0dd8f0cc04f650ca819c701d8d8ae",
+    "08024c23f54ab4b7834783739b13f03d7ed372645a437e29230427dc7707396a",
+    "04fc6b93d5fa256fd2572a19f735903393f0ca14b267803c9d7a04b84cc660ed",
+    "01b65b79aba7d62b84cc0c7b85f04f58e76f61567fc7acc733b0a1090376c2e2",
+    "06ef4c7dc38b7f6aeb1d89edeaf37ee75e1e85c5f0b3355932dc8886128da389",
+    "06d1fefb8d674dce6685c5ae680051fbd0a40c2c6492603cbe3859040f9a96eb",
+    "070acb7a59d8ec83d17a4ce87ba32739efc5b16b7b49e2290fc89dc47c229727",
+    "0079643012757eaa052e6eeb3ca431e4492fc9461d5bef4ca94cc15179fc066f",
+    "091dd957272955780f3d53c217e644f6fc3cc847278258590c7d50829b794461",
+    "0185168898f47fda0a4b9defec03ecb1f6cb2e0518f052308330cf9024fab0b9",
+    "04207c16584a9e940d442c2c3159427ebfd7443fc1cb5e71c574e421835463f7",
+    "04ee59944ba6d631150c675afd33185825fea0e4f9d20005a7d149eec56830b3",
+    "02881cf45808c0b854c6cf5e2fc48ab4ee10a338bced6b8b020974401d9e4705",
+    "007db9983e1c11f12b5439ea2a9abdf26382abc3f21ec9d2ae86f01feebd4771",
+    "06924f85a2680d21bde577ee81df095350abd8f1d653c32e5e946fe15496100c",
+    "04bdc067c9fe2c72565723a476ce88ee418394026d242a5c9c4455bede4761b1",
+    "0014142e5f3c28a7b09446252f4a627a50ca4010f859e17ba2bd12b4c00a830a",
+    "0449037fca199707278fe31c9b46895451d894f1bb9547b3e38a41905e8143a2",
+    "0105ed957bc756b34561c914401f618c0c8bd61ba9229e176822c34eca836611",
+    "03a92f9bb707a75e54ef770465cf284f3cc49b37cdc90029f3eaa91e4e879b7f",
+    "009c074bf4eb953f9c9e13dc3052b48987683459b4e99055d15d256fba4df42e",
+    "082c018c226d0f05b896ebe233f85d7d8ab8eb64298b7238ae26d3f01453fcb1",
+    "023f989e814ee03d4bb4df7af0334cff0f4ee0953022eda407a0c9fb290a40a2"
+  ],
+  "paired_losses": [
+    "0223bb80bf14057d768c39ac8b254b4f71899bac839cee5bc7cea918e06c9a18",
+    "0223ab5f592a610473dbd90ede5fe8985bb2f6366c5eec4b0aabbeb5a86f9879",
+    "06c725ac40987010a964c847a768007830eb724abcd09ad8a90398db2b62ba30"
+  ],
+  "delta_correct": 24,
+  "gains_with_Base_length_truncation": 22,
+  "gains_with_Base_extraction_failure": 21,
+  "language": {
+    "Base": {
+      "thinking": {
+        "total_items": 100,
+        "statuses": {
+          "predicted": 100
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 87,
+          "__label__mkn_Latn": 1,
+          "__label__ktu_Latn": 2,
+          "__label__swc_Latn": 4,
+          "__label__kwn_Latn": 1,
+          "__label__kng_Latn": 1,
+          "__label__eng_Latn": 2,
+          "__label__kdc_Latn": 2
+        },
+        "target_top1_probability_ge_0_8": 70,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 6,
+          "__label__eng_Latn": 1
+        }
+      },
+      "final": {
+        "total_items": 100,
+        "statuses": {
+          "predicted": 38,
+          "no_final_section": 62
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 32,
+          "__label__nyf_Latn": 1,
+          "__label__swc_Latn": 5
+        },
+        "target_top1_probability_ge_0_8": 22,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 5,
+          "__label__swc_Latn": 2
+        }
+      }
+    },
+    "SW20": {
+      "thinking": {
+        "total_items": 100,
+        "statuses": {
+          "predicted": 100
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 67,
+          "__label__eng_Latn": 29,
+          "__label__ssw_Latn": 2,
+          "__label__cmn_Hani": 1,
+          "__label__vie_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 59,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 21,
+          "__label__eng_Latn": 10
+        }
+      },
+      "final": {
+        "total_items": 100,
+        "statuses": {
+          "predicted": 88,
+          "no_final_section": 12
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 53,
+          "__label__eng_Latn": 14,
+          "__label__swc_Latn": 11,
+          "__label__ssw_Latn": 9,
+          "__label__ayr_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 29,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 18,
+          "__label__eng_Latn": 7,
+          "__label__swc_Latn": 5,
+          "__label__ssw_Latn": 1
+        }
+      }
+    }
+  },
+  "trained_correct_with_whole_thinking_English_top1": 10,
+  "trained_correct_with_English_top1_probability_ge_0_8": 8,
+  "deterministic_mixed_thinking_examples": [
+    {
+      "id": "0829f4464c6d805ef7957d2291b4489d99f6899bf6d9ee0b09b5ddbbf749b250",
+      "whole_thinking_English_probability": 0.9469470977783203,
+      "thinking_start": " Sasa, mungu mwa miundo ya mucishe wakati wasio fomu ya walizamwa kati ya wana mbalimbali (ujumbe) m",
+      "later_English_passage": "Wait, no, hold on. Wait, actually, the product of the two squares is [ (1 - cos 2x)(1 + cos 2x) / 4 ] squared? Wait, no. Wait, original expression is [(1 - cos 2x)/2]^2 times [(1 + cos 2x)/2]^2. That's equal to [ (1 - co",
+      "scope": "First3 correctEnglish-top1 cases byfixedinputorder; actual mixedSWstart/Englishlater, not randomrepresentative3."
+    },
+    {
+      "id": "04fc6b93d5fa256fd2572a19f735903393f0ca14b267803c9d7a04b84cc660ed",
+      "whole_thinking_English_probability": 0.9548037648200989,
+      "thinking_start": " Tafadhali, tafadhali sayani. Hata hivyo, kushafiana na sanki mwa muda. Uweke.\n\nTwakilisika watu jam",
+      "later_English_passage": "Wait, but the problem states that m and n are different. So the question is to show that for any two different m and n, the two Fermat numbers are coprime.\n\nBut I remember that Fermat numbers are pairwise coprime. Howeve",
+      "scope": "First3 correctEnglish-top1 cases byfixedinputorder; actual mixedSWstart/Englishlater, not randomrepresentative3."
+    },
+    {
+      "id": "074c62c5f4cdbde6bb42109254a8a0e7e57c4d73f9e2be1579ffdc41aff29d46",
+      "whole_thinking_English_probability": 0.9924561381340027,
+      "thinking_start": " Mkua ina mbili. Kila mikoroni ina tena mapeno. Mtagembo mwingine kama nje kunyewa, umoja kipya au k",
+      "later_English_passage": "Wait, but how do we get that? Let me try to structure the proof step by step.\n\nFirst, we are given that for any non-empty subset S of M, the number (product of elements in S) + 1 is in M.\n\nWe need to show that M = P.\n\nPr",
+      "scope": "First3 correctEnglish-top1 cases byfixedinputorder; actual mixedSWstart/Englishlater, not randomrepresentative3."
+    }
+  ],
+  "interpretation_limit": "Math7->31 coexists with wholethinking targethighconf70->59/100 andEnglish-top1 thinking2->29/100. Start-of-reasoning targetprefix does not ensure targetlanguage throughout. GlotLID is not calibrated fluency/per-token purity or proofvalidation; answergrader is not stepwiseproofjudge. Preserveofficial31/100 andreportlanguage/termination separately.",
+  "English_downstream_complete": false,
+  "joint_screen_decided": false,
+  "three_languages_selected": false
+}
