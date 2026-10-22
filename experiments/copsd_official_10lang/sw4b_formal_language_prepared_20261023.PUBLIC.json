@@ -1,0 +1,12 @@
+{
+  "prepared_at": "2026-10-23T00:18:48.679110",
+  "script_sha256": "1e2c8f98ea83c59720cfdedfd77def1928691b824d785b262475178ffc5e5db6",
+  "CPU_compile_passed": true,
+  "GPU_started": false,
+  "new_generations": 0,
+  "required_before_execution": [
+    "Accepted four-case formal report",
+    "Four complete private GlotLID analyses bound to raw ITEMS hashes"
+  ],
+  "scope": "Pairs termination/extraction status with existing score gains/losses, reports target-language labels and correctness intersections using per-benchmark denominators250/1319, reads back12 TensorBoard series. No cross-language ID alignment between different benchmarks; no score changes or new checkpoint/language selection. Execution pending full English result."
+}
