@@ -151,3 +151,14 @@ CPU检查通过：两组32个假请求的缓存／题序／采样守卫会拒绝
 本次仍是64条固定普通／最长上下文压力题、2更新、100步日程、LoRA64／alpha128、AdamW5e-6、有效batch32、2048回答上限、原beta0／分量clip.05。保留前次已验证的等价mask归约以减少复制。两卡真实wrapper预检通过并已手动启动；实际远端权重同步、训练、显存、checkpoint与关闭仍待验收。资源通过后才能制定引用新资源验收的独立4B先导配置，不绕过旧单卡先导失败条件，不自动扩十语或选三语。
 
 [固定配置与源码身份](sw4b_server_resource_frozen_20261022.PUBLIC.json) · [启动快照](sw4b_server_resource_started_20261022.PUBLIC.json) · [缓存／客户端CPU证据](server_rollout_compat_CPU_20261022.PUBLIC.json) · [安装版采样与loaderCPU证据](server_runtime_compat_CPU_20261022.PUBLIC.json)。
+
+
+## 15:36 分卡首轮初始化失败已归档，32并发恢复已通过服务器初始化
+
+v1模型加载后在推理GPU的默认并发CUDAgraph capture处OOM，训练角色尚未启动，NCCL同步／数学更新均0；父任务健康检查按240秒边界超时并仅清理本任务创建的server进程组。终态failed／1，分配两卡5分20秒，共0.177778 GPU小时。当前已确认旧父／server PID和其GPU计算进程退出，不把这项故障混同于单卡4B的KL算子OOM。
+
+v2保留原worker循环，仅增加max_num_seqs32资源上限，匹配本次每更新32条在线请求；模型、2048生成预算、采样、提示、教师和训练配置未改。CPU AST比较确认，撤回“审计extension类”和“max_num_seqs32”两个已声明keyword后，worker源码结构与安装版完全一致。恢复使用独立entry／脚本／冻结配置／日志／checkpoint，不编辑运行中的v1冻结文件。
+
+恢复预检通过，单独两卡队列已手动启动。已实际看到CUDAgraph的11组mixed＋7组decode捕获完成，服务器health返回200、训练角色开始初始化，已越过首轮失败点。尚未验收完整远端权重同步、64条轨迹、两更新或4B下游效果；仍不启动先导SW20或十语批量训练。
+
+[v1终态与成本](sw4b_server_resource_v1_failed_20261022.PUBLIC.json) · [v2固定配置](sw4b_server_resource_v2_frozen_20261022.PUBLIC.json) · [源码结构差异CPU证据](server_worker32_AST_CPU_20261022.PUBLIC.json) · [v2启动状态](sw4b_server_resource_v2_started_20261022.PUBLIC.json)。

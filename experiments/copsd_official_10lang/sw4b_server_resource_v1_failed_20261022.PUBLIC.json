@@ -1,0 +1,17 @@
+{
+  "protocol": "SW4B_server_resource_v1_terminal_failure",
+  "phase": "failed",
+  "finished_at": "2026-10-22 15:32:21",
+  "exit_code": 1,
+  "root_cause": "Inference server CUDAgraphcapture OOM under default concurrency; health neverready, parent boundedtimeout then cleaned its ownserver processgroup.",
+  "training_started": false,
+  "training_updates": 0,
+  "NCCL_weight_sync_started": false,
+  "allocated_GPU_count": 2,
+  "allocated_parent_GPU_hours": 0.17777777777777778,
+  "server_forced_kill": true,
+  "server_exit_code": -9,
+  "all_owned_processes_observed_exited": true,
+  "separate_from_training_KL_OOM": true,
+  "recovery": "Independentv2 limits server max_num_seqs32 to actual32online prompts; model,budget,sampling,teacher,loss,optimizer unchanged. CPU AST proves only auditextension and concurrency keywords differ from installedTRLSworker."
+}

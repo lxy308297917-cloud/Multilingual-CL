@@ -1,0 +1,10 @@
+{
+  "all_passed": true,
+  "GPU_started": false,
+  "worker_AST_equal_after_reverting_two_declared_keywords": true,
+  "only_changes": [
+    "audited loader extension class",
+    "max_num_seqs32"
+  ],
+  "scope": "CPU AST check, not CUDA capture/NCCL/update success."
+}

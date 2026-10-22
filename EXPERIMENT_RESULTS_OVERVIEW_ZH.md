@@ -243,3 +243,5 @@ PLND 与 LAPE 不可彼此按目标综合直接排名。LAPE 在部分任务改�
 2026-10-22 15:12更新：4B单卡v3完成1次更新后在原KL算子再次OOM，终态失败；checkpoint1保留，单卡路径按预定规则停止，未启动4B SW20或Base评测。无4B数学分数，见[最终资源失败证据](experiments/copsd_official_10lang/sw4b_resource2_v3_failed_20261022.PUBLIC.json)。
 
 2026-10-22 15:28 OPD资源补充：单卡4B路径保持停止；官方server分卡路径的客户端／采样／loader CPU兼容检查通过，独立两卡2更新资源任务已手动启动。尚无NCCL／训练通过或4B数学效果结论，见[新冻结配置](experiments/copsd_official_10lang/sw4b_server_resource_frozen_20261022.PUBLIC.json)。
+
+2026-10-22 15:36：分卡v1在推理初始化CUDAgraph处OOM，0训练；独立v2限制并发32，已实际通过服务器初始化、health200并进入训练角色初始化。完整更新及4B效果仍待验收。详见[当日日报](docs/daily/实验日报_2026.10.22.md)。

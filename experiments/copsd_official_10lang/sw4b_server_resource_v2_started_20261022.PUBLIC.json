@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-10-22T15:36:59.546626",
+  "protocol": "SW4B_official_server_resource2_v2_seqs32",
+  "phase_snapshot": "running",
+  "monitor_pid": 308819,
+  "job_pid": 309065,
+  "assigned_GPU_indices": [
+    0,
+    2
+  ],
+  "max_account_GPUs": 4,
+  "allocated_GPUs": 2,
+  "server_actual_health200_observed": true,
+  "resource_updates_completed": false,
+  "downstream_effect_measured": false,
+  "frozen_sha256": "40f6ea72986c3eda451e68d6d4cdc3204892bef688382594e53090a19533a82b",
+  "recovery_from": "v1 serverdefault concurrency CUDAgraph OOM, not trainingKL; failed logs/resources preserved."
+}
