@@ -1,0 +1,60 @@
+{
+  "updated_at": "2026-10-23T05:40:28.803325",
+  "cohort": "Qwen3-4B_independent_development200_not_formal_tests",
+  "models": [
+    {
+      "language": "SW",
+      "training_updates": 20,
+      "training_seed": 42,
+      "target_Base_correct": 16,
+      "target_OPD_correct": 62,
+      "English_Base_correct": 166,
+      "English_OPD_correct": 158
+    },
+    {
+      "language": "SW",
+      "training_updates": 20,
+      "training_seed": 43,
+      "target_Base_correct": 16,
+      "target_OPD_correct": 47,
+      "English_Base_correct": 166,
+      "English_OPD_correct": 161
+    },
+    {
+      "language": "JA",
+      "training_updates": 20,
+      "training_seed": 42,
+      "target_Base_correct": 140,
+      "target_OPD_correct": 135,
+      "English_Base_correct": 166,
+      "English_OPD_correct": 158
+    }
+  ],
+  "JA_paired_question_CI95_delta_pp": {
+    "target": [
+      -9,
+      4
+    ],
+    "English": [
+      -7.5,
+      -0.5
+    ]
+  },
+  "JA_newly_incorrect_target26": {
+    "truncated": 9,
+    "normal_modeling_arithmetic": 12,
+    "normal_body_final_contradiction": 1,
+    "normal_representation_or_extraction": 4
+  },
+  "JA_newly_incorrect_English11": {
+    "truncated_no_final": 7,
+    "normal_mathematical_modeling": 2,
+    "normal_representation_or_scoring": 2
+  },
+  "score_policy": "Retain originalofficialscores andrawoutputs; categories are descriptive, not retrospective scorecorrections or fullproofvalidation.",
+  "JA_candidate_status": "No demonstratedtarget gain and Englishdecline; do not promote to three-language sequential cohort. Onefixedmodelpair only, CI is overquestions, not trainingseedpopulation.",
+  "BN_candidate_status": "Independent20update training and BaseBN200 evaluation active; no efficacy result yet.",
+  "three_language_selection_completed": false,
+  "sequential_experiments_started": false,
+  "privacy": "Scientific summary only; no hostpaths, processidentifiers, private inputs or executable source."
+}
