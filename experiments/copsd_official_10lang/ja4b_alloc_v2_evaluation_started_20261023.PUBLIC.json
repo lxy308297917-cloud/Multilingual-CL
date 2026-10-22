@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-23T03:33:37.400759",
+  "queue": "copsd-ja4b-followup-ja20-alloc-v2",
+  "phase": "running",
+  "parent_PID": 443554,
+  "started_at": "2026-10-23 03:30:41",
+  "GPU_indices": [
+    2
+  ],
+  "GPU_uuids": [
+    "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39"
+  ],
+  "actual_JA_evaluation_phase": {
+    "phase": "generation",
+    "actual_max_num_seqs": 16
+  },
+  "checkpoint20_adapter_sha256": "5e6658ed7d4a219c213d842f3549cabd6d4fbba2a7d96c036d97ff5dc40364b4",
+  "evaluation_freeze_sha256": "4dd3089efeb9a35924cce1ce384287819082a0eeeb456327a10c24553a8b8d21",
+  "max_user_gpus": 4,
+  "scope": "JA/EN200each native16/n1/8192 fixedcheckpoint20, cachedBaseJA140/200 andBaseEnglish166/200 reused. OnlyJAcurrentlygenerating; English followsinsameone-shotparent. NoJAmathematicalresultyet."
+}

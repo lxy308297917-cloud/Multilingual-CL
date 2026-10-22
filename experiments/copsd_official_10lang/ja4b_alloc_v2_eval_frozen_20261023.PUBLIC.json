@@ -241,7 +241,7 @@
   "adapter_sha_policy": "JA20 requires one immutable posttrainingcheckpoint release; no fallbacktoBase. BaseJA requiresnoadapter ortrainingcompletion.",
   "runtime_code_sha256": {
     "evaluate_ja4b_alloc_v2_followup200.py": "a4931025ccc86d222acaeb152920f0f0363a340f780c4ba51409226e0374469e",
-    "release_ja4b_alloc_v2_checkpoint20.py": "a1d36b24d7d258fa2ace640557d293dbd9529793f4f76a1dbf742bf8519d9e71",
+    "release_ja4b_alloc_v2_checkpoint20.py": "1f5fee735175796ea29fcd8d52fc3704fa126c6ccc9c081cfcc8a89f8a7634d6",
     "run_ja4b_alloc_v2_followup200.sh": "d82859328fcc44c44954c382c8a3640a4554e3eb80f7b569438bbd94ca88bf8b",
     "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
     "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
@@ -267,5 +267,11 @@
     "queue": "copsd-ja4b-followup-base-v1",
     "cost_policy": "BaseJApartialdeferredcost countedonce inthiscompletecandidate report; do notregenerate. EnglishBasecost alreadycountedelsewhere."
   },
-  "recovery_identity": "PriorJAattempt failedat4updates/129microsteps withoutcheckpoint; v2freshBase changesonlyCUDAallocator. Originaltrain/evalfreezes andresults preserved, neverretargeted. Thisfreeze replacesonlythependingtrainedcandidate evaluation, notcachedBaseinputs orscores."
+  "recovery_identity": "PriorJAattempt failedat4updates/129microsteps withoutcheckpoint; v2freshBase changesonlyCUDAallocator. Originaltrain/evalfreezes andresults preserved, neverretargeted. Thisfreeze replacesonlythependingtrainedcandidate evaluation, notcachedBaseinputs orscores.",
+  "pre_evaluation_release_fix": {
+    "recorded_at": "2026-10-23T03:28:14.451880",
+    "prior_eval_sha256": "a63e994121761e119e780885cbf453307a8057e7c23f55347b14b92a34d17126",
+    "prior_helper_sha256": "a1d36b24d7d258fa2ace640557d293dbd9529793f4f76a1dbf742bf8519d9e71",
+    "reason": "Correct inheritedSWrunner identity key toactualJAallocatorv2runner. Same model/data/steps/optimizer/loss/prompts/evaluationparameters. Priorfreeze archived, trainingimmutable, noGPUevalstarted."
+  }
 }

@@ -1,0 +1,48 @@
+{
+  "accepted_at": "2026-10-23T03:29:44.177988",
+  "protocol": "independent_JA4B_dedicated_server_single20_seed42_allocator_v2",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "completed_updates": 20,
+  "micro_steps": 640,
+  "valid_generated_and_loss_tokens": 1176426,
+  "base_unchanged_bitwise": true,
+  "teacher_via_disabled_original_Base": true,
+  "verified_syncs": 21,
+  "parameters_each_sync": 398,
+  "checkpoint20_release": {
+    "released_at": "2026-10-23T03:28:34.407348",
+    "global_step": 20,
+    "training_seed": 42,
+    "data_seed": 42,
+    "adapter_sha256": "5e6658ed7d4a219c213d842f3549cabd6d4fbba2a7d96c036d97ff5dc40364b4",
+    "training_freeze_sha256": "80c118397f4b9467174fe712ab47b4d7cc191bf24cf0684dbfc8805c1d4327d1",
+    "evaluation_freeze_sha256": "4dd3089efeb9a35924cce1ce384287819082a0eeeb456327a10c24553a8b8d21",
+    "training_proof_sha256": "d071124910d97619acbd54732496b2d751d7c8a6bf7bd5e453fcb5fafd2e0348",
+    "optimizer_scheduler_step20_verified": true,
+    "RNG_file_present": true,
+    "scope": "One fixedcheckpoint20 release; actual resumption/serverRNG bitwisecontinuation not tested. No mathematical result or candidate selection."
+  },
+  "cost": {
+    "loss_calls": 640,
+    "valid_response_loss_positions": 1176426,
+    "masked_response_positions": 134294,
+    "student_forward_calls": 640,
+    "student_forward_cuda_seconds": 296.4646626281738,
+    "student_processed_input_positions": 1394871,
+    "student_attended_input_positions": 1260577,
+    "teacher_forward_calls": 640,
+    "teacher_forward_cuda_seconds": 342.43518029785156,
+    "teacher_processed_input_positions": 1989619,
+    "teacher_attended_input_positions": 1855325
+  },
+  "timing": {
+    "completed_updates": 20,
+    "valid_generated_and_loss_tokens": 1176426,
+    "training_wall_seconds": 5138.970189271495,
+    "successful_parent_GPU_hours": 2.945,
+    "prior_failed_parent_GPU_hours": 0.6972222222222222,
+    "total_training_with_failed_attempt_GPU_hours": 3.6422222222222222
+  },
+  "TensorBoard_six_training_cost_series_read_back": true,
+  "scope": "FreshBase allocator-only correctedJA20 completed; originalfailure4updates retainedandcountedseparately. checkpoint20 optimizer/scheduler/RNG releasedafterfixingCPUrelease identitykey. No JAmathematicalresult yet; actualserverresume nottested. Trainingconfig immutable, no new loss/responsebudget/optimizer intervention."
+}

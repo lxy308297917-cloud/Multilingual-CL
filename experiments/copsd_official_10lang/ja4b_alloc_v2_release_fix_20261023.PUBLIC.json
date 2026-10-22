@@ -1,0 +1,12 @@
+{
+  "verified_at": "2026-10-23T03:33:37.400211",
+  "previous_eval_sha256": "a63e994121761e119e780885cbf453307a8057e7c23f55347b14b92a34d17126",
+  "new_eval_sha256": "4dd3089efeb9a35924cce1ce384287819082a0eeeb456327a10c24553a8b8d21",
+  "new_release_helper_sha256": "1f5fee735175796ea29fcd8d52fc3704fa126c6ccc9c081cfcc8a89f8a7634d6",
+  "fix": "OneinheritedSWrunnerhash key correctedtoJAallocatorv2runner, not teacher/rollout/loss/data.",
+  "training_unchanged": true,
+  "no_JA20_GPU_evaluation_existed_before_fix": true,
+  "checkpoint20_release_completed": true,
+  "JA_and_EN_runtime_CPU_preflights_passed": true,
+  "scope": "CPUreleaseprogrammingerrorfixedbeforeGPUevaluation; priorfreeze archived, same scientificparameters. Releaseguardsnotbypassed."
+}

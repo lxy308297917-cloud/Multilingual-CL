@@ -1,0 +1,89 @@
+{
+  "reviewed_at": "2026-10-23T03:09:05.580425",
+  "scope": "All9 pairedEnglish losses ofSW4Bseed43 fixed200 reviewed through savedreference/response endings. Classificationsdescribeobservedbehavior, not acausal explanationoftraining. Keepofficial161/200 andall originalscores, no posthocrescoring. No newGPUgeneration orcostrecount.",
+  "Base_correct": 166,
+  "seed42_correct": 158,
+  "seed43_correct": 161,
+  "seed43_gained": 4,
+  "seed43_lost": 9,
+  "categories": {
+    "truncation_without_extracted_answer": 5,
+    "mathematical_boundary_error": 1,
+    "boxed_representation_difference": 3
+  },
+  "reviews": [
+    {
+      "id": "687b6eb376bcc6cb296a9db260b7b93e1335bb12bc371cf079507ccb389213d7",
+      "reference": "100000",
+      "boxed": null,
+      "finish_reason": "length",
+      "category": "truncation_without_extracted_answer",
+      "review": "8192 tokenbudget exhausted, no extractedanswer; cannot conclude correctnessofunfinishedreasoning."
+    },
+    {
+      "id": "2382d29b0f3e7ee3f55b97150b1d64ff947e33b555b719e07eff3d7ad2be4061",
+      "reference": "(0, \\frac{1}{2}] \\cup [1, \\infty)",
+      "boxed": "(0, \\frac{1}{2}] \\cup (1, \\infty)",
+      "finish_reason": "stop",
+      "category": "mathematical_boundary_error",
+      "review": "Treats c=1 as monotonicallydecreasing, excludes1 fromfinalrange although reference includesit. Not merelyboxing."
+    },
+    {
+      "id": "7c1ee7d7911876f10cee030489ee1c3f02aae159cbe8d6e1f379d09bb1c50546",
+      "reference": "AB = 2 \\times AC",
+      "boxed": "\\text{One of the sides is half the length of another.}",
+      "finish_reason": "stop",
+      "category": "boxed_representation_difference",
+      "review": "Bodycontains AB=2AC reference relation, finalboxstatesgenericproposition instead. Fullproof notindependentlyvalidated."
+    },
+    {
+      "id": "8347d35eb19b1891e123c1db459d0f66247016db43640e08488e7d175f2832d7",
+      "reference": "1093",
+      "boxed": null,
+      "finish_reason": "length",
+      "category": "truncation_without_extracted_answer",
+      "review": "8192 tokenbudget exhausted, no extractedanswer; cannot conclude correctnessofunfinishedreasoning."
+    },
+    {
+      "id": "597a632c6c288d954d4a3a4b242cdbbe05ca01178c22850467a43c822663f0a7",
+      "reference": "30",
+      "boxed": null,
+      "finish_reason": "length",
+      "category": "truncation_without_extracted_answer",
+      "review": "8192 tokenbudget exhausted, no extractedanswer; cannot conclude correctnessofunfinishedreasoning."
+    },
+    {
+      "id": "76426bda6a133a5d85a9605ea9174616af390532536699c372c4a2e0ea88babd",
+      "reference": "\\overrightarrow{EP} = x \\overrightarrow{PF}",
+      "boxed": "EP = x \\cdot PF",
+      "finish_reason": "stop",
+      "category": "boxed_representation_difference",
+      "review": "Bodycontains vector EP=x PF butfinalboxomits vectorarrows; frozenofficialgrader returnsfalse. Fullproof notindependentlyvalidated."
+    },
+    {
+      "id": "41ea6a60d4e5c3aeee7b668265ffee106fe1e11c9d45536dcc7789b688802cb5",
+      "reference": "\\text{No}",
+      "boxed": null,
+      "finish_reason": "length",
+      "category": "truncation_without_extracted_answer",
+      "review": "8192 tokenbudget exhausted, no extractedanswer; cannot conclude correctnessofunfinishedreasoning."
+    },
+    {
+      "id": "dddaff0c5209658119dca01044086debc73b68ec303a9ce2ee02bb79eca32bc9",
+      "reference": "1",
+      "boxed": null,
+      "finish_reason": "length",
+      "category": "truncation_without_extracted_answer",
+      "review": "8192 tokenbudget exhausted, no extractedanswer; cannot conclude correctnessofunfinishedreasoning."
+    },
+    {
+      "id": "0b59a1432e6270e87c8807016788f36c76d0e5e1275b7c1fb723d7d50bdd4435",
+      "reference": "A = B = C",
+      "boxed": "Yes",
+      "finish_reason": "stop",
+      "category": "boxed_representation_difference",
+      "review": "Bodycontains A=B=C reference relation, finalboxYes instead. Fullproof notindependentlyvalidated."
+    }
+  ],
+  "ITEMS_sha256": "91bd4b3a2edad3e16ede80b37575a56dfe31fdddbb25a166ce55dca292703f65"
+}

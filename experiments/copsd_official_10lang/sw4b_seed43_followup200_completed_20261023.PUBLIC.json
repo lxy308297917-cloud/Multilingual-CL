@@ -1,0 +1,114 @@
+{
+  "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+  "completed_at": "2026-10-23T03:05:48.023369",
+  "languages": {
+    "sw": {
+      "Base_correct": 16,
+      "seed42_correct": 62,
+      "seed43_correct": 47,
+      "seed42_pair": {
+        "Base_correct": 16,
+        "checkpoint_correct": 62,
+        "gained": 50,
+        "lost": 4,
+        "delta_correct": 46
+      },
+      "seed43_pair": {
+        "Base_correct": 16,
+        "checkpoint_correct": 47,
+        "gained": 38,
+        "lost": 7,
+        "delta_correct": 31
+      },
+      "fixed_two_model_mean_delta_pp": 19.25,
+      "paired_question_bootstrap95_CI_mean_delta_pp": [
+        14.000000000000002,
+        24.75
+      ],
+      "uncertainty_scope": "Questions for twofixedmodels, not trainingseedpopulation or multiplicityadjusted inference.",
+      "seed43_metrics": {
+        "items": 200,
+        "single_correct": 47,
+        "generated_tokens": 785731,
+        "truncated": 41,
+        "normal_terminations": 159,
+        "answer_extraction_failures": 42,
+        "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 200,
+        "single_accuracy": 0.235,
+        "generation_seconds": 3523.2151931319386,
+        "model_load_seconds": 13.170924115926027,
+        "actual_max_num_seqs": 16
+      },
+      "seed43_source": {
+        "run_id": "sw4b_followup200_SW43_sw_20261022_v1",
+        "items_sha256": "3c7683afa006b80e69d120209043382ffe09172cb27e4762c6fa1726e8c3476b",
+        "config_sha256": "35c0cb348960f47a9aadfdd94019c0b353ef535d3e4ced50da200bba6ec486c6"
+      }
+    },
+    "en": {
+      "Base_correct": 166,
+      "seed42_correct": 158,
+      "seed43_correct": 161,
+      "seed42_pair": {
+        "Base_correct": 166,
+        "checkpoint_correct": 158,
+        "gained": 4,
+        "lost": 12,
+        "delta_correct": -8
+      },
+      "seed43_pair": {
+        "Base_correct": 166,
+        "checkpoint_correct": 161,
+        "gained": 4,
+        "lost": 9,
+        "delta_correct": -5
+      },
+      "fixed_two_model_mean_delta_pp": -3.25,
+      "paired_question_bootstrap95_CI_mean_delta_pp": [
+        -6.5,
+        0.0
+      ],
+      "uncertainty_scope": "Questions for twofixedmodels, not trainingseedpopulation or multiplicityadjusted inference.",
+      "seed43_metrics": {
+        "items": 200,
+        "single_correct": 161,
+        "generated_tokens": 892438,
+        "truncated": 22,
+        "normal_terminations": 178,
+        "answer_extraction_failures": 14,
+        "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 200,
+        "single_accuracy": 0.805,
+        "generation_seconds": 4235.187949836254,
+        "model_load_seconds": 13.295600675046444,
+        "actual_max_num_seqs": 16
+      },
+      "seed43_source": {
+        "run_id": "sw4b_followup200_SW43_en_20261022_v1",
+        "items_sha256": "91bd4b3a2edad3e16ede80b37575a56dfe31fdddbb25a166ce55dca292703f65",
+        "config_sha256": "89d6de2f18d0e198aef4b4d558cfb7df217d211646996c253b47f1f0e3a0f41c"
+      }
+    }
+  },
+  "cost": {
+    "new_training_parent_GPU_hours": 3.07,
+    "new_evaluation_parent_GPU_hours": 2.1991666666666667,
+    "new_evaluation_generated_tokens": 1678169,
+    "training_exposures": 640,
+    "training_generated_tokens": 1096727,
+    "training_valid_response_loss_positions": 1096727,
+    "teacher_forward_calls": 640,
+    "cached_Base_and_seed42_GPU_cost_recounted": false
+  },
+  "evaluation_entry_sha256": "fbf73421a48274782f5c1d939734940eb3aee3fe7cb05640117d5b2f74fb4f97",
+  "cached_entry_sha256": "e7c599ac27e4962d87263bf3c3b9e87a1c18d10bc24ff5bd386673ef87c6e0ef",
+  "source_metadata_difference": "Releaseguard, frozenmanifest/outputroot andrecording metadata are declared adaptations; matchedactualprompts/input/questionseeds/parameters/packages are verified. No silent method/backend mixing.",
+  "TensorBoard_six_accuracies_one_cost_read_back": true,
+  "scope": "One seed43 confirmation againstfixedBase/seed42; not officialpass12, a newlyblindtest, three-language selection or formaltestdriven checkpointselection. Negative effects retained.",
+  "summarizer_sha256": "76b13c31c751ddea9dc53f325f8b00b5daa5c3ab755611453b9f2b8b2bd57faa"
+}
