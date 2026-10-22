@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "gates": {
+    "independent_alignment": true,
+    "ENtoSW_primary": false,
+    "SWreading_noninferiority": false,
+    "reverse_translation_noninferiority": true,
+    "ENreading_noninferiority": false,
+    "ENinstruction_noninferiority": false
+  },
+  "decision": "STOP fixedprototype; no automatic alpha/layer/pool/temperature scan or seed addition",
+  "frozen_protocol_sha256": "d4e2f6b69cae0bfd005a14ee27f354706320cb158a21154239f7651bee90d855",
+  "scope": "Exploratory one-seed development comparison, English retention relative B only, not comprehensive ability or formal test",
+  "uncertainty": "Failed noninferiority with wide interval is insufficient evidence of acceptable retention, not proof of true damage."
+}

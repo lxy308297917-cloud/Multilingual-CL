@@ -1,0 +1,12 @@
+{
+  "old_own_CPU_supervisor_pid": 316947,
+  "old_exec_session": 14123,
+  "reason": "User explicitly allowed all verifiedidle cards; replace only CPU handoff cap4 with one-off cap8, D1 training PID unchanged",
+  "verified_cmdline": [
+    "python",
+    "-u",
+    "outputs/infonce_strength_v1/code/await_endpoint.py"
+  ],
+  "time_unix": 1792657267.1473749,
+  "no_GPU_training_process_signalled": true
+}

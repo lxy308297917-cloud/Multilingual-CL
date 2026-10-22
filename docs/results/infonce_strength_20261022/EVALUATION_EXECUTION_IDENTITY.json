@@ -1,0 +1,8 @@
+{
+  "recorded_unix": 1792655872.1051643,
+  "before_D1_generation": true,
+  "clarification": "Explicitly match original per-task deterministic flags: v2reading worker defaultsFalse and no backward, original translation/instruction seed() True. Allsameforward SDPA, TF32off, CUBLASworkspace, source/prompt/order/batch/cap. No dataset/scorer/threshold changed.",
+  "v2_reading_worker": "outputs/evaluation_audit_v2/code/gpu_worker.py: only TF32off before evaluate; all evaluation jobs dispatched before mechanism jobs setting True",
+  "translation_instruction": "original evaluate.py calls common.seed()",
+  "D1_new_task_scores_accessed": false
+}

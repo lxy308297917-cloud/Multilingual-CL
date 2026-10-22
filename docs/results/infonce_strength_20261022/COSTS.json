@@ -1,0 +1,114 @@
+{
+  "phases": {
+    "calibration": {
+      "gpu_hours": 0.02013279464509752,
+      "wall_seconds": 72.47805976867676,
+      "peak_allocated_bytes": 8661005312,
+      "peak_reserved_bytes": 11200888832,
+      "counts": {
+        "main_input": 6924,
+        "main_supervised": 2303,
+        "CE_aux_input": 26498,
+        "CE_aux_supervised": 7361,
+        "NCE_aux_input": 4535
+      }
+    },
+    "copied_state_numeric": {
+      "gpu_hours": 0.018117831415600246,
+      "wall_seconds": 65.22419238090515,
+      "peak_allocated_bytes": 13440934400
+    },
+    "technical_resume": {
+      "gpu_hours": 0.060624970131450226,
+      "wall_seconds": 218.2498905658722
+    },
+    "D1_training": {
+      "elapsed_seconds": 4656.222866278142,
+      "peak_allocated_bytes": 16949554176,
+      "peak_reserved_bytes": 24677187584,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "aux_input": 290693,
+        "aux_supervised": 0,
+        "aux_pairs": 8584,
+        "aux_padded_processed": 420168
+      }
+    },
+    "endpoint_generation": {
+      "gpu_hours": 0.5480416776074304,
+      "wall_seconds": 1972.9500381946564,
+      "peak_allocated_bytes": 3548414464,
+      "counts": {
+        "prompt_tokens": 141278,
+        "generated_tokens": 74852
+      }
+    },
+    "endpoint_representation": {
+      "gpu_hours": 0.013227947817908392,
+      "wall_seconds": 47.62060737609863,
+      "peak_allocated_bytes": 6329624064,
+      "counts": {
+        "en": 19110,
+        "sw": 33874
+      }
+    }
+  },
+  "sum_phase_GPUh": 1.9535404622503039,
+  "ceiling_GPUh": 6.75,
+  "within_budget": true,
+  "physical_peak_mib_sampled": 21977,
+  "physical_sampling_seconds": 30,
+  "training_torch_peak_scope": "Process-cumulative across numerical/technical/train stages; physical loop/sampler separately recorded",
+  "shared_teacher_new_GPUh": 0,
+  "reference_B_D0_new_training_GPUh": 0,
+  "reference_B_D0_new_generation_GPUh": 0,
+  "calibration_counts": {
+    "main_input": 6924,
+    "main_supervised": 2303,
+    "CE_aux_input": 26498,
+    "CE_aux_supervised": 7361,
+    "NCE_aux_input": 4535
+  },
+  "D1_counts": {
+    "main_input": 1536351,
+    "main_supervised": 599469,
+    "aux_input": 290693,
+    "aux_supervised": 0,
+    "aux_pairs": 8584,
+    "aux_padded_processed": 420168
+  },
+  "physical_samples_scoped_to_verified_worker_intervals": true,
+  "physical_training_log_peak_mib": 23743,
+  "worker_context_intervals": [
+    {
+      "pid": 359000,
+      "gpu_uuid": "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573",
+      "started_unix": 1792659739.7143729,
+      "finished_unix": 1792661762.9996643,
+      "context_wall_GPUh": 0.5620236920648151
+    },
+    {
+      "pid": 310949,
+      "gpu_uuid": "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573",
+      "started_unix": 1792654608.688047,
+      "finished_unix": 1792654682.9143806,
+      "context_wall_GPUh": 0.020618426005045574
+    },
+    {
+      "pid": 312555,
+      "gpu_uuid": "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573",
+      "started_unix": 1792654760.978483,
+      "finished_unix": 1792659706.1291606,
+      "context_wall_GPUh": 1.3736529660224914
+    }
+  ],
+  "worker_context_wall_GPUh": 1.956295084092352,
+  "context_not_phase_overhead_GPUh": 0.0027546218420482216,
+  "initial_launch_without_worker_receipt": {
+    "log_bytes": 0,
+    "GPU_context_not_proven": true,
+    "conservative_elapsed_upper_GPUh": 0.04091637452443441
+  },
+  "conservative_total_upper_GPUh": 1.9972114586167864
+}
