@@ -1,0 +1,79 @@
+{
+  "observed_at": "2026-10-22T19:06:22.468371",
+  "scope": "All eight paired English losses reviewed, official90->85 unchanged. Descriptive termination and extraction analysis, not rescoring or proof validation.",
+  "source_items_sha256": [
+    "9f8972ec0bf50fca18f88122fcbfb0cedce2c2ab4bcea3f2b3ebf8a39b94cb28",
+    "9a898a80aed5ad0671b0782ef9ced9ae43642d06bbe7cc504dba279a70fe04c7"
+  ],
+  "lost_items": [
+    {
+      "id": "01b65b79aba7d62b84cc0c7b85f04f58e76f61567fc7acc733b0a1090376c2e2",
+      "trained_finish_reason": "stop",
+      "trained_tokens": 4466,
+      "answer_extraction_failed": false,
+      "trained_boxed_answer": "\\sqrt[4]{ab}",
+      "official_reference": "\\frac{2 \\sqrt{a b}}{\\sqrt{a} + \\sqrt{b}} \\leq \\sqrt[4]{a b}"
+    },
+    {
+      "id": "089e0ce266e0447af04cc98533d565a3bf12650b9755b56052d8614672f40743",
+      "trained_finish_reason": "length",
+      "trained_tokens": 8192,
+      "answer_extraction_failed": true,
+      "trained_boxed_answer": null,
+      "official_reference": "MB = NB"
+    },
+    {
+      "id": "074c62c5f4cdbde6bb42109254a8a0e7e57c4d73f9e2be1579ffdc41aff29d46",
+      "trained_finish_reason": "length",
+      "trained_tokens": 8192,
+      "answer_extraction_failed": true,
+      "trained_boxed_answer": null,
+      "official_reference": "M = P"
+    },
+    {
+      "id": "02a83c15561a9a6aadd00df5c08f63b6cdd59901f999996e9d11dc93af1cdb3a",
+      "trained_finish_reason": "length",
+      "trained_tokens": 8192,
+      "answer_extraction_failed": true,
+      "trained_boxed_answer": null,
+      "official_reference": "\\frac{\\pi}{2} - \\frac{\\sqrt{3}}{2} \\ \\text{cm}^2"
+    },
+    {
+      "id": "091dd957272955780f3d53c217e644f6fc3cc847278258590c7d50829b794461",
+      "trained_finish_reason": "length",
+      "trained_tokens": 8192,
+      "answer_extraction_failed": true,
+      "trained_boxed_answer": null,
+      "official_reference": "\\mathrm{E} \\xi^{p} \\leqslant \\mathrm{E} \\eta^{\\frac{p}{p-q}}"
+    },
+    {
+      "id": "0767c23b09b8ce614f5d7347ad0b7e801c8c72f7dccf7436f9a0fee18d2ee738",
+      "trained_finish_reason": "length",
+      "trained_tokens": 8192,
+      "answer_extraction_failed": true,
+      "trained_boxed_answer": null,
+      "official_reference": "1221"
+    },
+    {
+      "id": "0354f2e395e9246ab23ca17f442ae8135f6dd3539ab183428f17f24a85d7324f",
+      "trained_finish_reason": "length",
+      "trained_tokens": 8192,
+      "answer_extraction_failed": true,
+      "trained_boxed_answer": null,
+      "official_reference": "2"
+    },
+    {
+      "id": "00c418f41c672ee7e43c1d0fa11a12b20b165ce6756d9bf17d0c0a55ed973bcd",
+      "trained_finish_reason": "length",
+      "trained_tokens": 8192,
+      "answer_extraction_failed": true,
+      "trained_boxed_answer": null,
+      "official_reference": "1999999999"
+    }
+  ],
+  "losses": 8,
+  "losses_truncated_and_no_extracted_answer": 7,
+  "normal_termination_loss_count": 1,
+  "normal_loss_review": "The sole normally terminated loss boxes only fourthroot(ab), whereas the official reference is the complete inequality. Saved response also contains an inequality proof; this is a representation/boxing issue, not established reasoning failure. No score adjustment.",
+  "causal_limit": "Seven lost items ending at8192 is not proof that more tokens would solve them; some saved tails show repeated unsuccessful reasoning."
+}

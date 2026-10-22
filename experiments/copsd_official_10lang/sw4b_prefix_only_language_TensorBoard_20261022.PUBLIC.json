@@ -1,0 +1,47 @@
+{
+  "protocol": "project_SW4B_Base_thinkprefix_only_EN_originaldev100_v1",
+  "observed_at": "2026-10-22T19:17:10.087659",
+  "source_items_sha256": "310672bdd52e0a0c09bdf1ec3c4278ae6bb7d2beaeb77d8295aeadd545ec7c0b",
+  "language_analysis_sha256": "20d2397a0fe74a9a367e6bda8c444391ac810ee1a73a715de2eb80f760c8091d",
+  "language": {
+    "thinking": {
+      "total_items": 100,
+      "statuses": {
+        "predicted": 100
+      },
+      "top1_label_counts": {
+        "__label__eng_Latn": 100
+      },
+      "target_top1_probability_ge_0_8": 0,
+      "correct_items_label_counts": {
+        "__label__eng_Latn": 46
+      }
+    },
+    "final": {
+      "total_items": 100,
+      "statuses": {
+        "predicted": 89,
+        "no_final_section": 11
+      },
+      "top1_label_counts": {
+        "__label__eng_Latn": 65,
+        "__label__ssw_Latn": 2,
+        "__label__swh_Latn": 12,
+        "__label__swc_Latn": 7,
+        "__label__sna_Latn": 1,
+        "__label__cbk_Latn": 1,
+        "__label__ind_Latn": 1
+      },
+      "target_top1_probability_ge_0_8": 10,
+      "correct_items_label_counts": {
+        "__label__eng_Latn": 37,
+        "__label__ssw_Latn": 2,
+        "__label__swh_Latn": 5,
+        "__label__swc_Latn": 1,
+        "__label__sna_Latn": 1
+      }
+    }
+  },
+  "TensorBoard_three_accuracies_two_costs_two_language_series_read_back": true,
+  "scope": "GlotLID whole-segment labels not calibrated fluency/purity or proof correctness; all100 denominators include missing finals; no new generations or mathematical rescoring."
+}

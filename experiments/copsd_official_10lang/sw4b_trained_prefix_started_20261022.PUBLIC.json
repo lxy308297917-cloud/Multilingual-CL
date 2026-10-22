@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-10-22T19:20:01.478402",
+  "protocol": "project_SW4B_SW20_thinkprefix_only_EN_originaldev100_v1",
+  "monitor_pid": 407097,
+  "job_pid": 407141,
+  "phase": "running",
+  "started_at": "2026-10-22 19:19:26",
+  "GPU_indices": [
+    2
+  ],
+  "GPU_UUIDs": [
+    "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39"
+  ],
+  "script_sha256": "8fa1a11fec04f3547cf0992562d230b720a3f0537e305ac041faa22481e17bdc",
+  "max_user_gpus": 4,
+  "CPU_preflight_passed": true,
+  "no_new_training": true,
+  "result_pending": true
+}
