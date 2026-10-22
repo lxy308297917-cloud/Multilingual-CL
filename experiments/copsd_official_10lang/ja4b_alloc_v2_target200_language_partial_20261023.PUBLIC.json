@@ -1,0 +1,160 @@
+{
+  "observed_at": "2026-10-23T04:37:11.076534",
+  "protocol": "project_JA4B_alloc_v2_followup_dev200_single8192_c16_v1",
+  "items_each": 200,
+  "cases": {
+    "Base": {
+      "language": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 200
+          },
+          "top1_label_counts": {
+            "__label__jpn_Jpan": 192,
+            "__label__eng_Latn": 8
+          },
+          "target_top1_probability_ge_0_8": 192,
+          "correct_items_label_counts": {
+            "__label__jpn_Jpan": 134,
+            "__label__eng_Latn": 6
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 169,
+            "no_final_section": 31
+          },
+          "top1_label_counts": {
+            "__label__jpn_Jpan": 168,
+            "__label__awa_Deva": 1
+          },
+          "target_top1_probability_ge_0_8": 168,
+          "correct_items_label_counts": {
+            "__label__jpn_Jpan": 138,
+            "no_final_section": 2
+          }
+        }
+      },
+      "correct_and_thinking_Japanese_highconf": 134,
+      "correct_and_final_Japanese_highconf": 138,
+      "correct_and_both_Japanese_highconf": 132,
+      "analysis_sha256": "6817ad33dc60218bbee7b871e1073d849fba403a12f794f67a84a722cb4b867a",
+      "items_sha256": "872905b4e832641e65b847ccd7766b79fe136d7e8449ec5611a5e13be72dbaf5"
+    },
+    "JA20": {
+      "language": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 199,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__jpn_Jpan": 185,
+            "__label__eng_Latn": 13,
+            "__label__cmn_Hani": 1
+          },
+          "target_top1_probability_ge_0_8": 185,
+          "correct_items_label_counts": {
+            "__label__jpn_Jpan": 125,
+            "__label__eng_Latn": 8,
+            "too_short": 1,
+            "__label__cmn_Hani": 1
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 179,
+            "no_final_section": 21
+          },
+          "top1_label_counts": {
+            "__label__jpn_Jpan": 176,
+            "__label__eng_Latn": 1,
+            "__label__cmn_Hani": 2
+          },
+          "target_top1_probability_ge_0_8": 176,
+          "correct_items_label_counts": {
+            "__label__jpn_Jpan": 127,
+            "no_final_section": 6,
+            "__label__eng_Latn": 1,
+            "__label__cmn_Hani": 1
+          }
+        }
+      },
+      "correct_and_thinking_Japanese_highconf": 125,
+      "correct_and_final_Japanese_highconf": 127,
+      "correct_and_both_Japanese_highconf": 118,
+      "analysis_sha256": "df68f7acebb11c0fcd6440e8cbe5a1d409ba9b671b908a650848d4a6d2d04e9d",
+      "items_sha256": "fd1cad76e5bff51b2040da851338ea9db514450ae87e51eb59e0cbcdf51bf8f6"
+    }
+  },
+  "paired_termination": {
+    "gained_IDs": [
+      "fd40ba32f1604e63a9f24f26c3ff243a0a32f7fb46880cb5ff7d146b5785980b",
+      "d98a9c87beaea9d7b7dfb6188fd3d35c942cedce749ebb5904b2ee67a373a8cc",
+      "a670590d9ae053053307ca357ded1fb396cb957cc076954a7591f67a61b3500a",
+      "4906e54005bd1f2d4695cfe931d1f7ac056b042b82f6d5965a4e8d6b8b517a00",
+      "860660dfa2d51142cb8f86dc2eee3c1a4d6d3b9a60d62f3f10dc83dee90b48ea",
+      "9ab9f6b78450632c4f6a5cadedac962b33c5c184f76a101db3ca55387e8f667c",
+      "9c31ee765522973590dd6ea03a4e801884fe86bffcf896649a6c5bcc949195ec",
+      "213c69dcd70419e72ecd57ab3f751f730a773f8af081b297d88b47a7dc65b683",
+      "13b19c3843e81e6eba565a8ba84da1edc1e0ad94272caf436d8eb38c6ae685a9",
+      "f9baef4a078dcdb46909ccefc8140e2b607115eb330b5d2634f572f1305431c3",
+      "2dfc81dd643ea72e5b69379e2e1c0330f0c9c2abde3b29427e8cf4097d90c848",
+      "59e9af942c1722f5e8b23d2cb428bfaa8e4460e60faa4304dc500986180558ad",
+      "8b641e130a78dadcb1c499684425f2840dec7f118cf1ae8b34ccbb508d7caab9",
+      "c815746ce9e2e760849f6ea87470867bdc857870897f2664e833c13547a86281",
+      "8e240f60ab80582f46e8e5a7290623eda1d0c2c82287a8b772153d6fdc99155c",
+      "0c7f8044c616c5ddcb743704e98814ee6cee1fe8c186e07b6d44e7381dd7c770",
+      "b53f52a921ae847815d911cb26554024f03824d5f74d525cce46a24b95915c94",
+      "60db0878e41fd22ff8ac882863b37f931c50c42f9d725c07aabc0ede65ce0a06",
+      "eb47dd46bae74a5f28c9381b90a4dbcd37eb02d555353248219afb1967a0097e",
+      "1346857b759c66727de5fa490ac3aeaa90c4439bdad44e61cd460cd6c678513a",
+      "26d6153c1e6d870374fdfaffbcf4a4b092d224fee17cfc4f95d051b152bd4542"
+    ],
+    "lost_IDs": [
+      "b1ad5c34092727006c383447394cc454b044f4e0127f8162fa29328e2eabc795",
+      "b4a3555e73eb94dfb870d4bb99c66e5a5e105d2c036b9b6f5e22fe8791b0a5c1",
+      "7538a15b12cbdf5fb78d16aa061e47c07f00888d7368e45fc537338d7fd90d22",
+      "e48aefa50021e1a47e98652b08bdf3874e47ab5be83dfa5d349b8613d01006f8",
+      "28952de2d525f34b8e975d745e7fac65b3948d1539fe770f2d35c78bd9bfcbc8",
+      "7f6ad5e37399c85056a0c9db985205fe46226c2b3857e7bef6623f72329e56f1",
+      "a6583b0a7e65cde01dd5c03829dbdb659c98fab098ff07afede41271a92994bf",
+      "7c1ee7d7911876f10cee030489ee1c3f02aae159cbe8d6e1f379d09bb1c50546",
+      "69e8a3394c72f2579552655386662507a6e42bee22bc14a59333862ffaf53fa1",
+      "307229c757e2f11cfa3111554fd2e313a6c0123bcec12f31cb5d5623f2d498c4",
+      "57729a55c40a8a030a1484f39c572462f97359263acedc6f838c2954377bd020",
+      "dc2be6f092b4d5a2efb240f7504fbcd20135c9c92e8aea55de343f9a7773c6df",
+      "6cac2abf17be57685480259c2ec4fab79e1a2208297b4f3a0827cce69e4b5fe6",
+      "518a81d43b42bc9d13c8c10c235d7be85036b5c639a22e5f73d4086ac110a63f",
+      "479e961aa44f162d538ff5410f419138af6d2df4b89ade537b6a7e95d6554dfb",
+      "104134cdea1216a44bfa6c09d22919508e505bf7b56daa24f8176ea4c226928e",
+      "87109c1958449dd152d430d425074536b3f0552c90005d433fd3894ff35a7433",
+      "d776bd618b0a1c32ac40594694909bcce902d97b1d58001886310909f2cdb0a0",
+      "21780314dd915b3031149fe6d2a1f012b18070f49432deec54ab215db7cfc87f",
+      "41ea6a60d4e5c3aeee7b668265ffee106fe1e11c9d45536dcc7789b688802cb5",
+      "09692aad64c7d57857cd064f72c20dbdb8c2d94505c0f9f5c15a44fc830fcc29",
+      "6250449acafd365127764f4b543b3376a741e71a410ebed13d28e005b04190ff",
+      "5a7b8f0465dd984fe73b2a3d16b4c4847120fe5e2c2b633224de553890358adb",
+      "b5da72e3d069cce0182ba6ca367101aeef5b8b325427b1a4b3ea62a2ceb5ea64",
+      "7a381ba7849d178c7350add0bd109415f75d1de0f44ec4498cb7a6c9db07072b",
+      "a8067893f05029e6050ee4240371bdcafa7d0f915d9fc68154e06f91d372648e"
+    ],
+    "Base_finish_of_gains": {
+      "length": 13,
+      "stop": 8
+    },
+    "Base_extraction_failures_of_gains": 12,
+    "trained_finish_of_losses": {
+      "stop": 17,
+      "length": 9
+    },
+    "trained_extraction_failures_of_losses": 9
+  },
+  "English_evaluation_pending": true,
+  "new_GPU_generation": 0,
+  "scope": "JA200partialdescriptive language/terminationanalysis onunchangedmathscore. GlotLID wholepartlabels notcalibratedpurity/fluency/proofquality; short/numericfinal unlabelednotlanguagefailure. Onefixedseed, questionCI[-9,4]pp doesnotprovepopulationharm orbenefit; no rescoring/candidatepromotion. Fullparent/costacceptance pendingEnglish."
+}

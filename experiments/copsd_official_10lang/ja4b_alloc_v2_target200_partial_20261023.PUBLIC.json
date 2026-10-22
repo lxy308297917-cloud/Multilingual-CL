@@ -1,0 +1,39 @@
+{
+  "accepted_at": "2026-10-23T04:33:17.551433",
+  "protocol": "project_JA4B_alloc_v2_followup_dev200_single8192_c16_v1",
+  "status": "JA200subevaluationcompleted_Englishstillrunning",
+  "paired": {
+    "Base_correct": 140,
+    "checkpoint_correct": 135,
+    "gained": 21,
+    "lost": 26,
+    "delta_correct": -5
+  },
+  "paired_question_bootstrap95_CI_pp": [
+    -9.0,
+    4.0
+  ],
+  "bootstrap_seed": 20261023,
+  "bootstrap_replicates": 10000,
+  "metrics": {
+    "items": 200,
+    "single_correct": 135,
+    "generated_tokens": 711438,
+    "truncated": 23,
+    "normal_terminations": 177,
+    "answer_extraction_failures": 18,
+    "protocol": "project_JA4B_alloc_v2_followup_dev200_single8192_c16_v1",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 200,
+    "single_accuracy": 0.675,
+    "generation_seconds": 3400.758301664144,
+    "model_load_seconds": 13.507874140515924,
+    "actual_max_num_seqs": 16
+  },
+  "items_sha256": "fd1cad76e5bff51b2040da851338ea9db514450ae87e51eb59e0cbcdf51bf8f6",
+  "CONFIG_sha256": "974ddf60259d6843490a3017f52a5ee32cd1833b18facb0c4c91036a937f98f5",
+  "TensorBoard_two_accuracy_series_read_back": true,
+  "parent_cost_deferred_to_complete_report": true,
+  "scope": "One fixedJA4B20 seed42 candidate onreserved200, bothmodels native16/n1/8192. Targetpointestimate doesnotimprove, not a populationproof ofharm. English/jointacceptance pending, no candidatepromotion, formaltestdrivenselection or newBase generation. CIreflectsquestions foronefixedmodelpair, not trainingseedpopulation."
+}
