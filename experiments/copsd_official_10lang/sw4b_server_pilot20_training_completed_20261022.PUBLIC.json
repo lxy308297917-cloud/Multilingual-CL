@@ -1,0 +1,153 @@
+{
+  "protocol": "independent_SW4B_dedicated_server_fresh_pilot20_v1",
+  "completed_at": "2026-10-22 17:26:21",
+  "parent_exit_code": 0,
+  "completed_updates": 20,
+  "actual_exposures": 640,
+  "actual_inputs_match_fresh1_7B_reference": true,
+  "original_Base_unchanged_bitwise": true,
+  "weight_syncs": 21,
+  "rollout_generated_tokens": 1076264,
+  "cost": {
+    "loss_calls": 640,
+    "valid_response_loss_positions": 1076264,
+    "masked_response_positions": 234456,
+    "student_forward_calls": 640,
+    "student_forward_cuda_seconds": 314.42693228149415,
+    "student_processed_input_positions": 1421009,
+    "student_attended_input_positions": 1186553,
+    "teacher_forward_calls": 640,
+    "teacher_forward_cuda_seconds": 376.36093978881837,
+    "teacher_processed_input_positions": 2057997,
+    "teacher_attended_input_positions": 1823541
+  },
+  "batch_generation": [
+    {
+      "global_step": 0,
+      "rollouts": 32,
+      "generated_tokens": 51382,
+      "generation_seconds": 45.30098464153707
+    },
+    {
+      "global_step": 1,
+      "rollouts": 32,
+      "generated_tokens": 51325,
+      "generation_seconds": 45.33584967255592
+    },
+    {
+      "global_step": 2,
+      "rollouts": 32,
+      "generated_tokens": 57452,
+      "generation_seconds": 48.40239397995174
+    },
+    {
+      "global_step": 3,
+      "rollouts": 32,
+      "generated_tokens": 51526,
+      "generation_seconds": 45.14673728682101
+    },
+    {
+      "global_step": 4,
+      "rollouts": 32,
+      "generated_tokens": 53929,
+      "generation_seconds": 46.65238776616752
+    },
+    {
+      "global_step": 5,
+      "rollouts": 32,
+      "generated_tokens": 57113,
+      "generation_seconds": 48.19415153004229
+    },
+    {
+      "global_step": 6,
+      "rollouts": 32,
+      "generated_tokens": 52369,
+      "generation_seconds": 47.156585305929184
+    },
+    {
+      "global_step": 7,
+      "rollouts": 32,
+      "generated_tokens": 51702,
+      "generation_seconds": 45.668712170794606
+    },
+    {
+      "global_step": 8,
+      "rollouts": 32,
+      "generated_tokens": 55296,
+      "generation_seconds": 47.50279037281871
+    },
+    {
+      "global_step": 9,
+      "rollouts": 32,
+      "generated_tokens": 53989,
+      "generation_seconds": 46.374240634962916
+    },
+    {
+      "global_step": 10,
+      "rollouts": 32,
+      "generated_tokens": 51583,
+      "generation_seconds": 45.79677183367312
+    },
+    {
+      "global_step": 11,
+      "rollouts": 32,
+      "generated_tokens": 52959,
+      "generation_seconds": 45.987494099885225
+    },
+    {
+      "global_step": 12,
+      "rollouts": 32,
+      "generated_tokens": 48488,
+      "generation_seconds": 45.242342341691256
+    },
+    {
+      "global_step": 13,
+      "rollouts": 32,
+      "generated_tokens": 56779,
+      "generation_seconds": 51.96757807023823
+    },
+    {
+      "global_step": 14,
+      "rollouts": 32,
+      "generated_tokens": 57803,
+      "generation_seconds": 52.04369924031198
+    },
+    {
+      "global_step": 15,
+      "rollouts": 32,
+      "generated_tokens": 54906,
+      "generation_seconds": 49.720723344013095
+    },
+    {
+      "global_step": 16,
+      "rollouts": 32,
+      "generated_tokens": 56012,
+      "generation_seconds": 49.41000394523144
+    },
+    {
+      "global_step": 17,
+      "rollouts": 32,
+      "generated_tokens": 50184,
+      "generation_seconds": 46.458424454554915
+    },
+    {
+      "global_step": 18,
+      "rollouts": 32,
+      "generated_tokens": 56138,
+      "generation_seconds": 49.3949226308614
+    },
+    {
+      "global_step": 19,
+      "rollouts": 32,
+      "generated_tokens": 55329,
+      "generation_seconds": 49.066730784252286
+    }
+  ],
+  "train_seconds_including_diagnostic_hashing": 5495.6294742729515,
+  "allocated_parent_GPU_hours": 3.1444444444444444,
+  "checkpoint20_optimizer_scheduler_RNG_present": true,
+  "actual_resume_tested": false,
+  "downstream_SW20_effect_available": false,
+  "pilot_frozen_sha256": "39fcdb69f6898ecece9273a0c053c20d3d27bcfc6d6c2a790d7fa9a2c9788d95",
+  "scope": "Training completed, not efficacy. Actual640 student/teacher prompt sequence matchesfresh1.7B reference; cohort/trajectories remain4B independent. Normalexit andcheckpoint accepted beforeoneGPU evaluation."
+}

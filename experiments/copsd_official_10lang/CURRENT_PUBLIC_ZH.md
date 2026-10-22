@@ -559,3 +559,23 @@ server-v2父任务已exit0，旧训练／推理PID均退出。完整64题、两�
 这是同源原开发数学题，**不是GSM8K1319、MGSM250、PolyMath500或pass@12正式测试**。截断与提取失败也不是同一计数。SW20训练及其配对评测尚未完成，不据Base分数宣称OPD改善或比较模型规模效果。该Base保留复用，不重复测评或重复计费。
 
 [完整Base计数、逐题哈希、成本及TensorBoard验收](sw4b_server_Base_dev100_completed_20261022.PUBLIC.json)。
+
+
+## 17:26 SW4B20训练完成；17:38评测仍在四卡上限下等待
+
+SW4B20父任务正常exit0，实际20更新／640题次、1,076,264生成token；HF训练循环含诊断5495.63秒，两卡分配父任务94分20秒／3.144444 GPU小时。21次当前学生同步、冻结Base位级不变与640次student／teacher真实输入序列匹配均验收通过。checkpoint20的optimizer／scheduler步数20、RNG存在。该记录只证明训练完成，尚无训练后下游正确率。
+
+固定单卡SW／EN checkpoint20评测已手动启动队列、预检及训练验收通过。现本账号其他项目使用GPU3／4／5／6，达到AGENTS默认总计4张；GPU0／2物理空闲不构成使用第5卡授权。队列monitor在主机进程空间与systemd均确认存活、状态waiting，不取消或操作其他项目任务。一次默认沙箱PID查询不可见已由hostps核实，不当作失败或重启理由。四卡条件下队列继续等待；临时第5卡仅为已提出的可选用户授权，无回复不提高上限。
+
+等待期间完成Base现有输出的CPU GlotLID补充（无新生成／GPU计算）：SW思考区目标语高置信70／100，最终区22／100且62条缺少最终区；英语分别90／100、85／100且4条缺少最终区。严格保留全部100题分母，语言ID不是流利度、逐token纯度或数学质量。四条语言指标已写入并读回TensorBoard；数学原分数仍SW7、EN90。
+
+最终配对汇总器已补充实际640曝光／整组生成计时口径，避免将100步规划量或缓存microbatch的近零生成计时当真实吞吐。也说明micro1×GA32只匹配有效batch，与发布micro4×GA2在变长回答下未必有相同token权重；HF checkpoint不含server采样RNG，不宣称逐位恢复。未修改运行冻结配置或重测Base。
+
+[训练与checkpoint20完整完成证据](sw4b_server_pilot20_training_completed_20261022.PUBLIC.json) · [真实队列等待状态](sw4b_server_checkpoint_dev_waiting_20261022.PUBLIC.json) · [Base语言保持补充](sw4b_server_Base_language_20261022.PUBLIC.json)。研究三语言选择和顺序矩阵仍未开始，先取得本次真实配对效果。
+
+
+## 17:39 原等待队列已按四卡上限启动评测，无需第五卡
+
+其他本账号任务释放名额后，原monitor自动取得GPU2并于17:39:17启动预先冻结的checkpoint20 SW／EN评测，已观察到实际模型加载和生成。当前本次评测1卡＋其他项目3卡，仍按默认4卡限制；max_user_gpus始终为4，没有提高全局或本队列上限，也没有停止其他项目任务。此前可选第五卡问题已撤回为无需答复。17:38等待段落是历史快照，当前状态由本节启动凭证更新。
+
+[评测真实启动与四卡配置](sw4b_server_checkpoint_dev_started_20261022.PUBLIC.json)。尚无训练后完整SW／EN配对分数，不提前判断OPD收益。

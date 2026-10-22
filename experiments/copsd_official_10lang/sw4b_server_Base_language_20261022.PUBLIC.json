@@ -1,0 +1,120 @@
+{
+  "observed_at": "2026-10-22T17:35:10.125634",
+  "protocol": "SW4B_Base_originaldev100_language_supplement_v1",
+  "cases": {
+    "sw": {
+      "target_label": "__label__swh_Latn",
+      "language": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 87,
+            "__label__mkn_Latn": 1,
+            "__label__ktu_Latn": 2,
+            "__label__swc_Latn": 4,
+            "__label__kwn_Latn": 1,
+            "__label__kng_Latn": 1,
+            "__label__eng_Latn": 2,
+            "__label__kdc_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 70,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 6,
+            "__label__eng_Latn": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 38,
+            "no_final_section": 62
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 32,
+            "__label__nyf_Latn": 1,
+            "__label__swc_Latn": 5
+          },
+          "target_top1_probability_ge_0_8": 22,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 5,
+            "__label__swc_Latn": 2
+          }
+        }
+      },
+      "completion": {
+        "correct": 7,
+        "items": 100,
+        "accuracy": 0.07,
+        "normal_terminations": 37,
+        "truncated": 63,
+        "answer_extraction_failures": 62,
+        "generated_tokens": 570094,
+        "DONE_sha256": "f4cc876457d9b3a1fea7d5c896fd485a47c2d716d2526b85d8574759acec73dd",
+        "ITEMS_sha256": "4dd8e16c1899ae841e9c1e91735a74935956625fe523417da3e6b7c5ab9ea876"
+      },
+      "source_items_sha256": "4dd8e16c1899ae841e9c1e91735a74935956625fe523417da3e6b7c5ab9ea876",
+      "private_analysis_sha256": "15bee4b43b3f4184e824c41aae7ddcd51d4d959b4e3fe80b2e247b3fa26cb075"
+    },
+    "en": {
+      "target_label": "__label__eng_Latn",
+      "language": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 100
+          },
+          "target_top1_probability_ge_0_8": 90,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 90
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 96,
+            "no_final_section": 4
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 94,
+            "__label__sna_Latn": 1,
+            "__label__gom_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 85,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 88,
+            "__label__sna_Latn": 1,
+            "__label__gom_Latn": 1
+          }
+        }
+      },
+      "completion": {
+        "correct": 90,
+        "items": 100,
+        "accuracy": 0.9,
+        "normal_terminations": 93,
+        "truncated": 7,
+        "answer_extraction_failures": 4,
+        "generated_tokens": 425961,
+        "DONE_sha256": "db0ee83aebc8f8194f2800c5a98a2936bac1f76bbceb19b8e0b83484e80eb32f",
+        "ITEMS_sha256": "9f8972ec0bf50fca18f88122fcbfb0cedce2c2ab4bcea3f2b3ebf8a39b94cb28"
+      },
+      "source_items_sha256": "9f8972ec0bf50fca18f88122fcbfb0cedce2c2ab4bcea3f2b3ebf8a39b94cb28",
+      "private_analysis_sha256": "e61c42a2d03706b835977882246f1d88988d41d60aec2a42b1aa4071ded55f9f"
+    }
+  },
+  "GlotLID_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "detector_source_sha256": "ef24d056341b51d4ae7f4a0d01baaf143b081ad6ff60373159ab59388f5f51a7",
+  "highconf_threshold": 0.8,
+  "minimum_alphabetic_characters": 20,
+  "math_stripping": true,
+  "new_GPU_work": false,
+  "new_generations": 0,
+  "TensorBoard_four_language_series_read_back": true,
+  "scope": "Saved Base outputs only; not OPD benefit or calibrated fluency/per-token purity. All denominators100 include missing finals; GlotLID can confuse short/math-heavy texts or neighboring languages. Officialmathscores unchanged. Trainedmodel language/paired math evaluation pending."
+}

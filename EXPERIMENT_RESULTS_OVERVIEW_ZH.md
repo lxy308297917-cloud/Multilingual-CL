@@ -251,3 +251,7 @@ PLND 与 LAPE 不可彼此按目标综合直接排名。LAPE 在部分任务改�
 2026-10-22 16:18：SW4B先导checkpoint5及160次真实输入身份已核验；同4BBase的SW原开发100题为7/100。训练后配对分数未出，不据Base或中间checkpoint宣称收益，继续既定20更新。见[中间状态证据](experiments/copsd_official_10lang/sw4b_server_pilot20_checkpoint5_20261022.PUBLIC.json)。
 
 2026-10-22 16:25：匹配4BBase原开发100评测完整exit0，SW7／100、英语90／100；996,055生成token、0.560278分配GPU小时，TensorBoard读回通过。这不是正式测试，训练后配对仍待完成。见[Base完整证据](experiments/copsd_official_10lang/sw4b_server_Base_dev100_completed_20261022.PUBLIC.json)。
+
+2026-10-22 17:38：SW4B先导20更新／640题次已完整exit0，107.63万生成token、3.144444分配GPU小时，640实际输入与checkpoint验收通过。单卡SW／EN评测已预检并排队，因本账号其他项目占满四卡而等待；暂无训练后分数。Base输出语言CPU分析已完成。见[训练完成](experiments/copsd_official_10lang/sw4b_server_pilot20_training_completed_20261022.PUBLIC.json)与[等待凭证](experiments/copsd_official_10lang/sw4b_server_checkpoint_dev_waiting_20261022.PUBLIC.json)。
+
+2026-10-22 17:39更新：原checkpoint评测队列已在GPU2取得名额并开始真实生成，仍限制全账号最多四卡，无需第五卡例外；当前分数待完成。见[启动凭证](experiments/copsd_official_10lang/sw4b_server_checkpoint_dev_started_20261022.PUBLIC.json)。

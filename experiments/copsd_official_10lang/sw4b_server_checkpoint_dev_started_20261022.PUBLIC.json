@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-10-22T17:42:39.465773",
+  "phase_snapshot": "running",
+  "monitor_pid": 382898,
+  "job_pid": 389060,
+  "started_at": "2026-10-22 17:39:17",
+  "GPU_indices": [
+    2
+  ],
+  "max_account_GPUs": 4,
+  "temporary_fifth_GPU_authorization_used": false,
+  "script_sha256": "1e1532bf2d6293643c847f875e879af148a5c5aac0e2f872ef6d041201007b7c",
+  "training_checkpoint20_accepted": true,
+  "actual_inference_generation_observed": true,
+  "scope": "Same existingqueue acquiredGPU2 afteranother owned taskended; not restarted. SW/EN checkpoint20 generation ongoing, nofinalpaired effect yet. Optional fifthcard question no longerneeded."
+}

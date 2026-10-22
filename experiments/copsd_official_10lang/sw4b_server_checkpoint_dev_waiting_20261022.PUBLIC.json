@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-10-22T17:37:51",
+  "phase_snapshot": "waiting",
+  "queue": "copsd-sw4b-server-checkpoint-dev-v1",
+  "live_monitor_pid": 382898,
+  "host_systemd_and_ps_verified": true,
+  "target_GPU_count": 1,
+  "max_account_GPUs": 4,
+  "other_owned_GPU_indices_at_wait_snapshot": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "superseded_by_running_at": "2026-10-22 17:39:17",
+  "scope": "Historical hostverified wait snapshot. Otherproject occupancy later fell to3 andtheexistingqueue launchednormally. No fifthGPU authorization used; sandboxPID lookup miss was notqueuefailure."
+}

@@ -83,6 +83,10 @@ def main():
         for values in conditions.values():del values['_rows']
         cases[language]={'conditions':conditions,'paired_gains':gains,'paired_losses':losses,
             'delta_correct':len(gains)-len(losses)}
+    groups=proof['batch_generation']
+    assert sum(r['rollouts'] for r in groups)==640 and len(groups)==20
+    generated=sum(r['generated_tokens'] for r in groups)
+    generation_seconds=sum(r['generation_seconds'] for r in groups)
     screen=cases['sw']['delta_correct']>0 and cases['en']['delta_correct']>=0
     from torch.utils.tensorboard import SummaryWriter
     from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
@@ -97,9 +101,15 @@ def main():
         for condition in ['Base','SW20']:assert acc.Scalars(lang+'/'+condition+'_accuracy')[-1].value==torch.tensor(cases[lang]['conditions'][condition]['accuracy'],dtype=torch.float32).item()
     result={'protocol':f['protocol'],'completed_at':datetime.datetime.now().isoformat(),'model_revision':f['model_revision'],
         'summarizer_sha256':sha(Path(__file__)),'pilot_frozen_sha256':sha(freeze),'checkpoint20_adapter_sha256':sha(cp/'adapter_model.safetensors'),
-        'training_completed':True,'updates':20,'exposures':640,'training_cost':proof['cost'],'training_generation':proof['batch_generation'],
+        'training_completed':True,'updates':20,'exposures':640,
+        'actual_training_prompts_per_second':640/proof['train_seconds_including_diagnostic_hashing'],
+        'actual_rollout_generated_tokens':generated,'actual_rollout_generation_seconds':generation_seconds,
+        'actual_rollout_tokens_per_generation_second':generated/generation_seconds,
+        'timing_scope':'Use640 actualexposures, not Trainers100-step plannednum_samples under earlystop. Use32-prompt SERVER_BATCH_GENERATION timings, not nearzero cachedper-microbatch generationprints. Forward CUDA timers exclude rollout,KL,backward,sync,hashing,saving.','training_cost':proof['cost'],'training_generation':proof['batch_generation'],
         'frozen_Base_bitwise_unchanged':True,'actual_inputs_match_fresh1_7B_reference':matched_inputs,
         'matched_input_caveat':'Matching prompts/exposure does not equate modelsize, generation trajectory or numerical backend. Cohorts remain separate.',
+        'batching_caveat':'Micro1xGA32 matches effectivebatch32, not per-microbatch tokenweighting or bitwisegradients of released4GPUxmicro4xGA2 with variable response lengths. Officialmasked loss function retained; not strict paperhardware reproduction.',
+        'resume_caveat':'HFTrainer optimizer/scheduler/RNG saved; actual dedicated-server checkpoint resume not tested and server sampling RNG is not included in HFcheckpoint. No bitwise stochastic continuation claim.',
         'development':cases,'screen_target_improves_English_not_lower':screen,
         'selection_limit':'Exploratory originaldev100 singletrainingseed only; no independent followup200 or seed confirmation, no3-language selection.',
         'output_language_review_completed':False,'formal_test_rerun':False,'unique_parent_costs':parents,
