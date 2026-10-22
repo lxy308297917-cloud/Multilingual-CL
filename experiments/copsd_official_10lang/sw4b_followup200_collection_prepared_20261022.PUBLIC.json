@@ -1,0 +1,17 @@
+{
+  "prepared_at": "2026-10-22T20:07:55.177186",
+  "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+  "collector_sha256": "174f9b2e5d6d108fdfc4183160bdea55994e97300487e2be4591dddfc2a44d7d",
+  "compile_check_passed": true,
+  "functional_acceptance_pending_completed_outputs": true,
+  "inference_configuration_unchanged": true,
+  "uncertainty_method": {
+    "resampling_unit": "paired questionID,200 fixed questions",
+    "replicates": 10000,
+    "seed": 20261022,
+    "interval": "percentiles2.5/97.5 ofsingle fixedmodelpairdelta percentagepoints",
+    "limitations": "Question uncertainty only; not trainingseed population or multiplecomparison adjusted. Doesnot establish stable3-language eligibility."
+  },
+  "output_gate": "Both liveparents mustfinish exit0; verify4cases/800items andsameprompts/seeds/inputs/adapter/protocol, countparentcost once.",
+  "automatic_followup": "CPU-only languageanalysis ofthefour completedcases. No newtraining,modelselection,promptgrid orGPUrestart."
+}
