@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "first2_preupdate_main_CE_and_full196_clipnorm_bitwise_equal_across_all3": true,
+  "why2": "Update1LR0 leaves allweightsBase; update2 starts sameweights, then support-specific writes differ. All candidates share gradient/clip definition.",
+  "records": {
+    "S-All": [
+      {
+        "step": 1,
+        "lr": 0.0,
+        "main_CE": 3.8451496362686157,
+        "full_candidate_preclip_norm": 35.5,
+        "counts": {
+          "main_input": 259,
+          "main_supervised": 112,
+          "main_padded_processed": 259,
+          "aux_input": 0,
+          "aux_supervised": 0,
+          "generated_tokens": 0
+        }
+      },
+      {
+        "step": 2,
+        "lr": 2.354048964218456e-08,
+        "main_CE": 3.4412660598754883,
+        "full_candidate_preclip_norm": 25.375,
+        "counts": {
+          "main_input": 881,
+          "main_supervised": 606,
+          "main_padded_processed": 881,
+          "aux_input": 0,
+          "aux_supervised": 0,
+          "generated_tokens": 0
+        }
+      }
+    ],
+    "S-Attn": [
+      {
+        "step": 1,
+        "lr": 0.0,
+        "main_CE": 3.8451496362686157,
+        "full_candidate_preclip_norm": 35.5,
+        "counts": {
+          "main_input": 259,
+          "main_supervised": 112,
+          "main_padded_processed": 259,
+          "aux_input": 0,
+          "aux_supervised": 0,
+          "generated_tokens": 0
+        }
+      },
+      {
+        "step": 2,
+        "lr": 2.354048964218456e-08,
+        "main_CE": 3.4412660598754883,
+        "full_candidate_preclip_norm": 25.375,
+        "counts": {
+          "main_input": 881,
+          "main_supervised": 606,
+          "main_padded_processed": 881,
+          "aux_input": 0,
+          "aux_supervised": 0,
+          "generated_tokens": 0
+        }
+      }
+    ],
+    "S-MLP": [
+      {
+        "step": 1,
+        "lr": 0.0,
+        "main_CE": 3.8451496362686157,
+        "full_candidate_preclip_norm": 35.5,
+        "counts": {
+          "main_input": 259,
+          "main_supervised": 112,
+          "main_padded_processed": 259,
+          "aux_input": 0,
+          "aux_supervised": 0,
+          "generated_tokens": 0
+        }
+      },
+      {
+        "step": 2,
+        "lr": 2.354048964218456e-08,
+        "main_CE": 3.4412660598754883,
+        "full_candidate_preclip_norm": 25.375,
+        "counts": {
+          "main_input": 881,
+          "main_supervised": 606,
+          "main_padded_processed": 881,
+          "aux_input": 0,
+          "aux_supervised": 0,
+          "generated_tokens": 0
+        }
+      }
+    ]
+  }
+}

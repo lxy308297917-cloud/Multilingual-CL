@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "checks": {
+    "2146": {
+      "receipt_sha256": "bfece7807ad4be8dd8b8c6b64d7710404d4a7e2122a01f1dcae5165811402c57",
+      "model_sha256": "14df71e8b711d154b32c1dcb7f3291e3d3a269d52d8fcd7867e49aec60fad3ac",
+      "state_sha256": "7a7a4e3ab3975f8ed803a9d1816c2625f7cb5e5f8a1686f37d43448f898e47ff",
+      "all338_moments_dtype_step_verified": true
+    },
+    "4293": {
+      "receipt_sha256": "79f6066afa72401f8a30b2529fb2a9c45ce06a9cf60d6ea7d94aa3f642ad6361",
+      "model_sha256": "9e79d098d52d7da3a8b466438ef35c58404a1698781e3446de833014f0d96521",
+      "state_sha256": "e074938fd02fc847e52f473e6f06b50109438381cb3204955c4d1419ebc414e2",
+      "all338_moments_dtype_step_verified": true
+    }
+  },
+  "all4293_LR_main_aux_input_supervised_padded_counts_identical_to_D0": true,
+  "fixed_alpha": 21.79455955895524,
+  "rows_generated": 512,
+  "rows_scored": 511,
+  "counts": {
+    "main_input": 1536351,
+    "main_supervised": 599469,
+    "aux_input": 290693,
+    "aux_supervised": 0,
+    "aux_pairs": 8584,
+    "aux_padded_processed": 420168
+  },
+  "raw_predictions_sha256": "955f40865ec082c71ac192afc726d32a832123bff971ffc8d8ef42b35b196ff9",
+  "model_sha256": "9e79d098d52d7da3a8b466438ef35c58404a1698781e3446de833014f0d96521",
+  "training_done_sha256": "a60f49b34f9dd40dd05a2896cf1567b605c17822ae7a234dcb6b264889b1de80",
+  "source_code_sha256": "cf52867c31f7bed6049e18abd4322860ca8f165d4a49265a76d0241978d3a94c",
+  "server_raw_artifacts_checked": true,
+  "not_full_historical_retraining": true,
+  "CPU_verification_seconds": 112.07553195953369
+}

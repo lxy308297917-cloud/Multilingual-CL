@@ -23,9 +23,9 @@ def downstream():
   result['models'][name]={}
   for task in ('sw_reading','en_reading','en_to_sw','sw_to_en','en_instruction'):
    rs=[r for r in rr if r['task']==task];assert len(rs)=={'sw_reading':64,'en_reading':63,'en_to_sw':128,'sw_to_en':128,'en_instruction':128}[task]
-   field={'sw_reading':'content_f1','en_reading':'content_correct','en_instruction':'prompt_strict'}.get(task);metric=corpus_score([r['scores']['chrfpp_stats'] for r in rs]) if field is None else 100*np.mean([r['scores'][field] for r in rs]);record={'score':float(metric),'n':len(rs),'source_groups':len(set(r['group_id'] for r in rs)),'metric':'corpus_chrF++' if field is None else field,'capped':sum(r['capped'] for r in rs),'generated_tokens':sum(r['generated_tokens'] for r in rs),'mean_repeat_4gram_fraction':float(np.mean([r['behavior']['repeated_4gram_fraction'] for r in rs])),'languages':dict(collections.Counter(r['language_diagnostic'] for r in rs))}
+   field={'sw_reading':'content_f1','en_reading':'content_correct','en_instruction':'prompt_strict'}.get(task);metric=corpus_score([r['scores']['chrfpp_stats'] for r in rs]) if field is None else 100*np.mean([r['scores'][field] for r in rs]);record={'score':float(metric),'n':len(rs),'source_groups':len(set(r['group_id'] for r in rs)),'metric':'corpus_chrF++' if field is None else field,'capped':sum(r['capped'] for r in rs),'generated_tokens':sum(r['generated_tokens'] for r in rs),'mean_repeat_4gram_fraction':float(np.mean([r['behavior']['repeated_4gram_fraction'] for r in rs])),'languages':dict(collections.Counter(r['language_diagnostic'] for r in rs)),'score_status_counts':dict(collections.Counter(r['scores'].get('status','strict_or_translation') for r in rs))}
    if task=='en_reading':record['format_strict']=100*np.mean([r['scores']['format_correct'] for r in rs])
-   result['models'][name][task]=record;flat.append({'model':name,'task':task,**{k:v for k,v in record.items() if k!='languages'}})
+   result['models'][name][task]=record;flat.append({'model':name,'task':task,**{k:v for k,v in record.items() if k not in ('languages','score_status_counts')}})
  for control in ('B','D0'):
   result['comparisons']['D1-minus-'+control]={}
   for task in ('sw_reading','en_reading','en_to_sw','sw_to_en','en_instruction'):

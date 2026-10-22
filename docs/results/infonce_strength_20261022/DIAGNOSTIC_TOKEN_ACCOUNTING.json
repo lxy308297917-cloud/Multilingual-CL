@@ -1,0 +1,24 @@
+{
+  "copied_state_numeric": {
+    "main_input": 1960,
+    "main_supervised": 780,
+    "CE_aux_input": 3254,
+    "CE_aux_supervised": 891,
+    "NCE_aux_input": 1092,
+    "NCE_pair_forwards": 32,
+    "CE_pair_forwards": 16
+  },
+  "D1_serialized_smokes": {
+    "physical_updates": 16,
+    "main_input": 64592,
+    "main_supervised": 7680,
+    "scientific_optimizer_carryover": false
+  },
+  "module3group_technical": {
+    "physical_updates": 28,
+    "main_input": 113036,
+    "main_supervised": 13440,
+    "scientific_optimizer_carryover": false
+  },
+  "counting_basis": "Actual declared code path: numeric2batches×4 mainbackward; D0/D1 two InfoNCE calls and1CE perbatch; D1smokes4+8+4; modules S-All8+4replay,Attn8,MLP8. Each invocation charged, restored logicalcounts are not used as physicaltotal."
+}

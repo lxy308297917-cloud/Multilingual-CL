@@ -1,0 +1,42 @@
+{
+  "posthoc_behavior_only_not_new_ranking": true,
+  "language_detector_not_accuracy": true,
+  "ENtoSW": {
+    "S-All": {
+      "languages": {
+        "en": 127,
+        "sw": 1
+      },
+      "capped": 0,
+      "mean_repeat_4gram_fraction": 0.0
+    },
+    "S-Attn": {
+      "languages": {
+        "sw": 121,
+        "en": 6,
+        "sk": 1
+      },
+      "capped": 6,
+      "mean_repeat_4gram_fraction": 0.0399865794521877
+    },
+    "S-MLP": {
+      "languages": {
+        "en": 124,
+        "sw": 4
+      },
+      "capped": 0,
+      "mean_repeat_4gram_fraction": 0.0
+    }
+  },
+  "case_selection": "First2 frozen-order outputs with All detected English and Attn detected Swahili; assistant inspection, not independent native gold",
+  "case_ids": [
+    "flores200:dev:580:en_to_sw",
+    "flores200:dev:791:en_to_sw"
+  ],
+  "findings": [
+    "Both inspected All/MLP outputs retain English sentences despite requested Swahili translation",
+    "Attention output switches language but first case repeats heavily to cap and wording does not establish a correct semantic translation",
+    "Higher target-language detection rate must not be reported as translation accuracy"
+  ],
+  "raw_cases_private_path": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/module_budget_sparse_v1/QUALITATIVE_CASES.json"
+}

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "models": [
+    "Base",
+    "B",
+    "D0"
+  ],
+  "answers": 1536,
+  "all_prompt_lengths_match_frozen_templates_and_tokenizer": true,
+  "all_raw_tokens_decode_to_saved_text": true,
+  "all_generated_counts_match_raw_token_ids": true,
+  "data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "code_sha256": "dfea3231d28951eb4c0edd4691db771b156950d47c967f2f500154cacfad569f"
+}

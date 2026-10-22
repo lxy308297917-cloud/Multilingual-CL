@@ -7,10 +7,12 @@ from transformers import AutoTokenizer,AutoModelForCausalLM
 def main():
  started=time.time();meta,rr=inputs();out=RUN/'evaluation/D1';out.mkdir(parents=True,exist_ok=False);done=json.loads((NEWTRAIN/'D1_seed42/TRAINING_DONE.json').read_text());assert done['steps']==4293 and done['counts']['main_input']==1536351;modelpath=pathlib.Path(done['final_model']);cp=modelpath.parent;receipt=json.loads((cp/'RECOVERABLE.json').read_text());assert sha(modelpath/'model.safetensors')==receipt['files']['model/model.safetensors']
  seed();tok=AutoTokenizer.from_pretrained(BASE,local_files_only=True);model=AutoModelForCausalLM.from_pretrained(modelpath,local_files_only=True,torch_dtype=torch.bfloat16,attn_implementation='sdpa').cuda().eval();eos=model.generation_config.eos_token_id;eos=set(eos if isinstance(eos,list) else [eos]);physical=[];counts={'prompt_tokens':0,'generated_tokens':0};completed=0
- write(out/'CONFIG.json',{'model_sha256':sha(modelpath/'model.safetensors'),'model':str(modelpath),'data_sha256':meta['data_sha256'],'code_sha256':sha(__file__),'scorer_hashes':{p:sha(REPORT/'code'/p) for p in ('reading_scoring.py','aux_scoring.py')},'generation_config':model.generation_config.to_dict(),'torch_version':torch.__version__,'gpu_uuid':os.environ['CUDA_VISIBLE_DEVICES'],'batch':4,'caps':meta['caps'],'protocol_sha256':sha(REPORT/'PROTOCOL_FROZEN.json')})
+ write(out/'CONFIG.json',{'model_sha256':sha(modelpath/'model.safetensors'),'model':str(modelpath),'data_sha256':meta['data_sha256'],'code_sha256':sha(__file__),'scorer_hashes':{p:sha(REPORT/'code'/p) for p in ('reading_scoring.py','aux_scoring.py')},'generation_config':model.generation_config.to_dict(),'torch_version':torch.__version__,'gpu_uuid':os.environ['CUDA_VISIBLE_DEVICES'],'batch':4,'execution_flags_per_partition':{'reading':'deterministic_algorithmsFalse/cudnn_deterministicFalse, same v2worker','translation_instruction':'deterministic_algorithmsTrue/cudnn_deterministicTrue, same originalseed','all':'TF32off, CUBLAS_WORKSPACE_CONFIG=:4096:8, benchmarkFalse'},'caps':meta['caps'],'protocol_sha256':sha(REPORT/'PROTOCOL_FROZEN.json')})
  try:
   with (out/'PREDICTIONS.jsonl').open('w') as stream,torch.inference_mode():
    for partition in ('sw_reading','en_reading','translation','en_instruction'):
+    # Match the cached reading-v2 worker (default nondeterministic flag) and original other-task seed() flags.
+    torch.use_deterministic_algorithms(partition in ('translation','en_instruction'));torch.backends.cudnn.deterministic=partition in ('translation','en_instruction')
     rows_here=[r for r in rr if r['study_partition']==partition];cap=meta['caps'][partition]
     for begin in range(0,len(rows_here),4):
      check_compute();assert time.time()-started<5400

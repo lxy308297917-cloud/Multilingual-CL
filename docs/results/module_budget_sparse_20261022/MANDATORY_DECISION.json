@@ -1,0 +1,18 @@
+{
+  "gates": {
+    "ENtoSW_learning_close": true,
+    "SWtoEN_learning_close": false,
+    "SWreading_learning_close": true,
+    "ENreading_retention_better": false,
+    "ENinstruction_noninferior": true
+  },
+  "passed_task_screen": false,
+  "Attn_to_All_displacement_ratios": {
+    "cumulative_path_length": 0.7714321350738494,
+    "final_base_displacement_L2": 0.8406490302878303
+  },
+  "displacement_confound_flag": true,
+  "decision": "No evidence meeting predeclared Attention-first screen; stop expansion and report negatives/uncertainty",
+  "all3_K_LR_maincounts_mask_refreshes_match": true,
+  "interpretation": "CI failure can be uncertainty, not proof of damage/equivalence. Single seed, development proxies only; weights/SFTrecipe differ from historical D2 and dense alignment track."
+}

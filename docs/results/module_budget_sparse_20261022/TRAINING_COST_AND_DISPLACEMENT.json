@@ -1,0 +1,196 @@
+{
+  "S-All": {
+    "training": {
+      "group": "S-All",
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "main_padded_processed": 1536351,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "generated_tokens": 0
+      },
+      "K": 77070336,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/module_budget_sparse_20261022/S-All/checkpoint_004293/model",
+      "final_model_sha256": "1c9fc3f27b1e67217f5b4fa7f5f981188c1a5740b6b63983d2f2709fb73875c1",
+      "protocol_sha256": "fad77173f0836448b622ce82823fbc03a22bc3523514249850eb868df5bda2c2",
+      "elapsed_seconds": 5169.458645820618,
+      "gpu_hours": 1.4359607362084919,
+      "this_execution_gpu_hours": 1.4359607365396287,
+      "peak_allocated_bytes": 18536879616,
+      "peak_reserved_bytes": 24704450560,
+      "physical_peak_mib_observed": 23465,
+      "cumulative_path_length": 276.602148540176,
+      "cumulative_nonzero_write_events": 38851396390,
+      "module_path_length": {
+        "Attention": 95.57410778153222,
+        "MLP": 259.49992805339895
+      },
+      "final_base_delta_L2": 15.911109536695422,
+      "final_modules": {
+        "Attention": {
+          "final_base_delta_sq": 29.301680881530046,
+          "final_changed_coordinates": 43896461,
+          "mask_union": 93249755,
+          "eligible_elements": 154140672,
+          "final_base_delta_L2": 5.4131027037670405
+        },
+        "MLP": {
+          "final_base_delta_sq": 223.86172580718994,
+          "final_changed_coordinates": 392403872,
+          "mask_union": 897265763,
+          "eligible_elements": 1156055040,
+          "final_base_delta_L2": 14.962009417427526
+        }
+      },
+      "frozen_positions_unchanged": true,
+      "mask_union_note": "Union of selected masks including LR0; not a count of unique coordinates actually written. Final changed-from-Base count is reported separately.",
+      "moments": "FP32 exact full eligible matrix states; excluded matrices have no state",
+      "zero_auxiliary": true
+    },
+    "evaluation": {
+      "rows": 512,
+      "scored_rows": 511,
+      "reused": false,
+      "model_sha256": "1c9fc3f27b1e67217f5b4fa7f5f981188c1a5740b6b63983d2f2709fb73875c1",
+      "data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+      "counts": {
+        "prompt_tokens": 141278,
+        "generated_tokens": 59375
+      },
+      "wall_seconds": 1595.0572645664215,
+      "gpu_hours": 0.44307146277692583,
+      "peak_allocated_bytes": 18536879616,
+      "physical_peak_mib_observed": 4409,
+      "predictions_sha256": "abe2ee61401df4060960df7962f58f61983152effe7a4a6c0c59a7d00cc0325e",
+      "not_formal_test": true
+    },
+    "midpoint_receipt_sha256": "6d052a123677f8a65e1776778b1c1cbff581b44dd196293cc87a204137784cc9",
+    "endpoint_receipt_sha256": "810d0c22ef165e9fe57ca16d2cb466b5b46b6e1e5ee05d0c7d81c1682d48ac74"
+  },
+  "S-Attn": {
+    "training": {
+      "group": "S-Attn",
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "main_padded_processed": 1536351,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "generated_tokens": 0
+      },
+      "K": 77070336,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/module_budget_sparse_20261022/S-Attn/checkpoint_004293/model",
+      "final_model_sha256": "56b68ea0c0dd48578aa89502dae58b39a11f6f687f0ea124ecc1f2acb6ce7219",
+      "protocol_sha256": "fad77173f0836448b622ce82823fbc03a22bc3523514249850eb868df5bda2c2",
+      "elapsed_seconds": 3673.1277594566345,
+      "gpu_hours": 1.020313266913096,
+      "this_execution_gpu_hours": 1.0203132671780057,
+      "peak_allocated_bytes": 9318923776,
+      "peak_reserved_bytes": 19979567104,
+      "physical_peak_mib_observed": 19441,
+      "cumulative_path_length": 213.37978601436203,
+      "cumulative_nonzero_write_events": 32744528840,
+      "module_path_length": {
+        "Attention": 213.37978601436203
+      },
+      "final_base_delta_L2": 13.375658802826456,
+      "final_modules": {
+        "Attention": {
+          "final_base_delta_sq": 178.90824840962887,
+          "final_changed_coordinates": 75826520,
+          "mask_union": 153275924,
+          "eligible_elements": 154140672,
+          "final_base_delta_L2": 13.375658802826456
+        }
+      },
+      "frozen_positions_unchanged": true,
+      "mask_union_note": "Union of selected masks including LR0; not a count of unique coordinates actually written. Final changed-from-Base count is reported separately.",
+      "moments": "FP32 exact full eligible matrix states; excluded matrices have no state",
+      "zero_auxiliary": true
+    },
+    "evaluation": {
+      "rows": 512,
+      "scored_rows": 511,
+      "reused": false,
+      "model_sha256": "56b68ea0c0dd48578aa89502dae58b39a11f6f687f0ea124ecc1f2acb6ce7219",
+      "data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+      "counts": {
+        "prompt_tokens": 141278,
+        "generated_tokens": 73768
+      },
+      "wall_seconds": 1793.0314500331879,
+      "gpu_hours": 0.49806429194079505,
+      "peak_allocated_bytes": 9318923776,
+      "physical_peak_mib_observed": 4409,
+      "predictions_sha256": "612df53239610f112d7789363373d346fa0e8434246343f23688fa145ae0a614",
+      "not_formal_test": true
+    },
+    "midpoint_receipt_sha256": "740b6b9f07578ac8f2545e0b5734baa7ddb64071b69bd0c7e351c4d5da3eb4d0",
+    "endpoint_receipt_sha256": "dbc42712f457e78698dc145df31c9fbbb028369303b4dfd0115960d901b43c57"
+  },
+  "S-MLP": {
+    "training": {
+      "group": "S-MLP",
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "main_padded_processed": 1536351,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "generated_tokens": 0
+      },
+      "K": 77070336,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/module_budget_sparse_20261022/S-MLP/checkpoint_004293/model",
+      "final_model_sha256": "3eac67c376b93f7c533e0f5bdb90dedc9696726040a3d6753291b4de2e5dc64e",
+      "protocol_sha256": "fad77173f0836448b622ce82823fbc03a22bc3523514249850eb868df5bda2c2",
+      "elapsed_seconds": 4559.656870126724,
+      "gpu_hours": 1.2665713540712993,
+      "this_execution_gpu_hours": 1.2665713543362087,
+      "peak_allocated_bytes": 17271970304,
+      "peak_reserved_bytes": 24700256256,
+      "physical_peak_mib_observed": 23297,
+      "cumulative_path_length": 270.16839691414344,
+      "cumulative_nonzero_write_events": 37206634254,
+      "module_path_length": {
+        "MLP": 270.16839691414344
+      },
+      "final_base_delta_L2": 15.637090781000849,
+      "final_modules": {
+        "MLP": {
+          "final_base_delta_sq": 244.51860809326172,
+          "final_changed_coordinates": 405976807,
+          "mask_union": 932675057,
+          "eligible_elements": 1156055040,
+          "final_base_delta_L2": 15.637090781000849
+        }
+      },
+      "frozen_positions_unchanged": true,
+      "mask_union_note": "Union of selected masks including LR0; not a count of unique coordinates actually written. Final changed-from-Base count is reported separately.",
+      "moments": "FP32 exact full eligible matrix states; excluded matrices have no state",
+      "zero_auxiliary": true
+    },
+    "evaluation": {
+      "rows": 512,
+      "scored_rows": 511,
+      "reused": false,
+      "model_sha256": "3eac67c376b93f7c533e0f5bdb90dedc9696726040a3d6753291b4de2e5dc64e",
+      "data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+      "counts": {
+        "prompt_tokens": 141278,
+        "generated_tokens": 69809
+      },
+      "wall_seconds": 1523.342022895813,
+      "gpu_hours": 0.42315056218041314,
+      "peak_allocated_bytes": 17271970304,
+      "physical_peak_mib_observed": 4409,
+      "predictions_sha256": "ad5aa1106c809af3471bc71d6c8dbfd1b669dc5b2ed07725fe01590a6ccf3baf",
+      "not_formal_test": true
+    },
+    "midpoint_receipt_sha256": "624504f9c9bd600e3ff49449e23d651cf0671371f40952fa3db95e688154f2d2",
+    "endpoint_receipt_sha256": "0a101dadbd5323ecaa419834ced9a0acee5abaee7b18f85b101221ae629b0380"
+  }
+}

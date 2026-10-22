@@ -1,0 +1,10 @@
+{
+  "python": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+  "executable": "/data0/users/lixiaoyang/ssu-migration/envs/cl/bin/python",
+  "torch": "2.5.1+cu121",
+  "cuda_build": "12.1",
+  "transformers": "4.57.6",
+  "numpy": "1.26.4",
+  "sacrebleu": "2.6.0",
+  "platform": "Linux-5.15.0-70-generic-x86_64-with-glibc2.31"
+}

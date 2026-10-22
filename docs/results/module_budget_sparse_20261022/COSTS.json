@@ -1,0 +1,40 @@
+{
+  "phase_GPUh": 5.138996315730943,
+  "worker_context_wall_GPUh": 5.142083401812448,
+  "workers": [
+    {
+      "pid": 338085,
+      "gpu_uuid": "GPU-4d65516e-eaa6-0d50-ff59-a1c8d4a75df8",
+      "started_unix": 1792657495.8097608,
+      "finished_unix": 1792664263.4900491,
+      "context_wall_GPUh": 1.8799111911985609
+    },
+    {
+      "pid": 339547,
+      "gpu_uuid": "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a",
+      "started_unix": 1792657622.539831,
+      "finished_unix": 1792663091.7314503,
+      "context_wall_GPUh": 1.519219894276725
+    },
+    {
+      "pid": 346239,
+      "gpu_uuid": "GPU-10d77dc6-6bae-bd47-adb1-7450ce012b52",
+      "started_unix": 1792658302.830035,
+      "finished_unix": 1792664388.8590539,
+      "context_wall_GPUh": 1.6905636163552602
+    },
+    {
+      "pid": 335793,
+      "gpu_uuid": "GPU-4d65516e-eaa6-0d50-ff59-a1c8d4a75df8",
+      "started_unix": 1792657225.505106,
+      "finished_unix": 1792657414.104426,
+      "context_wall_GPUh": 0.052388699981901383
+    }
+  ],
+  "technical_GPUh": 0.051864641639921404,
+  "ceiling_GPUh": 17.5,
+  "within_budget": true,
+  "checkpoint_tree_bytes": 61772594443,
+  "checkpoint_disk_ceiling_decimal_GB": 75,
+  "no_formal_tests_or_extra_variants": true
+}

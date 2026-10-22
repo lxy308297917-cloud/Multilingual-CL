@@ -1,0 +1,38 @@
+{
+  "branch": "research/infonce-strength-20261022",
+  "commit": "71bdf5edcdad5968e17a5a13936e8c84c193a510",
+  "tree": "67807b2a6c7a4b9c8e5236b93c1951269e1b977b",
+  "parent": "2f0ec1c42d2416bbdbb296790748a03a96e3f876",
+  "safe_data_free_public_history": true,
+  "text_entries": 50,
+  "image_entries": 2,
+  "verified_entry_url": "https://github.com/lxy308297917-cloud/Multilingual-CL/blob/71bdf5edcdad5968e17a5a13936e8c84c193a510/INFONCE_STRENGTH_PROGRESS_20261022_ZH.md",
+  "verified_files": [
+    {
+      "path": "docs/results/infonce_strength_20261022/README_ZH.md",
+      "sha": "460d648ba10768b885b82a89e086934071257a53",
+      "exact_UTF8_content_match": true
+    },
+    {
+      "path": "docs/results/infonce_strength_20261022/PROTOCOL_FROZEN.json",
+      "sha": "3a6bc64d250cd9bcb19ad5b4932d2cb7c0f95f88",
+      "exact_UTF8_content_match": true
+    },
+    {
+      "path": "docs/results/infonce_strength_20261022/REQUIREMENTS_AUDIT.json",
+      "sha": "83a27c191b6df1da3eb14151def4348c24393fdb",
+      "exact_UTF8_content_match": true
+    },
+    {
+      "path": "docs/results/infonce_strength_20261022/code/train_d1.py",
+      "sha": "c5facb9d2fd02bc4463cbf6d00e8b4b02837c171",
+      "exact_UTF8_content_match": true
+    }
+  ],
+  "image_blobs": {
+    "DOWNSTREAM_DIFFERENCES": "cbf651cb548ef5367887e85b8003bd64ac7570aa",
+    "REPRESENTATION_ENDPOINT": "442592fe1c7541954709ba63d2244abc4cc07429"
+  },
+  "status": "Full4293 D1 + frozen downstream and independent1000pair endpoint complete; STOP fixed prototype according to frozen gates",
+  "published_UTC": "2026-10-22 09:42:34 UTC"
+}
