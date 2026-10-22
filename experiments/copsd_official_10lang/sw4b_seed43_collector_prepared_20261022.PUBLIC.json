@@ -1,0 +1,10 @@
+{
+  "prepared_at": "2026-10-22T23:02:31.594730",
+  "collector_sha256": "76b13c31c751ddea9dc53f325f8b00b5daa5c3ab755611453b9f2b8b2bd57faa",
+  "compile_check_passed": true,
+  "functional_acceptance_pending_real_seed43_checkpoint_and_outputs": true,
+  "reuse_cached_Base_and_seed42_without_new_GPU_cost": true,
+  "comparison_protocol": "Same4B revision, native16, originalSW/EN prompts, same200IDs/answers/evalquestionseed42; declared release/manifest/outputmetadata adapterdiffs only. Actualpair fields andsourcehashes verified after completion.",
+  "statistics": "Reportbothfixedtrainingseeds. Equalweightfixedtwo-modelmean questionbootstrap10000 resamples,seed20261022; not trainingseedpopulation confidence orcheckpointselection.",
+  "scope": "Preparation only. Seed43 trainingnotcompleted andevaluationnotstarted at preparation; no positive resultclaim."
+}
