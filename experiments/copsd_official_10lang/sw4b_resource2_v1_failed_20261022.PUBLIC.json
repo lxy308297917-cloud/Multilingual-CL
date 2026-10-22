@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-22T14:29:31.808266",
+  "queue": "copsd-sw4b-resource2-v1",
+  "phase": "failed",
+  "exit_code": 139,
+  "job_pid": 273998,
+  "frozen_sha256": "1cc7e6a30a822bce093c241a92d1d241b382cb7f2d64b5ae431ed2ca308a5a6a",
+  "log_sha256": "b82c419b753ef9a84416986f68f07d598a7015395364a42c0edbd793eb265d6d",
+  "root_cause": "New resource observer accessed trainer._update_batch inside innerTrainer initialization before outer batched-rollout initializer installed it. AttributeError before on_train_begin or optimizer updates. Subsequent segmentationfault occurred on exceptional teardown; not an observed OOM.",
+  "training_updates": 0,
+  "model_and_vllm4B_initialization_completed_before_observer_error": true,
+  "failed_files_preserved": true,
+  "recovery": "Install raw_generate observer in callback.on_train_begin after fullTrainer initialization. Newv2 entry/wrapper/freeze/queue/output/telemetry; same model,64 stressinputs,2048 cap,AdamW,LR,loss,memory fraction. No algorithm change or old-directory overwrite."
+}

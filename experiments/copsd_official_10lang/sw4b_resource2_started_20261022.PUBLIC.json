@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-22T14:27:38.623517",
+  "actual_wrapper_CPU_preflight_passed": true,
+  "queue": "copsd-sw4b-resource2-v1",
+  "phase": "failed",
+  "monitor_pid": 273972,
+  "job_pid": 273998,
+  "gpu_uuids": [
+    "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+  ],
+  "max_user_gpus": 4,
+  "model_scale": "4B",
+  "cohort_independent_from1_7B": true,
+  "future640_max_student_prompt_tokens": 501,
+  "future640_max_teacher_prompt_tokens": 2429,
+  "both_longest_cases_in64_engineering_rows": true,
+  "generation_cap": 2048,
+  "updates": 2,
+  "effective_batch": 32,
+  "scope": "Real manual resource-probe startup andCPUvalidation, no completed training/method-effect claim. FullGPU budget validation and checkpoint/throughput/physicalmemory evidence remain pending."
+}

@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-10-22T14:34:52.108035",
+  "actual_wrapper_CPU_preflight_passed": true,
+  "queue": "copsd-sw4b-resource2-v2",
+  "phase": "running",
+  "monitor_pid": 274902,
+  "job_pid": 274931,
+  "gpu_uuids": [
+    "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+  ],
+  "recovery_authorized_without_new_permission": true,
+  "all_model_data_budget_loss_optimizer_hyperparameters_equal_to_v1": true,
+  "observer_lifecycle_only_repaired": true,
+  "old_failed_parent_GPU_hours": 0.03722222222222222,
+  "old_failed_updates": 0,
+  "new_output_relative": "models/checkpoint/copsd_sw4b_resource_checks_v1/sw_4b_full2048_resource2_seed42_20261022_v2",
+  "scope": "V2 actual startup snapshot. Completed full-lengthGPU training and efficacy remain unproven; preserve failedv1 and count its cost separately once."
+}
