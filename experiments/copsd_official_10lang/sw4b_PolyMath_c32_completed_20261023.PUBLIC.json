@@ -1,0 +1,181 @@
+{
+  "protocol": "project_SW4B_PolyMath500_single_vllm8192_c32_v1",
+  "completed_at": "2026-10-23T05:01:59.676439",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "cases": {
+    "polymath": {
+      "Base": {
+        "metrics": {
+          "items": 500,
+          "single_correct": 21,
+          "generated_tokens": 2879697,
+          "truncated": 317,
+          "normal_terminations": 183,
+          "answer_extraction_failures": 307,
+          "protocol": "project_SW4B_PolyMath500_single_vllm8192_c32_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 500,
+          "single_accuracy": 0.042,
+          "generation_seconds": 5175.0680474080145,
+          "model_load_seconds": 11.787220953032374,
+          "actual_max_num_seqs": 32,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 17,
+              "single_accuracy": 0.136
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 1,
+              "single_accuracy": 0.008
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 1,
+              "single_accuracy": 0.008
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 2,
+              "single_accuracy": 0.016
+            }
+          }
+        },
+        "ITEMS_sha256": "1a22047c2f7983af2ed56c2fc996679d7c88fdb598c34270301ebde95cecfbe3",
+        "CONFIG_sha256": "8af888cda3cdc30de231267e15c0878afabf966d06a36df39292f3e7330ab5fa"
+      },
+      "SW20": {
+        "metrics": {
+          "items": 500,
+          "single_correct": 63,
+          "generated_tokens": 2181977,
+          "truncated": 145,
+          "normal_terminations": 355,
+          "answer_extraction_failures": 132,
+          "protocol": "project_SW4B_PolyMath500_single_vllm8192_c32_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 500,
+          "single_accuracy": 0.126,
+          "generation_seconds": 6641.361742056906,
+          "model_load_seconds": 13.444330280646682,
+          "actual_max_num_seqs": 32,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 27,
+              "single_accuracy": 0.216
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 25,
+              "single_accuracy": 0.2
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 6,
+              "single_accuracy": 0.048
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 5,
+              "single_accuracy": 0.04
+            }
+          }
+        },
+        "ITEMS_sha256": "ba2bf2822a443d0d09706e9fa8e223ab365d533581053dbe87898b5666436d91",
+        "CONFIG_sha256": "66e8d1a435eea5e028dadc4de06e75fd3a8ecc14d37065c5e2a4941084b8fc1c"
+      }
+    }
+  },
+  "paired": {
+    "polymath": {
+      "gained_IDs": [
+        "low-sw-3",
+        "low-sw-9",
+        "low-sw-16",
+        "low-sw-26",
+        "low-sw-32",
+        "low-sw-35",
+        "low-sw-47",
+        "low-sw-55",
+        "low-sw-67",
+        "low-sw-80",
+        "low-sw-81",
+        "low-sw-92",
+        "low-sw-103",
+        "low-sw-106",
+        "low-sw-108",
+        "low-sw-116",
+        "low-sw-118",
+        "low-sw-123",
+        "medium-sw-0",
+        "medium-sw-2",
+        "medium-sw-5",
+        "medium-sw-10",
+        "medium-sw-18",
+        "medium-sw-21",
+        "medium-sw-24",
+        "medium-sw-25",
+        "medium-sw-26",
+        "medium-sw-27",
+        "medium-sw-35",
+        "medium-sw-53",
+        "medium-sw-57",
+        "medium-sw-61",
+        "medium-sw-73",
+        "medium-sw-86",
+        "medium-sw-91",
+        "medium-sw-96",
+        "medium-sw-100",
+        "medium-sw-102",
+        "medium-sw-104",
+        "medium-sw-105",
+        "medium-sw-112",
+        "medium-sw-119",
+        "high-sw-18",
+        "high-sw-34",
+        "high-sw-42",
+        "high-sw-51",
+        "high-sw-93",
+        "top-sw-59",
+        "top-sw-77",
+        "top-sw-94",
+        "top-sw-105"
+      ],
+      "lost_IDs": [
+        "low-sw-6",
+        "low-sw-45",
+        "low-sw-56",
+        "low-sw-60",
+        "low-sw-76",
+        "low-sw-109",
+        "low-sw-112",
+        "low-sw-117",
+        "top-sw-15"
+      ],
+      "delta_correct": 42
+    }
+  },
+  "unique_parent_costs": [
+    {
+      "queue": "copsd-sw4b-poly32-base-v1",
+      "parent_GPU_hours": 1.4577777777777778,
+      "training_updates": 0
+    },
+    {
+      "queue": "copsd-sw4b-poly32-sw20-v1",
+      "parent_GPU_hours": 1.8719444444444444,
+      "training_updates": 0
+    }
+  ],
+  "parent_GPU_hours": 3.3297222222222222,
+  "new_generated_tokens": 5061674,
+  "TensorBoard_two_accuracies_two_costs_read_back": true,
+  "scope": "FixedBase/checkpoint20 fullformal PolyMathSW500/n1/8192/native32, fourtiers125each. Bothmodels share32, no averagingwithMGSM/GSMnative16. No officialpass12, trainingseedconfirmation or3-language selection. Test scores usedforreporting only, not config/checkpoint/language selection.",
+  "summarizer_sha256": "ccce247608fe2af2bf06bcd4c22f993f433602db95d63243bc077cf62ba8f6fe"
+}

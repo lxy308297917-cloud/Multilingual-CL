@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-10-23T05:02:49.893528",
+  "issue": "str.splitlines treats valid Unicode U+2028 insideJSONstrings asrecordboundaries; sourceJSONL has500LF records butsplitlinesproduced502fragments.",
+  "source_ITEMS_sha256": "ba2bf2822a443d0d09706e9fa8e223ab365d533581053dbe87898b5666436d91",
+  "source_raw_file_unchanged": true,
+  "unicode_U2028_count": 2,
+  "affected_output_IDs": [
+    "top-sw-33"
+  ],
+  "old_splitlines_fragments": 502,
+  "valid_LF_records": 500,
+  "all500parsed_with_original63_correct": true,
+  "fixture_U2028_U2029_U0085_escaped_newline_both_readers_passed": true,
+  "postprocessor_source_changes": {
+    "collect_sw4b_polymath8192_c32.py": {
+      "previous_sha256": "f8a7c67019d1f21e12e451ef883fa8faeb9962888899ff00de79916fbeea9410",
+      "corrected_sha256": "ccce247608fe2af2bf06bcd4c22f993f433602db95d63243bc077cf62ba8f6fe"
+    },
+    "collect_ja4b_alloc_v2_followup200.py": {
+      "previous_sha256": "f00b3bb595c02d120b1fabef8101668d71c0562783cc6858af942e64d87fb1f4",
+      "corrected_sha256": "69520e29d45c9fc8dd2ea741d53d80d15f566faacd2e6ca7b923b726d8b2b587"
+    },
+    "analyze_output_languages.py": {
+      "previous_sha256": "ef24d056341b51d4ae7f4a0d01baaf143b081ad6ff60373159ab59388f5f51a7",
+      "corrected_sha256": "e86d653c19f74ffa04f93a6c76736ca1bfa2ac191f18edad4681cd6658dd279f"
+    }
+  },
+  "generation_runtime_frozen_sources_unchanged": true,
+  "scope": "ReadJSONL via fileiteration ratherthanUnicode splitlines. No answertext deletion, samplefiltering, rescore, inference/trainingrerun ornewGPUgeneration. ThreeCPUpostprocessors only; oldsource retrievablefromGit. ActiveJA evaluator/freeze notmodified."
+}

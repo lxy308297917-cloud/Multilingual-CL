@@ -13,6 +13,11 @@ def read(path):return json.loads(path.read_text())
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def read_jsonl(path):
+    with path.open(encoding='utf-8') as stream:
+        return [json.loads(line) for line in stream]
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',type=Path,required=True)
@@ -51,7 +56,7 @@ def main():
             assert cfg['checkpoint_step']==(20 if condition=='SW20' else None)
             if condition=='SW20':assert sha(root/spec['adapter_relative']/'adapter_model.safetensors')==spec['adapter_sha256']
             for key in ['samples','max_new_tokens','max_num_seqs','temperature','top_p','top_k','seed']:assert cfg[key]==f[key],key
-            rows=[json.loads(line) for line in (folder/'ITEMS.jsonl').read_text().splitlines()]
+            rows=read_jsonl(folder/'ITEMS.jsonl')
             originals=list(load_items(data,'mgsm_rev2' if benchmark=='mgsm_rev2' else 'polymath_project',lang))
             assert len(rows)==len(originals)==len({str(r['id']) for r in rows})==count
             assert done['formal_full_test'] and done['n']==1 and done['generation_count']==done['items']==count

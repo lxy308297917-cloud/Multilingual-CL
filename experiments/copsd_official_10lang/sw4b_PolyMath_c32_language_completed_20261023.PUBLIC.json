@@ -1,0 +1,240 @@
+{
+  "completed_at": "2026-10-23T05:06:41.517520",
+  "protocol": "project_SW4B_PolyMath500_single_vllm8192_c32_v1",
+  "cases": {
+    "Base_polymath": {
+      "items": 500,
+      "language": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 420,
+            "__label__wmw_Latn": 4,
+            "__label__kdc_Latn": 5,
+            "__label__sgb_Latn": 2,
+            "__label__ksb_Latn": 1,
+            "__label__swc_Latn": 27,
+            "__label__eng_Latn": 11,
+            "__label__lad_Latn": 1,
+            "__label__sbl_Latn": 1,
+            "__label__qve_Latn": 1,
+            "__label__mer_Latn": 1,
+            "__label__ktu_Latn": 4,
+            "__label__fuq_Latn": 2,
+            "__label__lin_Latn": 1,
+            "__label__phm_Latn": 1,
+            "__label__old_Latn": 1,
+            "__label__kwn_Latn": 1,
+            "__label__prq_Latn": 1,
+            "__label__pkb_Latn": 1,
+            "__label__kzn_Latn": 1,
+            "__label__loz_Latn": 1,
+            "__label__pmf_Latn": 1,
+            "__label__nyf_Latn": 1,
+            "__label__npl_Latn": 1,
+            "__label__nyu_Latn": 1,
+            "__label__kng_Latn": 2,
+            "__label__ngp_Latn": 2,
+            "__label__cgg_Latn": 1,
+            "__label__adh_Latn": 1,
+            "__label__hay_Latn": 1,
+            "__label__ndj_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 335,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 19,
+            "__label__eng_Latn": 2
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 188,
+            "no_final_section": 311,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__swc_Latn": 47,
+            "__label__swh_Latn": 131,
+            "__label__ssw_Latn": 1,
+            "__label__hay_Latn": 2,
+            "__label__eng_Latn": 3,
+            "__label__lin_Latn": 2,
+            "__label__wmw_Latn": 1,
+            "__label__kwy_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 92,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 12,
+            "__label__ssw_Latn": 1,
+            "__label__swc_Latn": 7,
+            "__label__eng_Latn": 1
+          }
+        }
+      },
+      "math_correct_and_target_thinking_highconf": 17,
+      "math_correct_and_target_final_highconf": 9,
+      "math_correct_and_both_target_highconf": 9,
+      "analysis_sha256": "0ddc6ba11b6e35208f1ad674c18799368be68089391fc798d64fb88b89e1c18d",
+      "items_sha256": "1a22047c2f7983af2ed56c2fc996679d7c88fdb598c34270301ebde95cecfbe3"
+    },
+    "SW20_polymath": {
+      "items": 500,
+      "language": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 313,
+            "__label__eng_Latn": 156,
+            "__label__ktu_Latn": 1,
+            "__label__bhl_Latn": 1,
+            "__label__zsm_Latn": 2,
+            "__label__ibo_Latn": 1,
+            "__label__slv_Latn": 1,
+            "__label__swc_Latn": 8,
+            "__label__kby_Latn": 1,
+            "__label__und_Orya": 1,
+            "__label__dag_Latn": 1,
+            "__label__ssw_Latn": 6,
+            "__label__lin_Latn": 1,
+            "__label__mbb_Latn": 1,
+            "__label__anp_Deva": 1,
+            "__label__ztq_Latn": 1,
+            "__label__und_Khoj": 1,
+            "__label__cmn_Hani": 1,
+            "__label__crh_Cyrl": 1,
+            "__label__llg_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 276,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 41,
+            "__label__eng_Latn": 20,
+            "__label__ibo_Latn": 1,
+            "__label__ssw_Latn": 1
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 371,
+            "no_final_section": 129
+          },
+          "top1_label_counts": {
+            "__label__swc_Latn": 85,
+            "__label__swh_Latn": 192,
+            "__label__eng_Latn": 73,
+            "__label__yor_Latn": 1,
+            "__label__ssw_Latn": 12,
+            "__label__kam_Latn": 3,
+            "__label__sna_Latn": 2,
+            "__label__cmn_Hani": 1,
+            "__label__ktu_Latn": 1,
+            "__label__cwe_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 110,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 28,
+            "__label__eng_Latn": 14,
+            "__label__swc_Latn": 16,
+            "__label__kam_Latn": 1,
+            "__label__ssw_Latn": 2,
+            "no_final_section": 2
+          }
+        }
+      },
+      "math_correct_and_target_thinking_highconf": 37,
+      "math_correct_and_target_final_highconf": 16,
+      "math_correct_and_both_target_highconf": 12,
+      "analysis_sha256": "72c1685396a92d0cabb73ab8a6237fb52d04baf482b57f4a73f5a846543e4abd",
+      "items_sha256": "ba2bf2822a443d0d09706e9fa8e223ab365d533581053dbe87898b5666436d91"
+    }
+  },
+  "paired_termination": {
+    "polymath": {
+      "gained_IDs": [
+        "low-sw-3",
+        "low-sw-9",
+        "low-sw-16",
+        "low-sw-26",
+        "low-sw-32",
+        "low-sw-35",
+        "low-sw-47",
+        "low-sw-55",
+        "low-sw-67",
+        "low-sw-80",
+        "low-sw-81",
+        "low-sw-92",
+        "low-sw-103",
+        "low-sw-106",
+        "low-sw-108",
+        "low-sw-116",
+        "low-sw-118",
+        "low-sw-123",
+        "medium-sw-0",
+        "medium-sw-2",
+        "medium-sw-5",
+        "medium-sw-10",
+        "medium-sw-18",
+        "medium-sw-21",
+        "medium-sw-24",
+        "medium-sw-25",
+        "medium-sw-26",
+        "medium-sw-27",
+        "medium-sw-35",
+        "medium-sw-53",
+        "medium-sw-57",
+        "medium-sw-61",
+        "medium-sw-73",
+        "medium-sw-86",
+        "medium-sw-91",
+        "medium-sw-96",
+        "medium-sw-100",
+        "medium-sw-102",
+        "medium-sw-104",
+        "medium-sw-105",
+        "medium-sw-112",
+        "medium-sw-119",
+        "high-sw-18",
+        "high-sw-34",
+        "high-sw-42",
+        "high-sw-51",
+        "high-sw-93",
+        "top-sw-59",
+        "top-sw-77",
+        "top-sw-94",
+        "top-sw-105"
+      ],
+      "lost_IDs": [
+        "low-sw-6",
+        "low-sw-45",
+        "low-sw-56",
+        "low-sw-60",
+        "low-sw-76",
+        "low-sw-109",
+        "low-sw-112",
+        "low-sw-117",
+        "top-sw-15"
+      ],
+      "Base_finish_of_gains": {
+        "stop": 23,
+        "length": 28
+      },
+      "Base_extraction_failures_of_gains": 28,
+      "trained_finish_of_losses": {
+        "stop": 8,
+        "length": 1
+      },
+      "trained_extraction_failures_of_losses": 2
+    }
+  },
+  "TensorBoard_six_language_series_read_back": true,
+  "accepted_formal_report_sha256": "fa457035f8d4f0ddd8ad120484a86f7c372a54f949f962ed3088be241c8d1888",
+  "summarizer_sha256": "e4ca9aea49acc189cfca18587798d353db4944aa7eda060ee568a669f9abcf4e",
+  "scope": "Descriptive analysis of unchanged formal scores. SW PolyMath500 only, one fixed4BBase/seed42modelpair; no seed-population inference or comparison with native16 MGSM/GSM protocol averages. GlotLID whole-part labels are not calibrated fluency, token purity or proof quality. Short/numeric final answers may lack a reliable language label; missing labels are not language failures. No new generations, no rescoring, no test-driven checkpoint/language selection."
+}

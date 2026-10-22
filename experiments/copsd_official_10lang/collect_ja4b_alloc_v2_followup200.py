@@ -13,6 +13,11 @@ def read(p): return json.loads(p.read_text())
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
+def read_jsonl(path):
+    with path.open(encoding='utf-8') as stream:
+        return [json.loads(line) for line in stream]
+
+
 def audit_case(root, code, frozen, freeze_sha, case):
     spec = dict(frozen['cases'][case])
     if spec['adapter_relative']:
@@ -51,7 +56,7 @@ def audit_case(root, code, frozen, freeze_sha, case):
             assert cfg['adapter_sha256'] == spec['adapter_sha256']
         else:
             assert cfg['adapter'] is cfg['checkpoint_step'] is cfg['adapter_sha256'] is None
-        rows = [json.loads(s) for s in (folder / 'ITEMS.jsonl').read_text().splitlines()]
+        rows = read_jsonl(folder / 'ITEMS.jsonl')
         assert [r['id'] for r in rows] == frozen['selected_IDs']
         assert len(rows) == len({r['id'] for r in rows}) == metrics['items'] == metrics['generation_count'] == 200
         assert not metrics['formal_test'] and metrics['n'] == 1 and metrics['actual_max_num_seqs'] == 16
@@ -111,7 +116,7 @@ def main():
     acceptedJA=read(acceptedJApath)
     assert sha(folderJA/'ITEMS.jsonl')==cacheJA['ITEMS_sha256']==acceptedJA['source']['items_sha256']
     assert sha(folderJA/'CONFIG.json')==cacheJA['CONFIG_sha256']==acceptedJA['source']['config_sha256']
-    base['ja']={'config':read(folderJA/'CONFIG.json'),'rows':[json.loads(x) for x in (folderJA/'ITEMS.jsonl').read_text().splitlines()],'metrics':acceptedJA['metrics'],'source':acceptedJA['source']}
+    base['ja']={'config':read(folderJA/'CONFIG.json'),'rows':read_jsonl(folderJA/'ITEMS.jsonl'),'metrics':acceptedJA['metrics'],'source':acceptedJA['source']}
     stateJA=read(a.root/'gpu-queue/queues'/cacheJA['queue']/'state.json');assert stateJA['phase']=='completed' and stateJA['job']['exit_code']==0
     jobJA=stateJA['job'];baseJA_hours=(datetime.datetime.fromisoformat(jobJA['finished_at'])-datetime.datetime.fromisoformat(jobJA['started_at'])).total_seconds()/3600
     base_cost={'queue':cacheJA['queue'],'parent_GPU_hours_counted_once':baseJA_hours,'evaluation_cases':1,'training_updates':0,'scope':'Priorpartialreportdeferredthisparentcost; countedonce inthiscompletecandidate report.'}
@@ -120,7 +125,7 @@ def main():
     assert sha(folder/'ITEMS.jsonl')==cache['ITEMS_sha256'] and sha(folder/'CONFIG.json')==cache['CONFIG_sha256']
     accepted=read(code/'sw4b_followup200_completed_20261022.PUBLIC.json')['languages']['en']['conditions']['Base']
     assert accepted['source']['items_sha256']==cache['ITEMS_sha256'] and accepted['source']['config_sha256']==cache['CONFIG_sha256']
-    base['en']={'config':read(folder/'CONFIG.json'),'rows':[json.loads(s) for s in (folder/'ITEMS.jsonl').read_text().splitlines()],'metrics':accepted['metrics'],'source':accepted['source']}
+    base['en']={'config':read(folder/'CONFIG.json'),'rows':read_jsonl(folder/'ITEMS.jsonl'),'metrics':accepted['metrics'],'source':accepted['source']}
     assert [x['id'] for x in base['en']['rows']]==f['selected_IDs']
     assert sum(x['samples'][0]['correct'] for x in base['en']['rows'])==base['en']['metrics']['single_correct']
     languages={}

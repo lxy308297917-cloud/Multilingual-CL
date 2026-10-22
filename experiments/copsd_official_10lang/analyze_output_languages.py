@@ -49,7 +49,8 @@ def main():
               "model": str(a.model), "model_sha256": digest(a.model),
               "target_label": a.target_label, "runs": {}}
     for path in a.items:
-        rows = [json.loads(s) for s in path.read_text().splitlines() if s.strip()]
+        with path.open(encoding='utf-8') as stream:
+            rows = [json.loads(s) for s in stream if s.strip()]
         predictions = []
         for row in rows:
             sample = row["samples"][0]
