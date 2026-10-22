@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-10-23T01:35:49.700393",
+  "queue": "copsd-ja4b-followup-base-v1",
+  "phase": "running",
+  "parent_PID": 434811,
+  "GPU_indices": [
+    4
+  ],
+  "GPU_uuids": [
+    "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a"
+  ],
+  "started_at": "2026-10-23 01:33:37",
+  "Base_JA_model_loaded_and_generation_started": true,
+  "max_account_GPUs": 4,
+  "scope": "New4B BaseJA200 native16/n1/8192. JA20 JA/EN queue onlyconfigured, notstarted; requires released checkpoint20. MatchingBaseEnglish200 retainedwithoutregeneration/costrecount."
+}

@@ -1,0 +1,14 @@
+{
+  "prepared_at": "2026-10-23T01:35:49.700610",
+  "frozen_sha256": "beb21c52961113784b8ceabe955d52b5223577b5e91f5c83b3e3f1a2fe5312e1",
+  "collector_sha256": "8bcc5c2b168b3f1849e7bdb2f625765b0dd543fc47d1d67aaa9e75a89834ca94",
+  "release_helper_sha256": "e728214c7ffd60a150e8c4245a7510d8620d24cf6d168b406ad3acca7e7b3bfc",
+  "Python_compile_passed": true,
+  "Base_JA_CPU_preflight_passed": true,
+  "both_queue_configurations_validated": true,
+  "JA20_GPU_evaluation_started": false,
+  "JA20_CPU_input_and_adapter_preflight": "Pending completedtrainingandcheckpoint20release; not claimedpassed.",
+  "cached_Base_English": "Bound byrawITEMS/CONFIG hashes in frozenmanifest; scoringprotocol label differs explicitly but actual common model/tokenizer/input/prompt/seed/packages/generation/scorer must match incollector.",
+  "acceptance_scope": "Raw200rows/counts/tokenIDs/termination/scores/pairedprompts andcosts checked aftercompletedparents, with4math+2costTBseries; syntaxcheck doesnot establish fullresultacceptance. Questionbootstrap foronefixedmodelpaironly.",
+  "source_adaptation": "Separate JA evaluator/freeze/output identity andBase-noadapter/JA20-release guard, sameoriginalofficialloader/prefixes/scorer. No runningSW/JAtrainingcode modified."
+}
