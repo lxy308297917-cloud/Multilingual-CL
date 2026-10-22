@@ -1,0 +1,11 @@
+{
+  "observed_at": "2026-10-22T15:11:40.260659",
+  "pilot_CPU_preflight_passed": true,
+  "Base_evaluator_CPU_preflight_passed": true,
+  "runtime_rejected_missing_resource_gate": true,
+  "resource_v3_terminal_failed": true,
+  "pilot_started": false,
+  "Base_evaluation_started": false,
+  "new_GPU_work": false,
+  "reason": "Fullbudget singleGPU4B resource gate failed; preparedpilot cannot run. No automatic retry or debugweights reuse."
+}

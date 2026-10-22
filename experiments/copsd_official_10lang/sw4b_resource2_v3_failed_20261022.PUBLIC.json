@@ -1,0 +1,63 @@
+{
+  "protocol": "SW4B_resource2_v3_terminal_failure",
+  "phase": "failed",
+  "finished_at": "2026-10-22 15:06:14",
+  "exit_code": 139,
+  "engineering_completed": false,
+  "completed_optimizer_updates": 1,
+  "completed_microsteps": 52,
+  "failure_microstep": 53,
+  "completed_microstep_losses_all_finite": true,
+  "last_completed_checkpoint_step": 1,
+  "checkpoint_relative": "models/checkpoint/copsd_sw4b_resource_checks_v1/sw_4b_full2048_resource2_seed42_20261022_v3/checkpoint-1",
+  "actual_rollout_batches": [
+    {
+      "global_step": 0,
+      "rollouts": 32,
+      "generated_tokens": 57971,
+      "generation_seconds": 65.1652176938951
+    },
+    {
+      "global_step": 1,
+      "rollouts": 32,
+      "generated_tokens": 55293,
+      "generation_seconds": 58.521823320537806
+    }
+  ],
+  "total_generated_tokens": 113264,
+  "cost_last_saved_checkpoint": {
+    "loss_calls": 32,
+    "valid_response_loss_positions": 57971,
+    "masked_response_positions": 7565,
+    "student_forward_calls": 32,
+    "student_forward_cuda_seconds": 15.369842163085938,
+    "student_processed_input_positions": 70897,
+    "student_attended_input_positions": 63332,
+    "teacher_forward_calls": 32,
+    "teacher_forward_cuda_seconds": 18.731008575439454,
+    "teacher_processed_input_positions": 104964,
+    "teacher_attended_input_positions": 97399,
+    "start_step": 0,
+    "global_step": 1,
+    "seed_applied_before_model_and_PEFT": 42,
+    "loss_temperature": 1.1,
+    "scope": "This process segment only; parent continuation ledgers remain separate.",
+    "forward_timer_scope": "Outer model forward CUDA events; excludes rollout, KL, backward, optimizer and saving.",
+    "method": "Original official loss returned unchanged, exact shifted-label masks counted."
+  },
+  "root_cause": "CUDA OOM inside original F.kl_div, not the removed jsd[mask] copy. Exceptional teardown segfault followsOOM.",
+  "allocation_requested_GiB": 1.16,
+  "free_at_failure_GiB": 1.12,
+  "physical_process_at_failure_GiB": 22.53,
+  "physical_sampled_peak_MiB": 24155.0,
+  "allocated_parent_GPU_hours": 0.16416666666666666,
+  "log_sha256": "2f07b9d6a1e8d9f511cfd14e383c963dbeecea5ae173a3fb3fcb2247d0b3fb86",
+  "log_relative": "logs/copsd_official_10lang/sw4b_resource2_20261022_v3.run.log",
+  "CPU_CUDA_local_equivalence_passed": true,
+  "single_GPU_4B_path_stopped": true,
+  "pilot20_prepared_only": true,
+  "pilot20_started": false,
+  "pilot20_gate_file_absent": true,
+  "no_downstream_4B_scores": true,
+  "scope": "A partial engineering run, not a completed two-update gate, no4B effect conclusions; preserve checkpoint and failure evidence. No retry or warmstart of these debugweights."
+}

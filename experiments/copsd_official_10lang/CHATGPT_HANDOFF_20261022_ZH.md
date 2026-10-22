@@ -125,3 +125,16 @@ v2已终止，0次优化器更新：首批32条在线轨迹生成57,971 token、
 [实际v2失败](sw4b_resource2_v2_failed_20261022.PUBLIC.json) · [v3固定协议](sw4b_resource2_v3_frozen_20261022.PUBLIC.json) · [CPU等价检查](mask_reduction_memory_CPU_20261022.PUBLIC.json)。
 
 14:57更新：CUDA全词表151936×8位置、FP32／BF16 autocast、完整／部分mask共4例，损失和学生梯度均逐位相同；此为局部数值验证，尚非完整4B训练显存通过。实际worker继续加载，日志与原CUDA结果保留。
+
+
+## 15:12 4B单卡资源验证最终未通过：停止本路径
+
+v3的mask归约优化实际越过原v2失败点，完成第一次优化器更新并保存checkpoint1；52个microstep均为有限损失。第二批内第53个microstep在原`F.kl_div`算子处再次OOM，申请1.16 GiB、只剩1.12 GiB；随后异常清理segfault，父队列终态failed／139。两批共生成113,264 token，物理遥测峰值24,155 MiB，父任务9分51秒／0.164167 GPU小时。只保存了第一更新的成本快照，不能伪造完整64次loss或教师统计。
+
+checkpoint1的optimizer步数、scheduler、trainer_state均为1，RNG文件存在；没有完成第二更新，没有完整资源通过标记，未进行重载恢复或数学效果评测。按冻结停止规则，停止单卡4B路径，不再用同样配置盲目重试，不用该调试adapter开始后续研究。
+
+等待期间准备了从原始4B出发的SW20和同尺度Base SW／EN开发100评测接口，统一8192预算、native16；CPU预检通过，但**仅准备、未启动**。运行入口要求资源验收文件及至少512 MiB采样余量，失败路径没有该文件；不得绕过。4B结果不能混入1.7B排名。
+
+只读源码核对显示官方trainer提供vLLM server模式，可考虑将训练与rollout分配不同GPU；但当前TRL0.26客户端`generate`返回含`completion_ids`的字典，COPSD发布代码按列表消费，现有批量／同步／关闭适配也明确只支持colocate。因此分卡需要独立兼容与同步验证，不能仅改启动参数就称已可运行。尚未启动分卡任务。
+
+[最终失败证据](sw4b_resource2_v3_failed_20261022.PUBLIC.json) · [受资源条件约束的4B先导固定配置](sw4b_pilot20_frozen_20261022.PUBLIC.json)。完整目标未完成：1.7B额外开发集只支持SW默认收益，三语选择与正反顺序矩阵仍缺稳定候选。
