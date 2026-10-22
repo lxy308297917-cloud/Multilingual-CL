@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-10-22T11:24:45.438927",
+  "frozen_sha256": "be0562af75727fdb431fac2739e8801389e21e1e6d0bde98cf1e7d31991f7381",
+  "actual_wrapper_prepare_only_passed": true,
+  "official_core_model_input_runtime_check_passed": true,
+  "all3_saved_history_hashes_and32IDs_verified": true,
+  "first32_min_full_response_tokens": {
+    "Base": 1249,
+    "SW42": 428,
+    "SW43": 498
+  },
+  "equal_history_tokens": 256,
+  "queue": "copsd-sw-teacher-recovery32-v1",
+  "monitor_pid": 236284,
+  "phase": "running",
+  "job_pid": 236330,
+  "gpu_uuids": [
+    "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+  ],
+  "max_user_gpus": 4,
+  "training_updates": 0,
+  "engineering_note": "New queue directory/config initialized after configure reported missing files; neither failed configuration attempt launched GPU work. Standard CLI subsequently configure/validate/start succeeded. No experiment retry, data changes or global queue edits.",
+  "status_scope": "Actual state at this timestamp only; no method or recovery-effect conclusion."
+}
