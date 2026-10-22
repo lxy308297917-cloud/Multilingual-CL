@@ -1,0 +1,37 @@
+{
+  "protocol": "project_dev_single_vllm8192_4b_serverpilot_v1",
+  "completed_at": "2026-10-22 16:25:46",
+  "phase": "completed",
+  "parent_exit_code": 0,
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "results": {
+    "sw": {
+      "correct": 7,
+      "items": 100,
+      "accuracy": 0.07,
+      "normal_terminations": 37,
+      "truncated": 63,
+      "answer_extraction_failures": 62,
+      "generated_tokens": 570094,
+      "DONE_sha256": "f4cc876457d9b3a1fea7d5c896fd485a47c2d716d2526b85d8574759acec73dd",
+      "ITEMS_sha256": "4dd8e16c1899ae841e9c1e91735a74935956625fe523417da3e6b7c5ab9ea876"
+    },
+    "en": {
+      "correct": 90,
+      "items": 100,
+      "accuracy": 0.9,
+      "normal_terminations": 93,
+      "truncated": 7,
+      "answer_extraction_failures": 4,
+      "generated_tokens": 425961,
+      "DONE_sha256": "db0ee83aebc8f8194f2800c5a98a2936bac1f76bbceb19b8e0b83484e80eb32f",
+      "ITEMS_sha256": "9f8972ec0bf50fca18f88122fcbfb0cedce2c2ab4bcea3f2b3ebf8a39b94cb28"
+    }
+  },
+  "new_generated_tokens": 996055,
+  "allocated_parent_GPU_hours": 0.5602777777777778,
+  "TensorBoard_two_accuracies_and_two_costs_read_back": true,
+  "training_model_evaluated": false,
+  "OPD_effect_available": false,
+  "scope": "Matching4BBase only. Original100 developmentmath questions, SW/EN,n1/8192/native16; not GSM8K1319,MGSM250,PolyMath500 orpass12. Reuse thisBaseline forfrozenSW20 pairing, do not rerun or doublecountcost."
+}

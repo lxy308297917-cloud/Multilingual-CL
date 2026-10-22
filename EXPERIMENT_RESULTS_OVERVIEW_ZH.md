@@ -249,3 +249,5 @@ PLND 与 LAPE 不可彼此按目标综合直接排名。LAPE 在部分任务改�
 2026-10-22 15:52：独立4B两卡资源任务已完整exit0：64题／两更新、冻结Base和全部远端权重同步、checkpoint及TensorBoard验收通过。已从原始4B启动SW20先导和匹配4BBase开发评测；暂无效果分数，不混入1.7B排名。见[完整验收](experiments/copsd_official_10lang/sw4b_server_resource_v2_completed_20261022.PUBLIC.json)及[先导配置](experiments/copsd_official_10lang/sw4b_server_pilot20_frozen_20261022.PUBLIC.json)。
 
 2026-10-22 16:18：SW4B先导checkpoint5及160次真实输入身份已核验；同4BBase的SW原开发100题为7/100。训练后配对分数未出，不据Base或中间checkpoint宣称收益，继续既定20更新。见[中间状态证据](experiments/copsd_official_10lang/sw4b_server_pilot20_checkpoint5_20261022.PUBLIC.json)。
+
+2026-10-22 16:25：匹配4BBase原开发100评测完整exit0，SW7／100、英语90／100；996,055生成token、0.560278分配GPU小时，TensorBoard读回通过。这不是正式测试，训练后配对仍待完成。见[Base完整证据](experiments/copsd_official_10lang/sw4b_server_Base_dev100_completed_20261022.PUBLIC.json)。

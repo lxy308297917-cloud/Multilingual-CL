@@ -183,3 +183,17 @@ server-v2父任务已exit0，旧训练／推理PID均退出。完整64题、两�
 预先固定的探索筛查：SW正确数高于同4BBase且英语正确数不低于Base，才考虑第二seed和固定额外200题确认；未通过则保留负结果，不自动做LR／裁剪／checkpoint网格，不直接扩大100步、十语或顺序实验。
 
 [两卡完整资源验收](sw4b_server_resource_v2_completed_20261022.PUBLIC.json) · [显存余量口径](sw4b_server_resource_memory_note_20261022.PUBLIC.json) · [SW20独立配置](sw4b_server_pilot20_frozen_20261022.PUBLIC.json)。
+
+
+## 16:25 同4BBase的SW／EN开发评测完整结束
+
+唯一父任务exit0，SW／EN各100回答、总996,055生成token，分配0.560278 GPU小时。固定原开发100、n1／8192／native16，模型revision与评测源码哈希核对通过；两条准确率和两条成本已写入并读回TensorBoard。
+
+| 同4BBase | 正确／100 | 正常终止 | 截断 | 答案提取失败 |
+|---|---:|---:|---:|---:|
+| SW | 7 | 37 | 63 | 62 |
+| EN | 90 | 93 | 7 | 4 |
+
+这是同源原开发数学题，**不是GSM8K1319、MGSM250、PolyMath500或pass@12正式测试**。截断与提取失败也不是同一计数。SW20训练及其配对评测尚未完成，不据Base分数宣称OPD改善或比较模型规模效果。该Base保留复用，不重复测评或重复计费。
+
+[完整Base计数、逐题哈希、成本及TensorBoard验收](sw4b_server_Base_dev100_completed_20261022.PUBLIC.json)。

@@ -545,3 +545,17 @@ server-v2父任务已exit0，旧训练／推理PID均退出。完整64题、两�
 给ChatGPT的交接另补充了已经完成的BN真实轨迹CPU梯度重放：128位置中23处教师top-token吸引梯度、29处词表梯度相对未裁剪KL反向，LoRA局部余弦−0.603793；同时保留CPU FP32／重新分词／非原始GPU重放的限制。此为旧证据归纳，没有重复实验。
 
 [checkpoint5与BaseSW证据](sw4b_server_pilot20_checkpoint5_20261022.PUBLIC.json) · [最终配对汇总器](summarize_sw4b_server_pilot20.py)。
+
+
+## 16:25 同4BBase的SW／EN开发评测完整结束
+
+唯一父任务exit0，SW／EN各100回答、总996,055生成token，分配0.560278 GPU小时。固定原开发100、n1／8192／native16，模型revision与评测源码哈希核对通过；两条准确率和两条成本已写入并读回TensorBoard。
+
+| 同4BBase | 正确／100 | 正常终止 | 截断 | 答案提取失败 |
+|---|---:|---:|---:|---:|
+| SW | 7 | 37 | 63 | 62 |
+| EN | 90 | 93 | 7 | 4 |
+
+这是同源原开发数学题，**不是GSM8K1319、MGSM250、PolyMath500或pass@12正式测试**。截断与提取失败也不是同一计数。SW20训练及其配对评测尚未完成，不据Base分数宣称OPD改善或比较模型规模效果。该Base保留复用，不重复测评或重复计费。
+
+[完整Base计数、逐题哈希、成本及TensorBoard验收](sw4b_server_Base_dev100_completed_20261022.PUBLIC.json)。
