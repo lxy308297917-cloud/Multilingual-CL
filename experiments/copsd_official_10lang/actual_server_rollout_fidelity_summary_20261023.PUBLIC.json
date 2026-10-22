@@ -1,0 +1,30 @@
+{
+  "accepted_at": "2026-10-23T07:15:19.923668",
+  "original_native_HF_gate_passed": false,
+  "Base_restore_exact_prompts": 32,
+  "Base_restore_max_logprob_difference": 0,
+  "adapter_changed_greedy_prompts": 10,
+  "JA_native_HF_top1_agreement": 0.984375,
+  "JA_native_HF_logprob_MAE": 0.06367926897613418,
+  "JA_native_HF_logprob_p99_abs_error": 0.32653164863586426,
+  "merged_HF_398_weights_match_actual_received_tensors": true,
+  "merged_HF_top1_agreement": 0.9921875,
+  "merged_HF_logprob_MAE": 0.013187633818138256,
+  "merged_HF_logprob_p99_abs_error": 0.07814145088195801,
+  "merged_HF_same_numeric_thresholds_passed": true,
+  "unique_parent_GPU_hours": 0.22138888888888889,
+  "generated_prefix_tokens": 768,
+  "additional_generations_for_localization": 0,
+  "scope": "Actualserviceprobe locallysupports updatedadapterloading andBase restoration; native-vs-BF16merged computationpath explainsmost probabilitydifference inthisprobe. Doesnot establish strictHFstudentdistributionequivalence, full2048trajectory fidelity or causeof downstream mathematicaldecline. Originalnativegatefailure retained, no training/evaluation changes.",
+  "BN_assessment": "OriginalpairedBN/EN200 native16/n1/8192 continues, no posttraining score yet.",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "official_sync_reference": {
+    "commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+    "file": "multilingual_opsd_trainer.py",
+    "merge_adapter_line": 1221,
+    "server_update_line": 1241,
+    "unmerge_adapter_line": 1248,
+    "interpretation": "Officialsync exports mergedLoRAweights. Projectnonmutatingexport preservesoriginalBase. This doesnot make BF16mergedserving bitwiseequal tonativeLoRAforward."
+  },
+  "TensorBoard_seven_diagnostic_series_read_back": true
+}

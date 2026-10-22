@@ -1,5 +1,9 @@
 # 多语言适配与遗忘实验总览
 
+<!-- COPSD_LATEST_STATUS_BEGIN -->
+**最新状态（2026-10-23 07:19）**：1.7B 十语言正式 single 已完成，未获得三语言的稳定收益；4B SW 数学提升已在两个训练 seed 的开发集重复，但英语保留与语言保持仍有问题；JA 未通过开发筛选。BN 4B 已完成20更新，BN／英语开发评测继续，尚无训练后分数。三语言未选定，顺序训练未启动。
+<!-- COPSD_LATEST_STATUS_END -->
+
 > 最近更新：2026-10-23 05:08（北京时间）。新增第0节为Qwen3-1.7B官方COPSD基础上的OPD阶段总结；后续第1—5节保留2026-09-24历史轨道快照，不代表旧任务在今天的最新状态。不同模型、任务和协议不横向混比。具体结果以各实验目录的原始记录、`DONE`、哈希和协议为准。
 
 ## 0. 当前OPD轨道：十语言single、退步诊断与SW短程确认
@@ -270,3 +274,14 @@ BN／英语各200题的固定开发评测已手动启动：native vLLM并发16�
 为后续阶段准备了三个各900题、原题ID与标准化英文问题跨池零重叠的候选数据接口。固定随机分配并匹配来源与题长；原数据无难度标签，因此不宣称数学难度已匹配。三语言尚未选定，正反顺序训练尚未启动。
 
 证据：[BN训练验收](https://github.com/lxy308297917-cloud/Multilingual-CL/blob/main/experiments/copsd_official_10lang/bn4b_training_completed_20261023.PUBLIC.json)、[配对评测启动记录](https://github.com/lxy308297917-cloud/Multilingual-CL/blob/main/experiments/copsd_official_10lang/bn4b_paired_eval_started_20261023.PUBLIC.json)。
+
+
+## 2026-10-23：实际 rollout 服务的权重响应与数值路径
+
+32个固定提示、每个8token的独立诊断中，服务加载 JA20 adapter 后10个短回答改变；恢复 Base 后32个回答及概率完全恢复。这一局部结果不支持“服务一直在用 Base、没有加载学生权重”的解释。
+
+服务与 HF 原生 LoRA 的下一词 top1 一致252/256，所选token的 logprob 平均绝对误差0.06368、p99误差0.32653；尾部误差超过预先设定的0.3门槛，原核验保留为未全通过。
+
+随后使用独立 HF 合并副本，其398个权重与服务收到的张量逐位相同；复用全部256个已生成位置、不再生成。服务与该副本 top1 一致254/256，平均误差降至0.01319、p99降至0.07814，通过相同数值门槛。该结果支持原生 LoRA 与 BF16 合并权重计算路径解释这一局部概率差异；不证明完整2048轨迹等价，也不是数学退步的已证因果解释。官方固定源码也采用合并后同步推理权重的路径，项目使用非原地导出保留冻结 Base。
+
+两项诊断合计0.22139 GPU小时，训练和固定数学评分均未改变。后续优先收齐 BN 下游结果，不把数值诊断当成方法有效的证据。详见[诊断汇总](https://github.com/lxy308297917-cloud/Multilingual-CL/blob/main/experiments/copsd_official_10lang/actual_server_rollout_fidelity_summary_20261023.PUBLIC.json)。
