@@ -1,0 +1,53 @@
+{
+  "accepted_at": "2026-10-23T00:54:18.195598",
+  "protocol": "independent_SW4B_dedicated_server_seed43_replication20_v1",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "training_seed": 43,
+  "data_seed": 43,
+  "completed_updates": 20,
+  "micro_steps": 640,
+  "effective_batch": 32,
+  "scheduler_horizon": 100,
+  "valid_generated_and_loss_tokens": 1096727,
+  "sync_count": 21,
+  "parameters_per_sync": 398,
+  "base_unchanged_bitwise": true,
+  "checkpoint20_release": {
+    "released_at": "2026-10-23T00:51:38.532152",
+    "global_step": 20,
+    "training_seed": 43,
+    "data_seed": 43,
+    "adapter_sha256": "03932678b829b267465640ecb05d2ea1d164a1dd5f85e42bf2d7f7185099b3ae",
+    "training_freeze_sha256": "b4a81937f106d132c14ab76f5893b3639da1e038b3b88607d6883a935838a985",
+    "evaluation_freeze_sha256": "955bd7f0fa373bd85771a9fc23c8aedfbfacdfb158263e2875133f8cf44daff5",
+    "training_proof_sha256": "f36541f9976ebd62d50c042cae355a66d244a5c71e8ede86bc78fecad84338b4",
+    "optimizer_scheduler_step20_verified": true,
+    "RNG_file_present": true,
+    "scope": "One fixedcheckpoint20 release; actual resumption/serverRNG bitwisecontinuation not tested. No mathematical result or candidate selection."
+  },
+  "cost": {
+    "loss_calls": 640,
+    "valid_response_loss_positions": 1096727,
+    "masked_response_positions": 213993,
+    "student_forward_calls": 640,
+    "student_forward_cuda_seconds": 311.16052236938475,
+    "student_processed_input_positions": 1422144,
+    "student_attended_input_positions": 1208151,
+    "teacher_forward_calls": 640,
+    "teacher_forward_cuda_seconds": 372.6875707702637,
+    "teacher_processed_input_positions": 2058596,
+    "teacher_attended_input_positions": 1844603
+  },
+  "timing": {
+    "completed_updates": 20,
+    "generation_tokens": 1096727,
+    "training_wall_seconds": 5344.572546115145,
+    "parent_GPU_hours": 3.07,
+    "generation_seconds": 950.500128434971,
+    "sync_seconds": 1666.3476559016854
+  },
+  "same_ordered_prompt_exposure_as_seed42": false,
+  "same_student_prompt_multiset_as_seed42": false,
+  "TensorBoard_six_series_read_back": true,
+  "scope": "FreshBase training completed; 20 updates, not100. Seed43 data order/exposure may differ from42; same frozen2700 pool and scientificconfiguration. No outcome yet; fixed200 devSW/EN evaluation only now started. Costs counted once, no rerunBase. ServerRNG/checkpoint continuation not tested."
+}

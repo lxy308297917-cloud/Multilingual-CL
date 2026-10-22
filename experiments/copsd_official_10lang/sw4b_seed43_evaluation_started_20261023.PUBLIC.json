@@ -1,0 +1,13 @@
+{
+  "observed_at": "2026-10-23T00:54:18.196165",
+  "queue": "copsd-sw4b-followup-sw43-v1",
+  "phase": "running",
+  "parent_PID": 431164,
+  "started_at": "2026-10-23 00:53:41",
+  "GPU_uuids": [
+    "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+  ],
+  "max_user_gpus": 4,
+  "preflight_SW_and_EN_passed": true,
+  "scope": "SW/EN200 each, fixed native16/n1/8192 originalprefixes; cached Base200 andseed42 retained. No new mathematical result yet."
+}
