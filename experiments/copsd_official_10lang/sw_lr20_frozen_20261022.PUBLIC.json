@@ -1,0 +1,55 @@
+{
+  "frozen_at": "2026-10-22T11:51:58.307332",
+  "protocol": "project_SW_paired_learning_rate20_safe2700_v1",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "training_manifest_relative": "data/copsd_official_20261015/sw_lr20_pool_20261022_v1/MANIFEST.PRIVATE.json",
+  "training_manifest_sha256": "1790b9c4b966747864dc841c0437b21fa7592a1d9d7724e5ed20e22df81643be",
+  "training_rows": 2700,
+  "followup_data_freeze_sha256": "7347ab481206f5c6a63736e30711eaebed767ad95d1d9ad7d24bee264f0561ff",
+  "initial_reference_relative": "models/checkpoint/copsd_prefix20_replicates_v1/sw_17b_prefix20_horizon100_seed42_20261020_v1/COLLOCATE_TRAIN_UPDATES_DONE.json",
+  "initial_reference_sha256": "2c691376346fe18257b669d32c68e635e7781999e7f32cee3776f7b13f67c944",
+  "updates": 20,
+  "scheduler_horizon": 100,
+  "exposures": 640,
+  "training_seed": 42,
+  "max_completion_length": 2048,
+  "effective_batch": 32,
+  "beta": 0,
+  "component_clip": 0.05,
+  "conditions": {
+    "reference": {
+      "learning_rate": 5e-06,
+      "run_id": "sw_17b_reference_lr20_safe2700_seed42_20261022_v1",
+      "checkpoint_relative": "models/checkpoint/copsd_sw_lr20_v1/sw_17b_reference_lr20_safe2700_seed42_20261022_v1",
+      "evaluation_run_ids": {
+        "sw": "sw_17b_reference_lr20_safe2700_seed42_20261022_v1_sw_dev8192",
+        "en": "sw_17b_reference_lr20_safe2700_seed42_20261022_v1_en_dev8192"
+      },
+      "queue": "copsd-sw-lr20-reference-v1"
+    },
+    "lower_lr": {
+      "learning_rate": 1e-06,
+      "run_id": "sw_17b_lower_lr_lr20_safe2700_seed42_20261022_v1",
+      "checkpoint_relative": "models/checkpoint/copsd_sw_lr20_v1/sw_17b_lower_lr_lr20_safe2700_seed42_20261022_v1",
+      "evaluation_run_ids": {
+        "sw": "sw_17b_lower_lr_lr20_safe2700_seed42_20261022_v1_sw_dev8192",
+        "en": "sw_17b_lower_lr_lr20_safe2700_seed42_20261022_v1_en_dev8192"
+      },
+      "queue": "copsd-sw-lr20-lower-lr-v1"
+    }
+  },
+  "code_sha256": {
+    "sw_lr20_entry.py": "98f6a655ff4e97a673220a1c3425f9570f75af1400b1ddec5bf8d7818f4cc1bc",
+    "run_sw_lr20.sh": "cd9c5cbeca8f1e59e21630d8b20093599619aa3a4f8a173c9efac92c35b83f83",
+    "prepare_sw_lr20_pool.py": "38f432801e65dff87dfbd828d315fada7e76452300f8f575a4d7fdc86629aa5e",
+    "matched_pool_single_entry.py": "2e35e1f8ff86025b7eb13ad53a0d7ee2f9b66d10e0660dad30d04cedd2017e63",
+    "prefix20_entry.py": "81ba90b135cdd88288e15d89bcc621233a5d690ee6bcfbafab5e578e10a1b2e4",
+    "run_dev8192.sh": "2d0fd3bd3ab4927956042a5685affd7df9a06e0ea64fb02aa21788051f2c465c",
+    "evaluate_dev8192.py": "f79c70172a14b193d7e1b43aaeb818d1f4355b2c0d567b111a66f978e0391ba1",
+    "freeze_vllm_eval.py": "4794b541b8170dc95384747e8040bd7c5feb0b625be1f084ae4858f411cf4354"
+  },
+  "evaluation_protocol": "Existing originaldev100 n1/8192 native16, SW andEN, fixedsameBase andprompt/sampling/scorer. No formal tests or followup200 reevaluation.",
+  "selection_rule": "Originaldev100 exploratory configuration diagnostic only. Report target/English raw paired counts, exposure-token costs and completion. Joint improvement screen requires SW above sameBase and Pareto improvement over fresh reference (neither target norEN lower, at least one strictly higher). One training seed cannot establish repair or select3 languages; no extra LR sweep, checkpoints or seeds automatically launched.",
+  "scope": "Fresh paired runs on the same heldout-safe2700 pool; only learning_rate differs5e-6 vs1e-6. Removing followup200 changes the sampler relative to old2900 cohort, hence both conditions are freshly run and not ranked against historical20 models as a single-factor comparison. Core official loss/teacher/AdamW/2048 rollout and100-step LR schedule retained. No sequential experiment or new mechanism."
+}

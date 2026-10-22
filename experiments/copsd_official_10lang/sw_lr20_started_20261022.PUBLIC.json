@@ -1,0 +1,37 @@
+{
+  "observed_at": "2026-10-22T11:53:57.330365",
+  "protocol": "project_SW_paired_learning_rate20_safe2700_v1",
+  "actual_wrapper_prepare_only_passed_for_both_conditions": true,
+  "heldout_ID_and_normalized_English_overlap": 0,
+  "rows": 2700,
+  "expected_unique_exposures_per_condition": 640,
+  "scheduler_horizon": 100,
+  "stop_after_updates": 20,
+  "initial_policy_reference_pinned": true,
+  "core_trainer_loss_optimizer_teacher_unchanged": true,
+  "conditions": {
+    "reference": {
+      "queue": "copsd-sw-lr20-reference-v1",
+      "phase": "running",
+      "monitor_pid": 242372,
+      "job_pid": 242655,
+      "gpu_uuids": [
+        "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+      ],
+      "learning_rate": 5e-06,
+      "max_user_gpus": 4
+    },
+    "lower_lr": {
+      "queue": "copsd-sw-lr20-lower-lr-v1",
+      "phase": "running",
+      "monitor_pid": 242381,
+      "job_pid": 242739,
+      "gpu_uuids": [
+        "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39"
+      ],
+      "learning_rate": 1e-06,
+      "max_user_gpus": 4
+    }
+  },
+  "scope": "Real wrapperCPU+queue validation and manual start. Not finished training or a method-effect result. Training/evaluation evidence remains required."
+}
