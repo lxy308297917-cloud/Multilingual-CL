@@ -1,0 +1,32 @@
+{
+  "frozen_at": "2026-10-22T23:48:17.686380",
+  "protocol": "project_SW4B_nativeLoRA_eval_throughput16_32_v1",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "reference_config_relative": "logs/copsd_official_10lang/development_vllm8192/sw_4b_server_pilot20_safe2700_horizon100_seed42_20261022_v1_sw_dev8192/CONFIG.json",
+  "reference_config_sha256": "eb6b56d8e4fc05a132b7fb333beea25b06195b52ecec2304ff0f1a4ae9d38626",
+  "input_sha256": "cf2c0e6b802e5c88de9398a859a894c96d99b9207618211359c796134c24a87c",
+  "adapter_sha256": "0d673e7df9b3f04f67fd5514be96f0039e0ede03e66eed3ef119a5cb7cc4f28b",
+  "output_relative": "logs/copsd_official_10lang/benchmark_native4b_16_32_20261022_v1",
+  "modes": [
+    16,
+    32
+  ],
+  "selection": "First32 alreadyfixeddevelopment problems ininput order, bothSW/English;64 compositeIDs. No filteringbyanswer correctness, length orformaltest.",
+  "max_new_tokens": 8192,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "samples": 1,
+  "question_seed": 42,
+  "max_account_GPUs": 4,
+  "GPU_count": 1,
+  "scope": "Evaluation throughput only, not OPDtraining ormathematical efficacy. One trial permode onsameGPU infreshprocesses,16then32. Recordtokens/s,samples/s,wall,peak,termination andactualtoken differences; notclaim exactequivalence fromsame questionseeds. Existing16-mode scientificruns remainfrozen.",
+  "stop_rule": "Exactly16/32 two modes, no automatic64/grid orretries. Futureadoption onlyafteractualthroughput/memory evidence anduniformprotocol forfuturemodel comparisons; no rescore/relabel ofcurrentformal/dev results.",
+  "code_sha256": {
+    "benchmark_eval_concurrency4b.py": "e8b12def8fedc8947bf2a8e128b41fcfca41efcfb0dc1394ada9b76c64dc5b0e",
+    "run_eval_concurrency4b.sh": "f2e6dd177d6fee7a2660f7056d9af8957c99dddda0fb63eb7a4fb23cbb876541",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9"
+  },
+  "minimum_sampled_free_MiB_for_future_adoption": 1024,
+  "telemetry_scope": "NVML1-second samples ofused/free/utilization; not a guarantee that transient peaks werecaptured. GPUfree measured directly, not total-minusused inferredheadroom."
+}
