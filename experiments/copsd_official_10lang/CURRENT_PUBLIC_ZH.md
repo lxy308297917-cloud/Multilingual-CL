@@ -532,3 +532,16 @@ server-v2父任务已exit0，旧训练／推理PID均退出。完整64题、两�
 预先固定的探索筛查：SW正确数高于同4BBase且英语正确数不低于Base，才考虑第二seed和固定额外200题确认；未通过则保留负结果，不自动做LR／裁剪／checkpoint网格，不直接扩大100步、十语或顺序实验。
 
 [两卡完整资源验收](sw4b_server_resource_v2_completed_20261022.PUBLIC.json) · [显存余量口径](sw4b_server_resource_memory_note_20261022.PUBLIC.json) · [SW20独立配置](sw4b_server_pilot20_frozen_20261022.PUBLIC.json)。
+
+
+## 16:18 SW4B先导checkpoint5已保存，Base SW开发结果完成
+
+已核验checkpoint5的trainer／optimizer／scheduler步数均为5，RNG存在；该保存边界160次学生／教师前向、265,614有效回答loss位置。首160次真实student／teacher输入哈希与新鲜1.7B参考完全相同，这是输入／题序身份确认，不等于模型、轨迹或后端数值等价。
+
+同4BBase的SW原开发100题、n1／8192／native16已完成，正确7/100，生成570,094 token。英语Base与训练后SW／EN结果尚未齐，不能从Base分数判断OPD收益；checkpoint5不用于改选训练步数，仍按冻结配置完成20更新。
+
+已准备最终配对汇总器，只在训练和两类评测父任务全部exit0后核对四组100条输出、固定提示／seed／模型与评分协议、训练实际曝光、原始正确数与配对得失，计入唯一父任务成本并读回TensorBoard。当前仅编译通过，未执行未完成数据的效果汇总。
+
+给ChatGPT的交接另补充了已经完成的BN真实轨迹CPU梯度重放：128位置中23处教师top-token吸引梯度、29处词表梯度相对未裁剪KL反向，LoRA局部余弦−0.603793；同时保留CPU FP32／重新分词／非原始GPU重放的限制。此为旧证据归纳，没有重复实验。
+
+[checkpoint5与BaseSW证据](sw4b_server_pilot20_checkpoint5_20261022.PUBLIC.json) · [最终配对汇总器](summarize_sw4b_server_pilot20.py)。

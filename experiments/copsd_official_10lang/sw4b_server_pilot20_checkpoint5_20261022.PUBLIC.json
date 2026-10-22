@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-10-22T16:18:35.660471",
+  "protocol": "independent_SW4B_dedicated_server_fresh_pilot20_v1",
+  "checkpoint_global_step": 5,
+  "optimizer_scheduler_RNG_present": true,
+  "completed_microsteps_at_saved_boundary": 160,
+  "first160_actual_student_and_teacher_prompts_match_fresh1_7B_reference": true,
+  "cost_at_checkpoint5": {
+    "loss_calls": 160,
+    "valid_response_loss_positions": 265614,
+    "masked_response_positions": 62066,
+    "student_forward_calls": 160,
+    "student_forward_cuda_seconds": 77.73423703002929,
+    "student_processed_input_positions": 354652,
+    "student_attended_input_positions": 292586,
+    "teacher_forward_calls": 160,
+    "teacher_forward_cuda_seconds": 95.02522760009765,
+    "teacher_processed_input_positions": 517788,
+    "teacher_attended_input_positions": 455722,
+    "global_step": 5
+  },
+  "same4BBase_SW_originaldev100_correct": 7,
+  "same4BBase_SW_items": 100,
+  "same4BBase_SW_generated_tokens": 570094,
+  "same4BBase_SW_DONE_sha256": "f4cc876457d9b3a1fea7d5c896fd485a47c2d716d2526b85d8574759acec73dd",
+  "checkpoint5_used_for_efficacy_selection": false,
+  "training_completed": false,
+  "screen_result_available": false,
+  "scope": "Intermediate restoration-state/data-identity milestone only. BaseSW case complete, EnglishBase andSW20 paired outcomes remain pending; no4B OPD benefit claim."
+}
