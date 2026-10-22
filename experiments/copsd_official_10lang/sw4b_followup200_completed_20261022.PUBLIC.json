@@ -1,0 +1,155 @@
+{
+  "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+  "completed_at": "2026-10-22T22:18:44.146262",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "data_freeze_sha256": "4f11008869256815bdb2722cb243e478267d1bedd741011aa96082597b2f50e3",
+  "languages": {
+    "sw": {
+      "paired": {
+        "Base_correct": 16,
+        "checkpoint_correct": 62,
+        "gained": 50,
+        "lost": 4,
+        "delta_correct": 46,
+        "paired_question_bootstrap95_CI_pp": [
+          16.5,
+          29.5
+        ],
+        "bootstrap_seed": 20261022,
+        "bootstrap_replicates": 10000,
+        "uncertainty_scope": "Questions for this one fixed model pair only, not trainingseed population or multiplicityadjusted inference."
+      },
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 16,
+            "generated_tokens": 1106114,
+            "truncated": 117,
+            "normal_terminations": 83,
+            "answer_extraction_failures": 115,
+            "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.08,
+            "generation_seconds": 2105.987488238141,
+            "model_load_seconds": 12.302545933052897,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "sw4b_followup200_Base_sw_20261022_v1",
+            "items_sha256": "fcdeac98e50a72f8118ef8b9a03c1e1493efc11d8aba0cc9c8ed5f5063518a37",
+            "config_sha256": "72fcfcd9acc563f33b764493bd0274168d88caa1eed3a313e4932b2251de4880"
+          }
+        },
+        "SW20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 62,
+            "generated_tokens": 783189,
+            "truncated": 38,
+            "normal_terminations": 162,
+            "answer_extraction_failures": 37,
+            "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.31,
+            "generation_seconds": 3969.133559944108,
+            "model_load_seconds": 13.87051821127534,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "sw4b_followup200_SW20_sw_20261022_v1",
+            "items_sha256": "064567a16240542265c7326ede5a7ca02ebc1de3f8e0206b6863a5a84a0fe7e7",
+            "config_sha256": "f2f9ba541ef93a6be073e5324902e441ac8dad76f8e6e37a657dd57370c3c4e1"
+          }
+        }
+      }
+    },
+    "en": {
+      "paired": {
+        "Base_correct": 166,
+        "checkpoint_correct": 158,
+        "gained": 4,
+        "lost": 12,
+        "delta_correct": -8,
+        "paired_question_bootstrap95_CI_pp": [
+          -8.0,
+          0.0
+        ],
+        "bootstrap_seed": 20261022,
+        "bootstrap_replicates": 10000,
+        "uncertainty_scope": "Questions for this one fixed model pair only, not trainingseed population or multiplicityadjusted inference."
+      },
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 166,
+            "generated_tokens": 848945,
+            "truncated": 18,
+            "normal_terminations": 182,
+            "answer_extraction_failures": 12,
+            "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.83,
+            "generation_seconds": 1536.7818765956908,
+            "model_load_seconds": 13.593198273330927,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "sw4b_followup200_Base_en_20261022_v1",
+            "items_sha256": "340c9dbb7b4831bc2fe8c7a02adcc666030121939205bdca27bfdec4724a5b3e",
+            "config_sha256": "629469b2d0337be803ccae7b7933d0601e2b29627ea9b14a1208e2ff40663404"
+          }
+        },
+        "SW20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 158,
+            "generated_tokens": 898783,
+            "truncated": 26,
+            "normal_terminations": 174,
+            "answer_extraction_failures": 21,
+            "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.79,
+            "generation_seconds": 4032.2550834398717,
+            "model_load_seconds": 13.437970720231533,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "sw4b_followup200_SW20_en_20261022_v1",
+            "items_sha256": "729e8b092a34b923e07fc349f825ce4f4901a606cf5e3a71470347a4cf081c6c",
+            "config_sha256": "45b003230d7772e344608805c802d7770c1d3465f8b3cbe91a73834ccb3adb95"
+          }
+        }
+      }
+    }
+  },
+  "unique_parent_costs": [
+    {
+      "queue": "copsd-sw4b-followup-base-v1",
+      "parent_GPU_hours_counted_once": 1.0555555555555556,
+      "evaluation_cases": 2,
+      "training_updates": 0
+    },
+    {
+      "queue": "copsd-sw4b-followup-sw20-v1",
+      "parent_GPU_hours_counted_once": 2.2666666666666666,
+      "evaluation_cases": 2,
+      "training_updates": 0
+    }
+  ],
+  "parent_GPU_hours": 3.322222222222222,
+  "new_generated_tokens": 3637031,
+  "TensorBoard_four_accuracies_two_costs_read_back": true,
+  "scope": "Fixed200 excluded from4B2700 training, used previously for1.7B analysis; not newlyblind or formaltests. One4Btrainingseed, no3-language selection. Same native languageprompts forBase/SW20, English-prefix controls remainoriginal100 only.",
+  "summarizer_sha256": "174f9b2e5d6d108fdfc4183160bdea55994e97300487e2be4591dddfc2a44d7d"
+}

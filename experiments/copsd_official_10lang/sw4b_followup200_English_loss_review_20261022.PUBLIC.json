@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-10-22T22:21:32.339044",
+  "scope": "All twelve pairedEnglish losses considered; official166->158 unchanged. Ten truncated with no extracted answer, two normallyterminated boxing/representation cases reviewed; not a proof that all Englishknowledge was lost or retained.",
+  "source_items_sha256": [
+    "340c9dbb7b4831bc2fe8c7a02adcc666030121939205bdca27bfdec4724a5b3e",
+    "729e8b092a34b923e07fc349f825ce4f4901a606cf5e3a71470347a4cf081c6c"
+  ],
+  "lost_IDs": [
+    "b1ad5c34092727006c383447394cc454b044f4e0127f8162fa29328e2eabc795",
+    "519c0d26c51fc412dd5d277b34739055b157866c35c4e8786a58003ec7ccbcf3",
+    "7c1ee7d7911876f10cee030489ee1c3f02aae159cbe8d6e1f379d09bb1c50546",
+    "8347d35eb19b1891e123c1db459d0f66247016db43640e08488e7d175f2832d7",
+    "9ab9f6b78450632c4f6a5cadedac962b33c5c184f76a101db3ca55387e8f667c",
+    "9c31ee765522973590dd6ea03a4e801884fe86bffcf896649a6c5bcc949195ec",
+    "104134cdea1216a44bfa6c09d22919508e505bf7b56daa24f8176ea4c226928e",
+    "597a632c6c288d954d4a3a4b242cdbbe05ca01178c22850467a43c822663f0a7",
+    "86be2bd5ab244d197282b66614ecda10b2f64343a088b5fc116f0463ace8dba6",
+    "0b59a1432e6270e87c8807016788f36c76d0e5e1275b7c1fb723d7d50bdd4435",
+    "f945f737ead0d24356a1c5f8ec0d1c2539d435bb37844f1a746a34a98d1179fb",
+    "b53f52a921ae847815d911cb26554024f03824d5f74d525cce46a24b95915c94"
+  ],
+  "truncated_losses": 10,
+  "normal_termination_losses": 2,
+  "normal_termination_reviews": [
+    {
+      "id": "7c1ee7d7911876f10cee030489ee1c3f02aae159cbe8d6e1f379d09bb1c50546",
+      "official_reference": "AB = 2 \\times AC",
+      "boxed": "\\text{One of the sides is half the length of another.}",
+      "review": "Saved response body contains the reference relation; boxedanswer is a generic statement/Yes, causing official answer-format mismatch. Fullproof correctness not independently validated; no score change."
+    },
+    {
+      "id": "0b59a1432e6270e87c8807016788f36c76d0e5e1275b7c1fb723d7d50bdd4435",
+      "official_reference": "A = B = C",
+      "boxed": "Yes",
+      "review": "Saved response body contains the reference relation; boxedanswer is a generic statement/Yes, causing official answer-format mismatch. Fullproof correctness not independently validated; no score change."
+    }
+  ],
+  "no_new_generations": true,
+  "no_rescoring": true
+}

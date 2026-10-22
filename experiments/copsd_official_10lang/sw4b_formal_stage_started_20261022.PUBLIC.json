@@ -1,0 +1,80 @@
+{
+  "observed_at": "2026-10-22T22:28:46.275523",
+  "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+  "jobs": [
+    {
+      "queue": "copsd-sw4b-formal-base-mgsm-v1",
+      "monitor_pid": 421064,
+      "job_pid": 421210,
+      "GPU_indices": [
+        0
+      ],
+      "GPU_UUIDs": [
+        "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+      ],
+      "started_at": "2026-10-22 22:27:12",
+      "script_sha256": "015d63eea22293ca67d31a1633397784d2362c900b276fb0711e7dfa083480bd",
+      "args": [
+        "Base",
+        "mgsm_rev2"
+      ]
+    },
+    {
+      "queue": "copsd-sw4b-formal-base-gsm-v1",
+      "monitor_pid": 421074,
+      "job_pid": 421235,
+      "GPU_indices": [
+        2
+      ],
+      "GPU_UUIDs": [
+        "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39"
+      ],
+      "started_at": "2026-10-22 22:27:21",
+      "script_sha256": "015d63eea22293ca67d31a1633397784d2362c900b276fb0711e7dfa083480bd",
+      "args": [
+        "Base",
+        "gsm8k"
+      ]
+    },
+    {
+      "queue": "copsd-sw4b-formal-sw20-mgsm-v1",
+      "monitor_pid": 421083,
+      "job_pid": 421258,
+      "GPU_indices": [
+        3
+      ],
+      "GPU_UUIDs": [
+        "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573"
+      ],
+      "started_at": "2026-10-22 22:27:29",
+      "script_sha256": "015d63eea22293ca67d31a1633397784d2362c900b276fb0711e7dfa083480bd",
+      "args": [
+        "SW20",
+        "mgsm_rev2"
+      ]
+    },
+    {
+      "queue": "copsd-sw4b-formal-sw20-gsm-v1",
+      "monitor_pid": 421092,
+      "job_pid": 421281,
+      "GPU_indices": [
+        4
+      ],
+      "GPU_UUIDs": [
+        "GPU-ee1d45df-ce8d-a153-e27b-9b872b09041a"
+      ],
+      "started_at": "2026-10-22 22:27:36",
+      "script_sha256": "015d63eea22293ca67d31a1633397784d2362c900b276fb0711e7dfa083480bd",
+      "args": [
+        "SW20",
+        "gsm8k"
+      ]
+    }
+  ],
+  "max_account_GPUs": 4,
+  "CPU_preflight_MGSM_SW20_and_GSM_Base_passed": true,
+  "queue_validation_passed_four": true,
+  "new_training": false,
+  "result_pending": true,
+  "scope": "Four fixed-model formalreporting tasks launched; GPUloading/generation observed separately. No officialpass12 or formalscore claim beforeDONE."
+}

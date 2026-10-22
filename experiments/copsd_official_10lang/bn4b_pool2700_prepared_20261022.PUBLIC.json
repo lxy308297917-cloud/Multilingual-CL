@@ -1,0 +1,16 @@
+{
+  "prepared_at": "2026-10-22T21:59:58.864167",
+  "language": "bn",
+  "rows": 2700,
+  "source_relative": "data/copsd_official_20261015/adapted_v2_ordered/project_train_2900_bn.json",
+  "source_sha256": "c59527c7daa1a44ee0d995e8b3002943db22ca71730d2f045f3acc7919741920",
+  "data_relative": "data/copsd_official_20261015/bn4b_pool2700_20261022_v1/project_train_2700_bn.PRIVATE.json",
+  "data_sha256": "0f60cae5eac851910b962aaf0e844f97415dac6fe00dc6b49b4a388aec7e2994",
+  "ordered_problem_IDs_sha256": "443e4e8801045a5a0635721b1cc649d9f3f137dfd90eac4e1cc6de0a682891d6",
+  "same_order_and_English_question_solution_answer_as_SW2700": true,
+  "normalized_English_and_ID_overlap_with_original100_and_reserved200": 0,
+  "source_rows_preserved_except_filtering_and_order": true,
+  "new_training_started": false,
+  "scope": "Data interface preparation only for a separate4B extension, not a trainedmodel or selectedlanguage. JA uses the previously recorded one-row prefix repair; no new rewriting or target-language solution synthesis.",
+  "builder_sha256": "2db3c44a85ab148892a83963b5aae961691a70b7698b884d669a6a971daee2bd"
+}

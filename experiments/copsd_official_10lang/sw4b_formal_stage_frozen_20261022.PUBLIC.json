@@ -1,0 +1,57 @@
+{
+  "frozen_at": "2026-10-22T22:23:01.389983",
+  "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "model_lock_relative": "logs/copsd_official_10lang/qwen3_4b_resource_model_20261022.PRIVATE.json",
+  "model_lock_sha256": "da93cc99e733b95250ab5934e66413d3926580d20a2a43c8f8d2acf35a78cb7a",
+  "max_account_GPUs": 4,
+  "inputs": {
+    "mgsm_rev2": {
+      "relative": "data/math_single_10lang_20261015/mgsm_rev2/MGSM-Rev2/mgsm_sw.tsv",
+      "sha256": "7a23573f28ab82504f5436f18f4168f1807103756905d82495828b69148739d5",
+      "items": 250,
+      "language": "sw"
+    },
+    "gsm8k": {
+      "relative": "data/copsd_official_20261015/gsm8k_project_en_zeroshot_v1/gsm8k_en_test_1319.json",
+      "sha256": "b6eac877fdf0fb2baf8273f3cb7771ea083ebbc4f1862056f771fc56daec72e2",
+      "items": 1319,
+      "language": "en"
+    }
+  },
+  "cases": {
+    "Base": {
+      "adapter_relative": null,
+      "adapter_sha256": null,
+      "run_ids": {
+        "mgsm_rev2": "sw4b_formal_Base_mgsm_rev2_sw_20261022_v1",
+        "gsm8k": "sw4b_formal_Base_gsm8k_en_20261022_v1"
+      }
+    },
+    "SW20": {
+      "adapter_relative": "models/checkpoint/copsd_sw4b_server_pilot20_v1/sw_4b_server_pilot20_safe2700_horizon100_seed42_20261022_v1/checkpoint-20",
+      "adapter_sha256": "0d673e7df9b3f04f67fd5514be96f0039e0ede03e66eed3ef119a5cb7cc4f28b",
+      "run_ids": {
+        "mgsm_rev2": "sw4b_formal_SW20_mgsm_rev2_sw_20261022_v1",
+        "gsm8k": "sw4b_formal_SW20_gsm8k_en_20261022_v1"
+      }
+    }
+  },
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "samples": 1,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "seed": 42,
+  "scope": "Fourcase formal reporting ofthe alreadyfixedBase/checkpoint20, not configuration/language/checkpoint selection fromtest scores. Originalnative languageprefixes; no promptgrid, training or officialpass12 claim. PolyMathsupplement not included inthis bounded stage.",
+  "selection_status": "No3languages selected; one4Btrainingseed. DevelopmentSWgain andEnglishcost are recorded independently fromthese formaltests.",
+  "runtime_code_sha256": {
+    "evaluate_sw4b_formal8192.py": "3577d96aaf704ae1405f5e6b73b344e3d3385115925a3d7eedb9ce4ec8902267",
+    "run_sw4b_formal8192.sh": "015d63eea22293ca67d31a1633397784d2362c900b276fb0711e7dfa083480bd",
+    "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d"
+  }
+}
