@@ -1,0 +1,181 @@
+{
+  "status": "POSTHOC format sensitivity diagnostic, not a preregistered primary, confirmation set, or selection criterion",
+  "why": "Cached dense models give correct plain-language numbers but omit boxed/explicit-colon format, causing frozen primary scores of zero. Apply the pre-existing local harness flexible-extract regex and metric cleanup uniformly to all nine endpoints.",
+  "local_task_file": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/harness_local/lm_eval/tasks/gsm8k/gsm8k.yaml",
+  "local_task_sha256": "442b817bc83138ec89bd30ea9d6b4acac977dfc4653c177ad778f354c8543d29",
+  "regex_filter_source": "/data0/users/lixiaoyang/reproductions/sw_d2_20260921/harness_local/lm_eval/filters/extraction.py",
+  "regex_filter_source_sha256": "d62d2d6f03fff4c9d6a3141b3cdd1c2398ddf0c12e7d2e90998101b4e17d103c",
+  "regex": "(-?[$0-9.,]{2,})|(-?[0-9]+)",
+  "cleanup_regexes": [
+    ",",
+    "\\$",
+    "(?s).*#### ",
+    "\\.$"
+  ],
+  "script_sha256": "0269729fef382b07914e1176fc23e639baa7f9781f36ffed1ba16f73385c8c63",
+  "limits": "Last-number extraction can select an intermediate number, mishandle scientific notation/fractions, or disagree with a valid earlier boxed answer. These are held-out TRAIN-side chat outputs, not the harness official test/few-shot scores. No change to prompts, caps, original predictions, primary decisions, or upgrade release.",
+  "new_gpu_forward_calls": 0,
+  "models": {
+    "sparse-Base": {
+      "n": 128,
+      "primary_format_sensitive_numeric_percent": 78.90625,
+      "POSTHOC_local_GSM8K_flexible_extract_percent": 74.21875,
+      "flex_correct_primary_incorrect": 4,
+      "primary_correct_flex_incorrect": 10,
+      "no_numeric_match": 0,
+      "capped": 0
+    },
+    "sparse-A2048": {
+      "n": 128,
+      "primary_format_sensitive_numeric_percent": 18.75,
+      "POSTHOC_local_GSM8K_flexible_extract_percent": 36.71875,
+      "flex_correct_primary_incorrect": 24,
+      "primary_correct_flex_incorrect": 1,
+      "no_numeric_match": 0,
+      "capped": 1
+    },
+    "sparse-D2048": {
+      "n": 128,
+      "primary_format_sensitive_numeric_percent": 41.40625,
+      "POSTHOC_local_GSM8K_flexible_extract_percent": 50.0,
+      "flex_correct_primary_incorrect": 16,
+      "primary_correct_flex_incorrect": 5,
+      "no_numeric_match": 0,
+      "capped": 0
+    },
+    "sparse-R2048": {
+      "n": 128,
+      "primary_format_sensitive_numeric_percent": 42.1875,
+      "POSTHOC_local_GSM8K_flexible_extract_percent": 42.1875,
+      "flex_correct_primary_incorrect": 0,
+      "primary_correct_flex_incorrect": 0,
+      "no_numeric_match": 0,
+      "capped": 0
+    },
+    "align-Base": {
+      "n": 128,
+      "primary_format_sensitive_numeric_percent": 78.90625,
+      "POSTHOC_local_GSM8K_flexible_extract_percent": 74.21875,
+      "flex_correct_primary_incorrect": 4,
+      "primary_correct_flex_incorrect": 10,
+      "no_numeric_match": 0,
+      "capped": 0
+    },
+    "align-A": {
+      "n": 128,
+      "primary_format_sensitive_numeric_percent": 0.0,
+      "POSTHOC_local_GSM8K_flexible_extract_percent": 36.71875,
+      "flex_correct_primary_incorrect": 47,
+      "primary_correct_flex_incorrect": 0,
+      "no_numeric_match": 0,
+      "capped": 3
+    },
+    "align-B": {
+      "n": 128,
+      "primary_format_sensitive_numeric_percent": 0.0,
+      "POSTHOC_local_GSM8K_flexible_extract_percent": 36.71875,
+      "flex_correct_primary_incorrect": 47,
+      "primary_correct_flex_incorrect": 0,
+      "no_numeric_match": 0,
+      "capped": 1
+    },
+    "align-C": {
+      "n": 128,
+      "primary_format_sensitive_numeric_percent": 0.0,
+      "POSTHOC_local_GSM8K_flexible_extract_percent": 35.15625,
+      "flex_correct_primary_incorrect": 45,
+      "primary_correct_flex_incorrect": 0,
+      "no_numeric_match": 0,
+      "capped": 1
+    },
+    "align-D": {
+      "n": 128,
+      "primary_format_sensitive_numeric_percent": 0.0,
+      "POSTHOC_local_GSM8K_flexible_extract_percent": 34.375,
+      "flex_correct_primary_incorrect": 44,
+      "primary_correct_flex_incorrect": 0,
+      "no_numeric_match": 0,
+      "capped": 1
+    }
+  },
+  "paired_source_cluster_intervals": {
+    "sparse-D2048-sparse-A2048": {
+      "metric": "POSTHOC_local_GSM8K_flexible_extract",
+      "delta_left_minus_right": 13.28125,
+      "paired95percentCI": [
+        3.125,
+        23.4375
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 128,
+      "n": 128,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "sparse-D2048-sparse-R2048": {
+      "metric": "POSTHOC_local_GSM8K_flexible_extract",
+      "delta_left_minus_right": 7.8125,
+      "paired95percentCI": [
+        -1.5625,
+        17.1875
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 128,
+      "n": 128,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "align-C-align-B": {
+      "metric": "POSTHOC_local_GSM8K_flexible_extract",
+      "delta_left_minus_right": -1.5625,
+      "paired95percentCI": [
+        -10.15625,
+        7.03125
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 128,
+      "n": 128,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "align-D-align-B": {
+      "metric": "POSTHOC_local_GSM8K_flexible_extract",
+      "delta_left_minus_right": -2.34375,
+      "paired95percentCI": [
+        -10.9375,
+        6.25
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 128,
+      "n": 128,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "align-C-align-A": {
+      "metric": "POSTHOC_local_GSM8K_flexible_extract",
+      "delta_left_minus_right": -1.5625,
+      "paired95percentCI": [
+        -9.375,
+        6.25
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 128,
+      "n": 128,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "align-D-align-A": {
+      "metric": "POSTHOC_local_GSM8K_flexible_extract",
+      "delta_left_minus_right": -2.34375,
+      "paired95percentCI": [
+        -10.15625,
+        5.46875
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 128,
+      "n": 128,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    }
+  }
+}

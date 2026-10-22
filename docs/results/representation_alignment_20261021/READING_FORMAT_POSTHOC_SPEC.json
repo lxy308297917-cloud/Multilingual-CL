@@ -1,0 +1,13 @@
+{
+  "status": "POSTHOC diagnostic specification, fixed after inspecting first four RACE output cases; not preregistered primary and not used for selection",
+  "fixed_at_local": "2026-10-22T05:44:34.558001",
+  "script_sha256": "23479ee62190aefffbbc54c4b902a046542e69806f09b0971dbc921f22e1bab3",
+  "scope": "All nine cached complete development endpoints, 256 RACE sources each; no new GPU forward and no prompt/reference change",
+  "rules": [
+    "Preserve all frozen strict primary scores and screening decisions",
+    "Accept bare A/B/C/D, anchored punctuated label, anchored explicit answer declaration, or exact unique full option content",
+    "Reject multiple option-line or otherwise unparsed responses",
+    "Report same paired source-cluster 10000-bootstrap intervals as exploratory only"
+  ],
+  "reason": "Strict format scoring and original explicit fallback classify correct A. option-content responses as incorrect; near-zero primary scores are not reading ability near zero."
+}

@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "frozen_before_scores": true,
+  "model": "Qwen2.5-1.5B-Instruct",
+  "trainable": "all original model parameters, 338 tensors; no LoRA, no element mask",
+  "main": {
+    "steps": 4293,
+    "input_tokens": 1536351,
+    "supervised_tokens": 599469,
+    "seed": 42,
+    "micro_batch": 1,
+    "gradient_accumulation": 2,
+    "full_lr_schedule_steps": 42465,
+    "warmup_steps": 2124,
+    "peak_lr": 5e-05,
+    "weight_decay": 0.01,
+    "clip_norm": 1,
+    "loss": "equal per-example mean shifted CE",
+    "AdamW_moments": "BF16, same torchAdamW policy as verified previous dense recipe",
+    "deterministic_algorithms": true,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "auxiliary": {
+    "frequency_steps": 4,
+    "pairs_per_event": 8,
+    "pool_pairs": 2000,
+    "order": "SHA256(aux42:+ID), cycle in order, identical B/C/D",
+    "coefficient": 0.1,
+    "B": "mean of 16 original translation CE examples (two directions for each of 8 pairs)",
+    "C": "mean 1-cos(current SW mean-pool, cached Base EN mean-pool)",
+    "D": "SW-to-fixed-EN-bank InfoNCE, all 2000 teacher targets, temperature .07",
+    "teacher": "frozen Base offline cache, no gradient; costs included separately",
+    "data_matching_limits": "B processes both directions with prompts/labels; C/D SW content only plus amortized offline EN. Equal pair accesses, unequal tokens/F-B measured separately. Fixed .1 coefficients have different loss scales; one configuration only, no tuning after downstream scores.",
+    "microbatch_examples": 4,
+    "batching_note": "Before any downstream score: equal mean CE/InfoNCE per-example weights and8pairs/event unchanged; fixed2000-target bank means negatives unchanged; only grouped auxiliary forwards/backwards (B16examples as4x4, C/D8as2x4). BF16 accumulation order differs from archived serial technical prototype. Main effective batch unchanged."
+  },
+  "layer_selection": "Base representation dev only; highest mean-pool average bidirectional cosine P@1 among hidden_states1..28, ties nearest14 then lower",
+  "screening": {
+    "one_seed": true,
+    "endpoint_only": 4293,
+    "no_formal_test": true,
+    "max_additional_variants": 0,
+    "primary": "independent SW reading+translation and EN reading+instruction+math dev, paired outputs",
+    "upgrade": "alignment must beat same-pool CE on real SW tasks without >2 percentage point extra EN accuracy loss vs A; exploratory single-seed evidence, confirm with seeds and shuffled pairing before long run",
+    "stop": "no downstream gain beyond CE or throughput/memory/budget gate failure; no automatic scale-up",
+    "fixed_task_gate": {
+      "primary_benefit": "EN-to-SW chrF++ versus align-B paired95CI lower>0 for C and D separately",
+      "SW_noninferiority": "versus B: SWreading tokenF1 lowerCI >=-2points; SW-to-EN chrF++ lowerCI>=-1",
+      "EN_retention": "versus A: EN reading/math/instruction primary paired95CI lower>=-2points each",
+      "interpretation": "Exploratory two-variant screen, report both and all tasks, no confirmatory multiple-testing claim; passing only permits later discussion, does not automatically start long training"
+    }
+  },
+  "total_gpu_hours_ceiling": 24,
+  "per_train_gpu_hours": 3,
+  "per_development_model_gpu_hours": 1.5,
+  "diagnostics_gpu_hours": 2,
+  "technical_gpu_hours": 1,
+  "deadline": "2026-10-22T20:00:00+08:00",
+  "temporary_account_gpu_limit": 5,
+  "exception_scope": "new sw-align queues only; existing and other account jobs count in total",
+  "development": {
+    "manifest": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-alignment/experiments/paired_capability_sparse_v1/data/dev_v4/manifest.json",
+    "rows": 1024,
+    "tasks": [
+      "SW KenSwQuAD reading128",
+      "published FLORES original dev128 documents bidirectional256",
+      "SW summary128",
+      "EN RACE256",
+      "GSM train-source math128",
+      "IF-multi train-source instruction128"
+    ],
+    "limits": "Not formal Belebele/IFEval/GSM8K test; development proxies with task-specific exact scoring. Same fixed prompts/caps/scorer as sparse comparison. No downstream score used to select alignment layer.",
+    "bootstrap": "10000 paired source-cluster resamples, seed42; report all tasks and controls, no mixed task mean"
+  },
+  "quality": {
+    "local_model": "existing Qwen3-8B BF16; separate from training Qwen2.5-1.5B",
+    "candidate_ceiling": {
+      "train": 3500,
+      "held": 2500
+    },
+    "acceptance": "YES probability among fixed YES/NO labels >= .9 in both input orders; known assistant-reviewed mismatches excluded",
+    "pilot_gate": "reject >=8 of10 clearly mismatched and accept >=25 of36 faithful assistant-reviewed sentinels; observed9/10 and31/36, passed",
+    "budget_gpu_hours": 2,
+    "counts_in_total_24_gpu_hours": true,
+    "postreview_required_before_training": true,
+    "limitation": "Model-assisted semantic filtering is not native-human verification. Pilot missed one named-entity mismatch; blacklist observed mistakes, retain per-pair judgments and disclose residual errors. No threshold tuning on downstream.",
+    "postreview_copy_exclusion": "casefold/whitespace SequenceMatcher ratio>=.65; conservative, may exclude valid named-entity-heavy pairs",
+    "main_Aya_additional_role_audit": "104764 prompt/answer fields of all selected Aya rows, numeric-masked character3-5gram TFIDF .8; 0 candidate-held matches",
+    "manual_postreview": "60 deterministic hash-ranked accepted examples, known mismatches/copy cases excluded; 50 retained examples plus10 replacements reviewed. Some loose or ungrammatical translation remains; not native-human gold."
+  },
+  "recovery": "v1 nondeterministic CUDA failed actual resume-versus-continuous weight equality; v2 independently checks all model weights and moments, unchanged data/loss/learning schedule/budget"
+}

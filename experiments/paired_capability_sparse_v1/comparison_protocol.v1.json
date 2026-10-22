@@ -1,0 +1,253 @@
+{
+  "status": "preregistered_before_new_mastery_or_development_scores; training_requires_separate_code_release",
+  "date": "2026-10-21",
+  "scope": "single3090 Qwen2.5-1.5B-Instruct SW Aya80+MT20; actual-update sparse constraints; no OPD,merging,SVD,dynamic module budgets or multi-language sequence",
+  "frozen_files": {
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/calibration_manifest.v1.json": "fef37dc913febff6a8ed8e6081cd009bef09dbe361feac6714307d24948857a9",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/calibration_pairs.v1.jsonl": "b78a0ff8cf0a114dca5a69a23079ba88b338eacca865beeac8a7350a34574813",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/calibration_review.json": "5a9538ac88bb09fe07205e9db085d9a005bfdcc6a963cdb967bb733631f09c9a",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/TOKEN_BOUNDARY_AUDIT.json": "1862caec294c77ead2c1a979e6da1a38cd9a373593a85e73db78553e905a7d24",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/manifest.json": "3731941520088d501d0480a801d401f4fe5d6b6efbc1f52adbe1df366ddf706f",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/INDEPENDENT_AUDIT.json": "e518e5cde74aea6dbc9cc78b4266d5e12a691dd2c5823c66c364feec6c7badae",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/translation.jsonl": "7be119951d3386eb3cc8852bd04320631062c2fb723e55af28caf4b95d64bf41",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/sw_summary.jsonl": "0c0fd41acd0168315da2cd1ff1fea5d0227711800c69b3de2deaad588ce52bfa",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/en_reading.jsonl": "4b30f30383ca8156096fb4444e3e30ebc1faee2cf48b15bacb77b705c03c8c30",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/sw_reading_kenswquad.jsonl": "8b22e1283a51785e2bd8b7c3bea33e6be1986229be10ea992266e85619d96fe1",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/en_math.jsonl": "882de913c100c2f35f26495775a0195aebd93a91aeb00ff03de379ee00fcc7ea",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/en_instruction.jsonl": "85d035f1c96d9c9a6a828f64bbc775649e5f0ade6cc273deafd987ab678ac04c",
+    "/data0/users/lixiaoyang/data/sw-d2-inputs/d2_bilingual_v1/sw/dev.jsonl": "c6e455c41d0951a1e29edc8a5f8cf62a4fb97bfea532e1a2fdc64782068c09d0",
+    "/data0/users/lixiaoyang/data/sw_d2_next_dev_20261008/sources/xlsum-swahili-train-fcbaaea.parquet": "bc4597720eb9115a403c0523e5592b838bf41bdb7608809cebd6211cb21cb505",
+    "/data0/users/lixiaoyang/data/sw_d2_next_dev_20261008/sources/race-all-train-e37ee6f.parquet": "d9986432dc7b5ced3d3e9372573eafdcfa599920bb5e65bbbdc245df3abfd09e",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/hf_cache/datasets/gsm8k/main/0.0.0/740312add88f781978c0658806c59bc2815b9866/gsm8k-train.arrow": "6146bca074f4c6c5e07de7e96cc968adab3833dbdafeda21830f27558eea3d9b",
+    "/data0/users/lixiaoyang/data/sw_reading_kenswquad_20261009/train.parquet": "405daeda2b8be6f76749fcfc7421781f75a00d031ba1f405baadae807ac7974a",
+    "/data0/users/lixiaoyang/data/sw_d2_next_dev_20261008/sources/if-multi-train-7c1813b.parquet": "edb8baed687cd85ce0602911f6c6cc8c8e657da69a7faba036082fa9618008ee",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/flores_source/metadata_devtest.tsv": "8edac47f861fcf6b54dad2068c10ba8f741da8b8676861c6bc27fcd9f5483b36",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/flores_source/swh_Latn.dev": "59c8ee7cb9a702f32ff3f3e6974f4465db63df0d7172fe0d53c8bd2405daa547",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/flores_source/metadata_dev.tsv": "26e7b00913809be16aa2590e5e252f0a54832eef2de96b3948876878995ec771",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/flores_source/eng_Latn.dev": "51a25f527fd81f428b6933d85a2f5e5544af92aa82042c7fbf0c4120327fba0a",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/flores_source/SOURCE.json": "334a4ad481227c1a0a6ac3254926541cc5d8a116d530b11384f091aed1b3b3ac",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/data/sw_fineweb2_aya_v1/eval_data/sum_sw/test.jsonl": "fc0944ce5676fce5827cf979bda3407121063ae6e28b3ca7060ab16054d4d611",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/data/sw_fineweb2_aya_v1/eval_data/en2sw/test.jsonl": "49d1e9e6d87c4e01d2c91b1cf90bb68acb8dd04b78cceb9c049a936002d94719",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/data/sw_fineweb2_aya_v1/eval_data/sw2en/test.jsonl": "77ddcefc77d5044e2b669fca15c62891a4fef1fd2615b8faabf700b6b324d834",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/data/sw_fineweb2_aya_v1/eval_data/belebele_sw/test.jsonl": "dc1880921443ce9e8f7dda8db0ad2c64789bd93dd23ef188982adc616328062f",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/hf_cache/hub/datasets--google--IFEval/snapshots/966cd89545d6b6acfd7638bc708b98261ca58e84/ifeval_input_data.jsonl": "6a85310ca8ce15eff755aa08a3a4ff931c7e273e7515ebb3c492ea85fd8288f2",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/data/eval_datasets_local/belebele/eng_Latn/test.jsonl": "60f02bd5dd3bef79877bf7de58e1dcf908fd768a03c5cf59edf9d16f0bb80961",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/project/ssu-main/evaluation/src/ifeval.py": "cdcf7e6c7173cb05de0763af5f39b67a8b48e7d3d90b434bec512f5190caab05",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/project/ssu-main/evaluation/src/utils/instructions_registry.py": "9db1c062cdb70a91420d3789a588235a1064c2b9a1a66e09e5fb9df9e7584a6c",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/project/ssu-main/evaluation/src/utils/instructions_util.py": "e8c4d9187bac1482d93941fb46469609c3ae78d896195bfcb300a0707d492567",
+    "/data0/users/lixiaoyang/data/sw-d2-eval-inputs/project/ssu-main/evaluation/src/utils/instructions.py": "2d9670e538e6201665363b9db156fb2c27016b9287eb9790ea55d3520036bb00",
+    "/data0/users/lixiaoyang/reproductions/sw_recipe_fft_20261010/data/aya80_mt20/manifest.json": "db61ee8ce5f3ccb2d9dc2231aac388f6f66e426eb5f4cf37781c06fba2a269fd",
+    "/data0/users/lixiaoyang/reproductions/sw_recipe_fft_20261010/data/aya80_mt20/indices.json": "99cf53c8b300b825095dfe0568cce2c0a79d5359c4d1401ce9583cfd503da8a3",
+    "/data0/users/lixiaoyang/data/sw-d2-inputs/d2_bilingual_v1/sw/train.jsonl": "9d55513d0080cb7a2bcb1aba9d33da8d9943aff00c9ea3b0b738b0e015e1ffbc",
+    "/data0/users/lixiaoyang/models/Qwen2.5-1.5B-Instruct/model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "/data0/users/lixiaoyang/models/Qwen2.5-1.5B-Instruct/config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+    "/data0/users/lixiaoyang/models/Qwen2.5-1.5B-Instruct/tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "/data0/users/lixiaoyang/models/Qwen2.5-1.5B-Instruct/tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "/data0/users/lixiaoyang/models/Qwen2.5-1.5B-Instruct/generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+  },
+  "training": {
+    "steps": 2048,
+    "formal_schedule_total_steps": 42465,
+    "warmup_steps": 2124,
+    "learning_rate_peak": 5e-05,
+    "weight_decay": 0.01,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "main_effective_batch": 2,
+    "main_microbatch": 1,
+    "max_length": 2048,
+    "main_loss": "per-example assistantCE then sample mean; original source IDs/labels/collator; no packing",
+    "seed": 42,
+    "fraction_per_matrix": 0.15,
+    "mask_interval": 20,
+    "guard_gradient_refresh_steps": 1,
+    "mastery_refresh_steps": 512,
+    "calibration_pairs_per_update": 2,
+    "calibration_batch_per_language": 2,
+    "calibration_window": "cyclic fixed two-pair window(2*step+j)mod29; same main and calibration text exposure in all groups",
+    "reference_loss": "reviewed full English solution CE with EOS; identical output-language request for EN/SW input",
+    "replay_alpha": 0.1,
+    "R_gradient": "main +.1*equal mean of EN/SW calibration CE, mixed in native BF16 before global normclip1; FP32 Adam moments",
+    "A_D_E_F_S_gradient": "main target only, normclip1; FP32 moments; calibration gradients independent",
+    "projection": "one global jointQP on mask support; epsilon0; FP64 sufficient statistics",
+    "rounding": "reject whole weight write if BF16 actual residual exceeds1e-12; retain one moment advance",
+    "main_prefix_indices_sha256": "73ad9874c1919d618ac9e38f2dd323ca33475b76d866c6aad7d418dd736268f7",
+    "main_prefix_tokens": {
+      "input": 734542,
+      "supervised": 287963
+    },
+    "main_prefix_bucket_tokens": {
+      "translation_en2target": {
+        "input": 75614,
+        "supervised": 24828
+      },
+      "aya": {
+        "input": 586343,
+        "supervised": 249567
+      },
+      "translation_target2en": {
+        "input": 72585,
+        "supervised": 13568
+      }
+    },
+    "resumable_checkpoint_steps": [
+      1024,
+      2048
+    ]
+  },
+  "comparisons": {
+    "mandatory": [
+      "D",
+      "A",
+      "R"
+    ],
+    "fixed_order": [
+      "D",
+      "A",
+      "R"
+    ],
+    "D": "English mastered-reference update constraint",
+    "A": "original element sparsity, no protection",
+    "R": "matched exposure replay/auxiliary CE",
+    "conditional": [
+      "E",
+      "F",
+      "S"
+    ],
+    "C_strong_baseline": "Required before any affirmative long-training novelty claim; old HFT/SSU endpoints are historical and not same-recipe prefix controls"
+  },
+  "mastery": {
+    "sample_budget": "onegreedy+samples17,18,19 per source-language at each fixed snapshot",
+    "greedy_correct_and_sample_successes_required": 2,
+    "max_new_tokens": 512,
+    "temperature": 0.7,
+    "top_p": 1.0,
+    "top_k": 0,
+    "cache_batch_size": 4,
+    "Base_floor": "immutable",
+    "new_mastery": "two consecutive successful refreshes then latch; cannot revoke on one error",
+    "minimum_Base_EN_known": 8,
+    "language_diagnostic": "langdetect seed0, logged but not correctness gate"
+  },
+  "pairing": {
+    "definition": "F doubles own-known reference weight when same-source partner is also known; E independent weights; S same F with fixed partner bijection",
+    "shuffled_partner_permutation": [
+      18,
+      14,
+      10,
+      22,
+      21,
+      6,
+      5,
+      12,
+      11,
+      15,
+      9,
+      24,
+      19,
+      28,
+      16,
+      26,
+      1,
+      13,
+      2,
+      17,
+      27,
+      4,
+      25,
+      7,
+      8,
+      23,
+      0,
+      3,
+      20
+    ],
+    "adequacy_joint_known": 8,
+    "adequacy_EN_only": 8,
+    "fixed_fork_step": 1024,
+    "Base_degeneracy_is_not_permanent_rejection": true,
+    "gate": "Use only D1024 mastery, before any dev score. Require8joint+8ENonly. If BaseSWknown0, D/E/F/S paths are identical before1024 by acquisition hysteresis; reuse complete D1024 checkpoint only after verifying this. If no valid shared prefix, coldE/F/S require the same preregistered full2048 and remaining budget; never relabelD checkpoint. No search over fork points.",
+    "budget_gate": "Optional E/F/S only as a complete matched block if projected remaining physicalGPU cost incl all required dev fits total32; shared-prefix work counted once. Otherwise report this contribution unresolved, no long-training claim."
+  },
+  "development": {
+    "manifest": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired/experiments/paired_capability_sparse_v1/data/dev_v4/manifest.json",
+    "counts": {
+      "translation": 256,
+      "sw_summary": 128,
+      "en_reading": 256,
+      "sw_reading_kenswquad": 128,
+      "en_math": 128,
+      "en_instruction": 128
+    },
+    "endpoints": [
+      "Base",
+      "A2048",
+      "D2048",
+      "R2048"
+    ],
+    "optional_endpoints": [
+      "E2048",
+      "F2048",
+      "S2048"
+    ],
+    "checkpoint_search": false,
+    "generation": "greedy batch4, fixed caps from manifest; no generation hyperparameter search",
+    "max_new_tokens": {
+      "translation": 256,
+      "sw_summary": 256,
+      "en_reading": 16,
+      "sw_reading_kenswquad": 64,
+      "en_math": 1024,
+      "en_instruction": 1280
+    },
+    "scoring": {
+      "en_math": "canonical numeric equivalence, strict boxed secondary; no incidental last-number primary",
+      "en_reading": "option-letter strict primary and explicit-answer extraction secondary",
+      "en_instruction": "frozen IF-multi/IFEval-compatible strict prompt and instruction checks; fixed per-source scoring seed andlangdetect0; not formalIFEval",
+      "sw_reading_kenswquad": "Unicode normalized tokenF1 primary, exact match secondary; not Belebele",
+      "sw_summary": "sacrebleu chrF++ char6/word2 beta2",
+      "translation": "same chrF++; both directions; bootstrap clusters by original FLORES documentURL"
+    },
+    "bootstrap": {
+      "resamples": 10000,
+      "seed": 42,
+      "paired_by": "shared source/question/document, no mixed-unit average"
+    },
+    "no_new_formal_test": true
+  },
+  "decision": {
+    "first_stage": "D must improve a preregistered English retention primary vsA andR with paired95percentCI>0; SWreadingF1 lower bound -2points, summary/bidirectionalMT-1chrF++",
+    "retention_primaries": [
+      "en_math",
+      "en_instruction"
+    ],
+    "pair_contribution": "F must exceed E and S and matched replay without SW noninferiority failure; pairing must change actual updates, not metadata only",
+    "multiple_comparisons": "report all predeclared task deltas and CIs; no selection of best checkpoint/proxy; no long-train approval from one small dev slice",
+    "confirmatory_requirement": "unused confirmation slice and strong baseline required before affirmative long-training upgrade",
+    "negative_or_inequivalent": "stop expansion; do not claim pairing superiority from D or weights alone"
+  },
+  "budget": {
+    "total_gpu_hours_including_failed_jobs": 32,
+    "base_mastery_gpu_hours": 0.75,
+    "per_training_gpu_hours": 7.5,
+    "per_development_model_gpu_hours": 1.0,
+    "technical_ledger_already_spent_included": true,
+    "no_infinite_retries_or_extra_checkpoints": true
+  },
+  "stop": {
+    "BF16_rejections_first32_nonzero_lr": ">50percent stops spec",
+    "nonfinite_or_competing_compute": "exit and preserve logs",
+    "data_or_code_identity_change": "refuse launch",
+    "physical_memory_ceiling": "one24GB3090; no silentprecisionchange",
+    "time": "do not exceed frozen allocation; record partial work and no efficacy claim for incomplete matching"
+  },
+  "limits": [
+    "No new method originality claim for update projection itself (UP-MOPD precedent)",
+    "Full-reference CE and answer margin are capability proxies, not reasoning guarantees",
+    "Calibration SW semantic review is assistant-based, not independent nativegold",
+    "All FLORES dev EN/SW rows match published original; paragraphs grouped; known examples and formal source documents excluded",
+    "The main frozen NLLB training stream contains observed noise and was not rewritten",
+    "2048 is a formal warmup prefix, not a whole trained method or evidence of long-term forgetting"
+  ]
+}

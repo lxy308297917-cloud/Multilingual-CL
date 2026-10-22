@@ -1,0 +1,59 @@
+{
+  "status": "released",
+  "protocol_sha256": "0e491b6db0e6371d09d30a53a17fdaf4993557feb2a1dafcdfe67e19fa52a3b7",
+  "code_commit": "8bd8de33ea695f922b40d48a61f7bc096255b667",
+  "software_versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.6",
+    "numpy": "1.26.4",
+    "sacrebleu": "2.6.0",
+    "nltk": "3.9.1",
+    "langdetect": "1.0.9"
+  },
+  "conditions": [
+    "Base wrapper and cache DONE; minimum8English conservatively known",
+    "first32 nonzeroLR updates: at most16BF16 rejection; measured full-loop projection <=7.5GPUh",
+    "E/F/S need separate fixed D1024 mastery and complete matched-block budget release",
+    "physical GPUh32 including failures; one queue-assigned3090; no formal tests"
+  ],
+  "methods": [
+    "D",
+    "A",
+    "R",
+    "E",
+    "F",
+    "S"
+  ],
+  "mandatory": [
+    "D",
+    "A",
+    "R"
+  ],
+  "conditional": [
+    "E",
+    "F",
+    "S"
+  ],
+  "code_hashes": {
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/core.py": "4c8c9765cbbfa5060444000d113221be9f34d2cb17968c5a896084dd3408629f",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/mastery.py": "f805ef787bc735b2cfa9f7ee9e679310aae629d88567bdefbc223aa1d4457f82",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/calibration.py": "530027f27090ca492f0ae29f2a5d44d756a351e61aa87d937c7e043d08b02d11",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/prepare_calibration.py": "b80e4b1a12c15ecf5e3c6d49162667624f6e428b5c073fb4e6e603f72ff428ec",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/budget.py": "560e18a6f1a66c4cfeb0173338830f721d86f71c8f63aad3358f1f211ee30b92",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/train.py": "27991a228e1ca3c353037405a1a3f50efd3b247083949a1b6f60fa864c6fcc81",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/series.py": "e90ce02daaeb2722f64bc4a04b3082e9a5d1c295331c28b153b450a69cc68397",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/run_series.sh": "79ef8d14d29658c96042bebc12c328b433f9993ab460fc0bbc61c933a1816ddf",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/evaluate_dev.py": "36233970ff6b68b8c76a63ac238c5e334b1ab893c9bfa61b6d2c278764ac8bde",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/development_scoring.py": "048df01251d0325b0a5ad7c55371296be270ac1b89ad10afccf9b008fcc40d12",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/compare_dev.py": "a5ffe0e00baaa1838d54b937124d699c084ccbcd8757cee937da299dbba6f95f",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/run_parallel.sh": "775fc2aa627621ddcb56644987512fe2c230007da5e53fd00631812e8c7b995e",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/deadline_supervisor.py": "7add0b5ba53479fc7bd0730cd6212fa863118b681adac9a31a4247dfd59e056b",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/development_block.py": "70502a1b4cb6a393daaa25b0dd198b7814d5859d29f5ee697698773a95069a26",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/Multilingual-CL-paired-deadline/experiments/paired_capability_sparse_v1/run_dev_block.sh": "2a351e37f5b663d6d9d2ebd9deb583f360c522c5770e50dc67423aa830976953"
+  },
+  "not_efficacy_release": true,
+  "no_new_mastery_or_dev_output_used_for_code_choices": true,
+  "previous_release_sha256": "6da5a68cd40b974e6e969ea66fd632d1c3a2b5cacc303d196753ad5c339663f8",
+  "engineering_amendment": "Operational parallelism for20261022evening deadline; exact algorithm/train/mastery/protocol SHA matches original D; running original frozen source untouched; physical budget charges all paired-cap queues;35CPU tests pass",
+  "source_release_sha256": "24fa9c311b9297ce28ec1fd059706487e4bfec04f7131d07716fe1ba2f12cd7b"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "POSTHOC diagnostic fixed after inspecting dense A/B/C first three math responses; not preregistered primary or a selection metric",
+  "fixed_at_local": "2026-10-22T05:52:05.882249",
+  "script_sha256": "0269729fef382b07914e1176fc23e639baa7f9781f36ffed1ba16f73385c8c63",
+  "rule": "Use the already-existing local lm-eval GSM8K yaml flexible-extract regex, last regex match, and configured exact-match cleanup, uniformly for all nine complete cached endpoints",
+  "new_gpu_forwards": 0,
+  "original_gates_and_outputs_unchanged": true,
+  "limits": "Last-number extraction is imperfect; this is not official test or the original few-shot protocol and cannot independently establish reasoning capability."
+}

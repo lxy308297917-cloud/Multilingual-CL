@@ -1,0 +1,30 @@
+{
+  "A": {
+    "physical_device_memory_peak_observed_mib": 17315,
+    "trace_records": 4293,
+    "physical_samples": 215,
+    "observation_interval_updates": 20,
+    "not_continuous_hardware_maximum": true
+  },
+  "B": {
+    "physical_device_memory_peak_observed_mib": 17315,
+    "trace_records": 4293,
+    "physical_samples": 215,
+    "observation_interval_updates": 20,
+    "not_continuous_hardware_maximum": true
+  },
+  "C": {
+    "physical_device_memory_peak_observed_mib": 17335,
+    "trace_records": 4293,
+    "physical_samples": 215,
+    "observation_interval_updates": 20,
+    "not_continuous_hardware_maximum": true
+  },
+  "D": {
+    "physical_device_memory_peak_observed_mib": 17335,
+    "trace_records": 4293,
+    "physical_samples": 215,
+    "observation_interval_updates": 20,
+    "not_continuous_hardware_maximum": true
+  }
+}

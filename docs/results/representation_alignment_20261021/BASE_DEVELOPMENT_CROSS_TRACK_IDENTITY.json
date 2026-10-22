@@ -1,0 +1,11 @@
+{
+  "both_Base_development_records": 1024,
+  "all_prediction_fields_equal": true,
+  "differing_records": [],
+  "separate_runs_kept": true,
+  "prediction_sha256": [
+    "9e57a8a8509a68ab071d46e93f640fe16d61b30a18c07e944724be7d783f06a4",
+    "9e57a8a8509a68ab071d46e93f640fe16d61b30a18c07e944724be7d783f06a4"
+  ],
+  "scores_equal": true
+}

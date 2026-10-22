@@ -1,0 +1,50 @@
+{
+  "Base": {
+    "current_current_bidirectional_p1_percent": 3.0500000342726707,
+    "positive_negative_gap": 0.000484466552734375,
+    "fixedEN_currentSW_bidirectional_p1_percent": 3.0500000342726707,
+    "EN_relative_L2_to_Base": 0.0,
+    "current_EN_Base_EN_cosine": 1.0,
+    "last_pooling_current_current_p1_percent": 16.55000001192093
+  },
+  "align-A": {
+    "current_current_bidirectional_p1_percent": 8.050000295042992,
+    "positive_negative_gap": 0.0007827877998352051,
+    "fixedEN_currentSW_bidirectional_p1_percent": 6.249999813735485,
+    "EN_relative_L2_to_Base": 0.05172283574938774,
+    "current_EN_Base_EN_cosine": 0.9991386532783508,
+    "last_pooling_current_current_p1_percent": 39.20000046491623
+  },
+  "align-B": {
+    "current_current_bidirectional_p1_percent": 9.099999815225601,
+    "positive_negative_gap": 0.0007773041725158691,
+    "fixedEN_currentSW_bidirectional_p1_percent": 7.600000035017729,
+    "EN_relative_L2_to_Base": 0.05012591555714607,
+    "current_EN_Base_EN_cosine": 0.9991772174835205,
+    "last_pooling_current_current_p1_percent": 43.24999898672104
+  },
+  "align-C": {
+    "current_current_bidirectional_p1_percent": 8.150000404566526,
+    "positive_negative_gap": 0.0007634758949279785,
+    "fixedEN_currentSW_bidirectional_p1_percent": 6.849999912083149,
+    "EN_relative_L2_to_Base": 0.048607032746076584,
+    "current_EN_Base_EN_cosine": 0.9991667866706848,
+    "last_pooling_current_current_p1_percent": 41.15000069141388
+  },
+  "align-D": {
+    "current_current_bidirectional_p1_percent": 8.449999801814556,
+    "positive_negative_gap": 0.0008215904235839844,
+    "fixedEN_currentSW_bidirectional_p1_percent": 5.950000090524554,
+    "EN_relative_L2_to_Base": 0.05741896480321884,
+    "current_EN_Base_EN_cosine": 0.9990817904472351,
+    "last_pooling_current_current_p1_percent": 41.350001096725464
+  },
+  "ExistingFullDense": {
+    "current_current_bidirectional_p1_percent": 15.499999560415745,
+    "positive_negative_gap": 0.0008772611618041992,
+    "fixedEN_currentSW_bidirectional_p1_percent": 12.050000205636024,
+    "EN_relative_L2_to_Base": 0.06672196090221405,
+    "current_EN_Base_EN_cosine": 0.9988225102424622,
+    "last_pooling_current_current_p1_percent": 64.14999961853027
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "A": {
+    "updates": 2048,
+    "selected_per_step": 196529312,
+    "quota_fraction_of_candidate_elements": 0.14999996580663516,
+    "mask_union_fraction_of_candidate_elements": 0.9065004755564335,
+    "mean_actual_nonzero_fraction_of_candidate_elements": 0.010136887496363382,
+    "final_changed_fraction_of_candidate_elements": 0.27492698815976585,
+    "guard_active_fraction": 0.0,
+    "QP_nonzero_multiplier_fraction": 0.0,
+    "BF16_whole_update_rejected_fraction": 0.0,
+    "statistics": {
+      "candidate_norm": {
+        "mean": 0.09642518777497502,
+        "median": 0.09238639352267207,
+        "p05": 0.015378482171836867,
+        "p95": 0.19778383881568928,
+        "min": 0.0,
+        "max": 0.32925606571362903
+      },
+      "projected_norm": {
+        "mean": 0.09642518777497502,
+        "median": 0.09238639352267207,
+        "p05": 0.015378482171836867,
+        "p95": 0.19778383881568928,
+        "min": 0.0,
+        "max": 0.32925606571362903
+      },
+      "correction_norm": {
+        "mean": 0.0,
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "actual_norm": {
+        "mean": 0.04985337310151969,
+        "median": 0.042503154072644114,
+        "p05": 0.0025744549332239164,
+        "p95": 0.12300030546624086,
+        "min": 0.0,
+        "max": 0.24804261959941112
+      },
+      "cosine": {
+        "mean": 0.99951171875,
+        "median": 1.0,
+        "p05": 1.0,
+        "p95": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "nonzero_write": {
+        "mean": 13281306.530761719,
+        "median": 12713102.0,
+        "p05": 2202484.0,
+        "p95": 28143046.399999984,
+        "min": 0.0,
+        "max": 46400122.0
+      },
+      "update_seconds": {
+        "mean": 8.29702264763182,
+        "median": 7.977448576129973,
+        "p05": 7.375301471352577,
+        "p95": 10.909370905067771,
+        "min": 6.442647030577064,
+        "max": 16.157237013801932
+      }
+    },
+    "important_limits": "Per-step sparse quota is not a globally fixed 15% parameter set; unions span many refreshes. Rejected rounded proposals advance optimizer states once but write no weights. No cumulative forgetting guarantee."
+  },
+  "D": {
+    "updates": 2048,
+    "selected_per_step": 196529312,
+    "quota_fraction_of_candidate_elements": 0.14999996580663516,
+    "mask_union_fraction_of_candidate_elements": 0.9047569879392187,
+    "mean_actual_nonzero_fraction_of_candidate_elements": 0.008780967473250334,
+    "final_changed_fraction_of_candidate_elements": 0.27035158087893363,
+    "guard_active_fraction": 0.8447265625,
+    "QP_nonzero_multiplier_fraction": 0.3642578125,
+    "BF16_whole_update_rejected_fraction": 0.13818359375,
+    "statistics": {
+      "candidate_norm": {
+        "mean": 0.09657723873863688,
+        "median": 0.09287281046653743,
+        "p05": 0.015395766155192867,
+        "p95": 0.19835718538781352,
+        "min": 0.0,
+        "max": 0.3256460981164659
+      },
+      "projected_norm": {
+        "mean": 0.09657719181786234,
+        "median": 0.09287280324916858,
+        "p05": 0.015395766155192867,
+        "p95": 0.19835710482391025,
+        "min": 0.0,
+        "max": 0.3256460981164659
+      },
+      "correction_norm": {
+        "mean": 4.534035850962112e-05,
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0002518402340963234,
+        "min": 0.0,
+        "max": 0.0013651216144379933
+      },
+      "actual_norm": {
+        "mean": 0.04323602223596751,
+        "median": 0.031537631806556804,
+        "p05": 0.0,
+        "p95": 0.11882259653903096,
+        "min": 0.0,
+        "max": 0.2451896628880483
+      },
+      "cosine": {
+        "mean": 0.9995113462700362,
+        "median": 1.0,
+        "p05": 0.9999981394861092,
+        "p95": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "nonzero_write": {
+        "mean": 11504785.930664062,
+        "median": 10464675.0,
+        "p05": 0.0,
+        "p95": 27212237.549999997,
+        "min": 0.0,
+        "max": 45792536.0
+      },
+      "update_seconds": {
+        "mean": 8.01050728352584,
+        "median": 7.833493853919208,
+        "p05": 5.6651975102722645,
+        "p95": 11.17291338695213,
+        "min": 5.270549390465021,
+        "max": 22.595537770539522
+      }
+    },
+    "important_limits": "Per-step sparse quota is not a globally fixed 15% parameter set; unions span many refreshes. Rejected rounded proposals advance optimizer states once but write no weights. No cumulative forgetting guarantee."
+  },
+  "R": {
+    "updates": 2048,
+    "selected_per_step": 196529312,
+    "quota_fraction_of_candidate_elements": 0.14999996580663516,
+    "mask_union_fraction_of_candidate_elements": 0.9080049378149697,
+    "mean_actual_nonzero_fraction_of_candidate_elements": 0.010163045956381634,
+    "final_changed_fraction_of_candidate_elements": 0.27593963839808383,
+    "guard_active_fraction": 0.0,
+    "QP_nonzero_multiplier_fraction": 0.0,
+    "BF16_whole_update_rejected_fraction": 0.0,
+    "statistics": {
+      "candidate_norm": {
+        "mean": 0.09671358014591099,
+        "median": 0.09276376528674286,
+        "p05": 0.015966487019376443,
+        "p95": 0.19846520157029524,
+        "min": 0.0,
+        "max": 0.3303876450724332
+      },
+      "projected_norm": {
+        "mean": 0.09671358014591099,
+        "median": 0.09276376528674286,
+        "p05": 0.015966487019376443,
+        "p95": 0.19846520157029524,
+        "min": 0.0,
+        "max": 0.3303876450724332
+      },
+      "correction_norm": {
+        "mean": 0.0,
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "actual_norm": {
+        "mean": 0.0500276185058346,
+        "median": 0.0424527547295102,
+        "p05": 0.002737457431899389,
+        "p95": 0.12343677660279787,
+        "min": 0.0,
+        "max": 0.24942086865003837
+      },
+      "cosine": {
+        "mean": 0.99951171875,
+        "median": 1.0,
+        "p05": 1.0,
+        "p95": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "nonzero_write": {
+        "mean": 13315579.232910156,
+        "median": 12681335.0,
+        "p05": 2277818.9,
+        "p95": 28259342.549999997,
+        "min": 0.0,
+        "max": 46429151.0
+      },
+      "update_seconds": {
+        "mean": 8.302878992479236,
+        "median": 7.989106051623821,
+        "p05": 7.324793528486043,
+        "p95": 11.06890559289604,
+        "min": 6.65713301487267,
+        "max": 15.451839884743094
+      }
+    },
+    "important_limits": "Per-step sparse quota is not a globally fixed 15% parameter set; unions span many refreshes. Rejected rounded proposals advance optimizer states once but write no weights. No cumulative forgetting guarantee."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "alignment_gpu_hours_including_setup_and_failures": 9.906493408231892,
+  "alignment_ceiling": 24,
+  "sparse_gpu_hours_including_failures": 19.818055555555556,
+  "sparse_ceiling": 32,
+  "full_original_ledger_hashes": {
+    "alignment": "960f2013205d0ef75146773e994abe15cc7b72102b5f84e3406df759f6ece999",
+    "sparse": "a9a9c31a5dda27fa8a0588c89efb8bdc2f864e4ff7c87f97bdec4f1a687e94af"
+  },
+  "publication_scope": "Aggregate budget only; detailed execution receipts retained on server."
+}

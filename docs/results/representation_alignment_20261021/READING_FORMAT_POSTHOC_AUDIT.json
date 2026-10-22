@@ -1,0 +1,196 @@
+{
+  "status": "posthoc diagnostic; not a replacement primary metric, confirmation set, or model-selection gate",
+  "why": "Frozen strict metric counts correct 'A. option text' as incorrect; original explicit fallback also misses leading punctuated labels. Scores near zero cannot be interpreted as reading ability near zero.",
+  "original_predictions_and_primary_decisions_preserved": true,
+  "new_gpu_forward_calls": 0,
+  "original_upgrade_gates_unchanged": true,
+  "parser_limits": "Conservative anchored option labels, explicit prefixes, or exactly one full option text; unresolved or multiple option-line answers remain unparsed. This audit does not remove the generation cap or establish general reading competence.",
+  "source_sha256": "4b30f30383ca8156096fb4444e3e30ebc1faee2cf48b15bacb77b705c03c8c30",
+  "models": {
+    "sparse-Base": {
+      "n": 256,
+      "frozen_primary_strict_letter_percent": 5.46875,
+      "posthoc_unambiguous_choice_percent": 78.90625,
+      "content_correct_but_strict_format_failed": 188,
+      "unparsed": 1,
+      "parser_methods": {
+        "leading_option_label": 235,
+        "bare_letter": 19,
+        "unparsed": 1,
+        "explicit_answer_prefix": 1
+      }
+    },
+    "sparse-A2048": {
+      "n": 256,
+      "frozen_primary_strict_letter_percent": 0.0,
+      "posthoc_unambiguous_choice_percent": 74.609375,
+      "content_correct_but_strict_format_failed": 191,
+      "unparsed": 2,
+      "parser_methods": {
+        "leading_option_label": 254,
+        "unparsed": 1,
+        "ambiguous_multiple_option_lines": 1
+      }
+    },
+    "sparse-D2048": {
+      "n": 256,
+      "frozen_primary_strict_letter_percent": 0.0,
+      "posthoc_unambiguous_choice_percent": 76.171875,
+      "content_correct_but_strict_format_failed": 195,
+      "unparsed": 1,
+      "parser_methods": {
+        "leading_option_label": 255,
+        "unparsed": 1
+      }
+    },
+    "sparse-R2048": {
+      "n": 256,
+      "frozen_primary_strict_letter_percent": 1.171875,
+      "posthoc_unambiguous_choice_percent": 76.5625,
+      "content_correct_but_strict_format_failed": 193,
+      "unparsed": 1,
+      "parser_methods": {
+        "leading_option_label": 250,
+        "unparsed": 1,
+        "bare_letter": 5
+      }
+    },
+    "align-Base": {
+      "n": 256,
+      "frozen_primary_strict_letter_percent": 5.46875,
+      "posthoc_unambiguous_choice_percent": 78.90625,
+      "content_correct_but_strict_format_failed": 188,
+      "unparsed": 1,
+      "parser_methods": {
+        "leading_option_label": 235,
+        "bare_letter": 19,
+        "unparsed": 1,
+        "explicit_answer_prefix": 1
+      }
+    },
+    "align-A": {
+      "n": 256,
+      "frozen_primary_strict_letter_percent": 0.0,
+      "posthoc_unambiguous_choice_percent": 60.9375,
+      "content_correct_but_strict_format_failed": 156,
+      "unparsed": 4,
+      "parser_methods": {
+        "leading_option_label": 252,
+        "ambiguous_multiple_option_lines": 4
+      }
+    },
+    "align-B": {
+      "n": 256,
+      "frozen_primary_strict_letter_percent": 0.0,
+      "posthoc_unambiguous_choice_percent": 73.046875,
+      "content_correct_but_strict_format_failed": 187,
+      "unparsed": 1,
+      "parser_methods": {
+        "leading_option_label": 255,
+        "unparsed": 1
+      }
+    },
+    "align-C": {
+      "n": 256,
+      "frozen_primary_strict_letter_percent": 0.0,
+      "posthoc_unambiguous_choice_percent": 67.96875,
+      "content_correct_but_strict_format_failed": 174,
+      "unparsed": 0,
+      "parser_methods": {
+        "leading_option_label": 256
+      }
+    },
+    "align-D": {
+      "n": 256,
+      "frozen_primary_strict_letter_percent": 0.0,
+      "posthoc_unambiguous_choice_percent": 70.703125,
+      "content_correct_but_strict_format_failed": 181,
+      "unparsed": 1,
+      "parser_methods": {
+        "leading_option_label": 255,
+        "ambiguous_multiple_option_lines": 1
+      }
+    }
+  },
+  "paired_source_cluster_intervals": {
+    "sparse-D2048-sparse-A2048": {
+      "metric": "POSTHOC_unambiguous_option_choice",
+      "delta_left_minus_right": 1.5625,
+      "paired95percentCI": [
+        0.0,
+        3.515625
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 256,
+      "n": 256,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "sparse-D2048-sparse-R2048": {
+      "metric": "POSTHOC_unambiguous_option_choice",
+      "delta_left_minus_right": -0.390625,
+      "paired95percentCI": [
+        -1.953125,
+        1.171875
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 256,
+      "n": 256,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "align-C-align-B": {
+      "metric": "POSTHOC_unambiguous_option_choice",
+      "delta_left_minus_right": -5.078125,
+      "paired95percentCI": [
+        -8.59375,
+        -1.953125
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 256,
+      "n": 256,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "align-D-align-B": {
+      "metric": "POSTHOC_unambiguous_option_choice",
+      "delta_left_minus_right": -2.34375,
+      "paired95percentCI": [
+        -5.078125,
+        0.390625
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 256,
+      "n": 256,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "align-C-align-A": {
+      "metric": "POSTHOC_unambiguous_option_choice",
+      "delta_left_minus_right": 7.03125,
+      "paired95percentCI": [
+        3.515625,
+        10.9375
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 256,
+      "n": 256,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    },
+    "align-D-align-A": {
+      "metric": "POSTHOC_unambiguous_option_choice",
+      "delta_left_minus_right": 9.765625,
+      "paired95percentCI": [
+        5.859375,
+        13.671875
+      ],
+      "resamples": 10000,
+      "seed": 42,
+      "clusters": 256,
+      "n": 256,
+      "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+    }
+  },
+  "publication_note": "Per-item generated examples omitted from public report; aggregate values and paired intervals unchanged. Full original retained on server."
+}

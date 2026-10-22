@@ -1,0 +1,700 @@
+{
+  "protocol_sha256": "0e491b6db0e6371d09d30a53a17fdaf4993557feb2a1dafcdfe67e19fa52a3b7",
+  "endpoints": {
+    "Base": {
+      "done_sha256": "a604167cd8b389a86395cdd87e9821dbb21c4dc2561585f9a612dda654a55a6c",
+      "scores": {
+        "en_to_sw": {
+          "corpus_chrfpp": 18.08804902161143,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 32,
+          "generated_tokens": 20724
+        },
+        "sw_to_en": {
+          "corpus_chrfpp": 16.94919589562847,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 20,
+          "generated_tokens": 19351
+        },
+        "sw_summary": {
+          "corpus_chrfpp": 13.89911375395678,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 12,
+          "generated_tokens": 22332
+        },
+        "en_reading": {
+          "strict_letter": 5.46875,
+          "explicit_letter": 5.46875,
+          "n": 256,
+          "capped": 7,
+          "generated_tokens": 1913
+        },
+        "sw_reading_kenswquad": {
+          "token_f1": 5.365724535501511,
+          "exact_match": 0.0,
+          "n": 128,
+          "capped": 79,
+          "generated_tokens": 6504
+        },
+        "en_math": {
+          "numeric_equivalence": 78.90625,
+          "boxed_equivalence": 78.90625,
+          "n": 128,
+          "capped": 0,
+          "generated_tokens": 35829
+        },
+        "en_instruction": {
+          "prompt_strict": 23.4375,
+          "instruction_strict": 32.11009174311926,
+          "n": 128,
+          "capped": 20,
+          "generated_tokens": 93207
+        }
+      }
+    },
+    "A2048": {
+      "done_sha256": "fcc2c915ee555ab2362299f380142fbe748a53741fee069f10da0c03cca6e15d",
+      "scores": {
+        "en_to_sw": {
+          "corpus_chrfpp": 21.393660830134458,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 13,
+          "generated_tokens": 9705
+        },
+        "sw_to_en": {
+          "corpus_chrfpp": 20.691814535599907,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 1,
+          "generated_tokens": 4000
+        },
+        "sw_summary": {
+          "corpus_chrfpp": 20.78249784541096,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 92,
+          "generated_tokens": 28151
+        },
+        "en_reading": {
+          "strict_letter": 0.0,
+          "explicit_letter": 0.0,
+          "n": 256,
+          "capped": 13,
+          "generated_tokens": 2337
+        },
+        "sw_reading_kenswquad": {
+          "token_f1": 4.998417119211452,
+          "exact_match": 0.0,
+          "n": 128,
+          "capped": 111,
+          "generated_tokens": 7460
+        },
+        "en_math": {
+          "numeric_equivalence": 18.75,
+          "boxed_equivalence": 3.90625,
+          "n": 128,
+          "capped": 1,
+          "generated_tokens": 10401
+        },
+        "en_instruction": {
+          "prompt_strict": 24.21875,
+          "instruction_strict": 35.77981651376147,
+          "n": 128,
+          "capped": 21,
+          "generated_tokens": 69271
+        }
+      }
+    },
+    "D2048": {
+      "done_sha256": "0bcfe35e81637d78e6a5d8bfd956c4c08115465fbebe99b178d267ab55b982df",
+      "scores": {
+        "en_to_sw": {
+          "corpus_chrfpp": 19.18672490994524,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 32,
+          "generated_tokens": 13239
+        },
+        "sw_to_en": {
+          "corpus_chrfpp": 20.629522156467516,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 1,
+          "generated_tokens": 3912
+        },
+        "sw_summary": {
+          "corpus_chrfpp": 25.16527694149728,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 95,
+          "generated_tokens": 28948
+        },
+        "en_reading": {
+          "strict_letter": 0.0,
+          "explicit_letter": 0.0,
+          "n": 256,
+          "capped": 12,
+          "generated_tokens": 2247
+        },
+        "sw_reading_kenswquad": {
+          "token_f1": 4.346637591389476,
+          "exact_match": 0.0,
+          "n": 128,
+          "capped": 115,
+          "generated_tokens": 7659
+        },
+        "en_math": {
+          "numeric_equivalence": 41.40625,
+          "boxed_equivalence": 33.59375,
+          "n": 128,
+          "capped": 0,
+          "generated_tokens": 13139
+        },
+        "en_instruction": {
+          "prompt_strict": 21.875,
+          "instruction_strict": 32.11009174311926,
+          "n": 128,
+          "capped": 21,
+          "generated_tokens": 73731
+        }
+      }
+    },
+    "R2048": {
+      "done_sha256": "93f1f2b3196a5e857e886823bd5138bb158112c18c79b9accc6fd52f809a3a5d",
+      "scores": {
+        "en_to_sw": {
+          "corpus_chrfpp": 20.935287867993438,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 19,
+          "generated_tokens": 10873
+        },
+        "sw_to_en": {
+          "corpus_chrfpp": 22.6941065722184,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 0,
+          "generated_tokens": 4156
+        },
+        "sw_summary": {
+          "corpus_chrfpp": 25.737538525810738,
+          "metric_signature": "chrF2++|nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|beta:2",
+          "n": 128,
+          "capped": 104,
+          "generated_tokens": 30711
+        },
+        "en_reading": {
+          "strict_letter": 1.171875,
+          "explicit_letter": 1.171875,
+          "n": 256,
+          "capped": 6,
+          "generated_tokens": 1549
+        },
+        "sw_reading_kenswquad": {
+          "token_f1": 4.806582563732433,
+          "exact_match": 0.0,
+          "n": 128,
+          "capped": 99,
+          "generated_tokens": 7113
+        },
+        "en_math": {
+          "numeric_equivalence": 42.1875,
+          "boxed_equivalence": 42.1875,
+          "n": 128,
+          "capped": 0,
+          "generated_tokens": 10378
+        },
+        "en_instruction": {
+          "prompt_strict": 22.65625,
+          "instruction_strict": 31.192660550458715,
+          "n": 128,
+          "capped": 13,
+          "generated_tokens": 69597
+        }
+      }
+    }
+  },
+  "paired_deltas": {
+    "D2048-A2048": {
+      "en_instruction": {
+        "metric": "prompt_strict",
+        "delta_left_minus_right": -2.34375,
+        "paired95percentCI": [
+          -7.8125,
+          3.90625
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_to_sw": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": -2.206935920189217,
+        "paired95percentCI": [
+          -3.7772276247080585,
+          -0.6679813153953725
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_math": {
+        "metric": "numeric_equivalence",
+        "delta_left_minus_right": 22.65625,
+        "paired95percentCI": [
+          13.28125,
+          31.25
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_reading_kenswquad": {
+        "metric": "token_f1",
+        "delta_left_minus_right": -0.6517795278219752,
+        "paired95percentCI": [
+          -2.1086820789256597,
+          0.6862870465125462
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_to_en": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": -0.06229237913239061,
+        "paired95percentCI": [
+          -0.9948251322415134,
+          0.8595172561752513
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_reading": {
+        "metric": "strict_letter",
+        "delta_left_minus_right": 0.0,
+        "paired95percentCI": [
+          0.0,
+          0.0
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 256,
+        "n": 256,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_summary": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 4.38277909608632,
+        "paired95percentCI": [
+          2.425035234485012,
+          6.282452958720269
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      }
+    },
+    "D2048-R2048": {
+      "en_instruction": {
+        "metric": "prompt_strict",
+        "delta_left_minus_right": -0.78125,
+        "paired95percentCI": [
+          -6.25,
+          4.6875
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_to_sw": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": -1.748562958048197,
+        "paired95percentCI": [
+          -3.1438794296990413,
+          -0.36973337286669644
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_math": {
+        "metric": "numeric_equivalence",
+        "delta_left_minus_right": -0.78125,
+        "paired95percentCI": [
+          -10.9375,
+          9.375
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_reading_kenswquad": {
+        "metric": "token_f1",
+        "delta_left_minus_right": -0.4599449723429589,
+        "paired95percentCI": [
+          -2.1014231323030117,
+          0.9888255823277154
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_to_en": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": -2.0645844157508826,
+        "paired95percentCI": [
+          -3.389994592492886,
+          -0.7962992672627587
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_reading": {
+        "metric": "strict_letter",
+        "delta_left_minus_right": -1.171875,
+        "paired95percentCI": [
+          -2.734375,
+          0.0
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 256,
+        "n": 256,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_summary": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": -0.5722615843134591,
+        "paired95percentCI": [
+          -2.3739716744294013,
+          1.1148777890342159
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      }
+    },
+    "A2048-Base": {
+      "en_instruction": {
+        "metric": "prompt_strict",
+        "delta_left_minus_right": 0.78125,
+        "paired95percentCI": [
+          -7.8125,
+          9.375
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_to_sw": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 3.305611808523029,
+        "paired95percentCI": [
+          1.8370852183430848,
+          4.810080738189701
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_math": {
+        "metric": "numeric_equivalence",
+        "delta_left_minus_right": -60.15625,
+        "paired95percentCI": [
+          -69.53125,
+          -50.78125
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_reading_kenswquad": {
+        "metric": "token_f1",
+        "delta_left_minus_right": -0.3673074162900592,
+        "paired95percentCI": [
+          -2.285392729878621,
+          1.6523310274753353
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_to_en": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 3.742618639971436,
+        "paired95percentCI": [
+          2.374461980577332,
+          5.128893863609969
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_reading": {
+        "metric": "strict_letter",
+        "delta_left_minus_right": -5.46875,
+        "paired95percentCI": [
+          -8.203125,
+          -2.734375
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 256,
+        "n": 256,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_summary": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 6.883384091454179,
+        "paired95percentCI": [
+          4.943646771112787,
+          8.81990695352256
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      }
+    },
+    "D2048-Base": {
+      "en_instruction": {
+        "metric": "prompt_strict",
+        "delta_left_minus_right": -1.5625,
+        "paired95percentCI": [
+          -9.375,
+          6.25
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_to_sw": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 1.098675888333812,
+        "paired95percentCI": [
+          -0.252823241854687,
+          2.4898022871817034
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_math": {
+        "metric": "numeric_equivalence",
+        "delta_left_minus_right": -37.5,
+        "paired95percentCI": [
+          -46.875,
+          -28.125
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_reading_kenswquad": {
+        "metric": "token_f1",
+        "delta_left_minus_right": -1.0190869441120345,
+        "paired95percentCI": [
+          -2.9671027502439755,
+          0.902947948366062
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_to_en": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 3.6803262608390455,
+        "paired95percentCI": [
+          2.2146019238643966,
+          5.191865661334955
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_reading": {
+        "metric": "strict_letter",
+        "delta_left_minus_right": -5.46875,
+        "paired95percentCI": [
+          -8.203125,
+          -2.734375
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 256,
+        "n": 256,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_summary": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 11.2661631875405,
+        "paired95percentCI": [
+          9.566729245751382,
+          12.862238350506168
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      }
+    },
+    "R2048-Base": {
+      "en_instruction": {
+        "metric": "prompt_strict",
+        "delta_left_minus_right": -0.78125,
+        "paired95percentCI": [
+          -8.59375,
+          7.03125
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_to_sw": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 2.847238846382009,
+        "paired95percentCI": [
+          1.3152805670701158,
+          4.418368169835771
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_math": {
+        "metric": "numeric_equivalence",
+        "delta_left_minus_right": -36.71875,
+        "paired95percentCI": [
+          -46.09375,
+          -27.34375
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_reading_kenswquad": {
+        "metric": "token_f1",
+        "delta_left_minus_right": -0.5591419717690757,
+        "paired95percentCI": [
+          -2.7315463749012157,
+          1.7995452097385987
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_to_en": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 5.744910676589928,
+        "paired95percentCI": [
+          4.380425232494897,
+          7.202858377120345
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "en_reading": {
+        "metric": "strict_letter",
+        "delta_left_minus_right": -4.296875,
+        "paired95percentCI": [
+          -7.03125,
+          -1.953125
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 256,
+        "n": 256,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      },
+      "sw_summary": {
+        "metric": "corpus_chrfpp",
+        "delta_left_minus_right": 11.838424771853958,
+        "paired95percentCI": [
+          10.1927295578449,
+          13.471121481191032
+        ],
+        "resamples": 10000,
+        "seed": 42,
+        "clusters": 128,
+        "n": 128,
+        "cluster_unit": "frozen source group_id; FLORES documentURL hash"
+      }
+    }
+  },
+  "decision": {
+    "D": {
+      "retention_same_primary_beats_all_controls": false,
+      "all_SW_noninferiority_bounds_pass": false,
+      "screening_pass": false
+    },
+    "pairing": "not tested",
+    "long_training": "not released: strong matched baseline and unused confirmation required even if screening passes",
+    "negative_action": "stop expansion when screen fails; report all task effects"
+  },
+  "formal_test_used": false,
+  "no_positive_claim_from_small_dev_alone": true
+}
