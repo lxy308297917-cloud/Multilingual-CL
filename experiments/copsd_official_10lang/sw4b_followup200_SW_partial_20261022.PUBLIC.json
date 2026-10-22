@@ -1,0 +1,63 @@
+{
+  "observed_at": "2026-10-22T21:11:53.298607",
+  "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+  "conditions": {
+    "Base": {
+      "metrics": {
+        "items": 200,
+        "single_correct": 16,
+        "generated_tokens": 1106114,
+        "truncated": 117,
+        "normal_terminations": 83,
+        "answer_extraction_failures": 115,
+        "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 200,
+        "single_accuracy": 0.08,
+        "generation_seconds": 2105.987488238141,
+        "model_load_seconds": 12.302545933052897,
+        "actual_max_num_seqs": 16
+      },
+      "items_sha256": "fcdeac98e50a72f8118ef8b9a03c1e1493efc11d8aba0cc9c8ed5f5063518a37",
+      "config_sha256": "72fcfcd9acc563f33b764493bd0274168d88caa1eed3a313e4932b2251de4880"
+    },
+    "SW20": {
+      "metrics": {
+        "items": 200,
+        "single_correct": 62,
+        "generated_tokens": 783189,
+        "truncated": 38,
+        "normal_terminations": 162,
+        "answer_extraction_failures": 37,
+        "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 200,
+        "single_accuracy": 0.31,
+        "generation_seconds": 3969.133559944108,
+        "model_load_seconds": 13.87051821127534,
+        "actual_max_num_seqs": 16
+      },
+      "items_sha256": "064567a16240542265c7326ede5a7ca02ebc1de3f8e0206b6863a5a84a0fe7e7",
+      "config_sha256": "f2f9ba541ef93a6be073e5324902e441ac8dad76f8e6e37a657dd57370c3c4e1"
+    }
+  },
+  "paired": {
+    "Base_correct": 16,
+    "checkpoint_correct": 62,
+    "gained": 50,
+    "lost": 4,
+    "delta_correct": 46,
+    "paired_question_bootstrap95_CI_pp": [
+      16.5,
+      29.5
+    ]
+  },
+  "bootstrap_seed": 20261022,
+  "bootstrap_replicates": 10000,
+  "TensorBoard_two_SW_series_read_back": true,
+  "English_paired_evaluation_pending": true,
+  "parent_cost_not_recounted": true,
+  "scope": "CompletedSW200 only, unchanged nativeSWprefix andsameinputs/seeds. Onefixed4Btrainingseed; questionCI is not seedstability or newlyblind formaltest. English166/200 Base exists; trainedEnglish stillrunning. No pureSWreasoning or3-language selection claim."
+}

@@ -683,3 +683,14 @@ Base英语前缀46分已经表明提示影响很大，但仍缺“同一SW20模�
 这一步确认目标收益和英语代价，不足以单独选出三种语言或证明训练seed稳定；仍不强行进入研究三语言顺序OPD。
 
 [四组完整配对与成本](sw4b_prompt_interaction_completed_20261022.PUBLIC.json) · [语言补充](sw4b_prompt_interaction_language_20261022.PUBLIC.json) · [固定200题与实际adapter清单](sw4b_followup200_frozen_20261022.PUBLIC.json) · [旧清单字段说明](sw4b_trained_prefix_manifest_note_20261022.PUBLIC.json)。
+
+
+## 21:13 固定200题SW确认完成：8%→31%，英语仍待配对
+
+原训练已排除的同200题，保持原生SW前缀、8192、n1、native16及相同逐题seed：Base16／200，SW4B20为62／200，净增46题（23pp），新增50／失去4。固定模型对的配对问题bootstrap95%区间为[16.5,29.5]pp（10,000次，seed20261022，方法在结果前固定）。这反映题目抽样不确定性，不是训练seed总体置信区间或三语言稳定性。
+
+Base／SW20截断117→38，提取失败115→37，生成token1,106,114／783,189。该SW收益在原100题7→31及新增200题16→62两批均出现，但两批同一训练seed。200题在4B训练前已排除，曾用于1.7B分析，因此不能称全项目新盲测；也不把不同规模／并发协议的分数直接混排。
+
+Base英语166／200已完成且父队列exit0；SW20已进入英语评测，不能提前宣称英语保持通过。成本等全部父任务结束后按唯一父任务计账，当前不重复计训练／Base评测；两条SW准确率已读回TensorBoard。语言统计将随完整四case验收，不据最终答案分数声称纯SW推理。研究三语言及正反顺序仍未开始。
+
+[SW200逐题配对、终止和区间](sw4b_followup200_SW_partial_20261022.PUBLIC.json) · [结果前固定的汇总方法](sw4b_followup200_collection_prepared_20261022.PUBLIC.json)。
