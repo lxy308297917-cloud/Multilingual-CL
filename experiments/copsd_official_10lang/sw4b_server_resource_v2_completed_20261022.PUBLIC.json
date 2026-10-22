@@ -1,0 +1,80 @@
+{
+  "protocol": "SW4B_official_server_resource2_v2_completed",
+  "engineering_completed": true,
+  "completed_at": "2026-10-22 15:46:46",
+  "frozen_sha256": "40f6ea72986c3eda451e68d6d4cdc3204892bef688382594e53090a19533a82b",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "completed_updates": 2,
+  "actual_exposures": 64,
+  "scheduler_horizon": 100,
+  "base_unchanged_bitwise": true,
+  "teacher_all_on_training_GPU": true,
+  "actual_remote_load_receipts_match_all_exported_parameters": true,
+  "weight_sync_count": 3,
+  "three_distinct_student_adapters": true,
+  "generated_tokens": 104865,
+  "responses_at2048": 34,
+  "cost": {
+    "loss_calls": 64,
+    "valid_response_loss_positions": 104865,
+    "masked_response_positions": 26207,
+    "student_forward_calls": 64,
+    "student_forward_cuda_seconds": 31.087064849853515,
+    "student_processed_input_positions": 141909,
+    "student_attended_input_positions": 115702,
+    "teacher_forward_calls": 64,
+    "teacher_forward_cuda_seconds": 37.93513204956054,
+    "teacher_processed_input_positions": 208136,
+    "teacher_attended_input_positions": 181929
+  },
+  "batch_generation": [
+    {
+      "global_step": 0,
+      "rollouts": 32,
+      "generated_tokens": 53998,
+      "generation_seconds": 47.932481437921524
+    },
+    {
+      "global_step": 1,
+      "rollouts": 32,
+      "generated_tokens": 50867,
+      "generation_seconds": 45.18078530393541
+    }
+  ],
+  "checkpoint_proofs": [
+    {
+      "step": 1,
+      "optimizer_scheduler_RNG_present": true,
+      "adapter_sha256": "1c5d1b30bb592d79f659e8b492c8994d6487298173348137a892aa55d139fe9f"
+    },
+    {
+      "step": 2,
+      "optimizer_scheduler_RNG_present": true,
+      "adapter_sha256": "769d024769813ae8785d17e5ca4fba268bad95c197c94ca6fe763a12a22c56f4"
+    }
+  ],
+  "memory_per_role": [
+    {
+      "role": "training_and_teacher",
+      "physical_peak_MiB": 21585.0,
+      "sampled_headroom_MiB": 2991.0,
+      "telemetry_sha256": "5fb19ad4eddc7370829d41db54a63a719821106a0de9ea7f4e42fc6d27aba15f"
+    },
+    {
+      "role": "student_rollout_server",
+      "physical_peak_MiB": 23403.0,
+      "sampled_headroom_MiB": 1173.0,
+      "telemetry_sha256": "0b27fb153f5043d6b46193454e6145126969e276d6da2e252b6767b14b0deb1d"
+    }
+  ],
+  "train_seconds_including_diagnostic_hashing": 616.2904689442366,
+  "allocated_parent_GPU_hours": 0.43333333333333335,
+  "TensorBoard_train_loss_steps": [
+    1,
+    2
+  ],
+  "checkpoint_actual_resume_tested": false,
+  "fused_layout_full_logit_equivalence_tested": false,
+  "downstream_4B_mathematical_effect_tested": false,
+  "scope": "Engineering gate only. Full64 stresspool and2048 retained; not100 updates or efficacy. AnySW20 must start fresh fromoriginal4B with a new protocol and matching4BBase, not debugadapter or failed singleGPU pilot."
+}

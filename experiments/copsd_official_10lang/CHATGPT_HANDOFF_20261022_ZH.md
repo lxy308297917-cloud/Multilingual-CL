@@ -162,3 +162,18 @@ v2保留原worker循环，仅增加max_num_seqs32资源上限，匹配本次每�
 恢复预检通过，单独两卡队列已手动启动。已实际看到CUDAgraph的11组mixed＋7组decode捕获完成，服务器health返回200、训练角色开始初始化，已越过首轮失败点。尚未验收完整远端权重同步、64条轨迹、两更新或4B下游效果；仍不启动先导SW20或十语批量训练。
 
 [v1终态与成本](sw4b_server_resource_v1_failed_20261022.PUBLIC.json) · [v2固定配置](sw4b_server_resource_v2_frozen_20261022.PUBLIC.json) · [源码结构差异CPU证据](server_worker32_AST_CPU_20261022.PUBLIC.json) · [v2启动状态](sw4b_server_resource_v2_started_20261022.PUBLIC.json)。
+
+
+## 15:52 两卡4B资源完整通过，已启动新鲜SW20及匹配Base评测
+
+server-v2父任务已exit0，旧训练／推理PID均退出。完整64题、两次更新、104,865生成token（34条达到2048），64次学生／教师前向与损失、三次398参数远端接收与原loader返回后的SHA对照均通过；三个adapter哈希不同，冻结Base位级不变。checkpoint1／2包含对应optimizer／scheduler步数和RNG，TensorBoard loss step1／2读回。没有实际checkpoint恢复或完整fused-layout概率等价测试，不扩大结论。
+
+训练循环含诊断616.29秒；两卡父任务13分钟，共0.433333 GPU小时，不能与分段时钟相加。采样物理峰值训练21,585 MiB／推理23,403 MiB。验收中的headroom为NVML total−used；扣除当前317 MiB driver保留差额后，可用余量估计分别2674／856 MiB，训练时未采样free字段，故是估计而非当时free实测。两角色估计均超过512 MiB。前次失败费用保留。
+
+资源条件满足后，已手动启动**从原始4B重新开始**的SW20先导，使用剔除原100＋新增200开发题的同一2700题池、640题次、100步LR日程、原LoRA／教师／损失／2048设置；不接续调试adapter。沿用通过资源验证的两卡server与并发32，保存实际student／teacher输入哈希，以便与新鲜1.7B参考核对题序。另启动同4BBase的SW／EN原开发100、n1／8192／native16固定评测。此为独立4B扩展，不混入1.7B语言排名。
+
+启动前发现本账号另一项GPU3任务并计入总量：本次OPD两卡＋Base一张＋既有一张，合计最多4张；不操作该其他项目任务。checkpoint评测队列仅配置预检，须等SW20训练及状态验收后再手动启动。当前启动状态不等于训练或数学效果完成。
+
+预先固定的探索筛查：SW正确数高于同4BBase且英语正确数不低于Base，才考虑第二seed和固定额外200题确认；未通过则保留负结果，不自动做LR／裁剪／checkpoint网格，不直接扩大100步、十语或顺序实验。
+
+[两卡完整资源验收](sw4b_server_resource_v2_completed_20261022.PUBLIC.json) · [显存余量口径](sw4b_server_resource_memory_note_20261022.PUBLIC.json) · [SW20独立配置](sw4b_server_pilot20_frozen_20261022.PUBLIC.json)。

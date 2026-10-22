@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-10-22T15:53:34.220382",
+  "protocol": "independent_SW4B_dedicated_server_fresh_pilot20_v1",
+  "frozen_sha256": "39fcdb69f6898ecece9273a0c053c20d3d27bcfc6d6c2a790d7fa9a2c9788d95",
+  "resource_gate_sha256": "b22adc8e8fecff5e7d606acd8b14445895ebb7ec7f626849dd9704d70d053ef7",
+  "roles": {
+    "copsd-sw4b-server-pilot20-v1": {
+      "phase_snapshot": "running",
+      "monitor_pid": 319026,
+      "job_pid": 319331,
+      "started_at": "2026-10-22 15:52:01",
+      "GPU_indices": [
+        0,
+        2
+      ],
+      "script_sha256": "bf5204155a56bd56d6a69704fe0ee1e6f8d60f6523ec9d4dfbe1f35bf9d3abbe"
+    },
+    "copsd-sw4b-server-base-dev-v1": {
+      "phase_snapshot": "running",
+      "monitor_pid": 319057,
+      "job_pid": 319490,
+      "started_at": "2026-10-22 15:52:09",
+      "GPU_indices": [
+        4
+      ],
+      "script_sha256": "499444081de4dd60042d40241240aadc211062bc786f7a640f879c6b33c7365d"
+    }
+  },
+  "fresh_original4B_no_debug_resume": true,
+  "target_updates": 20,
+  "exposures": 640,
+  "max_account_GPUs": 4,
+  "other_owned_GPU_count_observed": 1,
+  "other_owned_GPU_index_observed": 3,
+  "OPD_andBase_allocations_count": 3,
+  "checkpoint_evaluation_queue_started": false,
+  "scope": "Both manualqueue monitors andparenthandles confirmed alive. Initial loading, not completed training/efficacy. OtherownedGPU3 counted, no action on unrelatedtask."
+}

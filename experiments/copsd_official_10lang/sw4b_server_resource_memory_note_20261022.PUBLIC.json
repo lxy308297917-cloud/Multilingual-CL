@@ -1,0 +1,13 @@
+{
+  "observed_at": "2026-10-22T15:50:51.657972",
+  "NVML_total_MiB": 24576,
+  "idle_used_MiB": 12,
+  "idle_free_MiB": 24247,
+  "NVML_reserved_difference_MiB": 317,
+  "clarification": "Resource audit sampled_headroom_MiB means total minus used, including driver-reserved memory. Only used/utilization were sampled during run; actual free was not sampled. Subtract current317MiB reserved difference as an estimate, not a measured training-time free series.",
+  "estimated_free_at_peak_MiB_by_role": {
+    "training_and_teacher": 2674.0,
+    "student_rollout_server": 856.0
+  },
+  "both_estimated_margins_above512": true
+}
