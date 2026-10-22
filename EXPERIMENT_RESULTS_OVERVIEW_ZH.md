@@ -236,3 +236,6 @@ PLND 与 LAPE 不可彼此按目标综合直接排名。LAPE 在部分任务改�
 5. **同步与核验**：若服务器已经补完密集GSM8K或产生新的自适应方法模型，请先把 `DONE`、清单/模型哈希、逐任务原始分数与新选择表同步入仓，再更新本文；本报告不会把未同步的口头进度写成核验完成。
 
 主要入口：[SW D2方法与阶段结论](experiments/sw_d2_sparse_projection_v1/PROGRESS_REPORT_2026-09-23_ZH.md) · [SW D2原始分数](experiments/sw_d2_sparse_projection_v1/raw_scores.csv) · [Igbo/SW旧轨道与配方交接](docs/chatgpt_handoff/2026-09-18/RESEARCH_HANDOFF_FOR_CHATGPT_ZH.md) · [自适应层模块方案](experiments/sw_d2_sparse_projection_v1/ADAPTIVE_LAYER_MODULE_EN_PROTECTION_PLAN_ZH.md) · [GSM8K待补审计](experiments/sw_d2_sparse_projection_v1/COMPLETION_AUDIT_PENDING_GSM8K_ZH.md)。
+
+
+2026-10-22 14:56 OPD补充：独立4B资源v2在原损失mask复制处OOM，0次优化器更新；v3仅作等价归约显存优化，CPU损失／梯度检查通过，队列手动启动，CUDA和两更新仍待验收。无4B效果结论，详见[当日日报](docs/daily/实验日报_2026.10.22.md)。

@@ -1,0 +1,18 @@
+{
+  "protocol": "SW4B_resource2_v2_terminal_failure",
+  "failed_at": "2026-10-22T14:35:29+08:00",
+  "phase": "failed",
+  "exit_code": 139,
+  "root_cause": "CUDA OOM at original generalized_jsd_loss jsd[mask] vocabulary copy; segfault followed exception teardown",
+  "optimizer_updates": 0,
+  "first_rollout_batch_tokens": 57971,
+  "first_rollout_batch_seconds": 65.1648,
+  "allocation_requested_GiB": 1.16,
+  "GPU_free_GiB": 1.04,
+  "physical_process_GiB": 22.61,
+  "allocated_parent_seconds": 258,
+  "allocated_parent_GPU_hours": 0.07166666666666667,
+  "log_relative": "logs/copsd_official_10lang/sw4b_resource2_20261022_v2.run.log",
+  "preserved": true,
+  "method_efficacy_measured": false
+}

@@ -467,3 +467,16 @@ v1在完整Trainer构造结束前访问`trainer._update_batch`，该控制器由
 v2把统计包装安装移到`callback.on_train_begin`，届时Trainer及批量rollout控制器已完成初始化。模型／数据／64题次／2048预算／损失／AdamW／LR／显存份额均与v1相同，使用新entry、wrapper、freeze、命名队列、checkpoint和telemetry路径。实际wrapper预检通过，按已有故障恢复授权手动启动，未要求重复确认、未覆盖旧结果或改动官方核心。
 
 当前v2状态以[独立恢复启动凭证](sw4b_resource2_v2_started_20261022.PUBLIC.json)为准；[v1具体失败证据](sw4b_resource2_v1_failed_20261022.PUBLIC.json)、[v2冻结配置](sw4b_resource2_v2_frozen_20261022.PUBLIC.json)。仍须完成两更新的真实GPU与checkpoint验收才可开展独立4B效果先导。
+
+
+## 14:56 4B第二轮真实OOM与第三轮等价显存修复
+
+v2已终止，0次优化器更新：首批32条在线轨迹生成57,971 token、约65.16秒，随后在官方损失`jsd[mask]`处申请额外1.16 GiB、仅剩1.04 GiB，触发OOM；异常清理随后segfault。父任务258秒（0.071667 GPU小时），失败日志、代码和输出保留。不是4B方法效果结果。
+
+独立v3仅调整损失归约内存：仍调用原官方函数得到全部词表的裁剪后分量，先沿词表求和，再选择有效回答位置、除以原有效位置数；KL方向、裁剪、mask、生成2048、AdamW、教师机制不变。部分padding mask也适用，不采用仅完整mask才优化的早期草案。CPU FP64／FP32／BF16、完整与部分mask共6例学生梯度逐位相同；损失最大差6.94e-18，仅由求和顺序产生，不能声称所有计算逐位相同。
+
+真实wrapper预检通过，单卡v3队列已手动启动并确认monitor存活，启动时尚处于GPU交接阶段。正式加载前必须通过CUDA全词表151936、BF16 autocast的损失与梯度比较；输出尚未产生时不宣称GPU验证通过。保留原核心文件，独立entry／冻结配置／输出／日志。若本次仍显存不足或无可用余量，则停止单卡4B路径，不通过缩短回答、CPU教师或简化损失继续试跑。三语选择缺口仍在。
+
+[实际v2失败](sw4b_resource2_v2_failed_20261022.PUBLIC.json) · [v3固定协议](sw4b_resource2_v3_frozen_20261022.PUBLIC.json) · [CPU等价检查](mask_reduction_memory_CPU_20261022.PUBLIC.json)。
+
+14:57更新：CUDA全词表151936×8位置、FP32／BF16 autocast、完整／部分mask共4例，损失和学生梯度均逐位相同；此为局部数值验证，尚非完整4B训练显存通过。实际worker继续加载，日志与原CUDA结果保留。
