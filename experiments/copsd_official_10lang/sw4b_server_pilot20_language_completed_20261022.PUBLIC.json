@@ -1,0 +1,169 @@
+{
+  "protocol": "SW4B_pilot20_completed_language_supplement_v1",
+  "observed_at": "2026-10-22T19:01:35.823496",
+  "cases": {
+    "Base_sw": {
+      "source_items_sha256": "4dd8e16c1899ae841e9c1e91735a74935956625fe523417da3e6b7c5ab9ea876",
+      "analysis_sha256": "15bee4b43b3f4184e824c41aae7ddcd51d4d959b4e3fe80b2e247b3fa26cb075",
+      "language": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 87,
+            "__label__mkn_Latn": 1,
+            "__label__ktu_Latn": 2,
+            "__label__swc_Latn": 4,
+            "__label__kwn_Latn": 1,
+            "__label__kng_Latn": 1,
+            "__label__eng_Latn": 2,
+            "__label__kdc_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 70,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 6,
+            "__label__eng_Latn": 1
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 38,
+            "no_final_section": 62
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 32,
+            "__label__nyf_Latn": 1,
+            "__label__swc_Latn": 5
+          },
+          "target_top1_probability_ge_0_8": 22,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 5,
+            "__label__swc_Latn": 2
+          }
+        }
+      }
+    },
+    "Base_en": {
+      "source_items_sha256": "9f8972ec0bf50fca18f88122fcbfb0cedce2c2ab4bcea3f2b3ebf8a39b94cb28",
+      "analysis_sha256": "e61c42a2d03706b835977882246f1d88988d41d60aec2a42b1aa4071ded55f9f",
+      "language": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 100
+          },
+          "target_top1_probability_ge_0_8": 90,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 90
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 96,
+            "no_final_section": 4
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 94,
+            "__label__sna_Latn": 1,
+            "__label__gom_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 85,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 88,
+            "__label__sna_Latn": 1,
+            "__label__gom_Latn": 1
+          }
+        }
+      }
+    },
+    "SW20_sw": {
+      "source_items_sha256": "68182855cbd3d94034a31634ec1738556cc15b5c210e2f6bd0bff71b2a79dda2",
+      "analysis_sha256": "f9de1e2059fa5c6601e05627751c46a3aca0dc5f0de84cb6a6a5d12b3c26f7c3",
+      "language": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 67,
+            "__label__eng_Latn": 29,
+            "__label__ssw_Latn": 2,
+            "__label__cmn_Hani": 1,
+            "__label__vie_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 59,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 21,
+            "__label__eng_Latn": 10
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 88,
+            "no_final_section": 12
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 53,
+            "__label__eng_Latn": 14,
+            "__label__swc_Latn": 11,
+            "__label__ssw_Latn": 9,
+            "__label__ayr_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 29,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 18,
+            "__label__eng_Latn": 7,
+            "__label__swc_Latn": 5,
+            "__label__ssw_Latn": 1
+          }
+        }
+      }
+    },
+    "SW20_en": {
+      "source_items_sha256": "9a898a80aed5ad0671b0782ef9ced9ae43642d06bbe7cc504dba279a70fe04c7",
+      "analysis_sha256": "7b9cd666af23a478ae7859d533ceb879e4dd9c5054883f050547562a09c497cb",
+      "language": {
+        "thinking": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 100
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 100
+          },
+          "target_top1_probability_ge_0_8": 94,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 85
+          }
+        },
+        "final": {
+          "total_items": 100,
+          "statuses": {
+            "predicted": 91,
+            "no_final_section": 9
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 90,
+            "__label__yor_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 85,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 84,
+            "__label__yor_Latn": 1
+          }
+        }
+      }
+    }
+  },
+  "scope": "All100 denominators include missing finals; GlotLID top1/0.8 threshold is not calibrated fluency, per-token purity or proof correctness. Official mathematical scores unchanged.",
+  "no_new_generations": true
+}

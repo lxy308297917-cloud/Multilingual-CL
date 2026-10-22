@@ -1,0 +1,302 @@
+{
+  "protocol": "independent_SW4B_dedicated_server_fresh_pilot20_v1",
+  "completed_at": "2026-10-22T18:56:32.011950",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "summarizer_sha256": "347def602dc5cce4a14f4dcb7e88a33b292773cbc9571f61a864b86f658e6cf8",
+  "pilot_frozen_sha256": "39fcdb69f6898ecece9273a0c053c20d3d27bcfc6d6c2a790d7fa9a2c9788d95",
+  "checkpoint20_adapter_sha256": "0d673e7df9b3f04f67fd5514be96f0039e0ede03e66eed3ef119a5cb7cc4f28b",
+  "training_completed": true,
+  "updates": 20,
+  "exposures": 640,
+  "actual_training_prompts_per_second": 0.11645617722156738,
+  "actual_rollout_generated_tokens": 1076264,
+  "actual_rollout_generation_seconds": 950.8235241062939,
+  "actual_rollout_tokens_per_generation_second": 1131.9282419012625,
+  "timing_scope": "Use640 actualexposures, not Trainers100-step plannednum_samples under earlystop. Use32-prompt SERVER_BATCH_GENERATION timings, not nearzero cachedper-microbatch generationprints. Forward CUDA timers exclude rollout,KL,backward,sync,hashing,saving.",
+  "training_cost": {
+    "loss_calls": 640,
+    "valid_response_loss_positions": 1076264,
+    "masked_response_positions": 234456,
+    "student_forward_calls": 640,
+    "student_forward_cuda_seconds": 314.42693228149415,
+    "student_processed_input_positions": 1421009,
+    "student_attended_input_positions": 1186553,
+    "teacher_forward_calls": 640,
+    "teacher_forward_cuda_seconds": 376.36093978881837,
+    "teacher_processed_input_positions": 2057997,
+    "teacher_attended_input_positions": 1823541
+  },
+  "training_generation": [
+    {
+      "global_step": 0,
+      "rollouts": 32,
+      "generated_tokens": 51382,
+      "generation_seconds": 45.30098464153707
+    },
+    {
+      "global_step": 1,
+      "rollouts": 32,
+      "generated_tokens": 51325,
+      "generation_seconds": 45.33584967255592
+    },
+    {
+      "global_step": 2,
+      "rollouts": 32,
+      "generated_tokens": 57452,
+      "generation_seconds": 48.40239397995174
+    },
+    {
+      "global_step": 3,
+      "rollouts": 32,
+      "generated_tokens": 51526,
+      "generation_seconds": 45.14673728682101
+    },
+    {
+      "global_step": 4,
+      "rollouts": 32,
+      "generated_tokens": 53929,
+      "generation_seconds": 46.65238776616752
+    },
+    {
+      "global_step": 5,
+      "rollouts": 32,
+      "generated_tokens": 57113,
+      "generation_seconds": 48.19415153004229
+    },
+    {
+      "global_step": 6,
+      "rollouts": 32,
+      "generated_tokens": 52369,
+      "generation_seconds": 47.156585305929184
+    },
+    {
+      "global_step": 7,
+      "rollouts": 32,
+      "generated_tokens": 51702,
+      "generation_seconds": 45.668712170794606
+    },
+    {
+      "global_step": 8,
+      "rollouts": 32,
+      "generated_tokens": 55296,
+      "generation_seconds": 47.50279037281871
+    },
+    {
+      "global_step": 9,
+      "rollouts": 32,
+      "generated_tokens": 53989,
+      "generation_seconds": 46.374240634962916
+    },
+    {
+      "global_step": 10,
+      "rollouts": 32,
+      "generated_tokens": 51583,
+      "generation_seconds": 45.79677183367312
+    },
+    {
+      "global_step": 11,
+      "rollouts": 32,
+      "generated_tokens": 52959,
+      "generation_seconds": 45.987494099885225
+    },
+    {
+      "global_step": 12,
+      "rollouts": 32,
+      "generated_tokens": 48488,
+      "generation_seconds": 45.242342341691256
+    },
+    {
+      "global_step": 13,
+      "rollouts": 32,
+      "generated_tokens": 56779,
+      "generation_seconds": 51.96757807023823
+    },
+    {
+      "global_step": 14,
+      "rollouts": 32,
+      "generated_tokens": 57803,
+      "generation_seconds": 52.04369924031198
+    },
+    {
+      "global_step": 15,
+      "rollouts": 32,
+      "generated_tokens": 54906,
+      "generation_seconds": 49.720723344013095
+    },
+    {
+      "global_step": 16,
+      "rollouts": 32,
+      "generated_tokens": 56012,
+      "generation_seconds": 49.41000394523144
+    },
+    {
+      "global_step": 17,
+      "rollouts": 32,
+      "generated_tokens": 50184,
+      "generation_seconds": 46.458424454554915
+    },
+    {
+      "global_step": 18,
+      "rollouts": 32,
+      "generated_tokens": 56138,
+      "generation_seconds": 49.3949226308614
+    },
+    {
+      "global_step": 19,
+      "rollouts": 32,
+      "generated_tokens": 55329,
+      "generation_seconds": 49.066730784252286
+    }
+  ],
+  "frozen_Base_bitwise_unchanged": true,
+  "actual_inputs_match_fresh1_7B_reference": true,
+  "matched_input_caveat": "Matching prompts/exposure does not equate modelsize, generation trajectory or numerical backend. Cohorts remain separate.",
+  "batching_caveat": "Micro1xGA32 matches effectivebatch32, not per-microbatch tokenweighting or bitwisegradients of released4GPUxmicro4xGA2 with variable response lengths. Officialmasked loss function retained; not strict paperhardware reproduction.",
+  "resume_caveat": "HFTrainer optimizer/scheduler/RNG saved; actual dedicated-server checkpoint resume not tested and server sampling RNG is not included in HFcheckpoint. No bitwise stochastic continuation claim.",
+  "development": {
+    "sw": {
+      "conditions": {
+        "Base": {
+          "correct": 7,
+          "items": 100,
+          "accuracy": 0.07,
+          "normal_terminations": 37,
+          "truncated": 63,
+          "answer_extraction_failures": 62,
+          "generated_tokens": 570094,
+          "other_terminations": 0,
+          "DONE_sha256": "f4cc876457d9b3a1fea7d5c896fd485a47c2d716d2526b85d8574759acec73dd",
+          "ITEMS_sha256": "4dd8e16c1899ae841e9c1e91735a74935956625fe523417da3e6b7c5ab9ea876"
+        },
+        "SW20": {
+          "correct": 31,
+          "items": 100,
+          "accuracy": 0.31,
+          "normal_terminations": 89,
+          "truncated": 11,
+          "answer_extraction_failures": 14,
+          "generated_tokens": 360127,
+          "other_terminations": 0,
+          "DONE_sha256": "85e21f6be0f8cc4dca4ee84b7496db009e2ca95583962212c7b41f188a899707",
+          "ITEMS_sha256": "68182855cbd3d94034a31634ec1738556cc15b5c210e2f6bd0bff71b2a79dda2"
+        }
+      },
+      "paired_gains": [
+        "07c2a8913a8a6c3fb30a7018928febea09dcad5d9ec34752998e8bf3613590ad",
+        "05a809fb81b0a32b370933d6a5c9f338935e18ec8f0eb0e471a93208a7750cba",
+        "0829f4464c6d805ef7957d2291b4489d99f6899bf6d9ee0b09b5ddbbf749b250",
+        "05f07654fd8da1a9cd0ec3def0a3ae6759b4cddf58072d0112519fe7f95c30a9",
+        "006e80bf59a61c86bcc36314a3af02e0e3b0dd8f0cc04f650ca819c701d8d8ae",
+        "08024c23f54ab4b7834783739b13f03d7ed372645a437e29230427dc7707396a",
+        "04fc6b93d5fa256fd2572a19f735903393f0ca14b267803c9d7a04b84cc660ed",
+        "01b65b79aba7d62b84cc0c7b85f04f58e76f61567fc7acc733b0a1090376c2e2",
+        "06ef4c7dc38b7f6aeb1d89edeaf37ee75e1e85c5f0b3355932dc8886128da389",
+        "06d1fefb8d674dce6685c5ae680051fbd0a40c2c6492603cbe3859040f9a96eb",
+        "070acb7a59d8ec83d17a4ce87ba32739efc5b16b7b49e2290fc89dc47c229727",
+        "0079643012757eaa052e6eeb3ca431e4492fc9461d5bef4ca94cc15179fc066f",
+        "091dd957272955780f3d53c217e644f6fc3cc847278258590c7d50829b794461",
+        "0185168898f47fda0a4b9defec03ecb1f6cb2e0518f052308330cf9024fab0b9",
+        "04207c16584a9e940d442c2c3159427ebfd7443fc1cb5e71c574e421835463f7",
+        "04ee59944ba6d631150c675afd33185825fea0e4f9d20005a7d149eec56830b3",
+        "02881cf45808c0b854c6cf5e2fc48ab4ee10a338bced6b8b020974401d9e4705",
+        "007db9983e1c11f12b5439ea2a9abdf26382abc3f21ec9d2ae86f01feebd4771",
+        "06924f85a2680d21bde577ee81df095350abd8f1d653c32e5e946fe15496100c",
+        "04bdc067c9fe2c72565723a476ce88ee418394026d242a5c9c4455bede4761b1",
+        "0014142e5f3c28a7b09446252f4a627a50ca4010f859e17ba2bd12b4c00a830a",
+        "0449037fca199707278fe31c9b46895451d894f1bb9547b3e38a41905e8143a2",
+        "0105ed957bc756b34561c914401f618c0c8bd61ba9229e176822c34eca836611",
+        "03a92f9bb707a75e54ef770465cf284f3cc49b37cdc90029f3eaa91e4e879b7f",
+        "009c074bf4eb953f9c9e13dc3052b48987683459b4e99055d15d256fba4df42e",
+        "082c018c226d0f05b896ebe233f85d7d8ab8eb64298b7238ae26d3f01453fcb1",
+        "023f989e814ee03d4bb4df7af0334cff0f4ee0953022eda407a0c9fb290a40a2"
+      ],
+      "paired_losses": [
+        "0223bb80bf14057d768c39ac8b254b4f71899bac839cee5bc7cea918e06c9a18",
+        "0223ab5f592a610473dbd90ede5fe8985bb2f6366c5eec4b0aabbeb5a86f9879",
+        "06c725ac40987010a964c847a768007830eb724abcd09ad8a90398db2b62ba30"
+      ],
+      "delta_correct": 24
+    },
+    "en": {
+      "conditions": {
+        "Base": {
+          "correct": 90,
+          "items": 100,
+          "accuracy": 0.9,
+          "normal_terminations": 93,
+          "truncated": 7,
+          "answer_extraction_failures": 4,
+          "generated_tokens": 425961,
+          "other_terminations": 0,
+          "DONE_sha256": "db0ee83aebc8f8194f2800c5a98a2936bac1f76bbceb19b8e0b83484e80eb32f",
+          "ITEMS_sha256": "9f8972ec0bf50fca18f88122fcbfb0cedce2c2ab4bcea3f2b3ebf8a39b94cb28"
+        },
+        "SW20": {
+          "correct": 85,
+          "items": 100,
+          "accuracy": 0.85,
+          "normal_terminations": 85,
+          "truncated": 15,
+          "answer_extraction_failures": 9,
+          "generated_tokens": 457813,
+          "other_terminations": 0,
+          "DONE_sha256": "72c637789f37c726df0f05462b83fa6f83c283d8f43929ccb075ddc3db8fd684",
+          "ITEMS_sha256": "9a898a80aed5ad0671b0782ef9ced9ae43642d06bbe7cc504dba279a70fe04c7"
+        }
+      },
+      "paired_gains": [
+        "05035def730116185f3c71a6a752032cad764cddabf4c4c19657da910d232318",
+        "056256dee08eacb286739897e24f6ed1f49f8a242f07ec5dae180e8661e6f923",
+        "05ecaf323b1403bb66959b559cf4a22afdbf43b18978487d96c55a50301227a3"
+      ],
+      "paired_losses": [
+        "01b65b79aba7d62b84cc0c7b85f04f58e76f61567fc7acc733b0a1090376c2e2",
+        "089e0ce266e0447af04cc98533d565a3bf12650b9755b56052d8614672f40743",
+        "074c62c5f4cdbde6bb42109254a8a0e7e57c4d73f9e2be1579ffdc41aff29d46",
+        "02a83c15561a9a6aadd00df5c08f63b6cdd59901f999996e9d11dc93af1cdb3a",
+        "091dd957272955780f3d53c217e644f6fc3cc847278258590c7d50829b794461",
+        "0767c23b09b8ce614f5d7347ad0b7e801c8c72f7dccf7436f9a0fee18d2ee738",
+        "0354f2e395e9246ab23ca17f442ae8135f6dd3539ab183428f17f24a85d7324f",
+        "00c418f41c672ee7e43c1d0fa11a12b20b165ce6756d9bf17d0c0a55ed973bcd"
+      ],
+      "delta_correct": -5
+    }
+  },
+  "screen_target_improves_English_not_lower": false,
+  "selection_limit": "Exploratory originaldev100 singletrainingseed only; no independent followup200 or seed confirmation, no3-language selection.",
+  "output_language_review_completed": false,
+  "formal_test_rerun": false,
+  "unique_parent_costs": [
+    {
+      "queue": "copsd-sw4b-server-pilot20-v1",
+      "started_at": "2026-10-22 15:52:01",
+      "finished_at": "2026-10-22 17:26:21",
+      "allocated_GPUs": 2,
+      "allocated_parent_GPU_hours": 3.1444444444444444,
+      "script_sha256": "bf5204155a56bd56d6a69704fe0ee1e6f8d60f6523ec9d4dfbe1f35bf9d3abbe",
+      "state_sha256": "79850f5b97f99ae867eb87114498f90d0b91226a360b3389def1c3ddb6f365c8"
+    },
+    {
+      "queue": "copsd-sw4b-server-base-dev-v1",
+      "started_at": "2026-10-22 15:52:09",
+      "finished_at": "2026-10-22 16:25:46",
+      "allocated_GPUs": 1,
+      "allocated_parent_GPU_hours": 0.5602777777777778,
+      "script_sha256": "499444081de4dd60042d40241240aadc211062bc786f7a640f879c6b33c7365d",
+      "state_sha256": "aebded1fcd08fd83e89cddb0f98cca61625545ba3b3f8c5155cd5290d6733d0b"
+    },
+    {
+      "queue": "copsd-sw4b-server-checkpoint-dev-v1",
+      "started_at": "2026-10-22 17:39:17",
+      "finished_at": "2026-10-22 18:54:36",
+      "allocated_GPUs": 1,
+      "allocated_parent_GPU_hours": 1.2552777777777777,
+      "script_sha256": "1e1532bf2d6293643c847f875e879af148a5c5aac0e2f872ef6d041201007b7c",
+      "state_sha256": "86403e541bd83d5e60ddb4845ee5222341908e12fe356fa4ac3673d3d204aede"
+    }
+  ],
+  "unique_parents_allocated_GPU_hours": 4.96,
+  "new_evaluation_generated_tokens": 1813995,
+  "TensorBoard_four_accuracies_and_two_costs_read_back": true,
+  "next_stage": "If screenpasses, inspect output language/termination and plan independent confirmation; if fails, preserve result and no automatic hyperparameter grid,100updates or ten-language expansion."
+}
