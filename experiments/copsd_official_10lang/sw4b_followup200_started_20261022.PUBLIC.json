@@ -1,0 +1,44 @@
+{
+  "observed_at": "2026-10-22T20:03:24.332019",
+  "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+  "jobs": [
+    {
+      "queue": "copsd-sw4b-followup-base-v1",
+      "monitor_pid": 409848,
+      "job_pid": 409906,
+      "GPU_indices": [
+        2
+      ],
+      "GPU_UUIDs": [
+        "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39"
+      ],
+      "started_at": "2026-10-22 20:02:19",
+      "script_sha256": "b55ae114cf9357aca58831b5a9ae375a8c7586df7a08439490170f53bbaa8581",
+      "args": [
+        "Base"
+      ]
+    },
+    {
+      "queue": "copsd-sw4b-followup-sw20-v1",
+      "monitor_pid": 409857,
+      "job_pid": 409933,
+      "GPU_indices": [
+        3
+      ],
+      "GPU_UUIDs": [
+        "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573"
+      ],
+      "started_at": "2026-10-22 20:02:28",
+      "script_sha256": "b55ae114cf9357aca58831b5a9ae375a8c7586df7a08439490170f53bbaa8581",
+      "args": [
+        "SW20"
+      ]
+    }
+  ],
+  "new_training": false,
+  "max_account_GPUs": 4,
+  "CPU_SW20_preflight_passed_both_languages": true,
+  "queue_validation_passed_both": true,
+  "result_pending": true,
+  "scope": "Queue and parent processes launched, model loading/generation separately observed. No scores beforeDONE."
+}

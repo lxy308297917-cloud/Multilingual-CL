@@ -1,0 +1,11 @@
+{
+  "observed_at": "2026-10-22T19:27:06.867386",
+  "frozen_manifest_sha256": "7f80107666cd18d8d08f9edbd10b6838a4b9100f744655d93fc5d5a2c6e113d5",
+  "runtime_config_sha256": "3d8b4d129da909a6921037dcfb26cda768a366f1f094d654dcefedcf3136c349",
+  "metadata_issue": "Frozen adapter:null is an unused legacy field copied from Base-only manifest. Actual fixed adapter is adapter_relative with SHA below; no running code/manifest changed.",
+  "actual_adapter_relative": "models/checkpoint/copsd_sw4b_server_pilot20_v1/sw_4b_server_pilot20_safe2700_horizon100_seed42_20261022_v1/checkpoint-20",
+  "actual_adapter_sha256": "0d673e7df9b3f04f67fd5514be96f0039e0ede03e66eed3ef119a5cb7cc4f28b",
+  "actual_checkpoint_step": 20,
+  "runtime_CONFIG_matches_declared_adapter_relative": true,
+  "scope": "Metadata correction only; no claim of full probability equivalence from configuration alone."
+}
