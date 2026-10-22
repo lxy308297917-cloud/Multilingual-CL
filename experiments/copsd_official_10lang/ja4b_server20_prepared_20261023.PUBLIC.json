@@ -1,0 +1,32 @@
+{
+  "prepared_at": "2026-10-23T01:26:01.695068",
+  "protocol": "independent_JA4B_dedicated_server_single20_seed42_v1",
+  "CPU_preflight_passed": true,
+  "Python_compile_passed": true,
+  "queue_validate_passed": true,
+  "GPU_started": false,
+  "freeze_sha256": "9192ae54e3978c2903cc4b882d79444f061efd86e7290955bd4860b24904569e",
+  "queue_config_sha256": "c5b310fd0ed86592ca393ff82e67968516955cf31dbed331c5feaa8ac5b27415",
+  "code_adaptation": "Copied existing SW4B server entry/parent, only separate frozen/config/output identity, JA pool integrity checks and seed42 assertion. Same sync/export/rollout/loss/optimizer logic; official trainer source unchanged. Official JA student/teacher prompts present in pinned language_config.",
+  "source_data_scope": "SameSW2700ordered IDs and Englishreference content, excludes old100+reserved200. Uses archived JA prefix repair, no new rewriting.",
+  "queue_config": {
+    "interval_minutes": 5.0,
+    "target_gpus": 2,
+    "max_idle_memory_mib": 512,
+    "max_idle_util_percent": 5,
+    "hold_memory_percent": 90,
+    "min_free_after_hold_mib": 256,
+    "mode": "job",
+    "job": {
+      "script": "/data0/users/lixiaoyang/Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/run_ja4b_server20.sh",
+      "cwd": "",
+      "conda_exe": "/data0/users/lixiaoyang/.local/miniforge3/bin/conda",
+      "conda_env": "",
+      "conda_prefix": "/data0/users/lixiaoyang/ssu-migration/envs/cl",
+      "args": [],
+      "log": "/data0/users/lixiaoyang/logs/copsd_official_10lang/ja4b_server20_20261023_v1.run.log"
+    },
+    "max_user_gpus": 4
+  },
+  "scope": "One independent20-update JA4Bcandidate, not a selectedlanguage, not sequentialOPD and no claim that SWseed43 efficacy isconfirmed. Fixed4Bcohort separate from1.7B."
+}

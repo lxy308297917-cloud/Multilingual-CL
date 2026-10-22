@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-10-23T01:29:12.791479",
+  "queue": "copsd-ja4b-server20-v1",
+  "phase": "running",
+  "parent_PID": 433700,
+  "GPU_indices": [
+    2,
+    3
+  ],
+  "GPU_uuids": [
+    "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+    "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573"
+  ],
+  "started_at": "2026-10-23 01:26:29",
+  "roles": {
+    "server": {
+      "pid": 433757,
+      "GPU_UUID": "GPU-6f39cd66-8deb-a8bb-1b2e-8b96432fa573"
+    },
+    "training": {
+      "pid": 433895,
+      "GPU_UUID": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39"
+    }
+  },
+  "max_user_gpus": 4,
+  "initial_state": "Model loaded and Trainer initialized, first sync in progress; no completedupdate claimed yet.",
+  "scope": "Independent JA4B20 seed42 fromoriginalBase, not continuationofSW/oldJA orselectedlanguage. Existing SWseed43 fixed200 evaluation continuesonGPU0. Currentaccount total3distinctGPUs."
+}
