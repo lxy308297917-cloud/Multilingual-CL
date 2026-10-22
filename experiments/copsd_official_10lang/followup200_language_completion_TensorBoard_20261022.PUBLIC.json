@@ -1,0 +1,1449 @@
+{
+  "observed_at": "2026-10-22T11:18:09.653521",
+  "protocol": "project_followup200_language_completion_supplement_v1",
+  "math_report_sha256": "b7701ce580ecbdaa96c59775051cd9f57a9fab17b9c31573345d2677965b06cd",
+  "data_freeze_sha256": "7347ab481206f5c6a63736e30711eaebed767ad95d1d9ad7d24bee264f0561ff",
+  "language_and_completion": {
+    "sw": {
+      "target_label": "__label__swh_Latn",
+      "cases": {
+        "base": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 127,
+                "__label__kng_Latn": 6,
+                "__label__swc_Latn": 27,
+                "__label__kdc_Latn": 3,
+                "__label__mmn_Latn": 1,
+                "__label__nyf_Latn": 1,
+                "__label__luo_Latn": 1,
+                "__label__yom_Latn": 3,
+                "__label__ktu_Latn": 2,
+                "__label__alj_Latn": 1,
+                "__label__lol_Latn": 6,
+                "__label__ngp_Latn": 5,
+                "__label__abs_Latn": 1,
+                "__label__myx_Latn": 1,
+                "__label__inh_Cyrl": 2,
+                "__label__lin_Latn": 3,
+                "__label__slk_Latn": 1,
+                "__label__snf_Latn": 1,
+                "__label__leh_Latn": 1,
+                "__label__fai_Latn": 1,
+                "__label__pkb_Latn": 1,
+                "__label__nnq_Latn": 1,
+                "__label__kqn_Latn": 1,
+                "__label__xon_Latn": 1,
+                "__label__atj_Latn": 1,
+                "__label__lub_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 90,
+              "correct_items_label_counts": {
+                "__label__swc_Latn": 3,
+                "__label__swh_Latn": 5
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 35,
+                "no_final_section": 165
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 22,
+                "__label__swc_Latn": 5,
+                "__label__kng_Latn": 2,
+                "__label__ssw_Latn": 1,
+                "__label__kwy_Latn": 1,
+                "__label__eng_Latn": 1,
+                "__label__lol_Latn": 1,
+                "__label__ktu_Latn": 1,
+                "__label__kdc_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 18,
+              "correct_items_label_counts": {
+                "__label__ssw_Latn": 1,
+                "__label__swh_Latn": 5,
+                "__label__kwy_Latn": 1,
+                "no_final_section": 1
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 8,
+            "generated_tokens": 1383433,
+            "truncated": 164,
+            "normal_terminations": 36,
+            "answer_extraction_failures": 162,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.04,
+            "generation_seconds": 1507.6962859667838,
+            "model_load_seconds": 10.943898977711797,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_base_sw_20261021_v1",
+            "items_sha256": "637878df5bfcf23c32dc9d9eaae852dd884877b53e2d6fe1504005535c0c25b8",
+            "config_sha256": "4b050c554c9d301d2d25793d18c935d3b644fe75488b7ef878fe83cf5e51ae38"
+          }
+        },
+        "sw42": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 10,
+                "__label__swh_Latn": 162,
+                "__label__lol_Latn": 7,
+                "__label__ssw_Latn": 1,
+                "__label__swc_Latn": 8,
+                "__label__ktu_Latn": 4,
+                "__label__old_Latn": 1,
+                "__label__snf_Latn": 1,
+                "__label__kdc_Latn": 2,
+                "__label__ndc_Latn": 1,
+                "__label__wls_Latn": 1,
+                "__label__lin_Latn": 1,
+                "__label__twu_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 128,
+              "correct_items_label_counts": {
+                "__label__swh_Latn": 25,
+                "__label__eng_Latn": 1,
+                "__label__swc_Latn": 2
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 76,
+                "predicted": 123,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__ssw_Latn": 4,
+                "__label__swc_Latn": 32,
+                "__label__swh_Latn": 67,
+                "__label__ktu_Latn": 3,
+                "__label__lin_Latn": 1,
+                "__label__cjk_Latn": 2,
+                "__label__eng_Latn": 8,
+                "__label__lub_Latn": 1,
+                "__label__lol_Latn": 2,
+                "__label__kdc_Latn": 1,
+                "__label__kwf_Latn": 1,
+                "__label__snf_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 39,
+              "correct_items_label_counts": {
+                "__label__ssw_Latn": 2,
+                "__label__swh_Latn": 11,
+                "__label__swc_Latn": 5,
+                "__label__cjk_Latn": 1,
+                "__label__eng_Latn": 4,
+                "__label__ktu_Latn": 1,
+                "__label__kwf_Latn": 1,
+                "no_final_section": 3
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 28,
+            "generated_tokens": 720231,
+            "truncated": 59,
+            "normal_terminations": 141,
+            "answer_extraction_failures": 58,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.14,
+            "generation_seconds": 1368.1156087778509,
+            "model_load_seconds": 13.075137425214052,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_sw42_sw_20261021_v1",
+            "items_sha256": "a2cb0ced3cf65227341be40d59b4c12c353d3a9a92f3f5cd359f9ba9eb8b7714",
+            "config_sha256": "f3bf481f35268d30219154bcd32f942119ba00f80d75b35da4d3e3fd4b22330c"
+          }
+        },
+        "sw43": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__swh_Latn": 153,
+                "__label__eng_Latn": 15,
+                "__label__luo_Latn": 1,
+                "__label__fai_Latn": 2,
+                "__label__ktu_Latn": 2,
+                "__label__bps_Latn": 2,
+                "__label__swc_Latn": 8,
+                "__label__lol_Latn": 4,
+                "__label__yaa_Latn": 1,
+                "__label__ewo_Latn": 1,
+                "__label__kdc_Latn": 2,
+                "__label__acm_Arab": 1,
+                "__label__cjk_Latn": 1,
+                "__label__mlt_Latn": 1,
+                "__label__kng_Latn": 2,
+                "__label__atj_Latn": 1,
+                "__label__wls_Latn": 1,
+                "__label__wmw_Latn": 1,
+                "__label__cce_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 125,
+              "correct_items_label_counts": {
+                "__label__swh_Latn": 24,
+                "__label__eng_Latn": 3,
+                "__label__swc_Latn": 2,
+                "__label__mlt_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 79,
+                "predicted": 121
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 11,
+                "__label__swh_Latn": 63,
+                "__label__ssw_Latn": 8,
+                "__label__lin_Latn": 3,
+                "__label__wmw_Latn": 2,
+                "__label__swc_Latn": 27,
+                "__label__ndc_Latn": 1,
+                "__label__cjk_Latn": 1,
+                "__label__kdc_Latn": 1,
+                "__label__lol_Latn": 2,
+                "__label__nya_Latn": 1,
+                "__label__wat_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 36,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 3,
+                "__label__swh_Latn": 9,
+                "__label__lin_Latn": 1,
+                "__label__wmw_Latn": 2,
+                "no_final_section": 6,
+                "__label__lol_Latn": 1,
+                "__label__swc_Latn": 6,
+                "__label__ssw_Latn": 2
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 30,
+            "generated_tokens": 789213,
+            "truncated": 66,
+            "normal_terminations": 134,
+            "answer_extraction_failures": 59,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.15,
+            "generation_seconds": 1212.9031964894384,
+            "model_load_seconds": 10.86317589506507,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_sw43_sw_20261021_v1",
+            "items_sha256": "e8fec7d2d7c65dcea3b3c62d4925033fe8e402833123205de1b9c954e4af10e9",
+            "config_sha256": "c3b13dc701d5ae2ed551601b41ef14077097c2eb1d031308e5823a615abe1d53"
+          }
+        }
+      }
+    },
+    "ja": {
+      "target_label": "__label__jpn_Jpan",
+      "cases": {
+        "base": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 180,
+                "too_short": 20
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 140,
+                "__label__eng_Latn": 38,
+                "__label__rue_Cyrl": 1,
+                "__label__lvs_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 140,
+              "correct_items_label_counts": {
+                "__label__jpn_Jpan": 75,
+                "__label__eng_Latn": 22,
+                "too_short": 7,
+                "__label__lvs_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 157,
+                "no_final_section": 43
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 151,
+                "__label__eng_Latn": 5,
+                "__label__anp_Deva": 1
+              },
+              "target_top1_probability_ge_0_8": 150,
+              "correct_items_label_counts": {
+                "__label__jpn_Jpan": 87,
+                "no_final_section": 14,
+                "__label__eng_Latn": 4
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 105,
+            "generated_tokens": 692041,
+            "truncated": 27,
+            "normal_terminations": 173,
+            "answer_extraction_failures": 24,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.525,
+            "generation_seconds": 559.8446758631617,
+            "model_load_seconds": 11.891997488215566,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_base_ja_20261021_v1",
+            "items_sha256": "7137b68b220688444d0599287673e8f744928ebfade1eb362c1858062b7112c0",
+            "config_sha256": "a67e80a173c590281969e7991a428c8d58989af15d4cd82888f674fe4f7b640a"
+          }
+        },
+        "ja42": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 185,
+                "too_short": 15
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 164,
+                "__label__eng_Latn": 19,
+                "__label__pol_Latn": 1,
+                "__label__nan_Hani": 1
+              },
+              "target_top1_probability_ge_0_8": 163,
+              "correct_items_label_counts": {
+                "__label__jpn_Jpan": 80,
+                "__label__eng_Latn": 10,
+                "too_short": 4
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 65,
+                "predicted": 135
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 127,
+                "__label__eng_Latn": 6,
+                "__label__awa_Deva": 1,
+                "__label__lin_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 127,
+              "correct_items_label_counts": {
+                "no_final_section": 26,
+                "__label__jpn_Jpan": 63,
+                "__label__eng_Latn": 3,
+                "__label__awa_Deva": 1,
+                "__label__lin_Latn": 1
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 94,
+            "generated_tokens": 619393,
+            "truncated": 23,
+            "normal_terminations": 177,
+            "answer_extraction_failures": 15,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.47,
+            "generation_seconds": 923.4177817832679,
+            "model_load_seconds": 11.611450737342238,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_ja42_ja_20261021_v1",
+            "items_sha256": "97a32237f720f5b26f90aff91a4c50beaebb237029e052250899b51f7ba24541",
+            "config_sha256": "efdc9b409f38a77a1bb24339351fb9c150101d2822998f665668dae3c89bf579"
+          }
+        },
+        "ja43": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 186,
+                "too_short": 14
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 165,
+                "__label__eng_Latn": 17,
+                "__label__gug_Latn": 1,
+                "__label__pol_Latn": 1,
+                "__label__cmn_Hani": 1,
+                "__label__tuk_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 163,
+              "correct_items_label_counts": {
+                "__label__jpn_Jpan": 73,
+                "__label__eng_Latn": 11,
+                "__label__gug_Latn": 1,
+                "too_short": 4
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 142,
+                "no_final_section": 58
+              },
+              "top1_label_counts": {
+                "__label__jpn_Jpan": 136,
+                "__label__eng_Latn": 5,
+                "__label__lin_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 135,
+              "correct_items_label_counts": {
+                "__label__jpn_Jpan": 63,
+                "no_final_section": 23,
+                "__label__eng_Latn": 3
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 89,
+            "generated_tokens": 630800,
+            "truncated": 22,
+            "normal_terminations": 178,
+            "answer_extraction_failures": 10,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.445,
+            "generation_seconds": 921.86468151398,
+            "model_load_seconds": 11.224367560818791,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_ja43_ja_20261021_v1",
+            "items_sha256": "df0d041ca938f12fafa10b452c6f265de075195c083f0727a8c4d5f8d5d6e843",
+            "config_sha256": "c28abedb03d05d45ba03b25c5b22becba8b27567f4827deaac734cccac2dd3d3"
+          }
+        }
+      }
+    },
+    "zh": {
+      "target_label": "__label__cmn_Hani",
+      "cases": {
+        "base": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 197,
+                "too_short": 3
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 191,
+                "__label__som_Latn": 1,
+                "__label__jpn_Jpan": 1,
+                "__label__vie_Latn": 1,
+                "__label__vec_Latn": 1,
+                "__label__lvs_Latn": 1,
+                "__label__lmo_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 175,
+              "correct_items_label_counts": {
+                "__label__som_Latn": 1,
+                "__label__cmn_Hani": 142,
+                "too_short": 1,
+                "__label__vie_Latn": 1,
+                "__label__vec_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 179,
+                "no_final_section": 21
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 178,
+                "__label__wuu_Hani": 1
+              },
+              "target_top1_probability_ge_0_8": 177,
+              "correct_items_label_counts": {
+                "__label__cmn_Hani": 145,
+                "__label__wuu_Hani": 1
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 146,
+            "generated_tokens": 770593,
+            "truncated": 23,
+            "normal_terminations": 177,
+            "answer_extraction_failures": 20,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.73,
+            "generation_seconds": 610.9815690573305,
+            "model_load_seconds": 11.436541397124529,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_base_zh_20261021_v1",
+            "items_sha256": "6878072450a0379892393b1827f84c375675a3247635a1c66eb7b089b46bb1ac",
+            "config_sha256": "328135c2af7325c43d0bfcea0a119a56cfd7da8e7edc848c9c87eb32b5790368"
+          }
+        },
+        "zh42": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 191,
+                "too_short": 9
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 186,
+                "__label__anp_Deva": 1,
+                "__label__uzn_Latn": 1,
+                "__label__eng_Latn": 1,
+                "__label__crh_Latn": 1,
+                "__label__slk_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 176,
+              "correct_items_label_counts": {
+                "__label__cmn_Hani": 125,
+                "too_short": 5,
+                "__label__anp_Deva": 1,
+                "__label__uzn_Latn": 1,
+                "__label__crh_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 49,
+                "predicted": 151
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 148,
+                "__label__wuu_Hani": 1,
+                "__label__tir_Ethi": 1,
+                "__label__ayr_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 147,
+              "correct_items_label_counts": {
+                "__label__cmn_Hani": 114,
+                "no_final_section": 16,
+                "__label__wuu_Hani": 1,
+                "__label__tir_Ethi": 1,
+                "__label__ayr_Latn": 1
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 133,
+            "generated_tokens": 673680,
+            "truncated": 28,
+            "normal_terminations": 172,
+            "answer_extraction_failures": 20,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.665,
+            "generation_seconds": 922.9044116642326,
+            "model_load_seconds": 11.313797131180763,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_zh42_zh_20261021_v1",
+            "items_sha256": "eadec79e7c4c0b967ded2e1613ea7fd7f36690d3a043a400e57f23d3266b1e2c",
+            "config_sha256": "71db33716b5fba402efc26240de20e697c43c57c6f658d31ffb73a25fa3fcaa6"
+          }
+        },
+        "zh43": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 194,
+                "too_short": 6
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 191,
+                "__label__som_Latn": 1,
+                "__label__lvs_Latn": 1,
+                "__label__dan_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 184,
+              "correct_items_label_counts": {
+                "__label__som_Latn": 1,
+                "__label__cmn_Hani": 127,
+                "too_short": 3,
+                "__label__dan_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 45,
+                "predicted": 155
+              },
+              "top1_label_counts": {
+                "__label__cmn_Hani": 153,
+                "__label__ayr_Latn": 2
+              },
+              "target_top1_probability_ge_0_8": 153,
+              "correct_items_label_counts": {
+                "__label__cmn_Hani": 116,
+                "no_final_section": 14,
+                "__label__ayr_Latn": 2
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 132,
+            "generated_tokens": 654177,
+            "truncated": 23,
+            "normal_terminations": 177,
+            "answer_extraction_failures": 16,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.66,
+            "generation_seconds": 908.670364998281,
+            "model_load_seconds": 11.025876477360725,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_zh43_zh_20261021_v1",
+            "items_sha256": "bf9d853e2f19eb9422469980cb06bafb1848ad2bf698dc8bc706ba79899846da",
+            "config_sha256": "530a35640f1dc9e39aceafc24a12de903102795cad41d8172aa62ef0e862b84b"
+          }
+        }
+      }
+    },
+    "bn": {
+      "target_label": "__label__ben_Beng",
+      "cases": {
+        "base": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__ben_Beng": 198,
+                "__label__mni_Beng": 2
+              },
+              "target_top1_probability_ge_0_8": 198,
+              "correct_items_label_counts": {
+                "__label__ben_Beng": 39,
+                "__label__mni_Beng": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 122,
+                "no_final_section": 78
+              },
+              "top1_label_counts": {
+                "__label__ben_Beng": 120,
+                "__label__anp_Deva": 1,
+                "__label__mni_Beng": 1
+              },
+              "target_top1_probability_ge_0_8": 118,
+              "correct_items_label_counts": {
+                "__label__ben_Beng": 36,
+                "__label__anp_Deva": 1,
+                "no_final_section": 3
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 40,
+            "generated_tokens": 1164902,
+            "truncated": 86,
+            "normal_terminations": 114,
+            "answer_extraction_failures": 78,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.2,
+            "generation_seconds": 1150.4985542036593,
+            "model_load_seconds": 12.291747987270355,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_base_bn_20261021_v1",
+            "items_sha256": "b6dba595deba5f59d1e87c1e5a76fbc9306c1b1bf0bc11fe0c70f09b844b0b8a",
+            "config_sha256": "1fe0ae2053d7eeb1acc7abc9de254f93368a0aea7784c7999b84a088e277be6b"
+          }
+        },
+        "bn_unclip42": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__ben_Beng": 192,
+                "__label__pcm_Latn": 1,
+                "__label__mni_Beng": 7
+              },
+              "target_top1_probability_ge_0_8": 187,
+              "correct_items_label_counts": {
+                "__label__ben_Beng": 48,
+                "__label__mni_Beng": 2
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 94,
+                "predicted": 106
+              },
+              "top1_label_counts": {
+                "__label__ben_Beng": 104,
+                "__label__mni_Beng": 2
+              },
+              "target_top1_probability_ge_0_8": 103,
+              "correct_items_label_counts": {
+                "__label__ben_Beng": 26,
+                "no_final_section": 23,
+                "__label__mni_Beng": 1
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 50,
+            "generated_tokens": 1096131,
+            "truncated": 82,
+            "normal_terminations": 118,
+            "answer_extraction_failures": 22,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.25,
+            "generation_seconds": 1706.03572406061,
+            "model_load_seconds": 10.64869057573378,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_bn_unclip42_bn_20261021_v1",
+            "items_sha256": "ccb774bf84484c6438ea4c4d19bff41edb7fd8dbc3fa9fe4c4ef3cdb8e590d67",
+            "config_sha256": "2cc3bdb2f2492f74802d7ea95e8518e05360c58fcb001a266d364a80af3b556b"
+          }
+        },
+        "bn_unclip43": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__ben_Beng": 192,
+                "__label__mni_Beng": 6,
+                "__label__anp_Deva": 1,
+                "__label__bpy_Beng": 1
+              },
+              "target_top1_probability_ge_0_8": 190,
+              "correct_items_label_counts": {
+                "__label__ben_Beng": 52,
+                "__label__mni_Beng": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 101,
+                "predicted": 99
+              },
+              "top1_label_counts": {
+                "__label__ben_Beng": 97,
+                "__label__mni_Beng": 2
+              },
+              "target_top1_probability_ge_0_8": 94,
+              "correct_items_label_counts": {
+                "no_final_section": 31,
+                "__label__ben_Beng": 20,
+                "__label__mni_Beng": 2
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 53,
+            "generated_tokens": 1075959,
+            "truncated": 82,
+            "normal_terminations": 118,
+            "answer_extraction_failures": 17,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.265,
+            "generation_seconds": 1705.665599482134,
+            "model_load_seconds": 11.13529040850699,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_bn_unclip43_bn_20261021_v1",
+            "items_sha256": "eb9b789623702f1627fec0ddf1a3d20d70d49245b70d8a091d86dd7ccb73467c",
+            "config_sha256": "0428dbb4057ff5d2d0823b1e40a2e8cfa8358b7d59c8d9374879818a0a0d1959"
+          }
+        }
+      }
+    },
+    "en": {
+      "target_label": "__label__eng_Latn",
+      "cases": {
+        "base": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 199,
+                "__label__vie_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 187,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 146,
+                "__label__vie_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 29,
+                "predicted": 171
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 168,
+                "__label__sna_Latn": 1,
+                "__label__ayr_Latn": 1,
+                "__label__yor_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 147,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 143,
+                "__label__ayr_Latn": 1,
+                "no_final_section": 3
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 147,
+            "generated_tokens": 801485,
+            "truncated": 33,
+            "normal_terminations": 167,
+            "answer_extraction_failures": 24,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.735,
+            "generation_seconds": 651.4912069756538,
+            "model_load_seconds": 9.819086136296391,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_base_en_20261021_v1",
+            "items_sha256": "28dd6c822144a062c87e4635e29ee0cdbce7545abd7cd6e3715eaf4b14a48bd2",
+            "config_sha256": "e7c76e0fc87589e9724ea4b14202a784f5d1350255850823235620bc01de0b82"
+          }
+        },
+        "sw42": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 199,
+                "__label__mlt_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 192,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 137
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 39,
+                "predicted": 161
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 153,
+                "__label__yor_Latn": 5,
+                "__label__ayr_Latn": 1,
+                "__label__lin_Latn": 1,
+                "__label__bzj_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 137,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 123,
+                "no_final_section": 6,
+                "__label__yor_Latn": 5,
+                "__label__ayr_Latn": 1,
+                "__label__lin_Latn": 1,
+                "__label__bzj_Latn": 1
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 137,
+            "generated_tokens": 896110,
+            "truncated": 39,
+            "normal_terminations": 161,
+            "answer_extraction_failures": 31,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.685,
+            "generation_seconds": 1403.1015655100346,
+            "model_load_seconds": 13.077756455168128,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_sw42_en_20261021_v1",
+            "items_sha256": "7bab70b2296d712ab5ef54c008c42bf01978c6ba46bb9753daa197ae328cb913",
+            "config_sha256": "a944328fd95b3cfb87e2ce2da802b5f07367ae643b9474e496c25313ff5f1637"
+          }
+        },
+        "sw43": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 200
+              },
+              "target_top1_probability_ge_0_8": 187,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 137
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 161,
+                "no_final_section": 39
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 159,
+                "__label__gom_Latn": 1,
+                "__label__yor_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 136,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 131,
+                "no_final_section": 5,
+                "__label__gom_Latn": 1
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 137,
+            "generated_tokens": 882652,
+            "truncated": 35,
+            "normal_terminations": 165,
+            "answer_extraction_failures": 31,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.685,
+            "generation_seconds": 1342.7642976641655,
+            "model_load_seconds": 11.109802970662713,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_sw43_en_20261021_v1",
+            "items_sha256": "89618138f8619a176336e15c9e54423a7d83eaa639f718d60debc6ed5049f335",
+            "config_sha256": "f6650d9d85f956634d91036a3557046131f1c12b7abc6156ca184bb9acd89c67"
+          }
+        },
+        "ja42": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 199,
+                "__label__vie_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 193,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 142,
+                "__label__vie_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 45,
+                "predicted": 155
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 148,
+                "__label__yor_Latn": 3,
+                "__label__sna_Latn": 2,
+                "__label__nya_Latn": 2
+              },
+              "target_top1_probability_ge_0_8": 131,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 125,
+                "__label__yor_Latn": 3,
+                "__label__sna_Latn": 2,
+                "__label__nya_Latn": 2,
+                "no_final_section": 11
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 143,
+            "generated_tokens": 854452,
+            "truncated": 36,
+            "normal_terminations": 164,
+            "answer_extraction_failures": 30,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.715,
+            "generation_seconds": 1321.69279329665,
+            "model_load_seconds": 11.09799568913877,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_ja42_en_20261021_v1",
+            "items_sha256": "8f3154afaaa07533c5cf73a858139cf1aabd1f68ad0b1afa5d8eae63bbc8268f",
+            "config_sha256": "011c86fdf34fa933cad6253f0aa5b023e202f21c89844f65a499a9ecf17249b3"
+          }
+        },
+        "ja43": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 200
+              },
+              "target_top1_probability_ge_0_8": 193,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 137
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 44,
+                "predicted": 156
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 152,
+                "__label__yor_Latn": 2,
+                "__label__tuk_Latn": 1,
+                "__label__lin_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 131,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 128,
+                "no_final_section": 7,
+                "__label__yor_Latn": 1,
+                "__label__lin_Latn": 1
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 137,
+            "generated_tokens": 864220,
+            "truncated": 36,
+            "normal_terminations": 164,
+            "answer_extraction_failures": 29,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.685,
+            "generation_seconds": 1274.5690181273967,
+            "model_load_seconds": 11.253168547526002,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_ja43_en_20261021_v1",
+            "items_sha256": "c31c43a4af339ba74923c0ab080bf7158a07578fa577c4acdaae57b8db05b331",
+            "config_sha256": "227b2e3ad224d23221c170fe2ce1d9dff3e0b4ff1bd5e791f6a8f305259fe6ac"
+          }
+        },
+        "zh42": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 200
+              },
+              "target_top1_probability_ge_0_8": 197,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 141
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 64,
+                "predicted": 136
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 134,
+                "__label__yor_Latn": 2
+              },
+              "target_top1_probability_ge_0_8": 113,
+              "correct_items_label_counts": {
+                "no_final_section": 28,
+                "__label__eng_Latn": 111,
+                "__label__yor_Latn": 2
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 141,
+            "generated_tokens": 689263,
+            "truncated": 24,
+            "normal_terminations": 176,
+            "answer_extraction_failures": 17,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.705,
+            "generation_seconds": 1020.6120617166162,
+            "model_load_seconds": 11.331557622179389,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_zh42_en_20261021_v1",
+            "items_sha256": "88d18b8888ab3e43b9540b60a745682a0a530f3d69ac9f0c74dcd29b5a845f62",
+            "config_sha256": "04e03d6a7bba4b4050ab7fc6f8cf7f3e780beaeb17b8c0c39d42b7f1e65d5fb9"
+          }
+        },
+        "zh43": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 200
+              },
+              "target_top1_probability_ge_0_8": 196,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 130
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 63,
+                "predicted": 137
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 133,
+                "__label__lin_Latn": 1,
+                "__label__sna_Latn": 1,
+                "__label__yor_Latn": 1,
+                "__label__kri_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 117,
+              "correct_items_label_counts": {
+                "no_final_section": 24,
+                "__label__eng_Latn": 104,
+                "__label__lin_Latn": 1,
+                "__label__yor_Latn": 1
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 130,
+            "generated_tokens": 724012,
+            "truncated": 31,
+            "normal_terminations": 169,
+            "answer_extraction_failures": 24,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.65,
+            "generation_seconds": 1094.3612627778202,
+            "model_load_seconds": 11.097654851153493,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_zh43_en_20261021_v1",
+            "items_sha256": "3bb5b4d3570985c6fdf567b7b8b66d2475c2ae55609f183df70952a7ed8dbe93",
+            "config_sha256": "77a6183d7d90bd35830db22500d69aea3b179f3b70f4a01c3c0017f061acac2a"
+          }
+        },
+        "bn_unclip42": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 200
+              },
+              "target_top1_probability_ge_0_8": 192,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 138
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 49,
+                "predicted": 151
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 148,
+                "__label__yor_Latn": 3
+              },
+              "target_top1_probability_ge_0_8": 133,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 124,
+                "__label__yor_Latn": 3,
+                "no_final_section": 11
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 138,
+            "generated_tokens": 745728,
+            "truncated": 26,
+            "normal_terminations": 174,
+            "answer_extraction_failures": 24,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.69,
+            "generation_seconds": 1068.9495261553675,
+            "model_load_seconds": 11.297179158776999,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_bn_unclip42_en_20261021_v1",
+            "items_sha256": "f18e8997a9ac45a4d637beb4edae6ea1ae51bd6cd62caa889f6bc09d85f46024",
+            "config_sha256": "2422eba1264871dda484173ce128f415573731b9273d5de1348d255d6147d543"
+          }
+        },
+        "bn_unclip43": {
+          "language": {
+            "thinking": {
+              "total_items": 200,
+              "statuses": {
+                "predicted": 200
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 199,
+                "__label__vie_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 193,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 132,
+                "__label__vie_Latn": 1
+              }
+            },
+            "final": {
+              "total_items": 200,
+              "statuses": {
+                "no_final_section": 45,
+                "predicted": 155
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 150,
+                "__label__gom_Latn": 1,
+                "__label__yor_Latn": 4
+              },
+              "target_top1_probability_ge_0_8": 126,
+              "correct_items_label_counts": {
+                "no_final_section": 11,
+                "__label__eng_Latn": 118,
+                "__label__gom_Latn": 1,
+                "__label__yor_Latn": 3
+              }
+            }
+          },
+          "completion": {
+            "items": 200,
+            "single_correct": 133,
+            "generated_tokens": 677697,
+            "truncated": 22,
+            "normal_terminations": 178,
+            "answer_extraction_failures": 17,
+            "protocol": "project_followup_dev200_single8192_c64_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.665,
+            "generation_seconds": 967.3142754659057,
+            "model_load_seconds": 10.97356329858303,
+            "actual_max_num_seqs": 64
+          },
+          "source": {
+            "run_id": "followup200_bn_unclip43_en_20261021_v1",
+            "items_sha256": "59b10dd2a24e48fe2bc25ad143322e9602cce6bc42a6e48b5a7921b9f2af45b6",
+            "config_sha256": "d6e046e6129fb4186bb57c449674355eb0d6a7f98e2bdf104b3a9ec8bee82786"
+          }
+        }
+      }
+    }
+  },
+  "TensorBoard_verified": {
+    "base": {
+      "relative_path": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/base",
+      "accuracy_series_read_back": 5,
+      "step": 0,
+      "parent_cost_read_back": true
+    },
+    "sw42": {
+      "relative_path": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/sw42",
+      "accuracy_series_read_back": 2,
+      "step": 20,
+      "parent_cost_read_back": true
+    },
+    "sw43": {
+      "relative_path": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/sw43",
+      "accuracy_series_read_back": 2,
+      "step": 20,
+      "parent_cost_read_back": true
+    },
+    "ja42": {
+      "relative_path": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/ja42",
+      "accuracy_series_read_back": 2,
+      "step": 20,
+      "parent_cost_read_back": true
+    },
+    "ja43": {
+      "relative_path": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/ja43",
+      "accuracy_series_read_back": 2,
+      "step": 20,
+      "parent_cost_read_back": true
+    },
+    "zh42": {
+      "relative_path": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/zh42",
+      "accuracy_series_read_back": 2,
+      "step": 20,
+      "parent_cost_read_back": true
+    },
+    "zh43": {
+      "relative_path": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/zh43",
+      "accuracy_series_read_back": 2,
+      "step": 20,
+      "parent_cost_read_back": true
+    },
+    "bn_unclip42": {
+      "relative_path": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/bn_unclip42",
+      "accuracy_series_read_back": 2,
+      "step": 20,
+      "parent_cost_read_back": true
+    },
+    "bn_unclip43": {
+      "relative_path": "logs/copsd_official_10lang/tensorboard/followup200_20261021_v1/bn_unclip43",
+      "accuracy_series_read_back": 2,
+      "step": 20,
+      "parent_cost_read_back": true
+    }
+  },
+  "all21_case_accuracy_series_read_back": true,
+  "all9_parent_cost_series_read_back": true,
+  "detector_source_sha256": "ef24d056341b51d4ae7f4a0d01baaf143b081ad6ff60373159ab59388f5f51a7",
+  "analysis_source_sha256": "c03f6a9547fd1cca86545af1ffc2146ce3df64b1cd3d5dbbeaf317753eb28fb0",
+  "new_training_or_GPU_inference": false,
+  "final_three_selected": false,
+  "scope": "Existing frozen outputs only. GlotLID top1 after math stripping is not fluency, per-token purity or mathematical proof validation. Model-specific thinking/final denominators remain200; absent final sections are not removed. Fixed9 parents already counted in the math report; no extra GPU cost or alternative regrading. This supplement does not override failed math confirmation or independently authorize a three-language research selection."
+}
