@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "language": "de",
+  "split": "reserved development200, not formaltest",
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "seed": 42,
+  "correct_of200": 156,
+  "generated_tokens": 710324,
+  "truncated": 17,
+  "normal_terminations": 183,
+  "answer_extraction_failures": 16,
+  "evaluation_parent_GPU_hours": 0.35055555555555556,
+  "training_updates": 0,
+  "original_Base_no_adapter": true,
+  "full200_rows_inputs_seeds_and_metrics_audited": true,
+  "scope": "AcceptedBaseonly, no DE OPD result yet. Training waits under account4GPUcap. Final pairedreport counts thisBase cost once; do not regenerate."
+}

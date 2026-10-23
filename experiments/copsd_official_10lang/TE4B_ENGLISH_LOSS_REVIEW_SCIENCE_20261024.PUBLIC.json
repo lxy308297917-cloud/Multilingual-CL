@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "TE",
+  "training_seed": 42,
+  "English_Base_correct_of200": 166,
+  "English_OPD_correct_of200": 162,
+  "gained": 5,
+  "lost": 9,
+  "finish_transitions": {
+    "gained": {
+      "length->stop": 1,
+      "length->length": 2,
+      "stop->stop": 2
+    },
+    "lost": {
+      "stop->stop": 3,
+      "length->length": 2,
+      "stop->length": 4
+    }
+  },
+  "lost_categories": {
+    "length_limit_no_extracted_box": 6,
+    "strict_vs_nonstrict_monotonicity_convention": 1,
+    "equivalent_reversed_inequality_chain_rejected": 1,
+    "affirmative_box_with_correct_equality_in_body_rejected": 1
+  },
+  "official_scorer_replayed_for_all_three_normal_losses": true,
+  "independent_checks": {
+    "monotonicity_boundary": "q iff c>1/2. Strict p admits c=1 under XOR; weak p excludes it. The English wording leaves this convention implicit.",
+    "inequality": "Reversing b>c>a yields a<c<b; numeric logarithms confirm the same order.",
+    "set_inclusion": "Mutual containments imply equality by antisymmetry. Exhaustive three-element subsets are a finite illustration, not the general proof."
+  },
+  "primary_scores_unchanged": true,
+  "new_GPU_generation": false,
+  "scope": "Descriptive audit of nine newly incorrect responses only, not rescoring all errors or proof of unchanged ability. Preserve the frozen official metric. Any alternative semantic metric must be versioned and applied to all Base/trained outputs consistently, including their pre-existing errors. Do not extrapolate these three cases to old large1.7B declines or attribute causality to teacher/clipping without an intervention."
+}
