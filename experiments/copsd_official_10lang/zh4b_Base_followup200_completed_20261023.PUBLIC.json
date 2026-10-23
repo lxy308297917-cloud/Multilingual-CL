@@ -1,0 +1,83 @@
+{
+  "accepted_at": "2026-10-23T17:25:33.681137",
+  "protocol": "project_ZH4B_followup_dev200_single8192_c16_v1",
+  "case": "Base",
+  "language": "zh",
+  "metrics": {
+    "items": 200,
+    "single_correct": 152,
+    "generated_tokens": 758196,
+    "truncated": 19,
+    "normal_terminations": 181,
+    "answer_extraction_failures": 14,
+    "protocol": "project_ZH4B_followup_dev200_single8192_c16_v1",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 200,
+    "single_accuracy": 0.76,
+    "generation_seconds": 1298.7053480520844,
+    "model_load_seconds": 12.056984536349773,
+    "actual_max_num_seqs": 16
+  },
+  "source": {
+    "run_id": "zh4b_followup200_Base_zh_20261023",
+    "items_sha256": "188b4f3d61ed71e78a5591e087b0881995849867313602910ecca75d774013bd",
+    "config_sha256": "01e72a21daa5b3d7620d50309f87f359d17b7e5fbcd32c0dcf8f9e19b8f1c103"
+  },
+  "parent_exit0_and_all200_source_ID_answer_seed_budget_counts_verified": true,
+  "parent_cost": {
+    "queue": "copsd-zh4b-followup-base-v1",
+    "parent_GPU_hours_counted_once": 0.38222222222222224,
+    "evaluation_cases": 1,
+    "training_updates": 0
+  },
+  "cost_policy": "Base-only provisional parentrecord; fullZHcandidate collector will count thissameparent once. Do not sum thispartial record with later fullcandidate cost. No trainedmodel or paired efficacy result.",
+  "frozen_sha256": "27db3fdadbf18c55b63d44358ab6f0de97c9e084c18f8da62544df835a8f6249",
+  "collector_sha256": "d7945995eedecce3798c09e934eace4411f154c87733ea5c09a07eb8883146d2",
+  "scope": "Frozen4B originalBase targetlanguage independentdevelopment200 native16 n1/8192. Not formaltest, selection or OPD efficacy.",
+  "TensorBoard_Base_accuracy_readback": true,
+  "language_ID_supplement": {
+    "scope": "project language-ID supplement, not calibrated fluency or reasoning quality",
+    "target_label": "__label__cmn_Hani",
+    "model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+    "summary": {
+      "thinking": {
+        "total_items": 200,
+        "statuses": {
+          "predicted": 200
+        },
+        "top1_label_counts": {
+          "__label__cmn_Hani": 195,
+          "__label__som_Latn": 1,
+          "__label__rue_Cyrl": 1,
+          "__label__lvs_Latn": 1,
+          "__label__mlt_Latn": 1,
+          "__label__lmo_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 173,
+        "correct_items_label_counts": {
+          "__label__cmn_Hani": 149,
+          "__label__som_Latn": 1,
+          "__label__rue_Cyrl": 1,
+          "__label__mlt_Latn": 1
+        }
+      },
+      "final": {
+        "total_items": 200,
+        "statuses": {
+          "predicted": 185,
+          "no_final_section": 15
+        },
+        "top1_label_counts": {
+          "__label__cmn_Hani": 184,
+          "__label__jpn_Jpan": 1
+        },
+        "target_top1_probability_ge_0_8": 183,
+        "correct_items_label_counts": {
+          "__label__cmn_Hani": 151,
+          "__label__jpn_Jpan": 1
+        }
+      }
+    }
+  }
+}

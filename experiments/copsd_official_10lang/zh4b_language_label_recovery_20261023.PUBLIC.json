@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-23T17:30:29.768099",
+  "reason": "GlotLID actualChinese label is cmn_Hani, not zho_Hans; originalCPU supplement rejected unavailablelabel before writingoutputs.",
+  "original_source_sha256": "53e3dc3e0a09916bb78ab8b391ced4dc449c6767963312bd1d8b3546ab6c4dfc",
+  "v2_source_sha256": "eb87f30b55f0eba3f75c14039d034e6648d5bc93d3aff3284217f4bfa8a11df5",
+  "only_label_and_status_output_filename_changed": true,
+  "original_source_and_status_preserved": true,
+  "old_waiting_CPU_observer_detached": true,
+  "GPU_queues_cancelled_or_restarted": false,
+  "training_freeze_sha256_unchanged": "9c9f1cf5f5dfd473263f79f3d79ec27f2b1cd4d44fca981d38875ad8ee85423a",
+  "evaluation_freeze_sha256_unchanged": "27db3fdadbf18c55b63d44358ab6f0de97c9e084c18f8da62544df835a8f6249",
+  "v2_observer_phase": "waiting_for_existing_training",
+  "trained_evaluation_start_calls": 0,
+  "Base_mathematics_regenerated": false,
+  "Base_language_analysis_completed_with_validated_model_label": true,
+  "scope": "CPU postprocessing compatibility only; no mathscore,prompt,sampling,training,checkpoint or GPUallocation policy change."
+}
