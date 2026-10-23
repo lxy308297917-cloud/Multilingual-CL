@@ -102,7 +102,7 @@
     "phase": {
       "copsd-zh4b-server20-v1": "completed",
       "copsd-zh4b-followup-base-v1": "completed",
-      "copsd-zh4b-followup-zh20-v1": "running"
+      "copsd-zh4b-followup-zh20-v1": "completed"
     },
     "actual_training_started": true,
     "report": "zh4b_candidate_started_20261023.PUBLIC.json",
@@ -110,7 +110,7 @@
     "Base_target_correct": 152,
     "Base_items": 200,
     "Base_report": "zh4b_Base_followup200_completed_20261023.PUBLIC.json",
-    "trained_result": "Target200 complete76to80percent; English200 and fullparent acceptance pending. One trainingseed, no stablegain or selection claim.",
+    "trained_result": "Fullpaired200 accepted: ZH152to160,EN166to161; both questionCIs includezero. One seed, no stablegain/selection.",
     "CPU_successor": "finalize_zh4b_candidate_v3.py, CPU-only attached to existingevaluation",
     "verified_optimizer_updates_at_least": 20,
     "training_progress_report": "zh4b_training_started_20261023.PUBLIC.json",
@@ -125,6 +125,23 @@
       -0.5,
       9.0
     ],
-    "target_partial_report": "zh4b_target200_diagnosis_20261023.PUBLIC.json"
+    "target_partial_report": "zh4b_target200_diagnosis_20261023.PUBLIC.json",
+    "English_Base_correct": 166,
+    "English_OPD_correct": 161,
+    "completion_report": "zh4b_followup200_completed_20261023.PUBLIC.json",
+    "English_paired_question_CI95_delta_pp": [
+      -7,
+      1.5
+    ],
+    "candidate_total_GPU_hours": 5.4191666666666665
+  },
+  "ZH_seed43_confirmation": {
+    "phase": "running",
+    "training_seed": 43,
+    "data_seed": 43,
+    "evaluation_question_seed": 42,
+    "confirmed_updates_at_least": 1,
+    "launch_report": "zh4b_seed43_started_20261023.PUBLIC.json",
+    "scope": "OnefreshBase confirmation; reuse both acceptedBase200. No three-language promotion."
   }
 }

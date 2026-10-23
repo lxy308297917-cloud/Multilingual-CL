@@ -1,0 +1,63 @@
+{
+  "recorded_at": "2026-10-23T21:43:59.608417",
+  "scientific_basis": "Full ZH4B seed42 paired development200 accepted; weak targetgain and uncertain English tradeoff justify one confirmationseed, not selection or sequentialtraining.",
+  "seed42_report": "zh4b_followup200_completed_20261023.PUBLIC.json",
+  "seed42_languages": {
+    "zh": {
+      "paired": {
+        "Base_correct": 152,
+        "checkpoint_correct": 160,
+        "gained": 16,
+        "lost": 8,
+        "delta_correct": 8
+      },
+      "CI95_pp": [
+        -0.5,
+        9.0
+      ]
+    },
+    "en": {
+      "paired": {
+        "Base_correct": 166,
+        "checkpoint_correct": 161,
+        "gained": 7,
+        "lost": 12,
+        "delta_correct": -5
+      },
+      "CI95_pp": [
+        -7.000000000000001,
+        1.5
+      ]
+    }
+  },
+  "seed43_training": {
+    "queue": "copsd-zh4b-seed43-v1",
+    "phase": "running",
+    "started_at": "2026-10-23 21:34:32",
+    "GPU_indices": [
+      0,
+      2
+    ],
+    "monitor_PID": 521237,
+    "parent_PID": 521275,
+    "training_seed": 43,
+    "data_seed": 43,
+    "evaluation_question_seed": 42,
+    "updates": 20,
+    "scheduler_horizon": 100,
+    "effective_batch": 32,
+    "max_completion_length": 2048,
+    "confirmed_updates_at_least": 1,
+    "training_freeze": "zh4b_seed43_frozen_20261023.PUBLIC.json"
+  },
+  "successor": {
+    "source": "zh4b_seed43_series.py",
+    "PID": 522146,
+    "phase": "waiting_for_existing_seed43_training",
+    "evaluation_start_calls": 0,
+    "evaluation_freeze": "zh4b_seed43_eval_frozen_20261023.PUBLIC.json",
+    "fresh_Base_generation": false,
+    "retries_or_training_restarts": false
+  },
+  "scope": "Launch evidence only; seed43 outcome pending. Default account maximum4GPU. No三语言 selection or researchsequentialtraining."
+}
