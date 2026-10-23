@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T17:30:29.768571",
+  "updated_at": "2026-10-23T18:03:49.843699",
   "cohort": "Qwen3-4B_independent_development200_not_formal_tests",
   "models": [
     {
@@ -100,16 +100,18 @@
   },
   "ZH_candidate": {
     "phase": {
-      "copsd-zh4b-server20-v1": "waiting",
+      "copsd-zh4b-server20-v1": "running",
       "copsd-zh4b-followup-base-v1": "completed"
     },
-    "actual_training_started": false,
+    "actual_training_started": true,
     "report": "zh4b_candidate_started_20261023.PUBLIC.json",
     "scope": "Onefixed originalten candidate, not selectedlanguage, stablegain,100updates,officialpass12 orsequentialrun. No all-languagegrid.",
     "Base_target_correct": 152,
     "Base_items": 200,
     "Base_report": "zh4b_Base_followup200_completed_20261023.PUBLIC.json",
-    "trained_result": "Pending, trainingstillqueued",
-    "CPU_successor": "zh4b_candidate_series_v2.py; labelcompatibility corrected without GPUrestart"
+    "trained_result": "Trainingrunning, no matchedtrainedscore yet",
+    "CPU_successor": "zh4b_candidate_series_v2.py; labelcompatibility corrected without GPUrestart",
+    "verified_optimizer_updates_at_least": 1,
+    "training_progress_report": "zh4b_training_started_20261023.PUBLIC.json"
   }
 }

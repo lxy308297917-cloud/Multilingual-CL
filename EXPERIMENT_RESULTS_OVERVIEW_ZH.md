@@ -460,3 +460,12 @@ GlotLID补充首次因中文标签zho_Hans不在本机模型中而拒绝执行�
 原CPU衔接器在等待且训练模型评测启动计数为0时被精确换接；保留原源码／状态，新`zh4b_candidate_series_v2.py`仅修改语言标签和状态文件名，两份训练／评测科学freeze哈希不变。v2已通过全部原源码和队列绑定检查，继续观察原训练队列。训练／Base GPU队列未取消或重启，Base结果复用。兼容修复记录：`zh4b_language_label_recovery_20261023.PUBLIC.json`。
 
 ZH训练仍排队。Base释放后，同账号其他实验又有任务占用相应卡位；最新核实账号仍占四卡，未增加GPU上限或操作独立项目。完整基线报告：`zh4b_Base_followup200_completed_20261023.PUBLIC.json`。三语言尚未选定，顺序实验未启动。
+
+
+## 2026-10-23：ZH4B已取得双卡并完成首个实际更新
+
+训练队列17:53:36取得GPU3（HF训练）和GPU0（vLLM在线生成），正式固定20更新候选已从原始Base开始执行。首个更新32次曝光全部完成，生成57,371 token；截至18:03已观察49个有限损失microstep，398个权重张量的初始及更新后同步通过，adapter哈希已改变，证明至少完成1个optimizer更新。49个microstep不等于49次更新；未保存checkpoint前不宣称可恢复。
+
+保留原冻结LoRA／固定教师／beta0／componentclip.05、2048和有效batch32、100步调度下停20；不是更改算法后的修复实验或100步完成。Base ZH200已有152/200，训练模型分数仍待训练完成后固定checkpoint20的ZH/EN200配对。两个GPU角色及一次性CPU衔接器实际存活，v2后处理使用已验证中文语言标签。进度证据：`zh4b_training_started_20261023.PUBLIC.json`。
+
+训练仍在进行，无新checkpoint或方法收益结论，三语言未选定。后续按既有衔接核验checkpoint、optimizer/scheduler/RNG、同协议评测、TensorBoard及成本。

@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-10-23T18:03:49.843356",
+  "protocol": "independent_ZH4B_dedicated_server_single20_seed42_v1",
+  "training_started_at": "2026-10-23 17:53:36",
+  "GPU_roles": {
+    "training_index": 3,
+    "inference_index": 0
+  },
+  "verified_optimizer_updates_at_least": 1,
+  "completed_finite_microsteps_observed": 49,
+  "first_update_exposures": 32,
+  "first_update_generated_tokens": 57371,
+  "all_weight_syncs_observed_verified398_tensors": true,
+  "initial_and_updated_adapter_hash_differ": true,
+  "planned_updates": 20,
+  "scheduler_horizon": 100,
+  "per_update_effective_batch": 32,
+  "max_completion_length": 2048,
+  "loss": "Officialbeta0, componentclip.05; no scientificchanges fromfixedZHconfiguration",
+  "checkpoint_status": "No checkpointclaimed until scheduledsave5; existingfirstupdate state is not resumableproof.",
+  "scope": "Actual initial trainingprogress only; Base development152/200 accepted, trainedeffect pending. NewGPUroles followaccountmax4, no unrelatedtask stopped."
+}
