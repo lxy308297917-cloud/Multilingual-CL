@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T09:33:28.594863",
+  "updated_at": "2026-10-23T09:43:30.817851",
   "cohort": "Qwen3-4B_independent_development200_not_formal_tests",
   "models": [
     {
@@ -28,6 +28,16 @@
       "target_OPD_correct": 135,
       "English_Base_correct": 166,
       "English_OPD_correct": 158
+    },
+    {
+      "language": "BN",
+      "training_updates": 20,
+      "training_seed": 42,
+      "target_Base_correct": 90,
+      "target_OPD_correct": 84,
+      "English_Base_correct": 166,
+      "English_OPD_correct": 163,
+      "protocol": "project_BN4B_followup_dev200_single8192_c16_v1"
     }
   ],
   "JA_paired_question_CI95_delta_pp": {
@@ -53,7 +63,7 @@
   },
   "score_policy": "Retain originalofficialscores andrawoutputs; categories are descriptive, not retrospective scorecorrections or fullproofvalidation.",
   "JA_candidate_status": "No demonstratedtarget gain and Englishdecline; do not promote to three-language sequential cohort. Onefixedmodelpair only, CI is overquestions, not trainingseedpopulation.",
-  "BN_candidate_status": "Native16 target90->84/200, English pending. Separate merged-serving native32 pair complete: BN98->91, EN162->157/200; no targetgain evidence. No promotion to sequential cohort.",
+  "BN_candidate_status": "Both native16 and separate merged32 pairs complete, target andEnglish pointestimates negative; no stabletargetbenefit or promotion. Closing componentclip intervention running.",
   "three_language_selection_completed": false,
   "sequential_experiments_started": false,
   "privacy": "Scientific summary only; no hostpaths, processidentifiers, private inputs or executable source.",
@@ -67,14 +77,14 @@
     "report": "canonical_merged_bn4b_completed_20261023.PUBLIC.json",
     "scope": "Fresh Base/BN20 pair on different serving protocol; never mix with native16 Base counts or rank as another training seed."
   },
-  "BN_native16_partial": {
+  "component_clip_intervention_status": "Independent freshBase BN4B no-component-clip20 training completed at least2updates,64microsteps withfinite loss; stillrunning. Finalcheckpoint/effect pending.",
+  "BN_native16_completed": {
     "target_Base_correct": 90,
     "target_OPD_correct": 84,
     "items_each": 200,
     "English_Base_correct": 166,
-    "English_OPD_correct": null,
-    "report": "bn4b_native_target200_partial_20261023.PUBLIC.json",
-    "scope": "Native English still running; joint result incomplete."
-  },
-  "component_clip_intervention_status": "Independent freshBase BN4B no-component-clip20 training started on two roles. First398weight sync verified and first32 online rollouts active; no completedupdate/efficacy claimed at this snapshot."
+    "English_OPD_correct": 163,
+    "report": "bn4b_followup200_completed_20261023.PUBLIC.json",
+    "scope": "Complete matched native16 BN/EN200 developmentpair. CachedBaseEnglish verifiedequal inputs/prompts/seeds/packages, not regenerated orrecounted."
+  }
 }

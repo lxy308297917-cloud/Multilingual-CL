@@ -1,0 +1,72 @@
+{
+  "accepted_at": "2026-10-23T09:43:30.719596",
+  "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+  "English_Base_correct": 166,
+  "English_BN20_correct": 163,
+  "newly_wrong7": [
+    {
+      "id": "b1ad5c34092727006c383447394cc454b044f4e0127f8162fa29328e2eabc795",
+      "Base_finish": "stop",
+      "BN20_finish": "length",
+      "tokens": 8192,
+      "no_extracted_answer": true,
+      "boxed_reference_mismatch_during_truncation": false
+    },
+    {
+      "id": "c4e918ad3d1d2c48053b108e73958df59373d41b5f1d2a583dc26f849fb95fef",
+      "Base_finish": "stop",
+      "BN20_finish": "length",
+      "tokens": 8192,
+      "no_extracted_answer": true,
+      "boxed_reference_mismatch_during_truncation": false
+    },
+    {
+      "id": "9ab9f6b78450632c4f6a5cadedac962b33c5c184f76a101db3ca55387e8f667c",
+      "Base_finish": "length",
+      "BN20_finish": "length",
+      "tokens": 8192,
+      "no_extracted_answer": true,
+      "boxed_reference_mismatch_during_truncation": false
+    },
+    {
+      "id": "21780314dd915b3031149fe6d2a1f012b18070f49432deec54ab215db7cfc87f",
+      "Base_finish": "stop",
+      "BN20_finish": "length",
+      "tokens": 8192,
+      "no_extracted_answer": true,
+      "boxed_reference_mismatch_during_truncation": false
+    },
+    {
+      "id": "597a632c6c288d954d4a3a4b242cdbbe05ca01178c22850467a43c822663f0a7",
+      "Base_finish": "stop",
+      "BN20_finish": "length",
+      "tokens": 8192,
+      "no_extracted_answer": true,
+      "boxed_reference_mismatch_during_truncation": false
+    },
+    {
+      "id": "76426bda6a133a5d85a9605ea9174616af390532536699c372c4a2e0ea88babd",
+      "Base_finish": "stop",
+      "BN20_finish": "length",
+      "tokens": 8192,
+      "no_extracted_answer": false,
+      "boxed_reference_mismatch_during_truncation": true
+    },
+    {
+      "id": "f945f737ead0d24356a1c5f8ec0d1c2539d435bb37844f1a746a34a98d1179fb",
+      "Base_finish": "stop",
+      "BN20_finish": "length",
+      "tokens": 8192,
+      "no_extracted_answer": true,
+      "boxed_reference_mismatch_during_truncation": false
+    }
+  ],
+  "all7_new_English_losses_truncated": true,
+  "six_no_extracted_answer": true,
+  "seventh_row_note": "A boxedvector equality ispresent but the left-hand vector arrow ismissing relative to reference; trajectory isalso truncated. Retain originalscore, no claimof completeproof validation.",
+  "source_sha256": {
+    "Base": "340c9dbb7b4831bc2fe8c7a02adcc666030121939205bdca27bfdec4724a5b3e",
+    "BN20": "b6832153f3b18f682f37fad66725440a4c83f3bff977c04deed06c31819ef999"
+  },
+  "scope": "Descriptive pairedEnglishloss analysis only. All7new losses hit8192; does not establish truncation assole causal reason, absence ofmath knowledge changes, or a successful longerbudget intervention. Rawofficialscores unchanged. No newGPUwork."
+}

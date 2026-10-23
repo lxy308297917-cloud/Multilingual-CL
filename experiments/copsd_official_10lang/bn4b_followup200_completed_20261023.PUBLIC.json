@@ -1,0 +1,160 @@
+{
+  "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+  "completed_at": "2026-10-23T09:40:55.935876",
+  "languages": {
+    "bn": {
+      "paired": {
+        "Base_correct": 90,
+        "checkpoint_correct": 84,
+        "gained": 20,
+        "lost": 26,
+        "delta_correct": -6
+      },
+      "paired_question_bootstrap95_CI_pp": [
+        -10.0,
+        3.5000000000000004
+      ],
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 90,
+            "generated_tokens": 1235623,
+            "truncated": 84,
+            "normal_terminations": 116,
+            "answer_extraction_failures": 71,
+            "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.45,
+            "generation_seconds": 2237.2054310571402,
+            "model_load_seconds": 12.017821373417974,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "bn4b_followup200_Base_bn_20261023",
+            "items_sha256": "9f36e103ebd966be54a2a5eef9ffc4044b0a7d3d5c01835e435217fc3e075a4c",
+            "config_sha256": "145cadc246679c04054781afc6616fe6db30374982c972072ee919e2b278adb7"
+          }
+        },
+        "BN20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 84,
+            "generated_tokens": 1332887,
+            "truncated": 100,
+            "normal_terminations": 100,
+            "answer_extraction_failures": 84,
+            "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.42,
+            "generation_seconds": 5941.73678412661,
+            "model_load_seconds": 13.188803389668465,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "bn4b_followup200_BN20_bn_20261023",
+            "items_sha256": "26f0c1441d248ba6325d8da22e9a751306a6225ba8638914244161c75a7d9f65",
+            "config_sha256": "2b41e21d4b4c72f4e486cc05df35fbc74809918e1bf1d14e0c543d53227f4c32"
+          }
+        }
+      },
+      "uncertainty_scope": "Questions for onefixedmodelpair, not trainingseedpopulation or multiplicityadjusted inference."
+    },
+    "en": {
+      "paired": {
+        "Base_correct": 166,
+        "checkpoint_correct": 163,
+        "gained": 4,
+        "lost": 7,
+        "delta_correct": -3
+      },
+      "paired_question_bootstrap95_CI_pp": [
+        -5.0,
+        1.5
+      ],
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 166,
+            "generated_tokens": 848945,
+            "truncated": 18,
+            "normal_terminations": 182,
+            "answer_extraction_failures": 12,
+            "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.83,
+            "generation_seconds": 1536.7818765956908,
+            "model_load_seconds": 13.593198273330927,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "sw4b_followup200_Base_en_20261022_v1",
+            "items_sha256": "340c9dbb7b4831bc2fe8c7a02adcc666030121939205bdca27bfdec4724a5b3e",
+            "config_sha256": "629469b2d0337be803ccae7b7933d0601e2b29627ea9b14a1208e2ff40663404"
+          }
+        },
+        "BN20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 163,
+            "generated_tokens": 877054,
+            "truncated": 27,
+            "normal_terminations": 173,
+            "answer_extraction_failures": 17,
+            "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.815,
+            "generation_seconds": 4044.9373906590044,
+            "model_load_seconds": 13.369046684354544,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "bn4b_followup200_BN20_en_20261023",
+            "items_sha256": "b6832153f3b18f682f37fad66725440a4c83f3bff977c04deed06c31819ef999",
+            "config_sha256": "9f4eeeeeb285853387588eb8447dbdad14d430217e5d531214cfdc63231bf00a"
+          }
+        }
+      },
+      "uncertainty_scope": "Questions for onefixedmodelpair, not trainingseedpopulation or multiplicityadjusted inference."
+    }
+  },
+  "cost": {
+    "new_training_parent_GPU_hours": 3.053888888888889,
+    "new_evaluation_parent_GPU_hours": 3.458888888888889,
+    "new_evaluation_generated_tokens": 3445564,
+    "training_exposures": 640,
+    "training_generated_tokens": 1304104,
+    "training_valid_response_loss_positions": 1304104,
+    "teacher_forward_calls": 640,
+    "cached_Base_English_GPU_cost_recounted": false,
+    "candidate_total_GPU_hours": 6.512777777777778
+  },
+  "unique_evaluation_parent_costs": [
+    {
+      "queue": "copsd-bn4b-followup-base-v1",
+      "parent_GPU_hours_counted_once": 0.6427777777777778,
+      "evaluation_cases": 1,
+      "training_updates": 0
+    },
+    {
+      "queue": "copsd-bn4b-followup-bn20-v1",
+      "parent_GPU_hours_counted_once": 2.8161111111111112,
+      "evaluation_cases": 2,
+      "training_updates": 0
+    }
+  ],
+  "TensorBoard_four_accuracies_two_costs_read_back": true,
+  "frozen_sha256": "f30486cdfb90a1db5f60973c081b3c50407ba0876e3839818f0e8ff9fdf4254e",
+  "summarizer_sha256": "d4da134ac95a724752aa384eefc804564478b2cace48fb6413a7afea56a42446",
+  "source_metadata_difference": "BaseBN newlygenerated withsameBNwrapper; cachedEnglishBase uses priorSW4Bwrapper with bound digests. Actual inputs/prompts/questionseeds/modelrevision/packages/sampling/length/native16 verified equal; no engine ormethod mixing.",
+  "scope": "One independent BN4B20 independentdevelopmentcandidate onpre-existing200 withheldfrom2700train, not formaltest, officialpass12, seedconfirmation orselected3languages. Rawnegative results retained. Cached EnglishBase notregenerated orrecounted; BaseBN costs countedonce withnewtrained BN/EN evaluations."
+}

@@ -1,0 +1,80 @@
+{
+  "accepted_at": "2026-10-23T09:43:30.817467",
+  "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+  "language": {
+    "BN20_bn": {
+      "summary": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 200
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 200
+          },
+          "target_top1_probability_ge_0_8": 199,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 84
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 106,
+            "no_final_section": 94
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 101,
+            "__label__mni_Beng": 4,
+            "__label__tir_Ethi": 1
+          },
+          "target_top1_probability_ge_0_8": 100,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 77,
+            "no_final_section": 6,
+            "__label__tir_Ethi": 1
+          }
+        }
+      },
+      "source_items_sha256": "26f0c1441d248ba6325d8da22e9a751306a6225ba8638914244161c75a7d9f65",
+      "analysis_sha256": "b50c29aa18156ec36122d27b78a938ae1c2082e7d0bcbe1b457c82a665ab5f2b"
+    },
+    "BN20_en": {
+      "summary": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 200
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 200
+          },
+          "target_top1_probability_ge_0_8": 195,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 163
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "no_final_section": 19,
+            "predicted": 181
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 179,
+            "__label__yor_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 158,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 160,
+            "no_final_section": 1,
+            "__label__yor_Latn": 2
+          }
+        }
+      },
+      "source_items_sha256": "b6832153f3b18f682f37fad66725440a4c83f3bff977c04deed06c31819ef999",
+      "analysis_sha256": "b60507e7dab5bfdc5aa92400c2ecf13f98b29252e216128a0a63464734c2c0bd"
+    }
+  },
+  "scope": "CPU whole-part GlotLID supplement only, not fluency/purity/proof correctness. SourceBaseBN language report preserved; cachedBaseEnglish notregenerated. Rawmathscores unchanged. Numericfinal labels can be unreliable."
+}
