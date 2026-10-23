@@ -1,0 +1,71 @@
+{
+  "reason": "Previously authorized cleanup of unnecessary files; only successful redundant <=8-update technical payloads. All full scientific checkpoints, data, logs, configs and receipts retained.",
+  "verified_unix": 1792724823.5231555,
+  "files": [
+    {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/technical_deterministic_v2/A/checkpoint_000004/model/model.safetensors",
+      "sha256": "6e1a9332bf04c23bc06384bb3a0f0f157b9c9eecb25da309d7e228cc28a22925",
+      "bytes": 3087467144,
+      "nlink": 1
+    },
+    {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/technical_deterministic_v2/A/checkpoint_000004/state.pt",
+      "sha256": "0f6398da426c8f18acb7977a92037668a5b5861363a20d0701ccbe3d3229dac5",
+      "bytes": 6175128278,
+      "nlink": 1
+    },
+    {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/technical_deterministic_v2/A_continuous/checkpoint_000008/model/model.safetensors",
+      "sha256": "a71511e233f8c70f9e89afca6a6b6cadecac1cdaab4bdc78068d28f7137e951d",
+      "bytes": 3087467144,
+      "nlink": 1
+    },
+    {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/technical_deterministic_v2/A_continuous/checkpoint_000008/state.pt",
+      "sha256": "b53f644fd2c1d3d6ba34e2f861a405e47bbe10b16db06f8a055b7e7803c780f0",
+      "bytes": 6175128278,
+      "nlink": 1
+    },
+    {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/technical_deterministic_v2/A_restored/checkpoint_000008/model/model.safetensors",
+      "sha256": "a71511e233f8c70f9e89afca6a6b6cadecac1cdaab4bdc78068d28f7137e951d",
+      "bytes": 3087467144,
+      "nlink": 1
+    },
+    {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/representation_alignment_20261021/technical_deterministic_v2/A_restored/checkpoint_000008/state.pt",
+      "sha256": "b6df1fdd7a007c538da19fcee68bab5f4e2877a0e421d9378a8fbd608e8c6929",
+      "bytes": 6175128278,
+      "nlink": 1
+    },
+    {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/infonce_strength_20261022/technical/continuous8/checkpoint_000008/model/model.safetensors",
+      "sha256": "b60190da5a7f18125fd9cc7144be30e85cebea8a64ba66f034388bd1d4a8b6ae",
+      "bytes": 3087467144,
+      "nlink": 1
+    },
+    {
+      "path": "/data0/users/lixiaoyang/models/checkpoint/infonce_strength_20261022/technical/continuous8/checkpoint_000008/state.pt",
+      "sha256": "efc9e6d3d3e41156325649c46e07bcac521f0f5297bc867ab6f30676ba59fad6",
+      "bytes": 6175128406,
+      "nlink": 1
+    }
+  ],
+  "free_before": 8756588544,
+  "free_after": 18019192832,
+  "freed_bytes_observed": 9262604288,
+  "finished_unix": 1792724827.7332153,
+  "scientific_checkpoints_deleted": 0,
+  "logical_removed_bytes_total": 37050381816,
+  "space_measurement_scope": "/data0 only; first3 old technical snapshots were on pre-existing /data1 symlink target; final D1 snapshot was on/data0",
+  "resolved_payload_paths": [
+    "/data1/lixiaoyang/representation_alignment_20261021/technical_deterministic_v2/A/checkpoint_000004/model/model.safetensors",
+    "/data1/lixiaoyang/representation_alignment_20261021/technical_deterministic_v2/A/checkpoint_000004/state.pt",
+    "/data1/lixiaoyang/representation_alignment_20261021/technical_deterministic_v2/A_continuous/checkpoint_000008/model/model.safetensors",
+    "/data1/lixiaoyang/representation_alignment_20261021/technical_deterministic_v2/A_continuous/checkpoint_000008/state.pt",
+    "/data1/lixiaoyang/representation_alignment_20261021/technical_deterministic_v2/A_restored/checkpoint_000008/model/model.safetensors",
+    "/data1/lixiaoyang/representation_alignment_20261021/technical_deterministic_v2/A_restored/checkpoint_000008/state.pt",
+    "/data0/users/lixiaoyang/models/checkpoint/infonce_strength_20261022/technical/continuous8/checkpoint_000008/model/model.safetensors",
+    "/data0/users/lixiaoyang/models/checkpoint/infonce_strength_20261022/technical/continuous8/checkpoint_000008/state.pt"
+  ]
+}

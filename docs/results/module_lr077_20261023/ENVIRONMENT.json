@@ -1,0 +1,12 @@
+{
+  "python": "/data0/users/lixiaoyang/ssu-migration/envs/cl/bin/python",
+  "python_version": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+  "torch": "2.5.1+cu121",
+  "transformers": "4.57.6",
+  "CUDA_runtime": "12.1",
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "new_GPU_UUID": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+  "reference_reuse_passed": true,
+  "selected_scope": "OneLR077 only; default account cap4",
+  "recorded_unix": 1792725298.950978
+}

@@ -1,0 +1,11 @@
+--- reference/engine.py
++++ lr077/engine.py
+@@ -6,7 +6,7 @@
+ 
+ def learning_rate(step,total=42465,warmup=2124,peak=5e-5):
+  if not 0<=step<=total or not 0<warmup<total:raise ValueError('Invalid scheduler')
+- return peak*step/warmup if step<warmup else peak*.5*(1+math.cos(math.pi*(step-warmup)/(total-warmup)))
++ return (peak*step/warmup if step<warmup else peak*.5*(1+math.cos(math.pi*(step-warmup)/(total-warmup))))*.7714
+ 
+ def per_example_ce(model,rows,pad,device):
+  width=max(len(r['input_ids']) for r in rows);ids=torch.tensor([r['input_ids']+[pad]*(width-len(r['input_ids'])) for r in rows],device=device);mask=torch.tensor([[1]*len(r['input_ids'])+[0]*(width-len(r['input_ids'])) for r in rows],device=device);logits=model(input_ids=ids,attention_mask=mask,use_cache=False).logits;losses=[]

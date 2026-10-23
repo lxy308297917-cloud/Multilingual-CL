@@ -1,0 +1,25 @@
+{
+  "commit": "d7ebd30dd21d208d373ca9eb54e418fc2ed21e97",
+  "verified": [
+    {
+      "path": "code/optimizer.py",
+      "git_blob_sha": "7a69d28c18d5223765afab0f969c1d191aaab4d0",
+      "local_public_bytes_equal": true
+    },
+    {
+      "path": "code/engine.py",
+      "git_blob_sha": "0e71baeff87343bf57429eb6c2f0df3162d57967",
+      "local_public_bytes_equal": true
+    },
+    {
+      "path": "code/train.py",
+      "git_blob_sha": "2f524f636442727e8fff9b8ccb3c11db2030a9fd",
+      "local_public_bytes_equal": true
+    },
+    {
+      "path": "PROTOCOL_FROZEN.json",
+      "git_blob_sha": "30ee6cafcf5aff32c5c2f3ed30f231b4d29b51ac",
+      "local_public_bytes_equal": true
+    }
+  ]
+}

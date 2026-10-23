@@ -1,0 +1,32 @@
+{
+  "frozen_unix": 1792724886.8291008,
+  "path_match": {
+    "target": 213.379786,
+    "tolerance_relative": 0.1,
+    "lower": 192.0418074,
+    "upper": 234.7177646,
+    "definition": "Sum over all4293 actual BF16 write displacement L2 norms; same original measurement. Endpoint net displacement and module paths reported separately.",
+    "if_miss": "Keep result as lower-LR S-All only; cannot claim strength confound removed. No retry coefficient or shortened run."
+  },
+  "comparison": {
+    "primary_pairs": [
+      "S-All-LR077-minus-S-All",
+      "S-All-LR077-minus-S-Attn"
+    ],
+    "reference_only": [
+      "Base",
+      "S-MLP"
+    ],
+    "Attention_minus_new_All_gates": {
+      "ENtoSW_lower": -1,
+      "SWtoEN_lower": -1,
+      "SWreading_lower": -2,
+      "ENreading_lower_strictly_greater": 0,
+      "ENinstruction_lower": -2
+    },
+    "bootstrap": "Exactly prior10000 source-cluster paired resamples seed42; same corpuschrF++ and content/strict scores; no average across tasks.",
+    "followup_not_independent_confirmation": true,
+    "no_intermediate_selection": true
+  },
+  "no_upgrade_automatic": true
+}

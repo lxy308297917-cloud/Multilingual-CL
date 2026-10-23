@@ -1,0 +1,12 @@
+{
+  "frozen_unix": 1792725880.3881927,
+  "before_new_model_endpoint": true,
+  "protocol_sha256": "d7f3cb5533190d9aada8d7c5169ff88750323521b221a25f73a87a8b67ea5889",
+  "sources": {
+    "paired_statistics.py": "e69b91ee4180a2790540da50861de620d41b7a4467e494e3f5fbd5f97a5f9169",
+    "analyze.py": "1f5e92cdd9b937317b2bd1b1c856bf194dc91f8af6234d4c534a8d247e8a58f8",
+    "plot_results.py": "a2444b11d9777f4e6c47c4aa6d0a54580981b605a89768dce1bb55a7d99b532e",
+    "make_report.py": "a9bd9bd97e773218a1a69f6cfc65f79c6342174ac718daf5a535fab164fb7b61",
+    "verify_completed.py": "fd437a46e31054d255a6bfb8865f4dd77459ffd2b6351e36f97396b3886becca"
+  }
+}

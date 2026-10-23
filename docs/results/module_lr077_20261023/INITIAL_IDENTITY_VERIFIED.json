@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "first2_before_support_divergence_main_loss_and_fullclipnorm_bitwise_identical": true,
+  "counts_identical_and_LR_exact_scaled": true,
+  "new_first2": [
+    {
+      "step": 1,
+      "lr": 0.0,
+      "main_CE": 3.8451496362686157,
+      "full_candidate_preclip_norm": 35.5,
+      "counts": {
+        "main_input": 259,
+        "main_supervised": 112,
+        "main_padded_processed": 259,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "generated_tokens": 0
+      }
+    },
+    {
+      "step": 2,
+      "lr": 1.8159133709981167e-08,
+      "main_CE": 3.4412660598754883,
+      "full_candidate_preclip_norm": 25.375,
+      "counts": {
+        "main_input": 881,
+        "main_supervised": 606,
+        "main_padded_processed": 881,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "generated_tokens": 0
+      }
+    }
+  ]
+}

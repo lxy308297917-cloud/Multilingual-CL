@@ -1,0 +1,32 @@
+{
+  "reference_public_commit": "d7ebd30dd21d208d373ca9eb54e418fc2ed21e97",
+  "same_bytes": [
+    "optimizer.py",
+    "evaluation_common.py",
+    "reading_scoring.py",
+    "aux_scoring.py"
+  ],
+  "engine_reverse_single_LR_change_exact": true,
+  "scale": 0.7714,
+  "peak_lr": 3.857e-05,
+  "old_source_sha256": {
+    "technical.py": "ad344f027450ca8982e57442cb53ea49f51a0e311ab0d6bd7f26348b60e00d5c",
+    "analyze.py": "343166f0787f2ae3a45c0f30beedadc45e74f26546807c858f6ea10b9bc17083",
+    "coordinate.py": "740184d74317160b0b74660edb8340ea196617c00a9163ed721c91e28eedc49d",
+    "test_optimizer.py": "61edb767c4d670e649736b160700ff17246ffe0203df0fe87a4f5164399e06c9",
+    "train.py": "937624fe3e8700c723a038e9057f2d069671528ccf49c9cd367550e44aba754c",
+    "audit_behavior.py": "4c64f98f4586dda850da8fd99a4fefa868cec8a6a2571a69b50ce5ec4164d72b",
+    "reading_scoring.py": "5a00549e060cf903d81b82f404fe6eaa9e88d407d0926258b3de2d738484b6c9",
+    "make_report.py": "ad38a4e2fe41f838af58bf831dc4bc2f305e1aac1da9cfc95bc554c284ef6bf2",
+    "evaluation_common.py": "962844531caccd6bca050e827629283773e6d82be7d02ae4063166f479a4d4de",
+    "evaluate.py": "0d187e5c703685447660e77de936c0040b92a0aba12d7eec857283142f645b25",
+    "optimizer.py": "6926d0b516702ee0894da5821d292ba6f039015a34da734fff79abb76fe949a5",
+    "verify_completed.py": "eeb40fe9a540fa11ae6af2753ee691b254497999a33366185f18268a5945e515",
+    "settings.py": "b59d7d56a8cb5cb7f8b04dee9d1b7b07be26b8bc3d469663a414502a14df133f",
+    "plot_results.py": "95eed6e43bb0f13466be4115a32545ef3f4e691bab8531c338a5c455b590597d",
+    "worker.py": "0aa6c0ebbaa533b96e6559a45e637bfc66aa3c087deb5d5e091c39a3b3dd9096",
+    "aux_scoring.py": "048df01251d0325b0a5ad7c55371296be270ac1b89ad10afccf9b008fcc40d12",
+    "group_pipeline.py": "03ec6eb5126d9639ce920d192fb699ca34449d507d45c0453af5af36538804a6",
+    "engine.py": "81eee71dde349dac2965528962ac355a40e2b0fba9cd3e1259eab17c56f308a0"
+  }
+}

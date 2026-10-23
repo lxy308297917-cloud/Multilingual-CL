@@ -1,0 +1,7 @@
+{
+  "logical_checkpoint_root": "/data0/users/lixiaoyang/models/checkpoint/module_lr077_20261023",
+  "physical_checkpoint_root": "/data1/lixiaoyang/module_lr077_20261023",
+  "existing_account_storage_pattern": "representation_alignment_20261021 already uses same account-private /data1 storage",
+  "existing_scientific_checkpoints_retained": true,
+  "created_unix": 1792725134.9649093
+}

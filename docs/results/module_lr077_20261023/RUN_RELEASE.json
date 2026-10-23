@@ -1,0 +1,18 @@
+{
+  "scientific_local_commit": "fa8ceb6e9477c39fc7a5c45c0b37754e2cf86c43",
+  "branch": "research/module-lr077-20261023",
+  "frozen_public_reference": "d7ebd30dd21d208d373ca9eb54e418fc2ed21e97",
+  "worker": {
+    "pid": 476857,
+    "uuid": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+    "assigned_before": [
+      "GPU-38e7429c-59f4-0126-ca93-bdd12e526387"
+    ],
+    "started_unix": 1792725352.769684,
+    "account_cap": 4
+  },
+  "started_command": "bash outputs/module_lr077_v1/code/run.sh",
+  "log": "/data0/users/lixiaoyang/logs/module_lr077_20261023/pipeline_attempt1.log",
+  "scope": "OneLR077, no new results claimed",
+  "recorded_unix": 1792725989.223683
+}

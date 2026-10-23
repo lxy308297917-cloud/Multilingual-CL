@@ -1,0 +1,137 @@
+{
+  "frozen_unix": 1792724886.8291008,
+  "reference_public_commit": "d7ebd30dd21d208d373ca9eb54e418fc2ed21e97",
+  "reference_conversation": "6ad883ad-bd64-83ee-a702-6cc511c3b647",
+  "reference_plan_sha256": "f0baba1beaeab94c2458790216045fd9b96ab89b042e1d030e7a76778e61c6e0",
+  "scope": "Exactly one new full4293 training: S-All-LR077. No LoRA/OPD/alignment/protection/replay/subspace/layer changes or scans.",
+  "budget_sha256": "a845e246283a09d99bb5013725cce8839057bafba01a4c8766bf16116491c335",
+  "training": {
+    "steps": 4293,
+    "main_input": 1536351,
+    "main_supervised": 599469,
+    "seed": 42,
+    "max_length": 2048,
+    "main_micro_batch": 1,
+    "effective_batch": 2,
+    "loss": "old sparse per_example_ce, equal2example shifted valid-answer CE",
+    "full_lr_schedule": 42465,
+    "warmup": 2124,
+    "peak_lr": 3.857e-05,
+    "learning_rate": "original sparse learning_rate(step), first updateLR0",
+    "weight_dtype": "BF16",
+    "moments": "FP32, all coordinates of eligible matrices advance once per update, including offmask",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": 0.01,
+    "clip_norm": 1,
+    "gradient_scope": "all196 matrices have gradients in every group for identical clipping definition; only quota-positive eligible matrices hold moments and receive writes; embedding/tiedhead/allNorm/allbias frozen. Excluded matrices get no weight or moment update.",
+    "mask_score": "original unprotected |m|/(mean|m|+1e-12), stable descending flat sort",
+    "mask_refresh": "before updates1,21,41,..., same20-step interval",
+    "quota": "per-matrix fixed Hamilton allocation; exactglobalK perstep inclLR0; no variable modules",
+    "BF16_write": "only mask coordinates; weight decay included only in selected candidate; no unselected write",
+    "checkpoints": [
+      2146,
+      4293
+    ],
+    "checkpoint_precision": "BF16 fullmodel + FP32 moments; masks/unions losslessly np.packbits, reconstruct indices; no extra final weight duplicate",
+    "state_recovery": "real longest-example preflight, all3 support checks; one true S-All4→8 serialized replay vscontinuous8; full state/weight/RNG checks, no extra scientific variants",
+    "lr_multiplier": 0.7714
+  },
+  "main_manifest": {
+    "source": "/data0/users/lixiaoyang/data/sw-d2-inputs/d2_bilingual_v1/sw/train.jsonl",
+    "source_sha256": "9d55513d0080cb7a2bcb1aba9d33da8d9943aff00c9ea3b0b738b0e015e1ffbc",
+    "recipe_manifest_sha256": "db61ee8ce5f3ccb2d9dc2231aac388f6f66e426eb5f4cf37781c06fba2a269fd",
+    "indices_sha256": "99cf53c8b300b825095dfe0568cce2c0a79d5359c4d1401ce9583cfd503da8a3",
+    "steps": 4293,
+    "full_schedule_steps": 42465,
+    "warmup_steps": 2124,
+    "input_tokens": 1536351,
+    "supervised_tokens": 599469,
+    "main_prefix_sha256": "7fa28c5c5a14c27c3b0dc5c9ec3023f52d1a4ed9839c129469e306968359320e"
+  },
+  "evaluation": {
+    "source": "same frozen512endpoint generation and511scored as InfoNCE study; all3 new generations, Base cache only",
+    "data_manifest_sha256": "49ee3b263ba4b592102ede40b21f9a843f7a8989f01018fbbed20f22dbcc1ba6",
+    "raw_data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+    "tasks": {
+      "SWreading": 64,
+      "ENreading_generated": 64,
+      "ENreading_valid": 63,
+      "ENtoSW_translation": 128,
+      "SWtoEN_translation": 128,
+      "ENinstruction_strict": 128
+    },
+    "math": "excluded, automatic scorer unaccepted",
+    "no_formal_tests": true,
+    "same_prompt_generation_scoring": "frozen InfoNCE endpoint call/caps/order/batch4 and accepted reading/sourceexclusion, original chrF++/instructionstrict",
+    "bootstrap": "10000 paired sourcecluster resamples seed42; all3pairwise comparisons, no average taskscore"
+  },
+  "path_match": {
+    "target": 213.379786,
+    "tolerance_relative": 0.1,
+    "lower": 192.0418074,
+    "upper": 234.7177646,
+    "definition": "Sum over all4293 actual BF16 write displacement L2 norms; same original measurement. Endpoint net displacement and module paths reported separately.",
+    "if_miss": "Keep result as lower-LR S-All only; cannot claim strength confound removed. No retry coefficient or shortened run."
+  },
+  "comparison": {
+    "primary_pairs": [
+      "S-All-LR077-minus-S-All",
+      "S-All-LR077-minus-S-Attn"
+    ],
+    "reference_only": [
+      "Base",
+      "S-MLP"
+    ],
+    "Attention_minus_new_All_gates": {
+      "ENtoSW_lower": -1,
+      "SWtoEN_lower": -1,
+      "SWreading_lower": -2,
+      "ENreading_lower_strictly_greater": 0,
+      "ENinstruction_lower": -2
+    },
+    "bootstrap": "Exactly prior10000 source-cluster paired resamples seed42; same corpuschrF++ and content/strict scores; no average across tasks.",
+    "followup_not_independent_confirmation": true,
+    "no_intermediate_selection": true
+  },
+  "behavior": {
+    "reuse_original_language_repeat_truncation": true,
+    "case_selection": "First3 ENtoSW records in frozen input order, irrespective of model score/language; save oldAll/newAll/Attn outputs privately; public only IDs and aggregates. Assistant review is not native gold.",
+    "language_label_not_translation_accuracy": true
+  },
+  "resource_budget": {
+    "total_GPUh": 3,
+    "preflight_GPUh": 0.1,
+    "scientific_training_GPUh": 2.05,
+    "endpoint_GPUh": 0.85,
+    "initial_estimate_GPUh": 2.05,
+    "estimate_basis": "Prior same3090 S-All1.43596h train+.44395h endpoint, plus one scaled-LR preflight/load/save allowance. Actual runtime/remaining budget checked.",
+    "account_cap": 4,
+    "checkpoint_new_decimal_GB_ceiling": 32,
+    "checkpoint_free_reserve_GiB": 10,
+    "no_shortening_or_automatic_new_hyperparameters": true,
+    "no_autostart_or_new_hold": true
+  },
+  "stop": [
+    "nonfinite values",
+    "source_identity/support/frozen/quota violation",
+    "persistent100 mainCE>20",
+    "stage/global resource budget or storage insufficient",
+    "another owner on selectedGPU"
+  ],
+  "records": [
+    "1,543,714,304 model parameters;196 gradient-enabled candidate matrices; eligible-only FP32 states",
+    "exactquota andmaskrefreshstep",
+    "actual BF16nonzero writes, displacements andcumulativepath",
+    "maskunion counts/finalBase delta bymodule",
+    "fullgradnorm and clipfactor",
+    "main input/supervised/padded tokens; zeroaux",
+    "TensorBoard, complete optimizer/scheduler/RNG checkpoint",
+    "physical GPU peak and walltime",
+    "raw peritem generations and grouped CIs"
+  ],
+  "history": "All original scientific intermediate/end checkpoints, inputs and logs retained; redundant successful <=8step technical payload cleanup separately itemized."
+}
