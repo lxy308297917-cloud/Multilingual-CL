@@ -1,0 +1,117 @@
+{
+  "protocol": "project_BN4B_privileged_recovery_first32_8192_v1",
+  "conditions": {
+    "Base": {
+      "items": 32,
+      "correct": 28,
+      "truncated": 2,
+      "extraction_failures": 1,
+      "generated_tokens": 140735,
+      "supplied_history_tokens": 8192,
+      "prefix_already_boxed": 0,
+      "generation_seconds": 364.3539253361523
+    },
+    "Clip20": {
+      "items": 32,
+      "correct": 27,
+      "truncated": 1,
+      "extraction_failures": 1,
+      "generated_tokens": 129740,
+      "supplied_history_tokens": 8192,
+      "prefix_already_boxed": 0,
+      "generation_seconds": 288.6103624738753
+    },
+    "Unclip20": {
+      "items": 32,
+      "correct": 28,
+      "truncated": 2,
+      "extraction_failures": 2,
+      "generated_tokens": 134108,
+      "supplied_history_tokens": 8192,
+      "prefix_already_boxed": 0,
+      "generation_seconds": 332.3903323393315
+    },
+    "Clean": {
+      "items": 32,
+      "correct": 28,
+      "truncated": 1,
+      "extraction_failures": 1,
+      "generated_tokens": 128801,
+      "supplied_history_tokens": 0,
+      "prefix_already_boxed": 0,
+      "generation_seconds": 297.8934447001666
+    }
+  },
+  "model_load_seconds": 12.12218502536416,
+  "scope": "Conditional generation with English reference, not fair benchmark, SFT labels, online training trajectory replay or token-gradient correctness proof. Clean has256 fewer supplied tokens. Three history conditions matched on supplied length; no history filtering.",
+  "source_script_sha256": "f9a5a10dd1dd94e0cf17a658c6a61598522e8e5fd2c14ef7f77c5e578de15857",
+  "accepted_at": "2026-10-23T14:51:51.258620",
+  "all128_rows_ID_answer_prefix_budget_and_official_score_verified": true,
+  "parent_exit0": true,
+  "frozen_sha256": "064b4661cbbd62d745dc398300ffa3be2e83b01d265829c0de61c4b7c30c3d82",
+  "source_records": {
+    "Base": {
+      "items_sha256": "06eab7cb267aaa7cfb849e94e89e97af7a5dc28a7a794e865dc161b62c15f374"
+    },
+    "Clip20": {
+      "items_sha256": "d8926a48b30ff205213bcb3b67458d3cedab1f7dbe166a9ac7f1d3080e4b2a11"
+    },
+    "Unclip20": {
+      "items_sha256": "e473a57e76a479ec9b284cfdd49dbb127c12401909cdbe2e0c28d9b1bd3a094b"
+    },
+    "Clean": {
+      "items_sha256": "ff52064667a025fa5828ab1476bb4af419d7523af7a6e110bc3b17b8b99acfe2"
+    }
+  },
+  "Base_history_comparisons": {
+    "Clip20": {
+      "reference_correct": 28,
+      "comparison_correct": 27,
+      "gained": 2,
+      "lost": 3
+    },
+    "Unclip20": {
+      "reference_correct": 28,
+      "comparison_correct": 28,
+      "gained": 2,
+      "lost": 2
+    },
+    "Clean": {
+      "reference_correct": 28,
+      "comparison_correct": 28,
+      "gained": 1,
+      "lost": 1
+    }
+  },
+  "same_trajectory_length_summaries": {
+    "Base": {
+      "same_trajectory_censored2048_correct": 4,
+      "full8192_correct": 28,
+      "gained_after2048": 24,
+      "lost_after2048": 0
+    },
+    "Clip20": {
+      "same_trajectory_censored2048_correct": 7,
+      "full8192_correct": 27,
+      "gained_after2048": 20,
+      "lost_after2048": 0
+    },
+    "Unclip20": {
+      "same_trajectory_censored2048_correct": 6,
+      "full8192_correct": 28,
+      "gained_after2048": 22,
+      "lost_after2048": 0
+    },
+    "Clean": {
+      "same_trajectory_censored2048_correct": 7,
+      "full8192_correct": 28,
+      "gained_after2048": 21,
+      "lost_after2048": 0
+    }
+  },
+  "parent_GPU_hours_counted_once": 0.3763888888888889,
+  "generated_tokens": 533384,
+  "TensorBoard_five_scalars_read_back": true,
+  "collector_sha256": "f8de59e82a03c3d2d55fec4180cac4af175dfeb7735ede57eb5d7081824159ef",
+  "interpretation_limits": "32fixed development questions, one generation seed. Privileged reference available; not benchmark accuracy or train-token supervision proof. Censored2048 regrades same8192trajectory, not fresh2048generation. Clean has256fewer suppliedtokens. No selected language or changed trainingprotocol on this diagnostic alone."
+}

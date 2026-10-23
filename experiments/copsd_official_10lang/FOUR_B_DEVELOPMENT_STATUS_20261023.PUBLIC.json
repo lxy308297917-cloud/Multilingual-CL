@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T14:22:04.886201",
+  "updated_at": "2026-10-23T14:53:27.372548",
   "cohort": "Qwen3-4B_independent_development200_not_formal_tests",
   "models": [
     {
@@ -87,5 +87,15 @@
     "report": "bn4b_followup200_completed_20261023.PUBLIC.json",
     "scope": "Complete matched native16 BN/EN200 developmentpair. CachedBaseEnglish verifiedequal inputs/prompts/seeds/packages, not regenerated orrecounted."
   },
-  "component_clip_intervention_report": "bn4b_unclip20_completed_20261023.PUBLIC.json"
+  "component_clip_intervention_report": "bn4b_unclip20_completed_20261023.PUBLIC.json",
+  "BN_teacher_recovery32_completed": {
+    "correct_of32": {
+      "Base_history": 28,
+      "Clip20_history": 27,
+      "Unclip20_history": 28,
+      "Clean": 28
+    },
+    "report": "bn4b_teacher_recovery32_completed_20261023.PUBLIC.json",
+    "scope": "Privileged conditional generation, not fair benchmark or trainingtoken supervision proof; no selection promotion."
+  }
 }
