@@ -1,0 +1,61 @@
+{
+  "completed_at": "2026-10-23T22:03:35.084269",
+  "source_report_sha256": "d46633b2da414b8271dea8103bf82368e5a7a5c847a1d90ad6f28b6b132b4c26",
+  "analyzer_sha256": "e507cf5bba12c07f02f7e5ce24b8edbfc3b10c915106e0027241a464a5419148",
+  "English_correct_of200": {
+    "Base": 166,
+    "ZH20": 161
+  },
+  "changes": {
+    "gained": {
+      "count": 7,
+      "indices_zero_based": [
+        0,
+        38,
+        88,
+        90,
+        96,
+        105,
+        112
+      ],
+      "finish_transitions": {
+        "length->stop": 5,
+        "length->length": 1,
+        "stop->stop": 1
+      },
+      "trained_no_box": 0
+    },
+    "lost": {
+      "count": 12,
+      "indices_zero_based": [
+        58,
+        65,
+        71,
+        77,
+        87,
+        114,
+        115,
+        126,
+        142,
+        145,
+        149,
+        193
+      ],
+      "finish_transitions": {
+        "stop->length": 9,
+        "stop->stop": 1,
+        "length->length": 2
+      },
+      "trained_no_box": 11
+    }
+  },
+  "normal_termination_loss_review": {
+    "index_zero_based": 65,
+    "question_ID": "57729a55c40a8a030a1484f39c572462f97359263acedc6f838c2954377bd020",
+    "category": "invalid_geometric_construction",
+    "finding": "The trained answer identifies E as reflection of H across BC. Its E=(0,-7/2) is not on the required AC line y=6-6x/7. Exact circle-line intersection gives area120/17 and requested12017; trained answer1902 is mathematically wrong, not extraction-only.",
+    "independent_fraction_check_passed": true
+  },
+  "interpretation": "11 of12 newlyincorrect responses hit8192-tokenlimit with no extractedbox; one normaltermination contains a real geometricerror. This diagnoses observed English loss as primarily failedtermination under fixedbudget, not a proof of underlying ability loss or recovery by extending budget. Do not change scores or attribute causality to clipping/teacher without intervention. One fixedseedpair only.",
+  "new_GPU_generation": false
+}
