@@ -17,7 +17,7 @@ def main():
     for name,digest in f['code_sha256'].items():assert sha(code/name)==digest,name
     state=read(a.root/'gpu-queue/queues/copsd-te4b-resume5-v1/state.json')
     assert state['phase']=='completed' and state['job']['exit_code']==0
-    assert state['job']['script_sha256']==f['code_sha256']['run_te4b_server20.sh']
+    assert state['job']['script_sha256']==f['code_sha256']['run_te4b_resume5.sh']
     folder=a.root/f['checkpoint_relative'];proof=read(folder/'SERVER_PILOT20_UPDATES_DONE.json');parent=read(folder/'SERVER_PARENT_DONE.json')
     assert proof['completed_updates']==20 and proof['micro_steps']==480 and len(proof['syncs'])==16 and proof['resumed_from_global_step']==5 and proof['logical_total_exposures']==640
     assert proof['base_unchanged_bitwise'] and parent['two_role_job_completed']
