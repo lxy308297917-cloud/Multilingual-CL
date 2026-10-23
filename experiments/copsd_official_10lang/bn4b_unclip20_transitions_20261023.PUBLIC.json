@@ -1,0 +1,174 @@
+{
+  "updated_at": "2026-10-23T14:22:04.194715",
+  "scope": "Descriptive paired correctness/termination transitions, not causal attribution or rescoring. All items200, native16 n1/8192.",
+  "languages": {
+    "bn": {
+      "Unclip20_vs_Base": {
+        "both_wrong": {
+          "truncated_to_truncated": 12,
+          "truncated_to_normal": 47,
+          "normal_to_normal": 23,
+          "normal_to_truncated": 2
+        },
+        "both_correct": {
+          "normal_to_normal": 57,
+          "truncated_to_normal": 2
+        },
+        "gained": {
+          "truncated_to_truncated": 1,
+          "truncated_to_normal": 16,
+          "normal_to_normal": 9
+        },
+        "lost": {
+          "normal_to_normal": 17,
+          "normal_to_truncated": 8,
+          "truncated_to_truncated": 2,
+          "truncated_to_normal": 4
+        }
+      },
+      "Unclip20_vs_Clip20": {
+        "both_wrong": {
+          "normal_to_truncated": 2,
+          "truncated_to_normal": 53,
+          "normal_to_normal": 18,
+          "truncated_to_truncated": 16
+        },
+        "both_correct": {
+          "normal_to_normal": 55,
+          "truncated_to_normal": 3
+        },
+        "gained": {
+          "truncated_to_truncated": 1,
+          "normal_to_normal": 5,
+          "truncated_to_normal": 21
+        },
+        "lost": {
+          "truncated_to_normal": 5,
+          "normal_to_normal": 15,
+          "normal_to_truncated": 5,
+          "truncated_to_truncated": 1
+        }
+      }
+    },
+    "en": {
+      "Unclip20_vs_Base": {
+        "gained": {
+          "truncated_to_normal": 4,
+          "truncated_to_truncated": 1,
+          "normal_to_normal": 1
+        },
+        "both_correct": {
+          "normal_to_normal": 154,
+          "normal_to_truncated": 1
+        },
+        "both_wrong": {
+          "truncated_to_truncated": 10,
+          "normal_to_normal": 16,
+          "normal_to_truncated": 1,
+          "truncated_to_normal": 1
+        },
+        "lost": {
+          "normal_to_truncated": 5,
+          "normal_to_normal": 4,
+          "truncated_to_truncated": 2
+        }
+      },
+      "Unclip20_vs_Clip20": {
+        "gained": {
+          "truncated_to_normal": 8,
+          "normal_to_normal": 1,
+          "truncated_to_truncated": 1
+        },
+        "both_correct": {
+          "normal_to_normal": 146,
+          "normal_to_truncated": 1,
+          "truncated_to_normal": 4
+        },
+        "both_wrong": {
+          "truncated_to_truncated": 11,
+          "normal_to_normal": 16
+        },
+        "lost": {
+          "normal_to_truncated": 5,
+          "normal_to_normal": 4,
+          "truncated_to_truncated": 2,
+          "truncated_to_normal": 1
+        }
+      }
+    }
+  },
+  "language_ID": {
+    "bn": {
+      "scope": "project language-ID supplement, not calibrated fluency or reasoning quality",
+      "target_label": "__label__ben_Beng",
+      "summary": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 200
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 200
+          },
+          "target_top1_probability_ge_0_8": 200,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 85
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "no_final_section": 12,
+            "predicted": 188
+          },
+          "top1_label_counts": {
+            "__label__ben_Beng": 182,
+            "__label__mni_Beng": 6
+          },
+          "target_top1_probability_ge_0_8": 175,
+          "correct_items_label_counts": {
+            "__label__ben_Beng": 83,
+            "__label__mni_Beng": 2
+          }
+        }
+      }
+    },
+    "en": {
+      "scope": "project language-ID supplement, not calibrated fluency or reasoning quality",
+      "target_label": "__label__eng_Latn",
+      "summary": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 200
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 200
+          },
+          "target_top1_probability_ge_0_8": 189,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 161
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 184,
+            "no_final_section": 16
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 180,
+            "__label__sna_Latn": 1,
+            "__label__yor_Latn": 3
+          },
+          "target_top1_probability_ge_0_8": 157,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 158,
+            "__label__sna_Latn": 1,
+            "__label__yor_Latn": 2
+          }
+        }
+      }
+    }
+  }
+}

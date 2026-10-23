@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T09:43:30.817851",
+  "updated_at": "2026-10-23T14:22:04.886201",
   "cohort": "Qwen3-4B_independent_development200_not_formal_tests",
   "models": [
     {
@@ -63,7 +63,7 @@
   },
   "score_policy": "Retain originalofficialscores andrawoutputs; categories are descriptive, not retrospective scorecorrections or fullproofvalidation.",
   "JA_candidate_status": "No demonstratedtarget gain and Englishdecline; do not promote to three-language sequential cohort. Onefixedmodelpair only, CI is overquestions, not trainingseedpopulation.",
-  "BN_candidate_status": "Both native16 and separate merged32 pairs complete, target andEnglish pointestimates negative; no stabletargetbenefit or promotion. Closing componentclip intervention running.",
+  "BN_candidate_status": "Clipped and unclipped4B BN do not demonstrate stable target gains. Intervention closes without promoting BN; no three-language cohort yet.",
   "three_language_selection_completed": false,
   "sequential_experiments_started": false,
   "privacy": "Scientific summary only; no hostpaths, processidentifiers, private inputs or executable source.",
@@ -77,7 +77,7 @@
     "report": "canonical_merged_bn4b_completed_20261023.PUBLIC.json",
     "scope": "Fresh Base/BN20 pair on different serving protocol; never mix with native16 Base counts or rank as another training seed."
   },
-  "component_clip_intervention_status": "Independent freshBase BN4B no-component-clip20 training completed at least2updates,64microsteps withfinite loss; stillrunning. Finalcheckpoint/effect pending.",
+  "component_clip_intervention_status": "Completed20updates and native16 BN/EN200 evaluation: BN90/84/85, EN166/163/161 for Base/Clip20/Unclip20. No demonstrated accuracy benefit despite BNtruncation84/100/25. No promotion.",
   "BN_native16_completed": {
     "target_Base_correct": 90,
     "target_OPD_correct": 84,
@@ -86,5 +86,6 @@
     "English_OPD_correct": 163,
     "report": "bn4b_followup200_completed_20261023.PUBLIC.json",
     "scope": "Complete matched native16 BN/EN200 developmentpair. CachedBaseEnglish verifiedequal inputs/prompts/seeds/packages, not regenerated orrecounted."
-  }
+  },
+  "component_clip_intervention_report": "bn4b_unclip20_completed_20261023.PUBLIC.json"
 }

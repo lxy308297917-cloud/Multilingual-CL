@@ -1,0 +1,208 @@
+{
+  "completed_at": "2026-10-23T13:28:26.504497",
+  "protocol": "project_BN4B_unclip20_dev200_single8192_c16_v1",
+  "languages": {
+    "bn": {
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 90,
+            "generated_tokens": 1235623,
+            "truncated": 84,
+            "normal_terminations": 116,
+            "answer_extraction_failures": 71,
+            "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.45,
+            "generation_seconds": 2237.2054310571402,
+            "model_load_seconds": 12.017821373417974,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "items_sha256": "9f36e103ebd966be54a2a5eef9ffc4044b0a7d3d5c01835e435217fc3e075a4c",
+            "config_sha256": "145cadc246679c04054781afc6616fe6db30374982c972072ee919e2b278adb7"
+          }
+        },
+        "Clip20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 84,
+            "generated_tokens": 1332887,
+            "truncated": 100,
+            "normal_terminations": 100,
+            "answer_extraction_failures": 84,
+            "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.42,
+            "generation_seconds": 5941.73678412661,
+            "model_load_seconds": 13.188803389668465,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "items_sha256": "26f0c1441d248ba6325d8da22e9a751306a6225ba8638914244161c75a7d9f65",
+            "config_sha256": "2b41e21d4b4c72f4e486cc05df35fbc74809918e1bf1d14e0c543d53227f4c32"
+          }
+        },
+        "Unclip20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 85,
+            "generated_tokens": 1007070,
+            "truncated": 25,
+            "normal_terminations": 175,
+            "answer_extraction_failures": 22,
+            "protocol": "project_BN4B_unclip20_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.425,
+            "generation_seconds": 4737.374431673437,
+            "model_load_seconds": 13.140336379408836,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "items_sha256": "0e0d9d8057d1c1e0e1704f8677481906e616c0f6510619df05f983ca0733f571",
+            "config_sha256": "ecf1f108caceb4b4cafba4c20fb59695b04b92fb18abd77fd9d587e9a48fac83"
+          }
+        }
+      },
+      "Unclip20_vs_Base": {
+        "reference_correct": 90,
+        "intervention_correct": 85,
+        "gained": 26,
+        "lost": 31,
+        "delta_correct": -5,
+        "paired_question_bootstrap95_CI_pp": [
+          -10.0,
+          5.0
+        ]
+      },
+      "Unclip20_vs_Clip20": {
+        "reference_correct": 84,
+        "intervention_correct": 85,
+        "gained": 27,
+        "lost": 26,
+        "delta_correct": 1,
+        "paired_question_bootstrap95_CI_pp": [
+          -6.5,
+          7.5
+        ]
+      }
+    },
+    "en": {
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 166,
+            "generated_tokens": 848945,
+            "truncated": 18,
+            "normal_terminations": 182,
+            "answer_extraction_failures": 12,
+            "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.83,
+            "generation_seconds": 1536.7818765956908,
+            "model_load_seconds": 13.593198273330927,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "items_sha256": "340c9dbb7b4831bc2fe8c7a02adcc666030121939205bdca27bfdec4724a5b3e",
+            "config_sha256": "629469b2d0337be803ccae7b7933d0601e2b29627ea9b14a1208e2ff40663404"
+          }
+        },
+        "Clip20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 163,
+            "generated_tokens": 877054,
+            "truncated": 27,
+            "normal_terminations": 173,
+            "answer_extraction_failures": 17,
+            "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.815,
+            "generation_seconds": 4044.9373906590044,
+            "model_load_seconds": 13.369046684354544,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "items_sha256": "b6832153f3b18f682f37fad66725440a4c83f3bff977c04deed06c31819ef999",
+            "config_sha256": "9f4eeeeeb285853387588eb8447dbdad14d430217e5d531214cfdc63231bf00a"
+          }
+        },
+        "Unclip20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 161,
+            "generated_tokens": 833487,
+            "truncated": 20,
+            "normal_terminations": 180,
+            "answer_extraction_failures": 14,
+            "protocol": "project_BN4B_unclip20_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.805,
+            "generation_seconds": 3944.3548809699714,
+            "model_load_seconds": 15.403305314481258,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "items_sha256": "dbde3539137bd4941999e48bb62818a500b1874232b1915c9334be96f489fddf",
+            "config_sha256": "ec824726d6a3ad5369e8ef845686628dd5441d367cc4e488a4949a07361a0b28"
+          }
+        }
+      },
+      "Unclip20_vs_Base": {
+        "reference_correct": 166,
+        "intervention_correct": 161,
+        "gained": 6,
+        "lost": 11,
+        "delta_correct": -5,
+        "paired_question_bootstrap95_CI_pp": [
+          -6.5,
+          1.5
+        ]
+      },
+      "Unclip20_vs_Clip20": {
+        "reference_correct": 163,
+        "intervention_correct": 161,
+        "gained": 10,
+        "lost": 12,
+        "delta_correct": -2,
+        "paired_question_bootstrap95_CI_pp": [
+          -5.5,
+          3.5000000000000004
+        ]
+      }
+    }
+  },
+  "new_parent_costs": [
+    {
+      "queue": "copsd-bn4b-unclip20-v1",
+      "parent_GPU_hours": 3.006111111111111
+    },
+    {
+      "queue": "copsd-bn4b-unclip20-eval-v1",
+      "parent_GPU_hours": 2.4575
+    }
+  ],
+  "new_parent_GPU_hours": 5.463611111111112,
+  "training_exposures": 640,
+  "training_valid_response_loss_tokens": 1297459,
+  "new_evaluation_generated_tokens": 1840557,
+  "cached_Base_and_clipped_cost_recounted": false,
+  "collector_sha256": "0d63e39ab47443d83bb24a202bade7595d56d46d6f6f6f4f24c2a7ad07d621b5",
+  "scope": "One-factor component clipping intervention from fresh4BBase with fixedseed42, exactmatched640inputexposureorder; online student trajectories differ. Native16 paired development only, not mergedbackend, formaltest, seedpopulation confirmation or3-language selection. QuestionCIs unadjusted for multiple comparisons. Original official scores retained.",
+  "TensorBoard_six_accuracies_two_costs_read_back": true
+}
