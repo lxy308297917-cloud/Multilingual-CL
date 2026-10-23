@@ -1,0 +1,16 @@
+{
+  "path_matched": false,
+  "gates": {
+    "ENtoSW_learning_close": true,
+    "SWtoEN_learning_close": false,
+    "SWreading_learning_close": false,
+    "ENreading_retention_better": false,
+    "ENinstruction_noninferior": true
+  },
+  "joint_passed": false,
+  "conditional_module_signal": false,
+  "decision": "Lower-LR control only; path did not match; strength confound remains unresolved",
+  "no_additional_training": true,
+  "frozen_protocol_sha256": "d7f3cb5533190d9aada8d7c5169ff88750323521b221a25f73a87a8b67ea5889",
+  "interpretation": "Follow-up exploratory one-seed development comparison. Failed noninferiority may be uncertainty, not proof of damage. Aggregate path match cannot identify a pure module causal effect."
+}

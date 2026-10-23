@@ -1,0 +1,13 @@
+{
+  "reference_target_rounded": 213.379786,
+  "range": [
+    192.0418074,
+    234.7177646
+  ],
+  "new_path_length": 186.93763537261663,
+  "ratio_to_Attn_exact": 0.8760794021980806,
+  "path_matched": false,
+  "new_final_base_delta_L2": 10.99814749005929,
+  "net_displacement_ratio_to_Attn": 0.8222509001003551,
+  "scope": "Only cumulative actual BF16 path within tolerance; does not match every update norm, net displacement, support, moments or module paths."
+}

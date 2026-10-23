@@ -1,0 +1,472 @@
+{
+  "models": {
+    "S-All": {
+      "group": "S-All",
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "main_padded_processed": 1536351,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "generated_tokens": 0
+      },
+      "K": 77070336,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/module_budget_sparse_20261022/S-All/checkpoint_004293/model",
+      "final_model_sha256": "1c9fc3f27b1e67217f5b4fa7f5f981188c1a5740b6b63983d2f2709fb73875c1",
+      "protocol_sha256": "fad77173f0836448b622ce82823fbc03a22bc3523514249850eb868df5bda2c2",
+      "elapsed_seconds": 5169.458645820618,
+      "gpu_hours": 1.4359607362084919,
+      "this_execution_gpu_hours": 1.4359607365396287,
+      "peak_allocated_bytes": 18536879616,
+      "peak_reserved_bytes": 24704450560,
+      "physical_peak_mib_observed": 23465,
+      "cumulative_path_length": 276.602148540176,
+      "cumulative_nonzero_write_events": 38851396390,
+      "module_path_length": {
+        "Attention": 95.57410778153222,
+        "MLP": 259.49992805339895
+      },
+      "final_base_delta_L2": 15.911109536695422,
+      "final_modules": {
+        "Attention": {
+          "final_base_delta_sq": 29.301680881530046,
+          "final_changed_coordinates": 43896461,
+          "mask_union": 93249755,
+          "eligible_elements": 154140672,
+          "final_base_delta_L2": 5.4131027037670405
+        },
+        "MLP": {
+          "final_base_delta_sq": 223.86172580718994,
+          "final_changed_coordinates": 392403872,
+          "mask_union": 897265763,
+          "eligible_elements": 1156055040,
+          "final_base_delta_L2": 14.962009417427526
+        }
+      },
+      "frozen_positions_unchanged": true,
+      "mask_union_note": "Union of selected masks including LR0; not a count of unique coordinates actually written. Final changed-from-Base count is reported separately.",
+      "moments": "FP32 exact full eligible matrix states; excluded matrices have no state",
+      "zero_auxiliary": true
+    },
+    "S-Attn": {
+      "group": "S-Attn",
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "main_padded_processed": 1536351,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "generated_tokens": 0
+      },
+      "K": 77070336,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/module_budget_sparse_20261022/S-Attn/checkpoint_004293/model",
+      "final_model_sha256": "56b68ea0c0dd48578aa89502dae58b39a11f6f687f0ea124ecc1f2acb6ce7219",
+      "protocol_sha256": "fad77173f0836448b622ce82823fbc03a22bc3523514249850eb868df5bda2c2",
+      "elapsed_seconds": 3673.1277594566345,
+      "gpu_hours": 1.020313266913096,
+      "this_execution_gpu_hours": 1.0203132671780057,
+      "peak_allocated_bytes": 9318923776,
+      "peak_reserved_bytes": 19979567104,
+      "physical_peak_mib_observed": 19441,
+      "cumulative_path_length": 213.37978601436203,
+      "cumulative_nonzero_write_events": 32744528840,
+      "module_path_length": {
+        "Attention": 213.37978601436203
+      },
+      "final_base_delta_L2": 13.375658802826456,
+      "final_modules": {
+        "Attention": {
+          "final_base_delta_sq": 178.90824840962887,
+          "final_changed_coordinates": 75826520,
+          "mask_union": 153275924,
+          "eligible_elements": 154140672,
+          "final_base_delta_L2": 13.375658802826456
+        }
+      },
+      "frozen_positions_unchanged": true,
+      "mask_union_note": "Union of selected masks including LR0; not a count of unique coordinates actually written. Final changed-from-Base count is reported separately.",
+      "moments": "FP32 exact full eligible matrix states; excluded matrices have no state",
+      "zero_auxiliary": true
+    },
+    "S-MLP": {
+      "group": "S-MLP",
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "main_padded_processed": 1536351,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "generated_tokens": 0
+      },
+      "K": 77070336,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/module_budget_sparse_20261022/S-MLP/checkpoint_004293/model",
+      "final_model_sha256": "3eac67c376b93f7c533e0f5bdb90dedc9696726040a3d6753291b4de2e5dc64e",
+      "protocol_sha256": "fad77173f0836448b622ce82823fbc03a22bc3523514249850eb868df5bda2c2",
+      "elapsed_seconds": 4559.656870126724,
+      "gpu_hours": 1.2665713540712993,
+      "this_execution_gpu_hours": 1.2665713543362087,
+      "peak_allocated_bytes": 17271970304,
+      "peak_reserved_bytes": 24700256256,
+      "physical_peak_mib_observed": 23297,
+      "cumulative_path_length": 270.16839691414344,
+      "cumulative_nonzero_write_events": 37206634254,
+      "module_path_length": {
+        "MLP": 270.16839691414344
+      },
+      "final_base_delta_L2": 15.637090781000849,
+      "final_modules": {
+        "MLP": {
+          "final_base_delta_sq": 244.51860809326172,
+          "final_changed_coordinates": 405976807,
+          "mask_union": 932675057,
+          "eligible_elements": 1156055040,
+          "final_base_delta_L2": 15.637090781000849
+        }
+      },
+      "frozen_positions_unchanged": true,
+      "mask_union_note": "Union of selected masks including LR0; not a count of unique coordinates actually written. Final changed-from-Base count is reported separately.",
+      "moments": "FP32 exact full eligible matrix states; excluded matrices have no state",
+      "zero_auxiliary": true
+    },
+    "S-All-LR077": {
+      "group": "S-All",
+      "study_method": "S-All-LR077",
+      "lr_multiplier": 0.7714,
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "main_padded_processed": 1536351,
+        "aux_input": 0,
+        "aux_supervised": 0,
+        "generated_tokens": 0
+      },
+      "K": 77070336,
+      "model": "/data0/users/lixiaoyang/models/checkpoint/module_lr077_20261023/S-All/checkpoint_004293/model",
+      "final_model_sha256": "9e40407fa7d7c95d85c746908f9569ccd8c440fa798ab67ccef11a328a1ca201",
+      "protocol_sha256": "d7f3cb5533190d9aada8d7c5169ff88750323521b221a25f73a87a8b67ea5889",
+      "elapsed_seconds": 5107.448241233826,
+      "gpu_hours": 1.418735623492135,
+      "this_execution_gpu_hours": 1.4187356239557267,
+      "peak_allocated_bytes": 18537135616,
+      "peak_reserved_bytes": 24691867648,
+      "physical_peak_mib_observed": 23453,
+      "cumulative_path_length": 186.93763537261663,
+      "cumulative_nonzero_write_events": 30092471131,
+      "module_path_length": {
+        "Attention": 65.19448807332813,
+        "MLP": 175.15470055071557
+      },
+      "final_base_delta_L2": 10.99814749005929,
+      "final_modules": {
+        "Attention": {
+          "final_base_delta_sq": 14.244159964844584,
+          "final_changed_coordinates": 33911593,
+          "mask_union": 90420071,
+          "eligible_elements": 154140672,
+          "final_base_delta_L2": 3.7741436068126215
+        },
+        "MLP": {
+          "final_base_delta_sq": 106.71508824825287,
+          "final_changed_coordinates": 301347965,
+          "mask_union": 878035446,
+          "eligible_elements": 1156055040,
+          "final_base_delta_L2": 10.330299523646586
+        }
+      },
+      "frozen_positions_unchanged": true,
+      "mask_union_note": "Union of selected masks including LR0; not a count of unique coordinates actually written. Final changed-from-Base count is reported separately.",
+      "moments": "FP32 exact full eligible matrix states; excluded matrices have no state",
+      "zero_auxiliary": true
+    }
+  },
+  "new_evaluation": {
+    "rows": 512,
+    "scored_rows": 511,
+    "reused": false,
+    "model_sha256": "9e40407fa7d7c95d85c746908f9569ccd8c440fa798ab67ccef11a328a1ca201",
+    "data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+    "counts": {
+      "prompt_tokens": 141278,
+      "generated_tokens": 78752
+    },
+    "wall_seconds": 1897.9458966255188,
+    "gpu_hours": 0.5272071938382255,
+    "peak_allocated_bytes": 18537135616,
+    "physical_peak_mib_observed": 4407,
+    "predictions_sha256": "94ee60104137ce1371cd8bad9afb8b4048f0e0644b90f83117e883596dba41d4",
+    "not_formal_test": true
+  },
+  "technical": {
+    "passed": true,
+    "groups": {
+      "S-All": {
+        "group": "S-All",
+        "updates": 8,
+        "longest_lengths": [
+          2030,
+          2007
+        ],
+        "selected_per_step": 77070336,
+        "frozen_coordinate_changes": 0,
+        "changed_outside_mask_union": 0,
+        "actual_BF16_changed_coordinates": 172971,
+        "peak_allocated_bytes": 18315230720,
+        "peak_reserved_bytes": 20046675968,
+        "records": [
+          {
+            "step": 1,
+            "lr": 0.0,
+            "selected": 77070336,
+            "mask_refresh": true,
+            "mask_changed_coordinates": 77070336,
+            "mask_union": 77070336,
+            "nonzero_write": 0,
+            "candidate_norm": 0.0,
+            "actual_norm": 0.0,
+            "per_module": {
+              "Attention": {
+                "actual_delta_sq": 0.0,
+                "candidate_delta_sq": 0.0,
+                "nonzero_write": 0,
+                "selected": 9067095
+              },
+              "MLP": {
+                "actual_delta_sq": 0.0,
+                "candidate_delta_sq": 0.0,
+                "nonzero_write": 0,
+                "selected": 68003241
+              }
+            },
+            "main_CE": 2.194075644016266,
+            "full_candidate_preclip_norm": 16.25
+          },
+          {
+            "step": 2,
+            "lr": 1.8159133709981167e-08,
+            "selected": 77070336,
+            "mask_refresh": false,
+            "mask_changed_coordinates": 0,
+            "mask_union": 77070336,
+            "nonzero_write": 21593,
+            "candidate_norm": 0.00015937829284944189,
+            "actual_norm": 3.5157743920934046e-06,
+            "per_module": {
+              "Attention": {
+                "actual_delta_sq": 1.8397053086656456e-12,
+                "candidate_delta_sq": 2.9889066803165387e-09,
+                "nonzero_write": 3243,
+                "selected": 9067095
+              },
+              "MLP": {
+                "actual_delta_sq": 1.0520964267434103e-11,
+                "candidate_delta_sq": 2.2412533551285918e-08,
+                "nonzero_write": 18350,
+                "selected": 68003241
+              }
+            },
+            "main_CE": 2.194075644016266,
+            "full_candidate_preclip_norm": 16.25
+          },
+          {
+            "step": 3,
+            "lr": 3.6318267419962334e-08,
+            "selected": 77070336,
+            "mask_refresh": false,
+            "mask_changed_coordinates": 0,
+            "mask_union": 77070336,
+            "nonzero_write": 43117,
+            "candidate_norm": 0.0003184912129669395,
+            "actual_norm": 9.91663709184224e-06,
+            "per_module": {
+              "Attention": {
+                "actual_delta_sq": 1.4762186214238452e-11,
+                "candidate_delta_sq": 1.193041609254264e-08,
+                "nonzero_write": 6471,
+                "selected": 9067095
+              },
+              "MLP": {
+                "actual_delta_sq": 8.357750499706287e-11,
+                "candidate_delta_sq": 8.950623664460977e-08,
+                "nonzero_write": 36646,
+                "selected": 68003241
+              }
+            },
+            "main_CE": 2.1972070932388306,
+            "full_candidate_preclip_norm": 15.9375
+          },
+          {
+            "step": 4,
+            "lr": 5.447740112994351e-08,
+            "selected": 77070336,
+            "mask_refresh": false,
+            "mask_changed_coordinates": 0,
+            "mask_union": 77070336,
+            "nonzero_write": 43027,
+            "candidate_norm": 0.00047768397155616805,
+            "actual_norm": 1.2207744033028053e-05,
+            "per_module": {
+              "Attention": {
+                "actual_delta_sq": 2.2350518449356337e-11,
+                "candidate_delta_sq": 2.6833584278185274e-08,
+                "nonzero_write": 6458,
+                "selected": 9067095
+              },
+              "MLP": {
+                "actual_delta_sq": 1.266784959265757e-10,
+                "candidate_delta_sq": 2.0134839240348867e-07,
+                "nonzero_write": 36569,
+                "selected": 68003241
+              }
+            },
+            "main_CE": 2.1948826909065247,
+            "full_candidate_preclip_norm": 16.125
+          },
+          {
+            "step": 5,
+            "lr": 7.263653483992467e-08,
+            "selected": 77070336,
+            "mask_refresh": false,
+            "mask_changed_coordinates": 0,
+            "mask_union": 77070336,
+            "nonzero_write": 86426,
+            "candidate_norm": 0.0006369269212033631,
+            "actual_norm": 2.813205142840215e-05,
+            "per_module": {
+              "Attention": {
+                "actual_delta_sq": 1.1715254802499228e-10,
+                "candidate_delta_sq": 4.7708397094003985e-08,
+                "nonzero_write": 12858,
+                "selected": 9067095
+              },
+              "MLP": {
+                "actual_delta_sq": 6.742597695452712e-10,
+                "candidate_delta_sq": 3.5796750585959103e-07,
+                "nonzero_write": 73568,
+                "selected": 68003241
+              }
+            },
+            "main_CE": 2.193837821483612,
+            "full_candidate_preclip_norm": 16.0
+          },
+          {
+            "step": 6,
+            "lr": 9.079566854990583e-08,
+            "selected": 77070336,
+            "mask_refresh": false,
+            "mask_changed_coordinates": 0,
+            "mask_union": 77070336,
+            "nonzero_write": 86279,
+            "candidate_norm": 0.0007959562110979183,
+            "actual_norm": 3.293558072473258e-05,
+            "per_module": {
+              "Attention": {
+                "actual_delta_sq": 1.609902390976685e-10,
+                "candidate_delta_sq": 7.449243699664265e-08,
+                "nonzero_write": 12839,
+                "selected": 9067095
+              },
+              "MLP": {
+                "actual_delta_sq": 9.237622385777078e-10,
+                "candidate_delta_sq": 5.590538529887112e-07,
+                "nonzero_write": 73440,
+                "selected": 68003241
+              }
+            },
+            "main_CE": 2.1969165205955505,
+            "full_candidate_preclip_norm": 15.875
+          },
+          {
+            "step": 7,
+            "lr": 1.0895480225988701e-07,
+            "selected": 77070336,
+            "mask_refresh": false,
+            "mask_changed_coordinates": 0,
+            "mask_union": 77070336,
+            "nonzero_write": 86118,
+            "candidate_norm": 0.0009547828579451889,
+            "actual_norm": 3.4523902374682905e-05,
+            "per_module": {
+              "Attention": {
+                "actual_delta_sq": 1.7731922294416183e-10,
+                "candidate_delta_sq": 1.0717824974748602e-07,
+                "nonzero_write": 12820,
+                "selected": 9067095
+              },
+              "MLP": {
+                "actual_delta_sq": 1.014580612232474e-09,
+                "candidate_delta_sq": 8.044320560784968e-07,
+                "nonzero_write": 73298,
+                "selected": 68003241
+              }
+            },
+            "main_CE": 2.193523943424225,
+            "full_candidate_preclip_norm": 16.125
+          },
+          {
+            "step": 8,
+            "lr": 1.2711393596986817e-07,
+            "selected": 77070336,
+            "mask_refresh": false,
+            "mask_changed_coordinates": 0,
+            "mask_union": 77070336,
+            "nonzero_write": 172964,
+            "candidate_norm": 0.0011141583250228342,
+            "actual_norm": 7.871282108463464e-05,
+            "per_module": {
+              "Attention": {
+                "actual_delta_sq": 9.103088488083069e-10,
+                "candidate_delta_sq": 1.4595692843233365e-07,
+                "nonzero_write": 25532,
+                "selected": 9067095
+              },
+              "MLP": {
+                "actual_delta_sq": 5.285399354293396e-09,
+                "candidate_delta_sq": 1.095391844785354e-06,
+                "nonzero_write": 147432,
+                "selected": 68003241
+              }
+            },
+            "main_CE": 2.196538746356964,
+            "full_candidate_preclip_norm": 16.125
+          }
+        ],
+        "FP32_moments_verified": true,
+        "serialized_4to8_all_weights_FP32moments_masks_unions_counts_rng_bitwise_equal": true,
+        "technical_checkpoint_receipt_sha256": "c6c3a238812845d91aada6c52d3edab7daa30fb66993fc9b6b505163a3190367",
+        "technical_payload_cleaned_after_verified_parity": true
+      }
+    },
+    "wall_seconds": 142.45492720603943,
+    "gpu_hours": 0.03957081450356378,
+    "gpu_uuid": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+    "scope": "LR077 real Qwen longest samples; exact support/frozen checks and scaled-LR4to8 serialized parity; diagnostic updates only, no scientific optimizer carryover"
+  },
+  "pipeline": {
+    "phases": [
+      {
+        "script": "technical.py",
+        "wall_seconds": 144.6477165222168,
+        "ceiling_GPUh": 0.1
+      },
+      {
+        "script": "train.py",
+        "wall_seconds": 5108.439414978027,
+        "ceiling_GPUh": 2.05
+      },
+      {
+        "script": "evaluate.py",
+        "wall_seconds": 1898.2585189342499,
+        "ceiling_GPUh": 0.85
+      }
+    ],
+    "total_worker_GPUh": 1.9864860670434104,
+    "finished_unix": 1792732504.1195264,
+    "gpu_uuid": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+    "one_scientific_train": true,
+    "no_followup_automatic": true
+  }
+}

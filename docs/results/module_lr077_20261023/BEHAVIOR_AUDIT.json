@@ -1,0 +1,62 @@
+{
+  "selection": "First3 ENtoSW records in frozen input order, irrespective of model score/language; save oldAll/newAll/Attn outputs privately; public only IDs and aggregates. Assistant review is not native gold.",
+  "case_ids": [
+    "flores200:dev:580:en_to_sw",
+    "flores200:dev:791:en_to_sw",
+    "flores200:dev:151:en_to_sw"
+  ],
+  "ENtoSW": {
+    "S-All": {
+      "score": 15.0636631431066,
+      "n": 128,
+      "source_groups": 128,
+      "metric": "corpus_chrF++",
+      "capped": 0,
+      "generated_tokens": 3513,
+      "mean_repeat_4gram_fraction": 0.0,
+      "languages": {
+        "en": 127,
+        "sw": 1
+      },
+      "score_status_counts": {
+        "strict_or_translation": 128
+      }
+    },
+    "S-All-LR077": {
+      "score": 18.951802658753053,
+      "n": 128,
+      "source_groups": 128,
+      "metric": "corpus_chrF++",
+      "capped": 0,
+      "generated_tokens": 4993,
+      "mean_repeat_4gram_fraction": 0.0008101851851851852,
+      "languages": {
+        "en": 81,
+        "sw": 47
+      },
+      "score_status_counts": {
+        "strict_or_translation": 128
+      }
+    },
+    "S-Attn": {
+      "score": 23.02133811820238,
+      "n": 128,
+      "source_groups": 128,
+      "metric": "corpus_chrF++",
+      "capped": 6,
+      "generated_tokens": 8070,
+      "mean_repeat_4gram_fraction": 0.0399865794521877,
+      "languages": {
+        "sw": 121,
+        "en": 6,
+        "sk": 1
+      },
+      "score_status_counts": {
+        "strict_or_translation": 128
+      }
+    }
+  },
+  "language_detector_not_translation_accuracy": true,
+  "raw_cases_saved_privately": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/module_lr077_v1/QUALITATIVE_CASES.json",
+  "assistant_review_not_native_gold": true
+}

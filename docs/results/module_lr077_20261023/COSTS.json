@@ -1,0 +1,16 @@
+{
+  "total_GPU_context_hours": 1.9864861294958327,
+  "total_ceiling_GPUh": 3,
+  "technical_GPUh": 0.03957081450356378,
+  "scientific_train_GPUh": 1.418735623492135,
+  "endpoint_GPUh": 0.5272071938382255,
+  "physical_train_peak_MiB": 23453,
+  "physical_endpoint_peak_MiB": 4407,
+  "technical_peak_allocated_bytes": 18315230720,
+  "checkpoint_root_logical": "/data0/users/lixiaoyang/models/checkpoint/module_lr077_20261023",
+  "checkpoint_root_physical": "/data1/lixiaoyang/module_lr077_20261023",
+  "scientific_checkpoint_bytes": 27793696536,
+  "new_scientific_train_count": 1,
+  "cached_reference_new_GPUh": 0,
+  "within_budget": true
+}
