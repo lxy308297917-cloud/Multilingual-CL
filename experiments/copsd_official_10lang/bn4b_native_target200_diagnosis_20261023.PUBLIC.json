@@ -1,0 +1,66 @@
+{
+  "accepted_at": "2026-10-23T08:47:02.299716",
+  "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+  "target_items": 200,
+  "paired_transition_diagnosis": {
+    "newly_wrong": {
+      "items": 26,
+      "finish_transitions": {
+        "stop->stop": 6,
+        "stop->length": 15,
+        "length->length": 4,
+        "length->stop": 1
+      },
+      "student_no_extracted_answer": 18
+    },
+    "newly_correct": {
+      "items": 20,
+      "finish_transitions": {
+        "stop->length": 2,
+        "length->stop": 8,
+        "stop->stop": 7,
+        "length->length": 3
+      },
+      "student_no_extracted_answer": 0
+    }
+  },
+  "BN20_language": {
+    "thinking": {
+      "total_items": 200,
+      "statuses": {
+        "predicted": 200
+      },
+      "top1_label_counts": {
+        "__label__ben_Beng": 200
+      },
+      "target_top1_probability_ge_0_8": 199,
+      "correct_items_label_counts": {
+        "__label__ben_Beng": 84
+      }
+    },
+    "final": {
+      "total_items": 200,
+      "statuses": {
+        "predicted": 106,
+        "no_final_section": 94
+      },
+      "top1_label_counts": {
+        "__label__ben_Beng": 101,
+        "__label__mni_Beng": 4,
+        "__label__tir_Ethi": 1
+      },
+      "target_top1_probability_ge_0_8": 100,
+      "correct_items_label_counts": {
+        "__label__ben_Beng": 77,
+        "no_final_section": 6,
+        "__label__tir_Ethi": 1
+      }
+    }
+  },
+  "Base_language_reference": "bn4b_Base200_language_20261023.PUBLIC.json",
+  "source_items_sha256": {
+    "Base": "9f36e103ebd966be54a2a5eef9ffc4044b0a7d3d5c01835e435217fc3e075a4c",
+    "BN20": "26f0c1441d248ba6325d8da22e9a751306a6225ba8638914244161c75a7d9f65"
+  },
+  "scope": "Target development only, English still pending. Whole-part language ID is auxiliary and does not prove fluency. Finish transitions are descriptive, not a causal explanation or score correction. No new GPU work."
+}

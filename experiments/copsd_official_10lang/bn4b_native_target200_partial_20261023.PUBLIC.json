@@ -1,0 +1,36 @@
+{
+  "accepted_at": "2026-10-23T08:39:57.951308",
+  "status": "BN200_completed_English_parent_stillrunning",
+  "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+  "paired": {
+    "Base_correct": 90,
+    "checkpoint_correct": 84,
+    "gained": 20,
+    "lost": 26,
+    "delta_correct": -6
+  },
+  "paired_question_bootstrap95_CI_pp": [
+    -10.0,
+    3.5000000000000004
+  ],
+  "metrics": {
+    "items": 200,
+    "single_correct": 84,
+    "generated_tokens": 1332887,
+    "truncated": 100,
+    "normal_terminations": 100,
+    "answer_extraction_failures": 84,
+    "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+    "formal_test": false,
+    "n": 1,
+    "generation_count": 200,
+    "single_accuracy": 0.42,
+    "generation_seconds": 5941.73678412661,
+    "model_load_seconds": 13.188803389668465,
+    "actual_max_num_seqs": 16
+  },
+  "items_sha256": "26f0c1441d248ba6325d8da22e9a751306a6225ba8638914244161c75a7d9f65",
+  "config_sha256": "2b41e21d4b4c72f4e486cc05df35fbc74809918e1bf1d14e0c543d53227f4c32",
+  "parent_cost_deferred_to_full_BN_English_report": true,
+  "scope": "Fixed200 targetdevelopment Base/BN20 native16/n1/8192 matchedpair. Singletrainingseed, questionCI notseedpopulation. Targetpointestimate declines, no evidencehere oftargetgain orselectedlanguagepromotion. Englishandjointacceptance pending. Separatecanonicalmerged400 pilots are notmixedwiththisprotocol."
+}

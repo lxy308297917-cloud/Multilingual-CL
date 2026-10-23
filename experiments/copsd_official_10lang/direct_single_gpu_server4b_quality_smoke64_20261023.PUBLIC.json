@@ -1,0 +1,16 @@
+{
+  "completed_at": "2026-10-23T08:17:09.833004",
+  "direct_single_GPU": {
+    "sw": {
+      "items": 32,
+      "correct": 5,
+      "no_extracted_answer": 5
+    },
+    "en": {
+      "items": 32,
+      "correct": 29,
+      "no_extracted_answer": 1
+    }
+  },
+  "scope": "SameSW20checkpoint inferenceimplementation smoke, not Base-versusOPD, efficacy orqualityequivalence. All64fixedrows gradedwithsameofficialextractor/scorer; no newgeneration andno checkpoint/language selection."
+}
