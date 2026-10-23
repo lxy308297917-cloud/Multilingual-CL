@@ -1,0 +1,19 @@
+{
+  "confirmation_manifest_sha256": "a188136ec92a31a8cd7a8dded9cbb291ac668c5edc44cd694d7e3aa22f4f2d6b",
+  "primary_confirmation_available": false,
+  "task_counts": {
+    "en_reading": 64,
+    "sw_reading": 64,
+    "en_instruction": 128
+  },
+  "translation": {
+    "remaining_documents": 1,
+    "selected_documents": 0,
+    "requested_documents": 128,
+    "shortfall": true,
+    "decision": "No source substitution or formal-test access; missing primary confirmation prevents upgrade",
+    "main_near_threshold": 0.82,
+    "formal_sentence_text_read": false
+  },
+  "no_substitution": true
+}

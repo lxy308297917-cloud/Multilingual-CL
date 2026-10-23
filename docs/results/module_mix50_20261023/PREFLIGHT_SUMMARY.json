@@ -1,0 +1,26 @@
+{
+  "all4_real_model_preflights_passed": true,
+  "jobs": {
+    "LR077-s43": {
+      "passed": true,
+      "wall_seconds": 138.0305950641632,
+      "transport_parity": true
+    },
+    "Attn-s43": {
+      "passed": true,
+      "wall_seconds": 59.22961664199829,
+      "transport_parity": true
+    },
+    "Mix50-s42": {
+      "passed": true,
+      "wall_seconds": 285.5590031147003,
+      "transport_parity": true
+    },
+    "Mix50-s43": {
+      "passed": true,
+      "wall_seconds": 143.00186204910278,
+      "transport_parity": true
+    }
+  },
+  "recorded_unix": 1792739984.3344085
+}

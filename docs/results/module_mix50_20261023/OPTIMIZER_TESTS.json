@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "old_unprotected_BF16_weights_FP32_moments_bitwise_equal_updates": 43,
+  "mask_refreshes": [
+    1,
+    21,
+    41
+  ],
+  "offmask_write_zero_each_update": true,
+  "packbits_resume_nextupdate_bitwise_equal": true,
+  "stable_flat_tie_order": true,
+  "all3_exact_K": 77070336,
+  "original_optimizer_sha256": "71375bc33ecce71d703f507ec465f733481444fe5ad03d1077b4ce17237352b2",
+  "new_optimizer_sha256": "6926d0b516702ee0894da5821d292ba6f039015a34da734fff79abb76fe949a5"
+}

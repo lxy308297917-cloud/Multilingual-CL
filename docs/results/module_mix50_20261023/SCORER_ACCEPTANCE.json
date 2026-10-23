@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "controlled_cases": 320,
+  "same_prior_reading_and_instruction_implementation": true,
+  "no_model_answers_used": true,
+  "limits": "Finite automated sanity checks, not independent source-gold human verification"
+}

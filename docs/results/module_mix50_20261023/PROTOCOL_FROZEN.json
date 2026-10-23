@@ -1,0 +1,124 @@
+{
+  "frozen_unix": 1792739405.7816274,
+  "reference_public_commit": "7c5c2a49da5cfebdcd1c34ec1ef7a06b0a9618a7",
+  "jobs": {
+    "LR077-s43": {
+      "group": "S-All",
+      "seed": 43,
+      "multiplier": 0.7714
+    },
+    "Attn-s43": {
+      "group": "S-Attn",
+      "seed": 43,
+      "multiplier": 1.0
+    },
+    "Mix50-s42": {
+      "group": "S-Mix50",
+      "seed": 42,
+      "multiplier": 0.7714
+    },
+    "Mix50-s43": {
+      "group": "S-Mix50",
+      "seed": 43,
+      "multiplier": 0.7714
+    }
+  },
+  "new_full_train_count": 4,
+  "max_account_gpus": 4,
+  "total_context_GPUh_ceiling": 16,
+  "estimated_GPUh": {
+    "four_preflight_and_train": 6.5,
+    "four_old_endpoint": 2.2,
+    "new_confirmation_seven_models": 3.6,
+    "prompt_diagnostic": 0.4,
+    "failure_and_other_reserve": 2.3
+  },
+  "main_steps": 4293,
+  "main_input_tokens": 1536351,
+  "main_supervised_tokens": 599469,
+  "max_length": 2048,
+  "effective_batch": 2,
+  "microbatch": 1,
+  "schedule_total": 42465,
+  "warmup": 2124,
+  "base_peak_LR": 5e-05,
+  "weight_precision": "BF16",
+  "Adam_moments": "FP32",
+  "clip": 1,
+  "weight_decay": 0.01,
+  "mask_refresh_interval": 20,
+  "K": 77070336,
+  "module_quota": {
+    "S-All": {
+      "Attention": 9067095,
+      "MLP": 68003241
+    },
+    "S-Attn": {
+      "Attention": 77070336
+    },
+    "S-Mix50": {
+      "Attention": 38535168,
+      "MLP": 38535168
+    }
+  },
+  "order_sha256": {
+    "42": "54e993550be42cc04f8d0024f17cfe8c8852bd70d066eb5724b80b48adacf47c",
+    "43": "a2d9a0a24d56f637b290dc85473f04df384d08f2ac94e8b5dd73371e4aaf2959"
+  },
+  "order_rule": "Seed42 identity4293 blocks; seed43 random.Random(43).shuffle same4293 blocks preserving each2sample batch and sample multiset. Training order seeds, not independent data samples.",
+  "old_data_sha256": "f3ae4b1465cdc94b4e2280fe769046006de13e7908881686977401fdbd0e80fa",
+  "confirmation_manifest_sha256": "a188136ec92a31a8cd7a8dded9cbb291ac668c5edc44cd694d7e3aa22f4f2d6b",
+  "primary_confirmation_available": false,
+  "prompt_manifest_sha256": "924193a84a475aee408726cdeeed861441f4b551548192c24c95e0f678edcb67",
+  "budget_sha256": "a00abdd76a0501582efe6650d3523f5a3d7ae13bfb36812d167722b35c73a216",
+  "main_comparison": "S-Mix50 minus S-All-LR077 at each same training-order seed, only quota allocation changes",
+  "Attn_comparison_limit": "Original5e-5 Attn recipe vs .7714 other recipes changes LR and quotas; not pure module contrast",
+  "gates": {
+    "both_seeds_ENtoSW_point_min": 1,
+    "each_SWtoEN_min": -1,
+    "each_SWreading_min": -2,
+    "each_ENreading_min": -2,
+    "each_ENinstruction_min": -2,
+    "mean_seeds_ENtoSW_CI_low_strictly_above": 0
+  },
+  "bootstrap": {
+    "repetitions": 10000,
+    "seed": 42,
+    "unit": "source_group",
+    "two_seed_mean": "synchronously resample same sources then average per-seed corpus-score differences; never duplicate sample size; fixed-model item uncertainty only"
+  },
+  "no_formal_test_or_math": true,
+  "no_extra_ratio_LR_seed_length_or_checkpoint_selection": true,
+  "data_shortage_policy": "Report missing tasks; no source substitution. Missing new primaryENtoSW => original progression standard cannot pass, even if old scores good.",
+  "confirmation_models": [
+    "Base",
+    "LR077-s42",
+    "Attn-s42",
+    "LR077-s43",
+    "Attn-s43",
+    "Mix50-s42",
+    "Mix50-s43"
+  ],
+  "prompt_models": [
+    "Base",
+    "LR077-s42",
+    "Attn-s42",
+    "MLP-s42"
+  ],
+  "old_models": [
+    "LR077-s43",
+    "Attn-s43",
+    "Mix50-s42",
+    "Mix50-s43"
+  ],
+  "save_steps": [
+    2146,
+    4293
+  ],
+  "scorers": {
+    "reading_scoring.py": "5a00549e060cf903d81b82f404fe6eaa9e88d407d0926258b3de2d738484b6c9",
+    "aux_scoring.py": "048df01251d0325b0a5ad7c55371296be270ac1b89ad10afccf9b008fcc40d12"
+  },
+  "actual_update_strength": "Logged, not forcibly matched; cannot attribute quota effect independently of actual displacement",
+  "budget_fallback": "If measured forecast exceeds16GPUh before next phase, prioritize new confirmation over old repeat endpoints; log before scores and no silent denominator reduction"
+}
