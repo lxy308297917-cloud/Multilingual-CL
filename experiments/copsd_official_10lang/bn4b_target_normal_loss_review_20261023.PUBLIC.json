@@ -1,0 +1,71 @@
+{
+  "accepted_at": "2026-10-23T08:50:50.785375",
+  "protocol": "project_BN4B_followup_dev200_single8192_c16_v1",
+  "scope": "Manual mathematical review of all7 newly incorrect BN200 answers that normally terminated. No rescoring or change to official scores; no complete validation of all generated proofs, no English result or causal claim about training loss.",
+  "counts": {
+    "mathematical_modeling_or_algebra": 6,
+    "representation_or_reference_mismatch": 1
+  },
+  "rows": [
+    {
+      "id": "7413dedcb9114f8b63526336c9a2962fc3a6c202e53fc9310752ad6c516fb907",
+      "category": "mathematical_modeling_or_algebra",
+      "evidence": "Uses sqrt(x^2+1)=x+1, loses the required product relation; integer square root is3994001, predicted3994003.",
+      "original_boxed_answer": "3994003",
+      "original_score_preserved": true
+    },
+    {
+      "id": "80d655da257b1917765c7f9543313448af15f336d3c08b53ed786b4d120d7610",
+      "category": "mathematical_modeling_or_algebra",
+      "evidence": "Uses gcd(4,3)=1 instead of lcm(4,3)=12 for the common-term progression.",
+      "original_boxed_answer": "1",
+      "original_score_preserved": true
+    },
+    {
+      "id": "89395387aa0754c5ed67f054d7c10d4ba7a1e94ba00316c237ff6faa9a872553",
+      "category": "mathematical_modeling_or_algebra",
+      "evidence": "Concludes no real solution after rejecting x=3; omits the admissible root2+sqrt(3) of the cubic absolute-value factor.",
+      "original_boxed_answer": "\\text{সমাধান নেই}",
+      "original_score_preserved": true
+    },
+    {
+      "id": "b202b679d66067dddeadab36dd7d9fe270180c4269c60c6364dab651d28f65d4",
+      "category": "representation_or_reference_mismatch",
+      "evidence": "Proof correctly establishes residue0 modulo16, but boxes0 while numeric reference is16 (the divisor). Official exact-answer score retained; this row does not demonstrate mathematical knowledge loss.",
+      "original_boxed_answer": "0",
+      "original_score_preserved": true
+    },
+    {
+      "id": "b2a433f80898ff78c7588107f246c3028859cf24f0c95ddc3260ebc0ab754cea",
+      "category": "mathematical_modeling_or_algebra",
+      "evidence": "Reverses younger/older age relation, obtains a negative age then guesses9; equation S+3=2*(S-8+3) gives sister age13.",
+      "original_boxed_answer": "9",
+      "original_score_preserved": true
+    },
+    {
+      "id": "d869f92bf439761ab8ea8e4db4ba3d6dd5114fb9eb9813647f437dd90701d22d",
+      "category": "mathematical_modeling_or_algebra",
+      "evidence": "Treats the sector radius/slant height4R as vertical height; actual vertical height sqrt(15)R.",
+      "original_boxed_answer": "\\frac{4}{3} \\pi R^3",
+      "original_score_preserved": true
+    },
+    {
+      "id": "a07a60c4009757dd9eb38b0943a04457677af4852967e4faf22ea6c2ac369c59",
+      "category": "mathematical_modeling_or_algebra",
+      "evidence": "Assumes equilateral side equals circle radiusR; tangent geometry requires side sqrt(3)R, giving an area factor3.",
+      "original_boxed_answer": "\\frac{\\sqrt{3}}{4} R^2",
+      "original_score_preserved": true
+    }
+  ],
+  "CPU_mathematical_crosschecks": {
+    "integer_square_root": 3994001,
+    "progression_lcm": 12,
+    "admissible_cubic_root_verified": true,
+    "all_odd_residues_mod16_verified": true,
+    "age_equation_sister": 13
+  },
+  "source_sha256": {
+    "Base": "9f36e103ebd966be54a2a5eef9ffc4044b0a7d3d5c01835e435217fc3e075a4c",
+    "BN20": "26f0c1441d248ba6325d8da22e9a751306a6225ba8638914244161c75a7d9f65"
+  }
+}

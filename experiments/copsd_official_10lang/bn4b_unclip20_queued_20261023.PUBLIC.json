@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-23T09:03:49.666056",
+  "protocol": "project_BN4B_component_clip_one_factor20_seed42_v1",
+  "status": "manually_started_waiting_for_two_GPU_capacity",
+  "training_started_claimed": false,
+  "queue": "copsd-bn4b-unclip20-v1",
+  "target_GPUs": 2,
+  "account_GPU_limit": 4,
+  "boot_startup": false,
+  "automatic_failure_restart": false,
+  "training_freeze_sha256": "464bc59750350a957b3a22482eb30f77639e218517a426b2407a503b30df2187",
+  "evaluation_freeze_sha256": "ad62a88ab8dd2f288786b7d5acb282d56923854193af210b4a717c31c28bf526",
+  "all_runtime_source_hashes_verified": true,
+  "latest_full_CPU_preflight_passed": true,
+  "CPU_unclipped_loss6checks_reference": "bn4b_unclip20_prepared_20261023.PUBLIC.json",
+  "original_preparation_manifest_archived": true,
+  "free_bytes_at_queue_start": 11028881408,
+  "disk_start_required_bytes": 10286924556,
+  "new_run_save_total_limit": 1,
+  "existing_results_deleted": false,
+  "source_changes_to_running_jobs": false,
+  "scope": "One-shot queued official-supported --jsd_token_clip0(None) BN4B20 intervention. SameBase/2700pool/seed42/640inputexposures/LoRA/AdamW/full2048. Existingthreeevaluations continue; do not claim newtrainingsteps orscores until actualtrainer evidence. NoCPUteacher or method simplification."
+}
