@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-24",
+  "time": "06:48 Asia/Shanghai",
+  "model": "Qwen/Qwen3-4B",
+  "cohort": "independent4B",
+  "purpose": "One independent trainingseed confirmation after seed42 target42->62/200 with English166->162/200",
+  "training_seed": 43,
+  "data_seed": 43,
+  "evaluation_seed": 42,
+  "planned_updates": 20,
+  "scheduler_horizon": 100,
+  "planned_exposures": 640,
+  "effective_batch": 32,
+  "micro_batch": 1,
+  "gradient_accumulation": 32,
+  "training_generation_limit": 2048,
+  "optimizer": "AdamW",
+  "learning_rate": 5e-06,
+  "LoRA_rank": 64,
+  "LoRA_alpha": 128,
+  "fixed_teacher": "OriginalBase with disabled student adapter",
+  "loss": "Same official beta0 full-vocabulary teacher-to-student KL with component clip0.05 and recorded memory adaptations",
+  "initialization": "Fresh originalBase, not continuation of seed42 checkpoint",
+  "training_state": "Actual online generation and finite-loss backpropagation in progress; no result yet",
+  "code_scope": "Same completed fresh single20 training entry; isolated evaluation/release/collector now support declaredtrainingseed and reuse both acceptedBases. Sampling, official prompt/scorer and model-loader calls unchanged.",
+  "evaluation": {
+    "target_language": "TE",
+    "items_per_language": 200,
+    "languages": [
+      "te",
+      "en"
+    ],
+    "n": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "cached_Base_TE_correct": 42,
+    "cached_Base_EN_correct": 166,
+    "Base_generation_repeated": false
+  },
+  "interpretation": "Seed42 retained first5updates plus recovered15; seed43 is fresh with logitstorage compaction fromstart. Same scientificbudget, no RNG bitwise-equivalence claim.",
+  "sequential_language_selection_completed": false,
+  "scope": "Scientific-only progress. Full code, configurations, commands, logs and checkpoint bindings retained locally. No raw samples, private paths or runtime identifiers in this summary."
+}
