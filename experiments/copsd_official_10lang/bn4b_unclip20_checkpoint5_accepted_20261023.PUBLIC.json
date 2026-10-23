@@ -1,0 +1,29 @@
+{
+  "accepted_at": "2026-10-23T09:55:24.028395",
+  "protocol": "project_BN4B_component_clip_one_factor20_seed42_v1",
+  "checkpoint_step": 5,
+  "effective_batch": 32,
+  "completed_input_exposures": 160,
+  "same_first160input_exposures_as_clipped_reference": true,
+  "adapter_tensors": 504,
+  "all_adapter_values_finite": true,
+  "adapter_sha256": "695b517735913442f42d8a08903d90f83ecd02e28fb77c7f850f042a240ac99f",
+  "optimizer_parameter_states": 504,
+  "all_optimizer_steps": [
+    5
+  ],
+  "scheduler_last_epoch": 5,
+  "RNG_fields_present": [
+    "python",
+    "numpy",
+    "cpu",
+    "cuda"
+  ],
+  "save_total_limit_newrun": 1,
+  "existing_historical_checkpoints_deleted": false,
+  "remaining_free_bytes": 9326981120,
+  "TensorBoard_latest_train_loss_step": 4,
+  "TensorBoard_train_loss_finite": true,
+  "training_freeze_sha256": "464bc59750350a957b3a22482eb30f77639e218517a426b2407a503b30df2187",
+  "scope": "First completedcheckpoint of independent4B unclipped20 intervention; CPU tensor/optimizer/scheduler/RNG-file validation only, not actualprocess resumption or serverRNG bitwisecontinuation. Runningtraining unchanged; mathematical effect waits fixed final20evaluation. This intermediatecheckpoint will be rotated byHFTrainer only inside newrun."
+}

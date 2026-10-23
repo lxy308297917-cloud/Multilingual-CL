@@ -1,0 +1,38 @@
+{
+  "computed_at": "2026-10-23T09:49:13.551318",
+  "source_protocol": "independent_BN4B_dedicated_server_single20_seed42_v1",
+  "training_updates": 20,
+  "training_exposures": 640,
+  "total_training_wall_seconds": 5333.342810591683,
+  "sequential_wall_components": {
+    "21_student_weight_syncs_including_diagnostic_hashing": {
+      "seconds": 1542.7713080011308,
+      "fraction": 0.2892691062230772
+    },
+    "20_online_generation_batches32": {
+      "seconds": 1118.3744082506746,
+      "fraction": 0.2096948289222387
+    },
+    "remaining_unprofiled_training_and_IO": {
+      "seconds": 2672.1970943398774,
+      "fraction": 0.5010360648546841
+    }
+  },
+  "nested_CUDA_forward_counters_not_additive_with_wall_components": {
+    "teacher_forward_seconds": 384.0375375366211,
+    "student_forward_seconds": 311.7506328125,
+    "teacher_calls": 640,
+    "student_calls": 640
+  },
+  "synchronization_scope": "The measured sync region includes nonmutatingLoRAexport, per-tensorSHA/transport/remote-loader receipts, prefix-cache reset andBase/adapter checks. This aggregate does not isolate purechecksum cost from requiredweight transfer. Adapterfingerprints before eachmicrostep also live outside this syncaggregate.",
+  "bounded_optimization_hypotheses": [
+    "Measure export/transport/hash subregions in a future isolated implementation before changing validation frequency; preserve current-student loading and original frozenBase teacher.",
+    "Only if actuallyequivalent receipts/currentweights and downstreamprotocol preserved, consider reducing redundant wholeBase/adapter hashing or batching transport; do not remove teacher supervision, full2048 generation or optimizerbudget to claim speed."
+  ],
+  "Amdahl_ceiling_if_sync_region_were_free": 1.4070022968691582,
+  "performance_improvement_measured": false,
+  "current_running_training_modified": false,
+  "new_GPU_work": false,
+  "source_sha256": "e97c823ed1a5335c25fee66967c4404e38f9f22a47a1d0d569d5614fd81a06c0",
+  "scope": "Posthoc wallcost accounting for completed clipped BN4B20. Diagnostic overhead and model synchronization are mixed in one observedregion; the listed optimization paths and ceiling are hypothetical, not measuredspeedups or proof of method effect. Existing2.60x evaluation64 benchmark is a separateworkload, not trainingacceleration."
+}
