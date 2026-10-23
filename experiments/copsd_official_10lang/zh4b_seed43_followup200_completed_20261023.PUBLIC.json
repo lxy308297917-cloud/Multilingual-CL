@@ -1,0 +1,160 @@
+{
+  "completed_at": "2026-10-24T01:15:19.484761",
+  "protocol": "project_ZH4B_seed43_followup_dev200_single8192_c16_v1",
+  "training_seed": 43,
+  "data_seed": 43,
+  "evaluation_question_seed": 42,
+  "languages": {
+    "zh": {
+      "paired": {
+        "Base_correct": 152,
+        "checkpoint_correct": 158,
+        "gained": 17,
+        "lost": 11,
+        "delta_correct": 6
+      },
+      "paired_question_bootstrap95_CI_pp": [
+        -2.0,
+        8.0
+      ],
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 152,
+            "generated_tokens": 758196,
+            "truncated": 19,
+            "normal_terminations": 181,
+            "answer_extraction_failures": 14,
+            "protocol": "project_ZH4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.76,
+            "generation_seconds": 1298.7053480520844,
+            "model_load_seconds": 12.056984536349773,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "zh4b_followup200_Base_zh_20261023",
+            "items_sha256": "188b4f3d61ed71e78a5591e087b0881995849867313602910ecca75d774013bd",
+            "config_sha256": "01e72a21daa5b3d7620d50309f87f359d17b7e5fbcd32c0dcf8f9e19b8f1c103"
+          }
+        },
+        "ZH43": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 158,
+            "generated_tokens": 706331,
+            "truncated": 16,
+            "normal_terminations": 184,
+            "answer_extraction_failures": 12,
+            "protocol": "project_ZH4B_seed43_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.79,
+            "generation_seconds": 3338.3769882917404,
+            "model_load_seconds": 13.248194431886077,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "zh4b_seed43_followup200_ZH43_zh_20261023",
+            "items_sha256": "9f6b5939b50b8d646396eb69b2d1f29f9b3a59134ba3b222faa6f32502e41a76",
+            "config_sha256": "f46b2766856cff063cc4b2b1c03f077816bcba911d1187bd8c299bd231abd3f0"
+          }
+        }
+      },
+      "uncertainty_scope": "Questions for one fixedmodelpair; not trainingseedpopulation or multiplicityadjusted inference."
+    },
+    "en": {
+      "paired": {
+        "Base_correct": 166,
+        "checkpoint_correct": 158,
+        "gained": 6,
+        "lost": 14,
+        "delta_correct": -8
+      },
+      "paired_question_bootstrap95_CI_pp": [
+        -8.5,
+        0.5
+      ],
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 166,
+            "generated_tokens": 848945,
+            "truncated": 18,
+            "normal_terminations": 182,
+            "answer_extraction_failures": 12,
+            "protocol": "project_SW4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.83,
+            "generation_seconds": 1536.7818765956908,
+            "model_load_seconds": 13.593198273330927,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "sw4b_followup200_Base_en_20261022_v1",
+            "items_sha256": "340c9dbb7b4831bc2fe8c7a02adcc666030121939205bdca27bfdec4724a5b3e",
+            "config_sha256": "629469b2d0337be803ccae7b7933d0601e2b29627ea9b14a1208e2ff40663404"
+          }
+        },
+        "ZH43": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 158,
+            "generated_tokens": 872490,
+            "truncated": 24,
+            "normal_terminations": 176,
+            "answer_extraction_failures": 19,
+            "protocol": "project_ZH4B_seed43_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.79,
+            "generation_seconds": 4325.236533839256,
+            "model_load_seconds": 13.400327851995826,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "zh4b_seed43_followup200_ZH43_en_20261023",
+            "items_sha256": "1c69b158309522aef66dbbaa86f35b9b743ce144cb216b6742dd03ae25755699",
+            "config_sha256": "08492086e26cdb8a67c6b45a6b2dd522f805048b45a0eef6630282d0428a2453"
+          }
+        }
+      },
+      "uncertainty_scope": "Questions for one fixedmodelpair; not trainingseedpopulation or multiplicityadjusted inference."
+    }
+  },
+  "cost": {
+    "new_training_parent_GPU_hours": 2.9505555555555554,
+    "new_evaluation_parent_GPU_hours": 2.171666666666667,
+    "new_evaluation_generated_tokens": 1578821,
+    "training_exposures": 640,
+    "training_generated_tokens": 1207718,
+    "training_valid_response_loss_positions": 1207718,
+    "teacher_forward_calls": 640,
+    "cached_Bases_and_seed42_GPU_cost_recounted": false,
+    "candidate_total_GPU_hours": 5.122222222222222
+  },
+  "unique_evaluation_parent_costs": [
+    {
+      "queue": "copsd-zh4b-seed43-eval-v1",
+      "parent_GPU_hours_counted_once": 2.171666666666667,
+      "evaluation_cases": 2,
+      "training_updates": 0
+    }
+  ],
+  "seed42_reference_correct_of200": {
+    "zh": 160,
+    "en": 161
+  },
+  "TensorBoard_four_accuracies_two_costs_read_back": true,
+  "frozen_sha256": "8cf77658f62567a69b00915de25d29e44fe9269ed20d32198e28120aa59659f1",
+  "collector_sha256": "1c281d1928f6f6bc4824ad5241e2745350e5364129ee6b16f7057f58b23cb4fe",
+  "scope": "OnefreshBase confirmation with training/data seed43, same2700pool/budget, differentpossible640exposures and onlinepolicy trajectories. BothverifiedBases reused, not regenerated/recounted. Native16 samequestionseed42/prompt/source/packages compared. Not formaltest, pureLoRAinitialization intervention, guaranteedvLLMRNGseed43, three-language selection or sequentialtraining."
+}

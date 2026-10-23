@@ -1,0 +1,162 @@
+{
+  "completed_at": "2026-10-24T01:15:44.798914",
+  "items_each": 200,
+  "languages": {
+    "zh": {
+      "correct_of200": {
+        "Base": 152,
+        "seed42": 160,
+        "seed43": 158
+      },
+      "both_training_seed_deltas_positive": true,
+      "two_fixed_model_mean_delta_pp": 3.5000000000000004,
+      "two_fixed_model_mean_paired_question_bootstrap95_CI_pp": [
+        -0.75,
+        8.0
+      ],
+      "mean_question_CI_lower_strictly_positive": false,
+      "Base_seed42_seed43_correctness_patterns": {
+        "111": 135,
+        "000": 26,
+        "001": 6,
+        "010": 5,
+        "011": 11,
+        "101": 6,
+        "110": 9,
+        "100": 2
+      },
+      "both_seeds_gain_same_questions": 11,
+      "both_seeds_lose_same_questions": 2,
+      "per_seed_termination_changes": {
+        "42": {
+          "gained": {
+            "count": 16,
+            "Base_finish": {
+              "stop": 8,
+              "length": 8
+            },
+            "trained_finish": {
+              "stop": 16
+            }
+          },
+          "lost": {
+            "count": 8,
+            "Base_finish": {
+              "stop": 8
+            },
+            "trained_finish": {
+              "length": 5,
+              "stop": 3
+            }
+          }
+        },
+        "43": {
+          "gained": {
+            "count": 17,
+            "Base_finish": {
+              "length": 10,
+              "stop": 7
+            },
+            "trained_finish": {
+              "stop": 15,
+              "length": 2
+            }
+          },
+          "lost": {
+            "count": 11,
+            "Base_finish": {
+              "stop": 10,
+              "length": 1
+            },
+            "trained_finish": {
+              "length": 4,
+              "stop": 7
+            }
+          }
+        }
+      }
+    },
+    "en": {
+      "correct_of200": {
+        "Base": 166,
+        "seed42": 161,
+        "seed43": 158
+      },
+      "both_training_seed_deltas_positive": false,
+      "two_fixed_model_mean_delta_pp": -3.25,
+      "two_fixed_model_mean_paired_question_bootstrap95_CI_pp": [
+        -7.000000000000001,
+        0.5
+      ],
+      "mean_question_CI_lower_strictly_positive": false,
+      "Base_seed42_seed43_correctness_patterns": {
+        "011": 5,
+        "111": 145,
+        "000": 26,
+        "110": 9,
+        "101": 7,
+        "100": 5,
+        "010": 2,
+        "001": 1
+      },
+      "both_seeds_gain_same_questions": 5,
+      "both_seeds_lose_same_questions": 5,
+      "per_seed_termination_changes": {
+        "42": {
+          "gained": {
+            "count": 7,
+            "Base_finish": {
+              "length": 6,
+              "stop": 1
+            },
+            "trained_finish": {
+              "stop": 6,
+              "length": 1
+            }
+          },
+          "lost": {
+            "count": 12,
+            "Base_finish": {
+              "stop": 10,
+              "length": 2
+            },
+            "trained_finish": {
+              "length": 11,
+              "stop": 1
+            }
+          }
+        },
+        "43": {
+          "gained": {
+            "count": 6,
+            "Base_finish": {
+              "length": 5,
+              "stop": 1
+            },
+            "trained_finish": {
+              "stop": 4,
+              "length": 2
+            }
+          },
+          "lost": {
+            "count": 14,
+            "Base_finish": {
+              "stop": 13,
+              "length": 1
+            },
+            "trained_finish": {
+              "length": 10,
+              "stop": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  "accepted_report_sha256": {
+    "zh4b_followup200_completed_20261023.PUBLIC.json": "d46633b2da414b8271dea8103bf82368e5a7a5c847a1d90ad6f28b6b132b4c26",
+    "zh4b_seed43_followup200_completed_20261023.PUBLIC.json": "f3c641a6c89a6ffbf369e46b5b9888aec1193d62e8a7af414e68a5710320e298"
+  },
+  "summarizer_sha256": "a3846f1c2d3b76484d65bed93c7868ad73fa02f37c2fb5c2a27df5ed6899be44",
+  "scope": "Two fixed trainedmodels, shared questions and identical cachedBase. Jointquestion bootstrap; not trainingseedpopulation, blindtest, multiplicityadjusted inference or automatic language selection. Review languagekeeping, Englishtradeoff, termination, teacher signal and cost before promotion. No newGPU work or cost recount; original scores unchanged."
+}

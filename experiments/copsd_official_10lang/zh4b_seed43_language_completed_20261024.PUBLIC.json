@@ -1,0 +1,86 @@
+{
+  "completed_at": "2026-10-24T01:16:50.208605",
+  "source_report_sha256": "f3c641a6c89a6ffbf369e46b5b9888aec1193d62e8a7af414e68a5710320e298",
+  "cases": {
+    "zh": {
+      "summary": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 200
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 199,
+            "__label__rue_Cyrl": 1
+          },
+          "target_top1_probability_ge_0_8": 192,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 157,
+            "__label__rue_Cyrl": 1
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 188,
+            "no_final_section": 12
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 186,
+            "__label__ayr_Latn": 1,
+            "__label__wuu_Hani": 1
+          },
+          "target_top1_probability_ge_0_8": 185,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 156,
+            "__label__ayr_Latn": 1,
+            "__label__wuu_Hani": 1
+          }
+        }
+      },
+      "correct_and_both_target_highconf": 149,
+      "source_analysis_sha256": "d33349e4d79ed1ebcfc14db98e7a68baab88c2348a3ae5aa94832c8a033a2c18",
+      "items_sha256": "9f6b5939b50b8d646396eb69b2d1f29f9b3a59134ba3b222faa6f32502e41a76"
+    },
+    "en": {
+      "summary": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 200
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 200
+          },
+          "target_top1_probability_ge_0_8": 190,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 158
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 179,
+            "no_final_section": 21
+          },
+          "top1_label_counts": {
+            "__label__eng_Latn": 175,
+            "__label__yor_Latn": 3,
+            "__label__sna_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 150,
+          "correct_items_label_counts": {
+            "__label__eng_Latn": 152,
+            "no_final_section": 2,
+            "__label__yor_Latn": 3,
+            "__label__sna_Latn": 1
+          }
+        }
+      },
+      "correct_and_both_target_highconf": 124,
+      "source_analysis_sha256": "95bf4987bbcecd2da79180a130facecf7d9ca18d4f19639e3f582d853e26e0a4",
+      "items_sha256": "1c69b158309522aef66dbbaa86f35b9b743ce144cb216b6742dd03ae25755699"
+    }
+  },
+  "scope": "LanguageID diagnostic only; short numericfinals may be mislabeled. No fluency/proof claim, no newGPUcost or score changes."
+}

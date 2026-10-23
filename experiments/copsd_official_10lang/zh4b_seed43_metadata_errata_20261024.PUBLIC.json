@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-10-24T01:17:19.212383",
+  "frozen_source": "zh4b_seed43_frozen_20261023.PUBLIC.json",
+  "frozen_sha256": "19ed619a54beb1b6dfb2fb53736478d5f32437b976664be87443bdb212a00f75",
+  "actual_training_language": "ZH",
+  "actual_reporting": "tensorboard",
+  "preserved_legacy_label_errors": {
+    "wandb_project": "COPSD-BN4B-server-single is an unused W&B project label copied from BN; report_to is tensorboard.",
+    "evaluation_plan": "The BaseBN/trainedBN text is a copied label error. Real freeze cases ZH43, Chinese problem_zh data and accepted ZH/EN outputs define this run.",
+    "gate": "The phrase not Japanese efficacy is a copied note, not a JA experiment or efficacy assertion.",
+    "disk_budget.free_bytes_at_preparation": "Historical preparation snapshot, not current disk space."
+  },
+  "actual_result_reports": [
+    "zh4b_seed43_followup200_completed_20261023.PUBLIC.json",
+    "zh4b_two_seed_completed_20261024.PUBLIC.json"
+  ],
+  "scope": "Documentation errata only. Preserve historical frozen bytes and all hashes. No core code, inputs, checkpoint, sampling or score changes."
+}
