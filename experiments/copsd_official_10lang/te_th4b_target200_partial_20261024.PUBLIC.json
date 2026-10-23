@@ -1,0 +1,226 @@
+{
+  "recorded_at": "2026-10-24T05:28:57.708946",
+  "languages": {
+    "te": {
+      "Base_correct": 42,
+      "checkpoint_correct": 62,
+      "gained": 35,
+      "lost": 15,
+      "delta_pp": 10.0,
+      "paired_question_bootstrap95_CI_pp": [
+        3.5000000000000004,
+        17.0
+      ],
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 42,
+            "generated_tokens": 1472969,
+            "truncated": 129,
+            "normal_terminations": 71,
+            "answer_extraction_failures": 124,
+            "protocol": "project_TE4B_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.21,
+            "generation_seconds": 2833.9844123348594,
+            "model_load_seconds": 12.044645857065916,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "te4b_followup200_Base_te_20261024",
+            "items_sha256": "53e3422074af403d4a48d5ab1e5fd64b03b042f34126940d62178f7383cd51a0",
+            "config_sha256": "c5976e03222bddf7ec57f32b540d6c98e122e6eb36c5d3b4022d538ce3990d43"
+          }
+        },
+        "checkpoint20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 62,
+            "generated_tokens": 1467768,
+            "truncated": 136,
+            "normal_terminations": 64,
+            "answer_extraction_failures": 121,
+            "protocol": "project_TE4B_resume5_followup_dev200_single8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.31,
+            "generation_seconds": 6533.024538204074,
+            "model_load_seconds": 13.686719318851829,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "te4b_resume5_followup200_TE20R_te_20261024",
+            "items_sha256": "94d32844442192c3721b23ac1beb136b63dad66d113e33d5a554de4f36e5ae25",
+            "config_sha256": "ec1114e06e4e7fba729f542cd04ddc9e57d31a2a63fab5fac53a194229a4fbc8"
+          }
+        }
+      },
+      "termination_transitions": {
+        "gained": {
+          "count": 35,
+          "Base_finish": {
+            "length": 30,
+            "stop": 5
+          },
+          "checkpoint_finish": {
+            "stop": 27,
+            "length": 8
+          }
+        },
+        "lost": {
+          "count": 15,
+          "Base_finish": {
+            "stop": 13,
+            "length": 2
+          },
+          "checkpoint_finish": {
+            "length": 14,
+            "stop": 1
+          }
+        }
+      }
+    },
+    "th": {
+      "Base_correct": 142,
+      "checkpoint_correct": 134,
+      "gained": 17,
+      "lost": 25,
+      "delta_pp": -4.0,
+      "paired_question_bootstrap95_CI_pp": [
+        -10.5,
+        2.0
+      ],
+      "conditions": {
+        "Base": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 142,
+            "generated_tokens": 733811,
+            "truncated": 20,
+            "normal_terminations": 180,
+            "answer_extraction_failures": 13,
+            "protocol": "project_single4b_TH_dev200_n1_8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.71,
+            "generation_seconds": 1233.1148759163916,
+            "model_load_seconds": 12.053076421841979,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "th4b_dev200_20261024_v1_Base_th",
+            "items_sha256": "617536720617fdcad795af40bdb5f0a82050b47567418e6b0b1db410239b08c1",
+            "config_sha256": "e9499424f28ef9d05c260a7cd6a5dacdcc0c983350f647daf1117ad060fccaf7"
+          }
+        },
+        "checkpoint20": {
+          "metrics": {
+            "items": 200,
+            "single_correct": 134,
+            "generated_tokens": 609889,
+            "truncated": 7,
+            "normal_terminations": 193,
+            "answer_extraction_failures": 2,
+            "protocol": "project_single4b_TH_dev200_n1_8192_c16_v1",
+            "formal_test": false,
+            "n": 1,
+            "generation_count": 200,
+            "single_accuracy": 0.67,
+            "generation_seconds": 2746.8410379998386,
+            "model_load_seconds": 13.452309185639024,
+            "actual_max_num_seqs": 16
+          },
+          "source": {
+            "run_id": "th4b_dev200_20261024_v1_TH20_th",
+            "items_sha256": "ff4f8b0270a1ff932d34eb6a647f12cf057a59c4340475c2ef46a48c0cf4b8df",
+            "config_sha256": "db7291c99b2469be0094ecafa0ad691563b59ae69c6504381006def59cb4a414"
+          }
+        }
+      }
+    }
+  },
+  "English_evaluation_complete": false,
+  "candidate_selection_completed": false,
+  "costs_reported_as_final": false,
+  "scope": "Completed target-language development only. English remains running; languagekeeping, trainingseed confirmation and totalcost pending. Question bootstrap describes fixedmodels, not seedpopulation or multiplicityadjusted inference. Original official scores unchanged.",
+  "TE_early_language_analysis": {
+    "cases": {
+      "Base": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 200
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 200
+          },
+          "target_top1_probability_ge_0_8": 200,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 42
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "no_final_section": 107,
+            "predicted": 93
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 93
+          },
+          "target_top1_probability_ge_0_8": 93,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 41,
+            "no_final_section": 1
+          }
+        }
+      },
+      "checkpoint20": {
+        "thinking": {
+          "total_items": 200,
+          "statuses": {
+            "predicted": 200
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 198,
+            "__label__eng_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 198,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 60,
+            "__label__eng_Latn": 2
+          }
+        },
+        "final": {
+          "total_items": 200,
+          "statuses": {
+            "no_final_section": 120,
+            "predicted": 79,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 75,
+            "__label__eng_Latn": 3,
+            "__label__nso_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 75,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 55,
+            "too_short": 1,
+            "__label__eng_Latn": 3,
+            "no_final_section": 2,
+            "__label__nso_Latn": 1
+          }
+        }
+      }
+    },
+    "detector_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+    "target_label": "__label__tel_Telu",
+    "scope": "CPU GlotLID over complete saved TE outputs, not calibrated fluency, completeproof verification or finalcandidate selection. Short numeric finals may misclassify; raw official scores unchanged."
+  }
+}
