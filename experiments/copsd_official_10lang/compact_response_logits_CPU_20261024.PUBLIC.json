@@ -1,0 +1,37 @@
+{
+  "all_passed": true,
+  "cases": [
+    {
+      "dtype": "torch.float32",
+      "partial_mask": false,
+      "loss_bitwise_equal": true,
+      "all_LoRA_gradients_bitwise_equal": true,
+      "frozen_Base_has_no_gradients": true
+    },
+    {
+      "dtype": "torch.float32",
+      "partial_mask": true,
+      "loss_bitwise_equal": true,
+      "all_LoRA_gradients_bitwise_equal": true,
+      "frozen_Base_has_no_gradients": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "partial_mask": false,
+      "loss_bitwise_equal": true,
+      "all_LoRA_gradients_bitwise_equal": true,
+      "frozen_Base_has_no_gradients": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "partial_mask": true,
+      "loss_bitwise_equal": true,
+      "all_LoRA_gradients_bitwise_equal": true,
+      "frozen_Base_has_no_gradients": true
+    }
+  ],
+  "contiguous_view_retains_full_storage_fixture_verified": true,
+  "core_source_sha256": "61ac661d2bbea66988d1b7adc671bcd35c210f7aeb7e43a27e6e2f8872b7ffa6",
+  "patch_sha256": "8af73d756c259eaa2e012a4398fadca2e4a8a795b52726741b2951a74e27b418",
+  "scope": "CPU tinyQwen3 fullforward/teacheradapterdisable/masks/gradientcheckpointing and LoRAgradient identity. No full4B CUDA memory guarantee or efficacy claim."
+}

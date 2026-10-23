@@ -1,0 +1,82 @@
+{
+  "recorded_at": "2026-10-24T02:25:27.098761",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "model": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "scientific_settings": {
+    "LoRA_r": 64,
+    "LoRA_alpha": 128,
+    "LoRA_dropout": 0.05,
+    "optimizer": "AdamW",
+    "learning_rate": 5e-06,
+    "maximum_gradient_norm": 0.1,
+    "effective_batch": 32,
+    "micro_batch": 1,
+    "gradient_accumulation": 32,
+    "response_generation_limit": 2048,
+    "beta": 0,
+    "vocabulary_component_clip": 0.05,
+    "teacher": "Original frozenBase withadapterdisabled; Englishprivilegedcontext",
+    "training_and_data_seed": 42,
+    "final_global_step": 20,
+    "scheduler_horizon": 100
+  },
+  "failure": {
+    "completed_optimizer_updates": 7,
+    "completed_finite_microsteps": 228,
+    "failing_microstep_one_based": 229,
+    "retained_checkpoint_step": 5,
+    "discarded_completed_updates": 2,
+    "cause": "Full prompt+response logit storage retained by response slices; allocation failed inside full-vocabularyKL."
+  },
+  "engineering_patch": {
+    "source": "compact_response_logits.py",
+    "changed_assignments": 2,
+    "operation": "Clone selected student/teacher response-logit views before fulloutput deletion; preserve values/dtype, causalshift, masks, context and fullvocabulary loss.",
+    "core_file_modified": false,
+    "patch_sha256": "8af73d756c259eaa2e012a4398fadca2e4a8a795b52726741b2951a74e27b418"
+  },
+  "validation": {
+    "CPU_cases": 4,
+    "CPU_loss_and_LoRA_gradient_bitwise_equal": true,
+    "CUDA_short_response_positions": 16,
+    "CUDA_short_loss_equal": true,
+    "CUDA_short_max_abs_LoRA_gradient_difference": 0.0,
+    "CUDA_short_fixed_dropout_RNG_and_deterministic_kernels": true,
+    "CUDA_full_cached_failed_response_tokens": 2048,
+    "CUDA_full_optimizer_state_resident": true,
+    "CUDA_full_peak_allocated_GiB": 17.95366668701172,
+    "CUDA_full_backward_finite": true,
+    "CUDA_full_uses_available_checkpoint5_not_lost_step7_weights": true,
+    "scope": "Engineering fixtures, not downstream efficacy or allfutureprompt memory guarantee. Firstprobe lacked matched dropoutRNG; secondprobe matchedRNG but observed nondeterministicBF16 gradientdifferences; third controlled both and passed. Faileddiagnostic logs retained and costs included. Full4B replay is an independent model-forward/backward fixture, not a claim about complete AccelerateTrainer memory or bitwise continuation."
+  },
+  "actual_resume_evidence": {
+    "checkpoint5_model_optimizer_scheduler_loaded": true,
+    "Transformers_RNG_load_observed": true,
+    "next32_student_and_teacher_prompt_tensors_match_original_after160_skipped": true,
+    "verified_post_restore_sync_steps": [
+      5,
+      6
+    ],
+    "vLLM_sampling_RNG_bitwise_reproduced": false
+  },
+  "budget_and_cost_policy": {
+    "retained_exposures": 160,
+    "new_exposures_to_global20": 480,
+    "logical_total_exposures": 640,
+    "actual_generation_trajectories_with_failed_prefetch_if_complete": 736,
+    "failedtraining_and_three_repair_GPU_probes_counted_separately": true
+  },
+  "Base_TE_development": {
+    "items": 200,
+    "correct": 42,
+    "single_accuracy": 0.21,
+    "truncated": 129,
+    "answer_extraction_failures": 124,
+    "max_new_tokens": 8192,
+    "samples": 1,
+    "native_concurrency": 16,
+    "effect_of_training_available": false
+  },
+  "scope": "Recovered sameTE candidate, not a newtrainingseed or selectedlanguage. Machine-specific paths, queue snapshots, deviceIDs, processIDs, local data/weight fingerprints and rawinputs deliberately excluded. Fullruntime bindings remain local."
+}
