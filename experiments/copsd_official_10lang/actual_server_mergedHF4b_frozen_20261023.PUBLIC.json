@@ -1,0 +1,13 @@
+{
+  "frozen_at": "2026-10-23T07:12:00.623254",
+  "primary_freeze_sha256": "4e8072292514b9e0e6a4fd5bd9797a02412095f2fd1bb41c99a99b34afa70da3",
+  "prefix_probabilities_sha256": "83068a1cf90146e4c8d7c4c0e8942be9eb9b9532fe40d5eb77a44877bbbb2c76",
+  "receipt_sha256": "4cc5e4b96c7fb396df212d1609755a0a472ebbc0248299d02f7ba2b3187bffa2",
+  "output_relative": "logs/copsd_official_10lang/actual_server_student4b_JA20_mergedHF_20261023_v1",
+  "code_sha256": {
+    "check_actual_server_merged_hf_4b.py": "092100cdc21e132cecd8aa25c6e5c90c50034db22b7866c8ba1d3e7b55b597c2",
+    "run_actual_server_merged_hf4b.sh": "c2332f11104e24cd3f7cc01939a58db287e8edc48b476289f3380cd47f7870f7",
+    "benchmark_eval_concurrency8192.py": "2b97abc43ad8ed7c1bed73d741525081d47facf6fefa607cc71ee2a621a1c242"
+  },
+  "scope": "Posthoc localization promptedbyJA20 nativeHF tailgatefailure. SeparateHF diagnosticclone mergedbyoriginalPEFT semantics; compareall398weights toactualserverreceivedtensors andscoreall256 savedservice-chosen tokenstates. No newgeneration, no originalgatechange, no checkpoint/data/core modification. A closermergedHFmatch supports mergerounding/native-vsmerged implementation aslocal source, not a quantifiedcause of downstreamdecline or fulltrajectoryequivalence."
+}

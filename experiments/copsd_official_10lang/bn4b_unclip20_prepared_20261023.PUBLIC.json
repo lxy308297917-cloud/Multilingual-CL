@@ -1,0 +1,47 @@
+{
+  "prepared_at": "2026-10-23T08:53:10.158149",
+  "all6_CPU_loss_and_student_gradient_checks_passed": true,
+  "cases": [
+    {
+      "dtype": "torch.float64",
+      "partial_mask": false,
+      "loss_abs_difference": 1.1102230246251565e-16,
+      "gradient_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.float64",
+      "partial_mask": true,
+      "loss_abs_difference": 1.1102230246251565e-16,
+      "gradient_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.float32",
+      "partial_mask": false,
+      "loss_abs_difference": 0.0,
+      "gradient_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.float32",
+      "partial_mask": true,
+      "loss_abs_difference": 1.7881393432617188e-07,
+      "gradient_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "partial_mask": false,
+      "loss_abs_difference": 0.0,
+      "gradient_max_abs_difference": 0.0
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "partial_mask": true,
+      "loss_abs_difference": 0.0,
+      "gradient_max_abs_difference": 0.0
+    }
+  ],
+  "official_flag0_maps_to_None_verified": true,
+  "training_source_sha256": "134e09adfa449fde36c3daf8bf08646073fdce414fab84418ab0325b5f1dbf3d",
+  "fixed_loss_source_sha256": "61ac661d2bbea66988d1b7adc671bcd35c210f7aeb7e43a27e6e2f8872b7ffa6",
+  "frozen_config_sha256": "44835b96cb7970c057492a1d251471175781568bde78095493b6ec7c83a15155",
+  "scope": "CPU preparation only for one-factor4B BN unclipped intervention; unchanged mask reduction matches original unclipped loss on these fixtures. NoCUDAfull-length memory claim, no newGPUjob, no methodefficacy. Full CPU model/data/source preflight separately passed. Older clipped runs remainimmutable."
+}

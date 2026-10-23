@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-23T09:09:48.736201",
+  "status": "waiting_for_existing_training",
+  "manually_started_one_shot": true,
+  "evaluation_start_calls_so_far": 0,
+  "training_queue": "copsd-bn4b-unclip20-v1",
+  "evaluation_queue": "copsd-bn4b-unclip20-eval-v1",
+  "source_sha256": "95b1f7f4451b7eee4406ab816dc8ba1a2539a2a776e13e87d772dac0d6d1457a",
+  "account_GPU_limit": 4,
+  "GPU_roles_training": 2,
+  "GPU_roles_evaluation": 1,
+  "boot_startup": false,
+  "failure_auto_retry": false,
+  "scope": "One-shot completion/release/evaluation chain manually started. Existing training queue must complete successfully before fixedcheckpoint20 release and exactlyone evaluationstart. Presentstate iswaiting, not training/evaluation completion ormethod effect. Observation errors preserve actualjobs andoutputs."
+}

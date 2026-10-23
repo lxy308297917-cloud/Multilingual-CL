@@ -1,0 +1,329 @@
+{
+  "authorized_at": "2026-10-23",
+  "authorization": "User explicitly approved experimental source and complete configurations, excluding credentials and private data.",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "files": [
+    {
+      "path": "experiments/copsd_official_10lang/actual_server_mergedHF4b_completed_20261023.PUBLIC.json",
+      "bytes": 1248,
+      "sha256": "f721c736c3f846e7604af9acddde5af4df73087ed9cdcda363e4b1a37ff22b02",
+      "git_blob_sha": "e98cd3bf3106dc0cb37f98c683426a61a2311098"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/actual_server_mergedHF4b_frozen_20261023.PUBLIC.json",
+      "bytes": 1262,
+      "sha256": "8348c313d417bf091bfb475babde42c8b5887901d4252b575dec4d83af340432",
+      "git_blob_sha": "42f48f697a5aa94b26d1ff150a03d0d32adfe51c"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/actual_server_student4b_completed_20261023.PUBLIC.json",
+      "bytes": 2196,
+      "sha256": "72c233382431b2b44905df5e31433074c9d752269062734c92c5e9231e45de82",
+      "git_blob_sha": "0596bd81a177681b495c442475b0e5c962332d47"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/actual_server_student4b_frozen_20261023.PUBLIC.json",
+      "bytes": 6237,
+      "sha256": "4e8072292514b9e0e6a4fd5bd9797a02412095f2fd1bb41c99a99b34afa70da3",
+      "git_blob_sha": "e63a92005d1302eed4b130670d3e24dee32fcbfc"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/actual_server_student4b_job.py",
+      "bytes": 5701,
+      "sha256": "3019c3b1db4b8577d04b868f52e76c5657370848b71469fa2c0174c9f025dbd4",
+      "git_blob_sha": "d1ba59f364f167a636e5cf08435debc6b6d67cad"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/benchmark_direct_single_gpu_server4b.py",
+      "bytes": 8425,
+      "sha256": "3b75cc11284fc0b40d204ec10b464837df61793f379829095357e11e660b5ff6",
+      "git_blob_sha": "c6cdf3458842d21977da2abbad9b52c4530e770c"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/benchmark_seeded_server4b.py",
+      "bytes": 7253,
+      "sha256": "cebbfdb4adcf80476368e695d2a643d1833796e26c5dc5ff097cdba15f56d71b",
+      "git_blob_sha": "1ea10071c6fe8a17a41d0f2ad3d35d40e4f41687"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_eval_frozen_20261023.PUBLIC.json",
+      "bytes": 19391,
+      "sha256": "f30486cdfb90a1db5f60973c081b3c50407ba0876e3839818f0e8ff9fdf4254e",
+      "git_blob_sha": "86d363afbcbc41523266d5040c021df53b1f7b56"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_server20_entry.py",
+      "bytes": 12897,
+      "sha256": "60edcf4b4de2aa1e1e39fae66366b1835dae6e1608443a480b5991ac301689b3",
+      "git_blob_sha": "1a06f47b4ed2cb82d7c471c7aa6a79d87cb17f65"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_server20_frozen_20261023.PUBLIC.json",
+      "bytes": 8250,
+      "sha256": "e850a992a54a8881508344dfcf59aba7b6c4a027f97e67c3f2b5c95a8ecdeeb7",
+      "git_blob_sha": "c7354251fbb9e59d2b56d850dfa2ef6a88f4d9eb"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_server20_job.py",
+      "bytes": 5579,
+      "sha256": "7089311775a3839dab25afaac80175225b291ee4030ec8368018934621f0c6e3",
+      "git_blob_sha": "9834d341f237258f5038d8adfca40fa09a85d51c"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_entry.py",
+      "bytes": 13644,
+      "sha256": "a7159525822a20998325e754fe480f887883a548d4d9c293dd6b68fd166b72ff",
+      "git_blob_sha": "81a588dc1ba9aa98466e0a9a4562f62a5ce692ef"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_eval_frozen_20261023.PUBLIC.json",
+      "bytes": 19371,
+      "sha256": "ad62a88ab8dd2f288786b7d5acb282d56923854193af210b4a717c31c28bf526",
+      "git_blob_sha": "db52b38e7786ca6201d80ce5a17811bf2de4e7e0"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_eval_initial_preparation_20261023.PUBLIC.json",
+      "bytes": 19371,
+      "sha256": "31ceb6953a8e895124b6f6c287f2084a6031d97dceb2a2bc018e413564d64189",
+      "git_blob_sha": "f64357fb4c76c745682a0716e1f2a5d8d3bcbb27"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_eval_prepared_20261023.PUBLIC.json",
+      "bytes": 804,
+      "sha256": "47dfb53d5270bb7837b113548a1d96d01eaa819b704e52ef22ca751e3d4db74a",
+      "git_blob_sha": "c2acecad3ad4a94063714f0866be8006a0da6b2f"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_frozen_20261023.PUBLIC.json",
+      "bytes": 9921,
+      "sha256": "464bc59750350a957b3a22482eb30f77639e218517a426b2407a503b30df2187",
+      "git_blob_sha": "3c9531e1be971ea4069223304c54db61703de1f9"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_initial_preparation_20261023.PUBLIC.json",
+      "bytes": 9137,
+      "sha256": "44835b96cb7970c057492a1d251471175781568bde78095493b6ec7c83a15155",
+      "git_blob_sha": "05d6888c597ad40cb588976816de11d6b0763888"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_job.py",
+      "bytes": 5579,
+      "sha256": "8d5a74155b28467346e6dd717aee757808084eb7fb8f9a63cab84f6053020467",
+      "git_blob_sha": "db3e32e732ca4b0ec829b3b7bf1a71a461f5ed5c"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_prepared_20261023.PUBLIC.json",
+      "bytes": 1725,
+      "sha256": "db10bc9b0dff1412fa0804d5e168be80721e0a5c2c0fbb491a5286afb70a7b0e",
+      "git_blob_sha": "fa28705831e66e42614553a5101e41e02a8397e3"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_series.py",
+      "bytes": 8584,
+      "sha256": "95b1f7f4451b7eee4406ab816dc8ba1a2539a2a776e13e87d772dac0d6d1457a",
+      "git_blob_sha": "aeba64bd76600996918424a84f5944958939a99f"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_series_started_20261023.PUBLIC.json",
+      "bytes": 814,
+      "sha256": "6c51ada2db29c7ffbf4de444e4e720d47edab678444b3f5cb077a3a2c3307b39",
+      "git_blob_sha": "b31e7dacdb86386d2c80fc0f15eafe60eeafd3f8"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/bn4b_unclip20_training_completed_20261023.PUBLIC.json",
+      "bytes": 587,
+      "sha256": "fb802c01ee798178b31a9df6c514e22ef0a4c188e0bffa644bfb67a038459a51",
+      "git_blob_sha": "769a3471fa116430fad0c2ddd211a8e69636dcaa"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/canonical_merged_bn4b_eval_frozen_20261023.PUBLIC.json",
+      "bytes": 19710,
+      "sha256": "adfc159a7f958ddc57417bd69b91dcdf6fce8e6180f7a63bcaf055635c58c516",
+      "git_blob_sha": "5f8b28c89c94ce6e6d3a7591b8163ce6174b36e0"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/canonical_merged_bn4b_eval_job.py",
+      "bytes": 6215,
+      "sha256": "8592b276dbe0ae373f3ed447c593deea3b32a085adb6a0224d457f1bef6d91d0",
+      "git_blob_sha": "c95ffabceabcf89623ee4a3ed42b684da8f14de4"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/check_actual_server_merged_hf_4b.py",
+      "bytes": 5721,
+      "sha256": "092100cdc21e132cecd8aa25c6e5c90c50034db22b7866c8ba1d3e7b55b597c2",
+      "git_blob_sha": "2255aa5138f621358bf6e5b7bb6d576955bf5b5c"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/check_actual_server_student_4b.py",
+      "bytes": 8955,
+      "sha256": "890ad147e1245cd8f91aea1d47b4fda65c7e0f04d1c8814a7c365f17c64694e1",
+      "git_blob_sha": "75c5a5a7c54ecc43a9b1f036dd578b8c8e93677b"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/collect_bn4b_followup200.py",
+      "bytes": 11927,
+      "sha256": "d4da134ac95a724752aa384eefc804564478b2cace48fb6413a7afea56a42446",
+      "git_blob_sha": "e8af47515197ab9156424e78c33c05164149c679"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/collect_bn4b_unclip20.py",
+      "bytes": 10041,
+      "sha256": "0d63e39ab47443d83bb24a202bade7595d56d46d6f6f6f4f24c2a7ad07d621b5",
+      "git_blob_sha": "9a0c001e57a173a8229c5d9c017892bd80201ede"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/collect_canonical_merged_bn4b.py",
+      "bytes": 11091,
+      "sha256": "562d70b4ee154cfc6d3e3f8c2a60124c76cd272f2de4e793331f27dbe1ba8d4c",
+      "git_blob_sha": "d2d24c76bafdce384527ec63d7545ff8e9cedff0"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/direct_single_gpu_server4b_frozen_20261023.PUBLIC.json",
+      "bytes": 4522,
+      "sha256": "17cc835c824973a182569df884015282daafd512de5063124846105818bd8670",
+      "git_blob_sha": "776c115cf7ec10ea4bf52db7c64572766e74f490"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/direct_single_gpu_server4b_job.py",
+      "bytes": 5760,
+      "sha256": "3b94f6ff946928ce0a7ada753aef1c991f304189ebc34ce443450cc97e30cfd0",
+      "git_blob_sha": "ca2c6e00512546a04c578a74ba25981d05cfcc16"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/evaluate_bn4b_followup200.py",
+      "bytes": 8337,
+      "sha256": "55f77fc594e4a7d5e8718b03bbe87df80d87c45be139d7891107cbb56eaa06e3",
+      "git_blob_sha": "db6354548c8ea3532b899a8db9b81b8d9be67b94"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/evaluate_bn4b_unclip20_followup200.py",
+      "bytes": 8466,
+      "sha256": "43e288d740689807c0b463ecd2a0566d2072a1e5c143d08f72d28e6afb76dccb",
+      "git_blob_sha": "4788dfb55a8f1773ebda7436e97cc621f055a194"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/evaluate_canonical_merged_bn4b.py",
+      "bytes": 10874,
+      "sha256": "6e3b02cfb965a6272977581c4b98b9232be61997727c80b3b4ad765d9cd2c406",
+      "git_blob_sha": "771acbd40dd58c9185a726065b890deb738b4083"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/prepare_sequential_3pool_interface.py",
+      "bytes": 3886,
+      "sha256": "f56f11cd9016c011dc5cd13f8324f9f32a109704c3753f1b250dfc7f33d9b2a7",
+      "git_blob_sha": "9a02f9d5f5836a97e4741267d9a4ffe335202d58"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/release_bn4b_checkpoint20.py",
+      "bytes": 3010,
+      "sha256": "7ff926ae09973bc6659efdebd502858e03b6bc9afde525e4168006d8f9884405",
+      "git_blob_sha": "cf3852f21a65e727f0ba8149728d32f49802762f"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/release_bn4b_unclip20_checkpoint20.py",
+      "bytes": 3439,
+      "sha256": "a7d7f3ff501f6229c486932b5582a26dc26265b4b4089d548ae4c8f2d42ccbb0",
+      "git_blob_sha": "9bd3ab2ba6dce5b0afdcc35f89517018b996e21a"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_actual_server_merged_hf4b.sh",
+      "bytes": 747,
+      "sha256": "c2332f11104e24cd3f7cc01939a58db287e8edc48b476289f3380cd47f7870f7",
+      "git_blob_sha": "1219143f19bf54abb54fa85f242684ac00ce6f8c"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_actual_server_student4b.sh",
+      "bytes": 982,
+      "sha256": "e092afa673dd6c824373f15a4026650330beee44d33f6869f4a17de5a2def402",
+      "git_blob_sha": "b50a7497622d56435c72646d23308e0284c1d607"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_bn4b_followup200.sh",
+      "bytes": 1122,
+      "sha256": "6e142975ebf0fb02f9927aaf2f2ca42c4fbe71e9af8c73ed14ac1bdfd82e46fe",
+      "git_blob_sha": "fd36a30e45ecbe57af5260231fb1b73e9ca3ca8b"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_bn4b_server20.sh",
+      "bytes": 951,
+      "sha256": "b0376c411745b95661dcafd925d90c2e5062728ef0b5300d162f47c9f42993eb",
+      "git_blob_sha": "4953e3268dd081b4e493b9c259a8303aaf29bda5"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_bn4b_unclip20.sh",
+      "bytes": 958,
+      "sha256": "da950b84ed020fa421bc9dd1cb8fccc98e4b7dc3fbbc5965349579bc207eaab6",
+      "git_blob_sha": "bd484aa71def5a2756d308a6f5e3ae629ffb3601"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_bn4b_unclip20_followup200.sh",
+      "bytes": 1131,
+      "sha256": "36a0163841ed467a5d39d31fc3134ca86576fd3d4c957c463cf2b72e477433d1",
+      "git_blob_sha": "de0cda89d908899a23913cd3c0aaa7f760b3ea0a"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_canonical_merged_bn4b_eval.sh",
+      "bytes": 810,
+      "sha256": "4ae8f5a0ca7b81cc6b02bfe891e07d6acf9173cf13eaa1af4040dc5c2458eb89",
+      "git_blob_sha": "c559e55bb3e375a123c6ccc77c8eadcfe9938998"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_direct_single_gpu_server4b.sh",
+      "bytes": 747,
+      "sha256": "4d94200768690136eaa87a100da79ea69cfd8f993447fc7a2472a7c9bba7d3af",
+      "git_blob_sha": "1c3238beea684f8672e1921af8d7c89e6aa71f34"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_seeded_server4b_benchmark.sh",
+      "bytes": 986,
+      "sha256": "941a99583e76a241a1388ce524d3153a99395cdb8eadf67982745b32cf9db746",
+      "git_blob_sha": "01d88db424153a46a42e62ba416cf84bda242fbb"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_trl_eval_direct_server32.py",
+      "bytes": 403,
+      "sha256": "4ba5e72a05de658248bfc3ea5a8dda0e7b76da7dda469a2c58427bd3ba3cd507",
+      "git_blob_sha": "9ee9d38651ff9acbd4964f95c4defe8c6063533f"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/run_trl_eval_seeded_server32.py",
+      "bytes": 395,
+      "sha256": "d339b18f76a8454d6287b1f17a38a36e57f992d1c8605469d246bc8208485cf1",
+      "git_blob_sha": "5ddf3e2193097bda6bb03add33b34d03892f0044"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/seeded_server4b_benchmark_frozen_20261023.PUBLIC.json",
+      "bytes": 4183,
+      "sha256": "ee07802ceacafd48a1062309fa5c26346bfa25b2053aec6f7d5e6b7adba5ca29",
+      "git_blob_sha": "97198d4cb486853f503565b5d369a014653626d2"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/seeded_server4b_benchmark_job.py",
+      "bytes": 5777,
+      "sha256": "81f937482130428839c9f759ed4307d756a786d5cd31609c73dece770468c4d8",
+      "git_blob_sha": "103dc2334c5cc708381d991bdacbaec2f16012ba"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/trl_server_eval_direct_lora_worker32.py",
+      "bytes": 7398,
+      "sha256": "9829a423baf99fece01020d3146b0f173a8305f2187d398ea9327af53eb65213",
+      "git_blob_sha": "b9226a9043cf6d19d09e21fda2fb255a7e6ac624"
+    },
+    {
+      "path": "experiments/copsd_official_10lang/trl_server_eval_seeded_worker32.py",
+      "bytes": 2916,
+      "sha256": "dfec26717a850c97fb33b163b8675baba56c20ded80bd159fc16dd07d15bd0dc",
+      "git_blob_sha": "e10e46a803618df401c85489a390665006a69403"
+    }
+  ],
+  "existing_matching_runtime_dependencies": 64,
+  "credential_pattern_findings": [],
+  "private_payload_field_findings": [],
+  "excluded": [
+    "PRIVATE manifests and receipts",
+    "raw datasets/questions/studentoutputs",
+    "weights/checkpoints",
+    "mail credentials and environment secret files"
+  ],
+  "scope": "Publication of actual executed source and frozen scientific configurations. Local PRIVATE identity/queue bindings and raw data/outputs/weights remain excluded; no running source changed."
+}

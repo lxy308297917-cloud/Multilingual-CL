@@ -1,0 +1,63 @@
+{
+  "frozen_at": "2026-10-23T08:02:46.104975",
+  "run_id": "direct_single_gpu_server4b_SW20_fixed64_20261023_v1",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "adapter_sha256": "0d673e7df9b3f04f67fd5514be96f0039e0ede03e66eed3ef119a5cb7cc4f28b",
+  "model_lock_relative": "logs/copsd_official_10lang/qwen3_4b_resource_model_20261022.PRIVATE.json",
+  "model_lock_sha256": "da93cc99e733b95250ab5934e66413d3926580d20a2a43c8f8d2acf35a78cb7a",
+  "output_relative": "logs/copsd_official_10lang/direct_single_gpu_server4b_SW20_fixed64_20261023_v1",
+  "native32_done_relative": "logs/copsd_official_10lang/benchmark_native4b_16_32_20261022_v1/concurrency32/DONE.json",
+  "native32_done_sha256": "31eb832c39047e890ae1362dfc1c644d93f85bbcbc9876c60a89616158a9cc54",
+  "native32_items_relative": "logs/copsd_official_10lang/benchmark_native4b_16_32_20261022_v1/concurrency32/ITEMS.jsonl",
+  "native32_items_sha256": "e1a2538b415196c70cf8d5f31422f022bbeb7c3d7acae80ab33d47f82a85448c",
+  "installed_source_sha256": {
+    "envs/copsd-vllm011-20261018/lib/python3.10/site-packages/trl/scripts/vllm_serve.py": "5ca7913edee122bb67212c0047580c1934ea1f033f832f4fd9893d2e4eeb6a06",
+    "envs/copsd-vllm011-20261018/lib/python3.10/site-packages/trl/extras/vllm_client.py": "8fc6aa0e056b78150d18170b3e8c6f04595f5aebbb9ca28e288b8e4599016577"
+  },
+  "items": 64,
+  "languages": {
+    "sw": 32,
+    "en": 32
+  },
+  "samples": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 32,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "question_seed": 42,
+  "server_gpu_memory_utilization": 0.85,
+  "server_max_model_len": 40960,
+  "server_enforce_eager": false,
+  "export_role_GPUs": 0,
+  "server_role_GPUs": 1,
+  "max_account_GPUs": 4,
+  "eligibility_for_future_paired_protocol_pilot": {
+    "generation_wall_reference_ratio_max": 0.8,
+    "tokens_per_second_reference_ratio_min": 1.1,
+    "minimum_sampled_server_free_MiB": 1024,
+    "seed_and_weight_receipts_must_pass": true
+  },
+  "scope": "Onefixed64 full8192 engineeringtrial ofsingleGPU canonicalLoRA initialization. All398BF16weights mustbitwisematch previouscanonicalGPUexport beforeoriginalvLLMloaderreturns;252deltas computedonservingGPU, no HFmodel/CPUteacher forward ormergedcheckpointwrite. Sameprompts,perquestionseeds,graph32/.85/40960 asprevious2GPUdensecase. Compareall64 tokenoutputs butdo notassume bitwisegeneration ornativeLoRAqualityequivalence. ExistingBNnative16 evaluation remainsunchanged; no newtraining orautomaticprotocolreplacement.",
+  "code_sha256": {
+    "trl_server_eval_direct_lora_worker32.py": "9829a423baf99fece01020d3146b0f173a8305f2187d398ea9327af53eb65213",
+    "run_trl_eval_direct_server32.py": "4ba5e72a05de658248bfc3ea5a8dda0e7b76da7dda469a2c58427bd3ba3cd507",
+    "benchmark_direct_single_gpu_server4b.py": "3b75cc11284fc0b40d204ec10b464837df61793f379829095357e11e660b5ff6",
+    "direct_single_gpu_server4b_job.py": "3b94f6ff946928ce0a7ada753aef1c991f304189ebc34ce443450cc97e30cfd0",
+    "run_direct_single_gpu_server4b.sh": "4d94200768690136eaa87a100da79ea69cfd8f993447fc7a2472a7c9bba7d3af",
+    "trl_server_eval_seeded_worker32.py": "dfec26717a850c97fb33b163b8675baba56c20ded80bd159fc16dd07d15bd0dc",
+    "trl_server_worker32.py": "8091b51b206ce343c12a11d262dc9c295c1c8a3f8b2bc051af0eb5926386dfeb",
+    "trl_server_audited_worker.py": "1e4b8e5f08dc35248b3413cc6f5f8b1ec5c6106c42665590ee474d3f58b5c83e",
+    "benchmark_eval_concurrency4b.py": "e8b12def8fedc8947bf2a8e128b41fcfca41efcfb0dc1394ada9b76c64dc5b0e",
+    "benchmark_eval_concurrency8192.py": "2b97abc43ad8ed7c1bed73d741525081d47facf6fefa607cc71ee2a621a1c242",
+    "eval_concurrency4b_frozen_20261022.PUBLIC.json": "16b2c9a493185a96c21e86568428ec18a8c1fb8288b01613a545b4d169bca3b7",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d"
+  },
+  "canonical_reference_relative": "logs/copsd_official_10lang/seeded_server4b_SW20_fixed64_8192_20261023_v1.remote_weights.PRIVATE.jsonl",
+  "two_gpu_items_relative": "logs/copsd_official_10lang/seeded_server4b_SW20_fixed64_8192_20261023_v1/ITEMS.jsonl",
+  "CPU_controller_only": true,
+  "canonical_reference_sha256": "afd8a0e5efa94b356303c92fe91540915abc2c8867b3876c87411e20c9c5df95",
+  "two_gpu_items_sha256": "92ef49d77891d2e03fa4bd9fd47262af558bdd625b6720462898e89f2bb71e9d"
+}

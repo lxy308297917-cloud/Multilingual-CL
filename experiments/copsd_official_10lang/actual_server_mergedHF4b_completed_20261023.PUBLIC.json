@@ -1,0 +1,20 @@
+{
+  "posthoc_localization": true,
+  "saved_positions": 256,
+  "new_generated_tokens": 0,
+  "merged_HF_weight_parameters": 398,
+  "parameters_exactly_match_JA20_received_tensors": true,
+  "weight_mismatch_names": [],
+  "server_vs_merged_HF_top1_agree": 254,
+  "server_vs_merged_HF_top1_agreement": 0.9921875,
+  "server_vs_merged_HF_logprob_MAE": 0.013187633818138256,
+  "server_vs_merged_HF_logprob_p99_abs_error": 0.07814145088195801,
+  "same_original_numeric_gate_passed": true,
+  "original_native_HF_gate_passed": false,
+  "original_native_HF_logprob_MAE": 0.06367926897613418,
+  "original_native_HF_logprob_p99_abs_error": 0.32653164863586426,
+  "seconds": 34.80428971722722,
+  "scope": "Posthoc localization promptedbyJA20 nativeHF tailgatefailure. SeparateHF diagnosticclone mergedbyoriginalPEFT semantics; compareall398weights toactualserverreceivedtensors andscoreall256 savedservice-chosen tokenstates. No newgeneration, no originalgatechange, no checkpoint/data/core modification. A closermergedHFmatch supports mergerounding/native-vsmerged implementation aslocal source, not a quantifiedcause of downstreamdecline or fulltrajectoryequivalence.",
+  "accepted_at": "2026-10-23T07:15:19.923368",
+  "parent_GPU_hours": 0.02361111111111111
+}

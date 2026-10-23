@@ -1,0 +1,14 @@
+{
+  "prepared_at": "2026-10-23T08:56:34.431767",
+  "evaluation_freeze_sha256": "31ceb6953a8e895124b6f6c287f2084a6031d97dceb2a2bc018e413564d64189",
+  "release_source_sha256": "a7d7f3ff501f6229c486932b5582a26dc26265b4b4089d548ae4c8f2d42ccbb0",
+  "all_runtime_hashes_bound": true,
+  "cached_Base_BN_and_English_identity_and_sampling_verified": true,
+  "new_inference_launched": false,
+  "remaining_before_real_inference": [
+    "Complete andaccept independentunclippedcheckpoint20 parent",
+    "Release validates optimizer/schedulerstep20,RNG andsame640inputexposureorder",
+    "ActualadapterSHAandfullGPUowner/resource preflight at launch"
+  ],
+  "scope": "CPU preparation of future native16 paired BN/EN evaluation only. Current threeGPUevaluations unchanged; no method result or training-start claim."
+}

@@ -1,0 +1,13 @@
+{
+  "completed_at": "2026-10-23T10:59:34.023029",
+  "protocol": "project_BN4B_component_clip_one_factor20_seed42_v1",
+  "global_step": 20,
+  "exposures": 640,
+  "training_valid_response_loss_tokens": 1297459,
+  "training_generated_tokens": 1297459,
+  "training_parent_GPU_hours": 3.006111111111111,
+  "adapter_sha256": "d693f1fd4266003c9875a5d41d0746f0d070ef6e571963a87e137bd4311903e0",
+  "Base_unchanged_bitwise": true,
+  "matched640inputexposureorder": true,
+  "scope": "Unclipped intervention training completion only; no downstream efficacy or officialdefault reproduction claim."
+}

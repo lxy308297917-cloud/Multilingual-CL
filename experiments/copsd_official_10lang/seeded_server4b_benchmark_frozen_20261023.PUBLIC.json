@@ -1,0 +1,59 @@
+{
+  "frozen_at": "2026-10-23T07:27:20.786290",
+  "run_id": "seeded_server4b_SW20_fixed64_8192_20261023_v1",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "adapter_sha256": "0d673e7df9b3f04f67fd5514be96f0039e0ede03e66eed3ef119a5cb7cc4f28b",
+  "model_lock_relative": "logs/copsd_official_10lang/qwen3_4b_resource_model_20261022.PRIVATE.json",
+  "model_lock_sha256": "da93cc99e733b95250ab5934e66413d3926580d20a2a43c8f8d2acf35a78cb7a",
+  "output_relative": "logs/copsd_official_10lang/seeded_server4b_SW20_fixed64_8192_20261023_v1",
+  "native32_done_relative": "logs/copsd_official_10lang/benchmark_native4b_16_32_20261022_v1/concurrency32/DONE.json",
+  "native32_done_sha256": "31eb832c39047e890ae1362dfc1c644d93f85bbcbc9876c60a89616158a9cc54",
+  "native32_items_relative": "logs/copsd_official_10lang/benchmark_native4b_16_32_20261022_v1/concurrency32/ITEMS.jsonl",
+  "native32_items_sha256": "e1a2538b415196c70cf8d5f31422f022bbeb7c3d7acae80ab33d47f82a85448c",
+  "installed_source_sha256": {
+    "envs/copsd-vllm011-20261018/lib/python3.10/site-packages/trl/scripts/vllm_serve.py": "5ca7913edee122bb67212c0047580c1934ea1f033f832f4fd9893d2e4eeb6a06",
+    "envs/copsd-vllm011-20261018/lib/python3.10/site-packages/trl/extras/vllm_client.py": "8fc6aa0e056b78150d18170b3e8c6f04595f5aebbb9ca28e288b8e4599016577"
+  },
+  "items": 64,
+  "languages": {
+    "sw": 32,
+    "en": 32
+  },
+  "samples": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 32,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "question_seed": 42,
+  "server_gpu_memory_utilization": 0.85,
+  "server_max_model_len": 40960,
+  "server_enforce_eager": false,
+  "export_role_GPUs": 1,
+  "server_role_GPUs": 1,
+  "max_account_GPUs": 4,
+  "eligibility_for_future_paired_protocol_pilot": {
+    "generation_wall_reference_ratio_max": 0.8,
+    "tokens_per_second_reference_ratio_min": 1.1,
+    "minimum_sampled_server_free_MiB": 1024,
+    "seed_and_weight_receipts_must_pass": true
+  },
+  "scope": "Onefixed64 full8192 engineeringtrial, SW20 same4Bcheckpoint andsameprompts/perquestionseeds aspriornative32. No fullmodelcheckpointexport; only398tensors streamed tooriginalserverloader. Server usesdensemergedweights,CUDAgraphs and.85memory; historicalnative32 usednativeLoRA/eager/.9memory. DifferentGPU/time/background andgenerationlength mayvary; not controlledisolation ofeachfactor or qualityequivalence. CountbothallocatedGPUs includingexportrole idleperiod. CurrentBNnative16assessment remainsunchanged. No automaticprotocolreplacement, benchmarkgrid or newtraining.",
+  "code_sha256": {
+    "benchmark_seeded_server4b.py": "cebbfdb4adcf80476368e695d2a643d1833796e26c5dc5ff097cdba15f56d71b",
+    "seeded_server4b_benchmark_job.py": "81f937482130428839c9f759ed4307d756a786d5cd31609c73dece770468c4d8",
+    "run_seeded_server4b_benchmark.sh": "941a99583e76a241a1388ce524d3153a99395cdb8eadf67982745b32cf9db746",
+    "trl_server_eval_seeded_worker32.py": "dfec26717a850c97fb33b163b8675baba56c20ded80bd159fc16dd07d15bd0dc",
+    "run_trl_eval_seeded_server32.py": "d339b18f76a8454d6287b1f17a38a36e57f992d1c8605469d246bc8208485cf1",
+    "trl_server_worker32.py": "8091b51b206ce343c12a11d262dc9c295c1c8a3f8b2bc051af0eb5926386dfeb",
+    "trl_server_audited_worker.py": "1e4b8e5f08dc35248b3413cc6f5f8b1ec5c6106c42665590ee474d3f58b5c83e",
+    "benchmark_eval_concurrency4b.py": "e8b12def8fedc8947bf2a8e128b41fcfca41efcfb0dc1394ada9b76c64dc5b0e",
+    "benchmark_eval_concurrency8192.py": "2b97abc43ad8ed7c1bed73d741525081d47facf6fefa607cc71ee2a621a1c242",
+    "eval_concurrency4b_frozen_20261022.PUBLIC.json": "16b2c9a493185a96c21e86568428ec18a8c1fb8288b01613a545b4d169bca3b7",
+    "lora_sync_weights.py": "8cd757a82a6e83a4e79b1e65555f1fc1b7a85ea6a06a0ae8506c365724d9f724",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d",
+    "sw4b_server_resource_v2_completed_20261022.PUBLIC.json": "b22adc8e8fecff5e7d606acd8b14445895ebb7ec7f626849dd9704d70d053ef7"
+  }
+}

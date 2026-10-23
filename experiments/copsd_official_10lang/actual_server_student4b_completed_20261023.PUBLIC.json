@@ -1,0 +1,42 @@
+{
+  "accepted_at": "2026-10-23T07:12:56.371409",
+  "diagnostic_completed": true,
+  "all_numeric_gates_passed": false,
+  "conditions": {
+    "Base_initial": {
+      "positions": 256,
+      "HF_top1_agree": 253,
+      "HF_top1_agreement": 0.98828125,
+      "matching_HF_logprob_MAE": 0.01236889062845356,
+      "other_HF_logprob_MAE": 0.25310830280134045,
+      "matching_HF_logprob_p99_abs_error": 0.09893560409545898,
+      "within_declared_numeric_gate": true
+    },
+    "JA20": {
+      "positions": 256,
+      "HF_top1_agree": 252,
+      "HF_top1_agreement": 0.984375,
+      "matching_HF_logprob_MAE": 0.06367926897613418,
+      "other_HF_logprob_MAE": 0.16086183333272003,
+      "matching_HF_logprob_p99_abs_error": 0.32653164863586426,
+      "within_declared_numeric_gate": false
+    },
+    "Base_restored": {
+      "positions": 256,
+      "HF_top1_agree": 253,
+      "HF_top1_agreement": 0.98828125,
+      "matching_HF_logprob_MAE": 0.01236889062845356,
+      "other_HF_logprob_MAE": 0.25310830280134045,
+      "matching_HF_logprob_p99_abs_error": 0.09893560409545898,
+      "within_declared_numeric_gate": true
+    }
+  },
+  "Base_restored_exact_prompt_completions": 32,
+  "Base_restore_max_logprob_difference": 0.0,
+  "JA_adapter_changed_greedy_prompt_completions": 10,
+  "base_HF_unchanged_bitwise": true,
+  "parent_GPU_hours": 0.19777777777777777,
+  "generated_tokens": 768,
+  "scope": "ActualdedicatedTRL/vLLMserver Baseinitial -> receivedJA20mergedweights -> restoredBase, plusHFnativeLoRA/base teacherforcing onserverchosen8tokenprefixes. Fixedfirst16JA+16English additionaldevelopmentprompts, greedy8/ignoreEOS diagnostic only. Not complete2048trajectory equivalence, rawtraininggradientcorrectness, benchmarkaccuracy, math efficacy or protocolreplacement. FrozenBNassessment unchanged. No training/newcheckpoints or CPUteacher.",
+  "interpretation": "Actualservice responds totrainedadapter andrestoresBaseexactly onthesefixed32greedy8prefixes; stalestudentcopy not supported inthisprobe. JA20 nativeHF p99error.3265exceeds predeclared.3gate, so do not claimcompletepass or wholetrajectoryequivalence. Sameweight mergedHFposthoclocalization is separate, originalfailure retained."
+}

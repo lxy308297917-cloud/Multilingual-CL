@@ -1,0 +1,88 @@
+{
+  "frozen_at": "2026-10-23T07:00:48.180288",
+  "run_id": "actual_server_student4b_JA20_prefix32_20261023_v1",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "model_lock_relative": "logs/copsd_official_10lang/qwen3_4b_resource_model_20261022.PRIVATE.json",
+  "model_lock_sha256": "da93cc99e733b95250ab5934e66413d3926580d20a2a43c8f8d2acf35a78cb7a",
+  "installed_source_sha256": {
+    "envs/copsd-vllm011-20261018/lib/python3.10/site-packages/trl/scripts/vllm_serve.py": "5ca7913edee122bb67212c0047580c1934ea1f033f832f4fd9893d2e4eeb6a06",
+    "envs/copsd-vllm011-20261018/lib/python3.10/site-packages/trl/extras/vllm_client.py": "8fc6aa0e056b78150d18170b3e8c6f04595f5aebbb9ca28e288b8e4599016577"
+  },
+  "adapter_relative": "models/checkpoint/copsd_ja4b_server_single20_alloc_v2/ja_4b_server_single20_safe2700_horizon100_seed42_alloc_v2_20261023/checkpoint-20",
+  "adapter_sha256": "5e6658ed7d4a219c213d842f3549cabd6d4fbba2a7d96c036d97ff5dc40364b4",
+  "output_relative": "logs/copsd_official_10lang/actual_server_student4b_JA20_prefix32_20261023_v1",
+  "official_evaluation_source_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+  "inputs": {
+    "ja": {
+      "relative": "data/copsd_official_20261015/followup_dev200_20261021_v1/project_followup_200_ja.json",
+      "sha256": "6ddb04b6f08002a825f9d10f4f312c05279d4bf23c778c6627ffac7c900a5d3a",
+      "selected_IDs": [
+        "e3c5771d640ff6435c69deee5b0175ef2eef9c8e496beae665117064f05d603d",
+        "6b7feb3892ff038b13dfb422727c854d865205798c085435fbba06e6a06e7b5c",
+        "fd40ba32f1604e63a9f24f26c3ff243a0a32f7fb46880cb5ff7d146b5785980b",
+        "9ccb17b38bdc390399948ddb341bb3ed2601f35288afbcf032fafd613aae4743",
+        "7413dedcb9114f8b63526336c9a2962fc3a6c202e53fc9310752ad6c516fb907",
+        "8f9ad9c8af60916259eecec3df2f09ece66009410435ddfee558da52f65d9d89",
+        "b65e811f54f6041cb72836b853e31a723ee60f07cbfd91b7d2a4b5db1b23da0d",
+        "b1ad5c34092727006c383447394cc454b044f4e0127f8162fa29328e2eabc795",
+        "3b382986a99c04a8afc22f2fd0570858c7d67221a7a30f622956000ae227b398",
+        "0b7f63f297f2cf3b7169344692265141fc50c83d38ff8ec3b2b2de288d7a38fd",
+        "49591bf96109899300b4fec771e4c205828304ce534c85b725dddaf103204009",
+        "12b07efab13df7e529f4bf05fab3b3f8ef752b8bf8702e6eed2825de8de09228",
+        "ee7a01f8752c21868c027f7b57bf55a4846a74ce397159061ac6ad0e312c8cf7",
+        "161ff3e9e541cb527e7769a27de0f0ead0e62ef8dca20d698733f1b83f26f565",
+        "b4a3555e73eb94dfb870d4bb99c66e5a5e105d2c036b9b6f5e22fe8791b0a5c1",
+        "26f86dffdc06e084db443d0cfd4410d38fbafbb7af16c7850aaabd8c9cdc6ec8"
+      ]
+    },
+    "en": {
+      "relative": "data/copsd_official_20261015/followup_dev200_20261021_v1/project_followup_200_sw.json",
+      "sha256": "02c62ea8c65012f1cd656bd244beb6d4ebe97d9f33e65e77c0ebd9e56274ffba",
+      "selected_IDs": [
+        "e3c5771d640ff6435c69deee5b0175ef2eef9c8e496beae665117064f05d603d",
+        "6b7feb3892ff038b13dfb422727c854d865205798c085435fbba06e6a06e7b5c",
+        "fd40ba32f1604e63a9f24f26c3ff243a0a32f7fb46880cb5ff7d146b5785980b",
+        "9ccb17b38bdc390399948ddb341bb3ed2601f35288afbcf032fafd613aae4743",
+        "7413dedcb9114f8b63526336c9a2962fc3a6c202e53fc9310752ad6c516fb907",
+        "8f9ad9c8af60916259eecec3df2f09ece66009410435ddfee558da52f65d9d89",
+        "b65e811f54f6041cb72836b853e31a723ee60f07cbfd91b7d2a4b5db1b23da0d",
+        "b1ad5c34092727006c383447394cc454b044f4e0127f8162fa29328e2eabc795",
+        "3b382986a99c04a8afc22f2fd0570858c7d67221a7a30f622956000ae227b398",
+        "0b7f63f297f2cf3b7169344692265141fc50c83d38ff8ec3b2b2de288d7a38fd",
+        "49591bf96109899300b4fec771e4c205828304ce534c85b725dddaf103204009",
+        "12b07efab13df7e529f4bf05fab3b3f8ef752b8bf8702e6eed2825de8de09228",
+        "ee7a01f8752c21868c027f7b57bf55a4846a74ce397159061ac6ad0e312c8cf7",
+        "161ff3e9e541cb527e7769a27de0f0ead0e62ef8dca20d698733f1b83f26f565",
+        "b4a3555e73eb94dfb870d4bb99c66e5a5e105d2c036b9b6f5e22fe8791b0a5c1",
+        "26f86dffdc06e084db443d0cfd4410d38fbafbb7af16c7850aaabd8c9cdc6ec8"
+      ]
+    }
+  },
+  "max_account_GPUs": 4,
+  "roles": 2,
+  "prefix_tokens": 8,
+  "prompts": 32,
+  "numeric_gate": {
+    "HF_top1_agreement_min": 0.95,
+    "matching_HF_logprob_MAE_max": 0.1,
+    "matching_HF_logprob_p99_abs_error_max": 0.3,
+    "Base_restore_completions_exact": 32,
+    "Base_restore_logprob_absdiff_max": 1e-05
+  },
+  "scope": "ActualdedicatedTRL/vLLMserver Baseinitial -> receivedJA20mergedweights -> restoredBase, plusHFnativeLoRA/base teacherforcing onserverchosen8tokenprefixes. Fixedfirst16JA+16English additionaldevelopmentprompts, greedy8/ignoreEOS diagnostic only. Not complete2048trajectory equivalence, rawtraininggradientcorrectness, benchmarkaccuracy, math efficacy or protocolreplacement. FrozenBNassessment unchanged. No training/newcheckpoints or CPUteacher.",
+  "code_sha256": {
+    "check_actual_server_student_4b.py": "890ad147e1245cd8f91aea1d47b4fda65c7e0f04d1c8814a7c365f17c64694e1",
+    "actual_server_student4b_job.py": "3019c3b1db4b8577d04b868f52e76c5657370848b71469fa2c0174c9f025dbd4",
+    "run_actual_server_student4b.sh": "e092afa673dd6c824373f15a4026650330beee44d33f6869f4a17de5a2def402",
+    "lora_sync_weights.py": "8cd757a82a6e83a4e79b1e65555f1fc1b7a85ea6a06a0ae8506c365724d9f724",
+    "benchmark_eval_concurrency8192.py": "2b97abc43ad8ed7c1bed73d741525081d47facf6fefa607cc71ee2a621a1c242",
+    "run_trl_audited_server32.py": "47daa077f9ab26fe07237f01eec0d2ade277879f95bc03090be20e7ac153994f",
+    "trl_server_worker32.py": "8091b51b206ce343c12a11d262dc9c295c1c8a3f8b2bc051af0eb5926386dfeb",
+    "trl_server_audited_worker.py": "1e4b8e5f08dc35248b3413cc6f5f8b1ec5c6106c42665590ee474d3f58b5c83e",
+    "evaluate_vllm.py": "bd6734585cce5507ef323c1dc701e376cb79331c979e0bd25a7a6fabcdb713c9",
+    "evaluate_transformers.py": "bff5b405aff425b94a1a169dca8c22a5bb6d1e4ead1a76646c8e282312769be4",
+    "sw4b_server_resource_v2_completed_20261022.PUBLIC.json": "b22adc8e8fecff5e7d606acd8b14445895ebb7ec7f626849dd9704d70d053ef7",
+    "compat/vllm011_uuid/sitecustomize.py": "bf8e46d9a9a6ef0ea2df4b926e81725431cefd99ac9bd6c7c9ec7639dc60593d"
+  }
+}
