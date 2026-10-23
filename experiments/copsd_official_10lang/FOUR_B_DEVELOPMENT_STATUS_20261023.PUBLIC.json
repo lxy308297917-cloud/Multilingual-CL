@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T19:27:28.219682",
+  "updated_at": "2026-10-23T20:33:48.747856",
   "cohort": "Qwen3-4B_independent_development200_not_formal_tests",
   "models": [
     {
@@ -110,13 +110,21 @@
     "Base_target_correct": 152,
     "Base_items": 200,
     "Base_report": "zh4b_Base_followup200_completed_20261023.PUBLIC.json",
-    "trained_result": "Fixed20checkpoint ZH/EN200 development evaluation running; no trainedscore yet",
+    "trained_result": "Target200 complete76to80percent; English200 and fullparent acceptance pending. One trainingseed, no stablegain or selection claim.",
     "CPU_successor": "finalize_zh4b_candidate_v3.py, CPU-only attached to existingevaluation",
     "verified_optimizer_updates_at_least": 20,
     "training_progress_report": "zh4b_training_started_20261023.PUBLIC.json",
     "checkpoint5_report": "zh4b_checkpoint5_completed_20261023.PUBLIC.json",
     "first5_exposures": 160,
     "first5_valid_loss_tokens": 295409,
-    "training_completion_report": "zh4b_training_completed_20261023.PUBLIC.json"
+    "training_completion_report": "zh4b_training_completed_20261023.PUBLIC.json",
+    "target_Base_correct": 152,
+    "target_OPD_correct": 160,
+    "target_items": 200,
+    "target_paired_question_CI95_delta_pp": [
+      -0.5,
+      9.0
+    ],
+    "target_partial_report": "zh4b_target200_diagnosis_20261023.PUBLIC.json"
   }
 }

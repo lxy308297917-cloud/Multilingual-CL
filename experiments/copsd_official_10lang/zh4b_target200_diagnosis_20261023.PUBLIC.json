@@ -1,0 +1,143 @@
+{
+  "observed_at": "2026-10-23T20:31:58.569819",
+  "protocol": "project_ZH4B_followup_dev200_single8192_c16_v1",
+  "target_language": "zh",
+  "items": 200,
+  "paired": {
+    "Base_correct": 152,
+    "checkpoint_correct": 160,
+    "gained": 16,
+    "lost": 8,
+    "delta_correct": 8
+  },
+  "paired_question_bootstrap95_CI_pp": [
+    -0.5,
+    9.0
+  ],
+  "conditions": {
+    "Base": {
+      "metrics": {
+        "items": 200,
+        "single_correct": 152,
+        "generated_tokens": 758196,
+        "truncated": 19,
+        "normal_terminations": 181,
+        "answer_extraction_failures": 14,
+        "protocol": "project_ZH4B_followup_dev200_single8192_c16_v1",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 200,
+        "single_accuracy": 0.76,
+        "generation_seconds": 1298.7053480520844,
+        "model_load_seconds": 12.056984536349773,
+        "actual_max_num_seqs": 16
+      },
+      "source": {
+        "items_sha256": "188b4f3d61ed71e78a5591e087b0881995849867313602910ecca75d774013bd",
+        "config_sha256": "01e72a21daa5b3d7620d50309f87f359d17b7e5fbcd32c0dcf8f9e19b8f1c103"
+      }
+    },
+    "ZH20": {
+      "metrics": {
+        "items": 200,
+        "single_correct": 160,
+        "generated_tokens": 703625,
+        "truncated": 16,
+        "normal_terminations": 184,
+        "answer_extraction_failures": 12,
+        "protocol": "project_ZH4B_followup_dev200_single8192_c16_v1",
+        "formal_test": false,
+        "n": 1,
+        "generation_count": 200,
+        "single_accuracy": 0.8,
+        "generation_seconds": 3418.2524349670857,
+        "model_load_seconds": 13.42734057456255,
+        "actual_max_num_seqs": 16
+      },
+      "source": {
+        "items_sha256": "1af46336ff78c504fec88fa30df7b374109d78e805180acadb3cf176f1a11d0c",
+        "config_sha256": "df432175a8a39fc51c6ac0f7d88ad5e354f3ebe800c68a8fe9e5f9b620fe5064"
+      }
+    }
+  },
+  "changed_question_termination_transitions": {
+    "gained": {
+      "stop_to_stop": 8,
+      "length_to_stop": 8
+    },
+    "lost": {
+      "stop_to_length": 5,
+      "stop_to_stop": 3
+    }
+  },
+  "normal_Base_gains_review": [
+    {
+      "evaluation_index": 7,
+      "category": "mathematical_modeling_or_calculation_change",
+      "evidence_summary": "Student corrects interpretation of cyclic-number sum and obtains referencesign."
+    },
+    {
+      "evaluation_index": 34,
+      "category": "answer_representation",
+      "evidence_summary": "Both bodies derive samepercentage; boxed number versus explicit percent changesofficialgrade."
+    },
+    {
+      "evaluation_index": 109,
+      "category": "answer_representation",
+      "evidence_summary": "Equivalent reversed orderchains receive differentofficialgrades; no new magnitudeordering answer."
+    },
+    {
+      "evaluation_index": 118,
+      "category": "answer_representation",
+      "evidence_summary": "Both identify same boy/girl counts; roleordering/text changes officialparse."
+    },
+    {
+      "evaluation_index": 160,
+      "category": "mathematical_modeling_or_calculation_change",
+      "evidence_summary": "Student uses transversecut counting instead of independentperpendicular-cut multiplication."
+    },
+    {
+      "evaluation_index": 180,
+      "category": "mathematical_modeling_or_calculation_change",
+      "evidence_summary": "Student avoids duplicateconstant addition in trigonometric simplification; multi-part finalvalues both correct."
+    },
+    {
+      "evaluation_index": 192,
+      "category": "answer_representation",
+      "evidence_summary": "Equivalent radian/degree angle encoding changes grade; bothderive sameopeningangle."
+    },
+    {
+      "evaluation_index": 199,
+      "category": "answer_representation",
+      "evidence_summary": "Both apply Holder and prove samebound; boxing proposition versus scalarbound changes grade."
+    }
+  ],
+  "normal_student_losses_review": [
+    {
+      "evaluation_index": 143,
+      "category": "mathematical_target_and_arithmetic_error",
+      "evidence_summary": "Student answers hypothetical fasterarrival instead of requestedactualarrival, and subtractshours incorrectly."
+    },
+    {
+      "evaluation_index": 146,
+      "category": "answer_language_representation_with_proof_caveat",
+      "evidence_summary": "ChineseNo semanticallymatches Englishgold but isrejected. Body also reduces2D integerlattice jumps to signedscalarpartition withoutjustification; no proofvalidityclaim."
+    },
+    {
+      "evaluation_index": 171,
+      "category": "proof_answer_encoding",
+      "evidence_summary": "Body gives valid sumofsquares proof; finalbox encodesminimum ratherthan requestedinequality."
+    }
+  ],
+  "normal_Base_gains_taxonomy": {
+    "mathematical_answer_change": 3,
+    "answer_representation": 5
+  },
+  "no_original_scores_changed": true,
+  "all24_changed_questions_classified_by_termination": true,
+  "English_evaluation_and_full_parent_acceptance_pending": true,
+  "cost_accounting": "Deferred to completepaired candidate report, no partialparentcost added.",
+  "scope": "Target-only complete rawoutputs, Englishstillrunning. Manualtaxonomy of all8gains withnormallyterminatedBase andall3losses withnormallyterminatedstudent, not automaticproofgrading, adjustedaccuracy, efficacy confirmation, seedpopulation inference or candidate selection. Otherchanged cases are characterizedby truncationstatus only.",
+  "bootstrap_seed": 20261023,
+  "bootstrap_samples": 10000
+}
