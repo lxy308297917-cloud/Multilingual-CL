@@ -1,0 +1,16 @@
+{
+  "completed_at": "2026-10-23 19:22:35",
+  "protocol": "independent_ZH4B_dedicated_server_single20_seed42_v1",
+  "global_step": 20,
+  "exposures": 640,
+  "training_valid_response_loss_tokens": 1200988,
+  "training_generated_tokens": 1200988,
+  "training_parent_GPU_hours": 2.966111111111111,
+  "adapter_sha256": "56db8df3b38d2e5c699dfb8c7937bdb32218e5cda58b9e340164b1632dc0a446",
+  "Base_unchanged_bitwise": true,
+  "all21_syncs_verified398_tensors": true,
+  "parent_exit_code": 0,
+  "optimizer_scheduler20_and_RNG_file_verified": true,
+  "training_freeze_sha256": "9c9f1cf5f5dfd473263f79f3d79ec27f2b1cd4d44fca981d38875ad8ee85423a",
+  "scope": "Completed20-update candidate under100scheduler, not100updates or methodefficacy. FixedBaseZH200152/200 accepted, trainedZH/EN200 evaluation running. ActualGPUrestore/serverRNG bitwisecontinuation nottested."
+}

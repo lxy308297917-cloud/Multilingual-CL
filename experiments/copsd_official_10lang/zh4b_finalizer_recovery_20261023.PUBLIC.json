@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-10-23T19:27:28.219399",
+  "failure": "CPUv2 observer read newevaluation state.json before monitorpublishedit; FileNotFoundError after successfulsingleevaluationstart.",
+  "existing_evaluation_queue": "copsd-zh4b-followup-zh20-v1",
+  "existing_evaluation_alive_and_running_verified": true,
+  "GPU_evaluation_starts_in_original_series": 1,
+  "v3_GPU_start_cancel_restart_calls": 0,
+  "v3_source_sha256": "fcf018464faa5f437ece36e3fc3bce1d5baf77d84a8b1eb2b68e1181d0632f1c",
+  "v3_phase": "waiting_for_existing_evaluation",
+  "original_failure_log_and_source_retained": true,
+  "science_freezes_unchanged": true,
+  "observer_recovery_only": true,
+  "scope": "AttachCPU-only finalizer to existingevaluation, boundedstate-publication observationgrace. No training/evaluation restart or source/prompt/scoring changes."
+}

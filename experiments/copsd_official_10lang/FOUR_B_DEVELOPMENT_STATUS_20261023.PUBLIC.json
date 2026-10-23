@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T18:21:42.370959",
+  "updated_at": "2026-10-23T19:27:28.219682",
   "cohort": "Qwen3-4B_independent_development200_not_formal_tests",
   "models": [
     {
@@ -100,8 +100,9 @@
   },
   "ZH_candidate": {
     "phase": {
-      "copsd-zh4b-server20-v1": "running",
-      "copsd-zh4b-followup-base-v1": "completed"
+      "copsd-zh4b-server20-v1": "completed",
+      "copsd-zh4b-followup-base-v1": "completed",
+      "copsd-zh4b-followup-zh20-v1": "running"
     },
     "actual_training_started": true,
     "report": "zh4b_candidate_started_20261023.PUBLIC.json",
@@ -109,12 +110,13 @@
     "Base_target_correct": 152,
     "Base_items": 200,
     "Base_report": "zh4b_Base_followup200_completed_20261023.PUBLIC.json",
-    "trained_result": "Trainingrunning, no matchedtrainedscore yet",
-    "CPU_successor": "zh4b_candidate_series_v2.py; labelcompatibility corrected without GPUrestart",
-    "verified_optimizer_updates_at_least": 5,
+    "trained_result": "Fixed20checkpoint ZH/EN200 development evaluation running; no trainedscore yet",
+    "CPU_successor": "finalize_zh4b_candidate_v3.py, CPU-only attached to existingevaluation",
+    "verified_optimizer_updates_at_least": 20,
     "training_progress_report": "zh4b_training_started_20261023.PUBLIC.json",
     "checkpoint5_report": "zh4b_checkpoint5_completed_20261023.PUBLIC.json",
     "first5_exposures": 160,
-    "first5_valid_loss_tokens": 295409
+    "first5_valid_loss_tokens": 295409,
+    "training_completion_report": "zh4b_training_completed_20261023.PUBLIC.json"
   }
 }
