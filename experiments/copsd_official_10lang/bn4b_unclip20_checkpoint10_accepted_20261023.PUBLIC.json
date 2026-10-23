@@ -1,0 +1,29 @@
+{
+  "accepted_at": "2026-10-23T10:16:34.059280",
+  "protocol": "project_BN4B_component_clip_one_factor20_seed42_v1",
+  "completed_updates": 10,
+  "planned_updates": 20,
+  "scheduler_horizon": 100,
+  "completed_exposures": 320,
+  "valid_response_loss_tokens": 649258,
+  "teacher_forward_calls": 320,
+  "student_forward_calls": 320,
+  "checkpoint_optimizer_states": 504,
+  "all_optimizer_steps": [
+    10
+  ],
+  "scheduler_last_epoch": 10,
+  "RNG_file_present": true,
+  "new_run_retained_checkpoints": [
+    "checkpoint-10"
+  ],
+  "new_run_checkpoint5_rotated_as_planned": true,
+  "prior_protocol_checkpoints_deleted": false,
+  "same_first320inputs_as_clipped_reference": true,
+  "TensorBoard_latest_train_loss_step": 10,
+  "TensorBoard_all_saved_train_loss_finite": true,
+  "free_bytes_after_rotation": 9315532800,
+  "cost_snapshot_sha256": "3aa7d405ff4bd51c5d6c4c0e04863edee2ecd73c5075112fccea33375131f69a",
+  "training_freeze_sha256": "464bc59750350a957b3a22482eb30f77639e218517a426b2407a503b30df2187",
+  "scope": "Halfway training/save/rotation evidence only, not mathematical benefit. No addedGPUdiagnostics, no changes to runningfrozen source oroldprotocol artifacts. Latestcheckpoint10 statefiles checked; actualprocess restore/serverRNG bitwisecontinuation untested. Intermediate5 removed onlywithin newrun under predeclaredHFsave_total_limit1."
+}
