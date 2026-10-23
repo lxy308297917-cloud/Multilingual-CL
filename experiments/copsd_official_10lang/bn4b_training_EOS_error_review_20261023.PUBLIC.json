@@ -1,0 +1,71 @@
+{
+  "completed_at": "2026-10-23T15:30:10.251678",
+  "scope": "Manual review restricted to existing training trajectories with boxedanswer, officialscorefalse and EOStoken. Descriptive taxonomy only; original officialscores preserved. Not development/test regrading or causal diagnosis of all OPD decline.",
+  "conditions": {
+    "Clip20": {
+      "all_official_boxed_but_wrong": 8,
+      "reviewed_EOS_subset": 5,
+      "format_or_gold_schema_mismatch": 4,
+      "mathematical_error": 1,
+      "unreviewed_non_EOS_wrong_boxes": 3,
+      "entries": [
+        {
+          "trajectory_index": 26,
+          "global_step": 0,
+          "category": "multi_part_single_gold_last_box",
+          "evidence_summary": "Both requested parts computed correctly; gold stores only firstpart while extractor selects lastbox."
+        },
+        {
+          "trajectory_index": 334,
+          "global_step": 10,
+          "category": "choice_label_vs_value",
+          "evidence_summary": "Computed correct value and matching option; boxed numericalvalue differs from goldletter."
+        },
+        {
+          "trajectory_index": 375,
+          "global_step": 11,
+          "category": "choice_label_vs_value",
+          "evidence_summary": "Computed correct arithmetic and matching option; boxed numericalvalue differs from goldletter."
+        },
+        {
+          "trajectory_index": 449,
+          "global_step": 14,
+          "category": "mathematical_simplification_error",
+          "evidence_summary": "Incorrectly cancels a remaining cubicterm, leading to wrongparameter solution despite normaltermination."
+        },
+        {
+          "trajectory_index": 606,
+          "global_step": 18,
+          "category": "choice_only_vs_composite_gold",
+          "evidence_summary": "Correct choice and proportional relation inbody; boxed choiceletter differs from composite letter/equation gold."
+        }
+      ],
+      "source_scored_items_sha256": "fc1f340b610606fe1758e4f5fa5a2f39565b6397efc22c7ddfd920aad1f80d07"
+    },
+    "Unclip20": {
+      "all_official_boxed_but_wrong": 7,
+      "reviewed_EOS_subset": 2,
+      "format_or_gold_schema_mismatch": 2,
+      "mathematical_error": 0,
+      "unreviewed_non_EOS_wrong_boxes": 5,
+      "entries": [
+        {
+          "trajectory_index": 26,
+          "global_step": 0,
+          "category": "multi_part_single_gold_last_box",
+          "evidence_summary": "Sameinitialtrajectory asClip20index26; not independent evidence."
+        },
+        {
+          "trajectory_index": 547,
+          "global_step": 17,
+          "category": "choice_label_vs_value",
+          "evidence_summary": "Correct derivedvalue and correctchoice inbody; boxed choiceletter differs from goldnumericalvalue."
+        }
+      ],
+      "source_scored_items_sha256": "b82884b69bc5bc9304e3508798d7d57d07ba3bb31f546d25149f785424144009"
+    }
+  },
+  "reviewed_trajectory_count": 7,
+  "unique_question_count": 6,
+  "training_signal_caveat": "Answer field is used here for diagnostic scoring; OPD trains on teacher token distributions with Englishreference, not these boolean scores. Thus schema mismatch is not evidence that all teachersupervision is wrong. Sparse boxedcoverage and negative fixeddevelopmentresults remain."
+}
