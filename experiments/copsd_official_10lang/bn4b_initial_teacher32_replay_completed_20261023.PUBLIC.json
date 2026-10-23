@@ -1,0 +1,31 @@
+{
+  "protocol": "project_BN4B_actual_initial32_teacher_logits_replay_v1",
+  "rows": 32,
+  "selected_positions": 446,
+  "dtypes": {
+    "original_BF16": {
+      "teacher_top_attraction_reversed": 56,
+      "teacher_top_unclipped_attraction_positions": 157,
+      "examples_with_negative_clipped_unclipped_logit_gradient_cosine": 29
+    },
+    "FP32_from_BF16_logits": {
+      "teacher_top_attraction_reversed": 57,
+      "teacher_top_unclipped_attraction_positions": 157,
+      "examples_with_negative_clipped_unclipped_logit_gradient_cosine": 30
+    }
+  },
+  "wall_seconds": 34.28407392837107,
+  "peak_GPU_bytes": 8464508416,
+  "prepared_sha256": "3e6bf520f15cbcb14928c5cc890b6febdacccdd9f3f7e28d575aa1b20bb9dd86",
+  "script_sha256": "54328fedbf65df1c16e0348c92c7bec0d0e86491d30f4b90aa47962517e47145",
+  "scope": "OriginalBase beforefirstoptimizer update. Selected positions withfullcausal histories; outputlogit gradients, not LoRA gradients, completepositions, laterupdates or efficacy.",
+  "no_parameter_updates": true,
+  "no_generation": true,
+  "accepted_at": "2026-10-23T15:05:45.550420",
+  "queue_parent_exit0": true,
+  "parent_GPU_hours": 0.025555555555555557,
+  "position_records_sha256": "67e97a16bfe2925a9a8638c8417fb62ecc1b80c7091e695b17ffeb3ab68da79c",
+  "original_source_prompts_actual_training_hashes_verified": true,
+  "all32_rowcounts_finite_statistics_and_aggregate_sums_verified": true,
+  "interpretation": "Componentclip can reverse attraction towardteacher top tokens on sampled realfirst-update positions. Unclipped downstreamBN20 didnot recover accuracy, so this is not sufficientexplanation or proof of cure. Base-weight logits replay; no fullLoRAgradient, optimizerupdate, laterpolicy or pertoken correctness annotation. Equal32 effectivebatch alone doesnot establish releasedmicro4 normalization equivalence."
+}
