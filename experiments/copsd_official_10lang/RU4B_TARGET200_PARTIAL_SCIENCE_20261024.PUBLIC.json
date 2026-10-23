@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "ru",
+  "training_updates": 20,
+  "training_seed": 42,
+  "evaluation": "Reserved development200, n1/8192/native16, same prompts/input/seed/sampling/scorer as Base. Not formaltest.",
+  "Base_correct_of200": 155,
+  "OPD_correct_of200": 150,
+  "gained": 10,
+  "lost": 15,
+  "delta_percentage_points": -2.5,
+  "paired_question_CI95_percentage_points": [
+    -7.5,
+    2.5
+  ],
+  "Base_truncated": 19,
+  "OPD_truncated": 14,
+  "Base_extraction_failures": 15,
+  "OPD_extraction_failures": 9,
+  "English_evaluation_complete": false,
+  "final_cost_and_language_review_complete": false,
+  "selected_for_sequential": false,
+  "scope": "Target-only completed pair. Negative pointestimate, no promotion. English, totalcost and language review pending. CI over shared questions for fixedmodels, not seedpopulation or multiplicityadjusted inference. No private data, paths or runtime identifiers."
+}
