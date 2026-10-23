@@ -1,0 +1,23 @@
+{
+  "updated_at": "2026-10-23T15:18:02.368568",
+  "language": "zh",
+  "model_scale": "4B",
+  "updates_planned": 20,
+  "same_scientific_train_arguments_as_BN_except_language": true,
+  "train_freeze_sha256": "9c9f1cf5f5dfd473263f79f3d79ec27f2b1cd4d44fca981d38875ad8ee85423a",
+  "eval_freeze_sha256": "27db3fdadbf18c55b63d44358ab6f0de97c9e084c18f8da62544df835a8f6249",
+  "training_CPU_preflight_passed": true,
+  "Base_ZH200_evaluator_CPU_preflight_passed": true,
+  "trained_evaluator_checkpoint_validation": "Pending actual20checkpoint; no dummy release or model substitution",
+  "queue_phases": {
+    "copsd-zh4b-server20-v1": "waiting",
+    "copsd-zh4b-followup-base-v1": "waiting"
+  },
+  "actual_training_started": false,
+  "resource_evidence": "Account4GPUs occupied by separate module_mix50experiment; newqueues max_user_gpus4. No unrelatedtasks modified. Bothdata0/data1 checked, newcheckpoint resolvesdata0, free63GiB vs~16GiBrequired atpreparation.",
+  "manual_one_shot_CPU_successor_phase": "waiting_for_existing_training",
+  "successor_trained_evaluation_start_calls": 0,
+  "no_boot_start_or_automatic_retry": true,
+  "evaluation_plan": "BaseZH200 plusfixedcheckpoint20 ZH200/EN200 native16 n1/8192; sameheldoutIDs andnativeprefix. VerifiedcachedBaseEnglish200 reused withoutduplicatingcost. Pairedcollector/TensorBoard/languageID follow.",
+  "scope": "Onefixed originalten candidate, not selectedlanguage, stablegain,100updates,officialpass12 orsequentialrun. No all-languagegrid."
+}

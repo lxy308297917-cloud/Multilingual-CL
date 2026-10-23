@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T14:53:27.372548",
+  "updated_at": "2026-10-23T15:18:02.369038",
   "cohort": "Qwen3-4B_independent_development200_not_formal_tests",
   "models": [
     {
@@ -97,5 +97,14 @@
     },
     "report": "bn4b_teacher_recovery32_completed_20261023.PUBLIC.json",
     "scope": "Privileged conditional generation, not fair benchmark or trainingtoken supervision proof; no selection promotion."
+  },
+  "ZH_candidate": {
+    "phase": {
+      "copsd-zh4b-server20-v1": "waiting",
+      "copsd-zh4b-followup-base-v1": "waiting"
+    },
+    "actual_training_started": false,
+    "report": "zh4b_candidate_started_20261023.PUBLIC.json",
+    "scope": "Onefixed originalten candidate, not selectedlanguage, stablegain,100updates,officialpass12 orsequentialrun. No all-languagegrid."
   }
 }
