@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-24T02:33:25.386174",
+  "original_failing_microstep_one_based": 229,
+  "recovered_microstep_one_based": 69,
+  "actual_global_step_for_case": 7,
+  "same_student_and_teacher_prompt_tensors": true,
+  "original_and_recovered_response_tokens": 2048,
+  "actual_Accelerate_Trainer_backward_and_CUDA_sync_passed": true,
+  "actual_returned_loss_finite": true,
+  "additional_generation_or_smoke_performed": false,
+  "resume_entry_sha256": "5886c65db54cf0f30cbd3a0cd0e5ac4a13a87141cc8992a9a34adf6d265145fa",
+  "repair_patch_sha256": "8af73d756c259eaa2e012a4398fadca2e4a8a795b52726741b2951a74e27b418",
+  "scope": "Observed existing actualrecoveredtraining passingthe originalOOM prompt/response shapes, not just independentreplay. Responsecontents/currentstudentweights afterrestart are not bitwiseoriginalstep7. No claim final20complete, allfuturelength memory guarantee, gradientbitwisecontinuation or downstreambenefit. Rawprompts/responses andhostmetadata omitted."
+}

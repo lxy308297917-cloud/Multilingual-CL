@@ -1,0 +1,66 @@
+{
+  "recorded_at": "2026-10-24T03:18:11.484042",
+  "model": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "language": "TH",
+  "candidate_reason": "Next untested4B language in originalten list after TE; not selected using formaltest results. Onebounded default20-update pilot, no newparametergrid.",
+  "training": {
+    "phase": "running",
+    "started_at": "2026-10-24 03:01:39",
+    "verified_global_step_at_least": 2,
+    "updates_planned": 20,
+    "scheduler_horizon": 100,
+    "training_and_data_seed": 42,
+    "effective_batch": 32,
+    "micro_batch": 1,
+    "gradient_accumulation": 32,
+    "response_generation_limit": 2048,
+    "LoRA_r": 64,
+    "LoRA_alpha": 128,
+    "learning_rate": 5e-06,
+    "optimizer": "AdamW",
+    "beta": 0,
+    "vocabulary_component_clip": 0.05,
+    "teacher": "FrozenoriginalBase withadapterdisabled and Englishprivilegedreference",
+    "response_logit_storage_compaction_from_start": true,
+    "fresh_Base_initialization": true
+  },
+  "data": {
+    "official_revision": "519ea2be68fec00c8a033cb2040059ff595b06a0",
+    "all2900_adapted_records_match_official_raw": true,
+    "train_questions": 2700,
+    "development_questions": 200,
+    "same_English_originals_and_order_as_other4B_candidates": true,
+    "ID_and_normalized_English_overlap_with_reserved100_and200": 0,
+    "source_rewritten_or_target_language_answers_synthesized": false
+  },
+  "prompt": {
+    "actual_TH_field_and_official_prefix_checked": true,
+    "student_no_English_privileged_fields": true,
+    "teacher_has_English_question_and_solution": true,
+    "extra_GPU_smoke_repeated": false,
+    "reuse_completed_CPU_CUDA_and_actualTrainer_storage_gates": true
+  },
+  "development": {
+    "Base_TH": "queued_waiting_under_account_limit",
+    "model_TH_and_EN": "configured_for_after_checkpoint20_release",
+    "items_each": 200,
+    "native_concurrency": 16,
+    "samples": 1,
+    "max_new_tokens": 8192,
+    "question_seed": 42,
+    "accepted_Base_English_reused": true,
+    "results_complete": false
+  },
+  "resources": {
+    "TE_and_TH_training_roles_each": 2,
+    "account_active_or_reserved_training_GPUs": 4,
+    "account_limit_GPUs": 4,
+    "waiting_Base_job_holds_extra_GPU": false,
+    "new_checkpoint_store_own_independent_location": true,
+    "actual_bindings_published": false
+  },
+  "single_use_successor_attached": true,
+  "scope": "IndependentTH singlepilot parallel with existingTE recovery. No confirmedTH gain, newseed, selectedthree languages or sequentialtraining. Runtime paths/queues/deviceIDs/processIDs and rawdata excluded; full local records retained."
+}
