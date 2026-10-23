@@ -1,0 +1,181 @@
+{
+  "models": {
+    "Base": {
+      "old": {
+        "en_to_sw": {
+          "n": 64,
+          "score": 18.60750408988209,
+          "capped": 14,
+          "languages": {
+            "sw": 43,
+            "en": 21
+          },
+          "generated_tokens": 9866,
+          "mean_repeat_4gram_fraction": 0.08576677361391222
+        }
+      },
+      "new": {
+        "en_to_sw": {
+          "n": 64,
+          "score": 20.61411538194456,
+          "capped": 4,
+          "languages": {
+            "sw": 63,
+            "id": 1
+          },
+          "generated_tokens": 4455,
+          "mean_repeat_4gram_fraction": 0.05067439976653043
+        }
+      },
+      "new_minus_old": {
+        "en_to_sw": {
+          "difference": 2.0066112920624697,
+          "low": 0.548586295004908,
+          "high": 3.4731896491221232,
+          "n": 64,
+          "source_groups": 64,
+          "paired": true
+        }
+      }
+    },
+    "LR077-s42": {
+      "old": {
+        "en_to_sw": {
+          "n": 64,
+          "score": 18.356490189346697,
+          "capped": 0,
+          "languages": {
+            "en": 40,
+            "sw": 24
+          },
+          "generated_tokens": 2593,
+          "mean_repeat_4gram_fraction": 0.0016203703703703703
+        }
+      },
+      "new": {
+        "en_to_sw": {
+          "n": 64,
+          "score": 18.901488034779934,
+          "capped": 0,
+          "languages": {
+            "en": 34,
+            "sw": 30
+          },
+          "generated_tokens": 2671,
+          "mean_repeat_4gram_fraction": 0.0005787037037037037
+        }
+      },
+      "new_minus_old": {
+        "en_to_sw": {
+          "difference": 0.5449978454332367,
+          "low": -1.1162506442992195,
+          "high": 2.2308519218118654,
+          "n": 64,
+          "source_groups": 64,
+          "paired": true
+        }
+      }
+    },
+    "Attn-s42": {
+      "old": {
+        "en_to_sw": {
+          "n": 64,
+          "score": 22.52993727723036,
+          "capped": 3,
+          "languages": {
+            "sw": 63,
+            "sk": 1
+          },
+          "generated_tokens": 4125,
+          "mean_repeat_4gram_fraction": 0.040198113509716485
+        }
+      },
+      "new": {
+        "en_to_sw": {
+          "n": 64,
+          "score": 23.440271403352657,
+          "capped": 1,
+          "languages": {
+            "sw": 62,
+            "en": 2
+          },
+          "generated_tokens": 3761,
+          "mean_repeat_4gram_fraction": 0.015298256880866369
+        }
+      },
+      "new_minus_old": {
+        "en_to_sw": {
+          "difference": 0.9103341261222972,
+          "low": -0.711176021525961,
+          "high": 2.616903836381855,
+          "n": 64,
+          "source_groups": 64,
+          "paired": true
+        }
+      }
+    },
+    "MLP-s42": {
+      "old": {
+        "en_to_sw": {
+          "n": 64,
+          "score": 15.18819139498078,
+          "capped": 0,
+          "languages": {
+            "en": 60,
+            "sw": 4
+          },
+          "generated_tokens": 1935,
+          "mean_repeat_4gram_fraction": 0.0
+        }
+      },
+      "new": {
+        "en_to_sw": {
+          "n": 64,
+          "score": 17.447410390725672,
+          "capped": 1,
+          "languages": {
+            "en": 44,
+            "sw": 20
+          },
+          "generated_tokens": 2593,
+          "mean_repeat_4gram_fraction": 0.013087606837606838
+        }
+      },
+      "new_minus_old": {
+        "en_to_sw": {
+          "difference": 2.2592189957448916,
+          "low": 1.0366013848664162,
+          "high": 3.654875851304069,
+          "n": 64,
+          "source_groups": 64,
+          "paired": true
+        }
+      }
+    }
+  },
+  "gaps": {
+    "old": {
+      "difference": 4.1734470878836625,
+      "low": 1.9120028070132553,
+      "high": 6.401716390272618,
+      "n": 64,
+      "source_groups": 64,
+      "paired": true
+    },
+    "new": {
+      "difference": 4.538783368572723,
+      "low": 2.7676310715779824,
+      "high": 6.300804975752186,
+      "n": 64,
+      "source_groups": 64,
+      "paired": true
+    }
+  },
+  "gap_change_new_minus_old": {
+    "difference": 0.36533628068906054,
+    "low": -1.9868253651259946,
+    "high": 2.8197114205731615,
+    "n": 64,
+    "causal_decomposition": false
+  }
+}

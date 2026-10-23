@@ -1,0 +1,8 @@
+{
+  "recorded_unix": 1792745047.2070365,
+  "historical_pool_vs_training": "Historical pool inclusion is an exclusion-policy signal, not proof every item was generated/evaluated and not proof of current-model training leakage.",
+  "formal_data_use": "No new formal-test predictions, scores, protection or model-selection use. Existing formal-input files were read only to build content/source exclusion blacklists, and the FLORES archive formal split was accessed only for document-URL metadata.",
+  "field_clarification": "The frozen translation audit field formal_sentence_text_read=false describes no loading of formal sentence files from the FLORES archive. It must not be read as a statement that no formal-input text was read anywhere: six existing formal-input JSONL files were read for exclusion only. Frozen historical manifest retained unchanged; this clarification corrects the scope of the wording.",
+  "effect_on_experiment": "Conservative exclusion reduces available confirmation documents. It does not add any supervision or generation, change frozen split membership, metrics, gates or training.",
+  "primary_translation_confirmation": "Missing; no promotion of old development results to independent confirmation."
+}

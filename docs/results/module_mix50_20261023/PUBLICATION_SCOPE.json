@@ -55,6 +55,14 @@
       "server_original_sha256": "5a00549e060cf903d81b82f404fe6eaa9e88d407d0926258b3de2d738484b6c9",
       "published_redacted_sha256": "5a00549e060cf903d81b82f404fe6eaa9e88d407d0926258b3de2d738484b6c9"
     },
+    "recovery_coordinate.py": {
+      "server_original_sha256": "489f3705a1f14d47c096aafdba2194d99d25c025d6ed651973928d3309c1f2ec",
+      "published_redacted_sha256": "489f3705a1f14d47c096aafdba2194d99d25c025d6ed651973928d3309c1f2ec"
+    },
+    "recovery_worker.py": {
+      "server_original_sha256": "356eab5b80cce41092e2f7d2deac6e6f72f094b2c5f89d21c951b9b70584d92a",
+      "published_redacted_sha256": "356eab5b80cce41092e2f7d2deac6e6f72f094b2c5f89d21c951b9b70584d92a"
+    },
     "report.py": {
       "server_original_sha256": "4ce2f65c4851be5302f3c0c7162ad2b650333d001d06de6331b5f01b2f1b02dc",
       "published_redacted_sha256": "5fb129018ed7bc462d7a77db2b3f3866c060123c542d0c7b5a10b9cac2c4b895"

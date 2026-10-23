@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "total_GPU_context_hours": 9.853451399935617,
+  "GPU_ceiling_hours": 16,
+  "raw_state_hashes_FP32_RNG_scheduler_and_transport_verified": true,
+  "all_steps_LR_K_order_module_quota_verified": true,
+  "primary_confirmation_available": false
+}

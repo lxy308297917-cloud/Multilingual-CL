@@ -1,0 +1,818 @@
+{
+  "models": {
+    "Base": {
+      "en_to_sw": {
+        "n": 128,
+        "score": 18.08804902161143,
+        "capped": 32,
+        "languages": {
+          "sw": 85,
+          "en": 43
+        },
+        "generated_tokens": 20724,
+        "mean_repeat_4gram_fraction": 0.09090817780255668
+      },
+      "sw_to_en": {
+        "n": 128,
+        "score": 16.94919589562847,
+        "capped": 20,
+        "languages": {
+          "en": 104,
+          "sw": 24
+        },
+        "generated_tokens": 19351,
+        "mean_repeat_4gram_fraction": 0.029919128782157814
+      },
+      "sw_reading": {
+        "n": 64,
+        "score": 2.206215590450291,
+        "capped": 27,
+        "languages": {
+          "sw": 62,
+          "en": 1,
+          "ro": 1
+        },
+        "generated_tokens": 10525,
+        "mean_repeat_4gram_fraction": 0.11359073196328934
+      },
+      "en_reading": {
+        "n": 63,
+        "score": 84.12698412698413,
+        "capped": 0,
+        "languages": {
+          "tl": 2,
+          "en": 41,
+          "da": 1,
+          "hr": 1,
+          "de": 8,
+          "cy": 2,
+          "hu": 5,
+          "sw": 1,
+          "ro": 1,
+          "af": 1
+        },
+        "generated_tokens": 488,
+        "mean_repeat_4gram_fraction": 0.0,
+        "format_strict": 1.5873015873015872
+      },
+      "en_instruction": {
+        "n": 128,
+        "score": 23.4375,
+        "capped": 20,
+        "languages": {
+          "en": 125,
+          "ru": 1,
+          "fa": 1,
+          "it": 1
+        },
+        "generated_tokens": 93207,
+        "mean_repeat_4gram_fraction": 0.10254205524960658
+      }
+    },
+    "LR077-s42": {
+      "en_to_sw": {
+        "n": 128,
+        "score": 18.951802658753053,
+        "capped": 0,
+        "languages": {
+          "en": 81,
+          "sw": 47
+        },
+        "generated_tokens": 4993,
+        "mean_repeat_4gram_fraction": 0.0008101851851851852
+      },
+      "sw_to_en": {
+        "n": 128,
+        "score": 27.546283588872946,
+        "capped": 1,
+        "languages": {
+          "en": 128
+        },
+        "generated_tokens": 3778,
+        "mean_repeat_4gram_fraction": 0.0075964861751152074
+      },
+      "sw_reading": {
+        "n": 64,
+        "score": 17.28970307188839,
+        "capped": 5,
+        "languages": {
+          "sw": 47,
+          "sk": 1,
+          "fr": 1,
+          "so": 3,
+          "id": 5,
+          "sv": 1,
+          "tl": 1,
+          "hr": 1,
+          "en": 2,
+          "und": 1,
+          "fi": 1
+        },
+        "generated_tokens": 2209,
+        "mean_repeat_4gram_fraction": 0.042699507847014956
+      },
+      "en_reading": {
+        "n": 63,
+        "score": 84.12698412698413,
+        "capped": 0,
+        "languages": {
+          "tl": 1,
+          "cy": 7,
+          "en": 36,
+          "de": 12,
+          "hu": 4,
+          "sw": 1,
+          "ro": 1,
+          "af": 1
+        },
+        "generated_tokens": 435,
+        "mean_repeat_4gram_fraction": 0.0,
+        "format_strict": 0.0
+      },
+      "en_instruction": {
+        "n": 128,
+        "score": 17.96875,
+        "capped": 17,
+        "languages": {
+          "en": 118,
+          "fr": 5,
+          "ca": 1,
+          "de": 1,
+          "sv": 1,
+          "da": 1,
+          "cy": 1
+        },
+        "generated_tokens": 67334,
+        "mean_repeat_4gram_fraction": 0.14668704830630525
+      }
+    },
+    "Attn-s42": {
+      "en_to_sw": {
+        "n": 128,
+        "score": 23.02133811820238,
+        "capped": 6,
+        "languages": {
+          "sw": 121,
+          "en": 6,
+          "sk": 1
+        },
+        "generated_tokens": 8070,
+        "mean_repeat_4gram_fraction": 0.0399865794521877
+      },
+      "sw_to_en": {
+        "n": 128,
+        "score": 25.099061470865834,
+        "capped": 0,
+        "languages": {
+          "en": 128
+        },
+        "generated_tokens": 3214,
+        "mean_repeat_4gram_fraction": 0.002387152777777778
+      },
+      "sw_reading": {
+        "n": 64,
+        "score": 15.694286395113599,
+        "capped": 6,
+        "languages": {
+          "sw": 49,
+          "fr": 1,
+          "id": 3,
+          "und": 2,
+          "so": 2,
+          "sv": 1,
+          "no": 1,
+          "lt": 1,
+          "sq": 1,
+          "hr": 2,
+          "de": 1
+        },
+        "generated_tokens": 2681,
+        "mean_repeat_4gram_fraction": 0.056688761242490955
+      },
+      "en_reading": {
+        "n": 63,
+        "score": 82.53968253968253,
+        "capped": 0,
+        "languages": {
+          "tl": 2,
+          "cy": 4,
+          "en": 39,
+          "de": 10,
+          "hu": 5,
+          "sw": 1,
+          "ro": 1,
+          "af": 1
+        },
+        "generated_tokens": 457,
+        "mean_repeat_4gram_fraction": 0.0,
+        "format_strict": 0.0
+      },
+      "en_instruction": {
+        "n": 128,
+        "score": 25.0,
+        "capped": 15,
+        "languages": {
+          "en": 120,
+          "fr": 2,
+          "vi": 1,
+          "pl": 1,
+          "und": 2,
+          "pt": 1,
+          "cy": 1
+        },
+        "generated_tokens": 59315,
+        "mean_repeat_4gram_fraction": 0.10435838063998822
+      }
+    },
+    "LR077-s43": {
+      "en_to_sw": {
+        "n": 128,
+        "score": 25.164367153638846,
+        "capped": 4,
+        "languages": {
+          "sw": 127,
+          "en": 1
+        },
+        "generated_tokens": 7394,
+        "mean_repeat_4gram_fraction": 0.03366939031398422
+      },
+      "sw_to_en": {
+        "n": 128,
+        "score": 27.976188962428626,
+        "capped": 0,
+        "languages": {
+          "en": 128
+        },
+        "generated_tokens": 3658,
+        "mean_repeat_4gram_fraction": 0.00020559210526315788
+      },
+      "sw_reading": {
+        "n": 64,
+        "score": 7.1907553996248845,
+        "capped": 3,
+        "languages": {
+          "sw": 63,
+          "tl": 1
+        },
+        "generated_tokens": 2512,
+        "mean_repeat_4gram_fraction": 0.015406065634218289
+      },
+      "en_reading": {
+        "n": 63,
+        "score": 84.12698412698413,
+        "capped": 0,
+        "languages": {
+          "hu": 8,
+          "cy": 8,
+          "de": 19,
+          "en": 26,
+          "sw": 1,
+          "af": 1
+        },
+        "generated_tokens": 365,
+        "mean_repeat_4gram_fraction": 0.0,
+        "format_strict": 0.0
+      },
+      "en_instruction": {
+        "n": 128,
+        "score": 17.1875,
+        "capped": 6,
+        "languages": {
+          "en": 125,
+          "fr": 2,
+          "it": 1
+        },
+        "generated_tokens": 67282,
+        "mean_repeat_4gram_fraction": 0.13098056395172392
+      }
+    },
+    "Attn-s43": {
+      "en_to_sw": {
+        "n": 128,
+        "score": 24.05782091860834,
+        "capped": 3,
+        "languages": {
+          "sw": 127,
+          "en": 1
+        },
+        "generated_tokens": 7176,
+        "mean_repeat_4gram_fraction": 0.021473377096562482
+      },
+      "sw_to_en": {
+        "n": 128,
+        "score": 26.200801640720016,
+        "capped": 0,
+        "languages": {
+          "en": 128
+        },
+        "generated_tokens": 3600,
+        "mean_repeat_4gram_fraction": 0.0005208333333333333
+      },
+      "sw_reading": {
+        "n": 64,
+        "score": 8.326217765148618,
+        "capped": 7,
+        "languages": {
+          "sw": 63,
+          "fr": 1
+        },
+        "generated_tokens": 3691,
+        "mean_repeat_4gram_fraction": 0.08006211296875446
+      },
+      "en_reading": {
+        "n": 63,
+        "score": 79.36507936507937,
+        "capped": 0,
+        "languages": {
+          "tl": 1,
+          "cy": 10,
+          "en": 28,
+          "da": 1,
+          "hu": 10,
+          "de": 11,
+          "sw": 1,
+          "af": 1
+        },
+        "generated_tokens": 378,
+        "mean_repeat_4gram_fraction": 0.0,
+        "format_strict": 0.0
+      },
+      "en_instruction": {
+        "n": 128,
+        "score": 16.40625,
+        "capped": 15,
+        "languages": {
+          "en": 127,
+          "fr": 1
+        },
+        "generated_tokens": 74369,
+        "mean_repeat_4gram_fraction": 0.11540092518340828
+      }
+    },
+    "Mix50-s42": {
+      "en_to_sw": {
+        "n": 128,
+        "score": 15.44489906236492,
+        "capped": 0,
+        "languages": {
+          "en": 122,
+          "sw": 6
+        },
+        "generated_tokens": 3671,
+        "mean_repeat_4gram_fraction": 0.0
+      },
+      "sw_to_en": {
+        "n": 128,
+        "score": 27.71012497574764,
+        "capped": 0,
+        "languages": {
+          "en": 128
+        },
+        "generated_tokens": 3656,
+        "mean_repeat_4gram_fraction": 0.0015570367132867135
+      },
+      "sw_reading": {
+        "n": 64,
+        "score": 15.259603154168744,
+        "capped": 9,
+        "languages": {
+          "sw": 54,
+          "fr": 1,
+          "so": 1,
+          "id": 3,
+          "hr": 2,
+          "und": 1,
+          "fi": 2
+        },
+        "generated_tokens": 3358,
+        "mean_repeat_4gram_fraction": 0.06748984279990294
+      },
+      "en_reading": {
+        "n": 63,
+        "score": 80.95238095238095,
+        "capped": 0,
+        "languages": {
+          "tl": 1,
+          "cy": 4,
+          "en": 35,
+          "hu": 7,
+          "de": 13,
+          "sw": 1,
+          "ro": 1,
+          "af": 1
+        },
+        "generated_tokens": 434,
+        "mean_repeat_4gram_fraction": 0.0,
+        "format_strict": 0.0
+      },
+      "en_instruction": {
+        "n": 128,
+        "score": 21.09375,
+        "capped": 17,
+        "languages": {
+          "en": 120,
+          "fr": 4,
+          "de": 1,
+          "pl": 1,
+          "tl": 1,
+          "cy": 1
+        },
+        "generated_tokens": 67335,
+        "mean_repeat_4gram_fraction": 0.14675667629420777
+      }
+    },
+    "Mix50-s43": {
+      "en_to_sw": {
+        "n": 128,
+        "score": 24.667886994073783,
+        "capped": 4,
+        "languages": {
+          "sw": 127,
+          "en": 1
+        },
+        "generated_tokens": 7361,
+        "mean_repeat_4gram_fraction": 0.02940511884126759
+      },
+      "sw_to_en": {
+        "n": 128,
+        "score": 27.81499465642546,
+        "capped": 0,
+        "languages": {
+          "en": 127,
+          "nl": 1
+        },
+        "generated_tokens": 3586,
+        "mean_repeat_4gram_fraction": 0.0
+      },
+      "sw_reading": {
+        "n": 64,
+        "score": 10.17021705486779,
+        "capped": 1,
+        "languages": {
+          "sw": 61,
+          "id": 2,
+          "tl": 1
+        },
+        "generated_tokens": 1873,
+        "mean_repeat_4gram_fraction": 0.014392445388349514
+      },
+      "en_reading": {
+        "n": 63,
+        "score": 84.12698412698413,
+        "capped": 0,
+        "languages": {
+          "tl": 1,
+          "cy": 7,
+          "en": 34,
+          "de": 12,
+          "hu": 6,
+          "sw": 1,
+          "pt": 1,
+          "af": 1
+        },
+        "generated_tokens": 418,
+        "mean_repeat_4gram_fraction": 0.0,
+        "format_strict": 0.0
+      },
+      "en_instruction": {
+        "n": 128,
+        "score": 14.84375,
+        "capped": 12,
+        "languages": {
+          "en": 126,
+          "ca": 1,
+          "fr": 1
+        },
+        "generated_tokens": 68096,
+        "mean_repeat_4gram_fraction": 0.10432654758088995
+      }
+    }
+  },
+  "comparisons": {
+    "Mix50-s42-minus-LR077-s42": {
+      "en_to_sw": {
+        "difference": -3.506903596388133,
+        "low": -4.599840616722582,
+        "high": -2.4706334448759617,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      },
+      "sw_to_en": {
+        "difference": 0.16384138687469374,
+        "low": -1.374038891990137,
+        "high": 1.7947375868484907,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      },
+      "sw_reading": {
+        "difference": -2.0300999177196446,
+        "low": -8.918029356633925,
+        "high": 4.067725381706279,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_reading": {
+        "difference": -3.1746031746031744,
+        "low": -7.936507936507936,
+        "high": 0.0,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": 3.125,
+        "low": -3.125,
+        "high": 9.375,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "Attn-s42-minus-LR077-s42": {
+      "en_to_sw": {
+        "difference": 4.069535459449327,
+        "low": 2.5347255262639052,
+        "high": 5.602730796466041,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      },
+      "sw_to_en": {
+        "difference": -2.4472221180071116,
+        "low": -3.9601946501077565,
+        "high": -0.9297829862226458,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      },
+      "sw_reading": {
+        "difference": -1.5954166767747888,
+        "low": -8.393676547045708,
+        "high": 4.90793132688382,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_reading": {
+        "difference": -1.5873015873015872,
+        "low": -7.936507936507936,
+        "high": 3.1746031746031744,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": 7.03125,
+        "low": 0.78125,
+        "high": 14.0625,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "Mix50-s43-minus-LR077-s43": {
+      "en_to_sw": {
+        "difference": -0.4964801595650634,
+        "low": -1.7085684449847356,
+        "high": 0.7473188223276417,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      },
+      "sw_to_en": {
+        "difference": -0.16119430600316775,
+        "low": -1.0545284576492053,
+        "high": 0.7755456982622554,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      },
+      "sw_reading": {
+        "difference": 2.979461655242906,
+        "low": 0.0674944234686885,
+        "high": 6.096888914972555,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_reading": {
+        "difference": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": -2.34375,
+        "low": -7.03125,
+        "high": 2.34375,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "Attn-s43-minus-LR077-s43": {
+      "en_to_sw": {
+        "difference": -1.1065462350305069,
+        "low": -2.2839042010576707,
+        "high": 0.00360054640359617,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      },
+      "sw_to_en": {
+        "difference": -1.7753873217086102,
+        "low": -3.1323169991700683,
+        "high": -0.447864197106911,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      },
+      "sw_reading": {
+        "difference": 1.1354623655237335,
+        "low": -2.083307629442506,
+        "high": 4.788179373056297,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_reading": {
+        "difference": -4.761904761904762,
+        "low": -11.11111111111111,
+        "high": 1.5873015873015872,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": -0.78125,
+        "low": -5.46875,
+        "high": 4.6875,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    }
+  },
+  "mean_order_comparisons": {
+    "en_to_sw": {
+      "difference": -2.001691877976598,
+      "low": -2.895946752147254,
+      "high": -1.1177313774764506,
+      "n_sources": 128,
+      "orders": 2,
+      "not_two_times_independent_items": true,
+      "fixed_models_item_uncertainty_not_seed_population": true
+    },
+    "sw_to_en": {
+      "difference": 0.0013235404357629932,
+      "low": -0.9279042076348253,
+      "high": 0.9753342254917794,
+      "n_sources": 128,
+      "orders": 2,
+      "not_two_times_independent_items": true,
+      "fixed_models_item_uncertainty_not_seed_population": true
+    },
+    "sw_reading": {
+      "difference": 0.4746808687616305,
+      "low": -3.4533789993699537,
+      "high": 4.191330317578229,
+      "n_sources": 64,
+      "orders": 2,
+      "not_two_times_independent_items": true,
+      "fixed_models_item_uncertainty_not_seed_population": true
+    },
+    "en_reading": {
+      "difference": -1.5873015873015872,
+      "low": -3.968253968253968,
+      "high": 0.0,
+      "n_sources": 63,
+      "orders": 2,
+      "not_two_times_independent_items": true,
+      "fixed_models_item_uncertainty_not_seed_population": true
+    },
+    "en_instruction": {
+      "difference": 0.390625,
+      "low": -3.515625,
+      "high": 4.296875,
+      "n_sources": 128,
+      "orders": 2,
+      "not_two_times_independent_items": true,
+      "fixed_models_item_uncertainty_not_seed_population": true
+    }
+  },
+  "English_vs_Base": {
+    "LR077-s42": {
+      "en_reading": {
+        "difference": 0.0,
+        "low": -6.349206349206349,
+        "high": 6.349206349206349,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": -5.46875,
+        "low": -12.5,
+        "high": 0.78125,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "Attn-s42": {
+      "en_reading": {
+        "difference": -1.5873015873015872,
+        "low": -7.936507936507936,
+        "high": 3.1746031746031744,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": 1.5625,
+        "low": -6.25,
+        "high": 9.375,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "LR077-s43": {
+      "en_reading": {
+        "difference": 0.0,
+        "low": -6.349206349206349,
+        "high": 6.349206349206349,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": -6.25,
+        "low": -14.0625,
+        "high": 1.5625,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "Attn-s43": {
+      "en_reading": {
+        "difference": -4.761904761904762,
+        "low": -11.11111111111111,
+        "high": 0.0,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": -7.03125,
+        "low": -14.84375,
+        "high": 0.78125,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "Mix50-s42": {
+      "en_reading": {
+        "difference": -3.1746031746031744,
+        "low": -11.11111111111111,
+        "high": 4.761904761904762,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": -2.34375,
+        "low": -10.15625,
+        "high": 4.6875,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "Mix50-s43": {
+      "en_reading": {
+        "difference": 0.0,
+        "low": -6.349206349206349,
+        "high": 6.349206349206349,
+        "n": 63,
+        "source_groups": 63,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": -8.59375,
+        "low": -15.625,
+        "high": -1.5625,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    }
+  }
+}

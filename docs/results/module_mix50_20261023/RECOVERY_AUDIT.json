@@ -1,0 +1,14 @@
+{
+  "cause": "Original worker argparse REMAINDER does not consume a leading unknown option after --script; --model rejected before GPU initialization/model load.",
+  "failed_task": "confirmation-Base",
+  "failed_task_gpu_context_hours": 0,
+  "failure_log_retained": true,
+  "no_scientific_train_retry": true,
+  "fix": "Independent recovery_worker uses parse_known_args and forwards unchanged evaluate flags; model/data/scoring/generation and original source freeze untouched.",
+  "CPU_CLI_regression_passed": true,
+  "recovery_worker_sha256": "356eab5b80cce41092e2f7d2deac6e6f72f094b2c5f89d21c951b9b70584d92a",
+  "original_worker_sha256": "dbc8045e22a4d51cc3a12ab09ecc52e7aab0b86d9d3fca76c2af10855e20b131",
+  "frozen_unix": 1792746295.910388,
+  "recovery_coordinator_sha256": "489f3705a1f14d47c096aafdba2194d99d25c025d6ed651973928d3309c1f2ec",
+  "all_original_frozen_sources_still_exact": true
+}

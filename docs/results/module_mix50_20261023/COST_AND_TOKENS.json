@@ -1,0 +1,374 @@
+{
+  "total_GPU_context_hours": 9.853451399935617,
+  "GPU_ceiling_hours": 16,
+  "within_budget": true,
+  "new_scientific_runs": 4,
+  "steps_per_run": 4293,
+  "main_input_total": 6145404,
+  "main_supervised_total": 2397876,
+  "recipe_components_per_run": {
+    "aya": {
+      "presentations": 5240,
+      "input": 1219514,
+      "supervised": 517753
+    },
+    "translation_en2target": {
+      "presentations": 1683,
+      "input": 159978,
+      "supervised": 52316
+    },
+    "translation_target2en": {
+      "presentations": 1663,
+      "input": 156859,
+      "supervised": 29400
+    }
+  },
+  "technical_physical_updates_per_job": 12,
+  "technical_physical_input_total": 193776,
+  "technical_physical_supervised_total": 23040,
+  "technical_replayed_updates_counted": true,
+  "calibration_training_tokens": 0,
+  "replay_auxiliary_training_tokens": 0,
+  "new_generation_rows": 4096,
+  "new_scored_rows": 4092,
+  "endpoint_prompt_tokens": 1448538,
+  "endpoint_generated_tokens": 852348,
+  "pre_CUDA_CLI_failure_count": 1,
+  "pre_CUDA_CLI_failure_GPUh": 0,
+  "CPU_observer_failure_GPUh": 0,
+  "training_GPUh": {
+    "LR077-s43": 1.237241516245736,
+    "Attn-s43": 0.8402330994606018,
+    "Mix50-s42": 1.2861432766914367,
+    "Mix50-s43": 1.2632534448305766
+  },
+  "phase_contexts": {
+    "LR077-s43": [
+      {
+        "script": "technical.py",
+        "args": [],
+        "wall_seconds": 139.8238878250122
+      },
+      {
+        "script": "train.py",
+        "args": [
+          "--group",
+          "S-All"
+        ],
+        "wall_seconds": 4454.977105617523
+      },
+      {
+        "script": "evaluate.py",
+        "args": [
+          "--model",
+          "LR077-s43",
+          "--split",
+          "confirmation"
+        ],
+        "wall_seconds": 1421.1429424285889
+      },
+      {
+        "script": "evaluate.py",
+        "args": [
+          "--model",
+          "LR077-s43",
+          "--split",
+          "old"
+        ],
+        "wall_seconds": 1622.6755850315094
+      }
+    ],
+    "Attn-s43": [
+      {
+        "script": "technical.py",
+        "args": [],
+        "wall_seconds": 61.157514572143555
+      },
+      {
+        "script": "train.py",
+        "args": [
+          "--group",
+          "S-Attn"
+        ],
+        "wall_seconds": 3025.667313814163
+      },
+      {
+        "script": "evaluate.py",
+        "args": [
+          "--model",
+          "Attn-s43",
+          "--split",
+          "confirmation"
+        ],
+        "wall_seconds": 1589.0948123931885
+      },
+      {
+        "script": "evaluate.py",
+        "args": [
+          "--model",
+          "Attn-s43",
+          "--split",
+          "old"
+        ],
+        "wall_seconds": 1734.9858989715576
+      }
+    ],
+    "Mix50-s42": [
+      {
+        "script": "technical.py",
+        "args": [],
+        "wall_seconds": 287.4628074169159
+      },
+      {
+        "script": "train.py",
+        "args": [
+          "--group",
+          "S-Mix50"
+        ],
+        "wall_seconds": 4631.104509592056
+      },
+      {
+        "script": "evaluate.py",
+        "args": [
+          "--model",
+          "Mix50-s42",
+          "--split",
+          "confirmation"
+        ],
+        "wall_seconds": 1568.653725385666
+      },
+      {
+        "script": "evaluate.py",
+        "args": [
+          "--model",
+          "Mix50-s42",
+          "--split",
+          "old"
+        ],
+        "wall_seconds": 1807.9312529563904
+      }
+    ],
+    "Mix50-s43": [
+      {
+        "script": "technical.py",
+        "args": [],
+        "wall_seconds": 144.99786281585693
+      },
+      {
+        "script": "train.py",
+        "args": [
+          "--group",
+          "S-Mix50"
+        ],
+        "wall_seconds": 4548.639768362045
+      },
+      {
+        "script": "evaluate.py",
+        "args": [
+          "--model",
+          "Mix50-s43",
+          "--split",
+          "confirmation"
+        ],
+        "wall_seconds": 1582.9017333984375
+      },
+      {
+        "script": "evaluate.py",
+        "args": [
+          "--model",
+          "Mix50-s43",
+          "--split",
+          "old"
+        ],
+        "wall_seconds": 1757.172439813614
+      }
+    ]
+  },
+  "endpoints": [
+    {
+      "split": "confirmation",
+      "model": "Attn-s42",
+      "rows": 256,
+      "scored_rows": 256,
+      "counts": {
+        "prompt_tokens": 122890,
+        "generated_tokens": 56201
+      },
+      "GPUh": 0.3724934502442678,
+      "physical_peak_MiB": 4199
+    },
+    {
+      "split": "confirmation",
+      "model": "Attn-s43",
+      "rows": 256,
+      "scored_rows": 256,
+      "counts": {
+        "prompt_tokens": 122890,
+        "generated_tokens": 74011
+      },
+      "GPUh": 0.44133139822218154,
+      "physical_peak_MiB": 4269
+    },
+    {
+      "split": "confirmation",
+      "model": "Base",
+      "rows": 256,
+      "scored_rows": 256,
+      "counts": {
+        "prompt_tokens": 122890,
+        "generated_tokens": 101443
+      },
+      "GPUh": 0.5144595223002963,
+      "physical_peak_MiB": 4199
+    },
+    {
+      "split": "confirmation",
+      "model": "LR077-s42",
+      "rows": 256,
+      "scored_rows": 256,
+      "counts": {
+        "prompt_tokens": 122890,
+        "generated_tokens": 66505
+      },
+      "GPUh": 0.4219889373249478,
+      "physical_peak_MiB": 4199
+    },
+    {
+      "split": "confirmation",
+      "model": "LR077-s43",
+      "rows": 256,
+      "scored_rows": 256,
+      "counts": {
+        "prompt_tokens": 122890,
+        "generated_tokens": 73581
+      },
+      "GPUh": 0.39467752748065527,
+      "physical_peak_MiB": 4269
+    },
+    {
+      "split": "confirmation",
+      "model": "Mix50-s42",
+      "rows": 256,
+      "scored_rows": 256,
+      "counts": {
+        "prompt_tokens": 122890,
+        "generated_tokens": 64485
+      },
+      "GPUh": 0.4356496528784434,
+      "physical_peak_MiB": 4269
+    },
+    {
+      "split": "confirmation",
+      "model": "Mix50-s43",
+      "rows": 256,
+      "scored_rows": 256,
+      "counts": {
+        "prompt_tokens": 122890,
+        "generated_tokens": 72361
+      },
+      "GPUh": 0.4396068057086733,
+      "physical_peak_MiB": 4269
+    },
+    {
+      "split": "old",
+      "model": "Attn-s43",
+      "rows": 512,
+      "scored_rows": 511,
+      "counts": {
+        "prompt_tokens": 141278,
+        "generated_tokens": 89217
+      },
+      "GPUh": 0.4818145028087828,
+      "physical_peak_MiB": 7541
+    },
+    {
+      "split": "old",
+      "model": "LR077-s43",
+      "rows": 512,
+      "scored_rows": 511,
+      "counts": {
+        "prompt_tokens": 141278,
+        "generated_tokens": 81214
+      },
+      "GPUh": 0.45061846898661717,
+      "physical_peak_MiB": 7541
+    },
+    {
+      "split": "old",
+      "model": "Mix50-s42",
+      "rows": 512,
+      "scored_rows": 511,
+      "counts": {
+        "prompt_tokens": 141278,
+        "generated_tokens": 78485
+      },
+      "GPUh": 0.5020795302920872,
+      "physical_peak_MiB": 7541
+    },
+    {
+      "split": "old",
+      "model": "Mix50-s43",
+      "rows": 512,
+      "scored_rows": 511,
+      "counts": {
+        "prompt_tokens": 141278,
+        "generated_tokens": 81365
+      },
+      "GPUh": 0.4879757934146457,
+      "physical_peak_MiB": 7541
+    },
+    {
+      "split": "prompt",
+      "model": "Attn-s42",
+      "rows": 64,
+      "scored_rows": 64,
+      "counts": {
+        "prompt_tokens": 5799,
+        "generated_tokens": 3761
+      },
+      "GPUh": 0.025116410785251193,
+      "physical_peak_MiB": 3623
+    },
+    {
+      "split": "prompt",
+      "model": "Base",
+      "rows": 64,
+      "scored_rows": 64,
+      "counts": {
+        "prompt_tokens": 5799,
+        "generated_tokens": 4455
+      },
+      "GPUh": 0.03423730452855428,
+      "physical_peak_MiB": 3623
+    },
+    {
+      "split": "prompt",
+      "model": "LR077-s42",
+      "rows": 64,
+      "scored_rows": 64,
+      "counts": {
+        "prompt_tokens": 5799,
+        "generated_tokens": 2671
+      },
+      "GPUh": 0.0214242285490036,
+      "physical_peak_MiB": 3575
+    },
+    {
+      "split": "prompt",
+      "model": "MLP-s42",
+      "rows": 64,
+      "scored_rows": 64,
+      "counts": {
+        "prompt_tokens": 5799,
+        "generated_tokens": 2593
+      },
+      "GPUh": 0.022191048860549928,
+      "physical_peak_MiB": 3623
+    }
+  ],
+  "checkpoint_bytes_two_full_per_run": 92099611138,
+  "cost_definition": "Worker holds CUDA context through loading, hashing, saving and evaluation; includes actual diagnostics/replay. Failed argv parse occurred before CUDA init. Other projects excluded from study bill but included in shared account GPU cap.",
+  "raw_CPUs_source_verification_is_not_GPU_time": true,
+  "new_primary_translation_confirmation_rows": 0,
+  "missing_primary_does_not_reduce_old_denominator": true
+}

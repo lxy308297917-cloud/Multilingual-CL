@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "seed42_Mix50_first2_preupdate_loss_and_fullclip_norm_bitwise_match_reused_LR077": true,
+  "all3_seed43_first2_preupdate_loss_and_fullclip_norm_bitwise_equal": true,
+  "no_intermediate_task_scores_accessed": true
+}

@@ -1,0 +1,9 @@
+{
+  "primary_new_translation_available": false,
+  "gates": {},
+  "passed": false,
+  "decision": "Evidence insufficient for original progression rule: fresh source-isolated translation confirmation unavailable",
+  "no_automatic_new_training": true,
+  "actual_strength_not_matched": true,
+  "two_orders_not_training_seed_population": true
+}
