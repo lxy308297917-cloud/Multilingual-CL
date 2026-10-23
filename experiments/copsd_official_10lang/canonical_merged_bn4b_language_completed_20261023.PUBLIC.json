@@ -1,0 +1,165 @@
+{
+  "accepted_at": "2026-10-23T09:32:14.275019",
+  "protocol": "project_BN4B_canonical_merged_dev200_n1_8192_c32_v1",
+  "language": {
+    "Base": {
+      "bn": {
+        "summary": {
+          "thinking": {
+            "total_items": 200,
+            "statuses": {
+              "predicted": 200
+            },
+            "top1_label_counts": {
+              "__label__ben_Beng": 200
+            },
+            "target_top1_probability_ge_0_8": 200,
+            "correct_items_label_counts": {
+              "__label__ben_Beng": 98
+            }
+          },
+          "final": {
+            "total_items": 200,
+            "statuses": {
+              "no_final_section": 66,
+              "predicted": 133,
+              "too_short": 1
+            },
+            "top1_label_counts": {
+              "__label__ben_Beng": 128,
+              "__label__mni_Beng": 5
+            },
+            "target_top1_probability_ge_0_8": 125,
+            "correct_items_label_counts": {
+              "__label__ben_Beng": 96,
+              "__label__mni_Beng": 2
+            }
+          }
+        },
+        "correct_and_both_parts_target_high_confidence": 94,
+        "source_items_sha256": "eaf3a2919876cab36029bff25bc147d707d1a3681121663b0cb94c923b4c8d33",
+        "analysis_sha256": "dde693281551231462f83a3f0aa0a75876787e00e762bffbb102f03a28e5bd03"
+      },
+      "en": {
+        "summary": {
+          "thinking": {
+            "total_items": 200,
+            "statuses": {
+              "predicted": 200
+            },
+            "top1_label_counts": {
+              "__label__eng_Latn": 200
+            },
+            "target_top1_probability_ge_0_8": 190,
+            "correct_items_label_counts": {
+              "__label__eng_Latn": 162
+            }
+          },
+          "final": {
+            "total_items": 200,
+            "statuses": {
+              "predicted": 188,
+              "no_final_section": 12
+            },
+            "top1_label_counts": {
+              "__label__eng_Latn": 186,
+              "__label__yor_Latn": 1,
+              "__label__sna_Latn": 1
+            },
+            "target_top1_probability_ge_0_8": 161,
+            "correct_items_label_counts": {
+              "__label__eng_Latn": 161,
+              "__label__sna_Latn": 1
+            }
+          }
+        },
+        "correct_and_both_parts_target_high_confidence": 134,
+        "source_items_sha256": "f0f32ee83ceac3510fefb0050fd2d0eca236cb4b53ca7169a7069481660bdc5e",
+        "analysis_sha256": "5fc4d7a31cf672428bd0fa4cca14e938345300181ff473640f7933b507183240"
+      }
+    },
+    "BN20": {
+      "bn": {
+        "summary": {
+          "thinking": {
+            "total_items": 200,
+            "statuses": {
+              "predicted": 200
+            },
+            "top1_label_counts": {
+              "__label__ben_Beng": 199,
+              "__label__eng_Latn": 1
+            },
+            "target_top1_probability_ge_0_8": 199,
+            "correct_items_label_counts": {
+              "__label__ben_Beng": 91
+            }
+          },
+          "final": {
+            "total_items": 200,
+            "statuses": {
+              "predicted": 116,
+              "no_final_section": 82,
+              "too_short": 2
+            },
+            "top1_label_counts": {
+              "__label__ben_Beng": 111,
+              "__label__mni_Beng": 4,
+              "__label__eng_Latn": 1
+            },
+            "target_top1_probability_ge_0_8": 105,
+            "correct_items_label_counts": {
+              "__label__ben_Beng": 80,
+              "too_short": 1,
+              "no_final_section": 8,
+              "__label__mni_Beng": 2
+            }
+          }
+        },
+        "correct_and_both_parts_target_high_confidence": 77,
+        "source_items_sha256": "2c1ffbb1575899af275524676a693ca7c06edac1e14c1800b3cc083fd25f07a5",
+        "analysis_sha256": "5acc171186eb9616953b79f25fd02a6536eb962e98c237f0ca77f2633a52ccbe"
+      },
+      "en": {
+        "summary": {
+          "thinking": {
+            "total_items": 200,
+            "statuses": {
+              "predicted": 200
+            },
+            "top1_label_counts": {
+              "__label__eng_Latn": 199,
+              "__label__slk_Latn": 1
+            },
+            "target_top1_probability_ge_0_8": 194,
+            "correct_items_label_counts": {
+              "__label__eng_Latn": 157
+            }
+          },
+          "final": {
+            "total_items": 200,
+            "statuses": {
+              "predicted": 181,
+              "no_final_section": 19
+            },
+            "top1_label_counts": {
+              "__label__eng_Latn": 179,
+              "__label__yor_Latn": 2
+            },
+            "target_top1_probability_ge_0_8": 164,
+            "correct_items_label_counts": {
+              "__label__eng_Latn": 154,
+              "no_final_section": 1,
+              "__label__yor_Latn": 2
+            }
+          }
+        },
+        "correct_and_both_parts_target_high_confidence": 139,
+        "source_items_sha256": "2cc5a1300028dfc75af90aa1508f8faafecc375e834fbf07a9c940777ee5c1ba",
+        "analysis_sha256": "b885babbc5d9a1f959a92d47232db412cd405e5250214d50204739e6f2715870"
+      }
+    }
+  },
+  "new_GPU_work": false,
+  "scope": "Whole-part GlotLID supplement for the same accepted400prompt Base/BN20 merged-serving pair. Language ID is not calibrated fluency, purity or mathematical proof correctness; numeric/short finals may be unreliable. Raw scores unchanged. Not native16 equivalence or language selection."
+}

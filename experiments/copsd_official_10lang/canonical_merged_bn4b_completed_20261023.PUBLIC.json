@@ -1,0 +1,102 @@
+{
+  "completed_at": "2026-10-23T09:30:53.490111",
+  "protocol": "project_BN4B_canonical_merged_dev200_n1_8192_c32_v1",
+  "languages": {
+    "bn": {
+      "Base": {
+        "items": 200,
+        "single_correct": 98,
+        "single_accuracy": 0.49,
+        "generated_tokens": 1218285,
+        "normal_terminations": 119,
+        "truncated": 81,
+        "answer_extraction_failures": 70,
+        "n": 1,
+        "formal_test": false,
+        "protocol": "project_BN4B_canonical_merged_dev200_n1_8192_c32_v1",
+        "ITEMS_sha256": "eaf3a2919876cab36029bff25bc147d707d1a3681121663b0cb94c923b4c8d33"
+      },
+      "BN20": {
+        "items": 200,
+        "single_correct": 91,
+        "single_accuracy": 0.455,
+        "generated_tokens": 1279948,
+        "normal_terminations": 107,
+        "truncated": 93,
+        "answer_extraction_failures": 76,
+        "n": 1,
+        "formal_test": false,
+        "protocol": "project_BN4B_canonical_merged_dev200_n1_8192_c32_v1",
+        "ITEMS_sha256": "2c1ffbb1575899af275524676a693ca7c06edac1e14c1800b3cc083fd25f07a5"
+      },
+      "paired": {
+        "gained": 21,
+        "lost": 28,
+        "delta_correct": -7
+      },
+      "paired_question_bootstrap95_CI_pp": [
+        -10.5,
+        3.5000000000000004
+      ]
+    },
+    "en": {
+      "Base": {
+        "items": 200,
+        "single_correct": 162,
+        "single_accuracy": 0.81,
+        "generated_tokens": 838920,
+        "normal_terminations": 181,
+        "truncated": 19,
+        "answer_extraction_failures": 11,
+        "n": 1,
+        "formal_test": false,
+        "protocol": "project_BN4B_canonical_merged_dev200_n1_8192_c32_v1",
+        "ITEMS_sha256": "f0f32ee83ceac3510fefb0050fd2d0eca236cb4b53ca7169a7069481660bdc5e"
+      },
+      "BN20": {
+        "items": 200,
+        "single_correct": 157,
+        "single_accuracy": 0.785,
+        "generated_tokens": 901207,
+        "normal_terminations": 174,
+        "truncated": 26,
+        "answer_extraction_failures": 17,
+        "n": 1,
+        "formal_test": false,
+        "protocol": "project_BN4B_canonical_merged_dev200_n1_8192_c32_v1",
+        "ITEMS_sha256": "2cc5a1300028dfc75af90aa1508f8faafecc375e834fbf07a9c940777ee5c1ba"
+      },
+      "paired": {
+        "gained": 7,
+        "lost": 12,
+        "delta_correct": -5
+      },
+      "paired_question_bootstrap95_CI_pp": [
+        -7.000000000000001,
+        1.5
+      ]
+    }
+  },
+  "unique_parent_costs": [
+    {
+      "case": "Base",
+      "queue": "copsd-canon-bn4b-base-v1",
+      "parent_GPU_hours": 0.9347222222222222,
+      "generated_tokens": 2057205,
+      "generation_seconds": 3251.5776280704886
+    },
+    {
+      "case": "BN20",
+      "queue": "copsd-canon-bn4b-bn20-v1",
+      "parent_GPU_hours": 1.0230555555555556,
+      "generated_tokens": 2181155,
+      "generation_seconds": 3570.8586435094476
+    }
+  ],
+  "new_evaluation_parent_GPU_hours": 1.9577777777777778,
+  "new_evaluation_tokens": 4238360,
+  "TensorBoard_four_accuracies_two_costs_read_back": true,
+  "freeze_sha256": "adfc159a7f958ddc57417bd69b91dcdf6fce8e6180f7a63bcaf055635c58c516",
+  "collector_sha256": "562d70b4ee154cfc6d3e3f8c2a60124c76cd272f2de4e793331f27dbe1ba8d4c",
+  "scope": "New merged-serving paired development protocol only. Both Base and BN20 regenerated; no mixing with historical native16 scores or recounting old costs. One fixed training seed; confidence intervals over questions, not seed population. No new training or three-language selection."
+}

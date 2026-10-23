@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-23T09:33:28.596533",
+  "protocol": "project_BN4B_component_clip_one_factor20_seed42_v1",
+  "status": "first_online_generation_active",
+  "training_parent_started": true,
+  "initial398weight_sync_verified": true,
+  "first32inputexposures_match_clipped_reference": true,
+  "completed_updates_claimed": 0,
+  "training_GPUs": 1,
+  "rollout_server_GPUs": 1,
+  "account_GPU_limit": 4,
+  "CPU_teacher_forward": false,
+  "training_freeze_sha256": "464bc59750350a957b3a22482eb30f77639e218517a426b2407a503b30df2187",
+  "scope": "FreshBase official-supported no-component-clip intervention started and firstonlinebatch active. Not a completedtrainingupdate ornewmethodresult. ExistingnativeEnglish evaluation continues."
+}
