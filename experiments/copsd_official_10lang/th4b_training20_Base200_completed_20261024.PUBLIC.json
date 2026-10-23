@@ -1,0 +1,55 @@
+{
+  "recorded_at": "2026-10-24T04:32:33.461668",
+  "cohort": "independent_4B",
+  "target_language": "th",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "training": {
+    "completed_updates": 20,
+    "effective_batch": 32,
+    "actual_exposures": 640,
+    "online_rollouts": 640,
+    "generated_tokens": 1225505,
+    "valid_loss_positions": 1225505,
+    "teacher_forward_calls": 640,
+    "verified_weight_synchronizations": 21,
+    "base_unchanged_bitwise": true,
+    "fixed_teacher_via_disabled_original_Base": true,
+    "optimizer_scheduler_step20_verified": true,
+    "adapter_sha256": "1988916a56774aebef0578024bb48dfec6151f895d0440a226527d6d6455fa19",
+    "two_role_parent_wall_seconds": 5364.0,
+    "two_role_parent_GPU_hours": 2.98,
+    "from_original_Base": true,
+    "failed_training_attempts": 0
+  },
+  "Base_development": {
+    "metrics": {
+      "items": 200,
+      "single_correct": 142,
+      "generated_tokens": 733811,
+      "truncated": 20,
+      "normal_terminations": 180,
+      "answer_extraction_failures": 13,
+      "protocol": "project_single4b_TH_dev200_n1_8192_c16_v1",
+      "formal_test": false,
+      "n": 1,
+      "generation_count": 200,
+      "single_accuracy": 0.71,
+      "generation_seconds": 1233.1148759163916,
+      "model_load_seconds": 12.053076421841979,
+      "actual_max_num_seqs": 16
+    },
+    "source": {
+      "run_id": "th4b_dev200_20261024_v1_Base_th",
+      "items_sha256": "617536720617fdcad795af40bdb5f0a82050b47567418e6b0b1db410239b08c1",
+      "config_sha256": "e9499424f28ef9d05c260a7cd6a5dacdcc0c983350f647daf1117ad060fccaf7"
+    },
+    "parent_GPU_hours": 0.36444444444444446
+  },
+  "trained_development_status": "Checkpoint20 released; preflight/one final TH and English evaluation pending. No trained accuracy claim.",
+  "cached_Base_EN_correct_of200": 166,
+  "English_Base_cost_recounted": false,
+  "three_languages_selected": false,
+  "sequential_experiment_started": false,
+  "scope": "Completed training and accepted BaseTH development only. n1/8192/native16/fixed200 common protocol. No method effect or promotion before trained TH/EN pairs and languagekeeping review. Final report counts these parent costs once."
+}
