@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "cohort": "Independent4B, not mixed with1.7B ranking",
+  "training_updates": 20,
+  "effective_batch": 32,
+  "training_generation_limit": 2048,
+  "evaluation": {
+    "items_each_language": 200,
+    "n": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "evaluation_seed": 42,
+    "paired_inputs_prompts_sampling_and_scorer_fixed": true,
+    "split": "Reserved development, not formaltest or a new blindtest"
+  },
+  "languages": {
+    "TE": {
+      "target": {
+        "Base_correct_of200": 42,
+        "OPD_correct_of200": 62,
+        "gained": 35,
+        "lost": 15,
+        "delta_percentage_points": 10.0,
+        "paired_question_CI95_percentage_points": [
+          3.5000000000000004,
+          17.0
+        ],
+        "Base_truncated": 129,
+        "OPD_truncated": 136,
+        "Base_extraction_failures": 124,
+        "OPD_extraction_failures": 121
+      },
+      "English": {
+        "Base_correct_of200": 166,
+        "OPD_correct_of200": 162,
+        "gained": 5,
+        "lost": 9,
+        "delta_percentage_points": -2.0,
+        "paired_question_CI95_percentage_points": [
+          -5.5,
+          1.5
+        ],
+        "Base_truncated": 18,
+        "OPD_truncated": 23,
+        "Base_extraction_failures": 12,
+        "OPD_extraction_failures": 16
+      },
+      "total_GPU_hours_including_target_Base_once_excluding_cached_English_Base": 7.416111111111111,
+      "training": {
+        "retained_updates": 5,
+        "recovered_updates": 15,
+        "logical_exposures": 640,
+        "actual_generated_trajectories_including_failed_and_discarded": 736,
+        "actual_training_generated_tokens_including_failed_and_discarded": 1505890,
+        "logical_valid_loss_positions": 1309576,
+        "failed_training_and_repair_checks_included_in_total_GPU_hours": true,
+        "server_RNG_bitwise_continuation_claimed": false
+      },
+      "language": {
+        "target_thinking_high_confidence_Base": 200,
+        "target_thinking_high_confidence_OPD": 198,
+        "target_thinking_and_correct_Base": 42,
+        "target_thinking_and_correct_OPD": 60,
+        "English_thinking_top1_OPD": 200,
+        "English_thinking_high_confidence_OPD": 191,
+        "target_missing_closing_think_Base": 107,
+        "target_missing_closing_think_OPD": 120
+      },
+      "next_action": "One independent freshBase seed43 confirmation at matched20budget; not selected for sequential training yet."
+    },
+    "TH": {
+      "target": {
+        "Base_correct_of200": 142,
+        "OPD_correct_of200": 134,
+        "gained": 17,
+        "lost": 25,
+        "delta_percentage_points": -4.0,
+        "paired_question_CI95_percentage_points": [
+          -10.5,
+          2.0
+        ],
+        "Base_truncated": 20,
+        "OPD_truncated": 7,
+        "Base_extraction_failures": 13,
+        "OPD_extraction_failures": 2
+      },
+      "English": {
+        "Base_correct_of200": 166,
+        "OPD_correct_of200": 163,
+        "gained": 4,
+        "lost": 7,
+        "delta_percentage_points": -1.5,
+        "paired_question_CI95_percentage_points": [
+          -5.0,
+          1.5
+        ],
+        "Base_truncated": 18,
+        "OPD_truncated": 25,
+        "Base_extraction_failures": 12,
+        "OPD_extraction_failures": 16
+      },
+      "total_GPU_hours_including_target_Base_once_excluding_cached_English_Base": 5.295277777777778,
+      "training": {
+        "exposures": 640,
+        "generated_and_valid_loss_tokens": 1225505
+      },
+      "language": {
+        "target_thinking_high_confidence_Base": 199,
+        "target_thinking_high_confidence_OPD": 199,
+        "target_missing_closing_think_Base": 12,
+        "target_missing_closing_think_OPD": 37,
+        "correct_target_outputs_missing_closing_think_Base": 1,
+        "correct_target_outputs_missing_closing_think_OPD": 27,
+        "English_thinking_top1_OPD": 200,
+        "English_thinking_high_confidence_OPD": 194
+      },
+      "next_action": "Do not promote this fixed TH20 candidate; target and English scores declined."
+    }
+  },
+  "RU_training_completed": {
+    "updates": 20,
+    "actual_rollouts": 640,
+    "generated_and_valid_loss_tokens": 1194259,
+    "verified_weight_syncs": 21,
+    "original_Base_unchanged": true,
+    "wall_minutes": 88.4,
+    "training_GPU_hours": 2.9466666666666668,
+    "paired_evaluation_status": "Still running; no effect claim"
+  },
+  "three_languages_selected": false,
+  "sequential_training_started": false,
+  "uncertainty": "Intervals describe shared questions for fixedmodels only, not trainingseedpopulation or multiplicityadjusted inference. LanguageID is not fluency or proof validation. Original official scores unchanged.",
+  "publication_scope": "Scientific aggregates only. Full validation, runtime bindings, checkpoints, logs and raw outputs retained locally and excluded from this public summary."
+}
