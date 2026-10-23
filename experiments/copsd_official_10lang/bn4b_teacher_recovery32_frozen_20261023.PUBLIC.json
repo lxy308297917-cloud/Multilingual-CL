@@ -1,0 +1,34 @@
+{
+  "protocol": "project_BN4B_privileged_recovery_first32_8192_v1",
+  "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "runtime_sha256": {
+    "evaluate_bn4b_teacher_recovery32.py": "f9a5a10dd1dd94e0cf17a658c6a61598522e8e5fd2c14ef7f77c5e578de15857",
+    "run_bn4b_teacher_recovery32.sh": "7c12635d59f6b78667491e1c7e03fb0cd8812bd8424f3ca2a40a6ff01d277eb5",
+    "bn4b_unclip20_eval_frozen_20261023.PUBLIC.json": "ad62a88ab8dd2f288786b7d5acb282d56923854193af210b4a717c31c28bf526",
+    "bn4b_unclip20_completed_20261023.PUBLIC.json": "d2ff55e2ab5e93577646d9728a7b2127b0c7ae589bee5bba502bbf34d2a12aee"
+  },
+  "official_source_sha256": {
+    "multilingual_data_collator.py": "46d6462fc841977e05c475e8bfc1bdafe4d1438ec34f89af6d5b72205118145d",
+    "language_config.py": "2177afe9b3bd753f6a82a1506848ffec1f834b51a3342bee8801899674010947",
+    "polymath_eval/evaluate_math.py": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865"
+  },
+  "selection": "first32 of existing independent200; never filter by accuracy",
+  "conditions": [
+    "Base",
+    "Clip20",
+    "Unclip20",
+    "Clean"
+  ],
+  "supplied_tokens_per_history": 256,
+  "new_tokens": 8192,
+  "samples": 1,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": -1,
+  "seed": 42,
+  "max_num_seqs": 16,
+  "GPU_count": 1,
+  "max_user_gpus": 4,
+  "scope": "Conditional teacher generation diagnostic only; no optimization, no SFT synthesis, not tokenwise causal proof. Three historyconditions matched length; clean lacks256 supplied tokens. No additional grid if inconclusive."
+}

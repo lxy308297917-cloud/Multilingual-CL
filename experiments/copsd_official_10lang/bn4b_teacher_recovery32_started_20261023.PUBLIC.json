@@ -1,0 +1,23 @@
+{
+  "updated_at": "2026-10-23T14:28:25.263142",
+  "protocol": "project_BN4B_privileged_recovery_first32_8192_v1",
+  "queue": "copsd-bn4b-teacher-recovery32-v1",
+  "phase_at_observation": "running",
+  "manual_start": true,
+  "CPU_preflight_passed": true,
+  "model_hashes_verified": true,
+  "matched_first32_IDs_answers_histories_verified": true,
+  "planned_completions": 128,
+  "conditions": [
+    "Base",
+    "Clip20",
+    "Unclip20",
+    "Clean"
+  ],
+  "supplied_history_tokens": 256,
+  "new_tokens": 8192,
+  "GPU_count": 1,
+  "max_user_gpus": 4,
+  "frozen_sha256": "064b4661cbbd62d745dc398300ffa3be2e83b01d265829c0de61c4b7c30c3d82",
+  "scope": "4B frozen privilegedteacher conditional recovery with developmentstudent histories; no training updates or SFTlabels. Not actual trainingtrajectory replay. Nativeeval prefixes differ from officialtrainingstudent prefix. Old1.7B/2048diagnostic cannot answer this newcohort question."
+}
