@@ -1,0 +1,37 @@
+{
+  "completed_at": "2026-10-23 23:03:03",
+  "training_started_at": "2026-10-23 21:34:32",
+  "training_seed": 43,
+  "data_seed": 43,
+  "training_updates": 20,
+  "scheduler_horizon": 100,
+  "training_exposures": 640,
+  "training_generated_tokens": 1207718,
+  "valid_response_loss_positions": 1207718,
+  "teacher_forward_calls": 640,
+  "parent_wall_seconds": 5311.0,
+  "training_parent_GPU_hours": 2.9505555555555554,
+  "Base_unchanged_bitwise": true,
+  "verified_weight_syncs": 21,
+  "adapter_sha256": "3a18c8a3546bb1b90f8280e8f474f5f49d8bd03460799b371a9c29cc830f669f",
+  "checkpoint20_optimizer_scheduler_verified": true,
+  "training_freeze_sha256": "19ed619a54beb1b6dfb2fb53736478d5f32437b976664be87443bdb212a00f75",
+  "training_proof_sha256": "fb100c413a511b7986ea5a6e738f9e3723b5c65f6e564ec77d78df7fa5f058d1",
+  "evaluation": {
+    "phase": "running",
+    "queue": "copsd-zh4b-seed43-eval-v1",
+    "monitor_PID": 525298,
+    "parent_PID": 525355,
+    "evaluation_question_seed": 42,
+    "items_each": 200,
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "native_LoRA_max_num_seqs": 16,
+    "max_new_tokens": 8192,
+    "cached_both_Base_outputs": true,
+    "results_complete": false
+  },
+  "scope": "Engineering training completion, not repeated efficacy or selectedlanguage. Eval metrics pending. OriginalBase initialization, same2700pool and budget as seed42. Actual GPU restore and vLLM RNG bitwisecontinuation not tested."
+}
