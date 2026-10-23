@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T18:03:49.843699",
+  "updated_at": "2026-10-23T18:21:42.370959",
   "cohort": "Qwen3-4B_independent_development200_not_formal_tests",
   "models": [
     {
@@ -111,7 +111,10 @@
     "Base_report": "zh4b_Base_followup200_completed_20261023.PUBLIC.json",
     "trained_result": "Trainingrunning, no matchedtrainedscore yet",
     "CPU_successor": "zh4b_candidate_series_v2.py; labelcompatibility corrected without GPUrestart",
-    "verified_optimizer_updates_at_least": 1,
-    "training_progress_report": "zh4b_training_started_20261023.PUBLIC.json"
+    "verified_optimizer_updates_at_least": 5,
+    "training_progress_report": "zh4b_training_started_20261023.PUBLIC.json",
+    "checkpoint5_report": "zh4b_checkpoint5_completed_20261023.PUBLIC.json",
+    "first5_exposures": 160,
+    "first5_valid_loss_tokens": 295409
   }
 }

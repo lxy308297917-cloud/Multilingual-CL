@@ -1,0 +1,32 @@
+{
+  "accepted_at": "2026-10-23T18:20:49.099394",
+  "protocol": "independent_ZH4B_dedicated_server_single20_seed42_v1",
+  "checkpoint_step": 5,
+  "scheduler_horizon": 100,
+  "checkpoint_adapter_sha256": "c69d2d496bf20199ff556404287ddea5b59c74cb7eebb77d1b939c723ae28eb8",
+  "finite_LoRA_tensors": 504,
+  "finite_optimizer_state_entries": 504,
+  "optimizer_steps": [
+    5
+  ],
+  "scheduler_epoch": 5,
+  "RNG_components_present": [
+    "cpu",
+    "cuda",
+    "numpy",
+    "python"
+  ],
+  "first5_updates_exposures": 160,
+  "first5_updates_generated_tokens": 295409,
+  "teacher_and_student_forward_calls_at_least": 160,
+  "latest_TensorBoard_scalar_step": 4,
+  "postcheckpoint5_student_sync_verified398_tensors": true,
+  "actual_checkpoint_files_loaded_on_CPU": true,
+  "storage": {
+    "resolved_checkpoint_filesystem": "data0",
+    "data0_free_GiB": 60.54413986206055,
+    "data1_free_GiB": 6501.009334564209
+  },
+  "scope": "Savedstate CPU acceptance, not GPU restore execution or exactserverRNG continuation. Trainingcontinues; no downstreamgain, final20completion or candidate selection claimed.",
+  "first5_updates_valid_loss_tokens": 295409
+}

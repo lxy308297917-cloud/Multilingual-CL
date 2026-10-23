@@ -1,7 +1,7 @@
 # 多语言适配与遗忘实验总览
 
 <!-- COPSD_LATEST_STATUS_BEGIN -->
-> 2026-10-23：4B教师恢复诊断完成，三种学生前缀后答对28/27/28题（各32题），无前缀28题；有英文参考特权，不是benchmark或逐token监督正确的证明。BN无裁剪开发集无收益；仅SW有重复目标语收益，三语言未选定、顺序实验未启动。
+> 2026-10-23 18:20：ZH4B checkpoint5/20已保存，160次曝光、295,409有效回答token；Base开发76%，训练模型待评。SW已有重复目标语收益并有英语开发代价，JA/BN暂无稳定收益；三语言未选定。
 <!-- COPSD_LATEST_STATUS_END -->
 
 > 最近更新：2026-10-23 05:08（北京时间）。新增第0节为Qwen3-1.7B官方COPSD基础上的OPD阶段总结；后续第1—5节保留2026-09-24历史轨道快照，不代表旧任务在今天的最新状态。不同模型、任务和协议不横向混比。具体结果以各实验目录的原始记录、`DONE`、哈希和协议为准。
@@ -469,3 +469,12 @@ ZH训练仍排队。Base释放后，同账号其他实验又有任务占用相�
 保留原冻结LoRA／固定教师／beta0／componentclip.05、2048和有效batch32、100步调度下停20；不是更改算法后的修复实验或100步完成。Base ZH200已有152/200，训练模型分数仍待训练完成后固定checkpoint20的ZH/EN200配对。两个GPU角色及一次性CPU衔接器实际存活，v2后处理使用已验证中文语言标签。进度证据：`zh4b_training_started_20261023.PUBLIC.json`。
 
 训练仍在进行，无新checkpoint或方法收益结论，三语言未选定。后续按既有衔接核验checkpoint、optimizer/scheduler/RNG、同协议评测、TensorBoard及成本。
+
+
+## 2026-10-23：ZH4B首个checkpoint5已保存并完成CPU状态验收
+
+固定20更新候选已完成前5更新／160次问题曝光，生成及有效回答loss token均295,409。checkpoint5的504个LoRA张量与504条optimizer状态全部有限，optimizer/scheduler均到5，Python／NumPy／CPU／CUDA RNG均能从文件读取；Trainer保存的seed42、学习率5e-6、micro1×累积32及100步调度身份核对通过。checkpoint5保存后的398张量同步已通过，训练继续，TensorBoard标量已记录并读回第4步（每2步日志，不假称已记录第5步）。
+
+这是保存状态的CPU加载验收，没有暂停健康训练做GPU恢复，因此不宣称实际GPU恢复或服务器采样流逐位续接已验证。checkpoint实体在data0，验收时data0余60.54GiB、data1余6501.01GiB；两盘及实际落盘路径已核对，未清理或迁移旧模型。报告：`zh4b_checkpoint5_completed_20261023.PUBLIC.json`。
+
+Base ZH200仍为152/200；没有训练模型开发分数、正式测试收益或三语言入选结论。按前5更新墙时粗估剩余训练约一小时，后续生成长度会影响耗时，评测与可能排队另计。终点仍固定checkpoint20，不按中途测试挑checkpoint；一次性v2衔接器保持原绑定，完成后放行并评ZH/EN200。
