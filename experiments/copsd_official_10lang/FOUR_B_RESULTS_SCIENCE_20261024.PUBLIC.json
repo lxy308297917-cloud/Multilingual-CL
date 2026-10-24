@@ -985,5 +985,14 @@
     "latest_snapshot_available_conditions": 24,
     "latest_two_cases_source": "SEQUENTIAL4B_REVERSE_SW_TE_ACQUISITION_SCIENCE_20261025.PUBLIC.json",
     "latest_case_source": "SEQUENTIAL4B_FORWARD_S3_SW_FORGETTING_SCIENCE_20261025.PUBLIC.json"
+  },
+  "diagnostic_synthesis": {
+    "source": "TE_HISTORY_OBJECTIVE_AND_TERMINATION_DIAGNOSTIC_20261025.PUBLIC.json",
+    "identical_current_TE_data_and_exposure_order": true,
+    "prior_gradient_mechanism_separate_1_7B_cohort": true,
+    "prior_unclipping_ablation_separate_BN_dev200": true,
+    "current4B_TE_unique_root_cause_proven": false,
+    "new_GPU_runs": 0,
+    "official_scores_modified": false
   }
 }
