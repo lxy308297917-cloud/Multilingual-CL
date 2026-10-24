@@ -1,0 +1,225 @@
+{
+  "observed_at": "2026-10-25T02:03:52.695655+08:00",
+  "official_function_origin": "COPSD polymath_eval/evaluate_math.py grade_answer reused by project MGSM adapter",
+  "official_source_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+  "math_verify_version": "0.8.0",
+  "manual_loss_review": {
+    "transition": "ZH -> ZH/TE, Chinese MGSM",
+    "reviewed_newly_lost_official_score_items": 11,
+    "primary_category_counts": {
+      "time_or_count_granularity": 3,
+      "percentage_reference_rule": 2,
+      "age_reference_anchor": 1,
+      "wrong_requested_quantity": 1,
+      "arithmetic_sum": 1,
+      "scenario_or_category_assumption": 2,
+      "answer_unit_grading_interface": 1
+    },
+    "benchmark_intended_arithmetic_checks_passed": 11,
+    "representation_sensitive_case_count": 1,
+    "interpretation": "Ten final explanations show quantitative or semantic departures from benchmark-intended answers; one supports the mathematical percentage result but is rejected by the numeric-gold/symbolic-unit interface. Semantic assumptions are not proof of damaged translation or a unique interpretation. This selected loss set does not estimate global error prevalence or identify teacher-supervision causes."
+  },
+  "controlled_original_grader_replay": [
+    {
+      "predicted": "25",
+      "gold": "25",
+      "official_grade": true
+    },
+    {
+      "predicted": "25\\%",
+      "gold": "25",
+      "official_grade": false
+    },
+    {
+      "predicted": "25\\%",
+      "gold": "25\\%",
+      "official_grade": true
+    },
+    {
+      "predicted": "0.25",
+      "gold": "25",
+      "official_grade": false
+    }
+  ],
+  "percentage_diagnostic": {
+    "protocol": "project_mgsm_percentage_units_diagnostic_v1",
+    "source_file": "mgsm_percentage_diagnostic.py",
+    "source_sha256": "96b42904fff22e436041d11e209265a0886ad5e28b43ce5b6f74406e5662e3b5",
+    "manifest_sha256": "8a6f16f319727a1bd9911a43a611902fc848201d98cc6b5c2a5e2b76ba63d2b2",
+    "annotation_scope": {
+      "English_questions_screened": 250,
+      "questions_mentioning_percent": 38,
+      "explicit_percentage_answer_questions": 4,
+      "percentage_input_only_questions_excluded": 34,
+      "English_plus_target_languages_gold_correspondence_verified": 11
+    },
+    "rule": "Only explicit percentage-answer questions are tagged from canonical English. Explicit percent predictions compare against gold in percent units; bare predictions retain numeric percentage-value interpretation. Other questions retain official grading.",
+    "controls_passed": 9,
+    "completed_conditions": 17,
+    "changed_conditions": 10,
+    "added_correct_labels": 22,
+    "removed_correct_labels": 0,
+    "maximum_per_condition_change_from_this_four_question_diagnostic_pp": 1.6,
+    "case_counts": [
+      {
+        "model_id": "Base",
+        "language": "sw",
+        "items": 250,
+        "original_generation_protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+        "original_correct": 34,
+        "diagnostic_correct": 34,
+        "delta_count": 0
+      },
+      {
+        "model_id": "SW_matched900",
+        "language": "sw",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 55,
+        "diagnostic_correct": 55,
+        "delta_count": 0
+      },
+      {
+        "model_id": "Base",
+        "language": "te",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 149,
+        "diagnostic_correct": 150,
+        "delta_count": 1
+      },
+      {
+        "model_id": "SW_matched900",
+        "language": "te",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 140,
+        "diagnostic_correct": 141,
+        "delta_count": 1
+      },
+      {
+        "model_id": "Base",
+        "language": "zh",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 240,
+        "diagnostic_correct": 244,
+        "delta_count": 4
+      },
+      {
+        "model_id": "SW_matched900",
+        "language": "zh",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 239,
+        "diagnostic_correct": 242,
+        "delta_count": 3
+      },
+      {
+        "model_id": "TE_matched900",
+        "language": "te",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 152,
+        "diagnostic_correct": 153,
+        "delta_count": 1
+      },
+      {
+        "model_id": "TE_matched900",
+        "language": "sw",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 55,
+        "diagnostic_correct": 55,
+        "delta_count": 0
+      },
+      {
+        "model_id": "TE_matched900",
+        "language": "zh",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 241,
+        "diagnostic_correct": 244,
+        "delta_count": 3
+      },
+      {
+        "model_id": "ZH_matched900",
+        "language": "zh",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 241,
+        "diagnostic_correct": 243,
+        "delta_count": 2
+      },
+      {
+        "model_id": "ZH_matched900",
+        "language": "sw",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 46,
+        "diagnostic_correct": 46,
+        "delta_count": 0
+      },
+      {
+        "model_id": "ZH_matched900",
+        "language": "te",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 149,
+        "diagnostic_correct": 150,
+        "delta_count": 1
+      },
+      {
+        "model_id": "forward_s2",
+        "language": "sw",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 73,
+        "diagnostic_correct": 73,
+        "delta_count": 0
+      },
+      {
+        "model_id": "forward_s2",
+        "language": "zh",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 242,
+        "diagnostic_correct": 245,
+        "delta_count": 3
+      },
+      {
+        "model_id": "reverse_s2",
+        "language": "sw",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 44,
+        "diagnostic_correct": 44,
+        "delta_count": 0
+      },
+      {
+        "model_id": "reverse_s2",
+        "language": "zh",
+        "items": 250,
+        "original_generation_protocol": "project_formal4b_n1_8192_native16_v1",
+        "original_correct": 234,
+        "diagnostic_correct": 237,
+        "delta_count": 3
+      },
+      {
+        "model_id": "Primary_SW20",
+        "language": "sw",
+        "items": 250,
+        "original_generation_protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+        "original_correct": 54,
+        "diagnostic_correct": 54,
+        "delta_count": 0
+      }
+    ],
+    "SW_conditions_with_identical_per_question_labels": 7,
+    "original_formal_outputs_or_scores_modified": false,
+    "new_generations": 0,
+    "GPU_started": false
+  },
+  "interpretation": "Official symbolic grading correctly distinguishes literal25percent from25, while the MGSM bare numeric label means a percentage value in these questions. This is a project benchmark-unit adapter diagnostic, not evidence the original COPSD PolyMath dataset shares the issue. All models/languages use the same four question-derived tags. The original official-score study remains unchanged and separate; no model/checkpoint/language selection used this diagnostic. The major observed SW math-gain/language-drift result is unchanged in the seven availableSW conditions. Small Chinese point differences are representation-sensitive and should not be interpreted as stable reasoning improvements.",
+  "limitations": "Current snapshot contains selected4B accepted conditions plus one separately identified original primarySW20 cache, not complete ten-primary or sequential evaluation. Cases repeat underlying questions across models/languages, so label-change counts are not independent-question prevalence. Only literal percentage-symbol conventions are covered; this is not a complete semantic grader. Existing language-joint counts remain defined using original official labels. Teacher log-probability quality or causal training failure is not established by this output review."
+}
