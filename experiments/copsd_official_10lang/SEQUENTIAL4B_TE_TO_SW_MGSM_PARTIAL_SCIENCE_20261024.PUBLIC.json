@@ -1,0 +1,121 @@
+{
+  "observed_at": "2026-10-24T23:30:59.155470+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "te",
+  "training_cohort": "matched900 single20 reference",
+  "evaluation_language": "sw",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 34,
+  "model_correct": 55,
+  "gained": 28,
+  "lost": 7,
+  "delta_percentage_points": 8.4,
+  "paired_question_bootstrap95_CI_pp": [
+    4.0,
+    12.8
+  ],
+  "termination": {
+    "Base": {
+      "generated_tokens": 809908,
+      "truncated": 70,
+      "normal_terminations": 180,
+      "answer_extraction_failures": 74
+    },
+    "model": {
+      "generated_tokens": 690216,
+      "truncated": 46,
+      "normal_terminations": 204,
+      "answer_extraction_failures": 47
+    }
+  },
+  "paired_outcome_diagnostics": {
+    "gained": {
+      "count": 28,
+      "Base_truncated": 10,
+      "Base_extraction_failed": 10,
+      "model_truncated": 0,
+      "model_extraction_failed": 0
+    },
+    "lost": {
+      "count": 7,
+      "Base_truncated": 0,
+      "Base_extraction_failed": 0,
+      "model_truncated": 2,
+      "model_extraction_failed": 2
+    }
+  },
+  "language_ID_supplement": {
+    "Base_reused_source": "SEQUENTIAL4B_SWMATCHED_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
+    "Base": {
+      "thinking_target_highconf": 190,
+      "thinking_English_top1": 10,
+      "correct_and_target_thinking_highconf": 29,
+      "correct_and_both_target_highconf": 12
+    },
+    "model": {
+      "thinking_target_highconf": 193,
+      "thinking_English_top1": 16,
+      "correct_and_target_thinking_highconf": 45,
+      "correct_and_both_target_highconf": 10
+    },
+    "model_full_summary": {
+      "thinking": {
+        "total_items": 250,
+        "statuses": {
+          "predicted": 250
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 217,
+          "__label__eng_Latn": 16,
+          "__label__ktu_Latn": 2,
+          "__label__pmf_Latn": 1,
+          "__label__kdc_Latn": 4,
+          "__label__swc_Latn": 4,
+          "__label__atj_Latn": 1,
+          "__label__wmw_Latn": 1,
+          "__label__qup_Latn": 1,
+          "__label__for_Latn": 1,
+          "__label__myx_Latn": 1,
+          "__label__bhp_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 193,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 49,
+          "__label__eng_Latn": 5,
+          "__label__swc_Latn": 1
+        }
+      },
+      "final": {
+        "total_items": 250,
+        "statuses": {
+          "predicted": 212,
+          "no_final_section": 38
+        },
+        "top1_label_counts": {
+          "__label__swh_Latn": 127,
+          "__label__swc_Latn": 60,
+          "__label__wmw_Latn": 1,
+          "__label__inh_Cyrl": 1,
+          "__label__eng_Latn": 6,
+          "__label__ktu_Latn": 2,
+          "__label__ssw_Latn": 11,
+          "__label__kam_Latn": 1,
+          "__label__kdc_Latn": 2,
+          "__label__sna_Latn": 1
+        },
+        "target_top1_probability_ge_0_8": 71,
+        "correct_items_label_counts": {
+          "__label__swc_Latn": 18,
+          "__label__swh_Latn": 28,
+          "__label__eng_Latn": 4,
+          "__label__ktu_Latn": 1,
+          "__label__ssw_Latn": 4
+        }
+      }
+    }
+  },
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "scope": "Positive SW math transfer after TE-only training in one fixed model. Not post-SW-stage forgetting, not a trainingseed population claim or multiplicity-adjusted inference. Target language joint counts use strict swh_Latn highconfidence whole-part labels; swc_Latn and other labels are separately reported, and are not direct evidence of non-Swahili or lack of fluency. Both-part math-language counts do not improve. Termination associations are descriptive, not causal attribution. Full stage matrices and English retention remain required."
+}

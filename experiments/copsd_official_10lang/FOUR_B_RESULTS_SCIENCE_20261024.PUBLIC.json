@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T23:11:08.003324+08:00",
+  "updated_at": "2026-10-24T23:30:59.155470+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -436,8 +436,24 @@
         "items": 250,
         "source": "SEQUENTIAL4B_TE_TO_ZH_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
         "cohort": "matched900 single20 reference, not original2700 primary single"
+      },
+      {
+        "Base_correct": 34,
+        "model_correct": 55,
+        "gained": 28,
+        "lost": 7,
+        "delta_percentage_points": 8.4,
+        "paired_question_bootstrap95_CI_pp": [
+          4.0,
+          12.8
+        ],
+        "training_language": "te",
+        "evaluation_language": "sw",
+        "items": 250,
+        "source": "SEQUENTIAL4B_TE_TO_SW_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
+        "cohort": "matched900 single20 reference, not original2700 primary single"
       }
     ],
-    "interpretation": "SW own-language math improves on this fixed formal set; other completed pairs have question intervals crossing zero. Cross-language pretrained retention is not post-learned-stage forgetting. No completed sequential effect matrix or universal efficacy claim."
+    "interpretation": "SW own-language math and TE-to-SW math transfer improve in the completed fixed-model pairs; other completed pair question intervals cross zero. Language preservation does not improve on every joint measure. No trainingseed population, universal efficacy or sequential forgetting conclusion. Full seven-case suites remain required."
   }
 }
