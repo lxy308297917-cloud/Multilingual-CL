@@ -18,7 +18,18 @@
       "parent_GPU_hours": 3.111666666666667,
       "actual_unique_original_questions": 640,
       "development_overlap": 0,
-      "student_and_teacher_prompt_pairs_all_exact": true
+      "student_and_teacher_prompt_pairs_all_exact": true,
+      "measured_cost_breakdown": {
+        "teacher_forward_cuda_seconds": 371.89316998291014,
+        "teacher_processed_input_positions": 2052205,
+        "teacher_attended_input_positions": 1825716,
+        "student_forward_cuda_seconds": 311.74301684570315,
+        "student_processed_input_positions": 1422838,
+        "student_attended_input_positions": 1196349,
+        "masked_response_positions": 226489,
+        "batched_generation_wall_seconds": 936.2808666415513,
+        "weight_sync_seconds_including_diagnostic_hashing": 1679.4877214673907
+      }
     },
     "zh": {
       "global_step": 20,
@@ -35,13 +46,26 @@
       "parent_GPU_hours": 3.0055555555555555,
       "actual_unique_original_questions": 640,
       "development_overlap": 0,
-      "student_and_teacher_prompt_pairs_all_exact": true
+      "student_and_teacher_prompt_pairs_all_exact": true,
+      "measured_cost_breakdown": {
+        "teacher_forward_cuda_seconds": 333.3991167297363,
+        "teacher_processed_input_positions": 1952940,
+        "teacher_attended_input_positions": 1835692,
+        "student_forward_cuda_seconds": 292.5520381469727,
+        "student_processed_input_positions": 1382875,
+        "student_attended_input_positions": 1265627,
+        "masked_response_positions": 117248,
+        "batched_generation_wall_seconds": 955.9375018235296,
+        "weight_sync_seconds_including_diagnostic_hashing": 1649.521552203223
+      }
     }
   },
   "actual_SW_ZH_exposure_question_overlap": 0,
   "TE_matched_reference": "running",
-  "formal_evaluation": "BaseZH MGSM completed240/250; SWmatchedSW and ZHmatchedZH full250 paired tests running; remainingseven-case suites frozen/configured",
+  "formal_evaluation": "SW MGSM34->55/250 andZH MGSM240->241/250 formalpairs accepted; fullseven-case suitespending",
   "forward_stage2_TE": "configuration preflight passed; queue configured but not started",
-  "reverse_stage2_TE": "configuration preflight passed; manual waiting queue started underfourGPUlimit",
-  "scope": "Training/checkpoint/data-provenance milestone only. These are new900-pool matched controls, distinct from earlier independent2700-pool pilots. Mathematical effects, language preservation and forgetting await full paired evaluation. Base240/250 is formalMGSMZH, not reserved200development."
+  "reverse_stage2_TE": "Actualresearchcontinuation running, initialadapter matchesacceptedZH20; at least2stageupdatesverified",
+  "scope": "Training/checkpoint/data-provenance milestone only. These are new900-pool matched controls, distinct from earlier independent2700-pool pilots. Mathematical effects, language preservation and forgetting await full paired evaluation. Base240/250 is formalMGSMZH, not reserved200development.",
+  "cost_breakdown_scope": "MeasuredforwardCUDAeventseconds,generationwalltimeandsync/hashwalltime aredifferenttimedomainsandnotadditive; parentGPUhoursalsoincludebackward,initializationandwaiting. NoindependentteacherGPU/CPUcopy.",
+  "status_updated_at": "2026-10-24T17:47:11.372336"
 }

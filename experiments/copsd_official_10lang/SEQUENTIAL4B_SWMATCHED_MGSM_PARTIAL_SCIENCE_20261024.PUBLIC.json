@@ -1,0 +1,106 @@
+{
+  "observed_at": "2026-10-24T17:39:15.570928",
+  "model": "Qwen/Qwen3-4B",
+  "training_condition": "FreshBase SW900-question matched-pool reference,20updates under100scheduler",
+  "benchmark": "MGSM-Rev2",
+  "language": "sw",
+  "evaluation": {
+    "items": 250,
+    "n": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "native_LoRA": true,
+    "question_seed": 42,
+    "split": "formal test; not development200"
+  },
+  "result": {
+    "Base_correct": 34,
+    "model_correct": 55,
+    "gained": 30,
+    "lost": 9,
+    "delta_percentage_points": 8.4,
+    "paired_question_bootstrap95_CI_pp": [
+      3.5999999999999996,
+      13.200000000000001
+    ]
+  },
+  "termination": {
+    "Base": {
+      "truncated": 70,
+      "normal_terminations": 180,
+      "answer_extraction_failures": 74,
+      "generated_tokens": 809908
+    },
+    "model": {
+      "truncated": 17,
+      "normal_terminations": 233,
+      "answer_extraction_failures": 21,
+      "generated_tokens": 558286
+    }
+  },
+  "gained_lost_termination_analysis": {
+    "gained": {
+      "count": 30,
+      "Base_truncated": 11,
+      "model_truncated": 0,
+      "Base_extraction_failed": 11,
+      "model_extraction_failed": 0
+    },
+    "lost": {
+      "count": 9,
+      "Base_truncated": 0,
+      "model_truncated": 1,
+      "Base_extraction_failed": 0,
+      "model_extraction_failed": 1
+    }
+  },
+  "language_ID_supplement": {
+    "Base": {
+      "thinking_target_top1": 218,
+      "thinking_target_highconf": 190,
+      "thinking_English_top1": 10,
+      "correct_and_target_thinking_highconf": 29,
+      "correct_and_both_target_highconf": 12,
+      "final_target_highconf": 75,
+      "final_no_section": 61,
+      "final_top1_labels": {
+        "__label__swc_Latn": 63,
+        "__label__swh_Latn": 117,
+        "__label__eng_Latn": 2,
+        "__label__kam_Latn": 1,
+        "__label__ssw_Latn": 3,
+        "__label__kdc_Latn": 1,
+        "__label__ktu_Latn": 1,
+        "__label__nyf_Latn": 1
+      }
+    },
+    "model": {
+      "thinking_target_top1": 213,
+      "thinking_target_highconf": 199,
+      "thinking_English_top1": 29,
+      "correct_and_target_thinking_highconf": 44,
+      "correct_and_both_target_highconf": 6,
+      "final_target_highconf": 61,
+      "final_no_section": 13,
+      "final_top1_labels": {
+        "__label__swc_Latn": 81,
+        "__label__swh_Latn": 108,
+        "__label__ssw_Latn": 27,
+        "__label__kam_Latn": 1,
+        "__label__eng_Latn": 14,
+        "__label__pcm_Latn": 1,
+        "__label__cbk_Latn": 1,
+        "__label__sna_Latn": 2,
+        "__label__yor_Latn": 1,
+        "__label__lin_Latn": 1
+      }
+    }
+  },
+  "pair_new_evaluation_GPU_hours": 0.7938888888888889,
+  "cached_Base_GPU_cost_recounted": false,
+  "TensorBoard_13_scalars_read_back": true,
+  "complete_seven_case_stage": false,
+  "interpretation": "Positive fixed-model SW math result:34->55/250,+8.4pp,pairedquestionCI[3.6,13.2]. Target-highconfidence-thinking-and-correct29->44, butEnglishthinking10->29 andstrictboth-sectiontarget-and-correct12->6. Termination/extraction changes andregionalclassifierambiguities must be considered; no claimofuniformlanguagepreservation orgeneralmethodstability.",
+  "pending": "PolyMath,EnglishGSMretention andcross-languagefullstage/forgettingmatrix",
+  "scope": "Originalscoresandall250outputsretained. Singleformalpair, notall7stagecases. CIoverfixedmodelquestions,nottrainingseedpopulation ormultiplicityadjusted inference. GlotLIDnotcalibratedfluency/proofquality; regionalSwahili/similarlabels andshortmathfinals canbeambiguous. Basereusedonlyafterfullsemanticaudit; paircostbelongs tofuturefullsuiteledger andmustnotberecounted."
+}
