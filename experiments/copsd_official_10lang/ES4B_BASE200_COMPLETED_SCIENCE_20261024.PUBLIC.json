@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "language": "es",
+  "split": "reserved development200, not formaltest",
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "question_seed": 42,
+  "correct_of200": 163,
+  "generated_tokens": 746446,
+  "truncated": 18,
+  "normal_terminations": 182,
+  "answer_extraction_failures": 14,
+  "evaluation_parent_GPU_hours": 0.37166666666666665,
+  "original_Base_no_adapter": true,
+  "all200_rows_inputs_seeds_metrics_audited": true,
+  "training_updates": 0,
+  "scope": "Accepted Base only, not an OPD result. Reuse these outputs and count their costs once in the paired report. No training launch or language selection."
+}
