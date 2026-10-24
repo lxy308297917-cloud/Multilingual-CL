@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-10-24T19:08:01.223401+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "official_core_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "reverse_stage2_ZH_to_TE": {
+    "global_step": 20,
+    "online_rollouts": 640,
+    "generated_tokens": 1310545,
+    "valid_response_loss_positions": 1310545,
+    "teacher_forward_calls": 640,
+    "current_student_weight_syncs": 21,
+    "original_Base_bitwise_unchanged": true,
+    "actual_stage_optimizer_scheduler_reset": true,
+    "checkpoint20_optimizer_scheduler_RNG_verified": true,
+    "TensorBoard_loss_learning_rate_read_back": true,
+    "parent_minutes": 95.38333333333334,
+    "parent_GPU_hours": 3.1794444444444445
+  },
+  "stage2_actual_640_exposure_order_matches_TE_single_reference": true,
+  "stage2_actual_unique_questions": 640,
+  "development_overlap": 0,
+  "student_teacher_prompt_pairs_exact": true,
+  "reverse_stage3_SW": "Actual online rollout and finite backward microsteps observed; not completed.",
+  "stage3_initial_student_exact_accepted_stage2_adapter_fingerprint": true,
+  "teacher": "Original frozen Base with default adapter disabled; no separate CPU teacher.",
+  "forward_stage2_SW_to_TE": "Running,13of20updates observed.",
+  "supervision_incident": {
+    "cause": "Queue-start command returned before its first state JSON existed; supervision failed while the queued GPU job continued.",
+    "repair": "v2 reads the actual live systemd monitor when state JSON is not yet available and adopts accepted artifacts/existing GPU jobs.",
+    "training_or_GPU_queue_processes_cancelled": 0,
+    "previous_failure_logs_preserved": true,
+    "CPU_race_regression_passed": true,
+    "preferred_continuation_entry": "continue_sequential4b_direction_v2.py"
+  },
+  "remaining_flows": "Manually started one-shot selected-stage formal wave,42missingprimaryformaljobs,CPU language/forgetting/matched analysis and primary paired acceptance are waiting on their real prerequisites. Maximum4accountGPUs; no boot/cron/autorestart.",
+  "cached_primary_SW20_native16_actual_reuse_audit": {
+    "MGSM_correct_of250": 54,
+    "English_GSM8K_correct_of1319": 1246,
+    "new_generated_tokens": 0,
+    "scope": "Old2700pool primarySW, not new900matchedSW55/250 and not a second training seed."
+  },
+  "scope": "Accepted stage2 training and observed stage3 continuation only. Full stage2/stage3 seven-case scores, language preservation and forgetting are not yet available; no method-efficacy claim from training loss."
+}

@@ -1,0 +1,12 @@
+{
+  "CPU_regression_passed": true,
+  "cases": [
+    "missing",
+    "partial_json"
+  ],
+  "continuation_source_sha256": "9ce2dd9c8a36e700fa7681d1d92e1479e0edd678242a4f730dbb39ff8246f309",
+  "live_monitor_required": true,
+  "new_queue_submissions": 0,
+  "GPU_started": false,
+  "scope": "Executes the actual v2 wait function with a missing/partial state file and a verified-live monitor fixture. No GPU task or system service is started or changed."
+}
