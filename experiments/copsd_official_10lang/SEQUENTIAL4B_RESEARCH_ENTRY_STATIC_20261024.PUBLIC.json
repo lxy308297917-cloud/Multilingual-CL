@@ -1,0 +1,28 @@
+{
+  "scope": "Static transfer validation only. Preserved current-policy synchronization, microstep, generation and prompt accounting from completed actual4B engineering handoff. No research GPU run, frozen selection or full runtime preflight yet.",
+  "unchanged_functions_AST": [
+    "fingerprint",
+    "sync",
+    "step",
+    "generation",
+    "prefetch"
+  ],
+  "syntax_passed": true,
+  "stage_updates": 20,
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "GPU_started": false,
+  "source_sha256": {
+    "sequential4b_context.py": "0636cac2ef13f0f44dd536ab53dc1223f529528da0cddf18888728e634d5e154",
+    "sequential4b_stage_entry.py": "ed5593d450bdf9a464a792b496c0e90cb8f735b1d496b13b10f8883069617612",
+    "sequential4b_stage_job.py": "35789c73693bf45baa72e855d11324b8cfa4bfb8b8d9226be6c11f665d49edca",
+    "run_sequential4b_stage.sh": "61aa196a64dbc29f7470e5586d4e9527b244ea4ad0b68b4ef3ed6286ec9b4b7f"
+  },
+  "additional_sources_syntax_checked": [
+    "prepare_sequential4b_stage.py",
+    "collect_sequential4b_stage.py",
+    "prepare_sequential4b_evaluation.py",
+    "collect_sequential4b_evaluation.py",
+    "audit_formal4b_base_cache.py"
+  ]
+}

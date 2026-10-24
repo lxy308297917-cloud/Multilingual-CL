@@ -1,0 +1,22 @@
+{
+  "model": "Qwen/Qwen3-4B",
+  "language": "es",
+  "training_updates": 20,
+  "training_seed": 42,
+  "split": "reserved development",
+  "items": 200,
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "question_seed": 42,
+  "target_Base_correct": 163,
+  "target_OPD_correct": 155,
+  "target_Base_truncated": 18,
+  "target_OPD_truncated": 13,
+  "target_Base_extraction_failures": 14,
+  "target_OPD_extraction_failures": 10,
+  "target_OPD_generated_tokens": 649060,
+  "English_model_evaluation": "running",
+  "full_pair_accepted": false,
+  "scope": "Target-language portion completed only. English evaluation and final collector/LID acceptance pending; no new language selection or positive efficacy claim."
+}

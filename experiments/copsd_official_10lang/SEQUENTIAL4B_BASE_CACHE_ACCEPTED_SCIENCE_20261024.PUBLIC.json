@@ -1,0 +1,20 @@
+{
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "original_Base_only": true,
+  "generation_and_scoring_suffix_AST_identical": true,
+  "all_prompts_inputs_seeds_token_decodes_and_accounting_verified": true,
+  "cases": {
+    "mgsm_rev2_sw": {
+      "items": 250,
+      "single_correct": 34,
+      "generated_tokens": 809908
+    },
+    "gsm8k_en": {
+      "items": 1319,
+      "single_correct": 1247,
+      "generated_tokens": 2053312
+    }
+  },
+  "GPU_started": false,
+  "scope": "Existing Base formal outputs accepted for possible cache reuse, retaining original provenance. No language selection or new inference; old costs must not be recounted as new."
+}

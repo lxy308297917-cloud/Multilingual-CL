@@ -1,0 +1,53 @@
+{
+  "scope": "Actual existing SW/TE/ZH nine pool bindings only; no language selection, materialization, training or full executor validation",
+  "checks": [
+    {
+      "language": "sw",
+      "pool_index": 0,
+      "rows": 900
+    },
+    {
+      "language": "sw",
+      "pool_index": 1,
+      "rows": 900
+    },
+    {
+      "language": "sw",
+      "pool_index": 2,
+      "rows": 900
+    },
+    {
+      "language": "te",
+      "pool_index": 0,
+      "rows": 900
+    },
+    {
+      "language": "te",
+      "pool_index": 1,
+      "rows": 900
+    },
+    {
+      "language": "te",
+      "pool_index": 2,
+      "rows": 900
+    },
+    {
+      "language": "zh",
+      "pool_index": 0,
+      "rows": 900
+    },
+    {
+      "language": "zh",
+      "pool_index": 1,
+      "rows": 900
+    },
+    {
+      "language": "zh",
+      "pool_index": 2,
+      "rows": 900
+    }
+  ],
+  "wrong_manifest_hash_rejected": true,
+  "GPU_started": false,
+  "source_sha256": "468186c058c155a3b08f88dafb4ef8c4eaf60fc4cb07bae3ff3d9e10577efa05"
+}
