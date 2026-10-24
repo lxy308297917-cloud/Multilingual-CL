@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "target_language": "es",
+  "training_updates": 20,
+  "training_seed": 42,
+  "evaluation": {
+    "items_each": 200,
+    "n": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "question_seed": 42,
+    "split": "reserved development, not formaltest or a new blindtest"
+  },
+  "results": {
+    "target": {
+      "Base_correct_of200": 163,
+      "OPD_correct_of200": 155,
+      "gained": 13,
+      "lost": 21,
+      "delta_percentage_points": -4.0,
+      "paired_question_CI95_percentage_points": [
+        -9.5,
+        1.5
+      ],
+      "Base_truncated": 18,
+      "OPD_truncated": 13,
+      "Base_extraction_failures": 14,
+      "OPD_extraction_failures": 10
+    },
+    "English": {
+      "Base_correct_of200": 166,
+      "OPD_correct_of200": 167,
+      "gained": 8,
+      "lost": 7,
+      "delta_percentage_points": 0.5,
+      "paired_question_CI95_percentage_points": [
+        -3.0,
+        4.5
+      ],
+      "Base_truncated": 18,
+      "OPD_truncated": 19,
+      "Base_extraction_failures": 12,
+      "OPD_extraction_failures": 11
+    }
+  },
+  "language": {
+    "Base_target": {
+      "thinking": {
+        "target_top1": 194,
+        "target_high_confidence": 192,
+        "English_top1": 6,
+        "correct_in_target": 157,
+        "missing_final_section": 0,
+        "too_short": 0
+      },
+      "final": {
+        "target_top1": 179,
+        "target_high_confidence": 158,
+        "English_top1": 0,
+        "correct_in_target": 156,
+        "missing_final_section": 14,
+        "too_short": 0
+      }
+    },
+    "OPD_target": {
+      "thinking": {
+        "target_top1": 197,
+        "target_high_confidence": 197,
+        "English_top1": 2,
+        "correct_in_target": 154,
+        "missing_final_section": 0,
+        "too_short": 0
+      },
+      "final": {
+        "target_top1": 177,
+        "target_high_confidence": 149,
+        "English_top1": 0,
+        "correct_in_target": 149,
+        "missing_final_section": 14,
+        "too_short": 0
+      }
+    },
+    "OPD_English": {
+      "thinking": {
+        "target_top1": 199,
+        "target_high_confidence": 190,
+        "English_top1": 199,
+        "correct_in_target": 167,
+        "missing_final_section": 0,
+        "too_short": 0
+      },
+      "final": {
+        "target_top1": 180,
+        "target_high_confidence": 156,
+        "English_top1": 180,
+        "correct_in_target": 160,
+        "missing_final_section": 18,
+        "too_short": 0
+      }
+    }
+  },
+  "cost": {
+    "new_training_parent_GPU_hours": 2.9266666666666667,
+    "new_evaluation_parent_GPU_hours": 2.3066666666666666,
+    "candidate_total_GPU_hours": 5.233333333333333,
+    "new_evaluation_generated_tokens": 2240869,
+    "training_exposures": 640,
+    "training_generated_tokens": 1211348,
+    "training_valid_response_loss_positions": 1211348,
+    "teacher_forward_calls": 640,
+    "cached_Base_English_GPU_cost_recounted": false
+  },
+  "TensorBoard_four_accuracies_two_costs_verified": true,
+  "scope": "Scientific aggregates only; runtime bindings and raw samples omitted. Original scores unchanged. CI is over fixedmodel questions, not trainingseedpopulation or multiplicityadjusted inference. LanguageID is not calibrated fluency or proof quality; short numeric finals may misclassify. No automatic language promotion or sequential launch."
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Syntax and interface preparation only; no complete research-stage matrices or new GPU work exist yet. Actual Base/stage1/stage2/stage3 releases and all seven cases are required at runtime. Existing forgetting_metrics arithmetic retains negative forgetting.",
+  "syntax_checked_sources": {
+    "build_sequential4b_matrix.py": "ff27c85a05274869f8cfc0c83c34533a95c1b59b1d125d65354b538af48687fb",
+    "collect_sequential4b_stage.py": "25a10303e2d647387d94d3b8741c31fb86d5ef25856a15d8ce4acafa6ce3568e",
+    "collect_sequential4b_evaluation.py": "dcb21dcf84d6bff1cb2a6feaecc991f51d89182f1148b27646eee631feb0b79e",
+    "prepare_sequential4b_evaluation.py": "9e3e3c972282a91def6eaf8a4c08a60d60285edc97c8e241d5df80a5b908c7f4"
+  },
+  "research_sequential_training_started": false,
+  "GPU_started": false,
+  "production_requirements": [
+    "same frozen development selection",
+    "four complete seven-case markers",
+    "checkpoint chain and accepted fresh stage optimization",
+    "exact shared questions/prompts/request seeds",
+    "three pairwise-disjoint900-question pools",
+    "matched-single stage1 reuse predeclared",
+    "original per-case termination and PolyMath bands",
+    "unique cost-event IDs across directions"
+  ]
+}

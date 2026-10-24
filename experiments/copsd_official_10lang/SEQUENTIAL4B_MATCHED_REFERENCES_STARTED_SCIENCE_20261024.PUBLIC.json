@@ -1,0 +1,50 @@
+{
+  "recorded_at": "2026-10-24T14:59:28.607355",
+  "model": "Qwen/Qwen3-4B",
+  "cohort": "selected-three-language matched-pool study",
+  "selected_languages": [
+    "sw",
+    "te",
+    "zh"
+  ],
+  "matched_reference_runs": {
+    "sw": {
+      "phase": "running",
+      "rows": 900,
+      "planned_updates": 20,
+      "effective_batch": 32,
+      "scheduler_horizon": 100,
+      "max_completion_length": 2048,
+      "training_GPUs": 2,
+      "initial_student_sync_verified": true,
+      "completed_checkpoint20": false
+    },
+    "zh": {
+      "phase": "running",
+      "rows": 900,
+      "planned_updates": 20,
+      "effective_batch": 32,
+      "scheduler_horizon": 100,
+      "max_completion_length": 2048,
+      "training_GPUs": 2,
+      "initial_student_sync_verified": true,
+      "completed_checkpoint20": false
+    }
+  },
+  "te_matched_reference": "manually started waiting queue under account four-GPU cap",
+  "Base_formal_evaluation": "seven-case frozen plan CPU-preflight passed; five new queues configured/validated but not started; two Base cases reused after full audit",
+  "account_GPU_limit": 4,
+  "current_account_assigned_GPUs": 4,
+  "forward_order": [
+    "sw",
+    "te",
+    "zh"
+  ],
+  "reverse_order": [
+    "zh",
+    "te",
+    "sw"
+  ],
+  "research_stage2_training_started": false,
+  "scope": "Matched references now running from originalBase on disjoint language-bound900-question pools. Exact predeclared SW/ZH references can be reused as sequence stage1 after acceptance; cross-language continuation has not started. No new model effect/forgetting result yet."
+}

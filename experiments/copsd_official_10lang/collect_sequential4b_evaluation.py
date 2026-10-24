@@ -12,12 +12,14 @@ from sequential4b_selection import local, selection, required_cases
 
 
 def collect(root, freeze, queue_map, output):
-    root, freeze, output = Path(root), Path(freeze), Path(output)
-    assert not output.exists()
+    root, freeze, queue_map = Path(root), Path(freeze), Path(queue_map)
+    output = Path(output) if output is not None else None
+    assert output is None or not output.exists()
     frozen, cases = prepare(root, freeze)
     assert frozen['engineering_preflight_only'] is False
     selected = selection(root, local(root, frozen['selection_record_relative']),
                          frozen['selection_record_sha256'])
+    assert len(cases) == 7
     assert {(case['spec']['benchmark'], case['spec']['language']) for case in cases.values()} == set(required_cases(selected['selected_languages']))
     cached = frozen.get('cached_cases', {})
     queues = read(queue_map)
@@ -96,13 +98,16 @@ def collect(root, freeze, queue_map, output):
               'model_revision': frozen['model_revision'],
               'selection_record_sha256': frozen['selection_record_sha256'],
               'frozen_plan_relative': str(freeze.relative_to(root)), 'frozen_plan_sha256': digest(freeze),
+              'queue_map_relative': str(queue_map.relative_to(root)), 'queue_map_sha256': digest(queue_map),
+              'collector_sha256': digest(Path(__file__)),
               'model_provenance': frozen['model_provenance'], 'all_seven_cases_accepted': True,
               'cases': accepted, 'new_evaluation_GPU_hours': total_hours,
               'new_generated_tokens': new_tokens, 'reused_cases': sorted(cached),
               'scope': 'Complete seven-case formal accounting. Language analysis and stage-to-stage forgetting matrices are separate required outputs; formal scores never feed language/checkpoint selection.'}
-    with output.open('x') as stream:
-        json.dump(result, stream, ensure_ascii=False, indent=2)
-        stream.write('\n')
+    if output is not None:
+        with output.open('x') as stream:
+            json.dump(result, stream, ensure_ascii=False, indent=2)
+            stream.write('\n')
     return result
 
 

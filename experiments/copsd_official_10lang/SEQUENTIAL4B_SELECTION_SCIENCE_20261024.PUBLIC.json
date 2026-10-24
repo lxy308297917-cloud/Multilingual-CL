@@ -1,0 +1,87 @@
+{
+  "selected_at": "2026-10-24T14:51:32.781759",
+  "source_protocol": "independent_development_only",
+  "model": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "selected_languages": [
+    "sw",
+    "te",
+    "zh"
+  ],
+  "orders": [
+    [
+      "sw",
+      "te",
+      "zh"
+    ],
+    [
+      "zh",
+      "te",
+      "sw"
+    ]
+  ],
+  "reason": "开发集三语言仅SW/TE/ZH具备两次正向数学点估计；其他已验收语言均负向，ES目标语163→155、英语166→167，完整配对及语言分析已验收。已核对全部十语言开发集结果后冻结，不使用正式测试选择语言。SW低基础且语言漂移，TE中低基础且目标语言保持较好，ZH高基础但收益弱；顺序SW→TE→ZH及逆序旨在测量获得和遗忘，不预设方法有效或抗遗忘。",
+  "reviews": {
+    "sw": {
+      "math_gain": "独立开发200题：Base16，seed42为62、seed43为47，两次点估计均提升；不使用此前正式测试结果作为选择证据。",
+      "absolute_level": "目标语数学从8%升至31%/23.5%，仍是低绝对水平，适合观察低资源语言的能力获得。",
+      "target_language": "思考区英语top1由4增至59/56；SW高置信由137降至114/116。数学正确且SW思考高置信由11升至30/23，但思考和最终区均SW高置信正确仅7→7/10。不能称为全面SW语言能力提升。",
+      "English_tradeoff": "同源英语开发200题166→158/161，存在英语保留风险；顺序阶段固定测试英语，不把英语当训练语言。",
+      "termination": "目标语截断117→38/41，终止改善是数学分数变化的可能因素，不能归结为纯推理迁移。",
+      "teacher_signal": "GPU实测固定原始4B教师由禁用同一adapter取得，特权英文题和参考仅进入教师；当前学生权重逐更新同步。该工程证据不证明教师对每条轨迹的数学监督均正确或优于学生。",
+      "cost": "seed43训练3.07 GPUh、配对新评测2.1991667 GPUh，640曝光、1096727有效监督token；不重复计算缓存Base和seed42。新的900题匹配对照需独立记录成本。",
+      "uncertainty": "仅两个训练seed及固定200开发题；语言识别不是流利度，数学收益伴随语言漂移。选择用于检查获得/遗忘，不能预设保持效果。"
+    },
+    "te": {
+      "math_gain": "Base42→62/56；两固定模型平均开发题提升8.5pp，按题bootstrap区间[2.5,14.75]，不是训练seed总体置信区间。",
+      "absolute_level": "目标语21%→31%/28%，中低水平，与SW和高基础ZH形成不同起点。",
+      "target_language": "seed43思考区198/200为高置信泰卢固语，56个数学正确中55个思考语言为泰卢固语；需逐阶段同时报告最终区及过短/无最终区。",
+      "English_tradeoff": "英语166→162/161，两固定模型平均-2.25pp；按题区间[-5.25,0.75]不能证明英语无损。seed43九道退步中5道截断无框、4道正常结束错误已保留原分。",
+      "termination": "目标语seed43截断129→123、提取失败124→112，长轨迹仍是主要问题；不缩短正式8192评测或2048训练预算换分。",
+      "teacher_signal": "原始冻结4B teacher/当前学生online同步链路已验证；TE seed42真实checkpoint5→20恢复保留optimizer/scheduler/RNG与数据顺序，vLLM随机流不宣称逐位恢复。未证明所有教师监督语义正确。",
+      "cost": "seed43训练3.1094444 GPUh、配对新评测3.0661111 GPUh、640曝光及1309489有效监督token；seed42失败和恢复成本另记，不用重跑前段伪造低成本。",
+      "uncertainty": "两个seed开发集数学点估计一致，但绝对水平低且截断高、英语有下降。后续报告完整阶段矩阵和实际token预算，不预设能抗遗忘。"
+    },
+    "zh": {
+      "math_gain": "Base152→160/158；两固定模型平均+3.5pp，按题区间[-0.75,8]跨零。是较弱的正向候选，不声称统计上稳定有效。",
+      "absolute_level": "目标语76%→80%/79%，可作为高基础水平语言与SW/TE形成对照，观察顺序训练对已有能力的影响。",
+      "target_language": "seed43思考区中文top1为199/200，其中高置信192；实际GlotLID标签cmn_Hani，已修复旧的不存在标签，不能混入错误标签分析。",
+      "English_tradeoff": "英语166→161/158，两固定模型平均-3.25pp、按题区间[-7,0.5]；不能宣称英语保留已通过。",
+      "termination": "两seed新增正确中含原Base截断转正常；seed42丢失8题中5题转截断。终止和提取应随准确率一同报告，不用语言保持替代正确率。",
+      "teacher_signal": "同规模原始冻结4B教师与同一tokenizer/revision，官方特权上下文和损失不改；工程teacher冻结证据不等于数学教师信号已逐题正确。",
+      "cost": "seed42训练2.9661111 GPUh、新配对评测2.4530556 GPUh；seed43训练2.9505556 GPUh、新配对2.1716667 GPUh。各640曝光，监督token1200988/1207718。",
+      "uncertainty": "ZH是第三个正向点估计候选，但证据弱；不新增人为显著性门槛，也不称稳健获益。顺序20更新为检验能力变化，非扩大有效性宣称。"
+    }
+  },
+  "training": {
+    "stage_updates": 20,
+    "scheduler_horizon": 100,
+    "effective_batch": 32,
+    "training_max_completion_length": 2048,
+    "seed": 42,
+    "pool_rows_per_language": 900,
+    "pool_overlap_between_languages": 0,
+    "question_exposures_per_stage": 640,
+    "optimizer_reset_each_stage": true,
+    "scheduler_reset_each_stage": true,
+    "adapter_policy": "one_continuous_default_adapter",
+    "first_stage_reuse_policy": "reuse_exact_matched_single",
+    "teacher": "Original frozen4B via disabled adapter; English privileged context; no CPUteacher",
+    "loss": "Official beta0 vocabulary-component-clipped0.05 KL teacher to student",
+    "GPU_per_training_parent": 2,
+    "account_GPU_limit": 4
+  },
+  "evaluation": {
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "MGSM_Rev2_items_each_target": 250,
+    "PolyMath_items_each_target": 500,
+    "PolyMath_difficulty_bands": 4,
+    "GSM8K_English_items": 1319,
+    "n": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "question_seed": 42,
+    "cases_per_model": 7
+  },
+  "scope": "Frozen development-only selection after ten languages/13model pairs accepted. ZH gains uncertain, SW language drift and selected-model English declines remain explicit. Matched900-pool references are freshBase runs; planned exactstage1 reuse avoids duplicate work. Core COPSD retained with declared project data/budget/engineering adaptations. No claim of efficacy or forgetting prevention; no formal score used for selection."
+}

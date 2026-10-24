@@ -43,6 +43,7 @@ def main():
         provenance = {'original_Base': True}
     prepared = read(code / 'sw4b_resource2_prepared_20261022.PUBLIC.json')
     names = ['formal4b_contract.py', 'evaluate_formal4b.py', 'run_formal4b_case.sh',
+             'collect_sequential4b_evaluation.py',
              'prepare_sequential4b_evaluation.py', 'sequential4b_selection.py',
              'evaluate_transformers.py', 'evaluate_vllm.py',
              'benchmark_eval_concurrency8192.py', 'compat/vllm011_uuid/sitecustomize.py']

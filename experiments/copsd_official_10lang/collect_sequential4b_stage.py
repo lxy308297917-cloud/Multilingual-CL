@@ -10,9 +10,10 @@ from sequential4b_selection import local, selection, stage_context
 
 
 def collect(root, freeze, queue, output):
-    root, freeze, output = Path(root), Path(freeze), Path(output)
+    root, freeze = Path(root), Path(freeze)
+    output = Path(output) if output is not None else None
     code = Path(__file__).parent
-    assert not output.exists()
+    assert output is None or not output.exists()
     f = read(freeze)
     assert f['engineering_only'] is False and f['updates'] == 20
     for name, digest in f['code_sha256'].items():
@@ -106,6 +107,8 @@ def collect(root, freeze, queue, output):
     result = {'engineering_only': False, 'global_step': 20, 'stage_context': expected,
               'selection_record_sha256': f['selection_record_sha256'],
               'freeze_sha256': sha(freeze), 'adapter_sha256': sha(cp / 'adapter_model.safetensors'),
+              'freeze_relative': str(freeze.relative_to(root)),
+              'collector_sha256': sha(Path(__file__)),
               'checkpoint_relative': str(cp.relative_to(root)),
               'online_rollouts': 640, 'generated_tokens': generated,
               'valid_response_loss_positions': cost['valid_response_loss_positions'],
@@ -117,9 +120,10 @@ def collect(root, freeze, queue, output):
               'parent_minutes': hours * 60, 'parent_GPU_hours': hours * 2,
               'queue': queue, 'queue_state': state,
               'scope': 'Local checkpoint release and training accounting only. No mathematical efficacy, language preservation or forgetting score is inferred from completion.'}
-    with output.open('x') as stream:
-        json.dump(result, stream, ensure_ascii=False, indent=2)
-        stream.write('\n')
+    if output is not None:
+        with output.open('x') as stream:
+            json.dump(result, stream, ensure_ascii=False, indent=2)
+            stream.write('\n')
     return result
 
 

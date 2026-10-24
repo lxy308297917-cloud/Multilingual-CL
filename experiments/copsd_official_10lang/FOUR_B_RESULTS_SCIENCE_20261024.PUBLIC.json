@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T13:18",
+  "updated_at": "2026-10-24T14:51:32.780736",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -15,8 +15,8 @@
     "question_seed": 42,
     "dataset": "Reserved200 official COPSD training originals and their language versions; English uses the same original questions, not GSM8K test."
   },
-  "completed_paired_languages": 9,
-  "completed_model_pairs": 12,
+  "completed_paired_languages": 10,
+  "completed_model_pairs": 13,
   "completed_training_languages": 10,
   "models": [
     {
@@ -38,6 +38,16 @@
       "English_OPD_correct_of200": 163,
       "target_Base_truncated": 17,
       "target_OPD_truncated": 16
+    },
+    {
+      "language": "es",
+      "training_seed": 42,
+      "target_Base_correct_of200": 163,
+      "target_OPD_correct_of200": 155,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 167,
+      "target_Base_truncated": 18,
+      "target_OPD_truncated": 13
     },
     {
       "language": "fr",
@@ -154,14 +164,12 @@
       0.75
     ]
   },
-  "remaining": {
-    "es": {
-      "stage": "paired_development_evaluation",
-      "queue_phase": "running",
-      "result_accepted": false
-    }
-  },
-  "selected_three_languages": null,
+  "remaining": {},
+  "selected_three_languages": [
+    "sw",
+    "te",
+    "zh"
+  ],
   "research_sequential_training_started": false,
   "scope": "Official COPSD core with project engineering/data/budget adaptations, not strict original hardware reproduction. Default componentclip0.05 only; unclipped and merged-concurrency experiments excluded. Same-size matched evaluation records only. Question CIs are for fixed models, not a seed population or multiplicity correction. Pending experiments are not completed results. No formal test results used for language selection.",
   "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
@@ -173,5 +181,12 @@
     "beta": 0,
     "vocabulary_component_clip": 0.05
   },
-  "aggregation_note": "Do not average model rows as languages: SW/TE/ZH have two seeds, others one. Full ten-language summary is pending."
+  "aggregation_note": "Primary seed42 averages weight each of ten languages once; only SW/TE/ZH have additional43 confirmations, reported separately. English is same200 original questions across trained-model conditions, not ten different English testsets.",
+  "primary_seed42_macro_correctness_percent": {
+    "target_Base_correct_of200": 60.65,
+    "target_OPD_correct_of200": 61.5,
+    "English_Base_correct_of200": 83.0,
+    "English_OPD_correct_of200": 80.75
+  },
+  "selection_scope": "All ten primary42 development pairs reviewed; candidateSW/TE/ZH positive42/43 point estimates, with explicit risks. Formaltests excluded."
 }
