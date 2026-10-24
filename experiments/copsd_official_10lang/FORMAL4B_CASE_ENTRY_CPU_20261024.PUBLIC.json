@@ -1,0 +1,43 @@
+{
+  "prepared_at": "2026-10-24T12:31:18.126031",
+  "model": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "CPU_preflight_exit0": true,
+  "input_contract_cases": 22,
+  "unique_benchmark_language_inputs": 21,
+  "languages": [
+    "sw",
+    "te",
+    "th",
+    "bn",
+    "zh",
+    "ja",
+    "ru",
+    "de",
+    "fr",
+    "es"
+  ],
+  "benchmarks": {
+    "MGSM_Rev2": "250 questions per target language",
+    "PolyMath": "500 per target language, four125-question difficulty groups",
+    "English_GSM8K": "1319 questions"
+  },
+  "native_LoRA": true,
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "question_seed": 42,
+  "actual_existing_adapter_cross_filesystem_path_validated": true,
+  "generation_scoring_block_identical_to_existing_full_suite_entry": true,
+  "GPU_inference_performed": false,
+  "new_test_scores": null,
+  "three_language_selection_frozen": false,
+  "new_seven_suite_stage_controller_complete": false,
+  "source_sha256": {
+    "formal4b_contract.py": "65824ff4b316927e795a834e796edd6c24f1ebd431574ed6f6320fb86425eed8",
+    "evaluate_formal4b.py": "262b7399f6d0b7b9950d93d9c696373ede1b7636f08b74d2e146fdde617cdab1",
+    "run_formal4b_case.sh": "ea207a5b691a8d536cb173534bc7d19df24ac3b11a87f535ef51c44073d2808a"
+  },
+  "scope": "CPU input/configuration compatibility only, including an accepted RU20 adapter fixture on the other filesystem. RU is not selected and no model inference was performed. The engineering fixture cannot start formal GPU inference. Original prompt/loader/sampling/extraction/grading calls retained;1.7B and prior SW-only entry unchanged. Stage scheduling, cache reuse, complete provenance and forgetting matrices remain separate required work."
+}
