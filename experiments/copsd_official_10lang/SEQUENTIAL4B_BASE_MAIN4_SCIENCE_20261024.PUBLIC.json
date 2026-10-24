@@ -42,5 +42,8 @@
     }
   },
   "three_target_MGSM_macro_accuracy_percent": 56.4,
-  "scope": "FullfixedBasemainMGSM250SW/TE/ZHandEnglishGSM1319accepted. RetainoriginalcachedwrapperprovenanceforSW/Englishwithverifiedidenticalgeneration/scoringsuffix. Englishisretentionandnotincludedintargetmacro. Trainedmodels,BasePolyMathandcompleteforgettingreportsremainpending;nosingle/sequenceefficacyclaim."
+  "scope": "FullfixedBasemainMGSM250SW/TE/ZHandEnglishGSM1319accepted. RetainoriginalcachedwrapperprovenanceforSW/Englishwithverifiedidenticalgeneration/scoringsuffix. Englishisretentionandnotincludedintargetmacro. Trainedmodels,BasePolyMathandcompleteforgettingreportsremainpending;nosingle/sequenceefficacyclaim.",
+  "TensorBoard_score_export_read_back": true,
+  "TensorBoard_scalar_count": 21,
+  "Base_display_step": 0
 }
