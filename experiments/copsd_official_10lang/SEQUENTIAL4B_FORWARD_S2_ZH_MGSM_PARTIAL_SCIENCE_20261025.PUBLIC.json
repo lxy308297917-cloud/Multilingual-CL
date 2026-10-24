@@ -1,0 +1,82 @@
+{
+  "observed_at": "2026-10-25T00:39:20.993278+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "model_id": "forward_s2",
+  "training_order_so_far": [
+    "sw",
+    "te"
+  ],
+  "stage_index": 2,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "optimizer_scheduler_reset_each_stage": true,
+  "evaluation_language": "zh",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 240,
+  "model_correct": 242,
+  "gained": 4,
+  "lost": 2,
+  "delta_percentage_points": 0.8,
+  "paired_question_bootstrap95_CI_pp": [
+    -1.2,
+    2.8000000000000003
+  ],
+  "previous_stage_comparison": {
+    "previous_model": "SW_matched900 reused as forward stage1",
+    "previous_correct": 239,
+    "current_correct": 242,
+    "gained": 5,
+    "lost": 2,
+    "delta_percentage_points": 1.2,
+    "all_question_prompt_seed_identities_verified": true,
+    "scope": "Raw paired stage change on not-yet-trainedZH, not a forgetting metric or significance claim."
+  },
+  "termination": {
+    "Base": {
+      "generated_tokens": 220140,
+      "truncated": 1,
+      "normal_terminations": 249,
+      "answer_extraction_failures": 1
+    },
+    "model": {
+      "generated_tokens": 375731,
+      "truncated": 0,
+      "normal_terminations": 250,
+      "answer_extraction_failures": 0
+    }
+  },
+  "model_language_summary": {
+    "thinking": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 250
+      },
+      "top1_label_counts": {
+        "__label__cmn_Hani": 250
+      },
+      "target_top1_probability_ge_0_8": 250,
+      "correct_items_label_counts": {
+        "__label__cmn_Hani": 242
+      }
+    },
+    "final": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 250
+      },
+      "top1_label_counts": {
+        "__label__cmn_Hani": 250
+      },
+      "target_top1_probability_ge_0_8": 247,
+      "correct_items_label_counts": {
+        "__label__cmn_Hani": 242
+      }
+    }
+  },
+  "model_correct_and_target_thinking_highconf": 242,
+  "model_correct_and_both_parts_target_highconf": 239,
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "scope": "One full formal ZH case of the second forward stage, not a complete seven-case stage or forgetting matrix. ZH has not yet been trained; these are pretrained-language retention/transfer observations, not post-ZH-learning forgetting. Fixed-model Base comparison CI includes zero. Local checkpoint/TensorBoard step20 reflects stage reset; cumulative sequence display40. No scoring, generation-budget or teacher change. Whole-part language ID is not fluency, token purity or proof validity. SW/TE, English and PolyMath results remain required."
+}

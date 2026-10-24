@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T00:29:17.500399+08:00",
+  "updated_at": "2026-10-25T00:39:20.993278+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -526,6 +526,30 @@
       }
     },
     "matched_reference_MGSM_all_nine_pairs_accepted": true,
-    "matched_reference_matrix_scope": "Three independent matched900 singles x three full MGSM tests only; not sequential stages, not original2700 ten-language formal results or complete seven-case suites. Same-language tests reuse underlying originals across translations, not independent pooled samples."
+    "matched_reference_matrix_scope": "Three independent matched900 singles x three full MGSM tests only; not sequential stages, not original2700 ten-language formal results or complete seven-case suites. Same-language tests reuse underlying originals across translations, not independent pooled samples.",
+    "accepted_partial_sequential_MGSM_pairs": [
+      {
+        "model_id": "forward_s2",
+        "order_so_far": [
+          "sw",
+          "te"
+        ],
+        "stage_index": 2,
+        "local_checkpoint_step": 20,
+        "cumulative_display_updates": 40,
+        "evaluation_language": "zh",
+        "Base_correct": 240,
+        "previous_stage_correct": 239,
+        "model_correct": 242,
+        "items": 250,
+        "delta_from_Base_pp": 0.8,
+        "Base_paired_question_CI95_pp": [
+          -1.2,
+          2.8000000000000003
+        ],
+        "source": "SEQUENTIAL4B_FORWARD_S2_ZH_MGSM_PARTIAL_SCIENCE_20261025.PUBLIC.json",
+        "not_post_ZH_learning_forgetting": true
+      }
+    ]
   }
 }
