@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T11:27",
+  "updated_at": "2026-10-24T11:57",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -12,10 +12,11 @@
     "n": 1,
     "max_new_tokens": 8192,
     "max_num_seqs": 16,
-    "question_seed": 42
+    "question_seed": 42,
+    "dataset": "Reserved200 official COPSD training originals and their language versions; English uses the same original questions, not GSM8K test."
   },
-  "completed_paired_languages": 7,
-  "completed_model_pairs": 10,
+  "completed_paired_languages": 8,
+  "completed_model_pairs": 11,
   "completed_training_languages": 9,
   "models": [
     {
@@ -27,6 +28,16 @@
       "English_OPD_correct_of200": 163,
       "target_Base_truncated": 84,
       "target_OPD_truncated": 100
+    },
+    {
+      "language": "de",
+      "training_seed": 42,
+      "target_Base_correct_of200": 156,
+      "target_OPD_correct_of200": 146,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 163,
+      "target_Base_truncated": 17,
+      "target_OPD_truncated": 16
     },
     {
       "language": "ja",
@@ -134,11 +145,6 @@
     ]
   },
   "remaining": {
-    "de": {
-      "stage": "paired_development_evaluation",
-      "queue_phase": "running",
-      "result_accepted": false
-    },
     "fr": {
       "stage": "paired_development_evaluation",
       "queue_phase": "running",
@@ -152,5 +158,15 @@
   },
   "selected_three_languages": null,
   "research_sequential_training_started": false,
-  "scope": "Official COPSD core with project engineering/data/budget adaptations, not strict original hardware reproduction. Default componentclip0.05 only; unclipped and merged-concurrency experiments excluded. Same-size matched evaluation records only. Question CIs are for fixed models, not a seed population or multiplicity correction. Pending experiments are not completed results. No formal test results used for language selection."
+  "scope": "Official COPSD core with project engineering/data/budget adaptations, not strict original hardware reproduction. Default componentclip0.05 only; unclipped and merged-concurrency experiments excluded. Same-size matched evaluation records only. Question CIs are for fixed models, not a seed population or multiplicity correction. Pending experiments are not completed results. No formal test results used for language selection.",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "training_method": {
+    "update": "LoRA",
+    "rank": 64,
+    "alpha": 128,
+    "fixed_teacher": "original Base with adapter disabled",
+    "beta": 0,
+    "vocabulary_component_clip": 0.05
+  },
+  "aggregation_note": "Do not average model rows as languages: SW/TE/ZH have two seeds, others one. Full ten-language summary is pending."
 }

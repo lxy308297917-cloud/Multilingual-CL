@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "engineering_only": true,
+  "parent": "accepted RU single20 adapter, fixture only; RU is not selected for research",
+  "planned_new_stage_updates": 2,
+  "planned_online_rollouts": 64,
+  "effective_batch": 32,
+  "max_completion_length": 2048,
+  "scheduler_horizon": 100,
+  "optimizer": "same AdamW at5e-6, planned fresh stage state",
+  "teacher": "same original Base via disabled adapter",
+  "loss": "same official-core beta0 with componentclip0.05",
+  "CPU_preflight_passed": true,
+  "unchanged_single_source_sync_step_generation_prefetch_verified": true,
+  "actual_GPU_Trainer_handoff_verified": false,
+  "queue_phase": "holding",
+  "account_GPU_limit": 4,
+  "checks_to_accept": [
+    "one existing adapter loaded exactly from parent20",
+    "actual Trainer optimizer and scheduler start at0",
+    "current-student online rollout sync before/after each update",
+    "original frozen Base unchanged",
+    "checkpoint2 optimizer/scheduler/RNG and TensorBoard"
+  ],
+  "scope": "A two-update integration check, not research sequential training or efficacy. Reuses the RU training pool without claiming disjointness; debugging output must never initialize a research run. Independent training and evaluations continue. Production language/pool/evaluation controller still requires a supported frozen three-language selection and integration."
+}
