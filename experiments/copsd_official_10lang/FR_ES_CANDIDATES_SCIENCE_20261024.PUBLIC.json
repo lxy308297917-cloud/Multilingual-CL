@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "data": {
+    "fr": {
+      "training_rows": 2700,
+      "development_rows": 200,
+      "official_content_match": true,
+      "same_ordered_English_originals_and_references_as_other4B_candidates": true,
+      "ID_and_normalized_English_overlap_with_original100_and_reserved200": 0,
+      "training_normalized_English_duplicates": 0,
+      "replacement_character_rows": 0,
+      "real_source_prompt_and_student_teacher_privilege_boundary_passed": true,
+      "shared_training_entry_prepare_only_passed": true,
+      "Base_evaluation_prepare_only_passed": true
+    },
+    "es": {
+      "training_rows": 2700,
+      "development_rows": 200,
+      "official_content_match": true,
+      "same_ordered_English_originals_and_references_as_other4B_candidates": true,
+      "ID_and_normalized_English_overlap_with_original100_and_reserved200": 0,
+      "training_normalized_English_duplicates": 0,
+      "replacement_character_rows": 0,
+      "real_source_prompt_and_student_teacher_privilege_boundary_passed": true,
+      "shared_training_entry_prepare_only_passed": true,
+      "Base_evaluation_prepare_only_passed": true
+    }
+  },
+  "FR": {
+    "Base200_completed": true,
+    "Base_correct": 157,
+    "fresh20_training": "queued waiting, zero updates claimed",
+    "model_effect": "unknown"
+  },
+  "ES": {
+    "Base200": "actually generating",
+    "fresh20_training": "configuration prepared, not started",
+    "model_effect": "unknown"
+  },
+  "fixed_training_recipe": {
+    "updates": 20,
+    "scheduler_horizon": 100,
+    "planned_exposures": 640,
+    "micro_batch": 1,
+    "gradient_accumulation": 32,
+    "effective_batch": 32,
+    "generation_limit": 2048,
+    "optimizer": "AdamW",
+    "learning_rate": 5e-06,
+    "LoRA_rank": 64,
+    "LoRA_alpha": 128,
+    "teacher": "frozenoriginalBase, disabledadapter",
+    "loss": "same officialbeta0 component-clipped0.05 teacher-to-student fullvocabKL with recorded memory adaptations"
+  },
+  "evaluation": {
+    "items_per_language": 200,
+    "n": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "question_seed": 42,
+    "English_Base_correct": 166,
+    "English_Base_regenerated": false
+  },
+  "existing_DE_training_and_TE_seed43_evaluation": "continue",
+  "max_account_GPU_limit": 4,
+  "languages_selected_for_sequential": false,
+  "scope": "Originalten coverage candidates with same4B cohort, not newparametergrid, formaltest selection or sequential stage. No target-language SFT label synthesis. Scientific-only summary; configurations and runtime bindings retained locally."
+}

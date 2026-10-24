@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "language": "fr",
+  "split": "reserved development200, not formaltest",
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "question_seed": 42,
+  "correct_of200": 157,
+  "generated_tokens": 639167,
+  "truncated": 18,
+  "normal_terminations": 182,
+  "answer_extraction_failures": 13,
+  "evaluation_parent_GPU_hours": 0.32222222222222224,
+  "original_Base_no_adapter": true,
+  "all200_rows_inputs_seeds_metrics_audited": true,
+  "training_updates": 0,
+  "scope": "AcceptedBaseonly. No FR OPD model result; fresh20 training not started at this observation. Do not regenerate Base or recount its costs later."
+}
