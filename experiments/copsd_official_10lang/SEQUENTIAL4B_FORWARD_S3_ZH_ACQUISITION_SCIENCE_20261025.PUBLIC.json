@@ -1,0 +1,126 @@
+{
+  "model_id": "forward_s3",
+  "case": "mgsm_rev2_zh",
+  "items": 250,
+  "Base_comparison": {
+    "Base_correct": 240,
+    "model_correct": 239,
+    "gained": 3,
+    "lost": 4,
+    "delta_percentage_points": -0.4,
+    "paired_question_bootstrap95_CI_pp": [
+      -2.4,
+      1.6
+    ]
+  },
+  "previous_stage": {
+    "previous_correct": 242,
+    "current_correct": 239,
+    "gained": 2,
+    "lost": 5,
+    "change_pp": -1.2,
+    "paired_question_CI95_pp": [
+      -3.2,
+      0.8
+    ]
+  },
+  "matched_single": {
+    "previous_correct": 241,
+    "current_correct": 239,
+    "gained": 3,
+    "lost": 5,
+    "change_pp": -0.8,
+    "paired_question_CI95_pp": [
+      -3.2,
+      1.2
+    ]
+  },
+  "language": {
+    "previous_stage": {
+      "thinking_target_highconf": 250,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 242,
+      "correct_and_both_parts_target_highconf": 239
+    },
+    "current": {
+      "thinking_target_highconf": 248,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 237,
+      "correct_and_both_parts_target_highconf": 235
+    },
+    "matched_single": {
+      "thinking_target_highconf": 249,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 240,
+      "correct_and_both_parts_target_highconf": 234
+    }
+  },
+  "current_metrics": {
+    "items": 250,
+    "single_correct": 239,
+    "generated_tokens": 297990,
+    "truncated": 2,
+    "normal_terminations": 248,
+    "answer_extraction_failures": 1,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "mgsm_rev2",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 250,
+    "single_accuracy": 0.956,
+    "generation_seconds": 1468.5513046383858,
+    "model_load_seconds": 13.745899010449648,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {}
+  },
+  "previous_metrics": {
+    "items": 250,
+    "single_correct": 242,
+    "generated_tokens": 375731,
+    "truncated": 0,
+    "normal_terminations": 250,
+    "answer_extraction_failures": 0,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "mgsm_rev2",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 250,
+    "single_accuracy": 0.968,
+    "generation_seconds": 2038.8984140176326,
+    "model_load_seconds": 14.069233203306794,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {}
+  },
+  "actual_parent_adapter_verified": true,
+  "common_ID_question_answer_prompt_seed_verified": true,
+  "current_language_acquisition": true,
+  "is_old_ZH_forgetting": false,
+  "complete_seven_case_stage": false,
+  "complete_forgetting_matrix": false,
+  "scope": "Current-language acquisition after two earlier stages, not old-ZH forgetting. Fixed-model paired question bootstrap, not trainingseed-population or multiplicity-corrected. Current stage and single match data/current-language budget but differ in total exposure. Original scores and GlotLID meanings retained.",
+  "observed_at": "2026-10-25T03:10:26.204216+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "order": [
+    "sw",
+    "te",
+    "zh"
+  ],
+  "stage_index": 3,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 60,
+  "private_evidence_sha256": "d8a95304b6524212d2f8a153c4ac3af47030b68fa9e750e8dca58f38ff2ec4b9",
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true
+  },
+  "percentage_units_supplement": {
+    "protocol": "project_mgsm_percentage_units_diagnostic_v1",
+    "available_conditions": 22,
+    "original_correct": 239,
+    "diagnostic_correct": 242,
+    "official_scores_preserved": true
+  },
+  "interpretation": "Chinese current-language score239/250 after SW/TE/ZH is near Base240, prior SW/TE242 and matched single241; all paired question intervals include zero. This is current-ZH acquisition, not learned-ZH forgetting. No stable benefit or harm established from these fixed models; complete SW/TE/English/PolyMath and full matrices remain required."
+}
