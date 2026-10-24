@@ -73,14 +73,72 @@ def record(root, marker_path, directory, receipt_path):
     return receipt
 
 
+def record_pair(root, marker_path, directory, receipt_path):
+    root, marker_path = Path(root), Path(marker_path)
+    directory, receipt_path = Path(directory), Path(receipt_path)
+    assert not directory.exists() and not receipt_path.exists()
+    assert directory.resolve().is_relative_to((root / 'logs').resolve())
+    marker = read(marker_path)
+    assert marker['proves_complete_seven_case_stage'] is False
+    assert marker['source_sha256'] == digest(Path(__file__).with_name('collect_sequential4b_formal_pair.py'))
+    for condition in ['Base', 'model']:
+        case = marker[condition]
+        folder = root / case['output_relative']
+        for name, expected in case['files_sha256'].items():
+            assert digest(folder / name) == expected
+        assert read(folder / 'DONE.json') == case['metrics']
+    step = marker['model']['config']['checkpoint_step']
+    assert step == 20
+    scalars = {'formal/Base_accuracy': marker['Base']['metrics']['single_accuracy'],
+               'formal/model_accuracy': marker['model']['metrics']['single_accuracy'],
+               'formal/paired_delta_pp': marker['delta_percentage_points'],
+               'formal/question_CI95_lower_pp': marker['paired_question_bootstrap95_CI_pp'][0],
+               'formal/question_CI95_upper_pp': marker['paired_question_bootstrap95_CI_pp'][1],
+               'formal/gained': marker['gained'], 'formal/lost': marker['lost']}
+    for condition in ['Base', 'model']:
+        for field in ['truncated', 'normal_terminations', 'answer_extraction_failures']:
+            scalars['formal/' + condition + '_' + field] = marker[condition]['metrics'].get(field, 0)
+    from torch.utils.tensorboard import SummaryWriter
+    from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
+    writer = SummaryWriter(str(directory))
+    try:
+        for tag, value in scalars.items():
+            assert math.isfinite(value)
+            writer.add_scalar(tag, value, step)
+        writer.flush()
+    finally:
+        writer.close()
+    events = EventAccumulator(str(directory), size_guidance={'scalars': 0}).Reload()
+    assert set(events.Tags()['scalars']) == set(scalars)
+    for tag, expected in scalars.items():
+        values = events.Scalars(tag)
+        assert len(values) == 1 and values[0].step == step
+        assert math.isclose(values[0].value, expected, rel_tol=2e-7, abs_tol=2e-7), tag
+    receipt = {'model_id': marker['model_id'], 'case': marker['case'],
+               'marker_sha256': digest(marker_path), 'local_checkpoint_step': step,
+               'TensorBoard_relative': str(directory.relative_to(root)),
+               'scalar_count': len(scalars), 'all_scalars_read_back': True,
+               'scope': 'One partial formal pair only. Local checkpoint step20, not cumulative sequential updates; does not prove a complete stage or language preservation. No new inference or modification of training logs.'}
+    with receipt_path.open('x') as stream:
+        json.dump(receipt, stream, ensure_ascii=False, indent=2)
+        stream.write('\n')
+    return receipt
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, required=True)
-    parser.add_argument('--evaluation', type=Path, required=True)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--evaluation', type=Path)
+    mode.add_argument('--pair', type=Path)
     parser.add_argument('--directory', type=Path, required=True)
     parser.add_argument('--receipt', type=Path, required=True)
     args = parser.parse_args()
-    print(json.dumps(record(args.root, args.evaluation, args.directory, args.receipt)))
+    if args.pair:
+        result = record_pair(args.root, args.pair, args.directory, args.receipt)
+    else:
+        result = record(args.root, args.evaluation, args.directory, args.receipt)
+    print(json.dumps(result))
 
 
 if __name__ == '__main__':

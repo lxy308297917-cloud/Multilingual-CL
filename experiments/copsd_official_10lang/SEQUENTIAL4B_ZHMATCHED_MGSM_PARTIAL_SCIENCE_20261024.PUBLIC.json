@@ -1,0 +1,47 @@
+{
+  "observed_at": "2026-10-24T17:06:10.836877",
+  "model": "Qwen/Qwen3-4B",
+  "training_condition": "FreshBase ZH900-question matched-pool reference,20updates under100scheduler",
+  "benchmark": "MGSM-Rev2",
+  "language": "zh",
+  "evaluation": {
+    "items": 250,
+    "n": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "native_LoRA": true,
+    "question_seed": 42,
+    "split": "formal test; not development200"
+  },
+  "result": {
+    "Base_correct": 240,
+    "model_correct": 241,
+    "gained": 5,
+    "lost": 4,
+    "delta_percentage_points": 0.4,
+    "paired_question_bootstrap95_CI_pp": [
+      -2.0,
+      2.8000000000000003
+    ]
+  },
+  "termination": {
+    "Base": {
+      "truncated": 1,
+      "normal_terminations": 249,
+      "answer_extraction_failures": 1,
+      "generated_tokens": 220140
+    },
+    "model": {
+      "truncated": 0,
+      "normal_terminations": 250,
+      "answer_extraction_failures": 0,
+      "generated_tokens": 215087
+    }
+  },
+  "pair_new_evaluation_GPU_hours": 0.4380555555555556,
+  "TensorBoard_13_scalars_read_back": true,
+  "interpretation": "Basically unchanged:240->241/250,+0.4pp, pairedquestionCI[-2,2.8] includeszero. No stablemathematicalbenefit established bythiscase.",
+  "complete_seven_case_stage": false,
+  "pending": "Other targetlanguages,PolyMath andEnglishGSMretention; language-ID andforgetting matrices",
+  "scope": "Original full250item outputs and scores retained; configs,inputs,prompts,requestseeds,packages,queueexit andrawcounts audited. CI overquestions forfixedmodels,nottrainingseedpopulation ormultiplicityadjusted inference. Doesnotchangefrozenlanguageselection; paircostalreadybelongs tofuturefullsuiteledger andmustnotbecountedagain."
+}
