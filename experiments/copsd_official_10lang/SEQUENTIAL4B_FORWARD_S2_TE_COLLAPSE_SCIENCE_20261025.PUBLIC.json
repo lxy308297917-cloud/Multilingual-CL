@@ -1,0 +1,163 @@
+{
+  "observed_at": "2026-10-25T02:35:08.221950+08:00",
+  "model_id": "forward_s2",
+  "case": "mgsm_rev2_te",
+  "items": 250,
+  "Base_comparison": {
+    "Base_correct": 149,
+    "model_correct": 14,
+    "gained": 0,
+    "lost": 135,
+    "delta_percentage_points": -54.0,
+    "paired_question_bootstrap95_CI_pp": [
+      -60.4,
+      -48.0
+    ]
+  },
+  "previous_stage": {
+    "previous_correct": 140,
+    "current_correct": 14,
+    "gained": 0,
+    "lost": 126,
+    "change_pp": -50.4,
+    "paired_question_CI95_pp": [
+      -56.39999999999999,
+      -44.4
+    ],
+    "loss_partition": {
+      "lost": 126,
+      "lost_current_truncated": 126,
+      "lost_current_no_box": 126,
+      "lost_current_both_truncated_and_no_box": 126,
+      "lost_normal_with_box": 0
+    }
+  },
+  "matched_single": {
+    "previous_correct": 152,
+    "current_correct": 14,
+    "gained": 0,
+    "lost": 138,
+    "change_pp": -55.2,
+    "paired_question_CI95_pp": [
+      -61.199999999999996,
+      -49.2
+    ],
+    "loss_partition": {
+      "lost": 138,
+      "lost_current_truncated": 138,
+      "lost_current_no_box": 138,
+      "lost_current_both_truncated_and_no_box": 138,
+      "lost_normal_with_box": 0
+    }
+  },
+  "language": {
+    "previous_stage": {
+      "thinking_target_highconf": 250,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 140,
+      "correct_and_both_parts_target_highconf": 139,
+      "no_final_section": 30
+    },
+    "current": {
+      "thinking_target_highconf": 250,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 14,
+      "correct_and_both_parts_target_highconf": 14,
+      "no_final_section": 227
+    },
+    "matched_single": {
+      "thinking_target_highconf": 250,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 152,
+      "correct_and_both_parts_target_highconf": 150,
+      "no_final_section": 23
+    }
+  },
+  "current_metrics": {
+    "items": 250,
+    "single_correct": 14,
+    "generated_tokens": 2014096,
+    "truncated": 234,
+    "normal_terminations": 16,
+    "answer_extraction_failures": 234,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "mgsm_rev2",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 250,
+    "single_accuracy": 0.056,
+    "generation_seconds": 9671.248470440507,
+    "model_load_seconds": 13.509682079777122,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {}
+  },
+  "previous_metrics": {
+    "items": 250,
+    "single_correct": 140,
+    "generated_tokens": 1227465,
+    "truncated": 41,
+    "normal_terminations": 209,
+    "answer_extraction_failures": 39,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "mgsm_rev2",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 250,
+    "single_accuracy": 0.56,
+    "generation_seconds": 5443.343126220629,
+    "model_load_seconds": 13.59884351119399,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {}
+  },
+  "actual_parent_adapter_link_verified": true,
+  "same_ID_question_answer_prompt_seed_verified": true,
+  "is_current_TE_acquisition": true,
+  "is_old_TE_forgetting": false,
+  "complete_seven_case_stage": false,
+  "complete_forgetting_matrix": false,
+  "scope": "Current-language collapse under unchanged original scoring. Truncation/box loss overlap, not independent causes. Language labels do not prove quality. Fixed-model question bootstrap, no trainingseed population or multiplicity claim; matched single has equal current-language data/budget but lower total training exposure.",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "order_so_far": [
+    "sw",
+    "te"
+  ],
+  "stage_index": 2,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "private_evidence_sha256": "76a8fb2559855c0e304da2f8467082c3a8a8ad69692f749db75294de11e16f07",
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true
+  },
+  "supplementary_percentage_diagnostic": {
+    "protocol": "project_mgsm_percentage_units_diagnostic_v1",
+    "available_conditions": 20,
+    "original_correct": 14,
+    "diagnostic_correct": 14,
+    "official_scores_modified": false
+  },
+  "accepted_forward_s2_three_language_MGSM_row": {
+    "sw": {
+      "Base_correct": 34,
+      "model_correct": 73,
+      "items": 250
+    },
+    "te": {
+      "Base_correct": 149,
+      "model_correct": 14,
+      "items": 250
+    },
+    "zh": {
+      "Base_correct": 240,
+      "model_correct": 242,
+      "items": 250
+    }
+  },
+  "three_case_receipt_sha256": {
+    "SW": "4b003b12c95fccd3307f07fd54ab201a2cc4204ef7a2c195f4b309307dd69110",
+    "TE": "0990a48bc62c4892ca112b7f949af8c45918e4667b62653c741332a7d29fd0d7",
+    "ZH": "548203114b869c17cc53fefc094e0aabaf7fc7a6a6546c90f0fc1fb160c5f502"
+  },
+  "interpretation": "Under the fixed original protocol, TE current-language performance collapses after SW/TE: all126 losses relative to the actual preceding SW stage are truncated with no extracted box. All250 thought sections retain a high-confidence Telugu label. This demonstrates noncompletion under the current cap, not language-label switching or percentage-symbol scoring; it does not establish the training cause or the score under another cap. SW gains alone cannot establish successful multilingual acquisition. Full English/PolyMath/language and final-stage forgetting still pending."
+}
