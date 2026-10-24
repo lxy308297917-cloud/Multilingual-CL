@@ -1,0 +1,134 @@
+{
+  "observed_at": "2026-10-25T01:30:02.475100+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "model_id": "reverse_s2",
+  "training_order_so_far": [
+    "zh",
+    "te"
+  ],
+  "stage_index": 2,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "evaluation_language": "sw",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 34,
+  "current_correct": 44,
+  "Base_to_current_delta_pp": 4.0,
+  "Base_to_current_question_CI95_pp": [
+    -0.8,
+    8.8
+  ],
+  "previous_stage_comparison": {
+    "previous_correct": 46,
+    "current_correct": 44,
+    "gained": 20,
+    "lost": 22,
+    "change_from_previous_stage_pp": -0.8,
+    "paired_question_change_CI95_pp": [
+      -6.0,
+      4.4
+    ]
+  },
+  "is_post_SW_learning_forgetting": false,
+  "language_ID_supplement": {
+    "prior": {
+      "thinking_target_highconf": 188,
+      "thinking_English_top1": 10,
+      "correct_and_target_thinking_highconf": 37,
+      "correct_and_both_parts_target_highconf": 14
+    },
+    "current": {
+      "thinking_target_highconf": 183,
+      "thinking_English_top1": 13,
+      "correct_and_target_thinking_highconf": 37,
+      "correct_and_both_parts_target_highconf": 17
+    }
+  },
+  "language_detector_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "model_full_language_summary": {
+    "thinking": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 250
+      },
+      "top1_label_counts": {
+        "__label__swh_Latn": 204,
+        "__label__mwc_Latn": 1,
+        "__label__eng_Latn": 13,
+        "__label__atj_Latn": 2,
+        "__label__kdc_Latn": 7,
+        "__label__swc_Latn": 11,
+        "__label__fuq_Latn": 2,
+        "__label__nyf_Latn": 1,
+        "__label__swb_Latn": 1,
+        "__label__ngp_Latn": 1,
+        "__label__knk_Latn": 1,
+        "__label__pmf_Latn": 2,
+        "__label__nba_Latn": 1,
+        "__label__myx_Latn": 1,
+        "__label__tih_Latn": 1,
+        "__label__gil_Latn": 1
+      },
+      "target_top1_probability_ge_0_8": 183,
+      "correct_items_label_counts": {
+        "__label__swh_Latn": 40,
+        "__label__eng_Latn": 4
+      }
+    },
+    "final": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 205,
+        "no_final_section": 45
+      },
+      "top1_label_counts": {
+        "__label__swh_Latn": 121,
+        "__label__swc_Latn": 55,
+        "__label__run_Latn": 2,
+        "__label__lin_Latn": 4,
+        "__label__ssw_Latn": 6,
+        "__label__eng_Latn": 9,
+        "__label__hay_Latn": 3,
+        "__label__kng_Latn": 1,
+        "__label__kam_Latn": 2,
+        "__label__ktu_Latn": 1,
+        "__label__kdc_Latn": 1
+      },
+      "target_top1_probability_ge_0_8": 84,
+      "correct_items_label_counts": {
+        "__label__swc_Latn": 15,
+        "__label__swh_Latn": 24,
+        "__label__lin_Latn": 1,
+        "__label__eng_Latn": 2,
+        "__label__run_Latn": 1,
+        "__label__ssw_Latn": 1
+      }
+    }
+  },
+  "termination": {
+    "Base": {
+      "generated_tokens": 809908,
+      "truncated": 70,
+      "normal_terminations": 180,
+      "answer_extraction_failures": 74
+    },
+    "ZH_stage1": {
+      "generated_tokens": 635263,
+      "truncated": 43,
+      "normal_terminations": 207,
+      "answer_extraction_failures": 50
+    },
+    "ZH_TE_stage2": {
+      "generated_tokens": 701051,
+      "truncated": 48,
+      "normal_terminations": 202,
+      "answer_extraction_failures": 50
+    }
+  },
+  "actual_parent_adapter_link_verified": true,
+  "same_questions_prompts_answers_request_seeds_verified": true,
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "scope": "One completed pretrained-SW transfer case after ZH/TE, not a post-SW-learning forgetting metric or complete stage/matrix. Both Base and previous-stage question CIs include zero; no stable gain/decline or trainingseed population claim. Whole-part language ID does not measure fluency, token purity or proof validity. The forward prefix trainedSW whereas reverse prefix has not: these partial scores cannot isolate order quality. Full TE/English/PolyMath and third-phase results remain required."
+}

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T01:18:28.423293+08:00",
+  "updated_at": "2026-10-25T01:30:02.475100+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -614,6 +614,33 @@
           232
         ],
         "source": "SEQUENTIAL4B_REVERSE_S2_ZH_FORGETTING_SCIENCE_20261025.PUBLIC.json",
+        "complete_forgetting_matrix": false
+      },
+      {
+        "model_id": "reverse_s2",
+        "order_so_far": [
+          "zh",
+          "te"
+        ],
+        "stage_index": 2,
+        "evaluation_language": "sw",
+        "Base_correct": 34,
+        "previous_stage_correct": 46,
+        "model_correct": 44,
+        "items": 250,
+        "cumulative_display_updates": 40,
+        "delta_from_Base_pp": 4.0,
+        "Base_question_CI95_pp": [
+          -0.8,
+          8.8
+        ],
+        "change_from_previous_stage_pp": -0.8,
+        "previous_stage_question_CI95_pp": [
+          -6.0,
+          4.4
+        ],
+        "is_post_SW_learning_forgetting": false,
+        "source": "SEQUENTIAL4B_REVERSE_S2_SW_MGSM_PARTIAL_SCIENCE_20261025.PUBLIC.json",
         "complete_forgetting_matrix": false
       }
     ]
