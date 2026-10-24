@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T05:22:01.543529+08:00",
+  "updated_at": "2026-10-25T06:08:46.974184+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -997,7 +997,57 @@
     ],
     "target_MGSM_stage_matrices_source": "SELECTED4B_TARGET_MGSM_STAGE_MATRICES_20261025.PUBLIC.json",
     "all_eight_selected_models_three_target_MGSM_complete": true,
-    "complete_seven_case_stage_matrices": false
+    "complete_seven_case_stage_matrices": false,
+    "accepted_partial_English_GSM8K_pairs": [
+      {
+        "training_language": "sw",
+        "model_id": "SW_matched900",
+        "English_items": 1319,
+        "Base_English_correct": 1247,
+        "model_English_correct": 1244,
+        "English_gained": 19,
+        "English_lost": 22,
+        "English_delta_pp": -0.22744503411675512,
+        "English_paired_question_CI95_pp": [
+          -1.2130401819560273,
+          0.6842304776345441
+        ],
+        "source": "SELECTED4B_MATCHED_THREE_ENGLISH_SCIENCE_20261025.PUBLIC.json"
+      },
+      {
+        "training_language": "te",
+        "model_id": "TE_matched900",
+        "English_items": 1319,
+        "Base_English_correct": 1247,
+        "model_English_correct": 1249,
+        "English_gained": 18,
+        "English_lost": 16,
+        "English_delta_pp": 0.1516300227445034,
+        "English_paired_question_CI95_pp": [
+          -0.6823351023502654,
+          1.061410159211524
+        ],
+        "source": "SELECTED4B_MATCHED_THREE_ENGLISH_SCIENCE_20261025.PUBLIC.json"
+      },
+      {
+        "training_language": "zh",
+        "model_id": "ZH_matched900",
+        "English_items": 1319,
+        "Base_English_correct": 1247,
+        "model_English_correct": 1244,
+        "English_gained": 19,
+        "English_lost": 22,
+        "English_delta_pp": -0.22744503411675512,
+        "English_paired_question_CI95_pp": [
+          -1.1372251705837757,
+          0.6823351023502654
+        ],
+        "source": "SELECTED4B_MATCHED_THREE_ENGLISH_SCIENCE_20261025.PUBLIC.json"
+      }
+    ],
+    "matched_reference_main_four_cases_complete": true,
+    "matched_reference_seven_cases_complete": false,
+    "sequential_English_complete": false
   },
   "scoring_diagnostic": {
     "source": "MGSM_PERCENTAGE_AND_REASONING_DIAGNOSTIC_20261025.PUBLIC.json",
