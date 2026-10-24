@@ -1,0 +1,37 @@
+{
+  "observed_at": "2026-10-24T18:30:00+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "experiment": "TE matched900 single20 reference; fresh Base initialization",
+  "training": {
+    "global_step": 20,
+    "online_rollouts": 640,
+    "generated_tokens": 1308167,
+    "valid_response_loss_positions": 1308167,
+    "teacher_forward_calls": 640,
+    "current_student_weight_syncs": 21,
+    "original_Base_bitwise_unchanged": true,
+    "actual_stage_optimizer_scheduler_reset": true,
+    "checkpoint20_optimizer_scheduler_RNG_verified": true,
+    "TensorBoard_loss_learning_rate_read_back": true,
+    "parent_minutes": 94.61666666666667,
+    "parent_GPU_hours": 3.153888888888889
+  },
+  "actual_unique_original_questions": 640,
+  "development_overlap": 0,
+  "all_student_teacher_prompt_pairs_exact": true,
+  "cross_language_pool_normalized_English_text_overlaps": {
+    "1_0": 0,
+    "2_0": 0,
+    "2_1": 0
+  },
+  "cross_language_actual640_normalized_English_text_overlaps": {
+    "sw_te": 0,
+    "sw_zh": 0,
+    "te_zh": 0
+  },
+  "actual_unique_original_ID_union": 1920,
+  "deduplication_scope": "Exact whitespace-normalized English question content and original IDs; not semantic near-duplicate detection.",
+  "formal_evaluation": "Seven-case plan frozen; all seven queues configured and validated, not started while both sequential tasks occupy four account GPUs. No new TE reference test result yet.",
+  "sequential_training": "Both reverse ZH->TE and forward SW->TE stage2 observed live; 14/20 and5/20 updates respectively at18:30. Neither stage2 release nor forgetting matrix completed.",
+  "scope": "Training and data-lineage evidence only; not evidence of downstream method effectiveness."
+}
