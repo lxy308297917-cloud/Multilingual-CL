@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-10-24T19:56:59.162040+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "forward_stage2_SW_to_TE": {
+    "global_step": 20,
+    "online_rollouts": 640,
+    "generated_tokens": 1310720,
+    "valid_response_loss_positions": 1310720,
+    "teacher_forward_calls": 640,
+    "current_student_weight_syncs": 21,
+    "original_Base_bitwise_unchanged": true,
+    "actual_stage_optimizer_scheduler_reset": true,
+    "checkpoint20_optimizer_scheduler_RNG_verified": true,
+    "TensorBoard_loss_learning_rate_read_back": true,
+    "parent_minutes": 94.96666666666667,
+    "parent_GPU_hours": 3.1655555555555557
+  },
+  "actual_640_exposure_order_matches_TE_single_reference": true,
+  "development_overlap": 0,
+  "forward_stage3_ZH": "Actual online rollout and finite backward observed; not completed.",
+  "stage3_initial_current_student_exact_parent_fingerprint": true,
+  "reverse_stage3_SW": "Still training. Neither complete stage3 nor forgetting effects are claimed.",
+  "training_length_evidence": {
+    "forward_TE_stage2_all640_response_lengths_equal2048": true,
+    "scope": "The sum reaches640times2048 and each rollout is capped2048; every trajectory therefore reaches the length limit. This alone does not prove every finish_reason was length rather than stop. Full8192formal evaluation will report actual termination and extraction failures."
+  },
+  "incremental_fixed_evaluation": {
+    "ready_frozen_models": 6,
+    "already_completed_case_queues": 3,
+    "single_GPU_monitors_started": 4,
+    "remaining_ready_case_queues": 33,
+    "account_GPU_limit": 4,
+    "scope": "Both final training stages already running; no further two-GPU training stages remain to launch. Fixed Base/reference/completed-stage2 evaluation queues can use slots as either training finishes. Stage3 test plans join only after checkpoint release. No live changing adapter is evaluated.",
+    "protocol_changes": false,
+    "training_processes_cancelled": 0
+  },
+  "scope": "Accepted training and actual continuation/scheduling evidence only. No new mathematical effect or forgetting score is available until the full formal cases complete."
+}
