@@ -1,0 +1,69 @@
+{
+  "observed_at": "2026-10-24T23:07:26.230350+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "te",
+  "training_cohort": "matched900 single20 reference",
+  "evaluation_language": "zh",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 240,
+  "model_correct": 241,
+  "gained": 5,
+  "lost": 4,
+  "delta_percentage_points": 0.4,
+  "paired_question_bootstrap95_CI_pp": [
+    -2.0,
+    2.8000000000000003
+  ],
+  "termination": {
+    "Base": {
+      "generated_tokens": 220140,
+      "truncated": 1,
+      "normal_terminations": 249,
+      "answer_extraction_failures": 1
+    },
+    "model": {
+      "generated_tokens": 226195,
+      "truncated": 0,
+      "normal_terminations": 250,
+      "answer_extraction_failures": 0
+    }
+  },
+  "model_language_summary": {
+    "thinking": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 250
+      },
+      "top1_label_counts": {
+        "__label__cmn_Hani": 250
+      },
+      "target_top1_probability_ge_0_8": 248,
+      "correct_items_label_counts": {
+        "__label__cmn_Hani": 241
+      }
+    },
+    "final": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 249,
+        "too_short": 1
+      },
+      "top1_label_counts": {
+        "__label__cmn_Hani": 246,
+        "__label__nan_Hani": 3
+      },
+      "target_top1_probability_ge_0_8": 245,
+      "correct_items_label_counts": {
+        "__label__cmn_Hani": 237,
+        "__label__nan_Hani": 3,
+        "too_short": 1
+      }
+    }
+  },
+  "model_correct_and_target_thinking_highconf": 239,
+  "model_correct_and_both_parts_target_highconf": 234,
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "scope": "Cross-language pretrained retention after TE-only training, not post-ZH-stage forgetting. Fixed-model paired-question CI crosses zero; no stable improvement or training-seed population claim. Whole-part language ID does not measure token purity, fluency or reasoning validity. All full seven-case suites and sequential matrices remain required."
+}
