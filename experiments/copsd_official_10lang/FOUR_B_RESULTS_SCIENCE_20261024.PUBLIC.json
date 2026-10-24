@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T14:51:32.780736",
+  "updated_at": "2026-10-24T23:11:08.003324+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -164,13 +164,18 @@
       0.75
     ]
   },
-  "remaining": {},
+  "remaining": {
+    "selected_models": "Complete each of eight seven-case suites, language analyses and TensorBoard acceptance. Base raw results are individually accepted; suite postprocessing remains.",
+    "sequential_analysis": "Both directions, all three target languages plus English at every stage; matched-budget comparisons and forgetting matrices.",
+    "primary_ten_language_formal": "Finish original2700-pool ten single20 model tests and additional seven-language Base references; keep distinct from matched900.",
+    "cost_and_delivery": "Consolidate unique training/evaluation/failure cost events, source-bound final reports and reproduction commands."
+  },
   "selected_three_languages": [
     "sw",
     "te",
     "zh"
   ],
-  "research_sequential_training_started": false,
+  "research_sequential_training_started": true,
   "scope": "Official COPSD core with project engineering/data/budget adaptations, not strict original hardware reproduction. Default componentclip0.05 only; unclipped and merged-concurrency experiments excluded. Same-size matched evaluation records only. Question CIs are for fixed models, not a seed population or multiplicity correction. Pending experiments are not completed results. No formal test results used for language selection.",
   "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
   "training_method": {
@@ -188,5 +193,251 @@
     "English_Base_correct_of200": 83.0,
     "English_OPD_correct_of200": 80.75
   },
-  "selection_scope": "All ten primary42 development pairs reviewed; candidateSW/TE/ZH positive42/43 point estimates, with explicit risks. Formaltests excluded."
+  "selection_scope": "All ten primary42 development pairs reviewed; candidateSW/TE/ZH positive42/43 point estimates, with explicit risks. Formaltests excluded.",
+  "development_results_last_aggregated_at": "2026-10-24T14:51:32.780736",
+  "models_scope": "The existing models array and primary macro scores are reserved-development200 only, not formal-test scores.",
+  "research_sequential_training_completed": true,
+  "research_sequential_formal_evaluation_completed": false,
+  "selected_research_training": {
+    "source": "SEQUENTIAL4B_ALL_TRAINING_ACCEPTED_SCIENCE_20261024.PUBLIC.json",
+    "orders": {
+      "forward": {
+        "updates": 60,
+        "exposures": 1920,
+        "unique_original_questions": 1920,
+        "training_generated_tokens": 3630296,
+        "training_parent_GPU_hours": 9.232222222222223
+      },
+      "reverse": {
+        "updates": 60,
+        "exposures": 1920,
+        "unique_original_questions": 1920,
+        "training_generated_tokens": 3704965,
+        "training_parent_GPU_hours": 9.185
+      }
+    },
+    "unique_segments": 7,
+    "training_parent_GPU_hours": 21.57111111111111,
+    "note": "Stage1 directly reuses the matching single reference. All segments20 updates under100scheduler, continuous adapter, reset optimizer/scheduler. Training cost excludes formal evaluation and primary2700-pool experiments."
+  },
+  "selected_research_formal": {
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "Base_seven_case_outputs_individually_accepted": true,
+    "Base_cases": {
+      "mgsm_rev2_zh": {
+        "items": 250,
+        "single_correct": 240,
+        "single_accuracy": 0.96,
+        "generated_tokens": 220140,
+        "truncated": 1,
+        "normal_terminations": 249,
+        "answer_extraction_failures": 1
+      },
+      "mgsm_rev2_sw": {
+        "items": 250,
+        "single_correct": 34,
+        "single_accuracy": 0.136,
+        "generated_tokens": 809908,
+        "truncated": 70,
+        "normal_terminations": 180,
+        "answer_extraction_failures": 74
+      },
+      "mgsm_rev2_te": {
+        "items": 250,
+        "single_correct": 149,
+        "single_accuracy": 0.596,
+        "generated_tokens": 989616,
+        "truncated": 20,
+        "normal_terminations": 230,
+        "answer_extraction_failures": 20
+      },
+      "gsm8k_en": {
+        "items": 1319,
+        "single_correct": 1247,
+        "single_accuracy": 0.9454131918119788,
+        "generated_tokens": 2053312,
+        "truncated": 8,
+        "normal_terminations": 1311,
+        "answer_extraction_failures": 7
+      },
+      "polymath_sw": {
+        "items": 500,
+        "single_correct": 22,
+        "single_accuracy": 0.044,
+        "generated_tokens": 2992872,
+        "truncated": 332,
+        "normal_terminations": 168,
+        "answer_extraction_failures": 324,
+        "scores_by_difficulty": {
+          "low": {
+            "items": 125,
+            "single_correct": 15,
+            "single_accuracy": 0.12
+          },
+          "medium": {
+            "items": 125,
+            "single_correct": 2,
+            "single_accuracy": 0.016
+          },
+          "high": {
+            "items": 125,
+            "single_correct": 3,
+            "single_accuracy": 0.024
+          },
+          "top": {
+            "items": 125,
+            "single_correct": 2,
+            "single_accuracy": 0.016
+          }
+        }
+      },
+      "polymath_te": {
+        "items": 500,
+        "single_correct": 72,
+        "single_accuracy": 0.144,
+        "generated_tokens": 3470190,
+        "truncated": 328,
+        "normal_terminations": 172,
+        "answer_extraction_failures": 318,
+        "scores_by_difficulty": {
+          "low": {
+            "items": 125,
+            "single_correct": 64,
+            "single_accuracy": 0.512
+          },
+          "medium": {
+            "items": 125,
+            "single_correct": 4,
+            "single_accuracy": 0.032
+          },
+          "high": {
+            "items": 125,
+            "single_correct": 4,
+            "single_accuracy": 0.032
+          },
+          "top": {
+            "items": 125,
+            "single_correct": 0,
+            "single_accuracy": 0.0
+          }
+        }
+      },
+      "polymath_zh": {
+        "items": 500,
+        "single_correct": 207,
+        "single_accuracy": 0.414,
+        "generated_tokens": 2883151,
+        "truncated": 263,
+        "normal_terminations": 237,
+        "answer_extraction_failures": 242,
+        "scores_by_difficulty": {
+          "low": {
+            "items": 125,
+            "single_correct": 111,
+            "single_accuracy": 0.888
+          },
+          "medium": {
+            "items": 125,
+            "single_correct": 63,
+            "single_accuracy": 0.504
+          },
+          "high": {
+            "items": 125,
+            "single_correct": 27,
+            "single_accuracy": 0.216
+          },
+          "top": {
+            "items": 125,
+            "single_correct": 6,
+            "single_accuracy": 0.048
+          }
+        }
+      }
+    },
+    "complete_seven_case_model_suites": false,
+    "sequential_forgetting_matrices_complete": false,
+    "accepted_partial_MGSM_pairs": [
+      {
+        "Base_correct": 34,
+        "gained": 30,
+        "lost": 9,
+        "delta_percentage_points": 8.4,
+        "paired_question_bootstrap95_CI_pp": [
+          3.5999999999999996,
+          13.200000000000001
+        ],
+        "model_correct": 55,
+        "training_language": "sw",
+        "evaluation_language": "sw",
+        "items": 250,
+        "source": "SEQUENTIAL4B_SWMATCHED_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
+        "cohort": "matched900 single20 reference, not original2700 primary single"
+      },
+      {
+        "Base_correct": 240,
+        "gained": 5,
+        "lost": 4,
+        "delta_percentage_points": 0.4,
+        "paired_question_bootstrap95_CI_pp": [
+          -2.0,
+          2.8000000000000003
+        ],
+        "model_correct": 241,
+        "training_language": "zh",
+        "evaluation_language": "zh",
+        "items": 250,
+        "source": "SEQUENTIAL4B_ZHMATCHED_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
+        "cohort": "matched900 single20 reference, not original2700 primary single"
+      },
+      {
+        "Base_correct": 149,
+        "gained": 25,
+        "lost": 34,
+        "delta_percentage_points": -3.6,
+        "paired_question_bootstrap95_CI_pp": [
+          -9.6,
+          2.4
+        ],
+        "model_correct": 140,
+        "training_language": "sw",
+        "evaluation_language": "te",
+        "items": 250,
+        "source": "SEQUENTIAL4B_SW_TO_TE_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
+        "cohort": "matched900 single20 reference, not original2700 primary single"
+      },
+      {
+        "Base_correct": 240,
+        "gained": 4,
+        "lost": 5,
+        "delta_percentage_points": -0.4,
+        "paired_question_bootstrap95_CI_pp": [
+          -2.8000000000000003,
+          2.0
+        ],
+        "model_correct": 239,
+        "training_language": "sw",
+        "evaluation_language": "zh",
+        "items": 250,
+        "source": "SEQUENTIAL4B_SW_TO_ZH_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
+        "cohort": "matched900 single20 reference, not original2700 primary single"
+      },
+      {
+        "Base_correct": 240,
+        "gained": 5,
+        "lost": 4,
+        "delta_percentage_points": 0.4,
+        "paired_question_bootstrap95_CI_pp": [
+          -2.0,
+          2.8000000000000003
+        ],
+        "model_correct": 241,
+        "training_language": "te",
+        "evaluation_language": "zh",
+        "items": 250,
+        "source": "SEQUENTIAL4B_TE_TO_ZH_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
+        "cohort": "matched900 single20 reference, not original2700 primary single"
+      }
+    ],
+    "interpretation": "SW own-language math improves on this fixed formal set; other completed pairs have question intervals crossing zero. Cross-language pretrained retention is not post-learned-stage forgetting. No completed sequential effect matrix or universal efficacy claim."
+  }
 }
