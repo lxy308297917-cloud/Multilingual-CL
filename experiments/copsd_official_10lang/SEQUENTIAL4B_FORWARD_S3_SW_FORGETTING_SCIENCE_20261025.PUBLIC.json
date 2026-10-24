@@ -1,0 +1,210 @@
+{
+  "model_id": "forward_s3",
+  "case": "mgsm_rev2_sw",
+  "items": 250,
+  "learned_stage": {
+    "previous_correct": 55,
+    "current_correct": 79,
+    "gained": 38,
+    "lost": 14,
+    "change_pp": 9.6,
+    "change_question_CI95_pp": [
+      4.0,
+      15.2
+    ],
+    "signed_decline_pp": -9.6,
+    "signed_decline_question_CI95_pp": [
+      -15.2,
+      -4.0
+    ],
+    "lost_current_truncated": 0,
+    "lost_current_no_extracted_box": 0,
+    "lost_current_normal_with_box": 14
+  },
+  "previous_stage": {
+    "previous_correct": 73,
+    "current_correct": 79,
+    "gained": 28,
+    "lost": 22,
+    "change_pp": 2.4,
+    "change_question_CI95_pp": [
+      -3.2,
+      8.0
+    ],
+    "signed_decline_pp": -2.4,
+    "signed_decline_question_CI95_pp": [
+      -8.0,
+      3.2
+    ],
+    "lost_current_truncated": 3,
+    "lost_current_no_extracted_box": 3,
+    "lost_current_normal_with_box": 19
+  },
+  "historical_best_model_id": "forward_s2",
+  "historical_best_forgetting_pp": -2.4,
+  "historical_best_forgetting_question_CI95_pp": [
+    -8.0,
+    3.2
+  ],
+  "language": {
+    "learned": {
+      "thinking_target_highconf": 199,
+      "thinking_English_top1": 29,
+      "correct_and_target_thinking_highconf": 44,
+      "correct_and_both_parts_target_highconf": 6
+    },
+    "previous": {
+      "thinking_target_highconf": 111,
+      "thinking_English_top1": 110,
+      "correct_and_target_thinking_highconf": 40,
+      "correct_and_both_parts_target_highconf": 10
+    },
+    "current": {
+      "thinking_target_highconf": 111,
+      "thinking_English_top1": 116,
+      "correct_and_target_thinking_highconf": 43,
+      "correct_and_both_parts_target_highconf": 9
+    }
+  },
+  "language_detector_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "metrics": {
+    "learned": {
+      "items": 250,
+      "single_correct": 55,
+      "generated_tokens": 558286,
+      "truncated": 17,
+      "normal_terminations": 233,
+      "answer_extraction_failures": 21,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 250,
+      "single_accuracy": 0.22,
+      "generation_seconds": 2789.166002450511,
+      "model_load_seconds": 13.797757647931576,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    },
+    "previous": {
+      "items": 250,
+      "single_correct": 73,
+      "generated_tokens": 1074637,
+      "truncated": 38,
+      "normal_terminations": 212,
+      "answer_extraction_failures": 35,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 250,
+      "single_accuracy": 0.292,
+      "generation_seconds": 4888.144676383585,
+      "model_load_seconds": 13.73624305613339,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    },
+    "current": {
+      "items": 250,
+      "single_correct": 79,
+      "generated_tokens": 987786,
+      "truncated": 22,
+      "normal_terminations": 228,
+      "answer_extraction_failures": 20,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 250,
+      "single_accuracy": 0.316,
+      "generation_seconds": 4484.306269347668,
+      "model_load_seconds": 13.941615955904126,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    }
+  },
+  "Base_comparison": {
+    "Base_correct": 34,
+    "model_correct": 79,
+    "gained": 53,
+    "lost": 8,
+    "delta_percentage_points": 18.0,
+    "paired_question_bootstrap95_CI_pp": [
+      12.4,
+      23.599999999999998
+    ]
+  },
+  "actual_parent_adapter_verified": true,
+  "common_question_answer_prompt_seed_verified": true,
+  "collector_source_sha256": "3765a5f3fe3db4d40b0f272b3c4ec3c4398c6db983ab5d28f66b9d7dd07d0c0c",
+  "proves_complete_seven_case_stage": false,
+  "proves_complete_forgetting_matrix": false,
+  "scope": "Original-score partial old-language history. Best earlier stage selected by fixed observed score; bootstrap is conditional on those fixed models, not retraining or reselecting the best stage. Before-learning stages and Base excluded from forgetting history. Negative forgetting retained. Truncation/no-box counts overlap. Whole-part language labels do not establish fluency or proof quality.",
+  "observed_at": "2026-10-25T03:39:13.680661+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "order": [
+    "sw",
+    "te",
+    "zh"
+  ],
+  "stage_index": 3,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 60,
+  "private_evidence_sha256": "c9dce837083eb539c48b00c4f4469419cd6ff6722082b6fdde2b21f8eb4e0914",
+  "TensorBoard": {
+    "scalar_count": 15,
+    "all_scalars_read_back": true
+  },
+  "SW_MGSM_history": [
+    {
+      "model_id": "Base",
+      "correct": 34,
+      "items": 250
+    },
+    {
+      "model_id": "SW_matched900",
+      "correct": 55,
+      "items": 250
+    },
+    {
+      "model_id": "forward_s2",
+      "correct": 73,
+      "items": 250
+    },
+    {
+      "model_id": "forward_s3",
+      "correct": 79,
+      "items": 250
+    }
+  ],
+  "supplementary_percentage_units": {
+    "protocol": "project_mgsm_percentage_units_diagnostic_v1",
+    "available_conditions": 24,
+    "SW_history": [
+      {
+        "model_id": "Base",
+        "original_correct": 34,
+        "diagnostic_correct": 34
+      },
+      {
+        "model_id": "SW_matched900",
+        "original_correct": 55,
+        "diagnostic_correct": 55
+      },
+      {
+        "model_id": "forward_s2",
+        "original_correct": 73,
+        "diagnostic_correct": 73
+      },
+      {
+        "model_id": "forward_s3",
+        "original_correct": 79,
+        "diagnostic_correct": 79
+      }
+    ],
+    "official_scores_preserved": true
+  },
+  "interpretation": "SW mathematics increases34->55->73->79 across the forward history. Decline from own learned55 is -9.6pp, while forgetting from best earlier73 is -2.4pp with question interval[-8.0,3.2] including zero. Negative values are retained. SW high-confidence thought labels decline199->111->111 and English thought labels increase29->110->116; math-correct plus SW thought stays44->40->43, while both target sections plus math-correct changes6->10->9. Gains in raw math do not establish target-language reasoning retention or general multilingual forgetting prevention. Final TE/English/PolyMath and complete matrices remain pending."
+}
