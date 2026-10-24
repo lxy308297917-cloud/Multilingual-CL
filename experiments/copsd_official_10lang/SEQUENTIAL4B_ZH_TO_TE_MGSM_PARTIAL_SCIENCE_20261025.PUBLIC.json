@@ -1,0 +1,122 @@
+{
+  "observed_at": "2026-10-25T00:29:17.500399+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "zh",
+  "training_cohort": "matched900 single20 reference",
+  "evaluation_language": "te",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 149,
+  "model_correct": 149,
+  "gained": 28,
+  "lost": 28,
+  "delta_percentage_points": 0.0,
+  "paired_question_bootstrap95_CI_pp": [
+    -5.6000000000000005,
+    6.0
+  ],
+  "termination": {
+    "Base": {
+      "generated_tokens": 989616,
+      "truncated": 20,
+      "normal_terminations": 230,
+      "answer_extraction_failures": 20
+    },
+    "model": {
+      "generated_tokens": 1041893,
+      "truncated": 18,
+      "normal_terminations": 232,
+      "answer_extraction_failures": 18
+    }
+  },
+  "language_ID_supplement": {
+    "Base": {
+      "summary": {
+        "thinking": {
+          "total_items": 250,
+          "statuses": {
+            "predicted": 250
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 250
+          },
+          "target_top1_probability_ge_0_8": 250,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 149
+          }
+        },
+        "final": {
+          "total_items": 250,
+          "statuses": {
+            "predicted": 231,
+            "no_final_section": 16,
+            "too_short": 3
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 231
+          },
+          "target_top1_probability_ge_0_8": 231,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 147,
+            "too_short": 2
+          }
+        }
+      },
+      "correct_and_target_thinking_highconf": 149,
+      "correct_and_both_target_highconf": 147
+    },
+    "model": {
+      "summary": {
+        "thinking": {
+          "total_items": 250,
+          "statuses": {
+            "predicted": 250
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 250
+          },
+          "target_top1_probability_ge_0_8": 250,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 149
+          }
+        },
+        "final": {
+          "total_items": 250,
+          "statuses": {
+            "predicted": 236,
+            "no_final_section": 12,
+            "too_short": 2
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 236
+          },
+          "target_top1_probability_ge_0_8": 236,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 149
+          }
+        }
+      },
+      "correct_and_target_thinking_highconf": 149,
+      "correct_and_both_target_highconf": 149
+    }
+  },
+  "paired_outcome_diagnostics": {
+    "gained": {
+      "items": 28,
+      "Base_truncated": 5,
+      "Base_extraction_failed": 5,
+      "model_truncated": 0,
+      "model_extraction_failed": 0
+    },
+    "lost": {
+      "items": 28,
+      "Base_truncated": 0,
+      "Base_extraction_failed": 0,
+      "model_truncated": 6,
+      "model_extraction_failed": 6
+    }
+  },
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "scope": "Unchanged TE math point accuracy after ZH-only training, with28gained and28lost questions; fixed-model question CI includes zero. Does not prove unchanged per-question capability or trainingseed stability. Pretrained cross-language retention, not post-TE-learned-stage forgetting. Whole-part language ID is not token purity, fluency or proof quality. Full seven-case suites, English retention and sequential matrices remain required."
+}

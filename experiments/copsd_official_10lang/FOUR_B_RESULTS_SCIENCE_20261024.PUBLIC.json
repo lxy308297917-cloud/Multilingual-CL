@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T00:01:09.956532+08:00",
+  "updated_at": "2026-10-25T00:29:17.500399+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -484,8 +484,48 @@
         "items": 250,
         "source": "SEQUENTIAL4B_ZH_TO_SW_MGSM_PARTIAL_SCIENCE_20261025.PUBLIC.json",
         "cohort": "matched900 single20 reference, not original2700 primary single"
+      },
+      {
+        "Base_correct": 149,
+        "model_correct": 149,
+        "gained": 28,
+        "lost": 28,
+        "delta_percentage_points": 0.0,
+        "paired_question_bootstrap95_CI_pp": [
+          -5.6000000000000005,
+          6.0
+        ],
+        "training_language": "zh",
+        "evaluation_language": "te",
+        "items": 250,
+        "source": "SEQUENTIAL4B_ZH_TO_TE_MGSM_PARTIAL_SCIENCE_20261025.PUBLIC.json",
+        "cohort": "matched900 single20 reference, not original2700 primary single"
       }
     ],
-    "interpretation": "SW own-language math and TE-to-SW math transfer improve in the completed fixed-model pairs; other completed pair question intervals include zero. Language preservation does not improve on every joint measure. No trainingseed population, universal efficacy or sequential forgetting conclusion. Full seven-case suites remain required."
+    "interpretation": "SW own-language math and TE-to-SW math transfer improve in the completed fixed-model pairs; other completed pair question intervals include zero. Language preservation does not improve on every joint measure. No trainingseed population, universal efficacy or sequential forgetting conclusion. Full seven-case suites remain required.",
+    "matched_reference_MGSM_accuracy_percent": {
+      "Base": {
+        "sw": 13.600000000000001,
+        "te": 59.599999999999994,
+        "zh": 96.0
+      },
+      "SW_matched900": {
+        "sw": 22.0,
+        "te": 56.00000000000001,
+        "zh": 95.6
+      },
+      "TE_matched900": {
+        "zh": 96.39999999999999,
+        "sw": 22.0,
+        "te": 60.8
+      },
+      "ZH_matched900": {
+        "zh": 96.39999999999999,
+        "sw": 18.4,
+        "te": 59.599999999999994
+      }
+    },
+    "matched_reference_MGSM_all_nine_pairs_accepted": true,
+    "matched_reference_matrix_scope": "Three independent matched900 singles x three full MGSM tests only; not sequential stages, not original2700 ten-language formal results or complete seven-case suites. Same-language tests reuse underlying originals across translations, not independent pooled samples."
   }
 }
