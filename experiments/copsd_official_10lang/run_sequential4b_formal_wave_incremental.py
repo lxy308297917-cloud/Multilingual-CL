@@ -18,6 +18,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--dispatch-gate', type=Path,
+                   help='Optional one-time CPU supervisor handoff gate; never changes case settings.')
     a = p.parse_args()
     root, code = a.root.resolve(), Path(__file__).parent.resolve()
     logs = root / 'logs/copsd_official_10lang'
@@ -67,6 +69,10 @@ def main():
         return 'active'
 
     try:
+        if a.dispatch_gate:
+            record('waiting_dispatch_handoff')
+            while not a.dispatch_gate.exists():
+                time.sleep(.1)
         record('waiting_both_last_training_stages_running')
         while True:
             done = []
@@ -90,7 +96,7 @@ def main():
             time.sleep(30)
         models = ['Base', 'SWmatched', 'TEmatched', 'ZHmatched',
                   'forward_s2', 'reverse_s2', 'forward_s3', 'reverse_s3']
-        plans, queues = {}, set()
+        plans, queues, priorities = {}, set(), {}
         pending, active, completed = [], [], []
         while pending or active or len(plans) < len(models):
             for direction in ['forward', 'reverse']:
@@ -111,6 +117,7 @@ def main():
                 for name, queue in q.items():
                     assert queue not in queues
                     queues.add(queue)
+                    priorities[queue] = {'mgsm_rev2': 0, 'gsm8k': 1, 'polymath': 2}[f['cases'][name]['benchmark']]
                     config = read(root / 'gpu-queue/queues' / queue / 'config.json')
                     assert config['max_user_gpus'] == 4 and config['target_gpus'] == 1
                     assert config['job']['args'] == [str(freeze), name]
@@ -126,6 +133,7 @@ def main():
                 if queue_status(queue) == 'completed':
                     active.remove(queue)
                     completed.append(queue)
+            pending.sort(key=lambda queue: priorities[queue])
             while pending and len(active) < 4:
                 queue = pending.pop(0)
                 subprocess.run([sys.executable, str(root / 'gpu-queue/gpu_queue.py'),
@@ -135,7 +143,8 @@ def main():
                     completed.append(queue)
                 else:
                     active.append(queue)
-            record('formal_wave', active=list(active), pending=len(pending), completed=len(completed), accepted_models_ready=len(plans))
+            record('formal_wave', active=list(active), pending=len(pending), completed=len(completed), accepted_models_ready=len(plans),
+                   pending_priority='MGSM-Rev2, English GSM8K, PolyMath', next_cases=pending[:4])
             if pending or active or len(plans) < len(models):
                 time.sleep(30)
         record('collecting_complete_seven_case_markers')

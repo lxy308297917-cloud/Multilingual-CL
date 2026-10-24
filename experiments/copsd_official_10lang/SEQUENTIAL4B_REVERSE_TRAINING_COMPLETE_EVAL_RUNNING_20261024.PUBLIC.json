@@ -64,5 +64,12 @@
   "cost_scope": "Three unique two-role training parents only; excludes formal evaluation, queue wait, extra matched TE/SW reference work, forward order, earlier primary development and historical failures. Stage1 reuse is not a second run.",
   "fixed_evaluation": "Base SW PolyMath andTE MGSM-Rev2 actual generation observed on the two released GPU slots. No completed score for these new cases yet.",
   "forward_order": "Final ZH stage still running; teacher,loss,LoRA,budget and evaluation protocol unchanged.",
-  "scope": "Reverse training-chain acceptance and live fixed-evaluation evidence only. Final-stage checkpoint step20 is local to that stage; cumulative training60updates. No math-transfer,language-preservation or forgetting claim until fixed tests and complete matrices are accepted."
+  "scope": "Reverse training-chain acceptance and live fixed-evaluation evidence only. Final-stage checkpoint step20 is local to that stage; cumulative training60updates. No math-transfer,language-preservation or forgetting claim until fixed tests and complete matrices are accepted.",
+  "status_updated_at": "2026-10-24T20:50:45.682231+08:00",
+  "pending_evaluation_dispatch_priority": [
+    "MGSM-Rev2 main evaluation",
+    "English GSM8K retention",
+    "PolyMath full four-band supplement"
+  ],
+  "dispatch_scope": "Pending queue order only; adopted the same four existing monitors. All frozen case settings and all supplemental cases remain required. Existing GPU jobs continue."
 }
