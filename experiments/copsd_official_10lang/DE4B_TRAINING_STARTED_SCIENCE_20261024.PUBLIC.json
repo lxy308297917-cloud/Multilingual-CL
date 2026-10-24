@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "language": "de",
+  "training_state": "Actual online generation and finite-loss backpropagation started, after waiting for two-role capacity.",
+  "initialization": "fresh originalBase, training/data seed42",
+  "planned_updates": 20,
+  "planned_exposures": 640,
+  "effective_batch": 32,
+  "generation_limit": 2048,
+  "scheduler_horizon": 100,
+  "same_training_entry_and_scientificsettings_as_previous_fresh4B20_runs": true,
+  "accepted_Base_DE_correct_of200": 156,
+  "cached_Base_English_correct_of200": 166,
+  "post_training_evaluation": "Fixed200 DE/EN, native16/n1/8192/questionseed42; no EnglishBase regeneration.",
+  "max_account_GPU_limit": 4,
+  "scope": "Scientific progress only. No DE trainingeffect or three-language selection yet. Full runtime identifiers and configurations retained locally."
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "target_language": "te",
+  "training_seed": 43,
+  "data_seed": 43,
+  "completed_updates": 20,
+  "scheduler_horizon": 100,
+  "actual_exposures": 640,
+  "online_rollouts": 640,
+  "training_generated_tokens": 1309489,
+  "valid_loss_positions": 1309489,
+  "teacher_forward_calls": 640,
+  "verified_weight_syncs": 21,
+  "original_Base_unchanged": true,
+  "teacher_original_Base_disabled_adapter": true,
+  "optimizer_and_scheduler_step20_verified": true,
+  "checkpoint_RNG_file_present": true,
+  "parent_wall_minutes": 93.28333333333333,
+  "two_role_training_GPU_hours": 3.1094444444444442,
+  "evaluation": "Fixedcheckpoint20 TE/EN200 evaluation in progress: targetTE generation running, English follows. Native16/n1/8192/questionseed42; both acceptedBases reused.",
+  "scope": "Training completion only, not confirmed method effect or selectedsequentiallanguage. FreshBase43, same20budget as priorfixedmodel; seed42 previously restored5+15 with nonbitwise serverRNG continuation."
+}
