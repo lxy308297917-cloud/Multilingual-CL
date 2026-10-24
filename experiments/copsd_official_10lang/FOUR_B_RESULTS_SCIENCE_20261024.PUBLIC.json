@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T23:30:59.155470+08:00",
+  "updated_at": "2026-10-24T23:52:33.102015+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -451,6 +451,22 @@
         "evaluation_language": "sw",
         "items": 250,
         "source": "SEQUENTIAL4B_TE_TO_SW_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
+        "cohort": "matched900 single20 reference, not original2700 primary single"
+      },
+      {
+        "Base_correct": 149,
+        "model_correct": 152,
+        "gained": 28,
+        "lost": 25,
+        "delta_percentage_points": 1.2,
+        "paired_question_bootstrap95_CI_pp": [
+          -4.3999999999999995,
+          6.800000000000001
+        ],
+        "training_language": "te",
+        "evaluation_language": "te",
+        "items": 250,
+        "source": "SEQUENTIAL4B_TEMATCHED_TE_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
         "cohort": "matched900 single20 reference, not original2700 primary single"
       }
     ],

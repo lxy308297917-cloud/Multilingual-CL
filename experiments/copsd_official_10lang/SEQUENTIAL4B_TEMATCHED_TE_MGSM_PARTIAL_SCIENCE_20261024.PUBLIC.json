@@ -1,0 +1,123 @@
+{
+  "observed_at": "2026-10-24T23:52:33.102015+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "te",
+  "training_cohort": "matched900 single20 reference",
+  "evaluation_language": "te",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 149,
+  "model_correct": 152,
+  "gained": 28,
+  "lost": 25,
+  "delta_percentage_points": 1.2,
+  "paired_question_bootstrap95_CI_pp": [
+    -4.3999999999999995,
+    6.800000000000001
+  ],
+  "termination": {
+    "Base": {
+      "generated_tokens": 989616,
+      "truncated": 20,
+      "normal_terminations": 230,
+      "answer_extraction_failures": 20
+    },
+    "model": {
+      "generated_tokens": 971740,
+      "truncated": 31,
+      "normal_terminations": 219,
+      "answer_extraction_failures": 30
+    }
+  },
+  "language_ID_supplement": {
+    "Base": {
+      "summary": {
+        "thinking": {
+          "total_items": 250,
+          "statuses": {
+            "predicted": 250
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 250
+          },
+          "target_top1_probability_ge_0_8": 250,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 149
+          }
+        },
+        "final": {
+          "total_items": 250,
+          "statuses": {
+            "predicted": 231,
+            "no_final_section": 16,
+            "too_short": 3
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 231
+          },
+          "target_top1_probability_ge_0_8": 231,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 147,
+            "too_short": 2
+          }
+        }
+      },
+      "correct_and_target_thinking_highconf": 149,
+      "correct_and_both_target_highconf": 147
+    },
+    "model": {
+      "summary": {
+        "thinking": {
+          "total_items": 250,
+          "statuses": {
+            "predicted": 250
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 250
+          },
+          "target_top1_probability_ge_0_8": 250,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 152
+          }
+        },
+        "final": {
+          "total_items": 250,
+          "statuses": {
+            "predicted": 224,
+            "no_final_section": 23,
+            "too_short": 3
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 224
+          },
+          "target_top1_probability_ge_0_8": 224,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 150,
+            "too_short": 2
+          }
+        }
+      },
+      "correct_and_target_thinking_highconf": 152,
+      "correct_and_both_target_highconf": 150
+    }
+  },
+  "paired_outcome_diagnostics": {
+    "gained": {
+      "items": 28,
+      "Base_truncated": 8,
+      "Base_extraction_failed": 8,
+      "model_truncated": 0,
+      "model_extraction_failed": 0
+    },
+    "lost": {
+      "items": 25,
+      "Base_truncated": 0,
+      "Base_extraction_failed": 0,
+      "model_truncated": 8,
+      "model_extraction_failed": 7
+    }
+  },
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "scope": "Own-language formal pair after TE-only training. Small positive point estimate with fixed-model paired-question CI crossing zero; no stable gain or trainingseed population claim. More truncation despite similar total generated tokens. Whole-part language ID is not fluency or proof correctness. Scores retained; no causal attribution from termination associations. English/PolyMath retention and full sequential matrices remain required."
+}
