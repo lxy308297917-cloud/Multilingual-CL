@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "language": "fr",
+  "training_updates": 20,
+  "online_rollouts": 640,
+  "generated_tokens": 1162299,
+  "valid_response_loss_positions": 1162299,
+  "teacher_forward_calls": 640,
+  "student_weight_syncs": 21,
+  "original_Base_bitwise_unchanged": true,
+  "checkpoint_optimizer_scheduler20_and_RNG_verified": true,
+  "training_parent_minutes": 89.36666666666666,
+  "training_parent_GPU_hours": 2.9788888888888887,
+  "Base_correct_of200": 157,
+  "paired_development_evaluation": "submitted; no accepted FR model accuracy yet",
+  "scope": "Engineering training completion only. Fresh original Base and one target language, official-core LoRA/fixed teacher with dedicated server and response-logit storage compaction. Not a mathematical efficacy or language-selection result."
+}
