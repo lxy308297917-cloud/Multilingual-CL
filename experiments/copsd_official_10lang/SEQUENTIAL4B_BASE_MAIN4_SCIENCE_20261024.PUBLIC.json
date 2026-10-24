@@ -1,0 +1,46 @@
+{
+  "observed_at": "2026-10-24T21:09:07.863484+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "original_Base_only": true,
+  "main_four_cases": {
+    "mgsm_rev2_zh": {
+      "items": 250,
+      "single_correct": 240,
+      "single_accuracy": 0.96,
+      "generated_tokens": 220140,
+      "truncated": 1,
+      "normal_terminations": 249,
+      "answer_extraction_failures": 1
+    },
+    "mgsm_rev2_sw": {
+      "items": 250,
+      "single_correct": 34,
+      "single_accuracy": 0.136,
+      "generated_tokens": 809908,
+      "truncated": 70,
+      "normal_terminations": 180,
+      "answer_extraction_failures": 74
+    },
+    "mgsm_rev2_te": {
+      "items": 250,
+      "single_correct": 149,
+      "single_accuracy": 0.596,
+      "generated_tokens": 989616,
+      "truncated": 20,
+      "normal_terminations": 230,
+      "answer_extraction_failures": 20
+    },
+    "gsm8k_en": {
+      "items": 1319,
+      "single_correct": 1247,
+      "single_accuracy": 0.9454131918119788,
+      "generated_tokens": 2053312,
+      "truncated": 8,
+      "normal_terminations": 1311,
+      "answer_extraction_failures": 7
+    }
+  },
+  "three_target_MGSM_macro_accuracy_percent": 56.4,
+  "scope": "FullfixedBasemainMGSM250SW/TE/ZHandEnglishGSM1319accepted. RetainoriginalcachedwrapperprovenanceforSW/Englishwithverifiedidenticalgeneration/scoringsuffix. Englishisretentionandnotincludedintargetmacro. Trainedmodels,BasePolyMathandcompleteforgettingreportsremainpending;nosingle/sequenceefficacyclaim."
+}
