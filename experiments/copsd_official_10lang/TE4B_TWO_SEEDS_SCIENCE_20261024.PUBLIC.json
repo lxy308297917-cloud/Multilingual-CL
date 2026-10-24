@@ -1,0 +1,165 @@
+{
+  "completed_at": "2026-10-24T11:23:24.731278",
+  "model": "Qwen/Qwen3-4B",
+  "items_each": 200,
+  "training_seeds": [
+    42,
+    43
+  ],
+  "evaluation_question_seed": 42,
+  "languages": {
+    "te": {
+      "correct_of200": {
+        "Base": 42,
+        "seed42": 62,
+        "seed43": 56
+      },
+      "both_training_seed_deltas_positive": true,
+      "two_fixed_model_mean_delta_pp": 8.5,
+      "two_fixed_model_mean_paired_question_bootstrap95_CI_pp": [
+        2.5,
+        14.75
+      ],
+      "mean_question_CI_lower_strictly_positive": true,
+      "Base_seed42_seed43_correctness_patterns": {
+        "000": 108,
+        "010": 17,
+        "111": 18,
+        "011": 18,
+        "101": 5,
+        "110": 9,
+        "001": 15,
+        "100": 10
+      },
+      "both_seeds_gain_same_questions": 18,
+      "both_seeds_lose_same_questions": 10,
+      "per_seed_termination_changes": {
+        "42": {
+          "gained": {
+            "count": 35,
+            "Base_finish": {
+              "length": 30,
+              "stop": 5
+            },
+            "trained_finish": {
+              "stop": 27,
+              "length": 8
+            }
+          },
+          "lost": {
+            "count": 15,
+            "Base_finish": {
+              "stop": 13,
+              "length": 2
+            },
+            "trained_finish": {
+              "length": 14,
+              "stop": 1
+            }
+          }
+        },
+        "43": {
+          "gained": {
+            "count": 33,
+            "Base_finish": {
+              "stop": 6,
+              "length": 27
+            },
+            "trained_finish": {
+              "stop": 29,
+              "length": 4
+            }
+          },
+          "lost": {
+            "count": 19,
+            "Base_finish": {
+              "stop": 18,
+              "length": 1
+            },
+            "trained_finish": {
+              "stop": 7,
+              "length": 12
+            }
+          }
+        }
+      }
+    },
+    "en": {
+      "correct_of200": {
+        "Base": 166,
+        "seed42": 162,
+        "seed43": 161
+      },
+      "both_training_seed_deltas_positive": false,
+      "two_fixed_model_mean_delta_pp": -2.25,
+      "two_fixed_model_mean_paired_question_bootstrap95_CI_pp": [
+        -5.25,
+        0.75
+      ],
+      "mean_question_CI_lower_strictly_positive": false,
+      "Base_seed42_seed43_correctness_patterns": {
+        "011": 2,
+        "111": 152,
+        "000": 27,
+        "001": 2,
+        "100": 4,
+        "110": 5,
+        "101": 5,
+        "010": 3
+      },
+      "both_seeds_gain_same_questions": 2,
+      "both_seeds_lose_same_questions": 4,
+      "per_seed_termination_changes": {
+        "42": {
+          "gained": {
+            "count": 5,
+            "Base_finish": {
+              "length": 3,
+              "stop": 2
+            },
+            "trained_finish": {
+              "stop": 3,
+              "length": 2
+            }
+          },
+          "lost": {
+            "count": 9,
+            "Base_finish": {
+              "stop": 7,
+              "length": 2
+            },
+            "trained_finish": {
+              "stop": 3,
+              "length": 6
+            }
+          }
+        },
+        "43": {
+          "gained": {
+            "count": 4,
+            "Base_finish": {
+              "length": 3,
+              "stop": 1
+            },
+            "trained_finish": {
+              "stop": 4
+            }
+          },
+          "lost": {
+            "count": 9,
+            "Base_finish": {
+              "stop": 8,
+              "length": 1
+            },
+            "trained_finish": {
+              "stop": 4,
+              "length": 5
+            }
+          }
+        }
+      }
+    }
+  },
+  "comparison_note": "Seed42 resumed after five updates with a fresh server RNG continuation; seed43 trained fresh from original Base with logit compaction throughout. Seeds also change initialization and example order. These engineering differences are not isolated causal factors.",
+  "scope": "Two fixed trained models on shared reserved development questions and identical cached Base. Joint question bootstrap only; not training-seed population uncertainty, a blind test, multiplicity-adjusted inference or automatic language selection. Original scores unchanged, no GPU work or cost recount."
+}

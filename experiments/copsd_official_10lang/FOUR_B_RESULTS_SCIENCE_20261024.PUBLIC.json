@@ -1,0 +1,156 @@
+{
+  "updated_at": "2026-10-24T11:27",
+  "model": "Qwen/Qwen3-4B",
+  "cohort": "independent4B, separate from completed1.7B experiments",
+  "training_updates_each": 20,
+  "training_scheduler_horizon": 100,
+  "effective_batch": 32,
+  "training_max_new_tokens": 2048,
+  "evaluation": {
+    "split": "reserved development",
+    "items_each": 200,
+    "n": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "question_seed": 42
+  },
+  "completed_paired_languages": 7,
+  "completed_model_pairs": 10,
+  "completed_training_languages": 9,
+  "models": [
+    {
+      "language": "bn",
+      "training_seed": 42,
+      "target_Base_correct_of200": 90,
+      "target_OPD_correct_of200": 84,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 163,
+      "target_Base_truncated": 84,
+      "target_OPD_truncated": 100
+    },
+    {
+      "language": "ja",
+      "training_seed": 42,
+      "target_Base_correct_of200": 140,
+      "target_OPD_correct_of200": 135,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 158,
+      "target_Base_truncated": 35,
+      "target_OPD_truncated": 23
+    },
+    {
+      "language": "ru",
+      "training_seed": 42,
+      "target_Base_correct_of200": 155,
+      "target_OPD_correct_of200": 150,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 159,
+      "target_Base_truncated": 19,
+      "target_OPD_truncated": 14
+    },
+    {
+      "language": "sw",
+      "training_seed": 42,
+      "target_Base_correct_of200": 16,
+      "target_OPD_correct_of200": 62,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 158,
+      "target_Base_truncated": 117,
+      "target_OPD_truncated": 38
+    },
+    {
+      "language": "sw",
+      "training_seed": 43,
+      "target_Base_correct_of200": 16,
+      "target_OPD_correct_of200": 47,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 161,
+      "target_Base_truncated": 117,
+      "target_OPD_truncated": 41
+    },
+    {
+      "language": "te",
+      "training_seed": 42,
+      "target_Base_correct_of200": 42,
+      "target_OPD_correct_of200": 62,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 162,
+      "target_Base_truncated": 129,
+      "target_OPD_truncated": 136
+    },
+    {
+      "language": "te",
+      "training_seed": 43,
+      "target_Base_correct_of200": 42,
+      "target_OPD_correct_of200": 56,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 161,
+      "target_Base_truncated": 129,
+      "target_OPD_truncated": 123
+    },
+    {
+      "language": "th",
+      "training_seed": 42,
+      "target_Base_correct_of200": 142,
+      "target_OPD_correct_of200": 134,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 163,
+      "target_Base_truncated": 20,
+      "target_OPD_truncated": 7
+    },
+    {
+      "language": "zh",
+      "training_seed": 42,
+      "target_Base_correct_of200": 152,
+      "target_OPD_correct_of200": 160,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 161,
+      "target_Base_truncated": 19,
+      "target_OPD_truncated": 16
+    },
+    {
+      "language": "zh",
+      "training_seed": 43,
+      "target_Base_correct_of200": 152,
+      "target_OPD_correct_of200": 158,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 158,
+      "target_Base_truncated": 19,
+      "target_OPD_truncated": 16
+    }
+  ],
+  "TE_two_fixed_model_mean_delta_pp": {
+    "te": 8.5,
+    "en": -2.25
+  },
+  "TE_joint_question_CI95_pp": {
+    "te": [
+      2.5,
+      14.75
+    ],
+    "en": [
+      -5.25,
+      0.75
+    ]
+  },
+  "remaining": {
+    "de": {
+      "stage": "paired_development_evaluation",
+      "queue_phase": "running",
+      "result_accepted": false
+    },
+    "fr": {
+      "stage": "paired_development_evaluation",
+      "queue_phase": "running",
+      "result_accepted": false
+    },
+    "es": {
+      "stage": "independent_training",
+      "queue_phase": "running",
+      "result_accepted": false
+    }
+  },
+  "selected_three_languages": null,
+  "research_sequential_training_started": false,
+  "scope": "Official COPSD core with project engineering/data/budget adaptations, not strict original hardware reproduction. Default componentclip0.05 only; unclipped and merged-concurrency experiments excluded. Same-size matched evaluation records only. Question CIs are for fixed models, not a seed population or multiplicity correction. Pending experiments are not completed results. No formal test results used for language selection."
+}

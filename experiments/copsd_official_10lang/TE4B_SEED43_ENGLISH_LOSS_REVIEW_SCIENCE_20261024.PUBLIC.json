@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "te",
+  "training_seed": 43,
+  "English_Base_correct_of200": 166,
+  "English_OPD_correct_of200": 161,
+  "newly_lost": 9,
+  "newly_gained": 4,
+  "loss_categories": {
+    "length_limit_without_box": 5,
+    "strict_vs_nonstrict_monotonicity_boundary": 1,
+    "generic_box_with_expected_relation_in_body": 1,
+    "vector_notation_mismatch_and_inconsistent_intermediate_substitution": 1,
+    "same_incorrect_intervals_with_explanatory_text_and_separator_difference": 1
+  },
+  "official_grader_false_replayed_for_all_four_normal_terminations": true,
+  "primary_scores_changed": false,
+  "new_GPU_work": false,
+  "scope": "Diagnostic review of nine Base-correct to model-incorrect items only. Five are budget termination failures; normal cases mix conventions, boxed representation and reasoning concerns. Body statements do not certify a complete proof. No adjusted score, English-retention proof, causal attribution to teacher/KL, or adjudication of pre-existing Base errors. A semantic metric would require a separate uniformly applied protocol."
+}
