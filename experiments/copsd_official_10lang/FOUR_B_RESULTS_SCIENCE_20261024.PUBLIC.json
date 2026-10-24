@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T23:52:33.102015+08:00",
+  "updated_at": "2026-10-25T00:01:09.956532+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -468,8 +468,24 @@
         "items": 250,
         "source": "SEQUENTIAL4B_TEMATCHED_TE_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
         "cohort": "matched900 single20 reference, not original2700 primary single"
+      },
+      {
+        "Base_correct": 34,
+        "model_correct": 46,
+        "gained": 25,
+        "lost": 13,
+        "delta_percentage_points": 4.8,
+        "paired_question_bootstrap95_CI_pp": [
+          0.0,
+          9.6
+        ],
+        "training_language": "zh",
+        "evaluation_language": "sw",
+        "items": 250,
+        "source": "SEQUENTIAL4B_ZH_TO_SW_MGSM_PARTIAL_SCIENCE_20261025.PUBLIC.json",
+        "cohort": "matched900 single20 reference, not original2700 primary single"
       }
     ],
-    "interpretation": "SW own-language math and TE-to-SW math transfer improve in the completed fixed-model pairs; other completed pair question intervals cross zero. Language preservation does not improve on every joint measure. No trainingseed population, universal efficacy or sequential forgetting conclusion. Full seven-case suites remain required."
+    "interpretation": "SW own-language math and TE-to-SW math transfer improve in the completed fixed-model pairs; other completed pair question intervals include zero. Language preservation does not improve on every joint measure. No trainingseed population, universal efficacy or sequential forgetting conclusion. Full seven-case suites remain required."
   }
 }

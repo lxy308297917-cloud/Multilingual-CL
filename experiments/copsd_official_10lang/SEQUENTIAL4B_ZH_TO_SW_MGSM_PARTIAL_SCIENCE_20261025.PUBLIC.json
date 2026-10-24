@@ -1,0 +1,124 @@
+{
+  "observed_at": "2026-10-25T00:01:09.956532+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "zh",
+  "training_cohort": "matched900 single20 reference",
+  "evaluation_language": "sw",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 34,
+  "model_correct": 46,
+  "gained": 25,
+  "lost": 13,
+  "delta_percentage_points": 4.8,
+  "paired_question_bootstrap95_CI_pp": [
+    0.0,
+    9.6
+  ],
+  "termination": {
+    "Base": {
+      "generated_tokens": 809908,
+      "truncated": 70,
+      "normal_terminations": 180,
+      "answer_extraction_failures": 74
+    },
+    "model": {
+      "generated_tokens": 635263,
+      "truncated": 43,
+      "normal_terminations": 207,
+      "answer_extraction_failures": 50
+    }
+  },
+  "paired_outcome_diagnostics": {
+    "gained": {
+      "items": 25,
+      "Base_truncated": 12,
+      "Base_extraction_failed": 12,
+      "model_truncated": 0,
+      "model_extraction_failed": 0
+    },
+    "lost": {
+      "items": 13,
+      "Base_truncated": 0,
+      "Base_extraction_failed": 0,
+      "model_truncated": 2,
+      "model_extraction_failed": 3
+    }
+  },
+  "language_ID_supplement": {
+    "Base_reused_source": "SEQUENTIAL4B_SWMATCHED_MGSM_PARTIAL_SCIENCE_20261024.PUBLIC.json",
+    "Base": {
+      "thinking_target_highconf": 190,
+      "thinking_English_top1": 10,
+      "correct_and_target_thinking_highconf": 29,
+      "correct_and_both_target_highconf": 12
+    },
+    "model": {
+      "thinking_target_highconf": 188,
+      "thinking_English_top1": 10,
+      "correct_and_target_thinking_highconf": 37,
+      "correct_and_both_target_highconf": 14
+    },
+    "model_full_summary": {
+      "thinking": {
+        "total_items": 250,
+        "statuses": {
+          "predicted": 250
+        },
+        "top1_label_counts": {
+          "__label__ktu_Latn": 1,
+          "__label__swh_Latn": 219,
+          "__label__eng_Latn": 10,
+          "__label__pmf_Latn": 2,
+          "__label__wmw_Latn": 3,
+          "__label__loz_Latn": 1,
+          "__label__kdc_Latn": 1,
+          "__label__ndj_Latn": 1,
+          "__label__qup_Latn": 1,
+          "__label__swc_Latn": 5,
+          "__label__atj_Latn": 1,
+          "__label__lub_Latn": 2,
+          "__label__sgb_Latn": 1,
+          "__label__hay_Latn": 1,
+          "__label__inh_Cyrl": 1
+        },
+        "target_top1_probability_ge_0_8": 188,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 39,
+          "__label__eng_Latn": 5,
+          "__label__swc_Latn": 2
+        }
+      },
+      "final": {
+        "total_items": 250,
+        "statuses": {
+          "no_final_section": 37,
+          "predicted": 213
+        },
+        "top1_label_counts": {
+          "__label__swc_Latn": 68,
+          "__label__swh_Latn": 125,
+          "__label__kam_Latn": 4,
+          "__label__ssw_Latn": 8,
+          "__label__atj_Latn": 1,
+          "__label__qup_Latn": 1,
+          "__label__wmw_Latn": 1,
+          "__label__pmf_Latn": 1,
+          "__label__eng_Latn": 2,
+          "__label__hay_Latn": 1,
+          "__label__inh_Cyrl": 1
+        },
+        "target_top1_probability_ge_0_8": 70,
+        "correct_items_label_counts": {
+          "__label__swh_Latn": 27,
+          "__label__swc_Latn": 16,
+          "__label__ssw_Latn": 2,
+          "__label__hay_Latn": 1
+        }
+      }
+    }
+  },
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "scope": "Positive SW math point estimate after ZH-only training; fixed-model paired-question CI includes zero at its boundary, not a stable improvement or trainingseed population claim. This is pretrained cross-language transfer, not post-SW-learned-stage forgetting. Strict whole-part swh_Latn language labels are a descriptive supplement, not token purity, fluency or proof validity; swc_Latn and other labels remain separately reported. Termination associations do not establish causality. English/PolyMath and complete stage matrices remain required."
+}
