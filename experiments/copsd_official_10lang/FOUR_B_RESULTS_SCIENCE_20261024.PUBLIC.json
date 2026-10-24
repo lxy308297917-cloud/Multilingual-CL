@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T03:10:26.204216+08:00",
+  "updated_at": "2026-10-25T03:32:09.302467+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -783,6 +783,32 @@
         "is_old_ZH_forgetting": false,
         "source": "SEQUENTIAL4B_FORWARD_S3_ZH_ACQUISITION_SCIENCE_20261025.PUBLIC.json",
         "complete_forgetting_matrix": false
+      },
+      {
+        "model_id": "reverse_s3",
+        "order_so_far": [
+          "zh",
+          "te",
+          "sw"
+        ],
+        "stage_index": 3,
+        "evaluation_language": "te",
+        "Base_correct": 149,
+        "learned_stage_correct": 130,
+        "previous_stage_correct": 130,
+        "model_correct": 111,
+        "items": 250,
+        "cumulative_display_updates": 60,
+        "historical_best_forgetting_pp": 7.6,
+        "historical_best_forgetting_question_CI95_pp": [
+          0.8,
+          14.0
+        ],
+        "thinking_TE_highconf": 250,
+        "truncated": 104,
+        "answer_extraction_failures": 94,
+        "source": "SEQUENTIAL4B_REVERSE_S3_TE_FORGETTING_SCIENCE_20261025.PUBLIC.json",
+        "complete_forgetting_matrix": false
       }
     ],
     "accepted_forward_s2_three_language_MGSM_row": {
@@ -825,7 +851,67 @@
         "items": 250,
         "correct": 239
       }
-    ]
+    ],
+    "reverse_target_only_MGSM_history": {
+      "Base": {
+        "sw": {
+          "correct": 34,
+          "total": 250
+        },
+        "te": {
+          "correct": 149,
+          "total": 250
+        },
+        "zh": {
+          "correct": 240,
+          "total": 250
+        }
+      },
+      "ZH": {
+        "sw": {
+          "correct": 46,
+          "total": 250
+        },
+        "te": {
+          "correct": 149,
+          "total": 250
+        },
+        "zh": {
+          "correct": 241,
+          "total": 250
+        }
+      },
+      "ZH_TE": {
+        "sw": {
+          "correct": 44,
+          "total": 250
+        },
+        "te": {
+          "correct": 130,
+          "total": 250
+        },
+        "zh": {
+          "correct": 234,
+          "total": 250
+        }
+      },
+      "ZH_TE_SW": {
+        "sw": {
+          "correct": 66,
+          "total": 250
+        },
+        "te": {
+          "correct": 111,
+          "total": 250
+        },
+        "zh": {
+          "correct": 239,
+          "total": 250
+        }
+      }
+    },
+    "reverse_target_only_MGSM_history_complete": true,
+    "reverse_full_seven_case_history_complete": false
   },
   "scoring_diagnostic": {
     "source": "MGSM_PERCENTAGE_AND_REASONING_DIAGNOSTIC_20261025.PUBLIC.json",
@@ -836,8 +922,8 @@
     "main_results_replaced": false,
     "SW_per_question_labels_unchanged_in_available_conditions": true,
     "note": "All4percentage-target questions use one output-independent English-derived rule across ten languages; diagnostics do not change original official-score tables or language-joint definitions.",
-    "latest_snapshot_available_conditions": 22,
+    "latest_snapshot_available_conditions": 23,
     "latest_two_cases_source": "SEQUENTIAL4B_REVERSE_SW_TE_ACQUISITION_SCIENCE_20261025.PUBLIC.json",
-    "latest_case_source": "SEQUENTIAL4B_FORWARD_S3_ZH_ACQUISITION_SCIENCE_20261025.PUBLIC.json"
+    "latest_case_source": "SEQUENTIAL4B_REVERSE_S3_TE_FORGETTING_SCIENCE_20261025.PUBLIC.json"
   }
 }
