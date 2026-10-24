@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T03:39:13.680661+08:00",
+  "updated_at": "2026-10-25T05:22:01.543529+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -847,6 +847,29 @@
         ],
         "source": "SEQUENTIAL4B_FORWARD_S3_SW_FORGETTING_SCIENCE_20261025.PUBLIC.json",
         "complete_forgetting_matrix": false
+      },
+      {
+        "model_id": "forward_s3",
+        "order_so_far": [
+          "sw",
+          "te",
+          "zh"
+        ],
+        "stage_index": 3,
+        "evaluation_language": "te",
+        "Base_correct": 149,
+        "learned_stage_correct": 14,
+        "previous_stage_correct": 14,
+        "model_correct": 19,
+        "items": 250,
+        "cumulative_display_updates": 60,
+        "historical_best_forgetting_pp": -2.0,
+        "historical_best_forgetting_question_CI95_pp": [
+          -6.0,
+          2.0
+        ],
+        "source": "SEQUENTIAL4B_FORWARD_S3_TE_FORGETTING_SCIENCE_20261025.PUBLIC.json",
+        "complete_forgetting_matrix": false
       }
     ],
     "accepted_forward_s2_three_language_MGSM_row": {
@@ -971,7 +994,10 @@
         "correct": 79,
         "items": 250
       }
-    ]
+    ],
+    "target_MGSM_stage_matrices_source": "SELECTED4B_TARGET_MGSM_STAGE_MATRICES_20261025.PUBLIC.json",
+    "all_eight_selected_models_three_target_MGSM_complete": true,
+    "complete_seven_case_stage_matrices": false
   },
   "scoring_diagnostic": {
     "source": "MGSM_PERCENTAGE_AND_REASONING_DIAGNOSTIC_20261025.PUBLIC.json",
@@ -982,9 +1008,9 @@
     "main_results_replaced": false,
     "SW_per_question_labels_unchanged_in_available_conditions": true,
     "note": "All4percentage-target questions use one output-independent English-derived rule across ten languages; diagnostics do not change original official-score tables or language-joint definitions.",
-    "latest_snapshot_available_conditions": 24,
+    "latest_snapshot_available_conditions": 25,
     "latest_two_cases_source": "SEQUENTIAL4B_REVERSE_SW_TE_ACQUISITION_SCIENCE_20261025.PUBLIC.json",
-    "latest_case_source": "SEQUENTIAL4B_FORWARD_S3_SW_FORGETTING_SCIENCE_20261025.PUBLIC.json"
+    "latest_case_source": "SEQUENTIAL4B_FORWARD_S3_TE_FORGETTING_SCIENCE_20261025.PUBLIC.json"
   },
   "diagnostic_synthesis": {
     "source": "TE_HISTORY_OBJECTIVE_AND_TERMINATION_DIAGNOSTIC_20261025.PUBLIC.json",

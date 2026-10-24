@@ -1,0 +1,416 @@
+{
+  "observed_at": "2026-10-25T05:22:01.543529+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items_per_language": 250,
+  "unique_underlying_problems": 250,
+  "all_selected_model_counts": {
+    "Base": {
+      "sw": {
+        "correct": 34,
+        "total": 250
+      },
+      "te": {
+        "correct": 149,
+        "total": 250
+      },
+      "zh": {
+        "correct": 240,
+        "total": 250
+      }
+    },
+    "SW_matched900": {
+      "sw": {
+        "correct": 55,
+        "total": 250
+      },
+      "te": {
+        "correct": 140,
+        "total": 250
+      },
+      "zh": {
+        "correct": 239,
+        "total": 250
+      }
+    },
+    "TE_matched900": {
+      "sw": {
+        "correct": 55,
+        "total": 250
+      },
+      "te": {
+        "correct": 152,
+        "total": 250
+      },
+      "zh": {
+        "correct": 241,
+        "total": 250
+      }
+    },
+    "ZH_matched900": {
+      "sw": {
+        "correct": 46,
+        "total": 250
+      },
+      "te": {
+        "correct": 149,
+        "total": 250
+      },
+      "zh": {
+        "correct": 241,
+        "total": 250
+      }
+    },
+    "forward_s2": {
+      "sw": {
+        "correct": 73,
+        "total": 250
+      },
+      "te": {
+        "correct": 14,
+        "total": 250
+      },
+      "zh": {
+        "correct": 242,
+        "total": 250
+      }
+    },
+    "forward_s3": {
+      "sw": {
+        "correct": 79,
+        "total": 250
+      },
+      "te": {
+        "correct": 19,
+        "total": 250
+      },
+      "zh": {
+        "correct": 239,
+        "total": 250
+      }
+    },
+    "reverse_s2": {
+      "sw": {
+        "correct": 44,
+        "total": 250
+      },
+      "te": {
+        "correct": 130,
+        "total": 250
+      },
+      "zh": {
+        "correct": 234,
+        "total": 250
+      }
+    },
+    "reverse_s3": {
+      "sw": {
+        "correct": 66,
+        "total": 250
+      },
+      "te": {
+        "correct": 111,
+        "total": 250
+      },
+      "zh": {
+        "correct": 239,
+        "total": 250
+      }
+    }
+  },
+  "directional_histories": {
+    "forward": [
+      {
+        "stage_index": 0,
+        "model_id": "Base",
+        "counts": {
+          "sw": {
+            "correct": 34,
+            "total": 250
+          },
+          "te": {
+            "correct": 149,
+            "total": 250
+          },
+          "zh": {
+            "correct": 240,
+            "total": 250
+          }
+        },
+        "three_target_macro_percent": 56.4
+      },
+      {
+        "stage_index": 1,
+        "model_id": "SW_matched900",
+        "counts": {
+          "sw": {
+            "correct": 55,
+            "total": 250
+          },
+          "te": {
+            "correct": 140,
+            "total": 250
+          },
+          "zh": {
+            "correct": 239,
+            "total": 250
+          }
+        },
+        "three_target_macro_percent": 57.86666666666667
+      },
+      {
+        "stage_index": 2,
+        "model_id": "forward_s2",
+        "counts": {
+          "sw": {
+            "correct": 73,
+            "total": 250
+          },
+          "te": {
+            "correct": 14,
+            "total": 250
+          },
+          "zh": {
+            "correct": 242,
+            "total": 250
+          }
+        },
+        "three_target_macro_percent": 43.86666666666667
+      },
+      {
+        "stage_index": 3,
+        "model_id": "forward_s3",
+        "counts": {
+          "sw": {
+            "correct": 79,
+            "total": 250
+          },
+          "te": {
+            "correct": 19,
+            "total": 250
+          },
+          "zh": {
+            "correct": 239,
+            "total": 250
+          }
+        },
+        "three_target_macro_percent": 44.93333333333333
+      }
+    ],
+    "reverse": [
+      {
+        "stage_index": 0,
+        "model_id": "Base",
+        "counts": {
+          "sw": {
+            "correct": 34,
+            "total": 250
+          },
+          "te": {
+            "correct": 149,
+            "total": 250
+          },
+          "zh": {
+            "correct": 240,
+            "total": 250
+          }
+        },
+        "three_target_macro_percent": 56.4
+      },
+      {
+        "stage_index": 1,
+        "model_id": "ZH_matched900",
+        "counts": {
+          "sw": {
+            "correct": 46,
+            "total": 250
+          },
+          "te": {
+            "correct": 149,
+            "total": 250
+          },
+          "zh": {
+            "correct": 241,
+            "total": 250
+          }
+        },
+        "three_target_macro_percent": 58.13333333333333
+      },
+      {
+        "stage_index": 2,
+        "model_id": "reverse_s2",
+        "counts": {
+          "sw": {
+            "correct": 44,
+            "total": 250
+          },
+          "te": {
+            "correct": 130,
+            "total": 250
+          },
+          "zh": {
+            "correct": 234,
+            "total": 250
+          }
+        },
+        "three_target_macro_percent": 54.4
+      },
+      {
+        "stage_index": 3,
+        "model_id": "reverse_s3",
+        "counts": {
+          "sw": {
+            "correct": 66,
+            "total": 250
+          },
+          "te": {
+            "correct": 111,
+            "total": 250
+          },
+          "zh": {
+            "correct": 239,
+            "total": 250
+          }
+        },
+        "three_target_macro_percent": 55.46666666666667
+      }
+    ]
+  },
+  "stage_point_metrics": {
+    "forward": [
+      {
+        "stage_index": 1,
+        "current_training_language": "sw",
+        "current_language_gain_from_previous_stage_pp": 8.4,
+        "current_language_gain_from_Base_pp": 8.4,
+        "old_languages": {},
+        "mean_old_language_forgetting_pp": null
+      },
+      {
+        "stage_index": 2,
+        "current_training_language": "te",
+        "current_language_gain_from_previous_stage_pp": -50.4,
+        "current_language_gain_from_Base_pp": -54.0,
+        "old_languages": {
+          "sw": {
+            "learned_correct": 55,
+            "historical_best_before_current_correct": 55,
+            "current_correct": 73,
+            "decline_from_own_learned_stage_pp": -7.2,
+            "signed_forgetting_pp": -7.2
+          }
+        },
+        "mean_old_language_forgetting_pp": -7.2
+      },
+      {
+        "stage_index": 3,
+        "current_training_language": "zh",
+        "current_language_gain_from_previous_stage_pp": -1.2,
+        "current_language_gain_from_Base_pp": -0.4,
+        "old_languages": {
+          "sw": {
+            "learned_correct": 55,
+            "historical_best_before_current_correct": 73,
+            "current_correct": 79,
+            "decline_from_own_learned_stage_pp": -9.6,
+            "signed_forgetting_pp": -2.4
+          },
+          "te": {
+            "learned_correct": 14,
+            "historical_best_before_current_correct": 14,
+            "current_correct": 19,
+            "decline_from_own_learned_stage_pp": -2.0,
+            "signed_forgetting_pp": -2.0
+          }
+        },
+        "mean_old_language_forgetting_pp": -2.2
+      }
+    ],
+    "reverse": [
+      {
+        "stage_index": 1,
+        "current_training_language": "zh",
+        "current_language_gain_from_previous_stage_pp": 0.4,
+        "current_language_gain_from_Base_pp": 0.4,
+        "old_languages": {},
+        "mean_old_language_forgetting_pp": null
+      },
+      {
+        "stage_index": 2,
+        "current_training_language": "te",
+        "current_language_gain_from_previous_stage_pp": -7.6,
+        "current_language_gain_from_Base_pp": -7.6,
+        "old_languages": {
+          "zh": {
+            "learned_correct": 241,
+            "historical_best_before_current_correct": 241,
+            "current_correct": 234,
+            "decline_from_own_learned_stage_pp": 2.8,
+            "signed_forgetting_pp": 2.8
+          }
+        },
+        "mean_old_language_forgetting_pp": 2.8
+      },
+      {
+        "stage_index": 3,
+        "current_training_language": "sw",
+        "current_language_gain_from_previous_stage_pp": 8.8,
+        "current_language_gain_from_Base_pp": 12.8,
+        "old_languages": {
+          "zh": {
+            "learned_correct": 241,
+            "historical_best_before_current_correct": 241,
+            "current_correct": 239,
+            "decline_from_own_learned_stage_pp": 0.8,
+            "signed_forgetting_pp": 0.8
+          },
+          "te": {
+            "learned_correct": 130,
+            "historical_best_before_current_correct": 130,
+            "current_correct": 111,
+            "decline_from_own_learned_stage_pp": 7.6,
+            "signed_forgetting_pp": 7.6
+          }
+        },
+        "mean_old_language_forgetting_pp": 4.2
+      }
+    ]
+  },
+  "accepted_models": 8,
+  "accepted_target_MGSM_conditions": 24,
+  "all_three_target_MGSM_histories_complete": true,
+  "complete_seven_case_stages": false,
+  "English_and_PolyMath_complete": false,
+  "private_matrix_receipt_sha256": "18402ae430c4bb3ae053622afb845f8dc15a516687f2313c83e4f0473b29759f",
+  "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+  "warning": "All target-only averages are descriptive; translations share250originals, not750independent items. Previous best ranges from the language learned stage through the stage before current, excluding Base/pre-learning/current. Negative forgetting retained. Forward TE was already14/250 at learning, so its final-2pp forgetting and forward mean-2.2pp cannot establish successful acquisition or useful continual learning. No formal test checkpoint/language reselection.",
+  "forgetting_source_reports": [
+    "SEQUENTIAL4B_FORWARD_S2_SW_FORGETTING_LANGUAGE_SCIENCE_20261025.PUBLIC.json",
+    "SEQUENTIAL4B_REVERSE_S2_ZH_FORGETTING_SCIENCE_20261025.PUBLIC.json",
+    "SEQUENTIAL4B_FORWARD_S3_SW_FORGETTING_SCIENCE_20261025.PUBLIC.json",
+    "SEQUENTIAL4B_REVERSE_S3_ZH_FORGETTING_SCIENCE_20261025.PUBLIC.json",
+    "SEQUENTIAL4B_REVERSE_S3_TE_FORGETTING_SCIENCE_20261025.PUBLIC.json",
+    "SEQUENTIAL4B_FORWARD_S3_TE_FORGETTING_SCIENCE_20261025.PUBLIC.json"
+  ],
+  "original_scores_preserved": true,
+  "common_training_configuration": {
+    "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "updates": 20,
+    "scheduler_horizon": 100,
+    "effective_batch": 32,
+    "max_completion_length": 2048,
+    "training_seed": 42
+  },
+  "common_evaluation_configuration": {
+    "samples": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": -1,
+    "seed": 42,
+    "seed_policy": "SHA256(seed:language:id:0), per request"
+  },
+  "official_COPSD_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "reproduction_scope": "Fixed official COPSD core, project Qwen3-4B20updates/stage under100scheduler and n1/8192/native16 formal evaluation; not strict official100-step training or pass@12 reproduction."
+}
