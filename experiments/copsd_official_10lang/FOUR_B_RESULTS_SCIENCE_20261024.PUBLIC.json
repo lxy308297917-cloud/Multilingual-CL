@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T02:03:52.695655+08:00",
+  "updated_at": "2026-10-25T02:22:55.209798+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -642,6 +642,63 @@
         "is_post_SW_learning_forgetting": false,
         "source": "SEQUENTIAL4B_REVERSE_S2_SW_MGSM_PARTIAL_SCIENCE_20261025.PUBLIC.json",
         "complete_forgetting_matrix": false
+      },
+      {
+        "model_id": "reverse_s2",
+        "order_so_far": [
+          "zh",
+          "te"
+        ],
+        "stage_index": 2,
+        "evaluation_language": "te",
+        "Base_correct": 149,
+        "model_correct": 130,
+        "previous_stage_correct": 149,
+        "items": 250,
+        "cumulative_display_updates": 40,
+        "delta_from_Base_pp": -7.6,
+        "Base_question_CI95_pp": [
+          -13.200000000000001,
+          -1.6
+        ],
+        "change_from_previous_stage_pp": -7.6,
+        "previous_stage_question_CI95_pp": [
+          -14.000000000000002,
+          -0.8
+        ],
+        "current_language_acquisition": true,
+        "is_old_language_forgetting": false,
+        "source": "SEQUENTIAL4B_REVERSE_SW_TE_ACQUISITION_SCIENCE_20261025.PUBLIC.json",
+        "complete_forgetting_matrix": false
+      },
+      {
+        "model_id": "reverse_s3",
+        "order_so_far": [
+          "zh",
+          "te",
+          "sw"
+        ],
+        "stage_index": 3,
+        "evaluation_language": "sw",
+        "Base_correct": 34,
+        "model_correct": 66,
+        "previous_stage_correct": 44,
+        "items": 250,
+        "cumulative_display_updates": 60,
+        "delta_from_Base_pp": 12.8,
+        "Base_question_CI95_pp": [
+          7.6,
+          18.0
+        ],
+        "change_from_previous_stage_pp": 8.799999999999999,
+        "previous_stage_question_CI95_pp": [
+          3.5999999999999996,
+          14.399999999999999
+        ],
+        "current_language_acquisition": true,
+        "is_old_language_forgetting": false,
+        "source": "SEQUENTIAL4B_REVERSE_SW_TE_ACQUISITION_SCIENCE_20261025.PUBLIC.json",
+        "complete_forgetting_matrix": false
       }
     ]
   },
@@ -653,6 +710,8 @@
     "official_formal_scores_preserved": true,
     "main_results_replaced": false,
     "SW_per_question_labels_unchanged_in_available_conditions": true,
-    "note": "All4percentage-target questions use one output-independent English-derived rule across ten languages; diagnostics do not change original official-score tables or language-joint definitions."
+    "note": "All4percentage-target questions use one output-independent English-derived rule across ten languages; diagnostics do not change original official-score tables or language-joint definitions.",
+    "latest_snapshot_available_conditions": 19,
+    "latest_two_cases_source": "SEQUENTIAL4B_REVERSE_SW_TE_ACQUISITION_SCIENCE_20261025.PUBLIC.json"
   }
 }

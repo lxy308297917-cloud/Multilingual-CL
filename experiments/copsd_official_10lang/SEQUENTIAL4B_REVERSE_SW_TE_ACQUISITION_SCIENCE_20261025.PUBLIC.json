@@ -1,0 +1,221 @@
+{
+  "observed_at": "2026-10-25T02:22:55.209798+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "official_scores_preserved": true,
+  "results": [
+    {
+      "model_id": "reverse_s2",
+      "evaluation_language": "te",
+      "items": 250,
+      "stage_index": 2,
+      "Base_comparison": {
+        "Base_correct": 149,
+        "model_correct": 130,
+        "gained": 19,
+        "lost": 38,
+        "delta_percentage_points": -7.6,
+        "paired_question_bootstrap95_CI_pp": [
+          -13.200000000000001,
+          -1.6
+        ]
+      },
+      "previous_stage": {
+        "previous_correct": 149,
+        "current_correct": 130,
+        "gained": 26,
+        "lost": 45,
+        "change_pp": -7.6,
+        "paired_question_CI95_pp": [
+          -14.000000000000002,
+          -0.8
+        ]
+      },
+      "matched_single": {
+        "previous_correct": 152,
+        "current_correct": 130,
+        "gained": 20,
+        "lost": 42,
+        "change_pp": -8.799999999999999,
+        "paired_question_CI95_pp": [
+          -14.799999999999999,
+          -2.8000000000000003
+        ]
+      },
+      "language": {
+        "previous_stage": {
+          "thinking_target_highconf": 250,
+          "thinking_English_top1": 0,
+          "correct_and_target_thinking_highconf": 149,
+          "correct_and_both_parts_target_highconf": 149
+        },
+        "current": {
+          "thinking_target_highconf": 250,
+          "thinking_English_top1": 0,
+          "correct_and_target_thinking_highconf": 130,
+          "correct_and_both_parts_target_highconf": 128
+        },
+        "matched_single": {
+          "thinking_target_highconf": 250,
+          "thinking_English_top1": 0,
+          "correct_and_target_thinking_highconf": 152,
+          "correct_and_both_parts_target_highconf": 150
+        }
+      },
+      "metrics": {
+        "items": 250,
+        "single_correct": 130,
+        "generated_tokens": 1295321,
+        "truncated": 56,
+        "normal_terminations": 194,
+        "answer_extraction_failures": 52,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "mgsm_rev2",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 250,
+        "single_accuracy": 0.52,
+        "generation_seconds": 6120.257848799229,
+        "model_load_seconds": 13.863275663927197,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "actual_parent_adapter_link_verified": true,
+      "same_questions_answers_prompts_seeds_verified": true,
+      "current_language_acquisition": true,
+      "is_old_language_forgetting": false,
+      "matched_comparison_scope": "Current stage20 and independent single20 use matched current-language questions/budget, but sequential model has earlier training stages; total exposure differs.",
+      "complete_seven_case_stage": false,
+      "complete_forgetting_matrix": false,
+      "TensorBoard": {
+        "scalar_count": 13,
+        "all_scalars_read_back": true,
+        "local_checkpoint_step": 20
+      },
+      "supplementary_percentage_units": {
+        "protocol": "project_mgsm_percentage_units_diagnostic_v1",
+        "original_correct": 130,
+        "diagnostic_correct": 131,
+        "official_scores_preserved": true
+      },
+      "previous_stage_metrics": {
+        "generated_tokens": 1041893,
+        "truncated": 18,
+        "normal_terminations": 232,
+        "answer_extraction_failures": 18
+      }
+    },
+    {
+      "model_id": "reverse_s3",
+      "evaluation_language": "sw",
+      "items": 250,
+      "stage_index": 3,
+      "Base_comparison": {
+        "Base_correct": 34,
+        "model_correct": 66,
+        "gained": 41,
+        "lost": 9,
+        "delta_percentage_points": 12.8,
+        "paired_question_bootstrap95_CI_pp": [
+          7.6,
+          18.0
+        ]
+      },
+      "previous_stage": {
+        "previous_correct": 44,
+        "current_correct": 66,
+        "gained": 36,
+        "lost": 14,
+        "change_pp": 8.799999999999999,
+        "paired_question_CI95_pp": [
+          3.5999999999999996,
+          14.399999999999999
+        ]
+      },
+      "matched_single": {
+        "previous_correct": 55,
+        "current_correct": 66,
+        "gained": 30,
+        "lost": 19,
+        "change_pp": 4.3999999999999995,
+        "paired_question_CI95_pp": [
+          -1.2,
+          9.609999999999854
+        ]
+      },
+      "language": {
+        "previous_stage": {
+          "thinking_target_highconf": 183,
+          "thinking_English_top1": 13,
+          "correct_and_target_thinking_highconf": 37,
+          "correct_and_both_parts_target_highconf": 17
+        },
+        "current": {
+          "thinking_target_highconf": 168,
+          "thinking_English_top1": 68,
+          "correct_and_target_thinking_highconf": 48,
+          "correct_and_both_parts_target_highconf": 11
+        },
+        "matched_single": {
+          "thinking_target_highconf": 199,
+          "thinking_English_top1": 29,
+          "correct_and_target_thinking_highconf": 44,
+          "correct_and_both_parts_target_highconf": 6
+        }
+      },
+      "metrics": {
+        "items": 250,
+        "single_correct": 66,
+        "generated_tokens": 803889,
+        "truncated": 16,
+        "normal_terminations": 234,
+        "answer_extraction_failures": 10,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "mgsm_rev2",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 250,
+        "single_accuracy": 0.264,
+        "generation_seconds": 3864.25351228565,
+        "model_load_seconds": 13.672958008944988,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "actual_parent_adapter_link_verified": true,
+      "same_questions_answers_prompts_seeds_verified": true,
+      "current_language_acquisition": true,
+      "is_old_language_forgetting": false,
+      "matched_comparison_scope": "Current stage20 and independent single20 use matched current-language questions/budget, but sequential model has earlier training stages; total exposure differs.",
+      "complete_seven_case_stage": false,
+      "complete_forgetting_matrix": false,
+      "TensorBoard": {
+        "scalar_count": 13,
+        "all_scalars_read_back": true,
+        "local_checkpoint_step": 20
+      },
+      "supplementary_percentage_units": {
+        "protocol": "project_mgsm_percentage_units_diagnostic_v1",
+        "original_correct": 66,
+        "diagnostic_correct": 66,
+        "official_scores_preserved": true
+      },
+      "previous_stage_metrics": {
+        "generated_tokens": 701051,
+        "truncated": 48,
+        "normal_terminations": 202,
+        "answer_extraction_failures": 50
+      }
+    }
+  ],
+  "supplementary_snapshot_completed_conditions": 19,
+  "private_evidence_sha256": "f62c0fcea87887a6e5a30962b75bb7a5fb9a0d96add98afdec91a301bd524b41",
+  "interpretation": "Reverse stage2 TE declines relative to Base, preceding ZH stage and matched TE single; all thoughts retain the Telugu high-confidence label. Reverse stage3 SW improves relative to Base and preceding ZH/TE stage; its interval relative to matched SW single includes zero. SW English thought labels increase; joint math/target-language outcomes are mixed. These are current-language acquisition cases, not old-language forgetting. Neither general efficacy nor teacher-quality causality is established.",
+  "limitations": [
+    "Single frozen training seed per sequential order; question bootstrap is conditional on the fixed models, without multiplicity correction.",
+    "Whole-part GlotLID labels do not establish fluency, token purity or reasoning correctness.",
+    "Sequential and matched single have equal current-stage exposure, but sequential total exposure is greater.",
+    "Official original score and supplementary percentage-unit results remain distinct; language joint counts use official grades.",
+    "Full English, PolyMath and old-language forgetting results remain incomplete."
+  ]
+}
