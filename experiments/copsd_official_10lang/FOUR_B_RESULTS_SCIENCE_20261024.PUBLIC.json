@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T02:36:06.235323+08:00",
+  "updated_at": "2026-10-25T02:45:46.382785+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -725,6 +725,34 @@
         "thinking_TE_highconf": 250,
         "source": "SEQUENTIAL4B_FORWARD_S2_TE_COLLAPSE_SCIENCE_20261025.PUBLIC.json",
         "complete_forgetting_matrix": false
+      },
+      {
+        "model_id": "reverse_s3",
+        "order_so_far": [
+          "zh",
+          "te",
+          "sw"
+        ],
+        "stage_index": 3,
+        "evaluation_language": "zh",
+        "Base_correct": 240,
+        "previous_stage_correct": 234,
+        "learned_stage_correct": 241,
+        "model_correct": 239,
+        "items": 250,
+        "cumulative_display_updates": 60,
+        "historical_best_forgetting_pp": 0.8,
+        "historical_best_forgetting_question_CI95_pp": [
+          -1.6,
+          3.2
+        ],
+        "change_from_previous_stage_pp": 2.0,
+        "previous_stage_question_CI95_pp": [
+          -0.8,
+          4.8
+        ],
+        "source": "SEQUENTIAL4B_REVERSE_S3_ZH_FORGETTING_SCIENCE_20261025.PUBLIC.json",
+        "complete_forgetting_matrix": false
       }
     ],
     "accepted_forward_s2_three_language_MGSM_row": {
@@ -745,7 +773,29 @@
       }
     },
     "forward_s2_all_three_MGSM_cases_accepted": true,
-    "forward_s2_complete_seven_case_stage": false
+    "forward_s2_complete_seven_case_stage": false,
+    "accepted_reverse_ZH_MGSM_history": [
+      {
+        "model_id": "Base",
+        "items": 250,
+        "correct": 240
+      },
+      {
+        "model_id": "ZH_matched900",
+        "items": 250,
+        "correct": 241
+      },
+      {
+        "model_id": "reverse_s2",
+        "items": 250,
+        "correct": 234
+      },
+      {
+        "model_id": "reverse_s3",
+        "items": 250,
+        "correct": 239
+      }
+    ]
   },
   "scoring_diagnostic": {
     "source": "MGSM_PERCENTAGE_AND_REASONING_DIAGNOSTIC_20261025.PUBLIC.json",
@@ -756,8 +806,8 @@
     "main_results_replaced": false,
     "SW_per_question_labels_unchanged_in_available_conditions": true,
     "note": "All4percentage-target questions use one output-independent English-derived rule across ten languages; diagnostics do not change original official-score tables or language-joint definitions.",
-    "latest_snapshot_available_conditions": 20,
+    "latest_snapshot_available_conditions": 21,
     "latest_two_cases_source": "SEQUENTIAL4B_REVERSE_SW_TE_ACQUISITION_SCIENCE_20261025.PUBLIC.json",
-    "latest_case_source": "SEQUENTIAL4B_FORWARD_S2_TE_COLLAPSE_SCIENCE_20261025.PUBLIC.json"
+    "latest_case_source": "SEQUENTIAL4B_REVERSE_S3_ZH_FORGETTING_SCIENCE_20261025.PUBLIC.json"
   }
 }

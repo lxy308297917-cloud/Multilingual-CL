@@ -1,0 +1,209 @@
+{
+  "model_id": "reverse_s3",
+  "case": "mgsm_rev2_zh",
+  "items": 250,
+  "learned_stage": {
+    "previous_correct": 241,
+    "current_correct": 239,
+    "gained": 4,
+    "lost": 6,
+    "change_pp": -0.8,
+    "change_question_CI95_pp": [
+      -3.2,
+      1.6
+    ],
+    "signed_decline_pp": 0.8,
+    "signed_decline_question_CI95_pp": [
+      -1.6,
+      3.2
+    ],
+    "lost_current_truncated": 1,
+    "lost_current_no_extracted_box": 1,
+    "lost_current_normal_with_box": 5
+  },
+  "previous_stage": {
+    "previous_correct": 234,
+    "current_correct": 239,
+    "gained": 9,
+    "lost": 4,
+    "change_pp": 2.0,
+    "change_question_CI95_pp": [
+      -0.8,
+      4.8
+    ],
+    "signed_decline_pp": -2.0,
+    "signed_decline_question_CI95_pp": [
+      -4.8,
+      0.8
+    ],
+    "lost_current_truncated": 1,
+    "lost_current_no_extracted_box": 1,
+    "lost_current_normal_with_box": 3
+  },
+  "historical_best_model_id": "ZH_matched900",
+  "historical_best_forgetting_pp": 0.8,
+  "historical_best_forgetting_question_CI95_pp": [
+    -1.6,
+    3.2
+  ],
+  "language": {
+    "learned": {
+      "thinking_target_highconf": 249,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 240,
+      "correct_and_both_parts_target_highconf": 234
+    },
+    "previous": {
+      "thinking_target_highconf": 248,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 232,
+      "correct_and_both_parts_target_highconf": 228
+    },
+    "current": {
+      "thinking_target_highconf": 250,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 239,
+      "correct_and_both_parts_target_highconf": 231
+    }
+  },
+  "language_detector_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "metrics": {
+    "learned": {
+      "items": 250,
+      "single_correct": 241,
+      "generated_tokens": 215087,
+      "truncated": 0,
+      "normal_terminations": 250,
+      "answer_extraction_failures": 0,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 250,
+      "single_accuracy": 0.964,
+      "generation_seconds": 1056.607735171914,
+      "model_load_seconds": 13.117619380354881,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    },
+    "previous": {
+      "items": 250,
+      "single_correct": 234,
+      "generated_tokens": 205200,
+      "truncated": 0,
+      "normal_terminations": 250,
+      "answer_extraction_failures": 0,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 250,
+      "single_accuracy": 0.936,
+      "generation_seconds": 1072.5189212299883,
+      "model_load_seconds": 13.827431503683329,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    },
+    "current": {
+      "items": 250,
+      "single_correct": 239,
+      "generated_tokens": 259621,
+      "truncated": 1,
+      "normal_terminations": 249,
+      "answer_extraction_failures": 1,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "mgsm_rev2",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 250,
+      "single_accuracy": 0.956,
+      "generation_seconds": 1330.7030910290778,
+      "model_load_seconds": 13.729295978322625,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {}
+    }
+  },
+  "Base_comparison": {
+    "Base_correct": 240,
+    "model_correct": 239,
+    "gained": 3,
+    "lost": 4,
+    "delta_percentage_points": -0.4,
+    "paired_question_bootstrap95_CI_pp": [
+      -2.4,
+      1.6
+    ]
+  },
+  "actual_parent_adapter_verified": true,
+  "common_question_answer_prompt_seed_verified": true,
+  "collector_source_sha256": "3765a5f3fe3db4d40b0f272b3c4ec3c4398c6db983ab5d28f66b9d7dd07d0c0c",
+  "proves_complete_seven_case_stage": false,
+  "proves_complete_forgetting_matrix": false,
+  "scope": "Original-score partial old-language history. Best earlier stage selected by fixed observed score; bootstrap is conditional on those fixed models, not retraining or reselecting the best stage. Before-learning stages and Base excluded from forgetting history. Negative forgetting retained. Truncation/no-box counts overlap. Whole-part language labels do not establish fluency or proof quality.",
+  "observed_at": "2026-10-25T02:45:46.382785+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "order": [
+    "zh",
+    "te",
+    "sw"
+  ],
+  "stage_index": 3,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 60,
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "private_evidence_sha256": "3b4465c9efa75595091beec2ae7d9e9261767031beb39d42da76c554ec4d9eee",
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true
+  },
+  "ZH_MGSM_history": [
+    {
+      "model_id": "Base",
+      "items": 250,
+      "correct": 240
+    },
+    {
+      "model_id": "ZH_matched900",
+      "items": 250,
+      "correct": 241
+    },
+    {
+      "model_id": "reverse_s2",
+      "items": 250,
+      "correct": 234
+    },
+    {
+      "model_id": "reverse_s3",
+      "items": 250,
+      "correct": 239
+    }
+  ],
+  "supplementary_percentage_units": {
+    "protocol": "project_mgsm_percentage_units_diagnostic_v1",
+    "available_conditions": 21,
+    "ZH_history": [
+      {
+        "model_id": "Base",
+        "original_correct": 240,
+        "diagnostic_correct": 244
+      },
+      {
+        "model_id": "ZH_matched900",
+        "original_correct": 241,
+        "diagnostic_correct": 243
+      },
+      {
+        "model_id": "reverse_s2",
+        "original_correct": 234,
+        "diagnostic_correct": 237
+      },
+      {
+        "model_id": "reverse_s3",
+        "original_correct": 239,
+        "diagnostic_correct": 242
+      }
+    ],
+    "official_scores_preserved": true
+  },
+  "interpretation": "After ZH/TE/SW, Chinese MGSM rises234->239 relative to the preceding stage but remains below its learned241. Historical post-learning best forgetting is +0.8pp with question interval[-1.6,3.2], so no stable forgetting or recovery claim. All thinking remains high-confidence Chinese. This completes one language column only; TE, English, PolyMath and the full forgetting matrices remain pending. Base/current are excluded from the best-before-current history; no zero clipping of negative forgetting."
+}
