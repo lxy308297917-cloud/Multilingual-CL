@@ -1,0 +1,66 @@
+{
+  "observed_at": "2026-10-24T22:41:22.836057+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "sw",
+  "evaluation_language": "te",
+  "training_cohort": "matched900 single20 reference, not the earlier2700 primarySW",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "Base_correct": 149,
+  "OPD_correct": 140,
+  "items": 250,
+  "delta_percentage_points": -3.6,
+  "paired_question_bootstrap95_CI_pp": [
+    -9.6,
+    2.4
+  ],
+  "gained": 25,
+  "lost": 34,
+  "termination": {
+    "Base": {
+      "generated_tokens": 989616,
+      "truncated": 20,
+      "normal_terminations": 230,
+      "answer_extraction_failures": 20,
+      "generation_seconds": 1667.7018226925284
+    },
+    "model": {
+      "generated_tokens": 1227465,
+      "truncated": 41,
+      "normal_terminations": 209,
+      "answer_extraction_failures": 39,
+      "generation_seconds": 5443.343126220629
+    }
+  },
+  "newly_wrong_outcomes": {
+    "items": 34,
+    "truncated": 14,
+    "extraction_failures": 14,
+    "both_truncated_and_extraction_failed": 14,
+    "normal_termination": 20
+  },
+  "previous_Base_wrong_outcomes_of_gains": {
+    "items": 25,
+    "truncated": 6,
+    "extraction_failures": 6,
+    "both_truncated_and_extraction_failed": 6,
+    "normal_termination": 19
+  },
+  "thinking_target_highconf_counts": {
+    "Base": 250,
+    "model": 250
+  },
+  "correct_and_target_thinking_highconf": {
+    "Base": 149,
+    "model": 140
+  },
+  "correct_and_both_thinking_final_target_highconf": {
+    "Base": 147,
+    "model": 139
+  },
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "interpretation": "SW-only training shows a negative point estimate on untrainedTE, with more truncation. Question CI crosses zero; no stable decline or seed-population claim. TE was not yet a trained stage in this model, so this is cross-language pretrained retention/transfer, not post-TE-stage forgetting.",
+  "language_scope": "Whole-thinking GlotLID label confidence is descriptive, not token purity, fluency or proof correctness. Bothconditions250/250highconfidenceTEthoughtlabels;thereisnoobservedwhole-partEnglishswitchinthiscase.",
+  "causal_scope": "Of34newerrors14aretruncatedwithoutextractedanswersand20normal-terminationerrors. Of25gains6recoveroldBase-truncationerrors. These saved-output associations do not prove that a longer generation budget or a teacher change would recover scores.",
+  "scope": "One completed main-benchmark pair; otherlanguage/Englishretention/fullseven-case suitesandbothsequentialforgettingmatricesremainrequired. Allscientificsettingsretained;noinferenceortrainingrerunsfortheCPUanalysis."
+}
