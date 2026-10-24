@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T01:30:02.475100+08:00",
+  "updated_at": "2026-10-25T02:03:52.695655+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -644,5 +644,15 @@
         "complete_forgetting_matrix": false
       }
     ]
+  },
+  "scoring_diagnostic": {
+    "source": "MGSM_PERCENTAGE_AND_REASONING_DIAGNOSTIC_20261025.PUBLIC.json",
+    "supplementary_protocol": "project_mgsm_percentage_units_diagnostic_v1",
+    "percentage_answer_questions": 4,
+    "available_conditions": 17,
+    "official_formal_scores_preserved": true,
+    "main_results_replaced": false,
+    "SW_per_question_labels_unchanged_in_available_conditions": true,
+    "note": "All4percentage-target questions use one output-independent English-derived rule across ten languages; diagnostics do not change original official-score tables or language-joint definitions."
   }
 }
