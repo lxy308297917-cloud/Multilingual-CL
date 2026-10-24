@@ -1,0 +1,65 @@
+{
+  "observed_at": "2026-10-24T22:51:31.110083+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "sw",
+  "training_cohort": "matched900 single20 reference",
+  "evaluation_language": "zh",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 240,
+  "model_correct": 239,
+  "gained": 4,
+  "lost": 5,
+  "delta_percentage_points": -0.4,
+  "paired_question_bootstrap95_CI_pp": [
+    -2.8000000000000003,
+    2.0
+  ],
+  "termination": {
+    "Base": {
+      "generated_tokens": 220140,
+      "truncated": 1,
+      "normal_terminations": 249,
+      "answer_extraction_failures": 1
+    },
+    "model": {
+      "generated_tokens": 286235,
+      "truncated": 0,
+      "normal_terminations": 250,
+      "answer_extraction_failures": 0
+    }
+  },
+  "model_language_summary": {
+    "thinking": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 250
+      },
+      "top1_label_counts": {
+        "__label__cmn_Hani": 250
+      },
+      "target_top1_probability_ge_0_8": 250,
+      "correct_items_label_counts": {
+        "__label__cmn_Hani": 239
+      }
+    },
+    "final": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 250
+      },
+      "top1_label_counts": {
+        "__label__cmn_Hani": 249,
+        "__label__wuu_Hani": 1
+      },
+      "target_top1_probability_ge_0_8": 244,
+      "correct_items_label_counts": {
+        "__label__cmn_Hani": 238,
+        "__label__wuu_Hani": 1
+      }
+    }
+  },
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "scope": "Cross-language pretrained retention after SW-only training, not post-ZH-stage forgetting. Paired fixed-model question CI crosses zero; no stable gain or decline claim. Whole-part language ID does not measure token purity, fluency or reasoning validity. Full seven-case suites and sequential matrices remain required."
+}
