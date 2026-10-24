@@ -1,0 +1,47 @@
+{
+  "completed_at": "2026-10-24T16:41:16.644112",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "selected-language matched900-pool reference20updates under100scheduler",
+  "runs": {
+    "sw": {
+      "global_step": 20,
+      "online_rollouts": 640,
+      "generated_tokens": 1084231,
+      "valid_response_loss_positions": 1084231,
+      "teacher_forward_calls": 640,
+      "current_student_weight_syncs": 21,
+      "original_Base_bitwise_unchanged": true,
+      "actual_stage_optimizer_scheduler_reset": true,
+      "checkpoint20_optimizer_scheduler_RNG_verified": true,
+      "TensorBoard_loss_learning_rate_read_back": true,
+      "parent_minutes": 93.35000000000001,
+      "parent_GPU_hours": 3.111666666666667,
+      "actual_unique_original_questions": 640,
+      "development_overlap": 0,
+      "student_and_teacher_prompt_pairs_all_exact": true
+    },
+    "zh": {
+      "global_step": 20,
+      "online_rollouts": 640,
+      "generated_tokens": 1193472,
+      "valid_response_loss_positions": 1193472,
+      "teacher_forward_calls": 640,
+      "current_student_weight_syncs": 21,
+      "original_Base_bitwise_unchanged": true,
+      "actual_stage_optimizer_scheduler_reset": true,
+      "checkpoint20_optimizer_scheduler_RNG_verified": true,
+      "TensorBoard_loss_learning_rate_read_back": true,
+      "parent_minutes": 90.16666666666667,
+      "parent_GPU_hours": 3.0055555555555555,
+      "actual_unique_original_questions": 640,
+      "development_overlap": 0,
+      "student_and_teacher_prompt_pairs_all_exact": true
+    }
+  },
+  "actual_SW_ZH_exposure_question_overlap": 0,
+  "TE_matched_reference": "running",
+  "formal_evaluation": "BaseZH MGSM completed240/250; SWmatchedSW and ZHmatchedZH full250 paired tests running; remainingseven-case suites frozen/configured",
+  "forward_stage2_TE": "configuration preflight passed; queue configured but not started",
+  "reverse_stage2_TE": "configuration preflight passed; manual waiting queue started underfourGPUlimit",
+  "scope": "Training/checkpoint/data-provenance milestone only. These are new900-pool matched controls, distinct from earlier independent2700-pool pilots. Mathematical effects, language preservation and forgetting await full paired evaluation. Base240/250 is formalMGSMZH, not reserved200development."
+}
