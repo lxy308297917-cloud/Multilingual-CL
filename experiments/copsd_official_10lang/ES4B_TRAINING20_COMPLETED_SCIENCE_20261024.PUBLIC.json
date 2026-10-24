@@ -1,0 +1,18 @@
+{
+  "completed_at": "2026-10-24 12:51:43",
+  "model": "Qwen/Qwen3-4B",
+  "language": "es",
+  "training_updates": 20,
+  "online_rollouts": 640,
+  "generated_tokens": 1211348,
+  "valid_response_loss_positions": 1211348,
+  "teacher_forward_calls": 640,
+  "student_weight_syncs": 21,
+  "original_Base_bitwise_unchanged": true,
+  "checkpoint_optimizer_scheduler20_and_RNG_verified": true,
+  "training_parent_minutes": 87.8,
+  "training_parent_GPU_hours": 2.9266666666666667,
+  "Base_correct_of200": 163,
+  "paired_development_evaluation": "launched; no ES model result accepted yet",
+  "scope": "Engineering training completion only. All ten4B languages now have independent20-update training; FR/ES full paired development results remain pending. Same original Base, official-core LoRA/fixed teacher, dedicated server and response-logit storage compaction; not strict released100-update reproduction or language selection."
+}

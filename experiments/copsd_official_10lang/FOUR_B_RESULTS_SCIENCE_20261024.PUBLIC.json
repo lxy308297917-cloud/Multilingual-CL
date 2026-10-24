@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T11:57",
+  "updated_at": "2026-10-24T13:18",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -15,9 +15,9 @@
     "question_seed": 42,
     "dataset": "Reserved200 official COPSD training originals and their language versions; English uses the same original questions, not GSM8K test."
   },
-  "completed_paired_languages": 8,
-  "completed_model_pairs": 11,
-  "completed_training_languages": 9,
+  "completed_paired_languages": 9,
+  "completed_model_pairs": 12,
+  "completed_training_languages": 10,
   "models": [
     {
       "language": "bn",
@@ -38,6 +38,16 @@
       "English_OPD_correct_of200": 163,
       "target_Base_truncated": 17,
       "target_OPD_truncated": 16
+    },
+    {
+      "language": "fr",
+      "training_seed": 42,
+      "target_Base_correct_of200": 157,
+      "target_OPD_correct_of200": 142,
+      "English_Base_correct_of200": 166,
+      "English_OPD_correct_of200": 161,
+      "target_Base_truncated": 18,
+      "target_OPD_truncated": 4
     },
     {
       "language": "ja",
@@ -145,13 +155,8 @@
     ]
   },
   "remaining": {
-    "fr": {
-      "stage": "paired_development_evaluation",
-      "queue_phase": "running",
-      "result_accepted": false
-    },
     "es": {
-      "stage": "independent_training",
+      "stage": "paired_development_evaluation",
       "queue_phase": "running",
       "result_accepted": false
     }

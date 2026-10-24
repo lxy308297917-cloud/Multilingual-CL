@@ -1,0 +1,35 @@
+{
+  "prepared_at": "2026-10-24T12:55:02.742109",
+  "model": "Qwen/Qwen3-4B",
+  "source_protocol": "independent_development_only",
+  "real_accepted_model_reports_parsed_consistently": 11,
+  "current_eight_language_snapshot_correctly_refused_as_final_selection": true,
+  "selection_record_created": false,
+  "new_GPU_work": false,
+  "rules": {
+    "complete_primary_seed42_language_cohort": 10,
+    "selected_languages": 3,
+    "reviewed_positive_training_repeats_per_selected_language": "at least2, including primary seed42",
+    "mandatory_review_dimensions": [
+      "math_gain",
+      "absolute_level",
+      "target_language",
+      "English_tradeoff",
+      "termination",
+      "teacher_signal",
+      "cost",
+      "uncertainty"
+    ],
+    "same_original_Base_teacher_revision": true,
+    "stage_updates": 20,
+    "scheduler_horizon": 100,
+    "effective_batch": 32,
+    "training_max_completion_length": 2048,
+    "optimizer_scheduler_reset_each_stage": true,
+    "one_continuous_default_adapter": true,
+    "existing_pool_binding": "three disjoint900-question pools; reverse language/pool pairs together",
+    "formal_cases_per_checkpoint": 7
+  },
+  "selector_sha256": "cc347be84c4d6e3aea7ac4ed91e0d08bcdc404c5dd01e2deccc0c2c0f298cd10",
+  "scope": "Parser and incomplete-cohort gate validation only. No new language choice, formal-test-based ranking, production stage execution or full selection-record validation. No claim of seed-population significance. A supported complete cohort and frozen explicit review remain necessary."
+}
