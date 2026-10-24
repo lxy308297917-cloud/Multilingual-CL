@@ -1,0 +1,144 @@
+{
+  "observed_at": "2026-10-25T00:58:38.162642+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "model_id": "forward_s2",
+  "training_order_so_far": [
+    "sw",
+    "te"
+  ],
+  "stage_index": 2,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "evaluation_language": "sw",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 34,
+  "current_correct": 73,
+  "Base_to_current_delta_pp": 15.6,
+  "Base_to_current_question_CI95_pp": [
+    10.0,
+    21.2
+  ],
+  "SW_learned_stage_to_current": {
+    "previous_correct": 55,
+    "current_correct": 73,
+    "gained": 32,
+    "lost": 14,
+    "change_pp": 7.2,
+    "paired_question_CI95_pp": [
+      2.0,
+      12.4
+    ],
+    "forgetting_from_own_learned_stage_pp": -7.2,
+    "forgetting_from_previous_historical_best_pp": -7.2,
+    "forgetting_CI95_pp": [
+      -12.4,
+      -2.0
+    ]
+  },
+  "language_ID_supplement": {
+    "prior": {
+      "thinking_target_highconf": 199,
+      "thinking_English_top1": 29,
+      "correct_and_target_thinking_highconf": 44,
+      "correct_and_both_parts_target_highconf": 6,
+      "correct_and_English_thinking_top1": 6
+    },
+    "current": {
+      "thinking_target_highconf": 111,
+      "thinking_English_top1": 110,
+      "correct_and_target_thinking_highconf": 40,
+      "correct_and_both_parts_target_highconf": 10,
+      "correct_and_English_thinking_top1": 27
+    }
+  },
+  "language_detector_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "model_full_language_summary": {
+    "thinking": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 250
+      },
+      "top1_label_counts": {
+        "__label__swh_Latn": 134,
+        "__label__eng_Latn": 110,
+        "__label__deu_Latn": 1,
+        "__label__swc_Latn": 1,
+        "__label__tby_Latn": 1,
+        "__label__fra_Latn": 1,
+        "__label__alz_Latn": 1,
+        "__label__dan_Latn": 1
+      },
+      "target_top1_probability_ge_0_8": 111,
+      "correct_items_label_counts": {
+        "__label__swh_Latn": 46,
+        "__label__eng_Latn": 27
+      }
+    },
+    "final": {
+      "total_items": 250,
+      "statuses": {
+        "predicted": 217,
+        "no_final_section": 33
+      },
+      "top1_label_counts": {
+        "__label__swh_Latn": 92,
+        "__label__swc_Latn": 44,
+        "__label__eng_Latn": 52,
+        "__label__cbk_Latn": 1,
+        "__label__ssw_Latn": 14,
+        "__label__hay_Latn": 1,
+        "__label__yor_Latn": 2,
+        "__label__fra_Latn": 1,
+        "__label__sna_Latn": 5,
+        "__label__nya_Latn": 1,
+        "__label__kam_Latn": 3,
+        "__label__kri_Latn": 1
+      },
+      "target_top1_probability_ge_0_8": 43,
+      "correct_items_label_counts": {
+        "__label__swc_Latn": 18,
+        "__label__eng_Latn": 16,
+        "__label__swh_Latn": 33,
+        "__label__ssw_Latn": 1,
+        "__label__hay_Latn": 1,
+        "__label__yor_Latn": 1,
+        "__label__nya_Latn": 1,
+        "__label__sna_Latn": 2
+      }
+    }
+  },
+  "termination": {
+    "Base": {
+      "generated_tokens": 809908,
+      "truncated": 70,
+      "normal_terminations": 180,
+      "answer_extraction_failures": 74
+    },
+    "SW_stage1": {
+      "generated_tokens": 558286,
+      "truncated": 17,
+      "normal_terminations": 233,
+      "answer_extraction_failures": 21
+    },
+    "SW_TE_stage2": {
+      "generated_tokens": 1074637,
+      "truncated": 38,
+      "normal_terminations": 212,
+      "answer_extraction_failures": 35
+    }
+  },
+  "actual_parent_adapter_link_verified": true,
+  "same_questions_prompts_answers_request_seeds_verified": true,
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "TensorBoard_transition_scalar_events_read_back": 18,
+  "negative_forgetting_written_and_read_back": true,
+  "transition_TensorBoard_display_steps": [
+    20,
+    40
+  ],
+  "forgetting_definition": "At stage2 the only completed post-learning SW stage before current is stage1. Base/current excluded; negative forgetting retained.",
+  "interpretation": "One observed SW mathematical negative-forgetting case, with substantial whole-thinking English-label increase and fewer mathematically-correct highconfidence-SW-thinking outputs. Mathematical gain does not establish simultaneous target-language preservation. Whole-part labels do not measure token purity, fluency or proof validity.",
+  "scope": "One completed SW transition only, not the full stage or forgetting matrix. Question intervals describe fixed models, not a trainingseed population or multiplicity-adjusted inference. No equal-total-budget SW-only40 control: this trajectory does not isolate a TE-specific effect or prove general forgetting prevention. English-labelled reasoning is not English GSM8K retention, which remains pending. No causal mediation claim from language/termination associations; all scores preserved."
+}
