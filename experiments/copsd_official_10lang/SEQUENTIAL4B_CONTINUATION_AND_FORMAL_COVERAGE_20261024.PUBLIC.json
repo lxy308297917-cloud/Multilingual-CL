@@ -1,0 +1,67 @@
+{
+  "observed_at": "2026-10-24T18:43:00+08:00",
+  "manual_one_shot_processes": {
+    "forward_continuation": "waiting_stage2",
+    "reverse_continuation": "waiting_stage2",
+    "formal_wave": "waiting_both_stage3_releases"
+  },
+  "account_GPU_limit": 4,
+  "boot_cron_or_service_autostart_added": false,
+  "automatic_failure_retries": false,
+  "training_protocol_changes": false,
+  "primary_single_formal_plans_CPU_validated": {
+    "sw": [
+      "polymath_sw"
+    ],
+    "te": [
+      "mgsm_rev2_te",
+      "polymath_te",
+      "gsm8k_en"
+    ],
+    "th": [
+      "mgsm_rev2_th",
+      "polymath_th",
+      "gsm8k_en"
+    ],
+    "bn": [
+      "mgsm_rev2_bn",
+      "polymath_bn",
+      "gsm8k_en"
+    ],
+    "zh": [
+      "mgsm_rev2_zh",
+      "polymath_zh",
+      "gsm8k_en"
+    ],
+    "ja": [
+      "mgsm_rev2_ja",
+      "polymath_ja",
+      "gsm8k_en"
+    ],
+    "ru": [
+      "mgsm_rev2_ru",
+      "polymath_ru",
+      "gsm8k_en"
+    ],
+    "de": [
+      "mgsm_rev2_de",
+      "polymath_de",
+      "gsm8k_en"
+    ],
+    "fr": [
+      "mgsm_rev2_fr",
+      "polymath_fr",
+      "gsm8k_en"
+    ],
+    "es": [
+      "mgsm_rev2_es",
+      "polymath_es",
+      "gsm8k_en"
+    ]
+  },
+  "primary_model_formal_cases_prepared": 28,
+  "additional_Base_cases_CPU_validated": 14,
+  "reuse": "Original primarySW MGSM andEnglish native16 results retained separately for audited reuse; oldnative32Poly cannot replace the new native16case. Selected-three Base+English are shared with the stage suite.",
+  "current_pipeline_scope": "Stage2 acceptance and exact exposure matching precede stage3 submission. Both stage3 releases precede selected-seven-case evaluation wave. These future stages and evaluations have not completed.",
+  "remaining": "All-stage score/language/cost matrices, matched comparisons, primary formal tests and final report remain required."
+}
