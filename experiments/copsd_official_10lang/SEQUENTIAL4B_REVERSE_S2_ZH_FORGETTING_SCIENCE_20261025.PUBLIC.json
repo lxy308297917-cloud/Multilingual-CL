@@ -1,0 +1,159 @@
+{
+  "observed_at": "2026-10-25T01:18:28.423293+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "model_id": "reverse_s2",
+  "training_order_so_far": [
+    "zh",
+    "te"
+  ],
+  "stage_index": 2,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "evaluation_language": "zh",
+  "benchmark": "MGSM-Rev2 full250",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "items": 250,
+  "Base_correct": 240,
+  "current_correct": 234,
+  "Base_to_current_delta_pp": -2.4,
+  "Base_to_current_question_CI95_pp": [
+    -5.6,
+    0.4
+  ],
+  "ZH_learned_stage_to_current": {
+    "previous_correct": 241,
+    "current_correct": 234,
+    "gained": 4,
+    "lost": 11,
+    "change_pp": -2.8,
+    "paired_question_CI95_pp": [
+      -6.0,
+      0.0
+    ],
+    "forgetting_from_own_learned_stage_pp": 2.8,
+    "forgetting_from_previous_historical_best_pp": 2.8,
+    "forgetting_CI95_pp": [
+      0.0,
+      6.0
+    ]
+  },
+  "language_ID_supplement": {
+    "prior": {
+      "thinking_target_highconf": 249,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 240,
+      "correct_and_both_parts_target_highconf": 234
+    },
+    "current": {
+      "thinking_target_highconf": 248,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 232,
+      "correct_and_both_parts_target_highconf": 228
+    }
+  },
+  "language_detector_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "full_language_summaries": {
+    "ZH_matched900_mgsm_rev2_zh": {
+      "thinking": {
+        "total_items": 250,
+        "statuses": {
+          "predicted": 250
+        },
+        "top1_label_counts": {
+          "__label__cmn_Hani": 250
+        },
+        "target_top1_probability_ge_0_8": 249,
+        "correct_items_label_counts": {
+          "__label__cmn_Hani": 241
+        }
+      },
+      "final": {
+        "total_items": 250,
+        "statuses": {
+          "predicted": 249,
+          "too_short": 1
+        },
+        "top1_label_counts": {
+          "__label__cmn_Hani": 247,
+          "__label__nan_Hani": 1,
+          "__label__jpn_Jpan": 1
+        },
+        "target_top1_probability_ge_0_8": 244,
+        "correct_items_label_counts": {
+          "__label__cmn_Hani": 238,
+          "too_short": 1,
+          "__label__nan_Hani": 1,
+          "__label__jpn_Jpan": 1
+        }
+      }
+    },
+    "reverse_s2_mgsm_rev2_zh": {
+      "thinking": {
+        "total_items": 250,
+        "statuses": {
+          "predicted": 250
+        },
+        "top1_label_counts": {
+          "__label__cmn_Hani": 250
+        },
+        "target_top1_probability_ge_0_8": 248,
+        "correct_items_label_counts": {
+          "__label__cmn_Hani": 234
+        }
+      },
+      "final": {
+        "total_items": 250,
+        "statuses": {
+          "predicted": 250
+        },
+        "top1_label_counts": {
+          "__label__cmn_Hani": 249,
+          "__label__awa_Deva": 1
+        },
+        "target_top1_probability_ge_0_8": 245,
+        "correct_items_label_counts": {
+          "__label__cmn_Hani": 233,
+          "__label__awa_Deva": 1
+        }
+      }
+    }
+  },
+  "termination": {
+    "Base": {
+      "generated_tokens": 220140,
+      "truncated": 1,
+      "normal_terminations": 249,
+      "answer_extraction_failures": 1
+    },
+    "ZH_stage1": {
+      "generated_tokens": 215087,
+      "truncated": 0,
+      "normal_terminations": 250,
+      "answer_extraction_failures": 0
+    },
+    "ZH_TE_stage2": {
+      "generated_tokens": 205200,
+      "truncated": 0,
+      "normal_terminations": 250,
+      "answer_extraction_failures": 0
+    }
+  },
+  "lost_question_diagnostics": {
+    "items": 11,
+    "normal_terminations": 11,
+    "answers_extracted": 11,
+    "Chinese_highconfidence_thinking": 11
+  },
+  "actual_parent_adapter_link_verified": true,
+  "same_questions_prompts_answers_request_seeds_verified": true,
+  "TensorBoard_partial_pair_scalars_read_back": 13,
+  "TensorBoard_transition_scalar_events_read_back": 16,
+  "signed_forgetting_written_and_read_back": true,
+  "transition_TensorBoard_display_steps": [
+    20,
+    40
+  ],
+  "forgetting_definition": "At stage2 the only prior completed post-learning ZH stage is stage1. Base/current excluded; signed forgetting retained.",
+  "interpretation": "Positive ZH mathematical forgetting point estimate2.8pp; fixed-model paired-question CI touches zero, not a stable-decline claim. Both phases have zero truncation/extraction failure and no English whole-thinking top1 labels. All11newlylost items terminate normally with extracted answers and highconfidence Chinese thinking.",
+  "scope": "One completed learned-ZH transition, not a complete stage or forgetting matrix. Question intervals do not establish trainingseed population or multiplicity-adjusted significance. Whole-part language labels do not measure fluency, token purity or proof validity. SW and ZH have different baselines; these two old-language cases cannot rank training orders or prove causes. Full TE/English/PolyMath and remaining phases are still required."
+}

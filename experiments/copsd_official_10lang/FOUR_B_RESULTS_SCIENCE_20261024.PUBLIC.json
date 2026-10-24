@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T00:58:38.162642+08:00",
+  "updated_at": "2026-10-25T01:18:28.423293+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -581,6 +581,39 @@
           40
         ],
         "source": "SEQUENTIAL4B_FORWARD_S2_SW_FORGETTING_LANGUAGE_SCIENCE_20261025.PUBLIC.json",
+        "complete_forgetting_matrix": false
+      },
+      {
+        "model_id": "reverse_s2",
+        "order_so_far": [
+          "zh",
+          "te"
+        ],
+        "stage_index": 2,
+        "evaluation_language": "zh",
+        "Base_correct": 240,
+        "previous_learned_stage_correct": 241,
+        "model_correct": 234,
+        "items": 250,
+        "cumulative_display_updates": 40,
+        "ZH_forgetting_pp": 2.8,
+        "ZH_forgetting_question_CI95_pp": [
+          0.0,
+          6.0
+        ],
+        "Chinese_thinking_highconfidence_counts": [
+          249,
+          248
+        ],
+        "English_thinking_top1_counts": [
+          0,
+          0
+        ],
+        "correct_and_Chinese_thinking_counts": [
+          240,
+          232
+        ],
+        "source": "SEQUENTIAL4B_REVERSE_S2_ZH_FORGETTING_SCIENCE_20261025.PUBLIC.json",
         "complete_forgetting_matrix": false
       }
     ]
