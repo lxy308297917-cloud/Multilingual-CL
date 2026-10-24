@@ -104,6 +104,13 @@
         "truncated": 18,
         "normal_terminations": 232,
         "answer_extraction_failures": 18
+      },
+      "newly_lost_answer_partition": {
+        "lost": 45,
+        "lost_current_truncated": 23,
+        "lost_current_no_box": 22,
+        "lost_current_both_truncated_and_no_box": 22,
+        "lost_normal_with_box": 22
       }
     },
     {
@@ -205,6 +212,13 @@
         "truncated": 48,
         "normal_terminations": 202,
         "answer_extraction_failures": 50
+      },
+      "newly_lost_answer_partition": {
+        "lost": 14,
+        "lost_current_truncated": 1,
+        "lost_current_no_box": 0,
+        "lost_current_both_truncated_and_no_box": 0,
+        "lost_normal_with_box": 13
       }
     }
   ],
@@ -217,5 +231,7 @@
     "Sequential and matched single have equal current-stage exposure, but sequential total exposure is greater.",
     "Official original score and supplementary percentage-unit results remain distinct; language joint counts use official grades.",
     "Full English, PolyMath and old-language forgetting results remain incomplete."
-  ]
+  ],
+  "loss_partition_private_receipt_sha256": "278969912abf1d612aa5894d8d29cf323bc007e363a1287dbba8c2133ce2841c",
+  "loss_partition_interpretation": "Of45 newly lost TE answers vs the preceding ZH stage,23 end at the generation cap (22 also lack extracted boxes), while22 terminate normally with an extracted but incorrect answer. Whole-test truncations rise18->56 and extraction failures18->52. Long-output/extraction failures explain the observed status of part of the lost set, but do not prove the training cause or the score with a larger cap. SW loses14 prior-correct answers:1 truncated with a box and13 normal with a box. Do not sum overlapping truncation/no-box counts."
 }
