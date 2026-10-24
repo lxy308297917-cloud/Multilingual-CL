@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-24",
+  "observed_at": "2026-10-24T09:43",
+  "model": "Qwen/Qwen3-4B",
+  "DE_training": {
+    "updates": 20,
+    "online_rollouts": 640,
+    "generated_tokens": 1198225,
+    "valid_response_loss_positions": 1198225,
+    "teacher_forward_calls": 640,
+    "student_weight_syncs": 21,
+    "original_Base_bitwise_unchanged": true,
+    "checkpoint_optimizer_scheduler20_and_RNG_verified": true,
+    "training_parent_minutes": 87.65,
+    "training_parent_GPU_hours": 2.921666666666667,
+    "paired_development_evaluation": "launched; no accepted OPD effect result yet"
+  },
+  "FR": "two assigned GPUs; parent job launched, no completed training result",
+  "ES": "Base163/200 accepted; fresh20 training queued with one-shot paired evaluation successor",
+  "TE_seed43": "paired development evaluation still running",
+  "account_GPU_limit": 4,
+  "selected_three_languages": null,
+  "research_sequential_training_started": false,
+  "scope": "Scientific progress only; pending is not completed. Base cached outputs reused, no score or cost pooling across model sizes or evaluation protocols."
+}

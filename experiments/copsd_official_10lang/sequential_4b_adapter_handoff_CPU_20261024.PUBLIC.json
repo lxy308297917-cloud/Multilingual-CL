@@ -1,0 +1,18 @@
+{
+  "completed_at": "2026-10-24T09:23:52.186309",
+  "engineering_only": true,
+  "model": "Qwen/Qwen3-4B",
+  "device": "CPU",
+  "actual_model_layers": 36,
+  "actual_hidden_size": 2560,
+  "actual_adapter_tensors_loaded": 504,
+  "adapter_tensors_different_before_load": 504,
+  "all_loaded_adapter_values_exact": true,
+  "one_continuous_default_adapter": true,
+  "trainable_parameter_objects_preserved": true,
+  "original_Base_bitwise_unchanged": true,
+  "elapsed_seconds": 50.60492089577019,
+  "new_GPU_work": false,
+  "research_sequential_training_started": false,
+  "scope": "Actual 4B architecture and an existing accepted single20 checkpoint exercise the existing adapter loader only. The checkpoint language is not selected for research. Still requires a frozen three-language selection, 4B stage launcher integration, actual fresh Trainer optimizer/scheduler checks, disabled-adapter teacher and current-student rollout synchronization, stage evaluations and matched singles before research sequential training."
+}
