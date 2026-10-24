@@ -1,0 +1,101 @@
+{
+  "observed_at": "2026-10-24T23:09:02.912923+08:00",
+  "model": "Qwen/Qwen3-4B Base",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "cases": {
+    "sw": {
+      "items": 500,
+      "single_correct": 22,
+      "single_accuracy": 0.044,
+      "generated_tokens": 2992872,
+      "truncated": 332,
+      "normal_terminations": 168,
+      "answer_extraction_failures": 324,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 15,
+          "single_accuracy": 0.12
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 2,
+          "single_accuracy": 0.016
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 3,
+          "single_accuracy": 0.024
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 2,
+          "single_accuracy": 0.016
+        }
+      }
+    },
+    "te": {
+      "items": 500,
+      "single_correct": 72,
+      "single_accuracy": 0.144,
+      "generated_tokens": 3470190,
+      "truncated": 328,
+      "normal_terminations": 172,
+      "answer_extraction_failures": 318,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 64,
+          "single_accuracy": 0.512
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 4,
+          "single_accuracy": 0.032
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 4,
+          "single_accuracy": 0.032
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 0,
+          "single_accuracy": 0.0
+        }
+      }
+    },
+    "zh": {
+      "items": 500,
+      "single_correct": 207,
+      "single_accuracy": 0.414,
+      "generated_tokens": 2883151,
+      "truncated": 263,
+      "normal_terminations": 237,
+      "answer_extraction_failures": 242,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 111,
+          "single_accuracy": 0.888
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 63,
+          "single_accuracy": 0.504
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 27,
+          "single_accuracy": 0.216
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 6,
+          "single_accuracy": 0.048
+        }
+      }
+    }
+  },
+  "scope": "All three selected-language Base PolyMath full500 references, four125-item difficulty bands each. This is not a trained-model comparison, evidence of OPD improvement or complete ten-language formal reporting. MGSM and English references are recorded separately. No new inference or score changes for aggregation."
+}
