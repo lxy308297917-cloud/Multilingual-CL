@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-24",
+  "model": "Qwen/Qwen3-4B",
+  "training_language": "te",
+  "training_seed": 43,
+  "training_updates": 20,
+  "development_items": 200,
+  "n": 1,
+  "max_new_tokens": 8192,
+  "max_num_seqs": 16,
+  "evaluation_question_seed": 42,
+  "target": {
+    "Base_correct": 42,
+    "checkpoint_correct": 56,
+    "gained": 33,
+    "lost": 19,
+    "delta_correct": 14,
+    "delta_percentage_points": 7.0,
+    "paired_question_CI95_percentage_points": [
+      0.0,
+      14.000000000000002
+    ],
+    "generated_tokens": 1441209,
+    "truncated": 123,
+    "answer_extraction_failures": 112
+  },
+  "seed42_target_reference_correct_of200": 62,
+  "English_second_seed_evaluation": "running; not yet accepted",
+  "language_analysis": "pending full paired report",
+  "candidate_selected": false,
+  "scope": "Target-only partial completion, not full paired acceptance or formal test. Both target seeds exceed the shared Base; no training-seed-population inference or promotion. Seed42 restored after five updates with a non-bitwise server RNG continuation; seed43 fresh compact run from original Base. No score changes or extra generation."
+}
