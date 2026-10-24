@@ -1,0 +1,68 @@
+{
+  "observed_at": "2026-10-24T20:38:02.619138+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "reverse_order": [
+    "zh",
+    "te",
+    "sw"
+  ],
+  "completed_training_stages": [
+    {
+      "language": "zh",
+      "global_step": 20,
+      "online_rollouts": 640,
+      "generated_tokens": 1193472,
+      "valid_response_loss_positions": 1193472,
+      "teacher_forward_calls": 640,
+      "current_student_weight_syncs": 21,
+      "original_Base_bitwise_unchanged": true,
+      "actual_stage_optimizer_scheduler_reset": true,
+      "checkpoint20_optimizer_scheduler_RNG_verified": true,
+      "TensorBoard_loss_learning_rate_read_back": true,
+      "parent_minutes": 90.16666666666667,
+      "parent_GPU_hours": 3.0055555555555555
+    },
+    {
+      "language": "te",
+      "global_step": 20,
+      "online_rollouts": 640,
+      "generated_tokens": 1310545,
+      "valid_response_loss_positions": 1310545,
+      "teacher_forward_calls": 640,
+      "current_student_weight_syncs": 21,
+      "original_Base_bitwise_unchanged": true,
+      "actual_stage_optimizer_scheduler_reset": true,
+      "checkpoint20_optimizer_scheduler_RNG_verified": true,
+      "TensorBoard_loss_learning_rate_read_back": true,
+      "parent_minutes": 95.38333333333334,
+      "parent_GPU_hours": 3.1794444444444445
+    },
+    {
+      "language": "sw",
+      "global_step": 20,
+      "online_rollouts": 640,
+      "generated_tokens": 1200948,
+      "valid_response_loss_positions": 1200948,
+      "teacher_forward_calls": 640,
+      "current_student_weight_syncs": 21,
+      "original_Base_bitwise_unchanged": true,
+      "actual_stage_optimizer_scheduler_reset": true,
+      "checkpoint20_optimizer_scheduler_RNG_verified": true,
+      "TensorBoard_loss_learning_rate_read_back": true,
+      "parent_minutes": 90.0,
+      "parent_GPU_hours": 3.0
+    }
+  ],
+  "stage1_literal_reuse": "Accepted ZH matched single20, one computation counted once.",
+  "total_updates": 60,
+  "actual_unique_original_questions": 1920,
+  "actual_order_each_stage_matches_current_pool_single": true,
+  "training_generated_tokens": 3704965,
+  "valid_response_loss_positions": 3704965,
+  "teacher_forward_calls": 1920,
+  "sum_training_parent_GPU_hours": 9.185,
+  "cost_scope": "Three unique two-role training parents only; excludes formal evaluation, queue wait, extra matched TE/SW reference work, forward order, earlier primary development and historical failures. Stage1 reuse is not a second run.",
+  "fixed_evaluation": "Base SW PolyMath andTE MGSM-Rev2 actual generation observed on the two released GPU slots. No completed score for these new cases yet.",
+  "forward_order": "Final ZH stage still running; teacher,loss,LoRA,budget and evaluation protocol unchanged.",
+  "scope": "Reverse training-chain acceptance and live fixed-evaluation evidence only. Final-stage checkpoint step20 is local to that stage; cumulative training60updates. No math-transfer,language-preservation or forgetting claim until fixed tests and complete matrices are accepted."
+}
