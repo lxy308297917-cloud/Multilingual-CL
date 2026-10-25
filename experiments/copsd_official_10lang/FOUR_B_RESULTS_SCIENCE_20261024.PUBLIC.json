@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T01:33:41.726606+08:00",
+  "updated_at": "2026-10-26T03:50:23.613571+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1436,5 +1436,34 @@
     "current4B_TE_unique_root_cause_proven": false,
     "new_GPU_runs": 0,
     "official_scores_modified": false
+  },
+  "reverse_s3_seven_case_inventory_20261026": {
+    "report": "SEQUENTIAL4B_REVERSE_S3_SEVEN_CASES_20261026.PUBLIC.json",
+    "MGSM_correct_of250": {
+      "sw": 66,
+      "te": 111,
+      "zh": 239
+    },
+    "English_correct_of1319": 1250,
+    "PolyMath_correct_of500": {
+      "sw": 76,
+      "te": 54,
+      "zh": 206
+    },
+    "old_language_PolyMath_forgetting_pp": {
+      "te": 2.4,
+      "zh": 3.8
+    },
+    "old_language_PolyMath_forgetting_question_CI95_pp": {
+      "te": [
+        0,
+        4.8
+      ],
+      "zh": [
+        0.8,
+        6.8
+      ]
+    },
+    "not_full_study_completion": true
   }
 }

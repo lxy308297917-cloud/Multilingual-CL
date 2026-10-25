@@ -1,0 +1,233 @@
+{
+  "model_id": "reverse_s3",
+  "case": "polymath_te",
+  "items": 500,
+  "learned_stage": {
+    "previous_correct": 66,
+    "current_correct": 54,
+    "gained": 14,
+    "lost": 26,
+    "change_pp": -2.4,
+    "change_question_CI95_pp": [
+      -4.8,
+      0.0
+    ],
+    "signed_decline_pp": 2.4,
+    "signed_decline_question_CI95_pp": [
+      -0.0,
+      4.8
+    ],
+    "lost_current_truncated": 19,
+    "lost_current_no_extracted_box": 18,
+    "lost_current_normal_with_box": 7
+  },
+  "previous_stage": {
+    "previous_correct": 66,
+    "current_correct": 54,
+    "gained": 14,
+    "lost": 26,
+    "change_pp": -2.4,
+    "change_question_CI95_pp": [
+      -4.8,
+      0.0
+    ],
+    "signed_decline_pp": 2.4,
+    "signed_decline_question_CI95_pp": [
+      -0.0,
+      4.8
+    ],
+    "lost_current_truncated": 19,
+    "lost_current_no_extracted_box": 18,
+    "lost_current_normal_with_box": 7
+  },
+  "historical_best_model_id": "reverse_s2",
+  "historical_best_forgetting_pp": 2.4,
+  "historical_best_forgetting_question_CI95_pp": [
+    -0.0,
+    4.8
+  ],
+  "language": {
+    "learned": {
+      "thinking_target_highconf": 496,
+      "thinking_English_top1": 3,
+      "correct_and_target_thinking_highconf": 66,
+      "correct_and_both_parts_target_highconf": 62
+    },
+    "previous": {
+      "thinking_target_highconf": 496,
+      "thinking_English_top1": 3,
+      "correct_and_target_thinking_highconf": 66,
+      "correct_and_both_parts_target_highconf": 62
+    },
+    "current": {
+      "thinking_target_highconf": 497,
+      "thinking_English_top1": 3,
+      "correct_and_target_thinking_highconf": 54,
+      "correct_and_both_parts_target_highconf": 51
+    }
+  },
+  "language_detector_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "metrics": {
+    "learned": {
+      "items": 500,
+      "single_correct": 66,
+      "generated_tokens": 3669312,
+      "truncated": 378,
+      "normal_terminations": 122,
+      "answer_extraction_failures": 348,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "polymath",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 500,
+      "single_accuracy": 0.132,
+      "generation_seconds": 16456.05046402663,
+      "model_load_seconds": 13.776273388415575,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 59,
+          "single_accuracy": 0.472
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 6,
+          "single_accuracy": 0.048
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 1,
+          "single_accuracy": 0.008
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 0,
+          "single_accuracy": 0.0
+        }
+      }
+    },
+    "previous": {
+      "items": 500,
+      "single_correct": 66,
+      "generated_tokens": 3669312,
+      "truncated": 378,
+      "normal_terminations": 122,
+      "answer_extraction_failures": 348,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "polymath",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 500,
+      "single_accuracy": 0.132,
+      "generation_seconds": 16456.05046402663,
+      "model_load_seconds": 13.776273388415575,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 59,
+          "single_accuracy": 0.472
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 6,
+          "single_accuracy": 0.048
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 1,
+          "single_accuracy": 0.008
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 0,
+          "single_accuracy": 0.0
+        }
+      }
+    },
+    "current": {
+      "items": 500,
+      "single_correct": 54,
+      "generated_tokens": 3863105,
+      "truncated": 418,
+      "normal_terminations": 82,
+      "answer_extraction_failures": 371,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "polymath",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 500,
+      "single_accuracy": 0.108,
+      "generation_seconds": 18504.217414474115,
+      "model_load_seconds": 14.060114355757833,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 46,
+          "single_accuracy": 0.368
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 5,
+          "single_accuracy": 0.04
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 3,
+          "single_accuracy": 0.024
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 0,
+          "single_accuracy": 0.0
+        }
+      }
+    }
+  },
+  "Base_comparison": {
+    "Base_correct": 72,
+    "model_correct": 54,
+    "gained": 12,
+    "lost": 30,
+    "delta_percentage_points": -3.5999999999999996,
+    "paired_question_bootstrap95_CI_pp": [
+      -6.2,
+      -1.0
+    ]
+  },
+  "actual_parent_adapter_verified": true,
+  "common_question_answer_prompt_seed_verified": true,
+  "collector_source_sha256": "309d2c5d5054873469785461d8b2394604b5fa81b73863730a89a16fa39b9136",
+  "proves_complete_forgetting_matrix": false,
+  "scope": "Original-score500-question PolyMath partial old-language history, four125-question difficulty bands retained. Best earlier stage selected by fixed observed score; bootstrap is conditional on those fixed models, not retraining or reselecting the best stage. Before-learning stages and Base excluded from forgetting history. Negative forgetting retained. Truncation/no-box counts overlap. Whole-part language labels do not establish fluency or proof quality.",
+  "observed_at": "2026-10-26T03:50:23.609981+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "order": [
+    "zh",
+    "te",
+    "sw"
+  ],
+  "stage_index": 3,
+  "current_training_language": "sw",
+  "current_updates": 20,
+  "cumulative_updates": 60,
+  "source_private_audit_sha256": "693c1e80e41d0d1a4e2b4d097c3c0bd02f5755197376f442434cafd1a9354333",
+  "source_sha256": {
+    "selected4b_reverse_s3_PolyMath_TE_pair_20261026.PRIVATE.json": "1745cf71d52ce031a2a9803d3db351c8fca966c6711e583edaec9651c1dfa452",
+    "selected4b_reverse_s2_PolyMath_TE_pair_20261026.PRIVATE.json": "ebd0fe42054ed4a4058c306b059a195f227f8bebf0079994ff88a99d891a04c0",
+    "selected4b_reverse_s2_PolyMath_TE_languages_20261026.PRIVATE.json": "a78b6c2c9f3c0cd7156b6cd8165012d9de4cde36c268ba9d684a25a5ddf47c21",
+    "selected4b_reverse_s3_PolyMath_TE_languages_20261026.PRIVATE.json": "c8cb561b96bff4e6fc208d79cc6aa3ccbc8d04c492b91fc1d677714bed564dfa",
+    "sequential4b_reverse_s3_formal_frozen_20261024_v1.LOCAL.json": "f60453cb2f8cad16fc304ec8cd5c343b90bfd2281bec2663931ee0fcce1e9ccb",
+    "selected4b_reverse_s3_RELEASE_20261024.PRIVATE.json": "9ce31f0472109d467b1171e9005db1b4bec444dd62cf593000c5993c2234d552",
+    "sequential4b_reverse_s3_sw_frozen_20261024_v1.LOCAL.json": "74b320551a927eeca57b1621ab7e30713c447128c6bd19a8390da7f4af1bf078",
+    "sequential4b_reverse_s2_formal_frozen_20261024_v1.LOCAL.json": "375c877887d5d16a7684eb063e08a5ee967cf3e9cf82e4d0d08c5607a378d759",
+    "selected4b_reverse_s2_RELEASE_20261024.PRIVATE.json": "7e5dc6d28d72c4314f06d05ebc81bb26776bc3c46424be4d93b3477537896629"
+  },
+  "TensorBoard_scalars_read_back": 13,
+  "original_math_scores_unchanged": true,
+  "method_effectiveness_proven": false,
+  "interpretation": "TE学完66→54/500，遗忘2.4pp区间[0,4.8]触及零；相对Base72→54下降3.6pp区间[-6.2,-1]。TE思考高置信保持不意味着数学保持。",
+  "limits": "One training seed; paired-question bootstrap conditional on fixed models and observed historical best, not seed-population inference or multiplicity-corrected.20updates under100scheduler and n1/8192/native16 are project adaptations, not strict official100step/pass12. Whole-section language classification is not fluency or proof quality; full project and primary2700 formal results remain incomplete."
+}
