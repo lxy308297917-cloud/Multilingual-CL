@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T22:04:27.345337+08:00",
+  "updated_at": "2026-10-25T22:39:09.332478+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1326,6 +1326,19 @@
         "not_yet_a_training_stage_in_this_order": true,
         "post_learning_forgetting": false,
         "public_report": "SEQUENTIAL4B_FORWARD_S2_ZH_POLYMATH_PRELEARNING_SCIENCE_20261025.PUBLIC.json"
+      },
+      "reverse_s2:sw": {
+        "previous_actual_stage_correct": 28,
+        "current_correct": 32,
+        "items": 500,
+        "change_pp": 0.8,
+        "paired_question_CI95_pp": [
+          -1.6,
+          3.2
+        ],
+        "not_yet_a_training_stage_in_this_order": true,
+        "post_learning_forgetting": false,
+        "public_report": "SEQUENTIAL4B_REVERSE_S2_SW_POLYMATH_PRELEARNING_SCIENCE_20261025.PUBLIC.json"
       }
     },
     "accepted_current_language_acquisition_diagnostics": {

@@ -1,0 +1,124 @@
+{
+  "model_id": "reverse_s2",
+  "case": "polymath_sw",
+  "items": 500,
+  "current_stage_language": "te",
+  "evaluation_language": "sw",
+  "post_learning_forgetting": false,
+  "previous_actual_stage": {
+    "previous_correct": 28,
+    "current_correct": 32,
+    "gained": 21,
+    "lost": 17,
+    "change_pp": 0.8,
+    "change_question_CI95_pp": [
+      -1.6,
+      3.2
+    ],
+    "lost_current_truncated": 7,
+    "lost_current_no_extracted_box": 6,
+    "lost_current_normal_with_box": 10
+  },
+  "Base_comparison": {
+    "Base_correct": 22,
+    "model_correct": 32,
+    "gained": 23,
+    "lost": 13,
+    "delta_percentage_points": 2.0,
+    "paired_question_bootstrap95_CI_pp": [
+      -0.2,
+      4.3999999999999995
+    ]
+  },
+  "language": {
+    "previous": {
+      "thinking_target_highconf": 310,
+      "thinking_English_top1": 27,
+      "correct_and_target_thinking_highconf": 22,
+      "correct_and_both_parts_target_highconf": 7
+    },
+    "current": {
+      "thinking_target_highconf": 266,
+      "thinking_English_top1": 50,
+      "correct_and_target_thinking_highconf": 21,
+      "correct_and_both_parts_target_highconf": 8
+    }
+  },
+  "actual_parent_adapter_verified": true,
+  "original_Base_bitwise_unchanged_verified": true,
+  "complete_seven_case_stage": false,
+  "observed_at": "2026-10-25T22:39:09.332478+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "order": [
+    "zh",
+    "te",
+    "sw"
+  ],
+  "stage_index": 2,
+  "not_yet_a_training_stage_in_this_order": true,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "current_metrics": {
+    "items": 500,
+    "single_correct": 32,
+    "generated_tokens": 2817073,
+    "truncated": 288,
+    "normal_terminations": 212,
+    "answer_extraction_failures": 268,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.064,
+    "generation_seconds": 12939.344890348613,
+    "model_load_seconds": 13.680912181735039,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 18,
+        "single_accuracy": 0.144
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 6,
+        "single_accuracy": 0.048
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 5,
+        "single_accuracy": 0.04
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 3,
+        "single_accuracy": 0.024
+      }
+    }
+  },
+  "current_raw_files_sha256": {
+    "CONFIG.json": "a612bb2564f3752ceeb1b339216d13b64f3aae936230ecc4d541e64d13a5253b",
+    "DONE.json": "045166e353f59a8be60d33a492518e682b37fce04aef5be48d80aa00545baa87",
+    "ITEMS.jsonl": "974095c5c13e1322f14de9262feef09bf9f53cfa5848d879433789569e7682ef"
+  },
+  "current_evaluation_parent_cost": {
+    "new_GPU_hours": 3.6155555555555554,
+    "reused": false,
+    "new_generated_tokens": 2817073
+  },
+  "source_sha256": {
+    "private_transfer_receipt": "e313c4a3ee4c1c61926279deb28eafc88b3cfb5d076a0812b296928eafc1dfc3",
+    "current_pair_receipt": "d9bf1e4967495e700a18882fc7ff640c8b22207e0f10909dab18f3e77f4b0597",
+    "partial_TensorBoard_receipt": "449d3ba28d3f55ef6030379610894a2cbd6f06a06864c7a6ba122813db1084b3",
+    "collector": "ce9187d37878800a145bd3da9829691c163cb195c1de1dfb6c44ccfe0636bb04"
+  },
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true,
+    "local_checkpoint_step": 20
+  },
+  "complete_forgetting_matrix": false,
+  "scope": "SW capability change after ZH->TE before SW becomes a training stage in this order; not post-learning old-language forgetting. All500questions/four125-question tiers, actual parent adapter and original frozenBase verified, same prompts/request seeds/frozen scoring. Base22->32 CI[-.2,4.4] and actualprevious28->32 CI[-1.6,3.2]bothincludezero; no established transfer, equivalence or seed robustness. Whole-part language labels are not fluency/per-token purity/causality. Original math scores retained. Project20perstage under100scheduler/n1/8192/native16 adaptation, not strict official100step/pass12 reproduction. Parent allocation overlaps queue/full-suite totals."
+}
