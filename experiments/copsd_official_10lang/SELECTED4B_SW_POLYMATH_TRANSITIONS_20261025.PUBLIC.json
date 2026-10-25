@@ -1,0 +1,328 @@
+{
+  "model_id": "SW_matched900",
+  "case": "polymath_sw",
+  "items": 500,
+  "target_label": "__label__swh_Latn",
+  "difficulty_tiers": {
+    "low": {
+      "items": 125,
+      "Base": {
+        "correct": 15,
+        "generated_tokens": 377977,
+        "truncated": 33,
+        "normally_terminated": 92,
+        "extraction_failures": 34
+      },
+      "model": {
+        "correct": 21,
+        "generated_tokens": 291320,
+        "truncated": 5,
+        "normally_terminated": 120,
+        "extraction_failures": 12
+      },
+      "gained": 14,
+      "lost": 8,
+      "delta_pp": 4.8,
+      "paired_question_CI95_pp": [
+        -2.4,
+        12.0
+      ]
+    },
+    "medium": {
+      "items": 125,
+      "Base": {
+        "correct": 2,
+        "generated_tokens": 941090,
+        "truncated": 110,
+        "normally_terminated": 15,
+        "extraction_failures": 106
+      },
+      "model": {
+        "correct": 24,
+        "generated_tokens": 594266,
+        "truncated": 39,
+        "normally_terminated": 86,
+        "extraction_failures": 36
+      },
+      "gained": 23,
+      "lost": 1,
+      "delta_pp": 17.599999999999998,
+      "paired_question_CI95_pp": [
+        11.200000000000001,
+        24.8
+      ]
+    },
+    "high": {
+      "items": 125,
+      "Base": {
+        "correct": 3,
+        "generated_tokens": 913514,
+        "truncated": 106,
+        "normally_terminated": 19,
+        "extraction_failures": 100
+      },
+      "model": {
+        "correct": 10,
+        "generated_tokens": 653691,
+        "truncated": 50,
+        "normally_terminated": 75,
+        "extraction_failures": 41
+      },
+      "gained": 9,
+      "lost": 2,
+      "delta_pp": 5.6000000000000005,
+      "paired_question_CI95_pp": [
+        0.8,
+        11.200000000000001
+      ]
+    },
+    "top": {
+      "items": 125,
+      "Base": {
+        "correct": 2,
+        "generated_tokens": 760291,
+        "truncated": 83,
+        "normally_terminated": 42,
+        "extraction_failures": 84
+      },
+      "model": {
+        "correct": 3,
+        "generated_tokens": 600057,
+        "truncated": 43,
+        "normally_terminated": 82,
+        "extraction_failures": 46
+      },
+      "gained": 2,
+      "lost": 1,
+      "delta_pp": 0.8,
+      "paired_question_CI95_pp": [
+        -1.6,
+        3.2
+      ]
+    }
+  },
+  "gained_description": {
+    "items": 48,
+    "Base_truncated": 33,
+    "Base_extraction_failed": 33,
+    "model_normally_terminated": 44,
+    "model_truncated": 4,
+    "target_highconf": 24,
+    "Base_other_or_lower_confidence": 20,
+    "Base_target_highconf": 28,
+    "other_or_lower_confidence": 7,
+    "English_top1": 17
+  },
+  "lost_description": {
+    "items": 12,
+    "Base_truncated": 0,
+    "Base_extraction_failed": 0,
+    "model_normally_terminated": 9,
+    "model_truncated": 3,
+    "target_highconf": 7,
+    "Base_target_highconf": 9,
+    "Base_other_or_lower_confidence": 2,
+    "Base_English_top1": 1,
+    "English_top1": 4,
+    "other_or_lower_confidence": 1
+  },
+  "language_transition_counts": [
+    {
+      "Base_thinking": "English_top1",
+      "model_thinking": "English_top1",
+      "math_change": "unchanged",
+      "items": 5
+    },
+    {
+      "Base_thinking": "English_top1",
+      "model_thinking": "other_or_lower_confidence",
+      "math_change": "unchanged",
+      "items": 3
+    },
+    {
+      "Base_thinking": "English_top1",
+      "model_thinking": "target_highconf",
+      "math_change": "lost",
+      "items": 1
+    },
+    {
+      "Base_thinking": "English_top1",
+      "model_thinking": "target_highconf",
+      "math_change": "unchanged",
+      "items": 10
+    },
+    {
+      "Base_thinking": "other_or_lower_confidence",
+      "model_thinking": "English_top1",
+      "math_change": "gained",
+      "items": 5
+    },
+    {
+      "Base_thinking": "other_or_lower_confidence",
+      "model_thinking": "English_top1",
+      "math_change": "lost",
+      "items": 1
+    },
+    {
+      "Base_thinking": "other_or_lower_confidence",
+      "model_thinking": "English_top1",
+      "math_change": "unchanged",
+      "items": 55
+    },
+    {
+      "Base_thinking": "other_or_lower_confidence",
+      "model_thinking": "other_or_lower_confidence",
+      "math_change": "gained",
+      "items": 4
+    },
+    {
+      "Base_thinking": "other_or_lower_confidence",
+      "model_thinking": "other_or_lower_confidence",
+      "math_change": "unchanged",
+      "items": 17
+    },
+    {
+      "Base_thinking": "other_or_lower_confidence",
+      "model_thinking": "target_highconf",
+      "math_change": "gained",
+      "items": 11
+    },
+    {
+      "Base_thinking": "other_or_lower_confidence",
+      "model_thinking": "target_highconf",
+      "math_change": "lost",
+      "items": 1
+    },
+    {
+      "Base_thinking": "other_or_lower_confidence",
+      "model_thinking": "target_highconf",
+      "math_change": "unchanged",
+      "items": 79
+    },
+    {
+      "Base_thinking": "target_highconf",
+      "model_thinking": "English_top1",
+      "math_change": "gained",
+      "items": 12
+    },
+    {
+      "Base_thinking": "target_highconf",
+      "model_thinking": "English_top1",
+      "math_change": "lost",
+      "items": 3
+    },
+    {
+      "Base_thinking": "target_highconf",
+      "model_thinking": "English_top1",
+      "math_change": "unchanged",
+      "items": 71
+    },
+    {
+      "Base_thinking": "target_highconf",
+      "model_thinking": "other_or_lower_confidence",
+      "math_change": "gained",
+      "items": 3
+    },
+    {
+      "Base_thinking": "target_highconf",
+      "model_thinking": "other_or_lower_confidence",
+      "math_change": "lost",
+      "items": 1
+    },
+    {
+      "Base_thinking": "target_highconf",
+      "model_thinking": "other_or_lower_confidence",
+      "math_change": "unchanged",
+      "items": 33
+    },
+    {
+      "Base_thinking": "target_highconf",
+      "model_thinking": "target_highconf",
+      "math_change": "gained",
+      "items": 13
+    },
+    {
+      "Base_thinking": "target_highconf",
+      "model_thinking": "target_highconf",
+      "math_change": "lost",
+      "items": 5
+    },
+    {
+      "Base_thinking": "target_highconf",
+      "model_thinking": "target_highconf",
+      "math_change": "unchanged",
+      "items": 167
+    }
+  ],
+  "termination_transition_counts": [
+    {
+      "Base_finish": "length",
+      "model_finish": "length",
+      "math_change": "gained",
+      "items": 3
+    },
+    {
+      "Base_finish": "length",
+      "model_finish": "length",
+      "math_change": "unchanged",
+      "items": 107
+    },
+    {
+      "Base_finish": "length",
+      "model_finish": "stop",
+      "math_change": "gained",
+      "items": 30
+    },
+    {
+      "Base_finish": "length",
+      "model_finish": "stop",
+      "math_change": "unchanged",
+      "items": 192
+    },
+    {
+      "Base_finish": "stop",
+      "model_finish": "length",
+      "math_change": "gained",
+      "items": 1
+    },
+    {
+      "Base_finish": "stop",
+      "model_finish": "length",
+      "math_change": "lost",
+      "items": 3
+    },
+    {
+      "Base_finish": "stop",
+      "model_finish": "length",
+      "math_change": "unchanged",
+      "items": 23
+    },
+    {
+      "Base_finish": "stop",
+      "model_finish": "stop",
+      "math_change": "gained",
+      "items": 14
+    },
+    {
+      "Base_finish": "stop",
+      "model_finish": "stop",
+      "math_change": "lost",
+      "items": 9
+    },
+    {
+      "Base_finish": "stop",
+      "model_finish": "stop",
+      "math_change": "unchanged",
+      "items": 118
+    }
+  ],
+  "source_sha256": {
+    "pair_receipt": "3f7744684aee5807a26dd93dc3080b7df7cc8547aed06eaab29d3f4eb407bcaa",
+    "language_receipt": "cd86393eaa6c990d527d5746ee0797e84d89cd9b4519460442ef1086a05e14c1",
+    "collector": "1a6814eb708f777f031d7505bf7b827fe63b2117b6d9a5837cc43e77e084d229"
+  },
+  "new_generation": false,
+  "original_math_scores_preserved": true,
+  "complete_seven_case_stage": false,
+  "scope": "Descriptive associations in one completed fixed-model PolyMath pair. All500questions retained, four125-question tiers. Confidence intervals are fixed-model paired-question bootstrap, one training seed and no multiplicity correction. Conditioning on language or stopping changes the sample subset and does not establish why training helped. Classifier labels do not prove fluency or per-token language purity. Do not select checkpoints, languages or training data using this formal decomposition."
+}
