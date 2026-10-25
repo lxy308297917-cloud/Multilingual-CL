@@ -1,0 +1,806 @@
+{
+  "observed_at": "2026-10-25T09:45:28.874554+08:00",
+  "scope": "Complete selected-cohort MGSM three-target and English GSM8K matrices only; PolyMath and full seven-case delivery remain incomplete.",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "all_selected_model_counts": {
+    "Base": {
+      "sw": {
+        "correct": 34,
+        "total": 250
+      },
+      "te": {
+        "correct": 149,
+        "total": 250
+      },
+      "zh": {
+        "correct": 240,
+        "total": 250
+      },
+      "en": {
+        "correct": 1247,
+        "total": 1319
+      }
+    },
+    "SW_matched900": {
+      "sw": {
+        "correct": 55,
+        "total": 250
+      },
+      "te": {
+        "correct": 140,
+        "total": 250
+      },
+      "zh": {
+        "correct": 239,
+        "total": 250
+      },
+      "en": {
+        "correct": 1244,
+        "total": 1319
+      }
+    },
+    "TE_matched900": {
+      "sw": {
+        "correct": 55,
+        "total": 250
+      },
+      "te": {
+        "correct": 152,
+        "total": 250
+      },
+      "zh": {
+        "correct": 241,
+        "total": 250
+      },
+      "en": {
+        "correct": 1249,
+        "total": 1319
+      }
+    },
+    "ZH_matched900": {
+      "sw": {
+        "correct": 46,
+        "total": 250
+      },
+      "te": {
+        "correct": 149,
+        "total": 250
+      },
+      "zh": {
+        "correct": 241,
+        "total": 250
+      },
+      "en": {
+        "correct": 1244,
+        "total": 1319
+      }
+    },
+    "forward_s2": {
+      "sw": {
+        "correct": 73,
+        "total": 250
+      },
+      "te": {
+        "correct": 14,
+        "total": 250
+      },
+      "zh": {
+        "correct": 242,
+        "total": 250
+      },
+      "en": {
+        "correct": 1241,
+        "total": 1319
+      }
+    },
+    "forward_s3": {
+      "sw": {
+        "correct": 79,
+        "total": 250
+      },
+      "te": {
+        "correct": 19,
+        "total": 250
+      },
+      "zh": {
+        "correct": 239,
+        "total": 250
+      },
+      "en": {
+        "correct": 1237,
+        "total": 1319
+      }
+    },
+    "reverse_s2": {
+      "sw": {
+        "correct": 44,
+        "total": 250
+      },
+      "te": {
+        "correct": 130,
+        "total": 250
+      },
+      "zh": {
+        "correct": 234,
+        "total": 250
+      },
+      "en": {
+        "correct": 1245,
+        "total": 1319
+      }
+    },
+    "reverse_s3": {
+      "sw": {
+        "correct": 66,
+        "total": 250
+      },
+      "te": {
+        "correct": 111,
+        "total": 250
+      },
+      "zh": {
+        "correct": 239,
+        "total": 250
+      },
+      "en": {
+        "correct": 1250,
+        "total": 1319
+      }
+    }
+  },
+  "directional_matrices_and_metrics": {
+    "forward": {
+      "order": [
+        "sw",
+        "te",
+        "zh"
+      ],
+      "evaluation_denominators": {
+        "sw": 250,
+        "te": 250,
+        "zh": 250,
+        "en": 1319
+      },
+      "input_counts": {
+        "Base": {
+          "sw": {
+            "correct": 34,
+            "total": 250
+          },
+          "te": {
+            "correct": 149,
+            "total": 250
+          },
+          "zh": {
+            "correct": 240,
+            "total": 250
+          },
+          "en": {
+            "correct": 1247,
+            "total": 1319
+          }
+        },
+        "after_sw": {
+          "sw": {
+            "correct": 55,
+            "total": 250
+          },
+          "te": {
+            "correct": 140,
+            "total": 250
+          },
+          "zh": {
+            "correct": 239,
+            "total": 250
+          },
+          "en": {
+            "correct": 1244,
+            "total": 1319
+          }
+        },
+        "after_te": {
+          "sw": {
+            "correct": 73,
+            "total": 250
+          },
+          "te": {
+            "correct": 14,
+            "total": 250
+          },
+          "zh": {
+            "correct": 242,
+            "total": 250
+          },
+          "en": {
+            "correct": 1241,
+            "total": 1319
+          }
+        },
+        "after_zh": {
+          "sw": {
+            "correct": 79,
+            "total": 250
+          },
+          "te": {
+            "correct": 19,
+            "total": 250
+          },
+          "zh": {
+            "correct": 239,
+            "total": 250
+          },
+          "en": {
+            "correct": 1237,
+            "total": 1319
+          }
+        }
+      },
+      "accuracy_matrix_percent": {
+        "Base": {
+          "sw": 13.6,
+          "te": 59.6,
+          "zh": 96.0,
+          "en": 94.54131918119788
+        },
+        "after_sw": {
+          "sw": 22.0,
+          "te": 56.0,
+          "zh": 95.6,
+          "en": 94.31387414708112
+        },
+        "after_te": {
+          "sw": 29.2,
+          "te": 5.6,
+          "zh": 96.8,
+          "en": 94.08642911296437
+        },
+        "after_zh": {
+          "sw": 31.6,
+          "te": 7.6,
+          "zh": 95.6,
+          "en": 93.78316906747536
+        }
+      },
+      "stage_metrics": [
+        {
+          "stage": "after_sw",
+          "training_language": "sw",
+          "accuracy_percent": {
+            "sw": 22.0,
+            "te": 56.0,
+            "zh": 95.6,
+            "en": 94.31387414708112
+          },
+          "current_language_gain_from_previous_stage_pp": 8.4,
+          "current_language_gain_from_Base_pp": 8.4,
+          "old_languages": {},
+          "mean_old_language_forgetting_pp": null,
+          "English_change_from_Base_pp": -0.22744503411675512
+        },
+        {
+          "stage": "after_te",
+          "training_language": "te",
+          "accuracy_percent": {
+            "sw": 29.2,
+            "te": 5.6,
+            "zh": 96.8,
+            "en": 94.08642911296437
+          },
+          "current_language_gain_from_previous_stage_pp": -50.4,
+          "current_language_gain_from_Base_pp": -54.0,
+          "old_languages": {
+            "sw": {
+              "decline_from_own_learned_stage_pp": -7.2,
+              "historical_best_before_current_percent": 22.0,
+              "forgetting_pp": -7.2
+            }
+          },
+          "mean_old_language_forgetting_pp": -7.2,
+          "English_change_from_Base_pp": -0.45489006823351025
+        },
+        {
+          "stage": "after_zh",
+          "training_language": "zh",
+          "accuracy_percent": {
+            "sw": 31.6,
+            "te": 7.6,
+            "zh": 95.6,
+            "en": 93.78316906747536
+          },
+          "current_language_gain_from_previous_stage_pp": -1.2,
+          "current_language_gain_from_Base_pp": -0.4,
+          "old_languages": {
+            "sw": {
+              "decline_from_own_learned_stage_pp": -9.6,
+              "historical_best_before_current_percent": 29.2,
+              "forgetting_pp": -2.4
+            },
+            "te": {
+              "decline_from_own_learned_stage_pp": -2.0,
+              "historical_best_before_current_percent": 5.6,
+              "forgetting_pp": -2.0
+            }
+          },
+          "mean_old_language_forgetting_pp": -2.2,
+          "English_change_from_Base_pp": -0.7581501137225171
+        }
+      ],
+      "final_three_target_macro_accuracy_percent": 44.93333333333333,
+      "final_English_change_from_Base_pp": -0.7581501137225171,
+      "final_mean_old_language_forgetting_pp": -2.2,
+      "definition": "For old language i at stage k: max accuracy over completed stages i..k-1 minus current accuracy. Base and current stage are excluded from that history; negative values are retained. Last newly learned language is not assigned artificial zero forgetting. English is excluded from training-stage and target-language averages.",
+      "scope": "Arithmetic from supplied counts only. Caller must independently audit model/checkpoint identities, common inputs/prompts/sampling/scoring, completed evaluations and disjoint training pools. No experiments or language selection are performed here."
+    },
+    "reverse": {
+      "order": [
+        "zh",
+        "te",
+        "sw"
+      ],
+      "evaluation_denominators": {
+        "zh": 250,
+        "te": 250,
+        "sw": 250,
+        "en": 1319
+      },
+      "input_counts": {
+        "Base": {
+          "sw": {
+            "correct": 34,
+            "total": 250
+          },
+          "te": {
+            "correct": 149,
+            "total": 250
+          },
+          "zh": {
+            "correct": 240,
+            "total": 250
+          },
+          "en": {
+            "correct": 1247,
+            "total": 1319
+          }
+        },
+        "after_zh": {
+          "sw": {
+            "correct": 46,
+            "total": 250
+          },
+          "te": {
+            "correct": 149,
+            "total": 250
+          },
+          "zh": {
+            "correct": 241,
+            "total": 250
+          },
+          "en": {
+            "correct": 1244,
+            "total": 1319
+          }
+        },
+        "after_te": {
+          "sw": {
+            "correct": 44,
+            "total": 250
+          },
+          "te": {
+            "correct": 130,
+            "total": 250
+          },
+          "zh": {
+            "correct": 234,
+            "total": 250
+          },
+          "en": {
+            "correct": 1245,
+            "total": 1319
+          }
+        },
+        "after_sw": {
+          "sw": {
+            "correct": 66,
+            "total": 250
+          },
+          "te": {
+            "correct": 111,
+            "total": 250
+          },
+          "zh": {
+            "correct": 239,
+            "total": 250
+          },
+          "en": {
+            "correct": 1250,
+            "total": 1319
+          }
+        }
+      },
+      "accuracy_matrix_percent": {
+        "Base": {
+          "zh": 96.0,
+          "te": 59.6,
+          "sw": 13.6,
+          "en": 94.54131918119788
+        },
+        "after_zh": {
+          "zh": 96.4,
+          "te": 59.6,
+          "sw": 18.4,
+          "en": 94.31387414708112
+        },
+        "after_te": {
+          "zh": 93.6,
+          "te": 52.0,
+          "sw": 17.6,
+          "en": 94.38968915845338
+        },
+        "after_sw": {
+          "zh": 95.6,
+          "te": 44.4,
+          "sw": 26.4,
+          "en": 94.76876421531463
+        }
+      },
+      "stage_metrics": [
+        {
+          "stage": "after_zh",
+          "training_language": "zh",
+          "accuracy_percent": {
+            "zh": 96.4,
+            "te": 59.6,
+            "sw": 18.4,
+            "en": 94.31387414708112
+          },
+          "current_language_gain_from_previous_stage_pp": 0.4,
+          "current_language_gain_from_Base_pp": 0.4,
+          "old_languages": {},
+          "mean_old_language_forgetting_pp": null,
+          "English_change_from_Base_pp": -0.22744503411675512
+        },
+        {
+          "stage": "after_te",
+          "training_language": "te",
+          "accuracy_percent": {
+            "zh": 93.6,
+            "te": 52.0,
+            "sw": 17.6,
+            "en": 94.38968915845338
+          },
+          "current_language_gain_from_previous_stage_pp": -7.6,
+          "current_language_gain_from_Base_pp": -7.6,
+          "old_languages": {
+            "zh": {
+              "decline_from_own_learned_stage_pp": 2.8,
+              "historical_best_before_current_percent": 96.4,
+              "forgetting_pp": 2.8
+            }
+          },
+          "mean_old_language_forgetting_pp": 2.8,
+          "English_change_from_Base_pp": -0.1516300227445034
+        },
+        {
+          "stage": "after_sw",
+          "training_language": "sw",
+          "accuracy_percent": {
+            "zh": 95.6,
+            "te": 44.4,
+            "sw": 26.4,
+            "en": 94.76876421531463
+          },
+          "current_language_gain_from_previous_stage_pp": 8.8,
+          "current_language_gain_from_Base_pp": 12.8,
+          "old_languages": {
+            "zh": {
+              "decline_from_own_learned_stage_pp": 0.8,
+              "historical_best_before_current_percent": 96.4,
+              "forgetting_pp": 0.8
+            },
+            "te": {
+              "decline_from_own_learned_stage_pp": 7.6,
+              "historical_best_before_current_percent": 52.0,
+              "forgetting_pp": 7.6
+            }
+          },
+          "mean_old_language_forgetting_pp": 4.2,
+          "English_change_from_Base_pp": 0.22744503411675512
+        }
+      ],
+      "final_three_target_macro_accuracy_percent": 55.46666666666667,
+      "final_English_change_from_Base_pp": 0.22744503411675512,
+      "final_mean_old_language_forgetting_pp": 4.2,
+      "definition": "For old language i at stage k: max accuracy over completed stages i..k-1 minus current accuracy. Base and current stage are excluded from that history; negative values are retained. Last newly learned language is not assigned artificial zero forgetting. English is excluded from training-stage and target-language averages.",
+      "scope": "Arithmetic from supplied counts only. Caller must independently audit model/checkpoint identities, common inputs/prompts/sampling/scoring, completed evaluations and disjoint training pools. No experiments or language selection are performed here."
+    }
+  },
+  "English_vs_Base": {
+    "SW_matched900": {
+      "items": 1319,
+      "Base_correct": 1247,
+      "model_correct": 1244,
+      "gained": 19,
+      "lost": 22,
+      "delta_percentage_points": -0.22744503411675512,
+      "paired_question_bootstrap95_CI_pp": [
+        -1.2130401819560273,
+        0.6842304776345441
+      ],
+      "metrics": {
+        "items": 1319,
+        "single_correct": 1244,
+        "generated_tokens": 2235000,
+        "truncated": 11,
+        "normal_terminations": 1308,
+        "answer_extraction_failures": 9,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9431387414708112,
+        "generation_seconds": 9543.112796004862,
+        "model_load_seconds": 13.586461655795574,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      }
+    },
+    "TE_matched900": {
+      "items": 1319,
+      "Base_correct": 1247,
+      "model_correct": 1249,
+      "gained": 18,
+      "lost": 16,
+      "delta_percentage_points": 0.1516300227445034,
+      "paired_question_bootstrap95_CI_pp": [
+        -0.6823351023502654,
+        1.061410159211524
+      ],
+      "metrics": {
+        "items": 1319,
+        "single_correct": 1249,
+        "generated_tokens": 2155981,
+        "truncated": 11,
+        "normal_terminations": 1308,
+        "answer_extraction_failures": 9,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9469294920394238,
+        "generation_seconds": 9373.183753341436,
+        "model_load_seconds": 13.542184999212623,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      }
+    },
+    "ZH_matched900": {
+      "items": 1319,
+      "Base_correct": 1247,
+      "model_correct": 1244,
+      "gained": 19,
+      "lost": 22,
+      "delta_percentage_points": -0.22744503411675512,
+      "paired_question_bootstrap95_CI_pp": [
+        -1.1372251705837757,
+        0.6823351023502654
+      ],
+      "metrics": {
+        "items": 1319,
+        "single_correct": 1244,
+        "generated_tokens": 2060040,
+        "truncated": 12,
+        "normal_terminations": 1307,
+        "answer_extraction_failures": 8,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9431387414708112,
+        "generation_seconds": 8931.801011849195,
+        "model_load_seconds": 13.594764120876789,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      }
+    },
+    "forward_s2": {
+      "items": 1319,
+      "Base_correct": 1247,
+      "model_correct": 1241,
+      "gained": 16,
+      "lost": 22,
+      "delta_percentage_points": -0.45489006823351025,
+      "paired_question_bootstrap95_CI_pp": [
+        -1.3646702047005308,
+        0.45489006823351025
+      ],
+      "metrics": {
+        "items": 1319,
+        "single_correct": 1241,
+        "generated_tokens": 2694583,
+        "truncated": 26,
+        "normal_terminations": 1293,
+        "answer_extraction_failures": 19,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9408642911296436,
+        "generation_seconds": 11854.947361312807,
+        "model_load_seconds": 13.236819485202432,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      }
+    },
+    "forward_s3": {
+      "items": 1319,
+      "Base_correct": 1247,
+      "model_correct": 1237,
+      "gained": 17,
+      "lost": 27,
+      "delta_percentage_points": -0.7581501137225171,
+      "paired_question_bootstrap95_CI_pp": [
+        -1.7437452615617892,
+        0.22744503411675512
+      ],
+      "metrics": {
+        "items": 1319,
+        "single_correct": 1237,
+        "generated_tokens": 2754438,
+        "truncated": 23,
+        "normal_terminations": 1296,
+        "answer_extraction_failures": 17,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9378316906747536,
+        "generation_seconds": 12257.768209967762,
+        "model_load_seconds": 13.826807536184788,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      }
+    },
+    "reverse_s2": {
+      "items": 1319,
+      "Base_correct": 1247,
+      "model_correct": 1245,
+      "gained": 16,
+      "lost": 18,
+      "delta_percentage_points": -0.1516300227445034,
+      "paired_question_bootstrap95_CI_pp": [
+        -0.9855951478392722,
+        0.6823351023502654
+      ],
+      "metrics": {
+        "items": 1319,
+        "single_correct": 1245,
+        "generated_tokens": 2190137,
+        "truncated": 12,
+        "normal_terminations": 1307,
+        "answer_extraction_failures": 7,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9438968915845337,
+        "generation_seconds": 9535.96702661179,
+        "model_load_seconds": 13.807861162349582,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      }
+    },
+    "reverse_s3": {
+      "items": 1319,
+      "Base_correct": 1247,
+      "model_correct": 1250,
+      "gained": 21,
+      "lost": 18,
+      "delta_percentage_points": 0.22744503411675512,
+      "paired_question_bootstrap95_CI_pp": [
+        -0.6823351023502654,
+        1.1372251705837757
+      ],
+      "metrics": {
+        "items": 1319,
+        "single_correct": 1250,
+        "generated_tokens": 2586228,
+        "truncated": 16,
+        "normal_terminations": 1303,
+        "answer_extraction_failures": 11,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9476876421531463,
+        "generation_seconds": 11287.36452018097,
+        "model_load_seconds": 13.49773826636374,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      }
+    }
+  },
+  "last_stage_English_transitions": [
+    {
+      "model_id": "forward_s3",
+      "previous_stage_model_id": "forward_s2",
+      "current_correct": 1237,
+      "previous_stage_correct": 1241,
+      "previous_stage_gained": 16,
+      "previous_stage_lost": 20,
+      "previous_stage_change_pp": -0.3032600454890068,
+      "previous_stage_paired_question_CI95_pp": [
+        -1.2130401819560273,
+        0.6065200909780136
+      ],
+      "generated_token_ratio_to_Base": 1.3414610151793784
+    },
+    {
+      "model_id": "reverse_s3",
+      "previous_stage_model_id": "reverse_s2",
+      "current_correct": 1250,
+      "previous_stage_correct": 1245,
+      "previous_stage_gained": 24,
+      "previous_stage_lost": 19,
+      "previous_stage_change_pp": 0.37907505686125853,
+      "previous_stage_paired_question_CI95_pp": [
+        -0.6065200909780136,
+        1.3646702047005308
+      ],
+      "generated_token_ratio_to_Base": 1.2595397095034753
+    }
+  ],
+  "accepted_main_conditions": 32,
+  "main_MGSM_and_English_complete": true,
+  "complete_seven_case_stages": false,
+  "full_goal_complete": false,
+  "common_training_configuration": {
+    "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "updates": 20,
+    "scheduler_horizon": 100,
+    "effective_batch": 32,
+    "max_completion_length": 2048,
+    "training_seed": 42
+  },
+  "common_evaluation_configuration": {
+    "samples": 1,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 16,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": -1,
+    "seed": 42,
+    "seed_policy": "SHA256(seed:language:id:0), per request"
+  },
+  "official_COPSD_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "reproduction_scope": "Fixed official COPSD core, project Qwen3-4B20updates/stage under100scheduler and n1/8192/native16 formal evaluation; not strict official100-step training or pass@12 reproduction.",
+  "evidence_sha256": {
+    "target_matrix": "cab3954725dff270d45e18ca20c724f847cfcbf3f78e63fd3db7da5721602e48",
+    "target_private_receipt": "18402ae430c4bb3ae053622afb845f8dc15a516687f2313c83e4f0473b29759f",
+    "English_pair_receipts": {
+      "selected4b_SWmatched_EN_GSM8K_pair_20261025.PRIVATE.json": "757beea64f046b5b0ddf10e1134f740ad56b3d9b41c061e014e9bb662c3cc645",
+      "selected4b_TEmatched_EN_GSM8K_pair_20261025.PRIVATE.json": "4eb53163369b02166241078c645d0b787bd1ea4a9f94ef97e10fb2c64841b4d5",
+      "selected4b_ZHmatched_EN_GSM8K_pair_20261025.PRIVATE.json": "8e1a62bab4dc2f437a1303f751cc22ca96cfdc051811a12948fa0fa3ee217c19",
+      "selected4b_forward_s2_EN_GSM8K_pair_20261025.PRIVATE.json": "177f0f655c60c008dc4e68d20ab370fe8d46f97804b2367890055cc37eae4aa5",
+      "selected4b_forward_s3_EN_GSM8K_pair_20261025.PRIVATE.json": "65a30d501c594670d5ffefc57f45d4de4f750de2bd73ddd3dc935a72a6e0c72a",
+      "selected4b_reverse_s2_EN_GSM8K_pair_20261025.PRIVATE.json": "613ba93296a997353fe734fe7a9a74a11d2d4b5202eb317d97a1a93a8a89b625",
+      "selected4b_reverse_s3_EN_GSM8K_pair_20261025.PRIVATE.json": "eef50dcdbec573a3c1d5ac2a2bf15590e6babd8cb4be8243e42efb6a3e03126a"
+    },
+    "stage3_English_transitions": "bec29ed6fbf848f8cd94a49ecb1c348bc8baa7ce53fff7b735847ed1cdd3ce58",
+    "forgetting_arithmetic_source": "8be9dcb3f9ffebeaa66dd714caa3e27869d7f261d312c94eb0b8018c62da1f16"
+  },
+  "interpretation": [
+    "Target MGSM translations share 250 original problems; they are not 750 independent observations.",
+    "Forward negative old-language forgetting does not repair TE acquisition collapse: 149/250 Base, 14/250 after TE, 19/250 final.",
+    "Final English changes versus Base are -0.75815 pp forward and +0.227445 pp reverse; both paired question intervals include zero. This does not prove equivalence or general English retention.",
+    "One training seed; question bootstrap describes fixed-model uncertainty, not training-seed robustness. Original scoring retained.",
+    "Twenty updates under a 100-update scheduler are a project budget adaptation, not strict official 100-update or pass@12 reproduction."
+  ]
+}

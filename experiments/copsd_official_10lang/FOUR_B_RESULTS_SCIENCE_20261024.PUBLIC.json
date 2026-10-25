@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T08:39:46.236093+08:00",
+  "updated_at": "2026-10-25T09:45:28.874554+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1097,7 +1097,45 @@
     "matched_reference_seven_cases_complete": false,
     "sequential_English_complete": false,
     "both_stage2_main_four_cases_complete": true,
-    "both_stage2_seven_cases_complete": false
+    "both_stage2_seven_cases_complete": false,
+    "main_MGSM_and_English_complete": true,
+    "main_MGSM_and_English_conditions": 32,
+    "main_matrix_report": "SELECTED4B_MGSM_ENGLISH_STAGE_MATRICES_20261025.PUBLIC.json",
+    "all_selected_English_counts": {
+      "Base": {
+        "correct": 1247,
+        "total": 1319
+      },
+      "SW_matched900": {
+        "correct": 1244,
+        "total": 1319
+      },
+      "TE_matched900": {
+        "correct": 1249,
+        "total": 1319
+      },
+      "ZH_matched900": {
+        "correct": 1244,
+        "total": 1319
+      },
+      "forward_s2": {
+        "correct": 1241,
+        "total": 1319
+      },
+      "forward_s3": {
+        "correct": 1237,
+        "total": 1319
+      },
+      "reverse_s2": {
+        "correct": 1245,
+        "total": 1319
+      },
+      "reverse_s3": {
+        "correct": 1250,
+        "total": 1319
+      }
+    },
+    "full_seven_case_complete": false
   },
   "scoring_diagnostic": {
     "source": "MGSM_PERCENTAGE_AND_REASONING_DIAGNOSTIC_20261025.PUBLIC.json",
