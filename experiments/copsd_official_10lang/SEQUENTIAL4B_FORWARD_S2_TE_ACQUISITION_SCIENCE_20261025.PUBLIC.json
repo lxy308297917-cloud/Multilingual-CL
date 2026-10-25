@@ -1,0 +1,108 @@
+{
+  "observed_at": "2026-10-25T22:04:27.345337+08:00",
+  "model_id": "forward_s2",
+  "case": "polymath_te",
+  "items": 500,
+  "current_stage_language": "te",
+  "new_language_acquisition": true,
+  "post_learning_forgetting": false,
+  "comparisons": {
+    "previous": {
+      "previous_correct": 68,
+      "current_correct": 8,
+      "gained": 3,
+      "lost": 63,
+      "change_pp": -12.0,
+      "change_question_CI95_pp": [
+        -15.0,
+        -9.0
+      ],
+      "lost_current_truncated": 63,
+      "lost_current_no_extracted_box": 63,
+      "lost_current_normal_with_box": 0
+    },
+    "single": {
+      "previous_correct": 73,
+      "current_correct": 8,
+      "gained": 1,
+      "lost": 66,
+      "change_pp": -13.0,
+      "change_question_CI95_pp": [
+        -16.0,
+        -10.0
+      ],
+      "lost_current_truncated": 66,
+      "lost_current_no_extracted_box": 66,
+      "lost_current_normal_with_box": 0
+    }
+  },
+  "termination": {
+    "previous": {
+      "items": 500,
+      "correct": 68,
+      "truncated": 366,
+      "no_extracted_answer": 358,
+      "truncated_and_no_answer": 358,
+      "correct_and_normally_terminated": 65
+    },
+    "single": {
+      "items": 500,
+      "correct": 73,
+      "truncated": 376,
+      "no_extracted_answer": 364,
+      "truncated_and_no_answer": 364,
+      "correct_and_normally_terminated": 70
+    },
+    "current": {
+      "items": 500,
+      "correct": 8,
+      "truncated": 491,
+      "no_extracted_answer": 491,
+      "truncated_and_no_answer": 491,
+      "correct_and_normally_terminated": 8
+    }
+  },
+  "language": {
+    "previous": {
+      "thinking_target_highconf": 499,
+      "thinking_English_top1": 1,
+      "correct_and_target_thinking_highconf": 68,
+      "correct_and_both_parts_target_highconf": 67
+    },
+    "single": {
+      "thinking_target_highconf": 490,
+      "thinking_English_top1": 10,
+      "correct_and_target_thinking_highconf": 73,
+      "correct_and_both_parts_target_highconf": 68
+    },
+    "current": {
+      "thinking_target_highconf": 494,
+      "thinking_English_top1": 5,
+      "correct_and_target_thinking_highconf": 8,
+      "correct_and_both_parts_target_highconf": 8
+    }
+  },
+  "actual_parent_adapter_verified": true,
+  "original_Base_bitwise_unchanged_verified": true,
+  "same_640_TE_training_problem_order_and_prompt_fingerprints_from_bound_audit": true,
+  "unique_root_cause_proven": false,
+  "scope": "Current-stage TE acquisition after SW, not old-language forgetting. All500questions/four125-question tiers; original scores, same prompts/request seeds. Single TE reference shares the640current-TE training inputs and prompt fingerprints, while incoming weights, previous-stage budget and online trajectories differ. Termination overlap counted explicitly; this characterizes failure, not its unique training cause. Whole-part TE labels do not prove fluency or valid reasoning. Fixed-model question bootstrap, one training seed, no multiplicity correction.",
+  "model": "Qwen/Qwen3-4B",
+  "order": [
+    "sw",
+    "te",
+    "zh"
+  ],
+  "stage_index": 2,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "actual_single_release_identity_bound_to_training_audit": true,
+  "source_sha256": {
+    "private_acquisition_receipt": "ceb855383b255a96fffea00e7d41277ebf4940bf6b4a29c4c5aa9f1d7c7285b4",
+    "collector": "4fb3ec963dc80e6a1d712726a96eaff6b7951dd4753226a0befef080d8091c9e",
+    "single_formal_freeze": "0585c3a878fe4aeb3f2e3f27430dc15cd7362e4a951563fa41408be67660f326",
+    "single_release": "ce1fbbb6660042b45efed2217c06e9a98da0aa339d66638543bcdc223947be4a",
+    "prior_training_identity_diagnostic": "a1f8d64f0b347b7587200796109f937a7a5b9e94422492460200adf4d2662f92"
+  },
+  "complete_forgetting_matrix": false
+}

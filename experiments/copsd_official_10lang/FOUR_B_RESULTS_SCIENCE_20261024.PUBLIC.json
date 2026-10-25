@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T21:13:32.676990+08:00",
+  "updated_at": "2026-10-25T22:04:27.345337+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1279,6 +1279,12 @@
         "all_seven_model_language_cases_audited": true,
         "dispatcher_reserved_marker_written": false,
         "public_report": "SELECTED4B_ZH_MATCHED_SEVEN_CASES_20261025.PUBLIC.json"
+      },
+      "forward_s2": {
+        "all_seven_cases_individually_audited": true,
+        "all_seven_model_language_cases_audited": true,
+        "dispatcher_reserved_marker_written": false,
+        "public_report": "SEQUENTIAL4B_FORWARD_S2_SEVEN_CASES_20261025.PUBLIC.json"
       }
     },
     "accepted_partial_PolyMath_forgetting_histories": {
@@ -1320,6 +1326,20 @@
         "not_yet_a_training_stage_in_this_order": true,
         "post_learning_forgetting": false,
         "public_report": "SEQUENTIAL4B_FORWARD_S2_ZH_POLYMATH_PRELEARNING_SCIENCE_20261025.PUBLIC.json"
+      }
+    },
+    "accepted_current_language_acquisition_diagnostics": {
+      "forward_s2:te": {
+        "Base_correct": 72,
+        "previous_actual_stage_correct": 68,
+        "matched_TE_single_correct": 73,
+        "current_correct": 8,
+        "items": 500,
+        "current_truncated_and_no_answer": 491,
+        "same_current_TE_training_inputs_and_prompt_fingerprints": true,
+        "incoming_weights_and_online_trajectories_differ": true,
+        "unique_root_cause_proven": false,
+        "public_report": "SEQUENTIAL4B_FORWARD_S2_TE_ACQUISITION_SCIENCE_20261025.PUBLIC.json"
       }
     }
   },
