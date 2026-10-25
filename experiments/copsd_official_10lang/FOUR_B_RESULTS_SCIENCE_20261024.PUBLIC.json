@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T20:09:46.582512+08:00",
+  "updated_at": "2026-10-25T21:13:32.676990+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1305,6 +1305,21 @@
         ],
         "complete_forgetting_matrix": false,
         "public_report": "SEQUENTIAL4B_FORWARD_S2_SW_POLYMATH_FORGETTING_SCIENCE_20261025.PUBLIC.json"
+      }
+    },
+    "accepted_partial_PolyMath_prelearning_changes": {
+      "forward_s2:zh": {
+        "previous_actual_stage_correct": 215,
+        "current_correct": 195,
+        "items": 500,
+        "change_pp": -4.0,
+        "paired_question_CI95_pp": [
+          -6.8,
+          -1.4
+        ],
+        "not_yet_a_training_stage_in_this_order": true,
+        "post_learning_forgetting": false,
+        "public_report": "SEQUENTIAL4B_FORWARD_S2_ZH_POLYMATH_PRELEARNING_SCIENCE_20261025.PUBLIC.json"
       }
     }
   },

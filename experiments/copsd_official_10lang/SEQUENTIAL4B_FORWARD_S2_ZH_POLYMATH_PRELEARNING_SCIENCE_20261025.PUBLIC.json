@@ -1,0 +1,124 @@
+{
+  "model_id": "forward_s2",
+  "case": "polymath_zh",
+  "items": 500,
+  "current_stage_language": "te",
+  "evaluation_language": "zh",
+  "post_learning_forgetting": false,
+  "previous_actual_stage": {
+    "previous_correct": 215,
+    "current_correct": 195,
+    "gained": 14,
+    "lost": 34,
+    "change_pp": -4.0,
+    "change_question_CI95_pp": [
+      -6.800000000000001,
+      -1.4000000000000001
+    ],
+    "lost_current_truncated": 29,
+    "lost_current_no_extracted_box": 28,
+    "lost_current_normal_with_box": 5
+  },
+  "Base_comparison": {
+    "Base_correct": 207,
+    "model_correct": 195,
+    "gained": 13,
+    "lost": 25,
+    "delta_percentage_points": -2.4,
+    "paired_question_bootstrap95_CI_pp": [
+      -4.8,
+      0.0
+    ]
+  },
+  "language": {
+    "previous": {
+      "thinking_target_highconf": 473,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 203,
+      "correct_and_both_parts_target_highconf": 193
+    },
+    "current": {
+      "thinking_target_highconf": 477,
+      "thinking_English_top1": 2,
+      "correct_and_target_thinking_highconf": 187,
+      "correct_and_both_parts_target_highconf": 180
+    }
+  },
+  "actual_parent_adapter_verified": true,
+  "original_Base_bitwise_unchanged_verified": true,
+  "complete_seven_case_stage": false,
+  "observed_at": "2026-10-25T21:13:32.676990+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "order": [
+    "sw",
+    "te",
+    "zh"
+  ],
+  "stage_index": 2,
+  "not_yet_a_training_stage_in_this_order": true,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "current_metrics": {
+    "items": 500,
+    "single_correct": 195,
+    "generated_tokens": 3099900,
+    "truncated": 293,
+    "normal_terminations": 207,
+    "answer_extraction_failures": 267,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.39,
+    "generation_seconds": 13665.792817546055,
+    "model_load_seconds": 13.46202133782208,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 108,
+        "single_accuracy": 0.864
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 58,
+        "single_accuracy": 0.464
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 23,
+        "single_accuracy": 0.184
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 6,
+        "single_accuracy": 0.048
+      }
+    }
+  },
+  "current_raw_files_sha256": {
+    "CONFIG.json": "3cbf63c6b348615eb9945b970c4909609850b70ee2b1c052bb6b114b69f7c5e4",
+    "DONE.json": "853d65012664c8b768355ccb53e7c773373c2409a1ffe1433441c079b9b17d43",
+    "ITEMS.jsonl": "8d551ab4994f323c2a962e52bda9abba98651d09cc6f588a3665e534722e3f88"
+  },
+  "current_evaluation_parent_cost": {
+    "new_GPU_hours": 3.816666666666667,
+    "reused": false,
+    "new_generated_tokens": 3099900
+  },
+  "source_sha256": {
+    "private_transfer_receipt": "fa486493386c55f91276ced5256f3e2afc031eaf884ad7ce72f96880f6001d10",
+    "current_pair_receipt": "ae192bdce705df24886cc91aba442f30c3d93092931c490391c94acd6f88de45",
+    "partial_TensorBoard_receipt": "0026b7033c1b56c23bd6b3168bf1e78faa680df7af1ac726eb1756ee28c01750",
+    "collector": "cb1b4e691df285ec76a7f011c1d143029bf9bcaaefd7042cf94c12b86b5b0b17"
+  },
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true,
+    "local_checkpoint_step": 20
+  },
+  "complete_forgetting_matrix": false,
+  "scope": "Chinese capability change after SW->TE, before the Chinese training stage in this sequence; not post-learning old-language forgetting. Same500questions/four125-question bands, actual parent adapter and original frozenBase verified, same prompts/request seeds/frozen scoring. Base207->current195 CI[-4.8,0]includeszero; actualpreviousSWstage215->195 CI[-6.8,-1.4]excludeszero, fixed-model question evidence only. Whole-part language classification does not establish fluency or explain mathematical changes. Lost truncation/no-box groups overlap; original scores retained. One training seed, no multiplicity correction. Project20under100scheduler/n1/8192/native16 adaptation, not official100step/pass12 reproduction. Parent costs overlap queue/full-suite totals."
+}
