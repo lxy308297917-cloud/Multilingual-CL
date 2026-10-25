@@ -1,0 +1,203 @@
+{
+  "model_id": "ZH_matched900",
+  "case": "polymath_te",
+  "items": 500,
+  "Base_correct": 72,
+  "model_correct": 78,
+  "gained": 25,
+  "lost": 19,
+  "delta_percentage_points": 1.2,
+  "paired_question_bootstrap95_CI_pp": [
+    -1.4000000000000001,
+    3.8
+  ],
+  "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+  "observed_at": "2026-10-25T17:21:19.699606+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "Base_metrics": {
+    "items": 500,
+    "single_correct": 72,
+    "generated_tokens": 3470190,
+    "truncated": 328,
+    "normal_terminations": 172,
+    "answer_extraction_failures": 318,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.144,
+    "generation_seconds": 6613.524423124269,
+    "model_load_seconds": 12.064822601154447,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 64,
+        "single_accuracy": 0.512
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 4,
+        "single_accuracy": 0.032
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 4,
+        "single_accuracy": 0.032
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 0,
+        "single_accuracy": 0.0
+      }
+    }
+  },
+  "model_metrics": {
+    "items": 500,
+    "single_correct": 78,
+    "generated_tokens": 3465908,
+    "truncated": 300,
+    "normal_terminations": 200,
+    "answer_extraction_failures": 272,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.156,
+    "generation_seconds": 15037.717355515808,
+    "model_load_seconds": 13.525865344330668,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 63,
+        "single_accuracy": 0.504
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 12,
+        "single_accuracy": 0.096
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 3,
+        "single_accuracy": 0.024
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 0,
+        "single_accuracy": 0.0
+      }
+    }
+  },
+  "adapter_sha256": "814e6fc9297bbf367145f34adf24b55074f4846a317bb03199d32e4cd68db394",
+  "raw_source_sha256": {
+    "Base": {
+      "CONFIG.json": "2de72c022c95446fc311164ef0e14f8d57020406e4eb53e3dfd4206f4e8d5657",
+      "DONE.json": "6d621414cc9c7b03cfa1a22eb6beb31af683d93a834a989a1a952a8da0be8867",
+      "ITEMS.jsonl": "ae35d7063bd4daaf0b9b8a18643783780213aed625db3d392b65a74aabfdadea"
+    },
+    "model": {
+      "CONFIG.json": "c63f78f4ca2f3d4182b788af90ba954d04b34fba261b33f5d1857b3a0c68d318",
+      "DONE.json": "b8d66d4535c7a654142aa5717cc34acb91fb2a52c69d0aaa2a780f9960e11ea2",
+      "ITEMS.jsonl": "d93ce14e4dc3df922ac2bb629f1314a02aa55937c00364b0689e4e591aa30e6e"
+    }
+  },
+  "private_pair_receipt_sha256": "3114ac542a3f1e72deb75bb9dcab65183a6b6ca425fe395eae158535aa2c1ed2",
+  "language": {
+    "Base": {
+      "thinking_TE_highconf": 498,
+      "correct_and_TE_thinking_highconf": 72,
+      "correct_and_both_TE_sections_highconf": 72,
+      "correct_without_final_section": 0,
+      "summary": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 498,
+            "__label__eng_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 498,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 72
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 222,
+            "no_final_section": 275,
+            "too_short": 3
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 221,
+            "__label__eng_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 221,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 72
+          }
+        }
+      }
+    },
+    "model": {
+      "thinking_TE_highconf": 497,
+      "correct_and_TE_thinking_highconf": 78,
+      "correct_and_both_TE_sections_highconf": 76,
+      "correct_without_final_section": 2,
+      "summary": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 498,
+            "__label__eng_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 497,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 78
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 261,
+            "no_final_section": 236,
+            "too_short": 3
+          },
+          "top1_label_counts": {
+            "__label__tel_Telu": 259,
+            "__label__eng_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 259,
+          "correct_items_label_counts": {
+            "__label__tel_Telu": 76,
+            "no_final_section": 2
+          }
+        }
+      }
+    }
+  },
+  "language_receipt_sha256": "467b30a3b969e6583eb80d75b4bbaf5a1441ef3366f317bac0cab557ae05172c",
+  "language_analysis_accepted": true,
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true,
+    "local_checkpoint_step": 20
+  },
+  "new_evaluation_parent_cost": {
+    "new_GPU_hours": 4.197777777777778,
+    "reused": false,
+    "new_generated_tokens": 3465908
+  },
+  "complete_seven_case_stage": false,
+  "scope": "ZH matched-single20 evaluated on TE PolyMath, not a TE training stage or post-learning forgetting. All500questions/four125-question tiers, frozen original scoring, n1/8192/native16;20updates under100scheduler is project adaptation, not strict official100step/pass12 reproduction. Paired question interval includeszero; positive estimate does not establish transfer, equivalence or training-seed robustness. Whole-section classifier labels do not prove fluency/per-token purity. Original math scores preserved for missing/short final sections. References use different frozen training pools and token costs; differences are not attributable solely to training language. Parent costs overlap queue/full-suite ledgers."
+}
