@@ -1,0 +1,109 @@
+{
+  "model_id": "Primary_TE20",
+  "case": "mgsm_rev2_te",
+  "items": 250,
+  "Base_correct": 149,
+  "model_correct": 162,
+  "gained": 31,
+  "lost": 18,
+  "delta_percentage_points": 5.2,
+  "paired_question_bootstrap95_CI_pp": [
+    -0.4,
+    10.8
+  ],
+  "observed_at": "2026-10-26T06:43:02.316218+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "cohort": "original2700 primary single20; distinct from matched900 reference",
+  "model_metrics": {
+    "items": 250,
+    "single_correct": 162,
+    "generated_tokens": 971192,
+    "truncated": 23,
+    "normal_terminations": 227,
+    "answer_extraction_failures": 23,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "mgsm_rev2",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 250,
+    "single_accuracy": 0.648,
+    "generation_seconds": 4615.080951688811,
+    "model_load_seconds": 13.47445216588676,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {}
+  },
+  "Base_metrics": {
+    "items": 250,
+    "single_correct": 149,
+    "generated_tokens": 989616,
+    "truncated": 20,
+    "normal_terminations": 230,
+    "answer_extraction_failures": 20,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "mgsm_rev2",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 250,
+    "single_accuracy": 0.596,
+    "generation_seconds": 1667.7018226925284,
+    "model_load_seconds": 11.912345591932535,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {}
+  },
+  "raw_file_sha256": {
+    "Base": {
+      "CONFIG.json": "0b51fb815aea6e28d8cf4a578a8e5c0087d936564724dfbbf8de7418c3a950cf",
+      "DONE.json": "9a0ff7dca1e512f573846a692c89a853ac026c40d60d9bad273a316334e4f924",
+      "ITEMS.jsonl": "1bb9083778171533cefad6e30ab96dd6ca46c41b078e91000d5b36f50eff53db"
+    },
+    "model": {
+      "CONFIG.json": "ab939380aa5c20ebe81bcd4016ae1b7387be38b11350fe1be982e5c5806510e6",
+      "DONE.json": "25a112d6f4b35a562fcbc9ba02da4b74d2c05958948fa8b04601e56a2d410722",
+      "ITEMS.jsonl": "7c0ce2ba6ddf81ad45bd6ce7a4dd0a35936343dcf28b4e09796ff782e8e435da"
+    }
+  },
+  "model_language": {
+    "summary": {
+      "thinking": {
+        "total_items": 250,
+        "statuses": {
+          "predicted": 250
+        },
+        "top1_label_counts": {
+          "__label__tel_Telu": 250
+        },
+        "target_top1_probability_ge_0_8": 250,
+        "correct_items_label_counts": {
+          "__label__tel_Telu": 162
+        }
+      },
+      "final": {
+        "total_items": 250,
+        "statuses": {
+          "predicted": 229,
+          "no_final_section": 19,
+          "too_short": 2
+        },
+        "top1_label_counts": {
+          "__label__tel_Telu": 229
+        },
+        "target_top1_probability_ge_0_8": 229,
+        "correct_items_label_counts": {
+          "__label__tel_Telu": 161,
+          "too_short": 1
+        }
+      }
+    },
+    "correct_and_target_thinking_highconf": 162,
+    "correct_and_both_target_sections_highconf": 161,
+    "source_sha256": "a72e0e1b7592e91cfc34e4e7bb33ed5d7cce2ced0d95317d7aff55ea5e0293d7"
+  },
+  "source_sha256": {
+    "primary4b_TE20_MGSM_TE_pair_20261026.PRIVATE.json": "32e2ad8a46a9b4320238d9634a7879921d8f8afab1b7bc04bb6a2a2a85dc6110",
+    "primary4b_TE20_MGSM_TE_TB_20261026.PRIVATE.json": "65fac69f6f719104c117ff97d793692db829389ea8b6e0e68494fc16c449fcf4"
+  },
+  "new_evaluation_parent_GPU_hours": 1.301111111111111,
+  "all_13_TensorBoard_scalars_read_back": true,
+  "proves_complete_three_case_primary_evaluation": false,
+  "scope": "One accepted250questionMGSM pair, not TE PolyMath/English or all-ten-language completion.13/250 net improvement has paired95CI[-.4,10.8]pp including zero; no stable-benefit/equivalence claim. Single trainingseed, question bootstrap not seed-population inference, no multiplicity correction. Original scores and missing/short final sections retained; language classification not fluency. Same project adaptation limits as primarySW."
+}

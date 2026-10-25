@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T05:28:22.862748+08:00",
+  "updated_at": "2026-10-26T06:46:04.454670+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1486,5 +1486,37 @@
     ],
     "CPU_JSONL_compatibility_report": "JSONL_PHYSICAL_LINES_COMPAT_20261026.PUBLIC.json",
     "goal_complete": false
+  },
+  "original2700_primary_formal_first_results_20261026": {
+    "SW_report": "PRIMARY4B_SW20_THREE_MATH_OUTPUTS_20261026.PUBLIC.json",
+    "SW_math_correct_Base_to_model": {
+      "mgsm_rev2_sw": [
+        34,
+        54,
+        250
+      ],
+      "polymath_sw": [
+        22,
+        75,
+        500
+      ],
+      "gsm8k_en": [
+        1247,
+        1246,
+        1319
+      ]
+    },
+    "TE_report": "PRIMARY4B_TE20_MGSM_TE_20261026.PUBLIC.json",
+    "TE_mgsm_Base_model_items": [
+      149,
+      162,
+      250
+    ],
+    "original42_new_queues_completed": 2,
+    "original42_new_queues_active": 2,
+    "not_matched900": true,
+    "complete_ten_language_formal_acceptance": false,
+    "original42_waiting_account_slot": 2,
+    "original42_no_monitor_started": 36
   }
 }
