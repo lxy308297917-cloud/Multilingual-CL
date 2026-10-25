@@ -1,0 +1,483 @@
+{
+  "observed_at": "2026-10-25T08:39:46.236093+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "training_context": "Stage2TE20updates under100scheduler from continuous SW/ZH adapters; effectivebatch32, cap2048, seed42. English is retention only, never a training stage.",
+  "results": [
+    {
+      "model_id": "forward_s2",
+      "previous_stage_model_id": "SW_matched900",
+      "stage_index": 2,
+      "local_checkpoint_step": 20,
+      "cumulative_display_updates": 40,
+      "English_items": 1319,
+      "Base_correct": 1247,
+      "current_correct": 1241,
+      "Base_delta_pp": -0.45489006823351025,
+      "Base_paired_question_CI95_pp": [
+        -1.3646702047005308,
+        0.45489006823351025
+      ],
+      "previous_stage_correct": 1244,
+      "previous_stage_gained": 19,
+      "previous_stage_lost": 22,
+      "previous_stage_change_pp": -0.22744503411675512,
+      "previous_stage_paired_question_CI95_pp": [
+        -1.2130401819560273,
+        0.7581501137225171
+      ],
+      "English_metrics": {
+        "items": 1319,
+        "single_correct": 1241,
+        "generated_tokens": 2694583,
+        "truncated": 26,
+        "normal_terminations": 1293,
+        "answer_extraction_failures": 19,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9408642911296436,
+        "generation_seconds": 11854.947361312807,
+        "model_load_seconds": 13.236819485202432,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "previous_stage_English_metrics": {
+        "items": 1319,
+        "single_correct": 1244,
+        "generated_tokens": 2235000,
+        "truncated": 11,
+        "normal_terminations": 1308,
+        "answer_extraction_failures": 9,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9431387414708112,
+        "generation_seconds": 9543.112796004862,
+        "model_load_seconds": 13.586461655795574,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "Base_English_metrics": {
+        "items": 1319,
+        "single_correct": 1247,
+        "generated_tokens": 2053312,
+        "truncated": 8,
+        "normal_terminations": 1311,
+        "answer_extraction_failures": 7,
+        "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9454131918119788,
+        "generation_seconds": 3083.4221956003457,
+        "model_load_seconds": 12.43439969420433,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "generated_token_ratio_to_Base": 1.31231054997974,
+      "English_language": {
+        "Base": {
+          "thinking_English_highconf": 1319,
+          "correct_and_English_thinking_highconf": 1247,
+          "correct_and_both_English_sections_highconf": 884,
+          "correct_without_final_section": 0,
+          "summary": {
+            "thinking": {
+              "total_items": 1319,
+              "statuses": {
+                "predicted": 1319
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 1319
+              },
+              "target_top1_probability_ge_0_8": 1319,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1247
+              }
+            },
+            "final": {
+              "total_items": 1319,
+              "statuses": {
+                "predicted": 1311,
+                "no_final_section": 7,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 1226,
+                "__label__pap_Latn": 9,
+                "__label__yor_Latn": 18,
+                "__label__pcm_Latn": 3,
+                "__label__sna_Latn": 26,
+                "__label__luo_Latn": 3,
+                "__label__pag_Latn": 2,
+                "__label__cbk_Latn": 4,
+                "__label__tpi_Latn": 1,
+                "__label__bzj_Latn": 5,
+                "__label__nso_Latn": 1,
+                "__label__tuk_Latn": 1,
+                "__label__gom_Latn": 3,
+                "__label__jam_Latn": 1,
+                "__label__abn_Latn": 1,
+                "__label__ish_Latn": 1,
+                "__label__run_Latn": 2,
+                "__label__wol_Latn": 2,
+                "__label__sco_Latn": 1,
+                "__label__gaz_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 925,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1167,
+                "__label__pap_Latn": 8,
+                "__label__yor_Latn": 17,
+                "__label__pcm_Latn": 3,
+                "__label__sna_Latn": 24,
+                "__label__luo_Latn": 3,
+                "too_short": 1,
+                "__label__pag_Latn": 2,
+                "__label__tpi_Latn": 1,
+                "__label__bzj_Latn": 5,
+                "__label__nso_Latn": 1,
+                "__label__cbk_Latn": 3,
+                "__label__gom_Latn": 3,
+                "__label__jam_Latn": 1,
+                "__label__abn_Latn": 1,
+                "__label__ish_Latn": 1,
+                "__label__run_Latn": 2,
+                "__label__wol_Latn": 2,
+                "__label__sco_Latn": 1,
+                "__label__gaz_Latn": 1
+              }
+            }
+          }
+        },
+        "model": {
+          "thinking_English_highconf": 1319,
+          "correct_and_English_thinking_highconf": 1241,
+          "correct_and_both_English_sections_highconf": 890,
+          "correct_without_final_section": 0,
+          "summary": {
+            "thinking": {
+              "total_items": 1319,
+              "statuses": {
+                "predicted": 1319
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 1319
+              },
+              "target_top1_probability_ge_0_8": 1319,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1241
+              }
+            },
+            "final": {
+              "total_items": 1319,
+              "statuses": {
+                "predicted": 1300,
+                "no_final_section": 19
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 1223,
+                "__label__pap_Latn": 5,
+                "__label__run_Latn": 8,
+                "__label__sna_Latn": 20,
+                "__label__bzj_Latn": 4,
+                "__label__cbk_Latn": 6,
+                "__label__nso_Latn": 3,
+                "__label__yor_Latn": 17,
+                "__label__pcm_Latn": 1,
+                "__label__pag_Latn": 1,
+                "__label__nya_Latn": 1,
+                "__label__tpi_Latn": 3,
+                "__label__nld_Latn": 1,
+                "__label__gom_Latn": 3,
+                "__label__wes_Latn": 1,
+                "__label__kiu_Latn": 1,
+                "__label__kri_Latn": 1,
+                "__label__lin_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 937,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1168,
+                "__label__pap_Latn": 4,
+                "__label__run_Latn": 8,
+                "__label__sna_Latn": 19,
+                "__label__bzj_Latn": 4,
+                "__label__cbk_Latn": 6,
+                "__label__nso_Latn": 3,
+                "__label__yor_Latn": 15,
+                "__label__pcm_Latn": 1,
+                "__label__pag_Latn": 1,
+                "__label__nya_Latn": 1,
+                "__label__tpi_Latn": 3,
+                "__label__nld_Latn": 1,
+                "__label__gom_Latn": 3,
+                "__label__wes_Latn": 1,
+                "__label__kiu_Latn": 1,
+                "__label__kri_Latn": 1,
+                "__label__lin_Latn": 1
+              }
+            }
+          }
+        }
+      },
+      "actual_parent_adapter_SHA_and_path_verified": true,
+      "teacher_original_Base_unchanged_verified": true,
+      "English_is_training_stage": false,
+      "TensorBoard": {
+        "scalar_count": 13,
+        "all_scalars_read_back": true
+      },
+      "English_new_allocated_parent_GPU_hours": 3.3125,
+      "English_Base_reused_without_new_inference": true
+    },
+    {
+      "model_id": "reverse_s2",
+      "previous_stage_model_id": "ZH_matched900",
+      "stage_index": 2,
+      "local_checkpoint_step": 20,
+      "cumulative_display_updates": 40,
+      "English_items": 1319,
+      "Base_correct": 1247,
+      "current_correct": 1245,
+      "Base_delta_pp": -0.1516300227445034,
+      "Base_paired_question_CI95_pp": [
+        -0.9855951478392722,
+        0.6823351023502654
+      ],
+      "previous_stage_correct": 1244,
+      "previous_stage_gained": 21,
+      "previous_stage_lost": 20,
+      "previous_stage_change_pp": 0.0758150113722517,
+      "previous_stage_paired_question_CI95_pp": [
+        -0.8339651250947688,
+        1.061410159211524
+      ],
+      "English_metrics": {
+        "items": 1319,
+        "single_correct": 1245,
+        "generated_tokens": 2190137,
+        "truncated": 12,
+        "normal_terminations": 1307,
+        "answer_extraction_failures": 7,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9438968915845337,
+        "generation_seconds": 9535.96702661179,
+        "model_load_seconds": 13.807861162349582,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "previous_stage_English_metrics": {
+        "items": 1319,
+        "single_correct": 1244,
+        "generated_tokens": 2060040,
+        "truncated": 12,
+        "normal_terminations": 1307,
+        "answer_extraction_failures": 8,
+        "protocol": "project_formal4b_n1_8192_native16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9431387414708112,
+        "generation_seconds": 8931.801011849195,
+        "model_load_seconds": 13.594764120876789,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "Base_English_metrics": {
+        "items": 1319,
+        "single_correct": 1247,
+        "generated_tokens": 2053312,
+        "truncated": 8,
+        "normal_terminations": 1311,
+        "answer_extraction_failures": 7,
+        "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+        "benchmark": "gsm8k",
+        "formal_full_test": true,
+        "n": 1,
+        "generation_count": 1319,
+        "single_accuracy": 0.9454131918119788,
+        "generation_seconds": 3083.4221956003457,
+        "model_load_seconds": 12.43439969420433,
+        "actual_max_num_seqs": 16,
+        "scores_by_difficulty": {}
+      },
+      "generated_token_ratio_to_Base": 1.0666362442726678,
+      "English_language": {
+        "Base": {
+          "thinking_English_highconf": 1319,
+          "correct_and_English_thinking_highconf": 1247,
+          "correct_and_both_English_sections_highconf": 884,
+          "correct_without_final_section": 0,
+          "summary": {
+            "thinking": {
+              "total_items": 1319,
+              "statuses": {
+                "predicted": 1319
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 1319
+              },
+              "target_top1_probability_ge_0_8": 1319,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1247
+              }
+            },
+            "final": {
+              "total_items": 1319,
+              "statuses": {
+                "predicted": 1311,
+                "no_final_section": 7,
+                "too_short": 1
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 1226,
+                "__label__pap_Latn": 9,
+                "__label__yor_Latn": 18,
+                "__label__pcm_Latn": 3,
+                "__label__sna_Latn": 26,
+                "__label__luo_Latn": 3,
+                "__label__pag_Latn": 2,
+                "__label__cbk_Latn": 4,
+                "__label__tpi_Latn": 1,
+                "__label__bzj_Latn": 5,
+                "__label__nso_Latn": 1,
+                "__label__tuk_Latn": 1,
+                "__label__gom_Latn": 3,
+                "__label__jam_Latn": 1,
+                "__label__abn_Latn": 1,
+                "__label__ish_Latn": 1,
+                "__label__run_Latn": 2,
+                "__label__wol_Latn": 2,
+                "__label__sco_Latn": 1,
+                "__label__gaz_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 925,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1167,
+                "__label__pap_Latn": 8,
+                "__label__yor_Latn": 17,
+                "__label__pcm_Latn": 3,
+                "__label__sna_Latn": 24,
+                "__label__luo_Latn": 3,
+                "too_short": 1,
+                "__label__pag_Latn": 2,
+                "__label__tpi_Latn": 1,
+                "__label__bzj_Latn": 5,
+                "__label__nso_Latn": 1,
+                "__label__cbk_Latn": 3,
+                "__label__gom_Latn": 3,
+                "__label__jam_Latn": 1,
+                "__label__abn_Latn": 1,
+                "__label__ish_Latn": 1,
+                "__label__run_Latn": 2,
+                "__label__wol_Latn": 2,
+                "__label__sco_Latn": 1,
+                "__label__gaz_Latn": 1
+              }
+            }
+          }
+        },
+        "model": {
+          "thinking_English_highconf": 1319,
+          "correct_and_English_thinking_highconf": 1245,
+          "correct_and_both_English_sections_highconf": 870,
+          "correct_without_final_section": 1,
+          "summary": {
+            "thinking": {
+              "total_items": 1319,
+              "statuses": {
+                "predicted": 1319
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 1319
+              },
+              "target_top1_probability_ge_0_8": 1319,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1245
+              }
+            },
+            "final": {
+              "total_items": 1319,
+              "statuses": {
+                "predicted": 1310,
+                "no_final_section": 9
+              },
+              "top1_label_counts": {
+                "__label__eng_Latn": 1227,
+                "__label__pap_Latn": 7,
+                "__label__yor_Latn": 18,
+                "__label__sna_Latn": 17,
+                "__label__run_Latn": 7,
+                "__label__pag_Latn": 2,
+                "__label__gom_Latn": 8,
+                "__label__bzj_Latn": 2,
+                "__label__cbk_Latn": 9,
+                "__label__nya_Latn": 5,
+                "__label__nso_Latn": 4,
+                "__label__vec_Latn": 1,
+                "__label__ish_Latn": 1,
+                "__label__wol_Latn": 1,
+                "__label__luo_Latn": 1
+              },
+              "target_top1_probability_ge_0_8": 917,
+              "correct_items_label_counts": {
+                "__label__eng_Latn": 1165,
+                "__label__pap_Latn": 7,
+                "__label__yor_Latn": 17,
+                "__label__sna_Latn": 16,
+                "__label__run_Latn": 6,
+                "__label__pag_Latn": 2,
+                "__label__gom_Latn": 8,
+                "__label__bzj_Latn": 2,
+                "__label__cbk_Latn": 9,
+                "__label__nya_Latn": 5,
+                "__label__vec_Latn": 1,
+                "__label__nso_Latn": 3,
+                "__label__ish_Latn": 1,
+                "no_final_section": 1,
+                "__label__wol_Latn": 1,
+                "__label__luo_Latn": 1
+              }
+            }
+          }
+        }
+      },
+      "actual_parent_adapter_SHA_and_path_verified": true,
+      "teacher_original_Base_unchanged_verified": true,
+      "English_is_training_stage": false,
+      "TensorBoard": {
+        "scalar_count": 13,
+        "all_scalars_read_back": true
+      },
+      "English_new_allocated_parent_GPU_hours": 2.6686111111111113,
+      "English_Base_reused_without_new_inference": true
+    }
+  ],
+  "private_acceptance_sha256": "8dd4b60a95c15e3f7bfaf896df63c514b2aed8e28dda3f86e6804100d3713cfd",
+  "both_stage2_MGSM3_plus_English_complete": true,
+  "final_stage_English_complete": false,
+  "PolyMath_complete": false,
+  "complete_seven_case_stages": false,
+  "interpretation": "Stage2EnglishGSM8K is1241/1319 afterSW/TE and1245/1319 afterZH/TE versusBase1247. All paired-question intervals relative to Base and actual preceding stage include zero, not an equivalence result. Near-Base English mathematics coexists with TE-target collapse/decline; it cannot establish general mathematical preservation or explain away target-language failure. Forward/reverse English generation tokens are31.2%/6.7% aboveBase under the same maximum cap. Final-stage English and PolyMath remain pending.",
+  "limitations": [
+    "Fixed training models, one training seed; question bootstrap is not trainingseed-population inference or multiplicity corrected.",
+    "Actual parent adapter hashes/resolved paths and shared question/prompt/answer/request seeds were checked; no claim about a unique training root cause.",
+    "English GSM8K is one mathematical benchmark, not general English fluency or all English capabilities.",
+    "Allocation cost appears in underlying pair receipts; do not sum partial reports onto overlapping suite/queue totals."
+  ],
+  "GPU_started_by_collector": false,
+  "new_generations_by_collector": 0,
+  "original_scores_preserved": true
+}

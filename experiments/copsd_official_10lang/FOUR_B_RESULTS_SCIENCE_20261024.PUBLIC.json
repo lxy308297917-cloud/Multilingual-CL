@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T06:08:46.974184+08:00",
+  "updated_at": "2026-10-25T08:39:46.236093+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1043,11 +1043,61 @@
           0.6823351023502654
         ],
         "source": "SELECTED4B_MATCHED_THREE_ENGLISH_SCIENCE_20261025.PUBLIC.json"
+      },
+      {
+        "model_id": "forward_s2",
+        "stage_index": 2,
+        "current_training_language": "te",
+        "English_items": 1319,
+        "Base_English_correct": 1247,
+        "model_English_correct": 1241,
+        "English_gained": 16,
+        "English_lost": 22,
+        "English_delta_pp": -0.45489006823351025,
+        "English_paired_question_CI95_pp": [
+          -1.3646702047005308,
+          0.45489006823351025
+        ],
+        "previous_stage_model_id": "SW_matched900",
+        "previous_stage_English_correct": 1244,
+        "previous_stage_change_pp": -0.22744503411675512,
+        "previous_stage_question_CI95_pp": [
+          -1.2130401819560273,
+          0.7581501137225171
+        ],
+        "source": "SELECTED4B_STAGE2_ENGLISH_RETENTION_SCIENCE_20261025.PUBLIC.json",
+        "complete_seven_case_stage": false
+      },
+      {
+        "model_id": "reverse_s2",
+        "stage_index": 2,
+        "current_training_language": "te",
+        "English_items": 1319,
+        "Base_English_correct": 1247,
+        "model_English_correct": 1245,
+        "English_gained": 16,
+        "English_lost": 18,
+        "English_delta_pp": -0.1516300227445034,
+        "English_paired_question_CI95_pp": [
+          -0.9855951478392722,
+          0.6823351023502654
+        ],
+        "previous_stage_model_id": "ZH_matched900",
+        "previous_stage_English_correct": 1244,
+        "previous_stage_change_pp": 0.0758150113722517,
+        "previous_stage_question_CI95_pp": [
+          -0.8339651250947688,
+          1.061410159211524
+        ],
+        "source": "SELECTED4B_STAGE2_ENGLISH_RETENTION_SCIENCE_20261025.PUBLIC.json",
+        "complete_seven_case_stage": false
       }
     ],
     "matched_reference_main_four_cases_complete": true,
     "matched_reference_seven_cases_complete": false,
-    "sequential_English_complete": false
+    "sequential_English_complete": false,
+    "both_stage2_main_four_cases_complete": true,
+    "both_stage2_seven_cases_complete": false
   },
   "scoring_diagnostic": {
     "source": "MGSM_PERCENTAGE_AND_REASONING_DIAGNOSTIC_20261025.PUBLIC.json",
