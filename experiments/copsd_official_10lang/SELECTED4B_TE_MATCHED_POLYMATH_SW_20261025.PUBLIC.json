@@ -1,0 +1,295 @@
+{
+  "model_id": "TE_matched900",
+  "case": "polymath_sw",
+  "items": 500,
+  "Base_correct": 22,
+  "model_correct": 28,
+  "gained": 21,
+  "lost": 15,
+  "delta_percentage_points": 1.2,
+  "paired_question_bootstrap95_CI_pp": [
+    -1.0,
+    3.5999999999999996
+  ],
+  "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+  "observed_at": "2026-10-25T13:08:07.952748+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "Base_metrics": {
+    "items": 500,
+    "single_correct": 22,
+    "generated_tokens": 2992872,
+    "truncated": 332,
+    "normal_terminations": 168,
+    "answer_extraction_failures": 324,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.044,
+    "generation_seconds": 5620.218837251887,
+    "model_load_seconds": 11.8686205111444,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 15,
+        "single_accuracy": 0.12
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 2,
+        "single_accuracy": 0.016
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 3,
+        "single_accuracy": 0.024
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 2,
+        "single_accuracy": 0.016
+      }
+    }
+  },
+  "model_metrics": {
+    "items": 500,
+    "single_correct": 28,
+    "generated_tokens": 2917749,
+    "truncated": 301,
+    "normal_terminations": 199,
+    "answer_extraction_failures": 283,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.056,
+    "generation_seconds": 12862.677999781445,
+    "model_load_seconds": 13.804775346070528,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 14,
+        "single_accuracy": 0.112
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 9,
+        "single_accuracy": 0.072
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 4,
+        "single_accuracy": 0.032
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 1,
+        "single_accuracy": 0.008
+      }
+    }
+  },
+  "adapter_sha256": "badb5a6968c7b1edbacb6419fb5da4084663260f0072808b14ec7901125ab6a8",
+  "raw_source_sha256": {
+    "Base": {
+      "CONFIG.json": "dcabe4a19d9f065f563d2fba3306394855391b5a726bed75c15d74159ed47122",
+      "DONE.json": "ffa5e087374f54e17b5df394563c155d76e9ae90ff6cc94960b421d56ad5dae8",
+      "ITEMS.jsonl": "acbaec57c0ec13921579e2fd4e4087e128c0faf322ed38e6eaeca8617c7f7877"
+    },
+    "model": {
+      "CONFIG.json": "5f2aa2f88f61cb30139af69f157b63f7af076693e1e0b7ff77e697f082508177",
+      "DONE.json": "25c2b2bfc2163ac3640c7c3584aafb53f2db6297d05cd18909a41e5140ccad39",
+      "ITEMS.jsonl": "2298e91e5de24a23aeac8d4e949da0cf466218a57401adbdd65994e160d23894"
+    }
+  },
+  "private_pair_receipt_sha256": "d90b0147a8dfc970e7a59b67b71cf1cc58c0605c3d1cd3dc7d849d5e4d90ffb5",
+  "language": {
+    "Base": {
+      "thinking_SW_highconf": 308,
+      "correct_and_SW_thinking_highconf": 15,
+      "correct_and_both_SW_sections_highconf": 3,
+      "correct_without_final_section": 0,
+      "summary": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 391,
+            "__label__ktu_Latn": 5,
+            "__label__sgb_Latn": 3,
+            "__label__kdc_Latn": 8,
+            "__label__swc_Latn": 35,
+            "__label__eng_Latn": 19,
+            "__label__mwc_Latn": 1,
+            "__label__pkb_Latn": 1,
+            "__label__hay_Latn": 5,
+            "__label__phm_Latn": 1,
+            "__label__mer_Latn": 2,
+            "__label__run_Latn": 1,
+            "__label__sbl_Latn": 1,
+            "__label__abs_Latn": 1,
+            "__label__ksb_Latn": 1,
+            "__label__kng_Latn": 6,
+            "__label__kwn_Latn": 1,
+            "__label__lea_Latn": 1,
+            "__label__lub_Latn": 1,
+            "__label__kwy_Latn": 1,
+            "__label__fuq_Latn": 4,
+            "__label__lin_Latn": 1,
+            "__label__inh_Cyrl": 1,
+            "__label__qup_Latn": 1,
+            "__label__inb_Latn": 1,
+            "__label__npl_Latn": 1,
+            "__label__cwe_Latn": 1,
+            "__label__pol_Latn": 1,
+            "__label__ngp_Latn": 1,
+            "__label__adh_Latn": 1,
+            "__label__ndj_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 308,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 17,
+            "__label__kdc_Latn": 1,
+            "__label__swc_Latn": 2,
+            "__label__eng_Latn": 2
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 175,
+            "no_final_section": 325
+          },
+          "top1_label_counts": {
+            "__label__swc_Latn": 46,
+            "__label__swh_Latn": 111,
+            "__label__kam_Latn": 3,
+            "__label__ssw_Latn": 3,
+            "__label__kdc_Latn": 1,
+            "__label__mer_Latn": 1,
+            "__label__hay_Latn": 1,
+            "__label__eng_Latn": 4,
+            "__label__ktu_Latn": 2,
+            "__label__kng_Latn": 1,
+            "__label__fud_Latn": 1,
+            "__label__nnq_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 73,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 8,
+            "__label__swc_Latn": 8,
+            "__label__kdc_Latn": 1,
+            "__label__kam_Latn": 1,
+            "__label__ssw_Latn": 1,
+            "__label__eng_Latn": 2,
+            "__label__fud_Latn": 1
+          }
+        }
+      }
+    },
+    "model": {
+      "thinking_SW_highconf": 300,
+      "correct_and_SW_thinking_highconf": 19,
+      "correct_and_both_SW_sections_highconf": 9,
+      "correct_without_final_section": 1,
+      "summary": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__loq_Latn": 1,
+            "__label__ndj_Latn": 1,
+            "__label__swh_Latn": 372,
+            "__label__lad_Latn": 1,
+            "__label__kdc_Latn": 4,
+            "__label__eng_Latn": 43,
+            "__label__lea_Latn": 1,
+            "__label__swc_Latn": 27,
+            "__label__loz_Latn": 3,
+            "__label__lin_Latn": 4,
+            "__label__fuq_Latn": 5,
+            "__label__atj_Latn": 1,
+            "__label__wmw_Latn": 4,
+            "__label__ktu_Latn": 3,
+            "__label__pmf_Latn": 6,
+            "__label__kng_Latn": 4,
+            "__label__nyf_Latn": 1,
+            "__label__qup_Latn": 1,
+            "__label__mkn_Latn": 3,
+            "__label__for_Latn": 1,
+            "__label__itv_Latn": 1,
+            "__label__mgr_Latn": 1,
+            "__label__cgc_Latn": 1,
+            "__label__kwn_Latn": 1,
+            "__label__old_Latn": 1,
+            "__label__ksb_Latn": 1,
+            "__label__sgb_Latn": 1,
+            "__label__inh_Cyrl": 1,
+            "__label__npl_Latn": 1,
+            "__label__lub_Latn": 1,
+            "__label__ngp_Latn": 1,
+            "__label__hay_Latn": 1,
+            "__label__xed_Latn": 1,
+            "__label__sgc_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 300,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 22,
+            "__label__eng_Latn": 5,
+            "__label__fuq_Latn": 1
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "no_final_section": 292,
+            "predicted": 208
+          },
+          "top1_label_counts": {
+            "__label__swc_Latn": 39,
+            "__label__swh_Latn": 137,
+            "__label__ssw_Latn": 5,
+            "__label__eng_Latn": 20,
+            "__label__kam_Latn": 1,
+            "__label__loz_Latn": 1,
+            "__label__ktu_Latn": 1,
+            "__label__ndc_Latn": 1,
+            "__label__hay_Latn": 1,
+            "__label__pmf_Latn": 1,
+            "__label__luo_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 100,
+          "correct_items_label_counts": {
+            "__label__swc_Latn": 7,
+            "__label__ssw_Latn": 1,
+            "__label__swh_Latn": 15,
+            "__label__eng_Latn": 4,
+            "no_final_section": 1
+          }
+        }
+      }
+    }
+  },
+  "language_receipt_sha256": "678f26313ccaa905cf013a4e411229768f5495c5135d948b8b9caf1abc96b12f",
+  "language_analysis_accepted": true,
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true,
+    "local_checkpoint_step": 20
+  },
+  "new_evaluation_parent_cost": {
+    "new_GPU_hours": 3.593888888888889,
+    "reused": false,
+    "new_generated_tokens": 2917749
+  },
+  "complete_seven_case_stage": false,
+  "scope": "TE matched-single model evaluated on SW PolyMath, not an SW training stage or post-learning forgetting. All500questions/four125-question tiers, frozen original scoring, n1/8192/native16;20updates under100scheduler is project adaptation, not strict official100step/pass12 reproduction. Positive estimate with paired question interval includingzero does not establish transfer, equivalence or training-seed robustness. Whole-section language classification is not fluency or per-token purity. Different-language matched references use different frozen training problem pools and token counts; their difference cannot be attributed solely to training language. Parent cost overlaps queue/full-suite totals."
+}
