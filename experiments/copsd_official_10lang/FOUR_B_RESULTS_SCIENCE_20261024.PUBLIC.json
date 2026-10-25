@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T18:58:42.240794+08:00",
+  "updated_at": "2026-10-25T20:09:46.582512+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1279,6 +1279,32 @@
         "all_seven_model_language_cases_audited": true,
         "dispatcher_reserved_marker_written": false,
         "public_report": "SELECTED4B_ZH_MATCHED_SEVEN_CASES_20261025.PUBLIC.json"
+      }
+    },
+    "accepted_partial_PolyMath_forgetting_histories": {
+      "forward_s2:sw": {
+        "learned_correct": 58,
+        "current_correct": 90,
+        "items": 500,
+        "historical_best_forgetting_pp": -6.4,
+        "paired_question_forgetting_CI95_pp": [
+          -9.6,
+          -3.2
+        ],
+        "SW_highconf_thinking_learned_current": [
+          287,
+          99
+        ],
+        "English_top1_thinking_learned_current": [
+          152,
+          358
+        ],
+        "joint_correct_SW_highconf_thinking_learned_current": [
+          32,
+          26
+        ],
+        "complete_forgetting_matrix": false,
+        "public_report": "SEQUENTIAL4B_FORWARD_S2_SW_POLYMATH_FORGETTING_SCIENCE_20261025.PUBLIC.json"
       }
     }
   },
