@@ -1,0 +1,218 @@
+{
+  "model_id": "SW_matched900",
+  "case": "polymath_zh",
+  "items": 500,
+  "Base_correct": 207,
+  "model_correct": 215,
+  "gained": 29,
+  "lost": 21,
+  "delta_percentage_points": 1.6,
+  "paired_question_bootstrap95_CI_pp": [
+    -1.2,
+    4.3999999999999995
+  ],
+  "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+  "observed_at": "2026-10-25T12:54:32.733154+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "Base_metrics": {
+    "items": 500,
+    "single_correct": 207,
+    "generated_tokens": 2883151,
+    "truncated": 263,
+    "normal_terminations": 237,
+    "answer_extraction_failures": 242,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.414,
+    "generation_seconds": 5190.026367083192,
+    "model_load_seconds": 11.539453009143472,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 111,
+        "single_accuracy": 0.888
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 63,
+        "single_accuracy": 0.504
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 27,
+        "single_accuracy": 0.216
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 6,
+        "single_accuracy": 0.048
+      }
+    }
+  },
+  "model_metrics": {
+    "items": 500,
+    "single_correct": 215,
+    "generated_tokens": 2934928,
+    "truncated": 264,
+    "normal_terminations": 236,
+    "answer_extraction_failures": 228,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.43,
+    "generation_seconds": 13070.74436039105,
+    "model_load_seconds": 13.38701443746686,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 111,
+        "single_accuracy": 0.888
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 66,
+        "single_accuracy": 0.528
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 27,
+        "single_accuracy": 0.216
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 11,
+        "single_accuracy": 0.088
+      }
+    }
+  },
+  "adapter_sha256": "d267c4b82c449e9ab1f315c99b2a204df7f59e32752373d173efbd463ccd9607",
+  "raw_source_sha256": {
+    "Base": {
+      "CONFIG.json": "96e9052cb3997993653771eb204774ffcf7b05d59e359e2c8e46dae7ac022f97",
+      "DONE.json": "541d042fd5f9a4e22589798830343a87734d9df1413ec4b1c7b16fdebab92610",
+      "ITEMS.jsonl": "d60d071ae598040d19ba492efca06d1e2170326aab097cbb92f735c09fb0e60f"
+    },
+    "model": {
+      "CONFIG.json": "f785ae880e47fec3b1c545c43f444da6962a0d058e69d51d844bdadf4ddf8806",
+      "DONE.json": "ea0c6838650d5baca8a309da8a9de13c7f8ecfa7f59a64edafb251d14f81d4a8",
+      "ITEMS.jsonl": "319a604dd5c5d1c59911eb84037e99116fb1f8908fea06a2f37757caaf12ac13"
+    }
+  },
+  "private_pair_receipt_sha256": "9d263a4d4dedb19d4de312e47e72cb9e8f3590e6b9c22c73d4304bfc9ff32baf",
+  "language": {
+    "Base": {
+      "thinking_ZH_highconf": 464,
+      "correct_and_ZH_thinking_highconf": 189,
+      "correct_and_both_ZH_sections_highconf": 185,
+      "correct_without_final_section": 1,
+      "summary": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 492,
+            "__label__dan_Latn": 1,
+            "__label__lit_Latn": 1,
+            "__label__amh_Ethi": 1,
+            "__label__rue_Cyrl": 1,
+            "__label__lvs_Latn": 1,
+            "__label__som_Latn": 1,
+            "__label__lmo_Latn": 1,
+            "__label__eng_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 464,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 204,
+            "__label__lit_Latn": 1,
+            "__label__rue_Cyrl": 1,
+            "__label__som_Latn": 1
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 256,
+            "no_final_section": 244
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 255,
+            "__label__anp_Deva": 1
+          },
+          "target_top1_probability_ge_0_8": 253,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 205,
+            "no_final_section": 1,
+            "__label__anp_Deva": 1
+          }
+        }
+      }
+    },
+    "model": {
+      "thinking_ZH_highconf": 473,
+      "correct_and_ZH_thinking_highconf": 203,
+      "correct_and_both_ZH_sections_highconf": 193,
+      "correct_without_final_section": 8,
+      "summary": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 495,
+            "__label__vep_Latn": 2,
+            "__label__dan_Latn": 1,
+            "__label__rue_Cyrl": 1,
+            "__label__mlt_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 473,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 212,
+            "__label__vep_Latn": 2,
+            "__label__rue_Cyrl": 1
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 260,
+            "no_final_section": 239,
+            "too_short": 1
+          },
+          "top1_label_counts": {
+            "__label__cmn_Hani": 260
+          },
+          "target_top1_probability_ge_0_8": 258,
+          "correct_items_label_counts": {
+            "__label__cmn_Hani": 207,
+            "no_final_section": 8
+          }
+        }
+      }
+    }
+  },
+  "language_receipt_sha256": "9789f766ce2ae56a3bc0986c7b3f135dddd939a4c4320b9ddb8f349bbb2f615a",
+  "language_analysis_accepted": true,
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true,
+    "local_checkpoint_step": 20
+  },
+  "new_evaluation_parent_cost": {
+    "new_GPU_hours": 3.651388888888889,
+    "reused": false,
+    "new_generated_tokens": 2934928
+  },
+  "complete_seven_case_stage": false,
+  "scope": "SW matched-single model evaluated on Chinese PolyMath, not a Chinese training stage or post-learning forgetting. All500questions, four125-question tiers, frozen original scoring, n1/8192/native16;20updates under100scheduler is a project adaptation, not strict official100step/pass12 reproduction. The paired question interval includeszero; positive estimate does not establish transfer, equivalence or training-seed robustness. Whole-section language labels do not establish fluency, token purity or causal mechanisms. Parent cost overlaps ledger/full-suite totals."
+}
