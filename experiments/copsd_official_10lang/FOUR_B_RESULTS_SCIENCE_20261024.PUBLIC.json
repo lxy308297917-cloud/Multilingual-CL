@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T00:45:08.359174+08:00",
+  "updated_at": "2026-10-26T01:33:41.726606+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1285,6 +1285,12 @@
         "all_seven_model_language_cases_audited": true,
         "dispatcher_reserved_marker_written": false,
         "public_report": "SEQUENTIAL4B_FORWARD_S2_SEVEN_CASES_20261025.PUBLIC.json"
+      },
+      "reverse_s2": {
+        "all_seven_cases_individually_audited": true,
+        "all_seven_model_language_cases_audited": true,
+        "dispatcher_reserved_marker_written": false,
+        "public_report": "SEQUENTIAL4B_REVERSE_S2_SEVEN_CASES_20261026.PUBLIC.json"
       }
     },
     "accepted_partial_PolyMath_forgetting_histories": {
@@ -1311,6 +1317,18 @@
         ],
         "complete_forgetting_matrix": false,
         "public_report": "SEQUENTIAL4B_FORWARD_S2_SW_POLYMATH_FORGETTING_SCIENCE_20261025.PUBLIC.json"
+      },
+      "reverse_s2:zh": {
+        "learned_correct": 225,
+        "current_correct": 218,
+        "items": 500,
+        "historical_best_forgetting_pp": 1.4,
+        "paired_question_forgetting_CI95_pp": [
+          -1.8,
+          4.6
+        ],
+        "complete_forgetting_matrix": false,
+        "public_report": "SEQUENTIAL4B_REVERSE_S2_ZH_POLYMATH_FORGETTING_SCIENCE_20261026.PUBLIC.json"
       }
     },
     "accepted_partial_PolyMath_prelearning_changes": {
@@ -1369,6 +1387,31 @@
         "all_three_actual_release_identities_bound_to_training_audit": true,
         "unique_root_cause_proven": false,
         "public_report": "SEQUENTIAL4B_REVERSE_S2_TE_ACQUISITION_SCIENCE_20261026.PUBLIC.json"
+      },
+      "reverse_s3:sw": {
+        "Base_correct": 22,
+        "previous_actual_stage_correct": 32,
+        "matched_SW_single_correct": 58,
+        "current_correct": 76,
+        "items": 500,
+        "same_current_SW640_inputs_order_and_prompt_fingerprints": true,
+        "cumulative_updates_current_single": [
+          60,
+          20
+        ],
+        "SW_highconf_thinking_previous_current": [
+          266,
+          194
+        ],
+        "English_thinking_previous_current": [
+          50,
+          210
+        ],
+        "joint_correct_SW_thinking_previous_current": [
+          21,
+          35
+        ],
+        "public_report": "SEQUENTIAL4B_REVERSE_S3_SW_ACQUISITION_SCIENCE_20261026.PUBLIC.json"
       }
     }
   },

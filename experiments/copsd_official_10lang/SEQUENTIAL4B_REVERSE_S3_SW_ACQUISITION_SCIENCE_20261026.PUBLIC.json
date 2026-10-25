@@ -1,0 +1,175 @@
+{
+  "observed_at": "2026-10-26T01:33:41.726606+08:00",
+  "model_id": "reverse_s3",
+  "case": "polymath_sw",
+  "items": 500,
+  "current_stage_language": "sw",
+  "new_language_acquisition": true,
+  "post_learning_forgetting": false,
+  "comparisons": {
+    "previous": {
+      "previous_correct": 32,
+      "current_correct": 76,
+      "gained": 58,
+      "lost": 14,
+      "change_pp": 8.799999999999999,
+      "change_question_CI95_pp": [
+        5.6000000000000005,
+        12.2
+      ],
+      "lost_current_truncated": 3,
+      "lost_current_no_extracted_box": 3,
+      "lost_current_normal_with_box": 11
+    },
+    "single": {
+      "previous_correct": 58,
+      "current_correct": 76,
+      "gained": 41,
+      "lost": 23,
+      "change_pp": 3.5999999999999996,
+      "change_question_CI95_pp": [
+        0.4,
+        6.6000000000000005
+      ],
+      "lost_current_truncated": 9,
+      "lost_current_no_extracted_box": 6,
+      "lost_current_normal_with_box": 14
+    }
+  },
+  "termination": {
+    "previous": {
+      "items": 500,
+      "correct": 32,
+      "truncated": 288,
+      "no_extracted_answer": 268,
+      "truncated_and_no_answer": 266,
+      "correct_and_normally_terminated": 29
+    },
+    "single": {
+      "items": 500,
+      "correct": 58,
+      "truncated": 137,
+      "no_extracted_answer": 135,
+      "truncated_and_no_answer": 118,
+      "correct_and_normally_terminated": 54
+    },
+    "current": {
+      "items": 500,
+      "correct": 76,
+      "truncated": 173,
+      "no_extracted_answer": 118,
+      "truncated_and_no_answer": 116,
+      "correct_and_normally_terminated": 68
+    }
+  },
+  "language": {
+    "previous": {
+      "thinking_target_highconf": 266,
+      "thinking_English_top1": 50,
+      "correct_and_target_thinking_highconf": 21,
+      "correct_and_both_parts_target_highconf": 8
+    },
+    "single": {
+      "thinking_target_highconf": 287,
+      "thinking_English_top1": 152,
+      "correct_and_target_thinking_highconf": 32,
+      "correct_and_both_parts_target_highconf": 9
+    },
+    "current": {
+      "thinking_target_highconf": 194,
+      "thinking_English_top1": 210,
+      "correct_and_target_thinking_highconf": 35,
+      "correct_and_both_parts_target_highconf": 8
+    }
+  },
+  "actual_parent_adapter_verified": true,
+  "original_Base_bitwise_unchanged_verified": true,
+  "same_640_SW_training_problem_order_and_prompt_fingerprints_from_bound_audit": true,
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "order": [
+    "zh",
+    "te",
+    "sw"
+  ],
+  "stage_index": 3,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 60,
+  "single_reference_cumulative_updates": 20,
+  "current_stage_training_question_exposures": 640,
+  "single_reference_training_question_exposures": 640,
+  "Base_comparison": {
+    "Base_correct": 22,
+    "model_correct": 76,
+    "gained": 64,
+    "lost": 10,
+    "delta_percentage_points": 10.8,
+    "paired_question_bootstrap95_CI_pp": [
+      7.6,
+      14.000000000000002
+    ]
+  },
+  "current_metrics": {
+    "items": 500,
+    "single_correct": 76,
+    "generated_tokens": 2646200,
+    "truncated": 173,
+    "normal_terminations": 327,
+    "answer_extraction_failures": 118,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.152,
+    "generation_seconds": 12318.531749339774,
+    "model_load_seconds": 13.301814567297697,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 23,
+        "single_accuracy": 0.184
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 34,
+        "single_accuracy": 0.272
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 11,
+        "single_accuracy": 0.088
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 8,
+        "single_accuracy": 0.064
+      }
+    }
+  },
+  "current_raw_files_sha256": {
+    "CONFIG.json": "0d7b2e7b0ab4501fc05c3b519d95e946c211407d8330b2cd58595c52ce1e98b0",
+    "DONE.json": "8b1849b3b699127096e2dd0f3b225b51ff233839714e1fb18467d992d8ec09a5",
+    "ITEMS.jsonl": "92a6c5c4b82cee3c89ecff523661f01909b1d52b8133860472d6c1156abaec7d"
+  },
+  "current_evaluation_parent_cost": {
+    "new_GPU_hours": 3.4444444444444446,
+    "reused": false,
+    "new_generated_tokens": 2646200
+  },
+  "source_sha256": {
+    "private_acquisition_receipt": "1546bda135283de27c1efaa53a1359c917ec6e83fae94ab3265cdec9584eba6a",
+    "current_pair_receipt": "51dd29f46f116a0538b0f31d8c8dc46bfca5ab2129ef74ac951988ed8fa0ed2d",
+    "partial_TensorBoard_receipt": "00694b3c629872164ef62ac50a3c94cc3b4c46868406498529704c0d1f17ab31",
+    "collector": "2d29232cd12b5a237f32488f38039e0e0283b63f7c3c5d3146b9c1a97c2f7e74"
+  },
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true,
+    "local_checkpoint_step": 20
+  },
+  "complete_seven_case_stage": false,
+  "complete_forgetting_matrix": false,
+  "scope": "New SW acquisition after ZH->TE->SW, not old-SW forgetting. All500questions/four125-question tiers, same prompts/request seeds/original scoring. Stage3 and freshSW20 share actual640trainingIDs/order/data and student-teacherpromptfingerprints, bound to bothactualreleases/freezes/recordedpromptfiles/evaluatedadapters. Currentstagebudget20updates matches reference, cumulative60vs20 and priorhistory/online trajectories differ; not an equal-total-budget method comparison. Math rises while whole-sectionSWthoughtcount drops and Englishrises; jointcounts and original math retained. Language labels are not fluency/per-token purity/causality. Fixed-model question CIs, one trainingseed/no multiplicity correction. Project20under100scheduler/n1/8192/native16, not strict official100step/pass12. Allocation costs overlap queue/full-suite totals."
+}

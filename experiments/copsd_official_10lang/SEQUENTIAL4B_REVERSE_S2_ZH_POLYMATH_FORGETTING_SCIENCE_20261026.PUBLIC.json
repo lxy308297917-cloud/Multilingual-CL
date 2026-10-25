@@ -1,0 +1,240 @@
+{
+  "model_id": "reverse_s2",
+  "case": "polymath_zh",
+  "items": 500,
+  "learned_stage": {
+    "previous_correct": 225,
+    "current_correct": 218,
+    "gained": 31,
+    "lost": 38,
+    "change_pp": -1.4000000000000001,
+    "change_question_CI95_pp": [
+      -4.6,
+      1.7999999999999998
+    ],
+    "signed_decline_pp": 1.4000000000000001,
+    "signed_decline_question_CI95_pp": [
+      -1.7999999999999998,
+      4.6
+    ],
+    "lost_current_truncated": 22,
+    "lost_current_no_extracted_box": 22,
+    "lost_current_normal_with_box": 16
+  },
+  "previous_stage": {
+    "previous_correct": 225,
+    "current_correct": 218,
+    "gained": 31,
+    "lost": 38,
+    "change_pp": -1.4000000000000001,
+    "change_question_CI95_pp": [
+      -4.6,
+      1.7999999999999998
+    ],
+    "signed_decline_pp": 1.4000000000000001,
+    "signed_decline_question_CI95_pp": [
+      -1.7999999999999998,
+      4.6
+    ],
+    "lost_current_truncated": 22,
+    "lost_current_no_extracted_box": 22,
+    "lost_current_normal_with_box": 16
+  },
+  "historical_best_model_id": "ZH_matched900",
+  "historical_best_forgetting_pp": 1.4000000000000001,
+  "historical_best_forgetting_question_CI95_pp": [
+    -1.7999999999999998,
+    4.6
+  ],
+  "language": {
+    "learned": {
+      "thinking_target_highconf": 479,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 214,
+      "correct_and_both_parts_target_highconf": 203
+    },
+    "previous": {
+      "thinking_target_highconf": 479,
+      "thinking_English_top1": 0,
+      "correct_and_target_thinking_highconf": 214,
+      "correct_and_both_parts_target_highconf": 203
+    },
+    "current": {
+      "thinking_target_highconf": 486,
+      "thinking_English_top1": 1,
+      "correct_and_target_thinking_highconf": 211,
+      "correct_and_both_parts_target_highconf": 194
+    }
+  },
+  "language_detector_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "metrics": {
+    "learned": {
+      "items": 500,
+      "single_correct": 225,
+      "generated_tokens": 2671244,
+      "truncated": 217,
+      "normal_terminations": 283,
+      "answer_extraction_failures": 188,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "polymath",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 500,
+      "single_accuracy": 0.45,
+      "generation_seconds": 11634.05494169332,
+      "model_load_seconds": 13.281302677467465,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 110,
+          "single_accuracy": 0.88
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 60,
+          "single_accuracy": 0.48
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 39,
+          "single_accuracy": 0.312
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 16,
+          "single_accuracy": 0.128
+        }
+      }
+    },
+    "previous": {
+      "items": 500,
+      "single_correct": 225,
+      "generated_tokens": 2671244,
+      "truncated": 217,
+      "normal_terminations": 283,
+      "answer_extraction_failures": 188,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "polymath",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 500,
+      "single_accuracy": 0.45,
+      "generation_seconds": 11634.05494169332,
+      "model_load_seconds": 13.281302677467465,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 110,
+          "single_accuracy": 0.88
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 60,
+          "single_accuracy": 0.48
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 39,
+          "single_accuracy": 0.312
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 16,
+          "single_accuracy": 0.128
+        }
+      }
+    },
+    "current": {
+      "items": 500,
+      "single_correct": 218,
+      "generated_tokens": 2503700,
+      "truncated": 178,
+      "normal_terminations": 322,
+      "answer_extraction_failures": 157,
+      "protocol": "project_formal4b_n1_8192_native16_v1",
+      "benchmark": "polymath",
+      "formal_full_test": true,
+      "n": 1,
+      "generation_count": 500,
+      "single_accuracy": 0.436,
+      "generation_seconds": 11221.307289905846,
+      "model_load_seconds": 14.351068956777453,
+      "actual_max_num_seqs": 16,
+      "scores_by_difficulty": {
+        "low": {
+          "items": 125,
+          "single_correct": 111,
+          "single_accuracy": 0.888
+        },
+        "medium": {
+          "items": 125,
+          "single_correct": 64,
+          "single_accuracy": 0.512
+        },
+        "high": {
+          "items": 125,
+          "single_correct": 29,
+          "single_accuracy": 0.232
+        },
+        "top": {
+          "items": 125,
+          "single_correct": 14,
+          "single_accuracy": 0.112
+        }
+      }
+    }
+  },
+  "Base_comparison": {
+    "Base_correct": 207,
+    "model_correct": 218,
+    "gained": 35,
+    "lost": 24,
+    "delta_percentage_points": 2.1999999999999997,
+    "paired_question_bootstrap95_CI_pp": [
+      -0.8,
+      5.2
+    ]
+  },
+  "actual_parent_adapter_verified": true,
+  "common_question_answer_prompt_seed_verified": true,
+  "proves_complete_seven_case_stage": false,
+  "proves_complete_forgetting_matrix": false,
+  "observed_at": "2026-10-26T01:38:20.598361+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "order": [
+    "zh",
+    "te",
+    "sw"
+  ],
+  "stage_index": 2,
+  "current_training_language": "te",
+  "evaluation_language": "zh",
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "original_Base_bitwise_unchanged_verified": true,
+  "source_sha256": {
+    "private_history_receipt": "cdc547f9870c4c143f60378f1bec1216376ccdfb31f46dab8360a6e6fa695ade",
+    "current_pair_receipt": "4ecf3f3162bb55bdeaf774a7d5ad0e2b0d72a8a37a49a128518ac52ae325f861",
+    "partial_TensorBoard_receipt": "781501de9ef97bfe63beeb25e43f456fdcc2682adaf6106644a133ac3da11782",
+    "collector": "309d2c5d5054873469785461d8b2394604b5fa81b73863730a89a16fa39b9136"
+  },
+  "current_raw_files_sha256": {
+    "CONFIG.json": "ad8b2dd36b8a81315250c55d90f0aa58409f85206ebb8487b851176553688106",
+    "DONE.json": "f680f3fd1f38f87d142ed508ce1372cbb82c8e1c13b85592d595f62491e04494",
+    "ITEMS.jsonl": "75a9b88ce9c4f2b5653343055b59caad71d1b7c397eccb4fe29328421839f9e6"
+  },
+  "current_evaluation_parent_cost": {
+    "new_GPU_hours": 3.138888888888889,
+    "reused": false,
+    "new_generated_tokens": 2503700
+  },
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true,
+    "local_checkpoint_step": 20
+  },
+  "scope": "One completed old-language Chinese PolyMath history in reverse ZH->TE stage2. All500originalquestions/four125-question tiers; actualparent/originalBaseunchanged/commoninputs/prompts/requestseeds/LID/rawscores verified. Learned225->218 decline1.4pp CI[-1.8,4.6]includeszero; no established forgetting, equivalence or seed robustness. Earlierbest excludesBase/prelearning/current and signedvalues retained. Original math labels unchanged, including missing/short final sections. Whole-part language labels are not fluency. Fixed-model question bootstrap, one trainingseed/no multiplicity correction; project20under100scheduler/n1/8192/native16 adaptation, not strict official100step/pass12. Allocation costs overlap queue/full-suite totals."
+}
