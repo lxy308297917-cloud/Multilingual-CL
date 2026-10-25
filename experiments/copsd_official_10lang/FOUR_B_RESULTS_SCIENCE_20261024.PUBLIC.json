@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T09:45:28.874554+08:00",
+  "updated_at": "2026-10-25T11:09:22.112628+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1135,7 +1135,20 @@
         "total": 1319
       }
     },
-    "full_seven_case_complete": false
+    "full_seven_case_complete": false,
+    "accepted_partial_PolyMath_pairs": {
+      "SW_matched900:polymath_sw": {
+        "items": 500,
+        "Base_correct": 22,
+        "model_correct": 58,
+        "delta_percentage_points": 7.199999999999999,
+        "paired_question_bootstrap95_CI_pp": [
+          4.3999999999999995,
+          10.2
+        ],
+        "public_report": "SELECTED4B_SW_MATCHED_POLYMATH_SW_20261025.PUBLIC.json"
+      }
+    }
   },
   "scoring_diagnostic": {
     "source": "MGSM_PERCENTAGE_AND_REASONING_DIAGNOSTIC_20261025.PUBLIC.json",

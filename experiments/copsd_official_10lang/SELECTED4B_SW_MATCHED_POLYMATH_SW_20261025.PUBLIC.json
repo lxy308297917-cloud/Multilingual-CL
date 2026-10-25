@@ -1,0 +1,118 @@
+{
+  "model_id": "SW_matched900",
+  "case": "polymath_sw",
+  "items": 500,
+  "Base_correct": 22,
+  "model_correct": 58,
+  "gained": 48,
+  "lost": 12,
+  "delta_percentage_points": 7.199999999999999,
+  "paired_question_bootstrap95_CI_pp": [
+    4.3999999999999995,
+    10.2
+  ],
+  "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+  "observed_at": "2026-10-25T11:09:22.112628+08:00",
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "Base_metrics": {
+    "items": 500,
+    "single_correct": 22,
+    "generated_tokens": 2992872,
+    "truncated": 332,
+    "normal_terminations": 168,
+    "answer_extraction_failures": 324,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.044,
+    "generation_seconds": 5620.218837251887,
+    "model_load_seconds": 11.8686205111444,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 15,
+        "single_accuracy": 0.12
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 2,
+        "single_accuracy": 0.016
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 3,
+        "single_accuracy": 0.024
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 2,
+        "single_accuracy": 0.016
+      }
+    }
+  },
+  "model_metrics": {
+    "items": 500,
+    "single_correct": 58,
+    "generated_tokens": 2139334,
+    "truncated": 137,
+    "normal_terminations": 363,
+    "answer_extraction_failures": 135,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.116,
+    "generation_seconds": 9457.309760138392,
+    "model_load_seconds": 13.690732514485717,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 21,
+        "single_accuracy": 0.168
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 24,
+        "single_accuracy": 0.192
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 10,
+        "single_accuracy": 0.08
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 3,
+        "single_accuracy": 0.024
+      }
+    }
+  },
+  "adapter_sha256": "d267c4b82c449e9ab1f315c99b2a204df7f59e32752373d173efbd463ccd9607",
+  "raw_source_sha256": {
+    "Base": {
+      "CONFIG.json": "dcabe4a19d9f065f563d2fba3306394855391b5a726bed75c15d74159ed47122",
+      "DONE.json": "ffa5e087374f54e17b5df394563c155d76e9ae90ff6cc94960b421d56ad5dae8",
+      "ITEMS.jsonl": "acbaec57c0ec13921579e2fd4e4087e128c0faf322ed38e6eaeca8617c7f7877"
+    },
+    "model": {
+      "CONFIG.json": "3988bbcebf8e24d3d91d399f3c098136687a74c1495aca5482ac9a9aa4331884",
+      "DONE.json": "c43e1ca51cfbd2eb0d39c1485980b4c55b5bbc2183275aa356623a9c1a769671",
+      "ITEMS.jsonl": "3aa476285af9eecb7fbbf8d50bc681cad1d4c500b888f71cadd055a09a1d5d69"
+    }
+  },
+  "private_pair_receipt_sha256": "3f7744684aee5807a26dd93dc3080b7df7cc8547aed06eaab29d3f4eb407bcaa",
+  "new_evaluation_parent_cost": {
+    "new_GPU_hours": 2.6491666666666664,
+    "reused": false,
+    "new_generated_tokens": 2139334
+  },
+  "complete_seven_case_stage": false,
+  "language_preservation_verified": false,
+  "scope": "One SW matched-single versus Base PolyMath pair, original500questions across four difficulty bands. One trained seed, fixed-model question bootstrap, no multiplicity correction. Twenty updates with 100-update scheduler, project budget adaptation, not official100step/pass12 reproduction. No language, checkpoint or data selection based on this formal test. Parent cost overlaps the queue ledger and full-suite costs; do not add twice."
+}

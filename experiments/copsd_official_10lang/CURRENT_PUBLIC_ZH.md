@@ -5,6 +5,10 @@
 <!-- COPSD_LATEST_STATUS_END -->
 
 
+## SW匹配单语言的PolyMath正式结果（11:10）
+
+500题完整验收：Base22→OPD58（4.4%→11.6%），获得48题、丢失12题；提升7.2个百分点，配对题目95%区间[4.4,10.2]。四档难度均纳入分母，未改评分、未按此测试选模型。该结果支持这一固定模型的数学收益，不证明多seed稳定性或目标语保持；顺序PolyMath及完整七项阶段仍未完成。[四档结果、终止统计及证据哈希](SELECTED4B_SW_MATCHED_POLYMATH_SW_20261025.PUBLIC.json)。
+
 ## 三语言MGSM与英语的完整阶段矩阵（09:50）
 
 | 顺序／阶段 | SW MGSM | TE MGSM | ZH MGSM | 英语GSM8K |
