@@ -1,0 +1,193 @@
+{
+  "observed_at": "2026-10-26T00:45:08.359174+08:00",
+  "model_id": "reverse_s2",
+  "case": "polymath_te",
+  "items": 500,
+  "current_stage_language": "te",
+  "new_language_acquisition": true,
+  "post_learning_forgetting": false,
+  "comparisons": {
+    "previous": {
+      "previous_correct": 78,
+      "current_correct": 66,
+      "gained": 21,
+      "lost": 33,
+      "change_pp": -2.4,
+      "change_question_CI95_pp": [
+        -5.4,
+        0.4
+      ],
+      "lost_current_truncated": 21,
+      "lost_current_no_extracted_box": 20,
+      "lost_current_normal_with_box": 12
+    },
+    "single": {
+      "previous_correct": 73,
+      "current_correct": 66,
+      "gained": 16,
+      "lost": 23,
+      "change_pp": -1.4000000000000001,
+      "change_question_CI95_pp": [
+        -3.8,
+        1.0
+      ],
+      "lost_current_truncated": 13,
+      "lost_current_no_extracted_box": 12,
+      "lost_current_normal_with_box": 10
+    },
+    "different_initial_language_history_forward_to_reverse": {
+      "previous_correct": 8,
+      "current_correct": 66,
+      "gained": 60,
+      "lost": 2,
+      "change_pp": 11.600000000000001,
+      "change_question_CI95_pp": [
+        8.799999999999999,
+        14.6
+      ],
+      "lost_current_truncated": 1,
+      "lost_current_no_extracted_box": 1,
+      "lost_current_normal_with_box": 1
+    }
+  },
+  "termination": {
+    "previous": {
+      "items": 500,
+      "correct": 78,
+      "truncated": 300,
+      "no_extracted_answer": 272,
+      "truncated_and_no_answer": 272,
+      "correct_and_normally_terminated": 73
+    },
+    "single": {
+      "items": 500,
+      "correct": 73,
+      "truncated": 376,
+      "no_extracted_answer": 364,
+      "truncated_and_no_answer": 364,
+      "correct_and_normally_terminated": 70
+    },
+    "current": {
+      "items": 500,
+      "correct": 66,
+      "truncated": 378,
+      "no_extracted_answer": 348,
+      "truncated_and_no_answer": 348,
+      "correct_and_normally_terminated": 63
+    }
+  },
+  "language": {
+    "previous": {
+      "thinking_target_highconf": 497,
+      "thinking_English_top1": 2,
+      "correct_and_target_thinking_highconf": 78,
+      "correct_and_both_parts_target_highconf": 76
+    },
+    "single": {
+      "thinking_target_highconf": 490,
+      "thinking_English_top1": 10,
+      "correct_and_target_thinking_highconf": 73,
+      "correct_and_both_parts_target_highconf": 68
+    },
+    "current": {
+      "thinking_target_highconf": 496,
+      "thinking_English_top1": 3,
+      "correct_and_target_thinking_highconf": 66,
+      "correct_and_both_parts_target_highconf": 62
+    }
+  },
+  "actual_parent_adapter_verified": true,
+  "original_Base_bitwise_unchanged_verified": true,
+  "same_640_TE_training_problem_order_and_prompt_fingerprints_from_bound_audit": true,
+  "unique_root_cause_proven": false,
+  "model": "Qwen/Qwen3-4B",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "order": [
+    "zh",
+    "te",
+    "sw"
+  ],
+  "stage_index": 2,
+  "local_checkpoint_step": 20,
+  "cumulative_display_updates": 40,
+  "Base_comparison": {
+    "Base_correct": 72,
+    "model_correct": 66,
+    "gained": 19,
+    "lost": 25,
+    "delta_percentage_points": -1.2,
+    "paired_question_bootstrap95_CI_pp": [
+      -3.8,
+      1.4000000000000001
+    ]
+  },
+  "current_metrics": {
+    "items": 500,
+    "single_correct": 66,
+    "generated_tokens": 3669312,
+    "truncated": 378,
+    "normal_terminations": 122,
+    "answer_extraction_failures": 348,
+    "protocol": "project_formal4b_n1_8192_native16_v1",
+    "benchmark": "polymath",
+    "formal_full_test": true,
+    "n": 1,
+    "generation_count": 500,
+    "single_accuracy": 0.132,
+    "generation_seconds": 16456.05046402663,
+    "model_load_seconds": 13.776273388415575,
+    "actual_max_num_seqs": 16,
+    "scores_by_difficulty": {
+      "low": {
+        "items": 125,
+        "single_correct": 59,
+        "single_accuracy": 0.472
+      },
+      "medium": {
+        "items": 125,
+        "single_correct": 6,
+        "single_accuracy": 0.048
+      },
+      "high": {
+        "items": 125,
+        "single_correct": 1,
+        "single_accuracy": 0.008
+      },
+      "top": {
+        "items": 125,
+        "single_correct": 0,
+        "single_accuracy": 0.0
+      }
+    }
+  },
+  "current_raw_files_sha256": {
+    "CONFIG.json": "9216a7e1a6af83611d90cb2de7b7b3ff23564a184b42d39480b2fd6bbfd5a641",
+    "DONE.json": "bb20e91257e90078db241e861a71f5dd208076c1d6bdbf5e6f9d7817fbf5dd0a",
+    "ITEMS.jsonl": "1b7bdd45c15b1ec26ae6725bd73ec7111c2d8b39999dd5d646997f43961b8d8f"
+  },
+  "current_evaluation_parent_cost": {
+    "new_GPU_hours": 4.591666666666667,
+    "reused": false,
+    "new_generated_tokens": 3669312
+  },
+  "all_three_actual_release_identities_bound_to_training_audit": true,
+  "actual_release_sha256": {
+    "TEmatched": "ce1fbbb6660042b45efed2217c06e9a98da0aa339d66638543bcdc223947be4a",
+    "forward_s2": "9dc520bf6d82573373e358908e81f209d40701fb14d92aea02f602cdcf9e294d",
+    "reverse_s2": "7e5dc6d28d72c4314f06d05ebc81bb26776bc3c46424be4d93b3477537896629"
+  },
+  "source_sha256": {
+    "private_acquisition_receipt": "e2fd8e9c440578024bbb2eee6ec740ab49055772685e0b441772948119f2b321",
+    "collector": "efc72942b28af5c85398f8c575309db0b71d33b7663e05313b153d036f89d18a",
+    "partial_TensorBoard_receipt": "f7884836c89cc03b933792f85e93135761363ce6e381662ebe4b4c8a5d7586cc",
+    "prior_training_identity_diagnostic": "a1f8d64f0b347b7587200796109f937a7a5b9e94422492460200adf4d2662f92"
+  },
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true,
+    "local_checkpoint_step": 20
+  },
+  "complete_seven_case_stage": false,
+  "complete_forgetting_matrix": false,
+  "scope": "Current TE acquisition in ZH->TE stage2, not old-language forgetting. All500questions/four125-question bands, frozen original scoring and same prompts/request seeds. Compared with Base, actualpreviousZHstage, freshTEsingle and SW->TEF2 on identical evaluation questions. CurrentTE640trainingproblemorder/student-teacherpromptfingerprints match the bound earlier audit across allthreeactualreleases. Different initial training language/problem pools, incoming weights, previous budgets and online trajectories remain; this does not isolate a unique cause or prove overall reversed-order benefit. Fixed-model question intervals, one trainingseed, no multiplicity correction. Language labels do not prove fluency/reasoning. Project20under100scheduler/n1/8192/native16 adaptation, not strict official100step/pass12. Allocation costs overlap queue/full-suite totals."
+}

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T22:39:09.332478+08:00",
+  "updated_at": "2026-10-26T00:45:08.359174+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1353,6 +1353,22 @@
         "incoming_weights_and_online_trajectories_differ": true,
         "unique_root_cause_proven": false,
         "public_report": "SEQUENTIAL4B_FORWARD_S2_TE_ACQUISITION_SCIENCE_20261025.PUBLIC.json"
+      },
+      "reverse_s2:te": {
+        "Base_correct": 72,
+        "previous_actual_stage_correct": 78,
+        "matched_TE_single_correct": 73,
+        "forward_s2_correct": 8,
+        "current_correct": 66,
+        "items": 500,
+        "different_history_forward_to_reverse_change_pp": 11.6,
+        "paired_question_CI95_pp": [
+          8.8,
+          14.6
+        ],
+        "all_three_actual_release_identities_bound_to_training_audit": true,
+        "unique_root_cause_proven": false,
+        "public_report": "SEQUENTIAL4B_REVERSE_S2_TE_ACQUISITION_SCIENCE_20261026.PUBLIC.json"
       }
     }
   },
