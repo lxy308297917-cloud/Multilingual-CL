@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-26T05:28:22.859450+08:00",
+  "issue": "str.splitlines incorrectly splits legal U+2028 within one generated JSON string.",
+  "affected_artifact": "forward_s3_polymath_sw/ITEMS.jsonl",
+  "physical_JSONL_records": 500,
+  "old_splitlines_fragments": 501,
+  "embedded_U2028_characters": 1,
+  "all_physical_records_valid_JSON": true,
+  "original_raw_sha256_before_and_after": "bcc064ed80b62f4a67f254540e7cac9eb9898023bf668ca3be2aac6b6a76ab62",
+  "original_correct_of500": 99,
+  "compatibility_source": "jsonl_physical_line_compat.py",
+  "compatibility_source_sha256": "d3e5ea382c5f7009b6b4050ba2376643cc4c49ef4861812ba197d0f05a9b4612",
+  "scope_of_change": "CPU postprocessing only. A str subclass preserves physical LF record boundaries on ITEMS.jsonl under the project log directory. Restricted analysis-child propagation covers suite collection/language/matrix/matched-comparison scripts. GPU queue and generation commands are excluded. Canonical frozen code, configs, raw outputs, scorer and all original mathematical scores remain unchanged.",
+  "verification": [
+    "Parsed all500unique physical JSON records without changing raw bytes.",
+    "Synthetic U+2028/U+0085/escaped-newline JSON test and non-ITEMS boundary check passed.",
+    "All canonical source hashes in the eight selected formal plans still match.",
+    "CPU pair acceptance, old-language identity/mask-independent postprocessing and13TensorBoard scalar readbacks passed.",
+    "Five known idle CPU supervisors handed off to independent logs through the shim; no GPU task stopped or restarted."
+  ],
+  "private_handoff_receipt_sha256": "a87eb85520ce3b408c536555e160e33d12878f9698df83bbffc727a49c21ca50",
+  "remaining_verification": "Full seven-case central collection and complete matrices have not run yet because two selected cases remain active; compatibility propagation is prepared and CPU supervisors are live. Do not infer full pipeline completion from these checks.",
+  "algorithm_or_scientific_protocol_changed": false,
+  "new_GPU_generation_for_repair": false
+}
