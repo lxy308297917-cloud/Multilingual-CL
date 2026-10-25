@@ -114,5 +114,170 @@
   },
   "complete_seven_case_stage": false,
   "language_preservation_verified": false,
-  "scope": "One SW matched-single versus Base PolyMath pair, original500questions across four difficulty bands. One trained seed, fixed-model question bootstrap, no multiplicity correction. Twenty updates with 100-update scheduler, project budget adaptation, not official100step/pass12 reproduction. No language, checkpoint or data selection based on this formal test. Parent cost overlaps the queue ledger and full-suite costs; do not add twice."
+  "scope": "One SW matched-single versus Base PolyMath pair, original500questions across four difficulty bands. One trained seed, fixed-model question bootstrap, no multiplicity correction. Twenty updates with 100-update scheduler, project budget adaptation, not official100step/pass12 reproduction. No language, checkpoint or data selection based on this formal test. Parent cost overlaps the queue ledger and full-suite costs; do not add twice.",
+  "language_analysis_accepted": true,
+  "language_identification": {
+    "Base": {
+      "thinking_SW_highconf": 308,
+      "correct_and_SW_thinking_highconf": 15,
+      "correct_and_both_SW_sections_highconf": 3,
+      "correct_without_final_section": 0,
+      "summary": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 391,
+            "__label__ktu_Latn": 5,
+            "__label__sgb_Latn": 3,
+            "__label__kdc_Latn": 8,
+            "__label__swc_Latn": 35,
+            "__label__eng_Latn": 19,
+            "__label__mwc_Latn": 1,
+            "__label__pkb_Latn": 1,
+            "__label__hay_Latn": 5,
+            "__label__phm_Latn": 1,
+            "__label__mer_Latn": 2,
+            "__label__run_Latn": 1,
+            "__label__sbl_Latn": 1,
+            "__label__abs_Latn": 1,
+            "__label__ksb_Latn": 1,
+            "__label__kng_Latn": 6,
+            "__label__kwn_Latn": 1,
+            "__label__lea_Latn": 1,
+            "__label__lub_Latn": 1,
+            "__label__kwy_Latn": 1,
+            "__label__fuq_Latn": 4,
+            "__label__lin_Latn": 1,
+            "__label__inh_Cyrl": 1,
+            "__label__qup_Latn": 1,
+            "__label__inb_Latn": 1,
+            "__label__npl_Latn": 1,
+            "__label__cwe_Latn": 1,
+            "__label__pol_Latn": 1,
+            "__label__ngp_Latn": 1,
+            "__label__adh_Latn": 1,
+            "__label__ndj_Latn": 2
+          },
+          "target_top1_probability_ge_0_8": 308,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 17,
+            "__label__kdc_Latn": 1,
+            "__label__swc_Latn": 2,
+            "__label__eng_Latn": 2
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 175,
+            "no_final_section": 325
+          },
+          "top1_label_counts": {
+            "__label__swc_Latn": 46,
+            "__label__swh_Latn": 111,
+            "__label__kam_Latn": 3,
+            "__label__ssw_Latn": 3,
+            "__label__kdc_Latn": 1,
+            "__label__mer_Latn": 1,
+            "__label__hay_Latn": 1,
+            "__label__eng_Latn": 4,
+            "__label__ktu_Latn": 2,
+            "__label__kng_Latn": 1,
+            "__label__fud_Latn": 1,
+            "__label__nnq_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 73,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 8,
+            "__label__swc_Latn": 8,
+            "__label__kdc_Latn": 1,
+            "__label__kam_Latn": 1,
+            "__label__ssw_Latn": 1,
+            "__label__eng_Latn": 2,
+            "__label__fud_Latn": 1
+          }
+        }
+      }
+    },
+    "model": {
+      "thinking_SW_highconf": 287,
+      "correct_and_SW_thinking_highconf": 32,
+      "correct_and_both_SW_sections_highconf": 9,
+      "correct_without_final_section": 1,
+      "summary": {
+        "thinking": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 500
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 321,
+            "__label__eng_Latn": 152,
+            "__label__mfe_Latn": 1,
+            "__label__bqc_Latn": 1,
+            "__label__swc_Latn": 6,
+            "__label__ssw_Latn": 7,
+            "__label__pkb_Latn": 1,
+            "__label__lin_Latn": 1,
+            "__label__rus_Cyrl": 1,
+            "__label__kdp_Latn": 1,
+            "__label__dsb_Latn": 1,
+            "__label__fra_Latn": 1,
+            "__label__und_Soyo": 1,
+            "__label__nch_Latn": 1,
+            "__label__toi_Latn": 1,
+            "__label__jam_Latn": 1,
+            "__label__bew_Latn": 1,
+            "__label__mlt_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 287,
+          "correct_items_label_counts": {
+            "__label__swh_Latn": 39,
+            "__label__eng_Latn": 19
+          }
+        },
+        "final": {
+          "total_items": 500,
+          "statuses": {
+            "predicted": 377,
+            "no_final_section": 123
+          },
+          "top1_label_counts": {
+            "__label__swh_Latn": 187,
+            "__label__swc_Latn": 89,
+            "__label__kam_Latn": 3,
+            "__label__ssw_Latn": 19,
+            "__label__yor_Latn": 3,
+            "__label__eng_Latn": 71,
+            "__label__nyo_Latn": 1,
+            "__label__tby_Latn": 1,
+            "__label__fra_Latn": 1,
+            "__label__ron_Latn": 1,
+            "__label__hav_Latn": 1
+          },
+          "target_top1_probability_ge_0_8": 100,
+          "correct_items_label_counts": {
+            "__label__swc_Latn": 13,
+            "__label__eng_Latn": 19,
+            "__label__swh_Latn": 22,
+            "__label__ssw_Latn": 2,
+            "no_final_section": 1,
+            "__label__kam_Latn": 1
+          }
+        }
+      }
+    }
+  },
+  "language_identification_model_sha256": "a818b6bd42a628ab47d3dfc1578c7ea615c45381f3494c42535e31e8c4cafc9e",
+  "language_acceptance_receipt_sha256": "7f13db78c93df18ca98de460d9c879dd055b691b6ba3df56a60f0acd007bcda4",
+  "TensorBoard": {
+    "scalar_count": 13,
+    "all_scalars_read_back": true,
+    "local_checkpoint_step": 20
+  },
+  "language_interpretation": "Mathematical improvement coexists with more English-labeled thinking:19 to152/500; strict SW high-confidence thinking308 to287. Correct with strict SW high-confidence thinking15 to32, correct with both SW high-confidence sections3 to9. These are whole-section classifier labels, not token purity, fluency or causal attribution. All original500-item math labels remain unchanged, including one correct model output lacking a final section.",
+  "updated_at": "2026-10-25T11:11:33.551940+08:00"
 }

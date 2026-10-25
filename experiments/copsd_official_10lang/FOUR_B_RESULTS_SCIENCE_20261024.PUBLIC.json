@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T11:09:22.112628+08:00",
+  "updated_at": "2026-10-25T11:11:33.551940+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -1146,7 +1146,24 @@
           4.3999999999999995,
           10.2
         ],
-        "public_report": "SELECTED4B_SW_MATCHED_POLYMATH_SW_20261025.PUBLIC.json"
+        "public_report": "SELECTED4B_SW_MATCHED_POLYMATH_SW_20261025.PUBLIC.json",
+        "language_analysis_accepted": true,
+        "strict_SW_highconf_thinking_Base_model": [
+          308,
+          287
+        ],
+        "English_top1_thinking_Base_model": [
+          19,
+          152
+        ],
+        "correct_and_SW_highconf_thinking_Base_model": [
+          15,
+          32
+        ],
+        "correct_and_both_SW_sections_Base_model": [
+          3,
+          9
+        ]
       }
     }
   },
