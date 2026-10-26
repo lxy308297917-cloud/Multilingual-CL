@@ -1,0 +1,9 @@
+{
+  "raw_data_answers_weights_and_private_paths_published": false,
+  "code_paths_redacted": true,
+  "finalized_new_responses": 512,
+  "GPU_context_hours": 1.0929980595244302,
+  "not_formal_test": true,
+  "no_training": true,
+  "source_paths_and_raw_case_ids_removed": true
+}

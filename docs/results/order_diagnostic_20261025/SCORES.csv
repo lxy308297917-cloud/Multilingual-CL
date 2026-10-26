@@ -1,0 +1,13 @@
+model,task,score,n,capped
+order42-step2146,sw_reading,5.67618672779796,64,29
+order42-step2146,en_reading,84.375,64,0
+order42-step2146,en_instruction,25.78125,128,14
+order42-step4293,sw_reading,23.102430555555554,64,4
+order42-step4293,en_reading,79.6875,64,0
+order42-step4293,en_instruction,21.875,128,12
+order43-step2146,sw_reading,5.687510571293598,64,27
+order43-step2146,en_reading,87.5,64,0
+order43-step2146,en_instruction,21.09375,128,17
+order43-step4293,sw_reading,8.006672218847342,64,4
+order43-step4293,en_reading,85.9375,64,0
+order43-step4293,en_instruction,13.28125,128,8

@@ -1,0 +1,65 @@
+{
+  "cached_endpoint_hashes_verified": true,
+  "all64_SW_scores_recomputed_identically": true,
+  "SW_endpoint_behavior": {
+    "42": {
+      "n": 64,
+      "F1": 23.102430555555554,
+      "exact": 10,
+      "generated_token_mean": 26.453125,
+      "generated_token_median": 9.5,
+      "words_mean": 8.375,
+      "capped": 4,
+      "empty": 0,
+      "zero_lexical_overlap": 42,
+      "language_counts": {
+        "sw": 44,
+        "tl": 5,
+        "so": 4,
+        "id": 3,
+        "cy": 1,
+        "de": 2,
+        "et": 1,
+        "sq": 1,
+        "it": 2,
+        "hr": 1
+      },
+      "repeated_4gram_fraction_mean": 0.057700535987950864,
+      "repeat_fraction_positive_count": 4,
+      "precision_mean": 0.2109561011904762,
+      "recall_mean": 0.3177083333333333,
+      "off_topic": "Not automatically inferred from zero overlap; requires content adjudication; assistant review auxiliary only"
+    },
+    "43": {
+      "n": 64,
+      "F1": 8.006672218847342,
+      "exact": 1,
+      "generated_token_mean": 42.0625,
+      "generated_token_median": 23.0,
+      "words_mean": 14.46875,
+      "capped": 4,
+      "empty": 0,
+      "zero_lexical_overlap": 45,
+      "language_counts": {
+        "tl": 2,
+        "sw": 60,
+        "so": 1,
+        "de": 1
+      },
+      "repeated_4gram_fraction_mean": 0.04306157296174721,
+      "repeat_fraction_positive_count": 5,
+      "precision_mean": 0.057215579858360024,
+      "recall_mean": 0.24661458333333333,
+      "off_topic": "Not automatically inferred from zero overlap; requires content adjudication; assistant review auxiliary only"
+    }
+  },
+  "paired_gain_loss": {
+    "seed42_higher": 18,
+    "seed43_higher": 11,
+    "ties": 35,
+    "identical_text": 3
+  },
+  "no_scoring_changes": true,
+  "sample_size": 64,
+  "limits": "Language detector unreliable on short answers; F1 overlap is not full semantic equivalence or reading correctness; output-generated subsets descriptive, no causal decomposition."
+}

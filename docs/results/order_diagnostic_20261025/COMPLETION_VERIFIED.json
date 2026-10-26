@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "verified_unix": 1792982385.1903849,
+  "new_answers": 512,
+  "new_prompt_tokens": 245780,
+  "new_generated_tokens": 150125,
+  "GPU_context_hours": 1.0929980595244302,
+  "GPU_context_hours_ceiling": 2,
+  "new_training_updates": 0,
+  "current_sources_match_freezes": true,
+  "both2146_models_verified_against_cached4293_protocol": {
+    "LR077-s42-mid": {
+      "rows": 256,
+      "data_and_current_model_hash_verified": true,
+      "all256_scores_CPU_recomputed_exact": true,
+      "caps_batch_generation_config_and_scorers_match_cached_endpoint": true,
+      "row_order_and_ids_verified": true,
+      "DONE_sha256": "47bb2aa1a864d9b7dba99eaa2cff85d9e556e3749b19bffe9321f2a6f0b126f0",
+      "prediction_sha256": "a4630c16bd0d3c5e33d741c03b2cd66750150358cd56c1482da61831f46df2f2",
+      "peak_allocated_bytes": 3547193856,
+      "physical_peak_mib_observed": 4199
+    },
+    "LR077-s43-mid": {
+      "rows": 256,
+      "data_and_current_model_hash_verified": true,
+      "all256_scores_CPU_recomputed_exact": true,
+      "caps_batch_generation_config_and_scorers_match_cached_endpoint": true,
+      "row_order_and_ids_verified": true,
+      "DONE_sha256": "f91d75e988756b68b0db597579086232d97a0328ac21ada0569422969a9a3fbd",
+      "prediction_sha256": "bcfaa2c84644a3959baf9d54a17965e8768f57e4b40b708d9d3397bd6f45ba27",
+      "peak_allocated_bytes": 3547193856,
+      "physical_peak_mib_observed": 4199
+    }
+  },
+  "data_stream_and_four_checkpoint_fullhashes_verified_in_CPU_audit": true,
+  "no_checkpoint_selection_or_formal_test": true,
+  "all_required_artifacts_present": true,
+  "needs_scientific_readthrough_and_figure_review": true
+}

@@ -1,0 +1,11 @@
+{
+  "reviewed_unix": 1792982453.3401065,
+  "scientific_readthrough_completed": true,
+  "data_composition_and_midpoint_figures_visually_reviewed": true,
+  "midpoint_behavior_and_wide_interval_caveat_added": true,
+  "report_sha256": "45adf347bba1503cc6b8dbb615c184550f8b5d32657dbe589fd37d3ec627c8c4",
+  "decision": "Stop fixed prototypes; no new training or checkpoint selection; no identified implementation fault or sufficient coarse task-clustering explanation",
+  "new_answers": 512,
+  "GPU_context_hours": 1.0929980595244302,
+  "all512_new_scores_recomputed_exact": true
+}

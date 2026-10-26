@@ -1,0 +1,8 @@
+{
+  "selection": "16 IDs frozen before review, uniform hash selection, no score-based case picking",
+  "presentation": "Model names replaced by A/B in review pack",
+  "reviewer": "Same assistant prepared mapping and reviewed outputs; not an independent fully blinded human study",
+  "no_fluent_SW_human_review": true,
+  "no_scoring_change": true,
+  "interpretation": "样本中既有冗长答案/词形差异造成的F1局限，也有明显不相关、否定回答、复述提问及循环；不能将全部差距归为阅读理解损伤或全部归为格式。"
+}

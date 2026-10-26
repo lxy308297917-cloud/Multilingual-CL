@@ -1,0 +1,301 @@
+{
+  "scores": {
+    "order42-step2146": {
+      "sw_reading": {
+        "score": 5.67618672779796,
+        "n": 64,
+        "capped": 29,
+        "generated_token_mean": 136.328125,
+        "language_counts": {
+          "tl": 1,
+          "sw": 59,
+          "so": 2,
+          "et": 1,
+          "de": 1
+        }
+      },
+      "en_reading": {
+        "score": 84.375,
+        "n": 64,
+        "capped": 0,
+        "generated_token_mean": 4.890625,
+        "language_counts": {
+          "hu": 9,
+          "en": 17,
+          "de": 27,
+          "cy": 7,
+          "ca": 1,
+          "sv": 1,
+          "ro": 1,
+          "da": 1
+        }
+      },
+      "en_instruction": {
+        "score": 25.78125,
+        "n": 128,
+        "capped": 14,
+        "generated_token_mean": 490.0859375,
+        "language_counts": {
+          "fi": 1,
+          "en": 109,
+          "fr": 6,
+          "und": 7,
+          "lt": 1,
+          "it": 1,
+          "de": 1,
+          "ca": 2
+        }
+      }
+    },
+    "order42-step4293": {
+      "sw_reading": {
+        "score": 23.102430555555554,
+        "n": 64,
+        "capped": 4,
+        "generated_token_mean": 26.453125,
+        "language_counts": {
+          "sw": 44,
+          "tl": 5,
+          "so": 4,
+          "id": 3,
+          "cy": 1,
+          "de": 2,
+          "et": 1,
+          "sq": 1,
+          "it": 2,
+          "hr": 1
+        }
+      },
+      "en_reading": {
+        "score": 79.6875,
+        "n": 64,
+        "capped": 0,
+        "generated_token_mean": 6.40625,
+        "language_counts": {
+          "hu": 5,
+          "en": 31,
+          "de": 21,
+          "cy": 5,
+          "ro": 1,
+          "da": 1
+        }
+      },
+      "en_instruction": {
+        "score": 21.875,
+        "n": 128,
+        "capped": 12,
+        "generated_token_mean": 503.140625,
+        "language_counts": {
+          "en": 119,
+          "cs": 1,
+          "lt": 1,
+          "fr": 3,
+          "und": 2,
+          "sq": 1,
+          "ro": 1
+        }
+      }
+    },
+    "order43-step2146": {
+      "sw_reading": {
+        "score": 5.687510571293598,
+        "n": 64,
+        "capped": 27,
+        "generated_token_mean": 122.234375,
+        "language_counts": {
+          "sw": 56,
+          "fi": 2,
+          "so": 2,
+          "af": 1,
+          "id": 1,
+          "en": 1,
+          "lt": 1
+        }
+      },
+      "en_reading": {
+        "score": 87.5,
+        "n": 64,
+        "capped": 0,
+        "generated_token_mean": 4.40625,
+        "language_counts": {
+          "hu": 8,
+          "en": 15,
+          "fr": 1,
+          "de": 25,
+          "tl": 3,
+          "cy": 9,
+          "ca": 1,
+          "ro": 1,
+          "da": 1
+        }
+      },
+      "en_instruction": {
+        "score": 21.09375,
+        "n": 128,
+        "capped": 17,
+        "generated_token_mean": 548.8359375,
+        "language_counts": {
+          "en": 115,
+          "fr": 4,
+          "lt": 1,
+          "und": 3,
+          "de": 1,
+          "ur": 1,
+          "ca": 2,
+          "cs": 1
+        }
+      }
+    },
+    "order43-step4293": {
+      "sw_reading": {
+        "score": 8.006672218847342,
+        "n": 64,
+        "capped": 4,
+        "generated_token_mean": 42.0625,
+        "language_counts": {
+          "tl": 2,
+          "sw": 60,
+          "so": 1,
+          "de": 1
+        }
+      },
+      "en_reading": {
+        "score": 85.9375,
+        "n": 64,
+        "capped": 0,
+        "generated_token_mean": 5.765625,
+        "language_counts": {
+          "hu": 7,
+          "en": 24,
+          "de": 23,
+          "cy": 7,
+          "ca": 1,
+          "ro": 1,
+          "da": 1
+        }
+      },
+      "en_instruction": {
+        "score": 13.28125,
+        "n": 128,
+        "capped": 8,
+        "generated_token_mean": 550.9375,
+        "language_counts": {
+          "en": 125,
+          "fr": 2,
+          "sv": 1
+        }
+      }
+    }
+  },
+  "paired_comparisons": {
+    "order42-step2146 minus order43-step2146": {
+      "sw_reading": {
+        "difference": -0.011323843495637548,
+        "low": -5.5734827981113,
+        "high": 5.476650821152695,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_reading": {
+        "difference": -3.125,
+        "low": -10.9375,
+        "high": 4.6875,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": 4.6875,
+        "low": -2.34375,
+        "high": 11.71875,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "order42-step4293 minus order43-step4293": {
+      "sw_reading": {
+        "difference": 15.095758336708215,
+        "low": 5.537758186160879,
+        "high": 25.04513766108753,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_reading": {
+        "difference": -6.25,
+        "low": -14.0625,
+        "high": 0.0,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": 8.59375,
+        "low": 3.125,
+        "high": 14.84375,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "order42-step4293 minus order42-step2146": {
+      "sw_reading": {
+        "difference": 17.42624382775759,
+        "low": 7.905159170620617,
+        "high": 27.38126403071558,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_reading": {
+        "difference": -4.6875,
+        "low": -10.9375,
+        "high": 1.5625,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": -3.90625,
+        "low": -10.9375,
+        "high": 2.34375,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    },
+    "order43-step4293 minus order43-step2146": {
+      "sw_reading": {
+        "difference": 2.319161647553745,
+        "low": -3.225968717158486,
+        "high": 7.793780797721327,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_reading": {
+        "difference": -1.5625,
+        "low": -10.9375,
+        "high": 7.8125,
+        "n": 64,
+        "source_groups": 64,
+        "paired": true
+      },
+      "en_instruction": {
+        "difference": -7.8125,
+        "low": -13.28125,
+        "high": -3.125,
+        "n": 128,
+        "source_groups": 128,
+        "paired": true
+      }
+    }
+  },
+  "missing": [],
+  "new_generation_count": 512,
+  "GPU_context_hours": 1.0929980595244302,
+  "checkpoint_selection": false,
+  "statistical_scope": "Fixed-model source-item uncertainty, not training-seed population; existing dev diagnostic only."
+}

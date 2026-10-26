@@ -1,0 +1,36 @@
+{
+  "frozen_unix": 1792928621.764885,
+  "reference_commit": "843c96db6885beb64f08f48eeb406f9dde2141ed",
+  "no_training": true,
+  "new_responses_ceiling": 512,
+  "GPU_context_hours_ceiling": 2,
+  "max_account_gpus": 4,
+  "models": [
+    "LR077-s42-mid",
+    "LR077-s43-mid"
+  ],
+  "checkpoint_step": 2146,
+  "cached_endpoint_step": 4293,
+  "data_sha256": "c37d2bc7ec1a34a84a6d50f74f894f1f93b8543bd294606f56da992e96d5704c",
+  "task_counts": {
+    "en_reading": 64,
+    "sw_reading": 64,
+    "en_instruction": 128
+  },
+  "caps": {
+    "sw_reading": 256,
+    "en_reading": 256,
+    "translation": 256,
+    "en_instruction": 1280
+  },
+  "generation": "exact old evaluate.py batch4, SDPA BF16 greedy; same templates and partition-dependent deterministic flags",
+  "no_best_checkpoint_selection": true,
+  "ten_bins": "zero-based update_position*10//4293; LR uses position0..4292; warmup position<2124",
+  "language_diagnostic": "langdetect seeded0, supervised target text only, cached once per distinct source row; short texts unreliable",
+  "training_truncation": "length2048 is at-cap proxy only; original untruncated text absent, no claim actual truncation",
+  "behavior_rules": "frozen reading_scoring.behavior, empty text, generated_tokens/capped/language; reference overlap unchanged",
+  "case_selection": "16 SW items smallest SHA256(order-diagnostic-20261025-v1:+id), independent of model outputs; blind A/B mapping saved privately, no score changes",
+  "case_review_limits": "assistant-only, no fluent-SW human adjudication; off-topic/understanding cannot be reliably auto-classified",
+  "bootstrap": "10000 source-group paired resamples, rng42, fixed-model item uncertainty",
+  "stop": "No new training, parameter scans, checkpoint selection or automatic follow-up after report; wait at most24h for account slots, then preserve missing evaluation status"
+}
