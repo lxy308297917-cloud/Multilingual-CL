@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T07:43:28.036487+08:00",
+  "updated_at": "2026-10-26T09:08:35.509681+08:00",
   "model": "Qwen/Qwen3-4B",
   "cohort": "independent4B, separate from completed1.7B experiments",
   "training_updates_each": 20,
@@ -2274,5 +2274,18 @@
       "scope": "Distinct planned selected-study events only. First-stage matched-reference training reused, English evaluation shared by the two math matrices, older Base SW/English caches not newly charged. Excludes original2700 primary runs, development, failures, other experiments and pre-job GPU holds. Overlaps queue ledger; never add these subtotals to it. Teacher cost is included in training allocation, not independently timed CUDA or money."
     },
     "full_goal_complete": false
+  },
+  "source_reproduction_audit_20261026": {
+    "overview": "REPRODUCTION_OVERVIEW_ZH.md",
+    "evidence": "REPRODUCTION_SOURCE_AUDIT_20261026.PUBLIC.json",
+    "official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+    "official_source_export_matching_nonmetadata_files": 19,
+    "runtime_complete_patch_rebuilds_two_files_exactly": true,
+    "selected_training_plans_checked": 7,
+    "frozen_project_dependencies": 42,
+    "installed_source_dependencies": 2,
+    "previous_main_matching_dependencies": 40,
+    "missing_evidence_files_added": 2,
+    "full_ten_primary_final_delivery_complete": false
   }
 }

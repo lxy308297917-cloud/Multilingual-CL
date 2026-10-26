@@ -402,3 +402,10 @@ SW高置信思考287→99→79／500，英语思考top1为152→358→359；数�
 [完整矩阵、逐题输出哈希、语言、六对照与成本](SELECTED4B_COMPLETE_SEQUENTIAL_RESULTS_20261026.PUBLIC.json)；[可复用汇总代码](summarize_selected4b_final.py)；[正序最终七项汇总](SEQUENTIAL4B_FORWARD_S3_SEVEN_CASES_20261026.PUBLIC.json)。
 
 仅一个匹配／顺序训练seed，按题区间不是跨seed推断、未校正多重比较；20更新沿用100步scheduler及n1/8192/native16为项目适配，不是官方100步／pass@12严格复现。JSONL工程读取问题已修复且全部统一验收通过，这不等于修复了模型退化。后续继续原2700题池十语言完整正式评测、Base语言分析及最终复现交付，不启动新的训练机制。
+
+
+## 官方源码与复现依赖清单补齐（09:11）
+
+固定commit官方归档中，19个源码／配置／文档文件与本地导出一致，缺少的仅为两个`.DS_Store`元数据文件；本地导出本来不含`.git`。现有完整补丁在临时副本零fuzz应用后，能精确重建运行版的两个修改文件。七段研究训练的42项项目冻结依赖和2项安装依赖均通过哈希核对，TRL安装文件与distribution RECORD一致。
+
+还核实了main的发布覆盖：40项依赖此前已有相同blob，两份缺失的RU数据准备和TE显存验证证据随本次补齐；没有上传原始题目或私密数据。[源码／配置边界与入口](REPRODUCTION_OVERVIEW_ZH.md)，[逐文件证据](REPRODUCTION_SOURCE_AUDIT_20261026.PUBLIC.json)。这些是复现交付工作，不是新的训练或GPU诊断，四项正式评测继续。

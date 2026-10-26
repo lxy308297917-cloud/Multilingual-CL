@@ -1,0 +1,590 @@
+{
+  "observed_at": "2026-10-26T09:07:13.010853+08:00",
+  "official_repository": "cisnlp/COPSD",
+  "fixed_official_commit": "4f4410730e9b6775a30d20f4b6e141cba2e87590",
+  "official_source_export": {
+    "without_dotgit": true,
+    "GitHub_archive_sha256": "2c984d262083b33fc37ee9e3d5105e0eb517c105445bfbf4a09f5c3c81c34ac8",
+    "archive_regular_files": 21,
+    "matching_code_configuration_documentation_files": 19,
+    "missing_noncode_Finder_metadata_files": [
+      "african_langs_scripts/.DS_Store",
+      "multilingual_scripts/.DS_Store"
+    ],
+    "different_files": [],
+    "file_content_checks": [
+      {
+        "path": ".gitignore",
+        "bytes": 10,
+        "official_sha256": "cf237c7aff44efbe6e502e645c3e06da03a69d7bdeb43392108ef3348143417e",
+        "local_sha256": "cf237c7aff44efbe6e502e645c3e06da03a69d7bdeb43392108ef3348143417e",
+        "matches": true
+      },
+      {
+        "path": "README.md",
+        "bytes": 8811,
+        "official_sha256": "8f4ae63631aed3e8a86291502c8c66744db02efcf714f8a674a895588a61c114",
+        "local_sha256": "8f4ae63631aed3e8a86291502c8c66744db02efcf714f8a674a895588a61c114",
+        "matches": true
+      },
+      {
+        "path": "accelerate.yaml",
+        "bytes": 550,
+        "official_sha256": "c03a6d033ad032906506a63fad279781b4abe92abef4de43d99c125bcd53ea2e",
+        "local_sha256": "c03a6d033ad032906506a63fad279781b4abe92abef4de43d99c125bcd53ea2e",
+        "matches": true
+      },
+      {
+        "path": "african_langs_eval/evaluate_math.py",
+        "bytes": 38611,
+        "official_sha256": "8f5f8012c5d40d7657117af01a55450a49fce080e1e2f6126936419881dd89cc",
+        "local_sha256": "8f5f8012c5d40d7657117af01a55450a49fce080e1e2f6126936419881dd89cc",
+        "matches": true
+      },
+      {
+        "path": "african_langs_eval/run_afrimgsm_one_lang_all_ckpts_1.7b.sh",
+        "bytes": 4266,
+        "official_sha256": "e9b619c0f3ee50919378611fa0b8c353b4ea625ee4c2d5538a9225bc0b970002",
+        "local_sha256": "e9b619c0f3ee50919378611fa0b8c353b4ea625ee4c2d5538a9225bc0b970002",
+        "matches": true
+      },
+      {
+        "path": "african_langs_eval/run_afrimgsm_one_lang_all_ckpts_4b.sh",
+        "bytes": 4246,
+        "official_sha256": "382bde9ecaad14f2073b431446632174357c49aa93df366d22ad12f7dd5baa6b",
+        "local_sha256": "382bde9ecaad14f2073b431446632174357c49aa93df366d22ad12f7dd5baa6b",
+        "matches": true
+      },
+      {
+        "path": "african_langs_eval/run_afrimgsm_one_lang_all_ckpts_8b.sh",
+        "bytes": 4261,
+        "official_sha256": "4d0e6373efc52736d57152a7b6133349624465bcb238d4a76f9c355285f40992",
+        "local_sha256": "4d0e6373efc52736d57152a7b6133349624465bcb238d4a76f9c355285f40992",
+        "matches": true
+      },
+      {
+        "path": "african_langs_scripts/.DS_Store",
+        "bytes": 6148,
+        "official_sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+        "local_sha256": null,
+        "matches": false
+      },
+      {
+        "path": "african_langs_scripts/run_all_opsd_1.7b_train.sh",
+        "bytes": 4267,
+        "official_sha256": "33ba067a445166e9ceea3f291c65d28fa1de018851cd823c9a06ea64091b1e0a",
+        "local_sha256": "33ba067a445166e9ceea3f291c65d28fa1de018851cd823c9a06ea64091b1e0a",
+        "matches": true
+      },
+      {
+        "path": "african_langs_scripts/run_all_opsd_4b_train.sh",
+        "bytes": 4262,
+        "official_sha256": "8428aacd048d148d91cd04e5ab057b1e381c96570113989414a4bd26e24db136",
+        "local_sha256": "8428aacd048d148d91cd04e5ab057b1e381c96570113989414a4bd26e24db136",
+        "matches": true
+      },
+      {
+        "path": "african_langs_scripts/run_all_opsd_8b_train.sh",
+        "bytes": 4262,
+        "official_sha256": "93f10d3deea443c45da12d308e42e0ef47749fc224dfe5467a0c91350b5c64d0",
+        "local_sha256": "93f10d3deea443c45da12d308e42e0ef47749fc224dfe5467a0c91350b5c64d0",
+        "matches": true
+      },
+      {
+        "path": "environment.yml",
+        "bytes": 509,
+        "official_sha256": "8d4b2a67762ffa085dda408d44b79b9ad9f5ed573d8692a4048dcc1f9bdea01e",
+        "local_sha256": "8d4b2a67762ffa085dda408d44b79b9ad9f5ed573d8692a4048dcc1f9bdea01e",
+        "matches": true
+      },
+      {
+        "path": "language_config.py",
+        "bytes": 55500,
+        "official_sha256": "2177afe9b3bd753f6a82a1506848ffec1f834b51a3342bee8801899674010947",
+        "local_sha256": "2177afe9b3bd753f6a82a1506848ffec1f834b51a3342bee8801899674010947",
+        "matches": true
+      },
+      {
+        "path": "multilingual_data_collator.py",
+        "bytes": 11301,
+        "official_sha256": "46d6462fc841977e05c475e8bfc1bdafe4d1438ec34f89af6d5b72205118145d",
+        "local_sha256": "46d6462fc841977e05c475e8bfc1bdafe4d1438ec34f89af6d5b72205118145d",
+        "matches": true
+      },
+      {
+        "path": "multilingual_grpo_train.py",
+        "bytes": 22291,
+        "official_sha256": "b86f557c50ee74889e2b261c35c5b598f668ab02db2bc7c4d594b22bc562314a",
+        "local_sha256": "b86f557c50ee74889e2b261c35c5b598f668ab02db2bc7c4d594b22bc562314a",
+        "matches": true
+      },
+      {
+        "path": "multilingual_opsd_train.py",
+        "bytes": 16174,
+        "official_sha256": "3f593f83b11a174964839c77e2a2f77c68395351b82d6f2c290735c200193592",
+        "local_sha256": "3f593f83b11a174964839c77e2a2f77c68395351b82d6f2c290735c200193592",
+        "matches": true
+      },
+      {
+        "path": "multilingual_opsd_trainer.py",
+        "bytes": 72872,
+        "official_sha256": "2dd1442cc99bcf864f00067b1c956826c35adc4169a19c684b4f4fc0e8564590",
+        "local_sha256": "2dd1442cc99bcf864f00067b1c956826c35adc4169a19c684b4f4fc0e8564590",
+        "matches": true
+      },
+      {
+        "path": "multilingual_scripts/.DS_Store",
+        "bytes": 6148,
+        "official_sha256": "f0233a6d4adff49e21cc6a4445c7eec8f019cce06c1a0b7f355a97e8fdfe1d9c",
+        "local_sha256": null,
+        "matches": false
+      },
+      {
+        "path": "multilingual_scripts/run_all_opsd_4b_3000.sh",
+        "bytes": 4792,
+        "official_sha256": "6e9488c90e0a5f81981396a1261fcfefc452517a4f02c68a6b748871e1a2f8bf",
+        "local_sha256": "6e9488c90e0a5f81981396a1261fcfefc452517a4f02c68a6b748871e1a2f8bf",
+        "matches": true
+      },
+      {
+        "path": "polymath_eval/evaluate_math.py",
+        "bytes": 24182,
+        "official_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+        "local_sha256": "81ed6ace2d084a6d3b115f6c915084d453626eb54d7c2ff210aa6202010f3865",
+        "matches": true
+      },
+      {
+        "path": "polymath_eval/run_eval_4b_all_checkpoints.sh",
+        "bytes": 4334,
+        "official_sha256": "70b2d3060286f2c4de7fa497669bb071dee4fb7da207d54bdf6f1c3ad0b67610",
+        "local_sha256": "70b2d3060286f2c4de7fa497669bb071dee4fb7da207d54bdf6f1c3ad0b67610",
+        "matches": true
+      }
+    ]
+  },
+  "runtime_adaptation": {
+    "existing_complete_patch": "patches/formal_ddp_complete_from_4f441073.patch",
+    "patch_sha256": "7bd5ab54ff2955f02907a847be7b83f64c807b6bd8931e80087fe7445ce79655",
+    "two_runtime_files_rebuilt_exactly": {
+      "multilingual_opsd_train.py": true,
+      "multilingual_opsd_trainer.py": true
+    },
+    "official_trainer_sha256": "2dd1442cc99bcf864f00067b1c956826c35adc4169a19c684b4f4fc0e8564590",
+    "runtime_trainer_sha256": "61ac661d2bbea66988d1b7adc671bcd35c210f7aeb7e43a27e6e2f8872b7ffa6",
+    "prior_core_loss_AST_proof_source_hashes_match": true,
+    "scope": "Only two runtime files differ from the official source export: train entry and trainer. Existing complete patch reconstructs their current bytes with zero fuzz. Shared core loss AST proof remains source-identical; this does not assert whole-runtime, privileged-teacher semantic correctness or scientific-protocol equivalence."
+  },
+  "selected_study_frozen_source_dependencies": {
+    "training_plans_verified": {
+      "SWmatched": "670b952049bdc61ebcd0392ace9252432eaa56b567a5e88373448e438ceccc63",
+      "TEmatched": "a420111f7030c70d83f4a8e2ea97afeffb79aba15eb85c5e9027cd2d736f54e7",
+      "ZHmatched": "3a05f577869b16ea179fb1731d4cbddbd7256a07bc04c4030cdd4531fab83edf",
+      "forward_s2": "2c9f7747d27f7e292186c43bcfb48a0665f273d565bc47813840397ade08a308",
+      "reverse_s2": "311bf736e154948aff0ee3aa126f147a2110e191135a3731ea74fbfc5231c4c3",
+      "forward_s3": "90f5182ff9b5bb7633c97ee34a4a0ed172ff2fda0aa92047724efd3fbb422bd2",
+      "reverse_s3": "74b320551a927eeca57b1621ab7e30713c447128c6bd19a8390da7f4af1bf078"
+    },
+    "project_files_verified": {
+      "benchmark_eval_concurrency8192.py": "2b97abc43ad8ed7c1bed73d741525081d47facf6fefa607cc71ee2a621a1c242",
+      "check_server_rollout_compat.py": "44ef1e9cb7358384f5a9236355f3716373ae8a1f3b94b46f646658b449792e15",
+      "check_server_runtime_compat.py": "cf95ebc4e66f9739cd45d8e35511efbc151e94c6d5d7fb25bfefb8ef046cab27",
+      "collect_sequential4b_stage.py": "25a10303e2d647387d94d3b8741c31fb86d5ef25856a15d8ce4acafa6ce3568e",
+      "compact_response_logits.py": "8af73d756c259eaa2e012a4398fadca2e4a8a795b52726741b2951a74e27b418",
+      "compact_response_logits_CPU_20261024.PUBLIC.json": "2452db56805745385c64a25471500d12201dc3a70f6de635f0958774c390f4ae",
+      "cost_instrumentation.py": "eefbe62332840d44ef475b59c3980d09ea8bd8842f6963145a7a8e6647166b00",
+      "followup200_frozen_20261021.PUBLIC.json": "7347ab481206f5c6a63736e30711eaebed767ad95d1d9ad7d24bee264f0561ff",
+      "formal4b_contract.py": "65824ff4b316927e795a834e796edd6c24f1ebd431574ed6f6320fb86425eed8",
+      "lora_sync_weights.py": "8cd757a82a6e83a4e79b1e65555f1fc1b7a85ea6a06a0ae8506c365724d9f724",
+      "mask_reduction_memory.py": "b94f1c33a9a2dbda7bd65ac9d6917862472fd8e3ff6e4498fb98fd0b0ce87f94",
+      "mask_reduction_memory_CUDA_20261022.PUBLIC.json": "442b15c374162ce64afb721e958c514c17d201d15a130812901f34af9c9cc6e1",
+      "prepare_remaining_4b_pool.py": "af02b94c1e5f2c81b5f3ded1111817e6a1f20f9e09bc0ad65cc5803642092253",
+      "prepare_sequential4b_stage.py": "c1fe8896816217dcbe4c00fa80e4750d5ddcd090975a3e5bec46fd17a5d8994f",
+      "prepare_sequential_pools.py": "54d4663445d55b4344925e35383284747e0baf893b2125c55f5023efb8206bea",
+      "resume_torch28_entry.py": "9cd3eaa61e52ae21ac08bc21b2bb02195a29e9898ee96de59e72fb1954bafb94",
+      "ru4b_pool2700_prepared_20261024.PUBLIC.json": "4b6983b744545f66cc23366a4db9e1a4f1428eb8f995a5ebd06edcf2d3c4189a",
+      "run_sequential4b_stage.sh": "61aa196a64dbc29f7470e5586d4e9527b244ea4ad0b68b4ef3ed6286ec9b4b7f",
+      "run_single4b_compact.sh": "a6870a3e7b2249aa14f8727d04d137d9d978092dd3dbf7c819699a69ec121bab",
+      "run_sw4b_server_dev8192.sh": "74a478f11d8ad2abf0346b34b7f2849e559abc5f56307c21b1997b3cc9642ef3",
+      "run_trl_audited_server32.py": "47daa077f9ab26fe07237f01eec0d2ade277879f95bc03090be20e7ac153994f",
+      "sequential4b_context.py": "0636cac2ef13f0f44dd536ab53dc1223f529528da0cddf18888728e634d5e154",
+      "sequential4b_data.py": "468186c058c155a3b08f88dafb4ef8c4eaf60fc4cb07bae3ff3d9e10577efa05",
+      "sequential4b_selection.py": "cc347be84c4d6e3aea7ac4ed91e0d08bcdc404c5dd01e2deccc0c2c0f298cd10",
+      "sequential4b_stage_entry.py": "ed5593d450bdf9a464a792b496c0e90cb8f735b1d496b13b10f8883069617612",
+      "sequential4b_stage_job.py": "35789c73693bf45baa72e855d11324b8cfa4bfb8b8d9226be6c11f665d49edca",
+      "sequential_adapter.py": "dfc289435b43662fa4cf85fc1129d0cc3559344fdbc8a4e2a70042a0daebf744",
+      "sequential_stage_entry.py": "3ff4cf0ae56bc91ff4006be89eec5c5ab7faab6351f9e3b56c3d8789435f0418",
+      "server_rollout_compat.py": "210ca3f98144766761239724e3769b51d652ef5d4f90de3440cf0fba8438c489",
+      "server_rollout_compat_CPU_20261022.PUBLIC.json": "91a00f23ffec7c949a28219c2ec93a4f1d73f6e1cd6275ca2316c8cc350dcb63",
+      "server_runtime_compat_CPU_20261022.PUBLIC.json": "4f0763d08fea5aa64d5112903bfdf80ce0a721fb6e6e9a663145a24c050f3a8e",
+      "server_worker32_AST_CPU_20261022.PUBLIC.json": "8f1ec2b94d10352d8e379632ac68082eba597da2e416054cb564c20a5786b4fb",
+      "single4b_compact_entry.py": "6023f03ea3882b20701167521b59acf1283cd99f0d476e2b06bb47f1c9d3a70d",
+      "single4b_compact_job.py": "4df47c54986e29b26d1051f2de397305dfae88655a9790bc987da64144deb6d2",
+      "sw4b_resource2_prepared_20261022.PUBLIC.json": "bf3696251d22b1f91341fb9d5060fd7315b74d59390e35cfa4f8f4d6852481a5",
+      "sw4b_server_resource_v2_frozen_20261022.PUBLIC.json": "40f6ea72986c3eda451e68d6d4cdc3204892bef688382594e53090a19533a82b",
+      "sw_lr20_frozen_20261022.PUBLIC.json": "3e0a3320e014793c714042d595d2175d61b68eacb87dbc8b280abd4e89bd7baa",
+      "te4b_actual_Trainer_OOM_case_passed_20261024.PUBLIC.json": "c901cbce1c2a62d15737ee1260e47064d2956e0c192fa9831216661030325088",
+      "te4b_oom_compaction_CUDA_20261024.PUBLIC.json": "75d7718a502a58f04743a6e60be966f21ee94a65ad4adb8f209d4ba067e56246",
+      "trl_server_audited_worker.py": "1e4b8e5f08dc35248b3413cc6f5f8b1ec5c6106c42665590ee474d3f58b5c83e",
+      "trl_server_worker32.py": "8091b51b206ce343c12a11d262dc9c295c1c8a3f8b2bc051af0eb5926386dfeb",
+      "zh4b_pool2700_prepared_20261022.PUBLIC.json": "c5ca92493bdee13ac738455a12fa4a476f228c0c24d7de93c51c619eb4d9ab90"
+    },
+    "installed_files_verified": {
+      "envs/copsd-vllm011-20261018/lib/python3.10/site-packages/trl/scripts/vllm_serve.py": "5ca7913edee122bb67212c0047580c1934ea1f033f832f4fd9893d2e4eeb6a06",
+      "envs/copsd-vllm011-20261018/lib/python3.10/site-packages/trl/extras/vllm_client.py": "8fc6aa0e056b78150d18170b3e8c6f04595f5aebbb9ca28e288b8e4599016577"
+    },
+    "installed_TRL_distribution": "trl-0.26.0.dist-info",
+    "installed_files_match_distribution_RECORD": {
+      "trl/extras/vllm_client.py": true,
+      "trl/scripts/vllm_serve.py": true
+    },
+    "previous_main_commit": "6e0bfd875869025f29c004c373ca85cd29f7c083",
+    "remote_files_matching_at_previous_commit": 40,
+    "publication_files_to_complete_frozen_set": [
+      "experiments/copsd_official_10lang/ru4b_pool2700_prepared_20261024.PUBLIC.json",
+      "experiments/copsd_official_10lang/te4b_oom_compaction_CUDA_20261024.PUBLIC.json"
+    ],
+    "remote_blob_checks": [
+      {
+        "path": "experiments/copsd_official_10lang/benchmark_eval_concurrency8192.py",
+        "expected_blob": "1fe51663afb355aa5dc9327142076ea0c3135fd6",
+        "remote_blob": "1fe51663afb355aa5dc9327142076ea0c3135fd6",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/check_server_rollout_compat.py",
+        "expected_blob": "8f9fec808aa331e0475c537853fe8347b8411613",
+        "remote_blob": "8f9fec808aa331e0475c537853fe8347b8411613",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/check_server_runtime_compat.py",
+        "expected_blob": "05a02f9f9589cad75e5b1ae034c7999db1004b64",
+        "remote_blob": "05a02f9f9589cad75e5b1ae034c7999db1004b64",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/collect_sequential4b_stage.py",
+        "expected_blob": "e1714b4f385cf199d58a3a8ffb16295ae38acd64",
+        "remote_blob": "e1714b4f385cf199d58a3a8ffb16295ae38acd64",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/compact_response_logits.py",
+        "expected_blob": "a719d1baa0ff7c159fb48a36029a70320c0f4382",
+        "remote_blob": "a719d1baa0ff7c159fb48a36029a70320c0f4382",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/compact_response_logits_CPU_20261024.PUBLIC.json",
+        "expected_blob": "710a972e66aacad927ac8290237364ecb2896b0d",
+        "remote_blob": "710a972e66aacad927ac8290237364ecb2896b0d",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/cost_instrumentation.py",
+        "expected_blob": "f0908de5a045af0d7a24e06774da894c322aa48d",
+        "remote_blob": "f0908de5a045af0d7a24e06774da894c322aa48d",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/followup200_frozen_20261021.PUBLIC.json",
+        "expected_blob": "8d89ac0a87be0231f368cb3a4361869be2cef601",
+        "remote_blob": "8d89ac0a87be0231f368cb3a4361869be2cef601",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/formal4b_contract.py",
+        "expected_blob": "1b12ec61881260a4c9705ce17fb82125732b0971",
+        "remote_blob": "1b12ec61881260a4c9705ce17fb82125732b0971",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/lora_sync_weights.py",
+        "expected_blob": "6bc9f824a9de74d9d6894c687bb6b7ebc9b7741d",
+        "remote_blob": "6bc9f824a9de74d9d6894c687bb6b7ebc9b7741d",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/mask_reduction_memory.py",
+        "expected_blob": "816c89cfbed7728b882f27f99e6211bbd21bd84c",
+        "remote_blob": "816c89cfbed7728b882f27f99e6211bbd21bd84c",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/mask_reduction_memory_CUDA_20261022.PUBLIC.json",
+        "expected_blob": "e10b1890bf1def9f3be250c2c48536ee5af3eda8",
+        "remote_blob": "e10b1890bf1def9f3be250c2c48536ee5af3eda8",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/prepare_remaining_4b_pool.py",
+        "expected_blob": "8485c93f02a3367b56e431973dcc287e195fc5fa",
+        "remote_blob": "8485c93f02a3367b56e431973dcc287e195fc5fa",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/prepare_sequential4b_stage.py",
+        "expected_blob": "1cb9e10903146ee7c2603998654279c9e8fc4c44",
+        "remote_blob": "1cb9e10903146ee7c2603998654279c9e8fc4c44",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/prepare_sequential_pools.py",
+        "expected_blob": "71fe74957c018c5ecb852deb50a14b218fab07d9",
+        "remote_blob": "71fe74957c018c5ecb852deb50a14b218fab07d9",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/resume_torch28_entry.py",
+        "expected_blob": "380937f1a8a97152ab2f8fe01989d005c2d9a05b",
+        "remote_blob": "380937f1a8a97152ab2f8fe01989d005c2d9a05b",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/ru4b_pool2700_prepared_20261024.PUBLIC.json",
+        "expected_blob": "e19c9df2c2936d24a0926bdfa1fb26e26f92873c",
+        "match": false
+      },
+      {
+        "path": "experiments/copsd_official_10lang/run_sequential4b_stage.sh",
+        "expected_blob": "31b6ed252c191d36fe95654eccdea142eeda7e31",
+        "remote_blob": "31b6ed252c191d36fe95654eccdea142eeda7e31",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/run_single4b_compact.sh",
+        "expected_blob": "0596a90c5cd032bc286e0cd476a62375da780000",
+        "remote_blob": "0596a90c5cd032bc286e0cd476a62375da780000",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/run_sw4b_server_dev8192.sh",
+        "expected_blob": "c9e25e290c71b94aae1858067c3b01ef237f7745",
+        "remote_blob": "c9e25e290c71b94aae1858067c3b01ef237f7745",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/run_trl_audited_server32.py",
+        "expected_blob": "309942c20a0ab450403406282afb6b89fd8ad23a",
+        "remote_blob": "309942c20a0ab450403406282afb6b89fd8ad23a",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sequential4b_context.py",
+        "expected_blob": "055d1ba4bdcfad4cb190fe277e6ae00155318510",
+        "remote_blob": "055d1ba4bdcfad4cb190fe277e6ae00155318510",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sequential4b_data.py",
+        "expected_blob": "c6b059047fc3d5b9edef2ee51faf5e97f171685d",
+        "remote_blob": "c6b059047fc3d5b9edef2ee51faf5e97f171685d",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sequential4b_selection.py",
+        "expected_blob": "d7eeb0533729e13db3522c213ff86acf5b167e1c",
+        "remote_blob": "d7eeb0533729e13db3522c213ff86acf5b167e1c",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sequential4b_stage_entry.py",
+        "expected_blob": "6c1db09f67b2f46949eb722cdec8af4567614333",
+        "remote_blob": "6c1db09f67b2f46949eb722cdec8af4567614333",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sequential4b_stage_job.py",
+        "expected_blob": "ecb5c39e3eca3a444a166bef28bf708e7da38dd5",
+        "remote_blob": "ecb5c39e3eca3a444a166bef28bf708e7da38dd5",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sequential_adapter.py",
+        "expected_blob": "379e09d707679e7bc5a1daed410c2f17062bc804",
+        "remote_blob": "379e09d707679e7bc5a1daed410c2f17062bc804",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sequential_stage_entry.py",
+        "expected_blob": "568362f76985a5cf1faa44bee65391df2a292be0",
+        "remote_blob": "568362f76985a5cf1faa44bee65391df2a292be0",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/server_rollout_compat.py",
+        "expected_blob": "b68ba90186e89ff4eb239716c189d03b7074ab84",
+        "remote_blob": "b68ba90186e89ff4eb239716c189d03b7074ab84",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/server_rollout_compat_CPU_20261022.PUBLIC.json",
+        "expected_blob": "c6cf448af0f25a45c3822d3971d9ae9102c173b8",
+        "remote_blob": "c6cf448af0f25a45c3822d3971d9ae9102c173b8",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/server_runtime_compat_CPU_20261022.PUBLIC.json",
+        "expected_blob": "fc3ca979b9bbefd98074124c06cba331d9827ef5",
+        "remote_blob": "fc3ca979b9bbefd98074124c06cba331d9827ef5",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/server_worker32_AST_CPU_20261022.PUBLIC.json",
+        "expected_blob": "4441b9f19046ff2801166e923b30974b97f402ef",
+        "remote_blob": "4441b9f19046ff2801166e923b30974b97f402ef",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/single4b_compact_entry.py",
+        "expected_blob": "d749834a0aa29875265751f420887a66f812ed59",
+        "remote_blob": "d749834a0aa29875265751f420887a66f812ed59",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/single4b_compact_job.py",
+        "expected_blob": "013743a720b2006a0c21fcb79c43c183eb057f97",
+        "remote_blob": "013743a720b2006a0c21fcb79c43c183eb057f97",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sw4b_resource2_prepared_20261022.PUBLIC.json",
+        "expected_blob": "54ba1fd55a4c1121439b2cf11bde65c528630c1b",
+        "remote_blob": "54ba1fd55a4c1121439b2cf11bde65c528630c1b",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sw4b_server_resource_v2_frozen_20261022.PUBLIC.json",
+        "expected_blob": "2d97b8bdaf469bbe0e86f59ebd2c8a26d3cf273d",
+        "remote_blob": "2d97b8bdaf469bbe0e86f59ebd2c8a26d3cf273d",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/sw_lr20_frozen_20261022.PUBLIC.json",
+        "expected_blob": "084f901b4c1200ef63955b618b67c1ce78d0a80a",
+        "remote_blob": "084f901b4c1200ef63955b618b67c1ce78d0a80a",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/te4b_actual_Trainer_OOM_case_passed_20261024.PUBLIC.json",
+        "expected_blob": "24f21ea8476385338a857797dad70c1b4ee3f2b6",
+        "remote_blob": "24f21ea8476385338a857797dad70c1b4ee3f2b6",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/te4b_oom_compaction_CUDA_20261024.PUBLIC.json",
+        "expected_blob": "20e19ed88b8612c0bc8a883c27c84193bc920fe6",
+        "match": false
+      },
+      {
+        "path": "experiments/copsd_official_10lang/trl_server_audited_worker.py",
+        "expected_blob": "615454881e18fc462e6ac4e2088a984d679545d7",
+        "remote_blob": "615454881e18fc462e6ac4e2088a984d679545d7",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/trl_server_worker32.py",
+        "expected_blob": "8498586ebb05782395a42254991b8b56da37de99",
+        "remote_blob": "8498586ebb05782395a42254991b8b56da37de99",
+        "match": true
+      },
+      {
+        "path": "experiments/copsd_official_10lang/zh4b_pool2700_prepared_20261022.PUBLIC.json",
+        "expected_blob": "dabbfad3b87f71ac9bfdafaf3feef7cbac1c34ae",
+        "remote_blob": "dabbfad3b87f71ac9bfdafaf3feef7cbac1c34ae",
+        "match": true
+      }
+    ]
+  },
+  "actual_environment": {
+    "python": "3.10.20",
+    "packages": {
+      "torch": "2.8.0",
+      "transformers": "4.57.1",
+      "trl": "0.26.0",
+      "vllm": "0.11.0",
+      "accelerate": "1.11.0",
+      "peft": "0.17.1",
+      "math-verify": "0.8.0",
+      "tensorboard": "2.21.0"
+    }
+  },
+  "actual_selected_training": {
+    "model": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "current_updates": 20,
+    "scheduler_horizon": 100,
+    "micro_batch": 1,
+    "gradient_accumulation": 32,
+    "effective_batch": 32,
+    "student_teacher_GPU_roles": 1,
+    "vllm_rollout_GPU_roles": 1,
+    "DDP_for_current_two_role_setup": false,
+    "LoRA_r": 64,
+    "LoRA_alpha": 128,
+    "LoRA_dropout": 0.05,
+    "learning_rate": 5e-06,
+    "max_grad_norm": 0.1,
+    "beta": 0,
+    "vocabulary_component_clip_max": 0.05,
+    "training_generation_cap": 2048,
+    "training_max_length": 20000,
+    "training_temperature": 1.1,
+    "training_top_p": 0.95,
+    "training_top_k": 20,
+    "training_vllm_max_num_seqs": 32,
+    "optimizer_and_scheduler_reset_at_sequential_stages": true,
+    "eval_implementation": "Independent stage-development/formal task evaluation plus TensorBoard exports, not a claim that Trainer built-in eval_strategy was explicitly enabled.",
+    "TensorBoard_logging_steps": 2,
+    "checkpoint_save_steps": 5
+  },
+  "official_release_vs_project": {
+    "reference_script": "multilingual_scripts/run_all_opsd_4b_3000.sh",
+    "release_languages": [
+      "bn",
+      "sw",
+      "te",
+      "th",
+      "zh",
+      "es",
+      "ru",
+      "ja"
+    ],
+    "project_languages": [
+      "sw",
+      "te",
+      "th",
+      "bn",
+      "zh",
+      "ja",
+      "ru",
+      "de",
+      "fr",
+      "es"
+    ],
+    "release_updates": 100,
+    "project_updates": 20,
+    "release_effective_batch": "4ranks x micro4 x accumulation2 =32",
+    "project_effective_batch": "one training rank x micro1 x accumulation32 =32",
+    "release_vllm_mode": "colocate",
+    "project_vllm_mode": "server, one dedicated rollout GPU",
+    "same_release_hyperparameters_verified_in_reference": [
+      "learning_rate5e-6",
+      "max_grad_norm0.1",
+      "r64",
+      "alpha128",
+      "generation2048",
+      "max_length20000",
+      "temperature1.1",
+      "top_p.95",
+      "top_k20",
+      "beta0",
+      "component_clip.05"
+    ],
+    "data_and_benchmarks": "Official released training data with separately recorded2700/900/dev split adaptations; project formal MGSM-Rev2/PolyMath n1/8192/native16. Separate completed1.7B AfriMGSM release metrics remain distinct."
+  },
+  "GPU_jobs_restarted_or_mutated": false,
+  "original_source_or_environment_files_modified_by_this_audit": false,
+  "full_goal_complete": false,
+  "remaining": "Original2700 ten-primary formal results and their complete final source/data/cost/reproduction delivery. This source audit checks seven selected-study training plans, not every historical experiment."
+}
