@@ -1,0 +1,295 @@
+{
+  "observed_at": "2026-10-26T13:30:40.078474+08:00",
+  "model_id": "Primary_TE20",
+  "cohort": "Original2700 independent Qwen3-4B TE20 resumed from checkpoint5, not matched900 or1.7B.",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "protocol": "project_formal4b_n1_8192_native16_v1",
+  "cases": {
+    "mgsm_rev2_te": {
+      "items": 250,
+      "Base_correct": 149,
+      "model_correct": 162,
+      "gained": 31,
+      "lost": 18,
+      "delta_percentage_points": 5.2,
+      "paired_question_bootstrap95_CI_pp": [
+        -0.4,
+        10.8
+      ],
+      "Base": {
+        "metrics": {
+          "items": 250,
+          "single_correct": 149,
+          "generated_tokens": 989616,
+          "truncated": 20,
+          "normal_terminations": 230,
+          "answer_extraction_failures": 20,
+          "protocol": "project_formal4b_n1_8192_native16_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 250,
+          "single_accuracy": 0.596,
+          "generation_seconds": 1667.7018226925284,
+          "model_load_seconds": 11.912345591932535,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {}
+        },
+        "output_files_sha256": {
+          "CONFIG.json": "0b51fb815aea6e28d8cf4a578a8e5c0087d936564724dfbbf8de7418c3a950cf",
+          "DONE.json": "9a0ff7dca1e512f573846a692c89a853ac026c40d60d9bad273a316334e4f924",
+          "ITEMS.jsonl": "1bb9083778171533cefad6e30ab96dd6ca46c41b078e91000d5b36f50eff53db"
+        },
+        "input_sha256": "61058bc0828478f7408ddeedd15f552902a1701de5de9ad3e9e03ab0c7a6392e",
+        "adapter_sha256": null,
+        "cost": {
+          "new_GPU_hours": 0.4811111111111111,
+          "reused": false,
+          "new_generated_tokens": 989616
+        }
+      },
+      "model": {
+        "metrics": {
+          "items": 250,
+          "single_correct": 162,
+          "generated_tokens": 971192,
+          "truncated": 23,
+          "normal_terminations": 227,
+          "answer_extraction_failures": 23,
+          "protocol": "project_formal4b_n1_8192_native16_v1",
+          "benchmark": "mgsm_rev2",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 250,
+          "single_accuracy": 0.648,
+          "generation_seconds": 4615.080951688811,
+          "model_load_seconds": 13.47445216588676,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {}
+        },
+        "output_files_sha256": {
+          "CONFIG.json": "ab939380aa5c20ebe81bcd4016ae1b7387be38b11350fe1be982e5c5806510e6",
+          "DONE.json": "25a112d6f4b35a562fcbc9ba02da4b74d2c05958948fa8b04601e56a2d410722",
+          "ITEMS.jsonl": "7c0ce2ba6ddf81ad45bd6ce7a4dd0a35936343dcf28b4e09796ff782e8e435da"
+        },
+        "input_sha256": "61058bc0828478f7408ddeedd15f552902a1701de5de9ad3e9e03ab0c7a6392e",
+        "adapter_sha256": "f6f9917414f39a808061bf94d2f75cc8a9d5617de513ce01c98eb224a5369ae5",
+        "cost": {
+          "new_GPU_hours": 1.301111111111111,
+          "reused": false,
+          "new_generated_tokens": 971192
+        }
+      }
+    },
+    "polymath_te": {
+      "items": 500,
+      "Base_correct": 72,
+      "model_correct": 85,
+      "gained": 26,
+      "lost": 13,
+      "delta_percentage_points": 2.6,
+      "paired_question_bootstrap95_CI_pp": [
+        0.2,
+        5.0
+      ],
+      "Base": {
+        "metrics": {
+          "items": 500,
+          "single_correct": 72,
+          "generated_tokens": 3470190,
+          "truncated": 328,
+          "normal_terminations": 172,
+          "answer_extraction_failures": 318,
+          "protocol": "project_formal4b_n1_8192_native16_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 500,
+          "single_accuracy": 0.144,
+          "generation_seconds": 6613.524423124269,
+          "model_load_seconds": 12.064822601154447,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 64,
+              "single_accuracy": 0.512
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            }
+          }
+        },
+        "output_files_sha256": {
+          "CONFIG.json": "2de72c022c95446fc311164ef0e14f8d57020406e4eb53e3dfd4206f4e8d5657",
+          "DONE.json": "6d621414cc9c7b03cfa1a22eb6beb31af683d93a834a989a1a952a8da0be8867",
+          "ITEMS.jsonl": "ae35d7063bd4daaf0b9b8a18643783780213aed625db3d392b65a74aabfdadea"
+        },
+        "input_sha256": "48a212230f3520a830e935ea0442aff01339748cb2fafa2ae36f702bb8fc55d5",
+        "adapter_sha256": null,
+        "cost": {
+          "new_GPU_hours": 1.8563888888888889,
+          "reused": false,
+          "new_generated_tokens": 3470190
+        }
+      },
+      "model": {
+        "metrics": {
+          "items": 500,
+          "single_correct": 85,
+          "generated_tokens": 3565429,
+          "truncated": 369,
+          "normal_terminations": 131,
+          "answer_extraction_failures": 355,
+          "protocol": "project_formal4b_n1_8192_native16_v1",
+          "benchmark": "polymath",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 500,
+          "single_accuracy": 0.17,
+          "generation_seconds": 16062.150721786544,
+          "model_load_seconds": 13.67469080351293,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {
+            "low": {
+              "items": 125,
+              "single_correct": 67,
+              "single_accuracy": 0.536
+            },
+            "medium": {
+              "items": 125,
+              "single_correct": 14,
+              "single_accuracy": 0.112
+            },
+            "high": {
+              "items": 125,
+              "single_correct": 4,
+              "single_accuracy": 0.032
+            },
+            "top": {
+              "items": 125,
+              "single_correct": 0,
+              "single_accuracy": 0.0
+            }
+          }
+        },
+        "output_files_sha256": {
+          "CONFIG.json": "aaa446259a67a715858833afaa872cc40dfe277f99a901130e0639fd22f7a6bc",
+          "DONE.json": "b272600d1d31d52cfa39eba95aaca7f029d6c97a0047f1c3b9766d8e64385439",
+          "ITEMS.jsonl": "5d244c4db49561914aadf3cd2663aed388dd00b9074889f1327d6f087c90fe58"
+        },
+        "input_sha256": "48a212230f3520a830e935ea0442aff01339748cb2fafa2ae36f702bb8fc55d5",
+        "adapter_sha256": "f6f9917414f39a808061bf94d2f75cc8a9d5617de513ce01c98eb224a5369ae5",
+        "cost": {
+          "new_GPU_hours": 4.481111111111111,
+          "reused": false,
+          "new_generated_tokens": 3565429
+        }
+      }
+    },
+    "gsm8k_en": {
+      "items": 1319,
+      "Base_correct": 1247,
+      "model_correct": 1245,
+      "gained": 16,
+      "lost": 18,
+      "delta_percentage_points": -0.1516300227445034,
+      "paired_question_bootstrap95_CI_pp": [
+        -0.9855951478392722,
+        0.6823351023502654
+      ],
+      "Base": {
+        "metrics": {
+          "items": 1319,
+          "single_correct": 1247,
+          "generated_tokens": 2053312,
+          "truncated": 8,
+          "normal_terminations": 1311,
+          "answer_extraction_failures": 7,
+          "protocol": "project_SW4B_formal_single_vllm8192_c16_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 1319,
+          "single_accuracy": 0.9454131918119788,
+          "generation_seconds": 3083.4221956003457,
+          "model_load_seconds": 12.43439969420433,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {}
+        },
+        "output_files_sha256": {
+          "CONFIG.json": "913393c2454359a6ded84f3ace4790098ea490afc677b88689e09d09d894ac92",
+          "DONE.json": "b7cd50954db99252f74fb99d48ed6653ffc0f141dbfcf639d91b93df6f49fefd",
+          "ITEMS.jsonl": "e8422f992c77d9c517a712eda80e154c2c0be0f60a7d71367fdfa26876606934"
+        },
+        "input_sha256": "b6eac877fdf0fb2baf8273f3cb7771ea083ebbc4f1862056f771fc56daec72e2",
+        "adapter_sha256": null,
+        "cost": {
+          "new_GPU_hours": 0.0,
+          "reused": true,
+          "new_generated_tokens": 0
+        }
+      },
+      "model": {
+        "metrics": {
+          "items": 1319,
+          "single_correct": 1245,
+          "generated_tokens": 2167665,
+          "truncated": 15,
+          "normal_terminations": 1304,
+          "answer_extraction_failures": 13,
+          "protocol": "project_formal4b_n1_8192_native16_v1",
+          "benchmark": "gsm8k",
+          "formal_full_test": true,
+          "n": 1,
+          "generation_count": 1319,
+          "single_accuracy": 0.9438968915845337,
+          "generation_seconds": 10213.586680147797,
+          "model_load_seconds": 13.863923043012619,
+          "actual_max_num_seqs": 16,
+          "scores_by_difficulty": {}
+        },
+        "output_files_sha256": {
+          "CONFIG.json": "f81e33df50c3b0d698b6d6ca1689784383ed7438052f5d6a4981ae24beade367",
+          "DONE.json": "3034ab8f11e601c53d2660ab168fe94054b1afee0e6ace36c0dcba7fc7aaf97f",
+          "ITEMS.jsonl": "0c804e550b06ab2df65ec04c8bf52d530372f8dbef38b14ae2b8234fe9a9ad81"
+        },
+        "input_sha256": "b6eac877fdf0fb2baf8273f3cb7771ea083ebbc4f1862056f771fc56daec72e2",
+        "adapter_sha256": "f6f9917414f39a808061bf94d2f75cc8a9d5617de513ce01c98eb224a5369ae5",
+        "cost": {
+          "new_GPU_hours": 2.8566666666666665,
+          "reused": false,
+          "new_generated_tokens": 2167665
+        }
+      }
+    }
+  },
+  "paired_acceptance_sha256": {
+    "mgsm_rev2_te": "32e2ad8a46a9b4320238d9634a7879921d8f8afab1b7bc04bb6a2a2a85dc6110",
+    "polymath_te": "fe1b69452c7baad321f5a54fed22d34d1210efefa5dfad0f40e4869dcf3cb84c",
+    "gsm8k_en": "01832f0ec90f93e59030a03f90f4061c85f0476e2890fe3a45635473ef3b3111"
+  },
+  "pair_collector_sha256": "8ee3fa419c10cd81de88596cfc02ea4740e5bd4f2b350d67b18231378fe32a12",
+  "three_math_outputs_accepted": true,
+  "full_language_reports_complete": false,
+  "full_goal_complete": false,
+  "interpretation": [
+    "TE PolyMath72->85/500 gives+2.6pp, unadjusted paired95%question CI[0.2,5.0]. This is limited fixed-model evidence, not stable multi-seed efficacy.",
+    "TE MGSM149->162/250 gives+5.2pp, CI[-0.4,10.8] includes0. English1247->1245/1319 gives-0.1516pp, CI[-0.9856,0.6823] includes0; neither equivalence nor a clear change is established.",
+    "PolyMath369truncations and355answer-extraction failures remain in the denominator; no reruns or filtered scoring. Target-language preservation and joint correct-language analysis remain pending.",
+    "These primary2700 results do not explain or repair the selected900 forward-sequence TE collapse; different question pools and training ancestry remain separate.",
+    "One training seed; question intervals condition on fixed models and are not multiplicity-corrected. Full ten-primary language/TensorBoard acceptance remains pending. Cost rows overlap shared Base and all-queue ledger; never add duplicate events."
+  ]
+}
