@@ -33,6 +33,17 @@
 
 ## 环境与入口
 
+### 实际题目与划分清单（2026-10-26）
+
+[实际使用清单](DATA_SPLITS_AND_ACTUAL_EXPOSURES_20261026.PUBLIC.json)仅发布题目哈希ID、顺序索引和证据哈希，不包含题目或参考解答正文。官方数据固定于 `519ea2be68fec00c8a033cb2040059ff595b06a0`。
+
+- 原2700题池的十个独立模型各接受640题；从保存的学生／教师输入token指纹恢复后，十语实际题目ID及顺序完全相同，并非仅根据seed推断。
+- 三个互不重叠的900题池各实际使用640题，每条顺序共1920道不同原题；保留原100题开发集与独立200题开发集。训练题与这300题的ID及NFKC加空白规范化英文题面均无重叠。
+- TE恢复模型的640题为checkpoint5保留的160题加恢复后的480题。旧失败尝试还记录了96条未保留轨迹；它们不计入最终模型的接受曝光量，但不能从失败计算成本中抹去。
+- 数据分层使用来源及英文题目／参考长度代理，不能称为已验证的数学难度匹配。既有测试重叠报告仅证明英文题面精确匹配为零；不扩张为穷尽的语义去重结论。
+
+恢复入口为 [recover_primary4b_exposure_ids.py](recover_primary4b_exposure_ids.py)，汇总入口为 [summarize_copsd_data_usage.py](summarize_copsd_data_usage.py)。两者仅处理本地证据，不执行模型前向或改写训练数据。三语言完整研究与原2700题池十语言正式评测仍分开报告；后者尚在运行。
+
 实际训练和正式生成使用 Python3.10.20、Torch2.8.0、Transformers4.57.1、TRL0.26.0、vLLM0.11.0、Accelerate1.11.0、PEFT0.17.1、math-verify0.8.0、TensorBoard2.21.0；细目见源码核验报告和已有环境冻结文件。GlotLID 分析使用独立既有环境和固定模型哈希。
 
 - 独立单语适配入口：[run_single4b_compact.sh](run_single4b_compact.sh)、[可移植TE配置模板](reproduction_templates/te4b/README_ZH.md)。
