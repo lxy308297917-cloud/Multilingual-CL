@@ -1,0 +1,928 @@
+{
+  "observed_at": "2026-10-26T10:32:43.614143+08:00",
+  "models": {
+    "primary_sw": {
+      "path": "models/checkpoint/copsd_sw4b_server_pilot20_v1/sw_4b_server_pilot20_safe2700_horizon100_seed42_20261022_v1/checkpoint-20",
+      "expected_adapter_sha256": "0d673e7df9b3f04f67fd5514be96f0039e0ede03e66eed3ef119a5cb7cc4f28b",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "0d673e7df9b3f04f67fd5514be96f0039e0ede03e66eed3ef119a5cb7cc4f28b"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "6df2931d3711daf53ebb4e7365ac130f53303ea4e2f831f14435b403e01619d4"
+        },
+        "trainer_state.json": {
+          "bytes": 2741,
+          "sha256": "4a17952ed80deff503664977f0514c7f79b6a75b0d65df7dfca677eb694aac91"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8209,
+          "sha256": "870063b7914c032754748ae51eb3bd9a0fe61d1128db78914685f0724faf848a"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "primary_te": {
+      "path": "models/checkpoint/copsd_te4b_server_single20_v1/te_4b_resume5_compact_logits_to20_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "f6f9917414f39a808061bf94d2f75cc8a9d5617de513ce01c98eb224a5369ae5",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "f6f9917414f39a808061bf94d2f75cc8a9d5617de513ce01c98eb224a5369ae5"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "99df1a1fcb7bf5e342fbb30a2818eb74386a4e765a06396ecc58523ef9202e04"
+        },
+        "trainer_state.json": {
+          "bytes": 2751,
+          "sha256": "699906ac27d3808fd6e0c67d05e9ae9852f4d0af1eb9744c0bec8f575a0aadb8"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8337,
+          "sha256": "dfc6fadb317c4ae563be7c39b43a567c24094fa93f4fff92af786472cfcc4ad3"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "primary_th": {
+      "path": "models/checkpoint/copsd_th4b_single20_v1/th_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "1988916a56774aebef0578024bb48dfec6151f895d0440a226527d6d6455fa19",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "1988916a56774aebef0578024bb48dfec6151f895d0440a226527d6d6455fa19"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "384f174b09cd7ebc6293ac306439de1b835c50d4bf56015fad0999e3687f9e2d"
+        },
+        "trainer_state.json": {
+          "bytes": 2748,
+          "sha256": "91c64b48a257613ebb66bd68a1863ea0916ea13d49fc3bd33d543cdda5803cc6"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "a8b6c561957eac7fdc4bdba2eb8cc30005b7cdc6dceee935b230d9339b822e7c"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "primary_bn": {
+      "path": "models/checkpoint/copsd_bn4b_server_single20_v1/bn_4b_server_single20_safe2700_horizon100_seed42_20261023_v1/checkpoint-20",
+      "expected_adapter_sha256": "517e1f3d8d3839d59864a3c0c26e12561f3d13490f5f76ee4c3cf04c28b5b8c8",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "517e1f3d8d3839d59864a3c0c26e12561f3d13490f5f76ee4c3cf04c28b5b8c8"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "5a73dc2f852c7e6731b999dca21aac8ab0950a486ae4816a3cc92eb30e1f1d71"
+        },
+        "trainer_state.json": {
+          "bytes": 2743,
+          "sha256": "f1762f7725055e58856c689f7505dd7d4e64d91904bc784a30a11e43572e8f82"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8209,
+          "sha256": "e679cc85e02853a1f40548cfc87954a2d81a0a11885d99533b49d0832381c906"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "primary_zh": {
+      "path": "models/checkpoint/copsd_zh4b_server_single20_v1/zh_4b_server_single20_safe2700_horizon100_seed42_20261023_v1/checkpoint-20",
+      "expected_adapter_sha256": "56db8df3b38d2e5c699dfb8c7937bdb32218e5cda58b9e340164b1632dc0a446",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "56db8df3b38d2e5c699dfb8c7937bdb32218e5cda58b9e340164b1632dc0a446"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "3a4b9d78f8af998ef372b10d07e4ff014ce1deac7f41290612ea8071820d2cef"
+        },
+        "trainer_state.json": {
+          "bytes": 2741,
+          "sha256": "24865759ef2a170fc820c5dd8a5592c0ce0c582bdc0c83081a4f86c84148c548"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8209,
+          "sha256": "15bad04e40674536de51166fc6003d877f890780fd37422f29e58acef38ef6ec"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "primary_ja": {
+      "path": "models/checkpoint/copsd_ja4b_server_single20_alloc_v2/ja_4b_server_single20_safe2700_horizon100_seed42_alloc_v2_20261023/checkpoint-20",
+      "expected_adapter_sha256": "5e6658ed7d4a219c213d842f3549cabd6d4fbba2a7d96c036d97ff5dc40364b4",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "5e6658ed7d4a219c213d842f3549cabd6d4fbba2a7d96c036d97ff5dc40364b4"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "0bfc29e3c64d3010e585e50e69649c4b31fdbfd821fe9e7c906a0896bb7d68b9"
+        },
+        "trainer_state.json": {
+          "bytes": 2742,
+          "sha256": "cfbdaf6ee5f70614317695b644fe1213a61c034684b61d13dc1ae5d5fd6aa9f4"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8209,
+          "sha256": "42fd665c796a7063db7152696ea2b35f6da342770111967d4dcd1b9b7e928d04"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "primary_ru": {
+      "path": "models/checkpoint/copsd_ru4b_single20_v1/ru_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "9295f7bd23d16030edb08ac8994ee525a7d67da3275cfca189c5f76e68d392ca",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "9295f7bd23d16030edb08ac8994ee525a7d67da3275cfca189c5f76e68d392ca"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "e3a734f9c2e560f3356cedb24135c47707ecddc2abb6f448678a70ca3aea80f2"
+        },
+        "trainer_state.json": {
+          "bytes": 2756,
+          "sha256": "3018a29e6601dde54b6ecbaae5b8ed57a838a9604850a3389fc2ee3191dd68e0"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "f193e0e745dfcd7c49f08ca0df5d2b965dd8b7f097cd6bac536c720adf7d96be"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "primary_de": {
+      "path": "models/checkpoint/copsd_de4b_single20_v1/de_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "b6a1a0b510f86dd39adadc810bdc2eba5e6c685d034c3051fe3496645a4542cf",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "b6a1a0b510f86dd39adadc810bdc2eba5e6c685d034c3051fe3496645a4542cf"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "77f69ab6589fd61f5f2b2ea01c7a16e55bb13d0d43787a46e3f924000d9bfbeb"
+        },
+        "trainer_state.json": {
+          "bytes": 2749,
+          "sha256": "10adfad75e3330dd96857b9c27a08ae8c42c2c22b9cfb0037dc66ddd7faed5b6"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "e81e5c0ebaf9aae7f3fff49fb0ef815ccd052e1c28f6a8a853b334c54988f101"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "primary_fr": {
+      "path": "models/checkpoint/copsd_fr4b_single20_v1/fr_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "0c95b4e9d50b9ad5ff65a0a1cc5148e97d4f86615b57b6a746c746ce7b0a2f48",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "0c95b4e9d50b9ad5ff65a0a1cc5148e97d4f86615b57b6a746c746ce7b0a2f48"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "873d306bda220d9806ef1231b0f8d4426753dc3f6e916adf1ccd809ac04333e0"
+        },
+        "trainer_state.json": {
+          "bytes": 2748,
+          "sha256": "c5af015837c819705a45aecf5c2c11ae6a01c61555fc83ccb743375aa87326cd"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "25ba6d7043f6e6b4ace4a11cc7f6b54d05a3c5671993d9a741e1a1472d176d55"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "primary_es": {
+      "path": "models/checkpoint/copsd_es4b_single20_v1/es_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "c0c2ae26294fb5c46ef9ce41a109ce851a9f7e77303a53a309bdca1bc4b91713",
+      "cohort": "original2700_primary",
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "c0c2ae26294fb5c46ef9ce41a109ce851a9f7e77303a53a309bdca1bc4b91713"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "73ed9d6209279f6b39f7c5b7bc5e97eb464b467c251bfac586c2659a938abeb7"
+        },
+        "trainer_state.json": {
+          "bytes": 2748,
+          "sha256": "983960168d9908cb636e2ed0370b09f8e9859ace8f4c4afc5245104391364b6f"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "afffec08438554a1b13b6da3c4a8af58ee7a4a1c4e21d19538f24ad896a497b4"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "copsd-seq4b-msw20-v1-training": {
+      "path": "models/checkpoint/copsd_selected4b_sequential_v1/sw_4b_matched900_pool0_step20_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "d267c4b82c449e9ab1f315c99b2a204df7f59e32752373d173efbd463ccd9607",
+      "cohort": "selected900_matched_or_sequential",
+      "stage_context": {
+        "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "teacher_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+        "experiment_role": "matched_single_reference",
+        "order_id": "copsd_selected4b_sw_te_zh_20261024_v1_matched_sw",
+        "direction": "matched",
+        "stage_index": 1,
+        "language": "sw",
+        "pool_index": 0,
+        "pool_manifest_sha256": "26e317451ff8716ce1e0d065b50184058555c80e9d84bedb52547ab6f3579aae",
+        "updates": 20,
+        "scheduler_horizon": 100,
+        "training_seed": 42,
+        "effective_batch": 32,
+        "max_completion_length": 2048,
+        "optimizer_reset": true,
+        "scheduler_reset": true,
+        "adapter_policy": "one_continuous_default_adapter"
+      },
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "d267c4b82c449e9ab1f315c99b2a204df7f59e32752373d173efbd463ccd9607"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "9c4f3c2f86b6c579fa048df2fc7a3704ac93876dc214d97358a6ed83a111467c"
+        },
+        "trainer_state.json": {
+          "bytes": 2718,
+          "sha256": "ff24c3502c832be0617906b702ee4d0c733c27bc3a72587569a8ecf116eb69c2"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "a74123070615808e2971908fdda2fdf0225de3968363e67913ca7391ac555046"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "copsd-seq4b-f2-te-v1-training": {
+      "path": "models/checkpoint/copsd_selected4b_sequential_v1/forward_s2_te_4b_pool1_from_sw20_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "df7846202960b79a3a89e2337ba4577d357d1ff85c2f3b26ea588feb48d2cb47",
+      "cohort": "selected900_matched_or_sequential",
+      "stage_context": {
+        "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "teacher_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+        "experiment_role": "sequential_stage",
+        "order_id": "copsd_selected4b_sw_te_zh_20261024_v1_forward",
+        "direction": "forward",
+        "stage_index": 2,
+        "language": "te",
+        "pool_index": 1,
+        "pool_manifest_sha256": "26e317451ff8716ce1e0d065b50184058555c80e9d84bedb52547ab6f3579aae",
+        "updates": 20,
+        "scheduler_horizon": 100,
+        "training_seed": 42,
+        "effective_batch": 32,
+        "max_completion_length": 2048,
+        "optimizer_reset": true,
+        "scheduler_reset": true,
+        "adapter_policy": "one_continuous_default_adapter"
+      },
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "df7846202960b79a3a89e2337ba4577d357d1ff85c2f3b26ea588feb48d2cb47"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "a9a4b592fb10d52722f9081e6ab08789be4b9d166673dc8bde9b205f3421f756"
+        },
+        "trainer_state.json": {
+          "bytes": 2735,
+          "sha256": "45a439557ac550e987411bca58352c3f2fa742c1e31bde34c5545b778f931f52"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "96a19924190594c9c55b426317949572aed2fdddf9c570a38c1b7fbadeb593f0"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "copsd-seq4b-f3-zh-v1-training": {
+      "path": "models/checkpoint/copsd_selected4b_sequential_v1/forward_s3_zh_4b_pool2_from_s2te20_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "3fae621400ed302460909a7e84a895520f5b80635edf491afef59a2b75ea4e44",
+      "cohort": "selected900_matched_or_sequential",
+      "stage_context": {
+        "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "teacher_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+        "experiment_role": "sequential_stage",
+        "order_id": "copsd_selected4b_sw_te_zh_20261024_v1_forward",
+        "direction": "forward",
+        "stage_index": 3,
+        "language": "zh",
+        "pool_index": 2,
+        "pool_manifest_sha256": "26e317451ff8716ce1e0d065b50184058555c80e9d84bedb52547ab6f3579aae",
+        "updates": 20,
+        "scheduler_horizon": 100,
+        "training_seed": 42,
+        "effective_batch": 32,
+        "max_completion_length": 2048,
+        "optimizer_reset": true,
+        "scheduler_reset": true,
+        "adapter_policy": "one_continuous_default_adapter"
+      },
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "3fae621400ed302460909a7e84a895520f5b80635edf491afef59a2b75ea4e44"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "ef39fda068a1505075698b26e4fcbdbdf7c3fc385897a72f10f3ee8e69d952a0"
+        },
+        "trainer_state.json": {
+          "bytes": 2726,
+          "sha256": "f08d3a7e21dad682eefa13264e7c06da2eddaa49ba3ac78a2e024f48b45a31db"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8209,
+          "sha256": "970fc08d99426cadf036bdad5e8ef177ad64b6461104ccece4977bb79fc94e07"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "copsd-seq4b-mzh20-v1-training": {
+      "path": "models/checkpoint/copsd_selected4b_sequential_v1/zh_4b_matched900_pool2_step20_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "814e6fc9297bbf367145f34adf24b55074f4846a317bb03199d32e4cd68db394",
+      "cohort": "selected900_matched_or_sequential",
+      "stage_context": {
+        "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "teacher_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+        "experiment_role": "matched_single_reference",
+        "order_id": "copsd_selected4b_sw_te_zh_20261024_v1_matched_zh",
+        "direction": "matched",
+        "stage_index": 1,
+        "language": "zh",
+        "pool_index": 2,
+        "pool_manifest_sha256": "26e317451ff8716ce1e0d065b50184058555c80e9d84bedb52547ab6f3579aae",
+        "updates": 20,
+        "scheduler_horizon": 100,
+        "training_seed": 42,
+        "effective_batch": 32,
+        "max_completion_length": 2048,
+        "optimizer_reset": true,
+        "scheduler_reset": true,
+        "adapter_policy": "one_continuous_default_adapter"
+      },
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "814e6fc9297bbf367145f34adf24b55074f4846a317bb03199d32e4cd68db394"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "0bdf5aa05c5ae0ec109d8aa1d3641b8964227b8830fd2d0b66cd58b293736426"
+        },
+        "trainer_state.json": {
+          "bytes": 2723,
+          "sha256": "ad43e16ed36723090f7322d4d016a54c0fc6bffc98df3e2d0763818bc145ca14"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "8514a0374a787fb57c6caa67e2d3c861566c4800751ff82893d73489cc84113d"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "copsd-seq4b-r2-te-v1-training": {
+      "path": "models/checkpoint/copsd_selected4b_sequential_v1/reverse_s2_te_4b_pool1_from_zh20_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "8b3f74762853fb94ee8567871be897b60396857f328dfc48abe57a1526175556",
+      "cohort": "selected900_matched_or_sequential",
+      "stage_context": {
+        "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "teacher_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+        "experiment_role": "sequential_stage",
+        "order_id": "copsd_selected4b_sw_te_zh_20261024_v1_reverse",
+        "direction": "reverse",
+        "stage_index": 2,
+        "language": "te",
+        "pool_index": 1,
+        "pool_manifest_sha256": "26e317451ff8716ce1e0d065b50184058555c80e9d84bedb52547ab6f3579aae",
+        "updates": 20,
+        "scheduler_horizon": 100,
+        "training_seed": 42,
+        "effective_batch": 32,
+        "max_completion_length": 2048,
+        "optimizer_reset": true,
+        "scheduler_reset": true,
+        "adapter_policy": "one_continuous_default_adapter"
+      },
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "8b3f74762853fb94ee8567871be897b60396857f328dfc48abe57a1526175556"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "5512c13d5c10516f9d88710e062a3437d5ecc973e6ef0ef9a64af70c8a1f2599"
+        },
+        "trainer_state.json": {
+          "bytes": 2732,
+          "sha256": "028cce5d3a815d4f10308c3ef7cc5e971d2b6f1c8d1d8de6f861db183b4337af"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "b1a89d702f426f9e20bdd7be40c6672c49114d010b5f004b191fe6cb8a671a1e"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "copsd-seq4b-r3-sw-v1-training": {
+      "path": "models/checkpoint/copsd_selected4b_sequential_v1/reverse_s3_sw_4b_pool0_from_s2te20_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "4859ddfebdd6e2c79a2a451602c4347861ead53704a312098cec57f64c6ba18c",
+      "cohort": "selected900_matched_or_sequential",
+      "stage_context": {
+        "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "teacher_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+        "experiment_role": "sequential_stage",
+        "order_id": "copsd_selected4b_sw_te_zh_20261024_v1_reverse",
+        "direction": "reverse",
+        "stage_index": 3,
+        "language": "sw",
+        "pool_index": 0,
+        "pool_manifest_sha256": "26e317451ff8716ce1e0d065b50184058555c80e9d84bedb52547ab6f3579aae",
+        "updates": 20,
+        "scheduler_horizon": 100,
+        "training_seed": 42,
+        "effective_batch": 32,
+        "max_completion_length": 2048,
+        "optimizer_reset": true,
+        "scheduler_reset": true,
+        "adapter_policy": "one_continuous_default_adapter"
+      },
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "4859ddfebdd6e2c79a2a451602c4347861ead53704a312098cec57f64c6ba18c"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "6614d4813028e5ff91e27e29a50c74d8298019fa406e61795238463b62a649d1"
+        },
+        "trainer_state.json": {
+          "bytes": 2729,
+          "sha256": "b0fda88d449374ab9d498965fed410892f19b45d5a411f1f79b7e33248852856"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8209,
+          "sha256": "570f3363d749c2aaf017445a6bf82d73470a79d28a82d2a3c367c0692d9fdbac"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    },
+    "copsd-seq4b-mte20-v1-training": {
+      "path": "models/checkpoint/copsd_selected4b_sequential_v1/te_4b_matched900_pool1_step20_seed42_20261024_v1/checkpoint-20",
+      "expected_adapter_sha256": "badb5a6968c7b1edbacb6419fb5da4084663260f0072808b14ec7901125ab6a8",
+      "cohort": "selected900_matched_or_sequential",
+      "stage_context": {
+        "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "teacher_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "selection_record_sha256": "c37ff9bf94047254a86da766d5f6afc060701453a54a1eb106c6ea4aa2eb9880",
+        "experiment_role": "matched_single_reference",
+        "order_id": "copsd_selected4b_sw_te_zh_20261024_v1_matched_te",
+        "direction": "matched",
+        "stage_index": 1,
+        "language": "te",
+        "pool_index": 1,
+        "pool_manifest_sha256": "26e317451ff8716ce1e0d065b50184058555c80e9d84bedb52547ab6f3579aae",
+        "updates": 20,
+        "scheduler_horizon": 100,
+        "training_seed": 42,
+        "effective_batch": 32,
+        "max_completion_length": 2048,
+        "optimizer_reset": true,
+        "scheduler_reset": true,
+        "adapter_policy": "one_continuous_default_adapter"
+      },
+      "global_step": 20,
+      "files": {
+        "adapter_model.safetensors": {
+          "bytes": 528550256,
+          "sha256": "badb5a6968c7b1edbacb6419fb5da4084663260f0072808b14ec7901125ab6a8"
+        },
+        "adapter_config.json": {
+          "bytes": 952,
+          "sha256": "0d110832764a836dd0cbc775fba2177727ed5de4b10bd13a0f729c64ae556fa2"
+        },
+        "trainer_state.json": {
+          "bytes": 2730,
+          "sha256": "4b034ae37511b4325a935c567d2a287f93a4ea41711dba7e6b639ea33c13bc5d"
+        },
+        "optimizer.pt": {
+          "bytes": 1057397963
+        },
+        "scheduler.pt": {
+          "bytes": 1465,
+          "sha256": "a02472b11757f73570bbb8530728f0c7ca62e42d253c927adf6e92b9757dca76"
+        },
+        "rng_state.pth": {
+          "bytes": 14645,
+          "sha256": "3baf7f88ae7ec85e835db60e93ba5e93ed97a57a5f65d61e7caf29f0120caa65"
+        },
+        "training_args.bin": {
+          "bytes": 8145,
+          "sha256": "3e8738b9c5fb4e0e8db879e87f2e04af67bf41bc81c6b5139d5bf71bc86c00d1"
+        },
+        "tokenizer.json": {
+          "bytes": 11422922,
+          "sha256": "50f9787d552fa20c3bfa90dadaabccfeef9343fc4fee19e3cfca00cb2586fbf0"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5431,
+          "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f"
+        }
+      },
+      "saved_resume_state_files_present": true,
+      "optimizer_deserialization_or_fresh_resume_test_performed": false
+    }
+  },
+  "unique_checkpoint_directories": 17,
+  "source_evidence_sha256": {
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_SW20_formal_frozen_20261024_v1.LOCAL.json": "637539aadbf596cddeeccec50f1623235ff60c51a83ceb8373b0199d204a825e",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_TE20_formal_frozen_20261024_v1.LOCAL.json": "7faee3d813c5b895e6cb439e676320571bdc9f42bcda3a8237ce241af85b55da",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_TH20_formal_frozen_20261024_v1.LOCAL.json": "af5b1f5e462be1221827928a3ed64efdfaf81341d3d39d2639cc3dca78920675",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_BN20_formal_frozen_20261024_v1.LOCAL.json": "e60ad1bbb2f470501cfdcd0752dc3cddbb686cbd4a15b3f8dd1e2534df8a7f7a",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_ZH20_formal_frozen_20261024_v1.LOCAL.json": "dfa3c04811169c053c869616906226b33344176ec4165983620b1c8ec9bb680f",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_JA20_formal_frozen_20261024_v1.LOCAL.json": "1856d2dc13f6f8b08d4eca81270f878814b64685d7408456a0a4f68a4e8cb844",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_RU20_formal_frozen_20261024_v1.LOCAL.json": "cbc5d17cdf54b7ceb0259c93d6807f49474c07733cf1a7b7619f953133e8d749",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_DE20_formal_frozen_20261024_v1.LOCAL.json": "a098ced95b5d78f4e4937fc4e79fede3e50c41d433d2069bf5fbf50b9df9c8c1",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_FR20_formal_frozen_20261024_v1.LOCAL.json": "fe9377807838b9565d2145c59678d6f3a9e7cee150674dbe997a97cb9f0439a9",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/primary4b_ES20_formal_frozen_20261024_v1.LOCAL.json": "3f736c1e488cab3740b484573d0907d55f306573be3b8b7e82c0235d1373c676",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/SELECTED4B_COMPLETE_SEQUENTIAL_RESULTS_20261026.PUBLIC.json": "d10fbdb8c9a2e4cc3219bfbf920b2deb316c528e142524ab69505c9fb22e00c0"
+  },
+  "collector_sha256": "d4f8bec5422e50b3b1f52458cbabb42a38ded1b53807721233b64cf21f1a5c35",
+  "scope": "Ten original2700 primary and seven selected900/sequential completed checkpoint20 directories. Stage1 reuse indexed once. Required files are present/nonempty; all adapter identities match formal releases. Optimizer files are not rehashed or deserialized, and no new resume is attempted. Paths are logical unified checkpoint entries; actual resolved storage paths stay in local sidecar. Does not imply model efficacy or completion of pending evaluations.",
+  "GPU_work_started_or_changed": false,
+  "full_goal_complete": false
+}

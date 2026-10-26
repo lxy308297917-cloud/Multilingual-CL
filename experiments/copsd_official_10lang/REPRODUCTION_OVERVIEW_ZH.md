@@ -36,6 +36,8 @@
 
 ## 环境与入口
 
+[已完成4B checkpoint 索引](COMPLETED4B_CHECKPOINT_INDEX_20261026.PUBLIC.json)列出十个原2700题池单语模型及七个三语言研究模型，共17个独立目录；顺序阶段1复用的模型只计一次。全部adapter哈希与正式配置一致，模型及优化器、调度器、RNG、Trainer状态文件存在且非空。本次没有重新反序列化优化器或执行恢复训练；实体存储位置仅保存于本地，公开索引使用统一checkpoint相对入口。
+
 ### 实际题目与划分清单（2026-10-26）
 
 [实际使用清单](DATA_SPLITS_AND_ACTUAL_EXPOSURES_20261026.PUBLIC.json)仅发布题目哈希ID、顺序索引和证据哈希，不包含题目或参考解答正文。官方数据固定于 `519ea2be68fec00c8a033cb2040059ff595b06a0`。
