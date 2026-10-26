@@ -1,0 +1,338 @@
+{
+  "observed_at": "2026-10-26T10:06:40.933518+08:00",
+  "cohort": "Original2700 ten independent Qwen3-4B single20 models.",
+  "models": {
+    "sw": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1076264,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1076264,
+        "masked_response_positions": 234456,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 314.42693228149415,
+        "student_processed_input_positions": 1421009,
+        "student_attended_input_positions": 1186553,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 376.36093978881837,
+        "teacher_processed_input_positions": 2057997,
+        "teacher_attended_input_positions": 1823541
+      },
+      "whole_lineage_queue_events": [
+        "copsd-sw4b-server-pilot20-v1/20261022-155201-a9717342"
+      ],
+      "whole_lineage_allocated_GPU_hours": 3.1444444444444444,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 5495.6294742729515
+    },
+    "te": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1309576,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1309576,
+        "masked_response_positions": 1144,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 328.19751806640625,
+        "student_processed_input_positions": 1613644,
+        "student_attended_input_positions": 1612500,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 425.8236186523438,
+        "teacher_processed_input_positions": 2602632,
+        "teacher_attended_input_positions": 2601488
+      },
+      "whole_lineage_queue_events": [
+        "copsd-te4b-resume5-v1/20261024-021549-cf8dcfa5",
+        "copsd-te4b-server20-v1/20261024-012413-2450dfb9"
+      ],
+      "whole_lineage_allocated_GPU_hours": 3.6205555555555557,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 4181.509746136144
+    },
+    "th": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1225505,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1225505,
+        "masked_response_positions": 85215,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 303.16036056518556,
+        "student_processed_input_positions": 1430447,
+        "student_attended_input_positions": 1345232,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 361.1641293029785,
+        "teacher_processed_input_positions": 2100715,
+        "teacher_attended_input_positions": 2015500
+      },
+      "whole_lineage_queue_events": [
+        "copsd-th4b-single20-v1/20261024-030139-b4ce4c74"
+      ],
+      "whole_lineage_allocated_GPU_hours": 2.98,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 5200.963184107095
+    },
+    "bn": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1304104,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1304104,
+        "masked_response_positions": 6616,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 311.7506328125,
+        "student_processed_input_positions": 1533277,
+        "student_attended_input_positions": 1526661,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 384.0375375366211,
+        "teacher_processed_input_positions": 2344985,
+        "teacher_attended_input_positions": 2338369
+      },
+      "whole_lineage_queue_events": [
+        "copsd-bn4b-server20-v1/20261023-051747-be5eb0cf"
+      ],
+      "whole_lineage_allocated_GPU_hours": 3.053888888888889,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 5333.342810591683
+    },
+    "zh": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1200988,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1200988,
+        "masked_response_positions": 109732,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 294.6142465209961,
+        "student_processed_input_positions": 1382758,
+        "student_attended_input_positions": 1273026,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 331.6986782836914,
+        "teacher_processed_input_positions": 1950626,
+        "teacher_attended_input_positions": 1840894
+      },
+      "whole_lineage_queue_events": [
+        "copsd-zh4b-server20-v1/20261023-175336-90b1380e"
+      ],
+      "whole_lineage_allocated_GPU_hours": 2.966111111111111,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 5169.21459713392
+    },
+    "ja": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1176426,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1176426,
+        "masked_response_positions": 134294,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 296.4646626281738,
+        "student_processed_input_positions": 1394871,
+        "student_attended_input_positions": 1260577,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 342.43518029785156,
+        "teacher_processed_input_positions": 1989619,
+        "teacher_attended_input_positions": 1855325
+      },
+      "whole_lineage_queue_events": [
+        "copsd-ja4b-server20-alloc-v2/20261023-015819-f34185e1"
+      ],
+      "whole_lineage_allocated_GPU_hours": 2.945,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 5138.970189271495
+    },
+    "ru": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1194259,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1194259,
+        "masked_response_positions": 116461,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 298.1961403808594,
+        "student_processed_input_positions": 1407232,
+        "student_attended_input_positions": 1290771,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 347.18230319213865,
+        "teacher_processed_input_positions": 2026300,
+        "teacher_attended_input_positions": 1909839
+      },
+      "whole_lineage_queue_events": [
+        "copsd-ru4b-single20-v1/20261024-043744-2d05f6cb"
+      ],
+      "whole_lineage_allocated_GPU_hours": 2.9466666666666668,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 5141.707538466901
+    },
+    "de": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1198225,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1198225,
+        "masked_response_positions": 112495,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 295.32626065063477,
+        "student_processed_input_positions": 1401397,
+        "student_attended_input_positions": 1288902,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 341.31263092041013,
+        "teacher_processed_input_positions": 2001265,
+        "teacher_attended_input_positions": 1888770
+      },
+      "whole_lineage_queue_events": [
+        "copsd-de4b-single20-v1/20261024-081305-96ab4f2d"
+      ],
+      "whole_lineage_allocated_GPU_hours": 2.921666666666667,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 5094.746941782534
+    },
+    "fr": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1162299,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1162299,
+        "masked_response_positions": 148421,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 299.9369248046875,
+        "student_processed_input_positions": 1395826,
+        "student_attended_input_positions": 1247405,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 350.779723815918,
+        "teacher_processed_input_positions": 1996334,
+        "teacher_attended_input_positions": 1847913
+      },
+      "whole_lineage_queue_events": [
+        "copsd-fr4b-single20-v1/20261024-094123-40d9d772"
+      ],
+      "whole_lineage_allocated_GPU_hours": 2.9788888888888887,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 5196.615961423144
+    },
+    "es": {
+      "accepted_updates": 20,
+      "accepted_rollouts": 640,
+      "accepted_generated_tokens": 1211348,
+      "accepted_forward_and_loss_cost": {
+        "loss_calls": 640,
+        "valid_response_loss_positions": 1211348,
+        "masked_response_positions": 99372,
+        "student_forward_calls": 640,
+        "student_forward_cuda_seconds": 295.00218313598634,
+        "student_processed_input_positions": 1396798,
+        "student_attended_input_positions": 1297426,
+        "teacher_forward_calls": 640,
+        "teacher_forward_cuda_seconds": 338.7683413391113,
+        "teacher_processed_input_positions": 1985786,
+        "teacher_attended_input_positions": 1886414
+      },
+      "whole_lineage_queue_events": [
+        "copsd-es4b-single20-v1/20261024-112355-c0c5aa2a"
+      ],
+      "whole_lineage_allocated_GPU_hours": 2.9266666666666667,
+      "last_successful_segment_training_seconds_including_diagnostic_hashing": 5105.3426331318915
+    }
+  },
+  "unique_lineage_events": {
+    "copsd-sw4b-server-pilot20-v1/20261022-155201-a9717342": {
+      "phase": "completed",
+      "allocated_GPU_hours": 3.1444444444444444,
+      "source_receipt_sha256": "3447d5eca1335dcc6f3e5688ab6fd374869fd8433aab3ea343270883851d71fe"
+    },
+    "copsd-te4b-resume5-v1/20261024-021549-cf8dcfa5": {
+      "phase": "completed",
+      "allocated_GPU_hours": 2.421666666666667,
+      "source_receipt_sha256": "b69f1a6b1927e6a9700ef0525cd97e61b270a6e5150b27ccfb3ffbac6291322a"
+    },
+    "copsd-te4b-server20-v1/20261024-012413-2450dfb9": {
+      "phase": "failed",
+      "allocated_GPU_hours": 1.198888888888889,
+      "source_receipt_sha256": "73a51e07dd958e5bac4368671c93bff8fb270722abbc5d250360704065aa1ae0"
+    },
+    "copsd-th4b-single20-v1/20261024-030139-b4ce4c74": {
+      "phase": "completed",
+      "allocated_GPU_hours": 2.98,
+      "source_receipt_sha256": "4e07d8d520ec7487573bf8cc3049100f0750d516a6702dfdab518d11363480a4"
+    },
+    "copsd-bn4b-server20-v1/20261023-051747-be5eb0cf": {
+      "phase": "completed",
+      "allocated_GPU_hours": 3.053888888888889,
+      "source_receipt_sha256": "82fa019e6e8ee35e3071534bffd797d34b99f617ae4fbf3702a35ed4dca3c6c1"
+    },
+    "copsd-zh4b-server20-v1/20261023-175336-90b1380e": {
+      "phase": "completed",
+      "allocated_GPU_hours": 2.966111111111111,
+      "source_receipt_sha256": "b7f7a3715f932c8d9ea8435e592a9a40d0ce5238e32f0d03d43b92a0c69b0db3"
+    },
+    "copsd-ja4b-server20-alloc-v2/20261023-015819-f34185e1": {
+      "phase": "completed",
+      "allocated_GPU_hours": 2.945,
+      "source_receipt_sha256": "244cf110012c8fd8e0e65381142971a75f3f2762aec57388bde19121e8ff796f"
+    },
+    "copsd-ru4b-single20-v1/20261024-043744-2d05f6cb": {
+      "phase": "completed",
+      "allocated_GPU_hours": 2.9466666666666668,
+      "source_receipt_sha256": "a825d84060b66048183ee91d5e417f8b6897fe6a81271b850f54f56e63cffbd4"
+    },
+    "copsd-de4b-single20-v1/20261024-081305-96ab4f2d": {
+      "phase": "completed",
+      "allocated_GPU_hours": 2.921666666666667,
+      "source_receipt_sha256": "945c99a08e25d020b73187b80596fdb5a1577869a926cc048c836a0d5a15cfe9"
+    },
+    "copsd-fr4b-single20-v1/20261024-094123-40d9d772": {
+      "phase": "completed",
+      "allocated_GPU_hours": 2.9788888888888887,
+      "source_receipt_sha256": "9bfa3dc869a8d1b770bbb852f3921e39c125a0e7a59469265d636df7b3fa4bd8"
+    },
+    "copsd-es4b-single20-v1/20261024-112355-c0c5aa2a": {
+      "phase": "completed",
+      "allocated_GPU_hours": 2.9266666666666667,
+      "source_receipt_sha256": "14ce55e433123cbf3537a6452fdf0478058fa0ec4acc2c067a7ebf9f53207f1a"
+    }
+  },
+  "whole_lineage_allocated_GPU_hours": 30.483888888888885,
+  "accepted_rollouts": 6400,
+  "accepted_generated_tokens": 12058994,
+  "accepted_teacher_forward_calls": 6400,
+  "source_evidence_sha256": {
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/PRIMARY4B_TRAINING_SOURCE_AUDIT_20261026.PUBLIC.json": "d3687a56afee709961ce24c05ac715f4c1e48ac5520b9c03e90581032d248c5a",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/sw4b_server_pilot20_frozen_20261022.PUBLIC.json": "39fcdb69f6898ecece9273a0c053c20d3d27bcfc6d6c2a790d7fa9a2c9788d95",
+    "models/checkpoint/copsd_sw4b_server_pilot20_v1/sw_4b_server_pilot20_safe2700_horizon100_seed42_20261022_v1/SERVER_PILOT20_UPDATES_DONE.json": "277fc310626fd9e7b24ac60ead1575c481cede3e5786f69b0666fd0139a1ace9",
+    "gpu-queue/queues/copsd-sw4b-server-pilot20-v1/runs/20261022-155201-a9717342/job.json": "3447d5eca1335dcc6f3e5688ab6fd374869fd8433aab3ea343270883851d71fe",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/te4b_resume5_frozen_20261024.PUBLIC.json": "49ad956641ca4942a79b9ab766e1d0d09a097a217f8fc8e58c2ad5eae25ef000",
+    "models/checkpoint/copsd_te4b_server_single20_v1/te_4b_resume5_compact_logits_to20_seed42_20261024_v1/SERVER_PILOT20_UPDATES_DONE.json": "2870df36e5d7ecf1e73058997bac7738ec6c1ae5be03e2c7891632083b56f78d",
+    "gpu-queue/queues/copsd-te4b-resume5-v1/runs/20261024-021549-cf8dcfa5/job.json": "b69f1a6b1927e6a9700ef0525cd97e61b270a6e5150b27ccfb3ffbac6291322a",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/te4b_server20_frozen_20261024.PUBLIC.json": "a4a9f470614d1f7ef88f250c5e2880dd185095f70544bf5684cfd0774c61ea72",
+    "gpu-queue/queues/copsd-te4b-server20-v1/runs/20261024-012413-2450dfb9/job.json": "73a51e07dd958e5bac4368671c93bff8fb270722abbc5d250360704065aa1ae0",
+    "models/checkpoint/copsd_te4b_server_single20_v1/te_4b_server_single20_safe2700_horizon100_seed42_20261024_v1/SERVER_ROLLOUTS.PRIVATE.jsonl": "41582c7040786b840523fb70000c16484facd6bc2b34c01c30673d0339276f01",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/th4b_single20_frozen_20261024.PUBLIC.json": "3489072c7b8c2343527eeef8789c1cd1e944a478e28b9ed2d555c8ec2581a608",
+    "models/checkpoint/copsd_th4b_single20_v1/th_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/SERVER_PILOT20_UPDATES_DONE.json": "80a99ae86830496056fd4903e68f11e9e495a6dbbaef8e6ac67fd42aca92f09c",
+    "gpu-queue/queues/copsd-th4b-single20-v1/runs/20261024-030139-b4ce4c74/job.json": "4e07d8d520ec7487573bf8cc3049100f0750d516a6702dfdab518d11363480a4",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/bn4b_server20_frozen_20261023.PUBLIC.json": "e850a992a54a8881508344dfcf59aba7b6c4a027f97e67c3f2b5c95a8ecdeeb7",
+    "models/checkpoint/copsd_bn4b_server_single20_v1/bn_4b_server_single20_safe2700_horizon100_seed42_20261023_v1/SERVER_PILOT20_UPDATES_DONE.json": "e97c823ed1a5335c25fee66967c4404e38f9f22a47a1d0d569d5614fd81a06c0",
+    "gpu-queue/queues/copsd-bn4b-server20-v1/runs/20261023-051747-be5eb0cf/job.json": "82fa019e6e8ee35e3071534bffd797d34b99f617ae4fbf3702a35ed4dca3c6c1",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/zh4b_server20_frozen_20261023.PUBLIC.json": "9c9f1cf5f5dfd473263f79f3d79ec27f2b1cd4d44fca981d38875ad8ee85423a",
+    "models/checkpoint/copsd_zh4b_server_single20_v1/zh_4b_server_single20_safe2700_horizon100_seed42_20261023_v1/SERVER_PILOT20_UPDATES_DONE.json": "7ec71ca37c09ca17f804a4f28727d477c85387d34e15344b25f6c869bd539bb4",
+    "gpu-queue/queues/copsd-zh4b-server20-v1/runs/20261023-175336-90b1380e/job.json": "b7f7a3715f932c8d9ea8435e592a9a40d0ce5238e32f0d03d43b92a0c69b0db3",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/ja4b_server20_alloc_v2_frozen_20261023.PUBLIC.json": "80c118397f4b9467174fe712ab47b4d7cc191bf24cf0684dbfc8805c1d4327d1",
+    "models/checkpoint/copsd_ja4b_server_single20_alloc_v2/ja_4b_server_single20_safe2700_horizon100_seed42_alloc_v2_20261023/SERVER_PILOT20_UPDATES_DONE.json": "d071124910d97619acbd54732496b2d751d7c8a6bf7bd5e453fcb5fafd2e0348",
+    "gpu-queue/queues/copsd-ja4b-server20-alloc-v2/runs/20261023-015819-f34185e1/job.json": "244cf110012c8fd8e0e65381142971a75f3f2762aec57388bde19121e8ff796f",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/ru4b_single20_frozen_20261024.PUBLIC.json": "bf8927b29fbc1ab10e012232b39b727a9477ab0f1d0b3b8f37c060214e348104",
+    "models/checkpoint/copsd_ru4b_single20_v1/ru_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/SERVER_PILOT20_UPDATES_DONE.json": "75e48d8e95e0db7ab5ec51ff6bf6c865b9627ea0bae8b7668a114c7e829e3411",
+    "gpu-queue/queues/copsd-ru4b-single20-v1/runs/20261024-043744-2d05f6cb/job.json": "a825d84060b66048183ee91d5e417f8b6897fe6a81271b850f54f56e63cffbd4",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/de4b_single20_frozen_20261024.PUBLIC.json": "384835ea62ee7d838fb10a721f53ec0efaa36d6c38fcf527876f559c157885d8",
+    "models/checkpoint/copsd_de4b_single20_v1/de_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/SERVER_PILOT20_UPDATES_DONE.json": "6dd9d297eac85341f2dde057907165730e91de040301fe2994375e1a6548041d",
+    "gpu-queue/queues/copsd-de4b-single20-v1/runs/20261024-081305-96ab4f2d/job.json": "945c99a08e25d020b73187b80596fdb5a1577869a926cc048c836a0d5a15cfe9",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/fr4b_single20_frozen_20261024.PUBLIC.json": "232d4524c55932faf2aac5cef40c664a8d18c3e8dd953459f2bacc402ef2d2ee",
+    "models/checkpoint/copsd_fr4b_single20_v1/fr_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/SERVER_PILOT20_UPDATES_DONE.json": "add77b97b07cf28183cc5800462e8d042bec9b52d8e27792c35eabb314551011",
+    "gpu-queue/queues/copsd-fr4b-single20-v1/runs/20261024-094123-40d9d772/job.json": "9bfa3dc869a8d1b770bbb852f3921e39c125a0e7a59469265d636df7b3fa4bd8",
+    "Multilingual-CL-copsd-publish-20261015/experiments/copsd_official_10lang/es4b_single20_frozen_20261024.PUBLIC.json": "2d9a7be604d677a0bc830205e80ac841957c5148627ca2b78c2bc105570b76a4",
+    "models/checkpoint/copsd_es4b_single20_v1/es_4b_compact_single20_safe2700_horizon100_seed42_20261024_v1/SERVER_PILOT20_UPDATES_DONE.json": "54d8fabad3d76e0403472d79f0f580e402f7208c2ad3da337197deca05368ded",
+    "gpu-queue/queues/copsd-es4b-single20-v1/runs/20261024-112355-c0c5aa2a/job.json": "14ce55e433123cbf3537a6452fdf0478058fa0ec4acc2c067a7ebf9f53207f1a"
+  },
+  "collector_sha256": "af02bd3f124f61ecaf224b7b5ccac88d470aa77164ce8ef003061abb1f7f93ec",
+  "scope": "Accepted checkpoint20 token and forward counts exclude discarded TE work. Whole-lineage allocation includes the entire failed TE predecessor plus successful recovery; no artificial split of failed-job wall time. Other abandoned pre-lineage attempts, prelaunch GPU holds, development and evaluation are excluded. These11 events overlap the all-queue ledger; never add them. CUDA event forward seconds are component timing, not total training time, energy or money. Last successful segment time is not total TE lineage duration.",
+  "GPU_work_started_or_changed": false,
+  "full_goal_complete": false
+}
