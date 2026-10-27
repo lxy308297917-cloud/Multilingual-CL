@@ -1,0 +1,45 @@
+{
+  "contexts": [
+    {
+      "context": "access_generation_Base",
+      "hours": 0.27833373811509876,
+      "observed_physical_peak_MiB": 4009
+    },
+    {
+      "context": "access_generation_Historical-element_protected",
+      "hours": 0.07443867716524336,
+      "observed_physical_peak_MiB": 4009
+    },
+    {
+      "context": "access_generation_LR077-s42",
+      "hours": 0.03718077156278822,
+      "observed_physical_peak_MiB": 3999
+    },
+    {
+      "context": "screen_Historical-element_protected_belebele_en",
+      "hours": 0.04550903896490733,
+      "observed_physical_peak_MiB": 7463
+    },
+    {
+      "context": "screen_Historical-element_protected_belebele_sw",
+      "hours": 0.0677493190103107,
+      "observed_physical_peak_MiB": 10367
+    },
+    {
+      "context": "screen_Historical-element_protected_knowledge_en",
+      "hours": 0.031395535667737326,
+      "observed_physical_peak_MiB": 15265
+    },
+    {
+      "context": "screen_Historical-element_protected_knowledge_sw",
+      "hours": 0.04775154127015008,
+      "observed_physical_peak_MiB": 22881
+    }
+  ],
+  "GPU_context_hours": 0.5823586217562358,
+  "new_generation_answers": 1920,
+  "observed_context_elapsed_not_kernel_time": true,
+  "uncertainty_allowance": 0,
+  "no_time_cap": true,
+  "max_account_GPUs": 4
+}
