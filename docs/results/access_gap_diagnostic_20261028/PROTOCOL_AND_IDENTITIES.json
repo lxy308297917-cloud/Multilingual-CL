@@ -1,0 +1,108 @@
+{
+  "original_protocol_sha256": "b52af1d552a60aa61e17b045522accaddc4e6bb2598e153d122e46c4621ab821",
+  "protocol_display": {
+    "frozen_unix": 1793114654.1387923,
+    "models": [
+      "Base",
+      "LR077-s42",
+      "Historical-element_protected"
+    ],
+    "no_training": true,
+    "new_generation_answers": 1920,
+    "pairs_by_task": {
+      "belebele": 64,
+      "knowledge": 64
+    },
+    "conditions": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "score_blind_hash_selection": true,
+    "data": {
+      "PAIRS_PRIVATE.json": {
+        "private_basename": "PAIRS_PRIVATE.json",
+        "sha256": "01cff7f4d69d22c03f2411a67b410771042611a34d52a0ebb8c45c2a28a6ae74"
+      },
+      "PROMPTS_PRIVATE.json": {
+        "private_basename": "PROMPTS_PRIVATE.json",
+        "sha256": "400cb0c9b716e4e3d3777ad80c081dddd91674e878b416705003188955d441b5"
+      }
+    },
+    "model_manifest_sha256": "ba94bd36413c03876b317aaacbd8c1a981f3a731b6b25de29144d169e161e7b6",
+    "generation": {
+      "batch_size": 4,
+      "dtype": "BF16",
+      "do_sample": false,
+      "num_beams": 1,
+      "max_new_tokens": 256,
+      "max_input_tokens": 1536,
+      "maximum_observed_prompt_tokens": 1518,
+      "padding": "left",
+      "chat_template": "Base",
+      "fewshot": 0
+    },
+    "main_metric": "Explicit unique noncontradictory Final-letter ACC on all fixed questions; failures remain wrong",
+    "exact_source_hashes": {
+      "en": "60f02bd5dd3bef79877bf7de58e1dcf908fd768a03c5cf59edf9d16f0bb80961",
+      "sw": "dc1880921443ce9e8f7dda8db0ad2c64789bd93dd23ef188982adc616328062f"
+    },
+    "knowledge_source_hashes": {
+      "en": "9021caf69a481e1245a27e731f4ee6fa4aada2ea9ef1177918453db5055186f6",
+      "sw": "41cd39dddc6a9f95ca439484b94d6fa62652bd45e789da91868f9fc1f590bee1"
+    },
+    "planned_comparisons": [
+      "C-B",
+      "D-A",
+      "E-B"
+    ],
+    "bootstrap_replicates": 10000,
+    "full_MCF_states": {
+      "belebele": 900,
+      "knowledge": 570,
+      "models": [
+        "Base",
+        "LR077-s42",
+        "Historical-element_protected"
+      ]
+    },
+    "max_account_GPUs": 4,
+    "GPU_hour_ceiling": null,
+    "wall_clock_ceiling_seconds": null,
+    "limitations": [
+      "Exposed development, not independent final test",
+      "Model training budgets differ; no algorithm ranking",
+      "Single deterministic protocol does not certify stable mastery",
+      "E changes context length and access to parallel English",
+      "Explanation language can change reasoning as well as output",
+      "Knowledge fewshot contents differ across languages in cached MCF"
+    ],
+    "code_hashes": {
+      "audit_resources.py": "3823acf5059817930f79723a8ab37e4d24d15ea68efeca9ba906f160b7e699a1",
+      "scoring.py": "9146b1a9cce5f58f4a9868d9f5be13d36f6bc76c4ba90a5d5ffb7b6fb4032c18",
+      "prepare.py": "0eeecf96c2d0912e9d0c5bc5ca3cd4c857b9dc194ab85152b8d07194b7cbadf9",
+      "common.py": "d2aec1491cb6374728dfffbaf96e80c5f4f761d455adc8af3c206c2e91807254"
+    }
+  },
+  "execution_code_sha256": {
+    "analyze.py": "586751c47e1bbf973d0b6b0077aa2977a2174635e139daaefe406883e3998c2a",
+    "audit_resources.py": "3823acf5059817930f79723a8ab37e4d24d15ea68efeca9ba906f160b7e699a1",
+    "common.py": "d2aec1491cb6374728dfffbaf96e80c5f4f761d455adc8af3c206c2e91807254",
+    "coordinate.py": "b238ff0b54526e8f9c01fbad88a1c9d32560210d8f6ab48faf7ab29a47ec9f34",
+    "generate.py": "4c452b505cd8f46cb2fcf2ef93a9b385089b77c3f67c582a877691c6058fa251",
+    "likelihood_worker.py": "d3ef5e628ec8ccade1b1b82209046ab907b8256b1e99457f1b6a4d583e8cafe8",
+    "prepare.py": "0eeecf96c2d0912e9d0c5bc5ca3cd4c857b9dc194ab85152b8d07194b7cbadf9",
+    "resource_context.py": "5f5f5920e84a5b8d091f1804a1965b9b36b7f4ec57d4ac0e7a313fcda90ba701",
+    "scoring.py": "9146b1a9cce5f58f4a9868d9f5be13d36f6bc76c4ba90a5d5ffb7b6fb4032c18"
+  },
+  "posthoc_source_sha256": "bff2b9bfe6aeefb927a982370566cf944d96d72a704edfdbfc0cf81fddef8e4b",
+  "model_weights_sha256": {
+    "Base": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "LR077-s42": "9e40407fa7d7c95d85c746908f9569ccd8c440fa798ab67ccef11a328a1ca201",
+    "Historical-element_protected": "66224d74c715671f7eac754376e4c8884c314bc0c7f714342e1ad9d88c205d36"
+  },
+  "no_training": true,
+  "posthoc_analysis_does_not_replace_frozen_scores": true
+}
