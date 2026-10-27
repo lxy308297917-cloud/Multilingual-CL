@@ -1,0 +1,191 @@
+{
+  "pending": [],
+  "file_hashes_recomputed": true,
+  "scientific_protocol_sha256": "e036326a84798d39b0ba92c77a7bd1e0795274d94ac87e999e477d2cb6fdee08",
+  "audited_unix": 1793113659.910349,
+  "all_five_training_complete": true,
+  "all_five_full_artifact_hash_audit_passed": true,
+  "scope": "Logs, exposure, exact per-step quotas, saved recoverable files and TensorBoard. Full hashes only when file_hashes_recomputed=true. No downstream efficacy conclusion.",
+  "groups": {
+    "U": {
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "calibration_input": 0,
+        "calibration_supervised": 0,
+        "replay_input": 0,
+        "replay_supervised": 0,
+        "generated_tokens": 0,
+        "cumulative_actual_path": 269.9702330713887
+      },
+      "final_model_sha256": "46dc2926cf26bf3057fef51fb0c527c90c7ebb92fdca617b18cb66b67d16d87a",
+      "full_state_bytes": 10809375250,
+      "per_module_update_accounting": {
+        "Attention": {
+          "nonzero_write_events": 9559637166,
+          "sum_step_norms": 95.84918746908201,
+          "sum_squared_step_norms": 2.825297263336857
+        },
+        "MLP": {
+          "nonzero_write_events": 58814038643,
+          "sum_step_norms": 252.34186557200107,
+          "sum_squared_step_norms": 19.900533964695114
+        }
+      },
+      "mask_refreshes": 215,
+      "mask_union_final": 1247581518,
+      "nonzero_write_events": 68373675809,
+      "peak_allocated_bytes": 19451688960,
+      "final_net_displacement": 15.773926160653255,
+      "module_net_displacement": {
+        "Attention": 5.523144234327236,
+        "MLP": 14.775372221658545
+      }
+    },
+    "P": {
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "calibration_input": 389435,
+        "calibration_supervised": 101635,
+        "replay_input": 0,
+        "replay_supervised": 0,
+        "generated_tokens": 0,
+        "cumulative_actual_path": 263.6525999292872
+      },
+      "final_model_sha256": "bbeea1022e0f7a06195a94fdd24a668893b3ef8128b457afd060d8643dccc339",
+      "full_state_bytes": 16050225650,
+      "per_module_update_accounting": {
+        "Attention": {
+          "nonzero_write_events": 9244092335,
+          "sum_step_norms": 94.32206425439044,
+          "sum_squared_step_norms": 2.7362619466893356
+        },
+        "MLP": {
+          "nonzero_write_events": 56626185425,
+          "sum_step_norms": 246.170070126607,
+          "sum_squared_step_norms": 18.86420812360715
+        }
+      },
+      "mask_refreshes": 215,
+      "mask_union_final": 1244639939,
+      "nonzero_write_events": 65870277760,
+      "peak_allocated_bytes": 20239007232,
+      "final_net_displacement": 15.530975992632326,
+      "module_net_displacement": {
+        "Attention": 5.51766271171886,
+        "MLP": 14.517803328445696
+      }
+    },
+    "R": {
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "calibration_input": 0,
+        "calibration_supervised": 0,
+        "replay_input": 389435,
+        "replay_supervised": 101635,
+        "generated_tokens": 0,
+        "cumulative_actual_path": 269.9160307177956
+      },
+      "final_model_sha256": "3408cdc71e8033fdc716fa38eb9c516129e71a8fdf2f6681ed00df69900b7723",
+      "full_state_bytes": 10809383634,
+      "per_module_update_accounting": {
+        "Attention": {
+          "nonzero_write_events": 9553998605,
+          "sum_step_norms": 95.76832018187774,
+          "sum_squared_step_norms": 2.8205915252148253
+        },
+        "MLP": {
+          "nonzero_write_events": 58835742842,
+          "sum_step_norms": 252.31344465920444,
+          "sum_squared_step_norms": 19.89599560680275
+        }
+      },
+      "mask_refreshes": 215,
+      "mask_union_final": 1247555812,
+      "nonzero_write_events": 68389741447,
+      "peak_allocated_bytes": 20239007232,
+      "final_net_displacement": 15.777876631140378,
+      "module_net_displacement": {
+        "Attention": 5.5164790150865315,
+        "MLP": 14.78207868547572
+      }
+    },
+    "N": {
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "calibration_input": 389435,
+        "calibration_supervised": 101635,
+        "replay_input": 0,
+        "replay_supervised": 0,
+        "generated_tokens": 0,
+        "cumulative_actual_path": 223.2547572850918
+      },
+      "final_model_sha256": "d54b74550f6e70637920b25826060795afd6f7f13e8e8bbbdedae7f839543458",
+      "full_state_bytes": 16050217202,
+      "per_module_update_accounting": {
+        "Attention": {
+          "nonzero_write_events": 5917863564,
+          "sum_step_norms": 79.7494114450963,
+          "sum_squared_step_norms": 1.922449038144816
+        },
+        "MLP": {
+          "nonzero_write_events": 35651422226,
+          "sum_step_norms": 208.48961587467372,
+          "sum_squared_step_norms": 13.283762662769583
+        }
+      },
+      "mask_refreshes": 215,
+      "mask_union_final": 1243523550,
+      "nonzero_write_events": 41569285790,
+      "peak_allocated_bytes": 20239007232,
+      "final_net_displacement": 14.122560876791328,
+      "module_net_displacement": {
+        "Attention": 5.060701379658951,
+        "MLP": 13.18468912278917
+      }
+    },
+    "N_abs": {
+      "steps": 4293,
+      "counts": {
+        "main_input": 1536351,
+        "main_supervised": 599469,
+        "calibration_input": 389435,
+        "calibration_supervised": 101635,
+        "replay_input": 0,
+        "replay_supervised": 0,
+        "generated_tokens": 0,
+        "cumulative_actual_path": 157.7957666257597
+      },
+      "final_model_sha256": "8585ba7c56f2a0e02e984808c491974341a179f5d3c4e49abbb64a8f94198e9e",
+      "full_state_bytes": 16050217202,
+      "per_module_update_accounting": {
+        "Attention": {
+          "nonzero_write_events": 1900250899,
+          "sum_step_norms": 57.40318771745215,
+          "sum_squared_step_norms": 0.9857570997040039
+        },
+        "MLP": {
+          "nonzero_write_events": 10209887557,
+          "sum_step_norms": 146.94999085183457,
+          "sum_squared_step_norms": 6.475623369875073
+        }
+      },
+      "mask_refreshes": 215,
+      "mask_union_final": 1196553220,
+      "nonzero_write_events": 12110138456,
+      "peak_allocated_bytes": 20239007232,
+      "final_net_displacement": 7.565621211795201,
+      "module_net_displacement": {
+        "Attention": 2.76096462939809,
+        "MLP": 7.0438411847214555
+      }
+    }
+  }
+}
