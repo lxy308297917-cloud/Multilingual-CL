@@ -1,0 +1,218 @@
+{
+  "Base/belebele/C-B": {
+    "paired_difference_pp": 18.75,
+    "paired_95CI_pp": [
+      6.25,
+      31.25
+    ],
+    "n": 64,
+    "source_groups": 64,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Base/belebele/D-A": {
+    "paired_difference_pp": -12.5,
+    "paired_95CI_pp": [
+      -23.4375,
+      -3.125
+    ],
+    "n": 64,
+    "source_groups": 64,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Base/belebele/E-B": {
+    "paired_difference_pp": 1.5625,
+    "paired_95CI_pp": [
+      -10.9375,
+      15.625
+    ],
+    "n": 64,
+    "source_groups": 64,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Base/knowledge/C-B": {
+    "paired_difference_pp": 9.375,
+    "paired_95CI_pp": [
+      -4.6875,
+      22.22222222222222
+    ],
+    "n": 64,
+    "source_groups": 57,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Base/knowledge/D-A": {
+    "paired_difference_pp": -6.25,
+    "paired_95CI_pp": [
+      -16.666666666666664,
+      4.545454545454546
+    ],
+    "n": 64,
+    "source_groups": 57,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Base/knowledge/E-B": {
+    "paired_difference_pp": -4.6875,
+    "paired_95CI_pp": [
+      -18.461538461538463,
+      8.823529411764707
+    ],
+    "n": 64,
+    "source_groups": 57,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "LR077-s42/belebele/C-B": {
+    "paired_difference_pp": 1.5625,
+    "paired_95CI_pp": [
+      -4.6875,
+      7.8125
+    ],
+    "n": 64,
+    "source_groups": 64,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "LR077-s42/belebele/D-A": {
+    "paired_difference_pp": 0.0,
+    "paired_95CI_pp": [
+      -7.8125,
+      7.8125
+    ],
+    "n": 64,
+    "source_groups": 64,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "LR077-s42/belebele/E-B": {
+    "paired_difference_pp": 4.6875,
+    "paired_95CI_pp": [
+      -4.6875,
+      14.0625
+    ],
+    "n": 64,
+    "source_groups": 64,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "LR077-s42/knowledge/C-B": {
+    "paired_difference_pp": 1.5625,
+    "paired_95CI_pp": [
+      0.0,
+      4.918032786885246
+    ],
+    "n": 64,
+    "source_groups": 57,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "LR077-s42/knowledge/D-A": {
+    "paired_difference_pp": -7.8125,
+    "paired_95CI_pp": [
+      -16.39344262295082,
+      0.0
+    ],
+    "n": 64,
+    "source_groups": 57,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "LR077-s42/knowledge/E-B": {
+    "paired_difference_pp": 14.0625,
+    "paired_95CI_pp": [
+      1.5873015873015872,
+      26.235535197685543
+    ],
+    "n": 64,
+    "source_groups": 57,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Historical-element_protected/belebele/C-B": {
+    "paired_difference_pp": 15.625,
+    "paired_95CI_pp": [
+      3.125,
+      28.125
+    ],
+    "n": 64,
+    "source_groups": 64,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Historical-element_protected/belebele/D-A": {
+    "paired_difference_pp": -53.125,
+    "paired_95CI_pp": [
+      -65.625,
+      -40.625
+    ],
+    "n": 64,
+    "source_groups": 64,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Historical-element_protected/belebele/E-B": {
+    "paired_difference_pp": -6.25,
+    "paired_95CI_pp": [
+      -18.75,
+      6.25
+    ],
+    "n": 64,
+    "source_groups": 64,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Historical-element_protected/knowledge/C-B": {
+    "paired_difference_pp": 10.9375,
+    "paired_95CI_pp": [
+      1.5625,
+      20.969864176570425
+    ],
+    "n": 64,
+    "source_groups": 57,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Historical-element_protected/knowledge/D-A": {
+    "paired_difference_pp": -39.0625,
+    "paired_95CI_pp": [
+      -52.459016393442624,
+      -26.865671641791046
+    ],
+    "n": 64,
+    "source_groups": 57,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  },
+  "Historical-element_protected/knowledge/E-B": {
+    "paired_difference_pp": 1.5625,
+    "paired_95CI_pp": [
+      -7.575757575757576,
+      11.29032258064516
+    ],
+    "n": 64,
+    "source_groups": 57,
+    "replicates": 10000,
+    "mode": "source_cluster",
+    "exploratory": true
+  }
+}
