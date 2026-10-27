@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "full_MCF_decisions_including_reused_caches": 8820,
+  "new_MCF_decisions": 2940,
+  "generation_answers": 1920,
+  "all_generation_scores_recomputed": true,
+  "all_MCF_argmax_scores_recomputed": true,
+  "MCF_tokens_and_gold_match_Base": true,
+  "all640prompt_keys_match_for_each_model": true,
+  "same_gold_and_prompt_hashes_verified": true,
+  "all7GPU_contexts_closed": true,
+  "analysis_sha256": "2236e3b663123c673231faed5801df593e2237c56e1fe74b855c1f7cd66e0930",
+  "protocol_sha256": "b52af1d552a60aa61e17b045522accaddc4e6bb2598e153d122e46c4621ab821",
+  "verified_unix": 1793120232.9692938
+}
