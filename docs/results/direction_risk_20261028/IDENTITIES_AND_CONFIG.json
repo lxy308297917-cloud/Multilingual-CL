@@ -1,0 +1,131 @@
+{
+  "model_family": "Qwen/Qwen2.5-1.5B-Instruct",
+  "weights_sha256": {
+    "Base": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "U": "46dc2926cf26bf3057fef51fb0c527c90c7ebb92fdca617b18cb66b67d16d87a",
+    "P": "bbeea1022e0f7a06195a94fdd24a668893b3ef8128b457afd060d8643dccc339",
+    "R": "3408cdc71e8033fdc716fa38eb9c516129e71a8fdf2f6681ed00df69900b7723",
+    "N": "d54b74550f6e70637920b25826060795afd6f7f13e8e8bbbdedae7f839543458",
+    "N_abs": "8585ba7c56f2a0e02e984808c491974341a179f5d3c4e49abbb64a8f94198e9e"
+  },
+  "original_scientific_protocol": {
+    "frozen_unix": 1793010879.4995894,
+    "training_launch_authorized_after_bridge_review": true,
+    "main_data_budget_sha256": "e3774aa8046abdc36f75d67d318aa3e4dc098a2ead7834f03fe463794e04a2e3",
+    "screen_data_sha256": "bfd15bf3028cb46f801a66c071ad9440bb0eabe808769c154df94e7ea313a519",
+    "groups": [
+      "U",
+      "P",
+      "R",
+      "N",
+      "N_abs"
+    ],
+    "main_updates": 4293,
+    "order": 42,
+    "total_K": 196529312,
+    "learning_rate": {
+      "peak": 3.857e-05,
+      "schedule_steps": 42465,
+      "warmup_steps": 2124
+    },
+    "weights": "BF16",
+    "Adam_moments": "FP32, all196matrix coordinates advance exactly once",
+    "mask": {
+      "each_matrix_fraction": 0.15,
+      "refresh_every": 20,
+      "selection": "stable descending flat index tie break"
+    },
+    "candidate_risk": {
+      "lambda_fixed": 1.0,
+      "english_EMA_beta": 0.9,
+      "initial_EMA": "first observed value",
+      "risk": "signedCE_EMA*counterfactual BF16 AdamW displacement",
+      "risk_denominator": "mean(abs(risk))+torch.finfo(float32).tiny",
+      "target_and_legacy_sensitivity_tiny": 1e-12,
+      "risk_statistics_every": 20,
+      "zero_lr": "No displacement; N/N_abs fall back to unprotected score for first20step mask"
+    },
+    "replay": {
+      "alpha": 0.1,
+      "same_calibration_schedule": true,
+      "no_claim_equal_effective_gradient_strength": true
+    },
+    "checkpoint_steps": [
+      2146,
+      4293
+    ],
+    "max_account_GPUs": 4,
+    "total_GPU_hour_ceiling": 16,
+    "max_account_GPUs_evaluation": 5,
+    "temporary_evaluation_exception_sha256": "6f5637c80417577f5705d00f76e371cf5e76b53fae198b8e3dd48b1d1958231c",
+    "no_intermediate_score_or_checkpoint_selection": true,
+    "optional_knowledge_included": true,
+    "screen_gates": {
+      "EN_Belebele_gain_vs_P_and_R_pp": 1.0,
+      "SW_Belebele_max_drop_pp": 1.0,
+      "each_translation_max_drop_chrfpp": 1.0,
+      "EN_MMLU_max_drop_pp": 1.0,
+      "official_IFEval_prompt_strict_max_drop_pp": 2.0,
+      "N_abs_mandatory": true,
+      "point_thresholds_not_statistical_noninferiority": true,
+      "no_automatic_promotion_of_ablation_if_N_fails": true,
+      "promising_comparison_only_second_order_and_SSU_HFT": true
+    },
+    "forecast": {
+      "training_seconds": 33669.460764896125,
+      "required_ACC_seconds": 2071.500904560089,
+      "knowledge_seconds": 1446.5740382671356,
+      "generation_seconds": 8377.08037018776,
+      "already_spent_seconds": 1929.473483324051,
+      "reserve_seconds": 7124.113434185274,
+      "total_seconds": 54618.20299542043,
+      "ceiling_seconds": 57600
+    },
+    "code_sha256": {
+      "code/check_calibration.py": "b18cef53313cedeb9668ef1ae80ff8b507bc261089731f2f05379bea89273fa8",
+      "code/resources.py": "79335719d2aa6f6aa94513e58bc7ffd1a01749966d882f2572d2e0933bd091fa",
+      "code/coordinate.py": "d53d7efad7d12e1715468070da5ee6445beebe758eddf11888e59722c3a358d3",
+      "code/audit_overlap.py": "366199356ea61f3154a1303ee18370291e208af46a123005639b7b3fa5ff85b3",
+      "code/screen_scoring.py": "b24e5682da7f79377a636982107a1fb5d54d5a172b22a92663b5fd12490446c5",
+      "code/train.py": "f54513082042799484ac61fccfc4ac7ef0009eae438800c3fd449c29a26bc210",
+      "code/prepare.py": "4ee441299978574647c90bdc94909f22fdde4f06dfac991d6f4be868d6ae10e9",
+      "code/freeze_training.py": "ce60c3fa6c6df82841c3bae567833ad1486b39e28e3fa0743b234ca27ed1b2d2",
+      "code/start_gates.py": "26c31004e8ed1cb1fc5aeedc8e9b0ce7be9e388c50a3c3ff128bfa9cceca12cd",
+      "code/preflight.py": "5784dd1b2c81326ddba130b0432473ddc42a76079b773a6ac201c59036b78fc2",
+      "code/check_optimizer.py": "cf80e5938695e6bb5539f64f801de338c776f651b39c082cd669bc1847c12421",
+      "code/optimizer.py": "bf9bfe77cf48e234a6d4d91b1dbef76cbc2a7d033584b1d8dc14b08d2c071635",
+      "code/prepare_screen.py": "3ca65c50bead115ce7553c5dc955007d04fd43aa78d0ef17c779610b88b16ecc",
+      "code/screen_generate.py": "599c67ac6509c114a40ca38a382a3ddc0c856218211d04e58a34a64802537ede",
+      "code/analyze_screen.py": "23eba1d0d11a086ebd9356f027f2df83ae970b3c86cb03a853e16e865f6df23f",
+      "code/audit_exposure.py": "a61e7c87e375127912b0648027e22529a9700c8a4413811d42f501eb3f65fe42",
+      "code/settings.py": "6fd7cacef90f635d8d8c88210a16899ea8076b06b6ccf9a01706a02ca6bc9aa4",
+      "code/screen_likelihood.py": "5ebc3f6424ba6eea9c4df959f673f18b9102de7ab29f0bb8261e60daa12957f7",
+      "code/calibration.py": "923259f6cf9af551abba18a13a3c1d617075adebf0cf08380a8749063575080c",
+      "code/engine.py": "a0fc53742c97ac8d2e7bf9ae416228f00c1da29638cce2d47bd74c51b2d28255"
+    },
+    "shared_resource_guard_sha256": "59ee8497e8d78e40f2166bda6dea95588cf0a95be96eec8d4957199d38de0ae2",
+    "bridge_review_sha256": "1829940bce0f83858d639d795a7baeea3fb480a30acafb9e8cc0d3bd78dd3e40"
+  },
+  "original_scientific_protocol_sha256": "e036326a84798d39b0ba92c77a7bd1e0795274d94ac87e999e477d2cb6fdee08",
+  "active_execution_policy": {
+    "effective_unix": 1793087641.8335395,
+    "human_instruction": "以后不要设计总预算上限了；不再设置累计GPU小时上限，也不因运行时间达到预算而中断任务；已确定的训练和评测尽量等到完成",
+    "GPU_hour_ceiling": null,
+    "wall_clock_ceiling_seconds": null,
+    "cost_is_record_only": true,
+    "no_time_triggered_dispatch_stop": true,
+    "no_time_triggered_worker_termination": true,
+    "max_account_GPUs": 4,
+    "approved_scientific_scope_unchanged": true,
+    "active_code_directory": "outputs/benchmark_direction_20261026/direction/recovery_20261027_no_time_cap",
+    "supersedes_prior16and20GPUhour_enforcement": true,
+    "old_frozen_protocol_retained_as_history": true
+  },
+  "resource_policy_note": "Original16hour and fifth-card fields are historical; active user override removes time caps and limits account to4. Scientific algorithm, data, updates and source hashes remain frozen.",
+  "data_identity": {
+    "main_data_budget_sha256": "e3774aa8046abdc36f75d67d318aa3e4dc098a2ead7834f03fe463794e04a2e3",
+    "exposure_sha256": "e9d4be7c7baa62cd748607cd982f2201138405a904f98b61371cbf4d33dcf0b5",
+    "screen_data_sha256": "bfd15bf3028cb46f801a66c071ad9440bb0eabe808769c154df94e7ea313a519"
+  },
+  "raw_data_and_weights_not_published": true
+}
