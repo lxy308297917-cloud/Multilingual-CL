@@ -1,0 +1,267 @@
+{
+  "models": {
+    "Base": {
+      "en_to_sw": {
+        "n": 128,
+        "languages": {
+          "sw": 88,
+          "en": 40
+        },
+        "capped": 41,
+        "answers_with_repeated_4grams": 69,
+        "repeated_4gram_events": 1002,
+        "prompt_tokens": 9257,
+        "generated_tokens": 22357
+      },
+      "sw_to_en": {
+        "n": 128,
+        "languages": {
+          "en": 104,
+          "sw": 24
+        },
+        "capped": 21,
+        "answers_with_repeated_4grams": 25,
+        "repeated_4gram_events": 317,
+        "prompt_tokens": 12322,
+        "generated_tokens": 19226
+      },
+      "ifeval_official128": {
+        "n": 128,
+        "languages": {
+          "en": 123,
+          "bn": 1,
+          "vi": 1,
+          "hi": 1,
+          "ru": 1,
+          "th": 1
+        },
+        "capped": 2,
+        "answers_with_repeated_4grams": 27,
+        "repeated_4gram_events": 741,
+        "prompt_tokens": 9621,
+        "generated_tokens": 29164
+      }
+    },
+    "U": {
+      "en_to_sw": {
+        "n": 128,
+        "languages": {
+          "en": 89,
+          "sw": 38,
+          "sk": 1
+        },
+        "capped": 1,
+        "answers_with_repeated_4grams": 3,
+        "repeated_4gram_events": 102,
+        "prompt_tokens": 9257,
+        "generated_tokens": 4846
+      },
+      "sw_to_en": {
+        "n": 128,
+        "languages": {
+          "en": 128
+        },
+        "capped": 0,
+        "answers_with_repeated_4grams": 1,
+        "repeated_4gram_events": 1,
+        "prompt_tokens": 12322,
+        "generated_tokens": 3396
+      },
+      "ifeval_official128": {
+        "n": 128,
+        "languages": {
+          "en": 116,
+          "it": 1,
+          "id": 1,
+          "tl": 3,
+          "fr": 1,
+          "de": 1,
+          "pt": 1,
+          "et": 1,
+          "af": 1,
+          "da": 1,
+          "th": 1
+        },
+        "capped": 18,
+        "answers_with_repeated_4grams": 34,
+        "repeated_4gram_events": 11911,
+        "prompt_tokens": 9621,
+        "generated_tokens": 28776
+      }
+    },
+    "P": {
+      "en_to_sw": {
+        "n": 128,
+        "languages": {
+          "en": 59,
+          "sw": 68,
+          "sk": 1
+        },
+        "capped": 5,
+        "answers_with_repeated_4grams": 8,
+        "repeated_4gram_events": 526,
+        "prompt_tokens": 9257,
+        "generated_tokens": 6429
+      },
+      "sw_to_en": {
+        "n": 128,
+        "languages": {
+          "en": 128
+        },
+        "capped": 0,
+        "answers_with_repeated_4grams": 2,
+        "repeated_4gram_events": 7,
+        "prompt_tokens": 12322,
+        "generated_tokens": 3578
+      },
+      "ifeval_official128": {
+        "n": 128,
+        "languages": {
+          "en": 121,
+          "de": 1,
+          "it": 1,
+          "so": 1,
+          "pt": 1,
+          "fi": 1,
+          "id": 1,
+          "th": 1
+        },
+        "capped": 10,
+        "answers_with_repeated_4grams": 32,
+        "repeated_4gram_events": 6926,
+        "prompt_tokens": 9621,
+        "generated_tokens": 23329
+      }
+    },
+    "R": {
+      "en_to_sw": {
+        "n": 128,
+        "languages": {
+          "en": 92,
+          "sw": 35,
+          "sk": 1
+        },
+        "capped": 2,
+        "answers_with_repeated_4grams": 5,
+        "repeated_4gram_events": 199,
+        "prompt_tokens": 9257,
+        "generated_tokens": 4945
+      },
+      "sw_to_en": {
+        "n": 128,
+        "languages": {
+          "en": 128
+        },
+        "capped": 0,
+        "answers_with_repeated_4grams": 0,
+        "repeated_4gram_events": 0,
+        "prompt_tokens": 12322,
+        "generated_tokens": 3496
+      },
+      "ifeval_official128": {
+        "n": 128,
+        "languages": {
+          "en": 120,
+          "tl": 1,
+          "sw": 1,
+          "pt": 2,
+          "de": 1,
+          "no": 1,
+          "fr": 1,
+          "th": 1
+        },
+        "capped": 5,
+        "answers_with_repeated_4grams": 30,
+        "repeated_4gram_events": 3114,
+        "prompt_tokens": 9621,
+        "generated_tokens": 15259
+      }
+    },
+    "N": {
+      "en_to_sw": {
+        "n": 128,
+        "languages": {
+          "sw": 104,
+          "en": 24
+        },
+        "capped": 5,
+        "answers_with_repeated_4grams": 9,
+        "repeated_4gram_events": 386,
+        "prompt_tokens": 9257,
+        "generated_tokens": 7578
+      },
+      "sw_to_en": {
+        "n": 128,
+        "languages": {
+          "en": 128
+        },
+        "capped": 0,
+        "answers_with_repeated_4grams": 0,
+        "repeated_4gram_events": 0,
+        "prompt_tokens": 12322,
+        "generated_tokens": 3589
+      },
+      "ifeval_official128": {
+        "n": 128,
+        "languages": {
+          "en": 119,
+          "tl": 3,
+          "vi": 1,
+          "de": 2,
+          "af": 1,
+          "pt": 1,
+          "th": 1
+        },
+        "capped": 5,
+        "answers_with_repeated_4grams": 16,
+        "repeated_4gram_events": 2994,
+        "prompt_tokens": 9621,
+        "generated_tokens": 17037
+      }
+    },
+    "N_abs": {
+      "en_to_sw": {
+        "n": 128,
+        "languages": {
+          "sw": 123,
+          "en": 5
+        },
+        "capped": 4,
+        "answers_with_repeated_4grams": 9,
+        "repeated_4gram_events": 380,
+        "prompt_tokens": 9257,
+        "generated_tokens": 7742
+      },
+      "sw_to_en": {
+        "n": 128,
+        "languages": {
+          "en": 128
+        },
+        "capped": 1,
+        "answers_with_repeated_4grams": 1,
+        "repeated_4gram_events": 219,
+        "prompt_tokens": 12322,
+        "generated_tokens": 3839
+      },
+      "ifeval_official128": {
+        "n": 128,
+        "languages": {
+          "en": 122,
+          "bn": 1,
+          "vi": 1,
+          "fi": 1,
+          "de": 1,
+          "id": 1,
+          "th": 1
+        },
+        "capped": 12,
+        "answers_with_repeated_4grams": 35,
+        "repeated_4gram_events": 7451,
+        "prompt_tokens": 9621,
+        "generated_tokens": 27697
+      }
+    }
+  },
+  "language_detector": "langdetect heuristic; not proof of language or semantic correctness",
+  "truncation": "No EOS before frozen cap; separate from content correctness"
+}
