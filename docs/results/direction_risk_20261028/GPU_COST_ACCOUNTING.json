@@ -1,0 +1,275 @@
+{
+  "contexts": [
+    {
+      "context": "N_abs_first",
+      "phase": "training",
+      "hours": 0.7409106025430892,
+      "timing_basis": "interrupted_end_estimated",
+      "observed_physical_peak_MiB": null
+    },
+    {
+      "context": "N_abs_recovery01",
+      "phase": "training",
+      "hours": 2.2933211619324156,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 20355
+    },
+    {
+      "context": "N_first",
+      "phase": "training",
+      "hours": 0.9808002164628771,
+      "timing_basis": "interrupted_end_estimated",
+      "observed_physical_peak_MiB": null
+    },
+    {
+      "context": "N_recovery01",
+      "phase": "training",
+      "hours": 2.335556008087264,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 20355
+    },
+    {
+      "context": "P_first",
+      "phase": "training",
+      "hours": 1.6401648448573218,
+      "timing_basis": "interrupted_end_estimated",
+      "observed_physical_peak_MiB": null
+    },
+    {
+      "context": "P_recovery01",
+      "phase": "training",
+      "hours": 1.1667156130075456,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 20333
+    },
+    {
+      "context": "R_first",
+      "phase": "training",
+      "hours": 1.298012518286705,
+      "timing_basis": "interrupted_end_estimated",
+      "observed_physical_peak_MiB": null
+    },
+    {
+      "context": "R_recovery01",
+      "phase": "training",
+      "hours": 0.7894177588489321,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 20111
+    },
+    {
+      "context": "U_first",
+      "phase": "training",
+      "hours": 1.4618121526638668,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 20283
+    },
+    {
+      "context": "preflight_01",
+      "phase": "preflight",
+      "hours": 0.07057150257958306,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 19075
+    },
+    {
+      "context": "screen_N_abs_belebele_en",
+      "phase": "likelihood",
+      "hours": 0.045224810110198126,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 7463
+    },
+    {
+      "context": "screen_N_abs_belebele_sw",
+      "phase": "likelihood",
+      "hours": 0.0694497596555286,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 10367
+    },
+    {
+      "context": "screen_N_abs_knowledge_en",
+      "phase": "likelihood",
+      "hours": 0.03151654170619117,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 15265
+    },
+    {
+      "context": "screen_N_abs_knowledge_sw",
+      "phase": "likelihood",
+      "hours": 0.04748841060532464,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 22881
+    },
+    {
+      "context": "screen_N_belebele_en",
+      "phase": "likelihood",
+      "hours": 0.04521764238675435,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 7463
+    },
+    {
+      "context": "screen_N_belebele_sw",
+      "phase": "likelihood",
+      "hours": 0.06836417019367218,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 10367
+    },
+    {
+      "context": "screen_N_knowledge_en",
+      "phase": "likelihood",
+      "hours": 0.03130005478858948,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 15265
+    },
+    {
+      "context": "screen_N_knowledge_sw",
+      "phase": "likelihood",
+      "hours": 0.047717224028375416,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 22881
+    },
+    {
+      "context": "screen_P_belebele_en",
+      "phase": "likelihood",
+      "hours": 0.04524100588427649,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 7463
+    },
+    {
+      "context": "screen_P_belebele_sw",
+      "phase": "likelihood",
+      "hours": 0.06938267694579231,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 10367
+    },
+    {
+      "context": "screen_P_knowledge_en",
+      "phase": "likelihood",
+      "hours": 0.03142098195023007,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 15265
+    },
+    {
+      "context": "screen_P_knowledge_sw",
+      "phase": "likelihood",
+      "hours": 0.04741024825308058,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 22881
+    },
+    {
+      "context": "screen_R_belebele_en",
+      "phase": "likelihood",
+      "hours": 0.0457176313135359,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 7463
+    },
+    {
+      "context": "screen_R_belebele_sw",
+      "phase": "likelihood",
+      "hours": 0.06757535788748,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 10367
+    },
+    {
+      "context": "screen_R_knowledge_en",
+      "phase": "likelihood",
+      "hours": 0.03186525179280175,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 15265
+    },
+    {
+      "context": "screen_R_knowledge_sw",
+      "phase": "likelihood",
+      "hours": 0.04740433692932129,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 22881
+    },
+    {
+      "context": "screen_U_belebele_en",
+      "phase": "likelihood",
+      "hours": 0.04612799260351393,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 7463
+    },
+    {
+      "context": "screen_U_belebele_sw",
+      "phase": "likelihood",
+      "hours": 0.06841560032632615,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 10367
+    },
+    {
+      "context": "screen_U_knowledge_en",
+      "phase": "likelihood",
+      "hours": 0.03133143636915419,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 15265
+    },
+    {
+      "context": "screen_U_knowledge_sw",
+      "phase": "likelihood",
+      "hours": 0.04824404180049896,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 22881
+    },
+    {
+      "context": "screen_generation_Base",
+      "phase": "generation",
+      "hours": 0.46539335389931996,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 3629
+    },
+    {
+      "context": "screen_generation_N",
+      "phase": "generation",
+      "hours": 0.19758436765935686,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 3627
+    },
+    {
+      "context": "screen_generation_N_abs",
+      "phase": "generation",
+      "hours": 0.30591988212532467,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 3629
+    },
+    {
+      "context": "screen_generation_P",
+      "phase": "generation",
+      "hours": 0.2732415443658829,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 3629
+    },
+    {
+      "context": "screen_generation_R",
+      "phase": "generation",
+      "hours": 0.17593765086597868,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 3629
+    },
+    {
+      "context": "screen_generation_U",
+      "phase": "generation",
+      "hours": 0.29239122827847797,
+      "timing_basis": "observed_context_elapsed",
+      "observed_physical_peak_MiB": 3629
+    }
+  ],
+  "totals_GPU_context_hours": {
+    "observed_context_elapsed": 10.794277399844594,
+    "interrupted_end_estimated": 4.659888182149993,
+    "live_not_final": 0
+  },
+  "uncertainty_allowance_hours": 1.0,
+  "observed_plus_estimated_excluding_allowance": 15.454165581994587,
+  "booked_including_live_and_allowance": 16.454165581994587,
+  "cost_record_only": true,
+  "no_time_cap": true,
+  "limits": [
+    "GPU context duration includes model loading and scoring inside context; not kernel-only time",
+    "Interrupted process end inferred from session shutdown, exact termination not recorded",
+    "Allowance is not measured consumption",
+    "Physical peak sampled every5seconds; missing interrupted peaks not reconstructed",
+    "Bridge seven-model cost recorded separately, not added twice"
+  ],
+  "bridge_GPU_context_hours": 1.3748510184552933,
+  "measured_unix": 1793117080.106581
+}
