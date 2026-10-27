@@ -1,0 +1,1003 @@
+{
+  "U-Base/belebele_en": {
+    "difference": -2.6666666666666714,
+    "paired_95CI": [
+      -4.682274247491634,
+      -0.6681514476614723
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "U-Base/belebele_sw": {
+    "difference": -3.2222222222222143,
+    "paired_95CI": [
+      -6.5995525727069335,
+      0.11161026037510254
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "U-Base/knowledge_en": {
+    "difference": -3.6842105263157876,
+    "paired_95CI": [
+      -7.017543859649116,
+      -0.526315789473685
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "U-Base/knowledge_sw": {
+    "difference": -0.8771929824561369,
+    "paired_95CI": [
+      -4.736842105263161,
+      2.8070175438596543
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "U-Base/en_to_sw": {
+    "difference": 0.6308672696834563,
+    "paired_95CI": [
+      -0.7901776103982224,
+      2.139419232928631
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "U-Base/sw_to_en": {
+    "difference": 11.420680430562243,
+    "paired_95CI": [
+      9.681763417421166,
+      13.256128080412976
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "U-Base/ifeval_official128": {
+    "difference": -12.5,
+    "paired_95CI": [
+      -21.875,
+      -3.125
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "P-Base/belebele_en": {
+    "difference": -0.4444444444444571,
+    "paired_95CI": [
+      -1.743014527499499,
+      0.7900677200902919
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "P-Base/belebele_sw": {
+    "difference": 0.11111111111111427,
+    "paired_95CI": [
+      -3.225806451612904,
+      3.5203520352035227
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "P-Base/knowledge_en": {
+    "difference": 0.0,
+    "paired_95CI": [
+      -2.280701754385973,
+      2.4561403508771846
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "P-Base/knowledge_sw": {
+    "difference": -1.0526315789473664,
+    "paired_95CI": [
+      -4.385964912280706,
+      2.280701754385966
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "P-Base/en_to_sw": {
+    "difference": 2.907105025700986,
+    "paired_95CI": [
+      1.312682745473412,
+      4.545228396088111
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "P-Base/sw_to_en": {
+    "difference": 12.660256972306424,
+    "paired_95CI": [
+      10.901247524831469,
+      14.549686310932413
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "P-Base/ifeval_official128": {
+    "difference": -6.25,
+    "paired_95CI": [
+      -14.84375,
+      2.34375
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "R-Base/belebele_en": {
+    "difference": -3.8888888888889,
+    "paired_95CI": [
+      -5.928411633109619,
+      -1.8681318681318686
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "R-Base/belebele_sw": {
+    "difference": -2.666666666666657,
+    "paired_95CI": [
+      -6.1405193829799565,
+      0.7829977628635376
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "R-Base/knowledge_en": {
+    "difference": -4.912280701754376,
+    "paired_95CI": [
+      -8.24561403508772,
+      -1.5789473684210478
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "R-Base/knowledge_sw": {
+    "difference": -1.5789473684210549,
+    "paired_95CI": [
+      -5.78947368421052,
+      2.4561403508771953
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "R-Base/en_to_sw": {
+    "difference": 0.08776002414824191,
+    "paired_95CI": [
+      -1.2471770002018043,
+      1.5346358340677302
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "R-Base/sw_to_en": {
+    "difference": 11.245084629432547,
+    "paired_95CI": [
+      9.525023052745363,
+      13.034645693423212
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "R-Base/ifeval_official128": {
+    "difference": -14.84375,
+    "paired_95CI": [
+      -23.4375,
+      -6.25
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-Base/belebele_en": {
+    "difference": -9.333333333333343,
+    "paired_95CI": [
+      -12.10137045094644,
+      -6.64433451915444
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-Base/belebele_sw": {
+    "difference": -2.666666666666657,
+    "paired_95CI": [
+      -6.375838926174495,
+      1.0953503666396942
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-Base/knowledge_en": {
+    "difference": -10.877192982456144,
+    "paired_95CI": [
+      -14.561403508771932,
+      -7.017543859649123
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-Base/knowledge_sw": {
+    "difference": 1.7543859649122808,
+    "paired_95CI": [
+      -2.6315789473684177,
+      5.9649122807017605
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-Base/en_to_sw": {
+    "difference": 6.210617369056713,
+    "paired_95CI": [
+      4.801487431070344,
+      7.636610996335826
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-Base/sw_to_en": {
+    "difference": 11.87584399281928,
+    "paired_95CI": [
+      10.238282441295253,
+      13.655008401691068
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-Base/ifeval_official128": {
+    "difference": -16.40625,
+    "paired_95CI": [
+      -25.0,
+      -7.8125
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-Base/belebele_en": {
+    "difference": -0.11111111111111427,
+    "paired_95CI": [
+      -1.6465422612513696,
+      1.417666303162477
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-Base/belebele_sw": {
+    "difference": -0.3333333333333286,
+    "paired_95CI": [
+      -3.4103410341034106,
+      2.869836449453002
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-Base/knowledge_en": {
+    "difference": -0.526315789473685,
+    "paired_95CI": [
+      -2.8070175438596507,
+      1.754385964912288
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-Base/knowledge_sw": {
+    "difference": 0.17543859649122595,
+    "paired_95CI": [
+      -3.1578947368421026,
+      3.3333333333333357
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-Base/en_to_sw": {
+    "difference": 6.755909089655216,
+    "paired_95CI": [
+      5.4943402070355,
+      8.126828180255412
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-Base/sw_to_en": {
+    "difference": 10.578743382835597,
+    "paired_95CI": [
+      8.812269181133146,
+      12.402631053628902
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-Base/ifeval_official128": {
+    "difference": -3.90625,
+    "paired_95CI": [
+      -11.71875,
+      3.90625
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-U/belebele_en": {
+    "difference": -6.666666666666671,
+    "paired_95CI": [
+      -9.45065946289529,
+      -3.9429370555626115
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-U/belebele_sw": {
+    "difference": 0.5555555555555571,
+    "paired_95CI": [
+      -2.905109169759918,
+      4.14416490116235
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-U/knowledge_en": {
+    "difference": -7.192982456140356,
+    "paired_95CI": [
+      -11.228070175438596,
+      -2.9824561403508767
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-U/knowledge_sw": {
+    "difference": 2.6315789473684177,
+    "paired_95CI": [
+      -2.105263157894729,
+      7.368421052631582
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-U/en_to_sw": {
+    "difference": 5.579750099373257,
+    "paired_95CI": [
+      4.139818209795853,
+      7.070295869072722
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-U/sw_to_en": {
+    "difference": 0.455163562257038,
+    "paired_95CI": [
+      -0.7740786742142576,
+      1.7703170390969047
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-U/ifeval_official128": {
+    "difference": -3.90625,
+    "paired_95CI": [
+      -11.71875,
+      3.90625
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-P/belebele_en": {
+    "difference": -8.888888888888886,
+    "paired_95CI": [
+      -11.661166116611668,
+      -6.256514886186062
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-P/belebele_sw": {
+    "difference": -2.7777777777777715,
+    "paired_95CI": [
+      -6.152297511592774,
+      0.5605538443729772
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-P/knowledge_en": {
+    "difference": -10.877192982456144,
+    "paired_95CI": [
+      -14.561403508771932,
+      -7.192982456140349
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-P/knowledge_sw": {
+    "difference": 2.807017543859647,
+    "paired_95CI": [
+      -1.4035087719298254,
+      7.017543859649123
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-P/en_to_sw": {
+    "difference": 3.3035123433557274,
+    "paired_95CI": [
+      1.980449853880517,
+      4.658436659510828
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-P/sw_to_en": {
+    "difference": -0.7844129794871435,
+    "paired_95CI": [
+      -2.2075956555920535,
+      0.6674018904306352
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-P/ifeval_official128": {
+    "difference": -10.15625,
+    "paired_95CI": [
+      -18.75,
+      -1.5625
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-R/belebele_en": {
+    "difference": -5.444444444444443,
+    "paired_95CI": [
+      -8.03964757709251,
+      -2.8985507246376865
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-R/belebele_sw": {
+    "difference": 0.0,
+    "paired_95CI": [
+      -3.247571419962947,
+      3.225806451612897
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-R/knowledge_en": {
+    "difference": -5.964912280701768,
+    "paired_95CI": [
+      -9.649122807017541,
+      -2.280701754385966
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-R/knowledge_sw": {
+    "difference": 3.3333333333333357,
+    "paired_95CI": [
+      -0.7017543859649145,
+      7.543859649122805
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-R/en_to_sw": {
+    "difference": 6.122857344908471,
+    "paired_95CI": [
+      4.663136016207729,
+      7.616105154011891
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-R/sw_to_en": {
+    "difference": 0.6307593633867334,
+    "paired_95CI": [
+      -0.7389549634371075,
+      1.9629529779761943
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-R/ifeval_official128": {
+    "difference": -1.5625,
+    "paired_95CI": [
+      -9.375,
+      6.25
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-N_abs/belebele_en": {
+    "difference": -9.222222222222229,
+    "paired_95CI": [
+      -11.98219783169876,
+      -6.487619396660333
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-N_abs/belebele_sw": {
+    "difference": -2.3333333333333286,
+    "paired_95CI": [
+      -5.803571428571431,
+      1.2263441381987596
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-N_abs/knowledge_en": {
+    "difference": -10.350877192982459,
+    "paired_95CI": [
+      -14.035087719298247,
+      -6.491228070175438
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-N_abs/knowledge_sw": {
+    "difference": 1.5789473684210549,
+    "paired_95CI": [
+      -2.6315789473684212,
+      5.789473684210527
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-N_abs/en_to_sw": {
+    "difference": -0.5452917205985024,
+    "paired_95CI": [
+      -1.6591319857687277,
+      0.5431924608881549
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-N_abs/sw_to_en": {
+    "difference": 1.2971006099836835,
+    "paired_95CI": [
+      -0.06380311751736076,
+      2.8299579809090853
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N-N_abs/ifeval_official128": {
+    "difference": -12.5,
+    "paired_95CI": [
+      -21.09375,
+      -3.90625
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-P/belebele_en": {
+    "difference": 0.3333333333333428,
+    "paired_95CI": [
+      -0.9868421052631504,
+      1.6611295681063183
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-P/belebele_sw": {
+    "difference": -0.44444444444444287,
+    "paired_95CI": [
+      -3.0203035182231326,
+      2.1499360613810614
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-P/knowledge_en": {
+    "difference": -0.526315789473685,
+    "paired_95CI": [
+      -2.456140350877199,
+      1.4035087719298218
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-P/knowledge_sw": {
+    "difference": 1.2280701754385923,
+    "paired_95CI": [
+      -1.5789473684210513,
+      4.035087719298247
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-P/en_to_sw": {
+    "difference": 3.84880406395423,
+    "paired_95CI": [
+      2.397048982733152,
+      5.299925650355162
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-P/sw_to_en": {
+    "difference": -2.081513589470827,
+    "paired_95CI": [
+      -3.6820950092505615,
+      -0.5730965663600966
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-P/ifeval_official128": {
+    "difference": 2.34375,
+    "paired_95CI": [
+      -3.125,
+      7.8125
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-R/belebele_en": {
+    "difference": 3.7777777777777857,
+    "paired_95CI": [
+      1.8930957683741667,
+      5.641592920353986
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-R/belebele_sw": {
+    "difference": 2.3333333333333286,
+    "paired_95CI": [
+      -0.6629834254143674,
+      5.327413984461707
+    ],
+    "resamples": 10000,
+    "n": 900,
+    "groups": 488,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-R/knowledge_en": {
+    "difference": 4.385964912280691,
+    "paired_95CI": [
+      1.403508771929829,
+      7.368421052631575
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-R/knowledge_sw": {
+    "difference": 1.7543859649122808,
+    "paired_95CI": [
+      -1.754385964912281,
+      5.2631578947368425
+    ],
+    "resamples": 10000,
+    "n": 570,
+    "groups": 57,
+    "resampling": "stratified",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-R/en_to_sw": {
+    "difference": 6.668149065506974,
+    "paired_95CI": [
+      5.375554914609858,
+      8.031889004901712
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-R/sw_to_en": {
+    "difference": -0.66634124659695,
+    "paired_95CI": [
+      -2.2857730473452813,
+      0.8008144726438416
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "chrF++",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  },
+  "N_abs-R/ifeval_official128": {
+    "difference": 10.9375,
+    "paired_95CI": [
+      3.125,
+      18.75
+    ],
+    "resamples": 10000,
+    "n": 128,
+    "groups": 128,
+    "resampling": "cluster",
+    "unit": "percentage_points",
+    "interpretation": "Fixed-model source uncertainty, not training-seed uncertainty; exploratory development"
+  }
+}
