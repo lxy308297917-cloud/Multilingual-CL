@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "Complete current diagnostic and preserved original five-arm closeout",
+  "new_MCF_decisions": 2940,
+  "reused_MCF_decisions": 5880,
+  "new_generation_answers": 1920,
+  "all_raw_choice_and_generation_scores_recomputed": true,
+  "raw_inputs_and_gold_match_across_models": true,
+  "all_contexts_closed_successfully": true,
+  "report_scientific_readthrough": true,
+  "figure_visually_reviewed": true,
+  "format_manipulation_limitation_explicit": true,
+  "posthoc_not_presented_as_frozen": true,
+  "original_rules_and_outputs_preserved": true,
+  "no_new_training_or_hyperparameter_scan": true,
+  "report_sha256": "7bfc8b98842d19637659de003da81f856db4c23602cd9b26a0399f7ed7511ab3",
+  "raw_acceptance_sha256": "e70a3676a3fce3d001b8be2ac06c19f3d36b17a511c6c2e0d419b8adc63785f3",
+  "verified_unix": 1793121098.5699415,
+  "next_action": "End this diagnostic; no automatic new training. Discuss one train-side selective-supervision hypothesis only after scoring/stability/related-work prerequisites."
+}
