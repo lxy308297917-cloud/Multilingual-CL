@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "old_LR077_archive_report_hash_and_scientific_review_verified": true,
+  "seven_model_bridge": {
+    "choice_decisions": 20580,
+    "extra_timing_pilot_decisions": 128,
+    "models": 7,
+    "complete": true
+  },
+  "five_model_training": {
+    "steps_each": 4293,
+    "main_input_each": 1536351,
+    "main_supervised_each": 599469,
+    "full_final_weights_and_optimizer_state_file_hashes_recomputed": true,
+    "all_step_quotas_and_exposure_verified": true
+  },
+  "screen": {
+    "models_including_Base": 6,
+    "total_choice_decisions_including_reused_Base": 17640,
+    "new_choice_decisions_for_five_arms": 14700,
+    "generation_answers_including_Base": 2304,
+    "new_trained_model_generated_answers": 1920,
+    "all_choice_scores_recomputed_from_raw_argmax": true,
+    "all_choice_prompt_tokens_and_gold_identical_across_models": true,
+    "generation_scores_recomputed": true,
+    "fixed_source_paired_intervals": true
+  },
+  "scientific_report_readthrough_and_figure_visual_review_completed": true,
+  "N_gate_passed": false,
+  "conditional_followup_resolved": true,
+  "conditional_followup_action": "Stop candidate; second-order and SSU/HFT training not eligible. Do not promote N_abs automatically.",
+  "next_scope": "Human-authorized evaluation-only access-gap diagnostic waits for this publication acceptance",
+  "verified_unix": 1793117617.6716263,
+  "private_raw_screen_acceptance_sha256": "09b96702d4d9c3cb49d659f1f061554d88929e3190811c1bac86ec119528db0d"
+}
