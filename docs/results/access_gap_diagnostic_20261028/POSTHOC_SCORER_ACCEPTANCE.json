@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "controlled_cases": 13,
+  "posthoc": true,
+  "main_scores_unchanged": true,
+  "rule": "Unique explicit final/answer declaration, or unambiguous initial choice; no option-text fuzzy match; contradictory declarations or option lists rejected."
+}
