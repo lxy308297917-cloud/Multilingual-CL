@@ -1,0 +1,620 @@
+{
+  "belebele/Base": {
+    "n": 900,
+    "labels": [
+      "EN-/SW-",
+      "EN-/SW+",
+      "EN+/SW-",
+      "EN+/SW+"
+    ],
+    "state_counts": [
+      114,
+      50,
+      448,
+      288
+    ],
+    "state_proportion_CI": {
+      "point": [
+        0.12666666666666668,
+        0.05555555555555555,
+        0.49777777777777776,
+        0.32
+      ],
+      "CI95_low": [
+        0.10379464285714286,
+        0.04063162054944211,
+        0.4656319290465632,
+        0.29161896592302644
+      ],
+      "CI95_high": [
+        0.15022551594281888,
+        0.07048458149779736,
+        0.5305233401522718,
+        0.34845132743362833
+      ],
+      "replicates": 10000,
+      "groups": 488,
+      "resampling": "source_cluster"
+    },
+    "base_to_adapt_transition_counts": [
+      [
+        114,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        448,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        288
+      ]
+    ],
+    "EN_correct_to_wrong": {
+      "count": 0,
+      "base_correct_denominator": 736,
+      "whole_pool_denominator": 900
+    },
+    "SW_wrong_to_correct": {
+      "count": 0,
+      "base_wrong_denominator": 562,
+      "whole_pool_denominator": 900
+    },
+    "whole_pool_effect_CI": {
+      "columns": [
+        "EN_correct_to_wrong_fraction",
+        "SW_wrong_to_correct_fraction",
+        "EN_ACC_change_fraction",
+        "SW_ACC_change_fraction"
+      ],
+      "point": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "CI95_low": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "CI95_high": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "replicates": 10000,
+      "groups": 488,
+      "resampling": "source_cluster"
+    }
+  },
+  "belebele/LR077-s42": {
+    "n": 900,
+    "labels": [
+      "EN-/SW-",
+      "EN-/SW+",
+      "EN+/SW-",
+      "EN+/SW+"
+    ],
+    "state_counts": [
+      135,
+      43,
+      440,
+      282
+    ],
+    "state_proportion_CI": {
+      "point": [
+        0.15,
+        0.04777777777777778,
+        0.4888888888888889,
+        0.31333333333333335
+      ],
+      "CI95_low": [
+        0.12651010586385952,
+        0.03455964325529543,
+        0.45666666666666667,
+        0.28359702370522416
+      ],
+      "CI95_high": [
+        0.17415838732455433,
+        0.061659192825112105,
+        0.5212903246660892,
+        0.34385908050748965
+      ],
+      "replicates": 10000,
+      "groups": 488,
+      "resampling": "source_cluster"
+    },
+    "base_to_adapt_transition_counts": [
+      [
+        77,
+        16,
+        17,
+        4
+      ],
+      [
+        25,
+        19,
+        3,
+        3
+      ],
+      [
+        27,
+        5,
+        328,
+        88
+      ],
+      [
+        6,
+        3,
+        92,
+        187
+      ]
+    ],
+    "EN_correct_to_wrong": {
+      "count": 41,
+      "base_correct_denominator": 736,
+      "whole_pool_denominator": 900
+    },
+    "SW_wrong_to_correct": {
+      "count": 113,
+      "base_wrong_denominator": 562,
+      "whole_pool_denominator": 900
+    },
+    "whole_pool_effect_CI": {
+      "columns": [
+        "EN_correct_to_wrong_fraction",
+        "SW_wrong_to_correct_fraction",
+        "EN_ACC_change_fraction",
+        "SW_ACC_change_fraction"
+      ],
+      "point": [
+        0.04555555555555556,
+        0.12555555555555556,
+        -0.015555555555555555,
+        -0.014444444444444444
+      ],
+      "CI95_low": [
+        0.032329988851727984,
+        0.10391061452513967,
+        -0.033112582781456956,
+        -0.046275395033860044
+      ],
+      "CI95_high": [
+        0.059275521405049394,
+        0.14692982456140352,
+        0.002232205207501994,
+        0.017797552836484983
+      ],
+      "replicates": 10000,
+      "groups": 488,
+      "resampling": "source_cluster"
+    }
+  },
+  "belebele/Historical-element_protected": {
+    "n": 900,
+    "labels": [
+      "EN-/SW-",
+      "EN-/SW+",
+      "EN+/SW-",
+      "EN+/SW+"
+    ],
+    "state_counts": [
+      145,
+      52,
+      358,
+      345
+    ],
+    "state_proportion_CI": {
+      "point": [
+        0.16111111111111112,
+        0.057777777777777775,
+        0.3977777777777778,
+        0.38333333333333336
+      ],
+      "CI95_low": [
+        0.13742909809250592,
+        0.042951541850220265,
+        0.3660706902661836,
+        0.3522352174966679
+      ],
+      "CI95_high": [
+        0.18584070796460178,
+        0.07349788162009,
+        0.42825995970191266,
+        0.4144144144144144
+      ],
+      "replicates": 10000,
+      "groups": 488,
+      "resampling": "source_cluster"
+    },
+    "base_to_adapt_transition_counts": [
+      [
+        76,
+        23,
+        9,
+        6
+      ],
+      [
+        27,
+        17,
+        2,
+        4
+      ],
+      [
+        36,
+        6,
+        267,
+        139
+      ],
+      [
+        6,
+        6,
+        80,
+        196
+      ]
+    ],
+    "EN_correct_to_wrong": {
+      "count": 54,
+      "base_correct_denominator": 736,
+      "whole_pool_denominator": 900
+    },
+    "SW_wrong_to_correct": {
+      "count": 174,
+      "base_wrong_denominator": 562,
+      "whole_pool_denominator": 900
+    },
+    "whole_pool_effect_CI": {
+      "columns": [
+        "EN_correct_to_wrong_fraction",
+        "SW_wrong_to_correct_fraction",
+        "EN_ACC_change_fraction",
+        "SW_ACC_change_fraction"
+      ],
+      "point": [
+        0.06,
+        0.19333333333333333,
+        -0.03666666666666667,
+        0.06555555555555556
+      ],
+      "CI95_low": [
+        0.04535398230088496,
+        0.16853870300705048,
+        -0.05493273542600897,
+        0.030405405405405407
+      ],
+      "CI95_high": [
+        0.07538802660753881,
+        0.21913313495660866,
+        -0.01893095768374165,
+        0.10089913759580214
+      ],
+      "replicates": 10000,
+      "groups": 488,
+      "resampling": "source_cluster"
+    }
+  },
+  "knowledge/Base": {
+    "n": 570,
+    "labels": [
+      "EN-/SW-",
+      "EN-/SW+",
+      "EN+/SW-",
+      "EN+/SW+"
+    ],
+    "state_counts": [
+      167,
+      40,
+      232,
+      131
+    ],
+    "state_proportion_CI": {
+      "point": [
+        0.2929824561403509,
+        0.07017543859649122,
+        0.4070175438596491,
+        0.22982456140350876
+      ],
+      "CI95_low": [
+        0.2596491228070175,
+        0.05087719298245614,
+        0.3701754385964912,
+        0.19824561403508772
+      ],
+      "CI95_high": [
+        0.3263157894736842,
+        0.08947368421052632,
+        0.443859649122807,
+        0.2631578947368421
+      ],
+      "replicates": 10000,
+      "groups": 57,
+      "resampling": "within_subject"
+    },
+    "base_to_adapt_transition_counts": [
+      [
+        167,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        232,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        131
+      ]
+    ],
+    "EN_correct_to_wrong": {
+      "count": 0,
+      "base_correct_denominator": 363,
+      "whole_pool_denominator": 570
+    },
+    "SW_wrong_to_correct": {
+      "count": 0,
+      "base_wrong_denominator": 399,
+      "whole_pool_denominator": 570
+    },
+    "whole_pool_effect_CI": {
+      "columns": [
+        "EN_correct_to_wrong_fraction",
+        "SW_wrong_to_correct_fraction",
+        "EN_ACC_change_fraction",
+        "SW_ACC_change_fraction"
+      ],
+      "point": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "CI95_low": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "CI95_high": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "replicates": 10000,
+      "groups": 57,
+      "resampling": "within_subject"
+    }
+  },
+  "knowledge/LR077-s42": {
+    "n": 570,
+    "labels": [
+      "EN-/SW-",
+      "EN-/SW+",
+      "EN+/SW-",
+      "EN+/SW+"
+    ],
+    "state_counts": [
+      170,
+      49,
+      222,
+      129
+    ],
+    "state_proportion_CI": {
+      "point": [
+        0.2982456140350877,
+        0.08596491228070176,
+        0.3894736842105263,
+        0.22631578947368422
+      ],
+      "CI95_low": [
+        0.2649122807017544,
+        0.06491228070175438,
+        0.3526315789473684,
+        0.19473684210526315
+      ],
+      "CI95_high": [
+        0.3333333333333333,
+        0.10877192982456141,
+        0.4280701754385965,
+        0.2596491228070175
+      ],
+      "replicates": 10000,
+      "groups": 57,
+      "resampling": "within_subject"
+    },
+    "base_to_adapt_transition_counts": [
+      [
+        126,
+        18,
+        14,
+        9
+      ],
+      [
+        13,
+        19,
+        2,
+        6
+      ],
+      [
+        21,
+        4,
+        172,
+        35
+      ],
+      [
+        10,
+        8,
+        34,
+        79
+      ]
+    ],
+    "EN_correct_to_wrong": {
+      "count": 43,
+      "base_correct_denominator": 363,
+      "whole_pool_denominator": 570
+    },
+    "SW_wrong_to_correct": {
+      "count": 66,
+      "base_wrong_denominator": 399,
+      "whole_pool_denominator": 570
+    },
+    "whole_pool_effect_CI": {
+      "columns": [
+        "EN_correct_to_wrong_fraction",
+        "SW_wrong_to_correct_fraction",
+        "EN_ACC_change_fraction",
+        "SW_ACC_change_fraction"
+      ],
+      "point": [
+        0.07543859649122807,
+        0.11578947368421053,
+        -0.021052631578947368,
+        0.012280701754385965
+      ],
+      "CI95_low": [
+        0.056140350877192984,
+        0.0912280701754386,
+        -0.04912280701754386,
+        -0.02456140350877193
+      ],
+      "CI95_high": [
+        0.09649122807017543,
+        0.14035087719298245,
+        0.007017543859649123,
+        0.04736842105263158
+      ],
+      "replicates": 10000,
+      "groups": 57,
+      "resampling": "within_subject"
+    }
+  },
+  "knowledge/Historical-element_protected": {
+    "n": 570,
+    "labels": [
+      "EN-/SW-",
+      "EN-/SW+",
+      "EN+/SW-",
+      "EN+/SW+"
+    ],
+    "state_counts": [
+      176,
+      44,
+      213,
+      137
+    ],
+    "state_proportion_CI": {
+      "point": [
+        0.3087719298245614,
+        0.07719298245614035,
+        0.3736842105263158,
+        0.24035087719298245
+      ],
+      "CI95_low": [
+        0.2754385964912281,
+        0.056140350877192984,
+        0.3385964912280702,
+        0.20877192982456141
+      ],
+      "CI95_high": [
+        0.34210526315789475,
+        0.09824561403508772,
+        0.4105263157894737,
+        0.2736842105263158
+      ],
+      "replicates": 10000,
+      "groups": 57,
+      "resampling": "within_subject"
+    },
+    "base_to_adapt_transition_counts": [
+      [
+        129,
+        17,
+        14,
+        7
+      ],
+      [
+        19,
+        15,
+        4,
+        2
+      ],
+      [
+        25,
+        2,
+        160,
+        45
+      ],
+      [
+        3,
+        10,
+        35,
+        83
+      ]
+    ],
+    "EN_correct_to_wrong": {
+      "count": 40,
+      "base_correct_denominator": 363,
+      "whole_pool_denominator": 570
+    },
+    "SW_wrong_to_correct": {
+      "count": 71,
+      "base_wrong_denominator": 399,
+      "whole_pool_denominator": 570
+    },
+    "whole_pool_effect_CI": {
+      "columns": [
+        "EN_correct_to_wrong_fraction",
+        "SW_wrong_to_correct_fraction",
+        "EN_ACC_change_fraction",
+        "SW_ACC_change_fraction"
+      ],
+      "point": [
+        0.07017543859649122,
+        0.12456140350877193,
+        -0.02280701754385965,
+        0.017543859649122806
+      ],
+      "CI95_low": [
+        0.05087719298245614,
+        0.1,
+        -0.04912280701754386,
+        -0.021052631578947368
+      ],
+      "CI95_high": [
+        0.0912280701754386,
+        0.15087719298245614,
+        0.0035087719298245615,
+        0.054385964912280704
+      ],
+      "replicates": 10000,
+      "groups": 57,
+      "resampling": "within_subject"
+    }
+  }
+}
