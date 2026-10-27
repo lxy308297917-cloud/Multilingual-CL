@@ -1,0 +1,509 @@
+{
+  "posthoc": true,
+  "does_not_replace_main_protocol": true,
+  "no_new_generation": true,
+  "rule_sha256": "bff2b9bfe6aeefb927a982370566cf944d96d72a704edfdbfc0cf81fddef8e4b",
+  "summary": {
+    "Base/belebele/A": {
+      "n": 64,
+      "posthoc_correct": 52,
+      "posthoc_ACC_percent": 81.25,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 50,
+      "frozen_extraction_failures": 2,
+      "previously_unparsed_now_explicitly_correct": 2,
+      "explanation_language_matches_heuristic": 59,
+      "explanation_language_undetermined": 5
+    },
+    "Base/belebele/B": {
+      "n": 64,
+      "posthoc_correct": 16,
+      "posthoc_ACC_percent": 25.0,
+      "posthoc_unparsed": 6,
+      "frozen_correct": 13,
+      "frozen_extraction_failures": 16,
+      "previously_unparsed_now_explicitly_correct": 3,
+      "explanation_language_matches_heuristic": 53,
+      "explanation_language_undetermined": 0
+    },
+    "Base/belebele/C": {
+      "n": 64,
+      "posthoc_correct": 25,
+      "posthoc_ACC_percent": 39.0625,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 25,
+      "frozen_extraction_failures": 0,
+      "previously_unparsed_now_explicitly_correct": 0,
+      "explanation_language_matches_heuristic": 63,
+      "explanation_language_undetermined": 1
+    },
+    "Base/belebele/D": {
+      "n": 64,
+      "posthoc_correct": 49,
+      "posthoc_ACC_percent": 76.5625,
+      "posthoc_unparsed": 3,
+      "frozen_correct": 42,
+      "frozen_extraction_failures": 12,
+      "previously_unparsed_now_explicitly_correct": 7,
+      "explanation_language_matches_heuristic": 21,
+      "explanation_language_undetermined": 2
+    },
+    "Base/belebele/E": {
+      "n": 64,
+      "posthoc_correct": 28,
+      "posthoc_ACC_percent": 43.75,
+      "posthoc_unparsed": 12,
+      "frozen_correct": 14,
+      "frozen_extraction_failures": 42,
+      "previously_unparsed_now_explicitly_correct": 14,
+      "explanation_language_matches_heuristic": 53,
+      "explanation_language_undetermined": 5
+    },
+    "Base/knowledge/A": {
+      "n": 64,
+      "posthoc_correct": 34,
+      "posthoc_ACC_percent": 53.125,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 33,
+      "frozen_extraction_failures": 1,
+      "previously_unparsed_now_explicitly_correct": 1,
+      "explanation_language_matches_heuristic": 55,
+      "explanation_language_undetermined": 9
+    },
+    "Base/knowledge/B": {
+      "n": 64,
+      "posthoc_correct": 22,
+      "posthoc_ACC_percent": 34.375,
+      "posthoc_unparsed": 1,
+      "frozen_correct": 15,
+      "frozen_extraction_failures": 13,
+      "previously_unparsed_now_explicitly_correct": 7,
+      "explanation_language_matches_heuristic": 57,
+      "explanation_language_undetermined": 0
+    },
+    "Base/knowledge/C": {
+      "n": 64,
+      "posthoc_correct": 21,
+      "posthoc_ACC_percent": 32.8125,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 21,
+      "frozen_extraction_failures": 0,
+      "previously_unparsed_now_explicitly_correct": 0,
+      "explanation_language_matches_heuristic": 63,
+      "explanation_language_undetermined": 0
+    },
+    "Base/knowledge/D": {
+      "n": 64,
+      "posthoc_correct": 34,
+      "posthoc_ACC_percent": 53.125,
+      "posthoc_unparsed": 4,
+      "frozen_correct": 29,
+      "frozen_extraction_failures": 14,
+      "previously_unparsed_now_explicitly_correct": 5,
+      "explanation_language_matches_heuristic": 12,
+      "explanation_language_undetermined": 1
+    },
+    "Base/knowledge/E": {
+      "n": 64,
+      "posthoc_correct": 21,
+      "posthoc_ACC_percent": 32.8125,
+      "posthoc_unparsed": 14,
+      "frozen_correct": 12,
+      "frozen_extraction_failures": 36,
+      "previously_unparsed_now_explicitly_correct": 9,
+      "explanation_language_matches_heuristic": 59,
+      "explanation_language_undetermined": 3
+    },
+    "LR077-s42/belebele/A": {
+      "n": 64,
+      "posthoc_correct": 49,
+      "posthoc_ACC_percent": 76.5625,
+      "posthoc_unparsed": 1,
+      "frozen_correct": 17,
+      "frozen_extraction_failures": 38,
+      "previously_unparsed_now_explicitly_correct": 32,
+      "explanation_language_matches_heuristic": 22,
+      "explanation_language_undetermined": 41
+    },
+    "LR077-s42/belebele/B": {
+      "n": 64,
+      "posthoc_correct": 17,
+      "posthoc_ACC_percent": 26.5625,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 6,
+      "frozen_extraction_failures": 47,
+      "previously_unparsed_now_explicitly_correct": 11,
+      "explanation_language_matches_heuristic": 21,
+      "explanation_language_undetermined": 40
+    },
+    "LR077-s42/belebele/C": {
+      "n": 64,
+      "posthoc_correct": 17,
+      "posthoc_ACC_percent": 26.5625,
+      "posthoc_unparsed": 6,
+      "frozen_correct": 7,
+      "frozen_extraction_failures": 44,
+      "previously_unparsed_now_explicitly_correct": 10,
+      "explanation_language_matches_heuristic": 5,
+      "explanation_language_undetermined": 43
+    },
+    "LR077-s42/belebele/D": {
+      "n": 64,
+      "posthoc_correct": 46,
+      "posthoc_ACC_percent": 71.875,
+      "posthoc_unparsed": 2,
+      "frozen_correct": 17,
+      "frozen_extraction_failures": 38,
+      "previously_unparsed_now_explicitly_correct": 29,
+      "explanation_language_matches_heuristic": 0,
+      "explanation_language_undetermined": 43
+    },
+    "LR077-s42/belebele/E": {
+      "n": 64,
+      "posthoc_correct": 44,
+      "posthoc_ACC_percent": 68.75,
+      "posthoc_unparsed": 4,
+      "frozen_correct": 9,
+      "frozen_extraction_failures": 52,
+      "previously_unparsed_now_explicitly_correct": 35,
+      "explanation_language_matches_heuristic": 6,
+      "explanation_language_undetermined": 36
+    },
+    "LR077-s42/knowledge/A": {
+      "n": 64,
+      "posthoc_correct": 29,
+      "posthoc_ACC_percent": 45.3125,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 17,
+      "frozen_extraction_failures": 27,
+      "previously_unparsed_now_explicitly_correct": 12,
+      "explanation_language_matches_heuristic": 15,
+      "explanation_language_undetermined": 48
+    },
+    "LR077-s42/knowledge/B": {
+      "n": 64,
+      "posthoc_correct": 14,
+      "posthoc_ACC_percent": 21.875,
+      "posthoc_unparsed": 5,
+      "frozen_correct": 4,
+      "frozen_extraction_failures": 43,
+      "previously_unparsed_now_explicitly_correct": 10,
+      "explanation_language_matches_heuristic": 21,
+      "explanation_language_undetermined": 36
+    },
+    "LR077-s42/knowledge/C": {
+      "n": 64,
+      "posthoc_correct": 12,
+      "posthoc_ACC_percent": 18.75,
+      "posthoc_unparsed": 7,
+      "frozen_correct": 5,
+      "frozen_extraction_failures": 39,
+      "previously_unparsed_now_explicitly_correct": 7,
+      "explanation_language_matches_heuristic": 5,
+      "explanation_language_undetermined": 38
+    },
+    "LR077-s42/knowledge/D": {
+      "n": 64,
+      "posthoc_correct": 28,
+      "posthoc_ACC_percent": 43.75,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 12,
+      "frozen_extraction_failures": 34,
+      "previously_unparsed_now_explicitly_correct": 16,
+      "explanation_language_matches_heuristic": 0,
+      "explanation_language_undetermined": 44
+    },
+    "LR077-s42/knowledge/E": {
+      "n": 64,
+      "posthoc_correct": 24,
+      "posthoc_ACC_percent": 37.5,
+      "posthoc_unparsed": 3,
+      "frozen_correct": 13,
+      "frozen_extraction_failures": 28,
+      "previously_unparsed_now_explicitly_correct": 11,
+      "explanation_language_matches_heuristic": 6,
+      "explanation_language_undetermined": 49
+    },
+    "Historical-element_protected/belebele/A": {
+      "n": 64,
+      "posthoc_correct": 49,
+      "posthoc_ACC_percent": 76.5625,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 46,
+      "frozen_extraction_failures": 4,
+      "previously_unparsed_now_explicitly_correct": 3,
+      "explanation_language_matches_heuristic": 1,
+      "explanation_language_undetermined": 63
+    },
+    "Historical-element_protected/belebele/B": {
+      "n": 64,
+      "posthoc_correct": 30,
+      "posthoc_ACC_percent": 46.875,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 19,
+      "frozen_extraction_failures": 24,
+      "previously_unparsed_now_explicitly_correct": 11,
+      "explanation_language_matches_heuristic": 14,
+      "explanation_language_undetermined": 47
+    },
+    "Historical-element_protected/belebele/C": {
+      "n": 64,
+      "posthoc_correct": 30,
+      "posthoc_ACC_percent": 46.875,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 29,
+      "frozen_extraction_failures": 2,
+      "previously_unparsed_now_explicitly_correct": 1,
+      "explanation_language_matches_heuristic": 0,
+      "explanation_language_undetermined": 64
+    },
+    "Historical-element_protected/belebele/D": {
+      "n": 64,
+      "posthoc_correct": 46,
+      "posthoc_ACC_percent": 71.875,
+      "posthoc_unparsed": 1,
+      "frozen_correct": 12,
+      "frozen_extraction_failures": 45,
+      "previously_unparsed_now_explicitly_correct": 34,
+      "explanation_language_matches_heuristic": 39,
+      "explanation_language_undetermined": 23
+    },
+    "Historical-element_protected/belebele/E": {
+      "n": 64,
+      "posthoc_correct": 34,
+      "posthoc_ACC_percent": 53.125,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 15,
+      "frozen_extraction_failures": 38,
+      "previously_unparsed_now_explicitly_correct": 19,
+      "explanation_language_matches_heuristic": 30,
+      "explanation_language_undetermined": 28
+    },
+    "Historical-element_protected/knowledge/A": {
+      "n": 64,
+      "posthoc_correct": 32,
+      "posthoc_ACC_percent": 50.0,
+      "posthoc_unparsed": 4,
+      "frozen_correct": 31,
+      "frozen_extraction_failures": 5,
+      "previously_unparsed_now_explicitly_correct": 1,
+      "explanation_language_matches_heuristic": 3,
+      "explanation_language_undetermined": 61
+    },
+    "Historical-element_protected/knowledge/B": {
+      "n": 64,
+      "posthoc_correct": 17,
+      "posthoc_ACC_percent": 26.5625,
+      "posthoc_unparsed": 1,
+      "frozen_correct": 10,
+      "frozen_extraction_failures": 30,
+      "previously_unparsed_now_explicitly_correct": 7,
+      "explanation_language_matches_heuristic": 27,
+      "explanation_language_undetermined": 34
+    },
+    "Historical-element_protected/knowledge/C": {
+      "n": 64,
+      "posthoc_correct": 17,
+      "posthoc_ACC_percent": 26.5625,
+      "posthoc_unparsed": 1,
+      "frozen_correct": 17,
+      "frozen_extraction_failures": 1,
+      "previously_unparsed_now_explicitly_correct": 0,
+      "explanation_language_matches_heuristic": 1,
+      "explanation_language_undetermined": 63
+    },
+    "Historical-element_protected/knowledge/D": {
+      "n": 64,
+      "posthoc_correct": 24,
+      "posthoc_ACC_percent": 37.5,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 6,
+      "frozen_extraction_failures": 52,
+      "previously_unparsed_now_explicitly_correct": 18,
+      "explanation_language_matches_heuristic": 52,
+      "explanation_language_undetermined": 11
+    },
+    "Historical-element_protected/knowledge/E": {
+      "n": 64,
+      "posthoc_correct": 18,
+      "posthoc_ACC_percent": 28.125,
+      "posthoc_unparsed": 0,
+      "frozen_correct": 11,
+      "frozen_extraction_failures": 32,
+      "previously_unparsed_now_explicitly_correct": 7,
+      "explanation_language_matches_heuristic": 29,
+      "explanation_language_undetermined": 33
+    }
+  },
+  "comparisons": {
+    "Base/belebele/C-B": {
+      "difference_pp": 14.0625,
+      "paired_95CI_pp": [
+        3.125,
+        25.0
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Base/belebele/D-A": {
+      "difference_pp": -4.6875,
+      "paired_95CI_pp": [
+        -10.9375,
+        0.0
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Base/belebele/E-B": {
+      "difference_pp": 18.75,
+      "paired_95CI_pp": [
+        6.25,
+        31.25
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Base/knowledge/C-B": {
+      "difference_pp": -1.5625,
+      "paired_95CI_pp": [
+        -13.793103448275861,
+        10.144927536231885
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Base/knowledge/D-A": {
+      "difference_pp": 0.0,
+      "paired_95CI_pp": [
+        -9.230769230769232,
+        8.695652173913043
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Base/knowledge/E-B": {
+      "difference_pp": -1.5625,
+      "paired_95CI_pp": [
+        -17.46031746031746,
+        14.516129032258066
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "LR077-s42/belebele/C-B": {
+      "difference_pp": 0.0,
+      "paired_95CI_pp": [
+        -7.8125,
+        7.8125
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "LR077-s42/belebele/D-A": {
+      "difference_pp": -4.6875,
+      "paired_95CI_pp": [
+        -10.9375,
+        0.0
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "LR077-s42/belebele/E-B": {
+      "difference_pp": 42.1875,
+      "paired_95CI_pp": [
+        29.6875,
+        54.6875
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "LR077-s42/knowledge/C-B": {
+      "difference_pp": -3.125,
+      "paired_95CI_pp": [
+        -7.8125,
+        0.0
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "LR077-s42/knowledge/D-A": {
+      "difference_pp": -1.5625,
+      "paired_95CI_pp": [
+        -11.29032258064516,
+        7.352941176470589
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "LR077-s42/knowledge/E-B": {
+      "difference_pp": 15.625,
+      "paired_95CI_pp": [
+        0.0,
+        31.03448275862069
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Historical-element_protected/belebele/C-B": {
+      "difference_pp": 0.0,
+      "paired_95CI_pp": [
+        -7.8125,
+        7.8125
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Historical-element_protected/belebele/D-A": {
+      "difference_pp": -4.6875,
+      "paired_95CI_pp": [
+        -15.625,
+        6.25
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Historical-element_protected/belebele/E-B": {
+      "difference_pp": 6.25,
+      "paired_95CI_pp": [
+        -6.25,
+        18.75
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Historical-element_protected/knowledge/C-B": {
+      "difference_pp": 0.0,
+      "paired_95CI_pp": [
+        -10.294117647058822,
+        11.29032258064516
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Historical-element_protected/knowledge/D-A": {
+      "difference_pp": -12.5,
+      "paired_95CI_pp": [
+        -23.809523809523807,
+        -2.898550724637681
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    },
+    "Historical-element_protected/knowledge/E-B": {
+      "difference_pp": 1.5625,
+      "paired_95CI_pp": [
+        -10.294117647058822,
+        13.559322033898304
+      ],
+      "posthoc": true,
+      "source_cluster_bootstrap": 10000
+    }
+  },
+  "limitations": [
+    "Designed after examining actual format failures; exploratory diagnostic only",
+    "Unambiguous letter extraction is not manual verification of reasoning or Swahili semantics",
+    "Language compliance heuristic is unreliable for short or mixed explanations",
+    "No training or method selection allowed from these results"
+  ],
+  "finished_unix": 1793120492.1595893
+}
