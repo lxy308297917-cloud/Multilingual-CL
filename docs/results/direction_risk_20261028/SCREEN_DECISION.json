@@ -1,0 +1,72 @@
+{
+  "gates": {
+    "N-P/belebele_en": {
+      "difference": -8.888888888888886,
+      "minimum": 1.0,
+      "passed": false
+    },
+    "N-P/belebele_sw": {
+      "difference": -2.7777777777777715,
+      "minimum": -1.0,
+      "passed": false
+    },
+    "N-P/en_to_sw": {
+      "difference": 3.3035123433557274,
+      "minimum": -1.0,
+      "passed": true
+    },
+    "N-P/sw_to_en": {
+      "difference": -0.7844129794871435,
+      "minimum": -1.0,
+      "passed": true
+    },
+    "N-P/ifeval_official128": {
+      "difference": -10.15625,
+      "minimum": -2.0,
+      "passed": false
+    },
+    "N-P/knowledge_en": {
+      "difference": -10.877192982456144,
+      "minimum": -1.0,
+      "passed": false
+    },
+    "N-R/belebele_en": {
+      "difference": -5.444444444444443,
+      "minimum": 1.0,
+      "passed": false
+    },
+    "N-R/belebele_sw": {
+      "difference": 0.0,
+      "minimum": -1.0,
+      "passed": true
+    },
+    "N-R/en_to_sw": {
+      "difference": 6.122857344908471,
+      "minimum": -1.0,
+      "passed": true
+    },
+    "N-R/sw_to_en": {
+      "difference": 0.6307593633867334,
+      "minimum": -1.0,
+      "passed": true
+    },
+    "N-R/ifeval_official128": {
+      "difference": -1.5625,
+      "minimum": -2.0,
+      "passed": true
+    },
+    "N-R/knowledge_en": {
+      "difference": -5.964912280701768,
+      "minimum": -1.0,
+      "passed": false
+    }
+  },
+  "passed": false,
+  "action": "Stop candidate; no automatic promotion of ablation or parameter scan",
+  "N_abs_mandatory_comparisons_included": true,
+  "sign_contribution_not_established_by_gate_alone": true,
+  "point_tolerances_not_statistical_noninferiority": true,
+  "full_budget_performance_not_established": true,
+  "protocol_sha256": "e036326a84798d39b0ba92c77a7bd1e0795274d94ac87e999e477d2cb6fdee08",
+  "finished_unix": 1793117208.0327892
+}
