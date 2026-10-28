@@ -1,0 +1,24 @@
+{
+  "belebele_en": {
+    "difference_pp": -1.6666666666666667,
+    "paired95CI_pp": [
+      -3.4255090940204367,
+      0.11061946902654868
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "belebele_sw": {
+    "difference_pp": 3.2222222222222223,
+    "paired95CI_pp": [
+      -0.3314917127071823,
+      6.770299115855721
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  }
+}

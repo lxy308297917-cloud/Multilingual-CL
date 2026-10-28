@@ -1,0 +1,5 @@
+method,task,n,correct,ACC_percent,main_input_tokens
+Base,belebele_en,900,736,81.77777777777777,0
+Base,belebele_sw,900,338,37.55555555555556,0
+HFT15,belebele_en,900,721,80.11111111111111,15360935
+HFT15,belebele_sw,900,367,40.77777777777778,15360935
