@@ -1,0 +1,21 @@
+{
+  "unix": 1793182735.588406,
+  "reason": "Uniform versioned math content parser, informed by Base answer formats; preserve original prompt/output/v1 scores. No change to primary MC gate.",
+  "previous_hashes": {
+    "wait_and_analyze.py": "ebcbdf2f5886ae44361f9dbcfe4ffd0a0a00a2fb98b6b8df47d1f23439e51427",
+    "metrics.py": "4eeefd597ec6305c1e0ada9ecb9410647a23965ebab896ee58dfd5656b4baf67",
+    "analyze.py": "59102a99a0378343dd3d26b7ffffd3f413190be23895b2bfcf2640229d2182c3",
+    "check_metrics.py": "d710b83196fde6c85e1a943b9e098a362e82887add23e0138f8ee001ba053d1b",
+    "plot.py": "533efbba187ddd57ce407ca571a184f6e1ba7bd54fde89d149f8db4fefe2f4e3"
+  },
+  "current_hashes": {
+    "wait_and_analyze.py": "fd72f60c2e298eb334aa137d418e1e97fb5044080ea9074bcdde222f2c3094c3",
+    "metrics.py": "4eeefd597ec6305c1e0ada9ecb9410647a23965ebab896ee58dfd5656b4baf67",
+    "analyze.py": "5daf9de757757522e9c0671e8d1817b3a7782b7fcb05c6b444138652e8049369",
+    "math_content_v2.py": "1fb7415d259a02217b9bba88150799f3bb2eab7797f516911c208462a6dc0934",
+    "rescore_math_v2.py": "26224d0a14dc30b3310f59dd9a698720c2fddffd9b38a7fe8d9e5c8929003376",
+    "check_metrics.py": "d710b83196fde6c85e1a943b9e098a362e82887add23e0138f8ee001ba053d1b",
+    "plot.py": "33dc910639c86c90c5bf1e0f30ae5c690211cb537eb6aa2dfc3ddf636b6cad35"
+  },
+  "no_adapted_endpoint_outputs_used": true
+}

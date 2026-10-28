@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "frozen_unix": 1793182618.668837,
+  "parser_sha256": "1fb7415d259a02217b9bba88150799f3bb2eab7797f516911c208462a6dc0934",
+  "scope": "Uniform postprocessing of immutable raw answers; diagnostic math content only; no changes to prompts, generation, hidden representations or MC primary gate",
+  "reason": "Base natural replies used boxes/bold despite requested hash format; all 128 v1 statuses Unresolved. Preserve v1, never call this 0% math ability.",
+  "posthoc_Base_only_before_adapted_outputs": true,
+  "rule": "Unique consistent explicit numeric final answer from ####, balanced boxed numeric/fraction, terminal conclusion bold numeric, or explicit answer line. Conflicts, units, unsupported expressions and missing finals remain Unresolved. Never use unconditioned final number.",
+  "accepted_numeric_forms": [
+    "signed integer",
+    "decimal",
+    "comma-separated integer",
+    "rational fraction",
+    "simple LaTeX frac/dfrac/tfrac"
+  ],
+  "units_not_silently_discarded": true,
+  "unparsed_never_functional_forgotten": true,
+  "representative_natural_answers_reviewed": [
+    953,
+    1174,
+    432,
+    417,
+    708,
+    1308,
+    965,
+    1170
+  ],
+  "scorer_acceptance_controlled_cases": 12,
+  "no_gold_dependent_extraction": true,
+  "independent_confirmation_caveat": "Scorer revision informed by Base output formats on exposed development material; no fresh benchmark confirmation claim. Math excluded from primary MC prediction/patch gate."
+}

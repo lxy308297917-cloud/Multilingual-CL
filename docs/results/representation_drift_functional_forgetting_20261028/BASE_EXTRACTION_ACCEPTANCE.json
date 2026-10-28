@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "all1152_ids_and_input_hashes_verified": true,
+  "cache_shape": [
+    1152,
+    28,
+    3,
+    1536
+  ],
+  "cache_dtype": "float32",
+  "all_cached_vectors_finite": true,
+  "artifact_hashes_verified": true,
+  "summary": {
+    "belebele_en": {
+      "n": 256,
+      "correct": 209,
+      "incorrect_parsed": 47,
+      "unresolved": 0,
+      "source_groups": 228,
+      "generated_tokens": 0
+    },
+    "belebele_sw": {
+      "n": 256,
+      "correct": 91,
+      "incorrect_parsed": 165,
+      "unresolved": 0,
+      "source_groups": 228,
+      "generated_tokens": 0
+    },
+    "gsm8k_en": {
+      "n": 128,
+      "correct": 0,
+      "incorrect_parsed": 0,
+      "unresolved": 128,
+      "source_groups": 128,
+      "generated_tokens": 33929
+    },
+    "knowledge_en": {
+      "n": 256,
+      "correct": 155,
+      "incorrect_parsed": 101,
+      "unresolved": 0,
+      "source_groups": 56,
+      "generated_tokens": 0
+    },
+    "knowledge_sw": {
+      "n": 256,
+      "correct": 93,
+      "incorrect_parsed": 163,
+      "unresolved": 0,
+      "source_groups": 56,
+      "generated_tokens": 0
+    }
+  },
+  "GPU_hours": 0.40792548014058005,
+  "peak_allocated_bytes": 3471228928,
+  "physical_peak_MiB": 3707,
+  "main_nonpadding_input_tokens": 248470,
+  "generated_math_tokens": 33929,
+  "scope": "Base-only diagnostic under frozen zero-shot prompts; NOT formal benchmark scores, no forgetting/drift comparison yet",
+  "verified_unix": 1793182399.471853
+}

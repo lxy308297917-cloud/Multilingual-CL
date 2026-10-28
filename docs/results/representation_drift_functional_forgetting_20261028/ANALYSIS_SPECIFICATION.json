@@ -1,0 +1,20 @@
+{
+  "frozen_unix": 1793181937.602227,
+  "before_any_adapted_endpoint_predictions": true,
+  "primary_predictors": {
+    "base_controls": [
+      "task indicator",
+      "log1p input tokens",
+      "Base conditional gold-label probability",
+      "Base gold-vs-highest-other margin",
+      "log mean decision residual norm"
+    ],
+    "norm_control": "mean across 28 blocks of abs(log(adapted norm/Base norm)) at decision position",
+    "drift": "mean across 28 blocks of 1-cosine at decision position"
+  },
+  "primary_comparison": "base_controls + norm_control + drift versus base_controls + norm_control; fixed logistic C=1; scale only on discovery",
+  "mean_F_minus_R": "Source-cluster bootstrap, 2000 replicates; pointwise exploratory CIs for 28 blocks plus fixed mean. No significant-layer selection.",
+  "samples": "source-disjoint discovery/confirmation within an exposed development pool; knowledge subjects are held out across splits, not IID new questions",
+  "paper_replication_boundary": "Paper scalar equation only; do not invent an unprovided layerwise covariance algorithm",
+  "math": "Unknown extraction remains Unresolved, excluded from R/F; controlled-confidence predictor is MC-only"
+}

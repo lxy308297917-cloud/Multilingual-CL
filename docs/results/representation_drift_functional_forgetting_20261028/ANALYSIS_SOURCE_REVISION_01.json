@@ -1,0 +1,20 @@
+{
+  "revised_unix": 1793182239.6031122,
+  "previous_hashes": {
+    "wait_and_analyze.py": "ebcbdf2f5886ae44361f9dbcfe4ffd0a0a00a2fb98b6b8df47d1f23439e51427",
+    "metrics.py": "3eb0f9ebc136ec257ea0e0c8421e34acd318d1f72b0ad69b91580fc65dcc3703",
+    "analyze.py": "59102a99a0378343dd3d26b7ffffd3f413190be23895b2bfcf2640229d2182c3",
+    "check_metrics.py": "a296ad32982a87a23678d14c1402b5a41043945c718fa48e12ee661e6c7bf81f",
+    "plot.py": "533efbba187ddd57ce407ca571a184f6e1ba7bd54fde89d149f8db4fefe2f4e3"
+  },
+  "current_hashes": {
+    "wait_and_analyze.py": "ebcbdf2f5886ae44361f9dbcfe4ffd0a0a00a2fb98b6b8df47d1f23439e51427",
+    "metrics.py": "4eeefd597ec6305c1e0ada9ecb9410647a23965ebab896ee58dfd5656b4baf67",
+    "analyze.py": "59102a99a0378343dd3d26b7ffffd3f413190be23895b2bfcf2640229d2182c3",
+    "check_metrics.py": "d710b83196fde6c85e1a943b9e098a362e82887add23e0138f8ee001ba053d1b",
+    "plot.py": "533efbba187ddd57ce407ca571a184f6e1ba7bd54fde89d149f8db4fefe2f4e3"
+  },
+  "reason": "Before any adapted endpoint analysis: preserve tiny covariance drift via stable d=a-b Gram expansion; use installed sklearn n_iter API; complete source-bootstrap contrasts and fixed directional summaries.",
+  "no_change_to_frozen_inputs_or_statistical_gate": true,
+  "no_change_to_running_extraction_or_training": true
+}

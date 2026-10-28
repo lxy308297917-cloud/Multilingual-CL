@@ -1,0 +1,30 @@
+{
+  "frozen_unix": 1793182922.1168666,
+  "before_adapted_endpoint_predictions": true,
+  "fixed_depth_bins": [
+    [
+      0,
+      9
+    ],
+    [
+      9,
+      19
+    ],
+    [
+      19,
+      28
+    ]
+  ],
+  "fixed_positions": [
+    "decision",
+    "last_content",
+    "content_mean"
+  ],
+  "directional_predictors": [
+    "mean signed Base label-unembedding projection normalized by Base norm",
+    "mean orthogonal drift normalized by Base norm"
+  ],
+  "directional_comparison": "Add direction to controls + mean cosine drift + mean normalized L2; no omission of overall magnitude",
+  "role": "Exploratory secondary comparisons, all reported, no method/layer selection and no effect on frozen patching gate",
+  "no_hyperparameter_scans": true
+}

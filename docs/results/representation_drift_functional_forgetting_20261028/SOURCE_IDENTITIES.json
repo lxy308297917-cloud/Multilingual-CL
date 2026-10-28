@@ -1,0 +1,45 @@
+{
+  "protocol_sha256": "7d17abd203de8edf8c3d7537e32718c5d6ef01c8a3d9887ec08671839353315a",
+  "base_weights_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+  "input_sha256": "e0940e281a20f8ab5f715f0365df1ed62173dc4b720e7a14ba2b3256a6bddf05",
+  "source_files": {
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/evaluation_inputs/belebele_en.jsonl": "60f02bd5dd3bef79877bf7de58e1dcf908fd768a03c5cf59edf9d16f0bb80961",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/evaluation_inputs/belebele_sw.jsonl": "dc1880921443ce9e8f7dda8db0ad2c64789bd93dd23ef188982adc616328062f",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/evaluation_inputs/gsm8k.jsonl": "752adc99f23132275139f1f7be57126b08735a55daf0c56859ee6df70abafbac",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/evaluation_inputs/ifeval.jsonl": "f4f4269278e7121da68a08302cd8cec62f2727b5f6989dc396dcf24613f81cac",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/evaluation_inputs/knowledge_en.jsonl": "9323a0b32235aefa0a6c1c5ba0ba94660442cfdfc5a334498a15bbaa346654c6",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/evaluation_inputs/knowledge_sw.jsonl": "5af7e36b07088c62b0b7a3a9b2e0a6c08a6dcc7a75aefe46acff4bae67be5e53",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/evaluation_inputs/translation.jsonl": "270b5cccd019d34dd05e5791550d3c959ed46b7dbd2748ae8ea7cd9634181bf5"
+  },
+  "model_endpoints_pending": [
+    "Dense",
+    "Element",
+    "Protected"
+  ],
+  "extraction_code_hashes": {
+    "coordinate.py": "50116b5bbea32e7dc00fe1a631d351992f179b96b50d0e5164bf37402a07eb12",
+    "prepare.py": "97a7d69d211384325baf634f4ed76bcab5e3d8cec5a730f6ec20c040f073c8d5",
+    "extract.py": "7d4b4a2914010e5a5ccba0db87efe005a425f2799d6742c803451a784f892823"
+  },
+  "code_frozen_unix": 1793180741.0006366,
+  "analysis_source_hashes": {
+    "wait_and_analyze.py": "fd72f60c2e298eb334aa137d418e1e97fb5044080ea9074bcdde222f2c3094c3",
+    "metrics.py": "4eeefd597ec6305c1e0ada9ecb9410647a23965ebab896ee58dfd5656b4baf67",
+    "analyze.py": "1f900e99aa33731db73744b79d9ca098dc0f8bafeb7aaf724c9a77a848f9bbe1",
+    "math_content_v2.py": "1fb7415d259a02217b9bba88150799f3bb2eab7797f516911c208462a6dc0934",
+    "rescore_math_v2.py": "26224d0a14dc30b3310f59dd9a698720c2fddffd9b38a7fe8d9e5c8929003376",
+    "check_metrics.py": "d710b83196fde6c85e1a943b9e098a362e82887add23e0138f8ee001ba053d1b",
+    "plot.py": "33dc910639c86c90c5bf1e0f30ae5c690211cb537eb6aa2dfc3ddf636b6cad35"
+  },
+  "analysis_sources_frozen_unix": 1793181937.601969,
+  "baseline_overlap_audit_sha256": "0f12aacd66e9d074714b7bb32caa4c5e98577fef809e396e64c9491f770efb71",
+  "plot_dependencies": {
+    "kiwisolver": "1.5.1",
+    "pyparsing": "3.3.3",
+    "matplotlib": "3.9.4",
+    "cycler": "0.12.1",
+    "contourpy": "1.3.2",
+    "fonttools": "4.65.0"
+  },
+  "math_content_v2_protocol_sha256": "bd6e08b7ee006585fd6452bce620f047c323edebc139ece955c9ffb41557ec9f"
+}
