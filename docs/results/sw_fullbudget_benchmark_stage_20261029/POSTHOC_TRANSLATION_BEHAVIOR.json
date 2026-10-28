@@ -1,0 +1,65 @@
+{
+  "scope": "Posthoc descriptive diagnostics on original complete outputs, no new generation or benchmark scoring changes",
+  "classifier": "langdetect",
+  "seed": 0,
+  "models": {
+    "Base": {
+      "en_to_sw": {
+        "n": 1012,
+        "source_literal_copy": 0,
+        "source_NFKC_whitespace_copy": 0,
+        "capped": 35,
+        "repeated_4gram_events": 2816,
+        "outputs_with_repeated_4grams": 143,
+        "posthoc_language": {
+          "sw": 1001,
+          "en": 6,
+          "id": 4,
+          "pt": 1
+        }
+      },
+      "sw_to_en": {
+        "n": 1012,
+        "source_literal_copy": 0,
+        "source_NFKC_whitespace_copy": 0,
+        "capped": 0,
+        "repeated_4gram_events": 50,
+        "outputs_with_repeated_4grams": 13,
+        "posthoc_language": {
+          "en": 1009,
+          "sw": 2,
+          "de": 1
+        }
+      }
+    },
+    "Dense": {
+      "en_to_sw": {
+        "n": 1012,
+        "source_literal_copy": 0,
+        "source_NFKC_whitespace_copy": 0,
+        "capped": 8,
+        "repeated_4gram_events": 764,
+        "outputs_with_repeated_4grams": 25,
+        "posthoc_language": {
+          "sw": 1007,
+          "en": 4,
+          "id": 1
+        }
+      },
+      "sw_to_en": {
+        "n": 1012,
+        "source_literal_copy": 70,
+        "source_NFKC_whitespace_copy": 70,
+        "capped": 2,
+        "repeated_4gram_events": 86,
+        "outputs_with_repeated_4grams": 16,
+        "posthoc_language": {
+          "sw": 552,
+          "en": 459,
+          "so": 1
+        }
+      }
+    }
+  },
+  "raw_und": "Classifier unavailable in frozen evaluation environment; not evidence of output language quality"
+}
