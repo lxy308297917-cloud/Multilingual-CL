@@ -1,5 +1,5 @@
 method,main_input_tokens,update_budget,belebele_sw_ACC,knowledge_sw_ACC,en_to_sw_chrFpp,sw_to_en_chrFpp,belebele_en_ACC,knowledge_en_ACC,IFEval_prompt_strict,IFEval_instruction_strict,GSM8K_strict_ACC,method_id,training_endpoint_status
-Base,0,—,37.55555555555556,,21.181365394781693,21.789174705334048,81.77777777777777,,,,,Base,Base reference
+Base,0,—,37.55555555555556,,21.181365394781693,21.789174705334048,81.77777777777777,,41.21996303142329,49.88009592326139,,Base,Base reference
 Dense FFT,15360935,100% unique full model,43.333333333333336,,44.28964739795735,28.18208729515807,63.666666666666664,,,,,Dense,accepted complete endpoint
 SSU-token-weighted-15matched,15360935,15.0060024% candidate matrices,43.55555555555556,,29.422190432053814,39.45845059291367,82.11111111111111,,,,,SSU,accepted complete endpoint
 HFT-whole-matrix-15matched,15360935,15.0060024% candidate matrices,40.77777777777778,,28.217796537246205,39.74512896309932,80.11111111111111,,,,,HFT15,accepted complete endpoint

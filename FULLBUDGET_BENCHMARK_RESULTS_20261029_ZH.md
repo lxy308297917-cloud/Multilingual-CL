@@ -1,6 +1,6 @@
 # 10月29日完整预算基线：已验收阶段结果
 
-本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收12/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
+本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收13/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
 
 [完整阶段主表](docs/results/sw_fullbudget_benchmark_stage_20261029/README_ZH.md) · [CSV](docs/results/sw_fullbudget_benchmark_stage_20261029/AVAILABLE_BENCHMARKS.csv) · [配对区间](docs/results/sw_fullbudget_benchmark_stage_20261029/PAIRED_COMPARISONS.json) · [阅读明细与图](docs/results/sw_fullbudget_reading_stage_20261029/README_ZH.md) · [表示漂移当前状态](docs/results/representation_drift_functional_forgetting_20261028/STATUS_20261029_ZH.md)
 
@@ -13,7 +13,7 @@
 |无保护元素稀疏U|待完成|待完成|待完成|待完成|
 |英语敏感度保护P|待完成|待完成|待完成|待完成|
 
-阅读每语言900题，修正同源文档示例排除后的3-shot选项似然ACC；翻译为完整1,012题/方向的语料级chrF++。知识、IFEval与GSM8K尚待完整任务验收，不能推测其成绩。
+阅读每语言900题，修正同源文档示例排除后的3-shot选项似然ACC；翻译为完整1,012题/方向的语料级chrF++。知识、GSM8K及适配模型IFEval尚待完整任务验收，不能推测其成绩。
 
 现阶段可用于汇报的发现：
 
@@ -32,3 +32,6 @@
 [输出行为核查](docs/results/sw_fullbudget_benchmark_stage_20261029/TRANSLATION_BEHAVIOR_ZH.md)：FFT的SW→EN有70/1012条原文直接复制，552条被事后启发式语言检测判为SW；原始chrF++保留，不能解释为所有翻译行为改善。SSU与HFT15在该方向无直接复制，事后判为英语分别1012与1011条。原始und字段是冻结环境分类依赖缺失的回退值，本补充是独立CPU侧车，不覆盖原数据。
 
 [正式阅读的同题状态变化](docs/results/sw_fullbudget_reading_transitions_20261029/README_ZH.md)：Base900题中448题EN对SW错；FFT的EN预测有199题Base对→错、36题错→对，SSU对应15/18，HFT15对应44/29。这是固定评分协议的功能状态观察，不等同内部知识通路的因果结论。
+
+
+官方完整IFEval首个基准已验收：Base提示级strict为223/541（41.22%），指令级strict为416/834（49.88%），7条达到生成长度上限。冻结官方检查器逐条重评分与原始结果一致。适配模型结果尚未齐，不能据此判断保持效果；与此前开发子集分数分表，不能因样本量和协议不同而混比。
