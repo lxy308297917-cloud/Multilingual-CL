@@ -1,0 +1,224 @@
+{
+  "Dense-Base/belebele_en": {
+    "difference_pp": -18.11111111111111,
+    "paired95CI_pp": [
+      -21.33336980306346,
+      -14.92204899777283
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "Dense-Base/belebele_sw": {
+    "difference_pp": 5.777777777777778,
+    "paired95CI_pp": [
+      2.2271714922048997,
+      9.32297447280799
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "Dense-Base/translation": {
+    "en_to_sw": {
+      "difference_chrFpp": 23.10828200317566,
+      "paired95CI": [
+        22.309417064060504,
+        23.8934173516835
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    },
+    "sw_to_en": {
+      "difference_chrFpp": 6.3929125898240216,
+      "paired95CI": [
+        5.294547636242706,
+        7.502684894399096
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    }
+  },
+  "Dense-SSU/belebele_en": {
+    "difference_pp": -18.444444444444443,
+    "paired95CI_pp": [
+      -21.588679647945366,
+      -15.246449717423946
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "Dense-SSU/belebele_sw": {
+    "difference_pp": -0.2222222222222222,
+    "paired95CI_pp": [
+      -3.6707452725250276,
+      3.258518598096585
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "Dense-HFT15/belebele_en": {
+    "difference_pp": -16.444444444444446,
+    "paired95CI_pp": [
+      -19.558071762491654,
+      -13.429355153483455
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "Dense-HFT15/belebele_sw": {
+    "difference_pp": 2.555555555555556,
+    "paired95CI_pp": [
+      -0.7734806629834254,
+      5.921931820272397
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "SSU-Base/belebele_en": {
+    "difference_pp": 0.33333333333333337,
+    "paired95CI_pp": [
+      -0.8850048074092969,
+      1.55902004454343
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "SSU-Base/belebele_sw": {
+    "difference_pp": 6.0,
+    "paired95CI_pp": [
+      2.631578947368421,
+      9.486607142857142
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "SSU-Dense/belebele_en": {
+    "difference_pp": 18.444444444444443,
+    "paired95CI_pp": [
+      15.246449717423943,
+      21.588679647945362
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "SSU-Dense/belebele_sw": {
+    "difference_pp": 0.2222222222222222,
+    "paired95CI_pp": [
+      -3.258518598096586,
+      3.6707452725250276
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "SSU-HFT15/belebele_en": {
+    "difference_pp": 2.0,
+    "paired95CI_pp": [
+      0.4410143329658214,
+      3.6224924910435323
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "SSU-HFT15/belebele_sw": {
+    "difference_pp": 2.7777777777777777,
+    "paired95CI_pp": [
+      0.2232080645803472,
+      5.33941449420415
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "HFT15-Base/belebele_en": {
+    "difference_pp": -1.6666666666666667,
+    "paired95CI_pp": [
+      -3.4255090940204367,
+      0.11061946902654868
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "HFT15-Base/belebele_sw": {
+    "difference_pp": 3.2222222222222223,
+    "paired95CI_pp": [
+      -0.3314917127071823,
+      6.770299115855721
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "HFT15-Dense/belebele_en": {
+    "difference_pp": 16.444444444444446,
+    "paired95CI_pp": [
+      13.429355153483453,
+      19.55807176249165
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "HFT15-Dense/belebele_sw": {
+    "difference_pp": -2.555555555555556,
+    "paired95CI_pp": [
+      -5.9219318202724,
+      0.7734806629834254
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "HFT15-SSU/belebele_en": {
+    "difference_pp": -2.0,
+    "paired95CI_pp": [
+      -3.6224924910435337,
+      -0.4410143329658214
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "HFT15-SSU/belebele_sw": {
+    "difference_pp": -2.7777777777777777,
+    "paired95CI_pp": [
+      -5.339414494204152,
+      -0.22320806458034728
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  }
+}

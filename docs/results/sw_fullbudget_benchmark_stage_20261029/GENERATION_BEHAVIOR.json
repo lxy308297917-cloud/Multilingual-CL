@@ -1,0 +1,34 @@
+{
+  "Base/en_to_sw": {
+    "n": 1012,
+    "capped": 35,
+    "generated_tokens": 65517,
+    "output_language": {
+      "und": 1012
+    }
+  },
+  "Base/sw_to_en": {
+    "n": 1012,
+    "capped": 0,
+    "generated_tokens": 32002,
+    "output_language": {
+      "und": 1012
+    }
+  },
+  "Dense/en_to_sw": {
+    "n": 1012,
+    "capped": 8,
+    "generated_tokens": 54273,
+    "output_language": {
+      "und": 1012
+    }
+  },
+  "Dense/sw_to_en": {
+    "n": 1012,
+    "capped": 2,
+    "generated_tokens": 43460,
+    "output_language": {
+      "und": 1012
+    }
+  }
+}

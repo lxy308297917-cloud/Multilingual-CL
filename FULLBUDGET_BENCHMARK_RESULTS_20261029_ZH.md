@@ -1,20 +1,27 @@
-# 2026-10-29 完整预算基线：benchmark阶段结果
+# 10月29日完整预算基线：已验收阶段结果
 
-已验收Base、Dense FFT、SSU变体、HFT15的EN/SW Belebele各900题，共8项完整阅读评测。其他模型和任务尚未齐全，不是整轮最终表。
+本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收10/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
 
-|模型|SW阅读ACC|EN阅读ACC|
-|---|---:|---:|
-|Base|37.56%|81.78%|
-|Dense FFT|43.33%|63.67%|
-|SSU-token-weighted-15matched|43.56%|82.11%|
-|HFT-whole-matrix-15matched|40.78%|80.11%|
+[完整阶段主表](docs/results/sw_fullbudget_benchmark_stage_20261029/README_ZH.md) · [CSV](docs/results/sw_fullbudget_benchmark_stage_20261029/AVAILABLE_BENCHMARKS.csv) · [配对区间](docs/results/sw_fullbudget_benchmark_stage_20261029/PAIRED_COMPARISONS.json) · [阅读明细与图](docs/results/sw_fullbudget_reading_stage_20261029/README_ZH.md) · [表示漂移当前状态](docs/results/representation_drift_functional_forgetting_20261028/STATUS_20261029_ZH.md)
 
-FFT相对Base：SW +5.78个百分点，来源配对95%区间[+2.23,+9.32]；EN −18.11个百分点，区间[-21.33,-14.92]。SSU变体相对FFT：EN +18.44个百分点，区间[+15.25,+21.59]；SW点估计仅高0.22个百分点，差异区间跨0，不能称严格相等或已证明非劣。
-这支持当前阅读任务上较好学习—保持取舍的线索，不证明所有benchmark或多个训练seed的稳定优势，也不是P英语保护有效的证据。
+|模型|SW Belebele ACC|EN Belebele ACC|EN→SW chrF++|SW→EN chrF++|
+|---|---:|---:|---:|---:|
+|Base|37.56%|81.78%|21.18|21.79|
+|Dense FFT|43.33%|63.67%|44.29|28.18|
+|SSU Token加权15%匹配变体|43.56%|82.11%|待完成|待完成|
+|HFT整矩阵15%匹配变体|40.78%|80.11%|待完成|待完成|
+|无保护元素稀疏U|待完成|待完成|待完成|待完成|
+|英语敏感度保护P|待完成|待完成|待完成|待完成|
 
-[完整阅读报告与区间](docs/results/sw_fullbudget_reading_stage_20261029/README_ZH.md) · [CSV](docs/results/sw_fullbudget_reading_stage_20261029/READING_SCORES.csv) · [差值图](docs/results/sw_fullbudget_reading_stage_20261029/READING_DIFFERENCES.svg)
+阅读每语言900题，修正同源文档示例排除后的3-shot选项似然ACC；翻译为完整1,012题/方向的语料级chrF++。知识、IFEval与GSM8K尚待完整任务验收，不能推测其成绩。
 
-同一Qwen2.5-1.5B-Instruct；适配模型均使用完整Aya80/10/10配方、42,465步、15,360,935主输入Token。阅读为统一3-shot MCF选择题ACC，不是生成F1。Dense为全参数；HFT15为整矩阵预算匹配变体，SSU使用Token加权激活而非参考样本等权聚合。HFT15/SSU/U/P共同名额196,608,000，占196候选矩阵15.0060024%。额外英语校准曝光不同，不称相同总数据或计算。
-MoFO按用户要求暂停，原定七模型整轮未完成。U/P仍待完整端点评测；知识、双向完整翻译、指令和数学不能填入未完成分数。历史D2与本轮配方及部分评测协议不同，分表报告。
+现阶段可用于汇报的发现：
 
-[已完成能力访问诊断v2](docs/results/access_gap_diagnostic_v2/README_ZH.md)与[新表示漂移诊断](docs/results/representation_drift_functional_forgetting_20261028/README_ZH.md)分开报告；漂移主分析等待完整U/P端点，尚无全套关联或激活替换结论。机制代理不替代目标benchmark。
+- FFT相对Base：SW阅读+5.78个百分点，配对95%区间[2.23,9.32]；EN阅读−18.11个百分点，区间[−21.33,−14.92]。
+- FFT相对Base：EN→SW翻译+23.11 chrF++，区间[22.31,23.89]；SW→EN +6.39，区间[5.29,7.50]。新配方下翻译学习与英语阅读损伤同时存在。
+- SSU变体SW阅读相对Base +6.00个百分点，区间[2.63,9.49]；EN阅读+0.33，区间跨0。相对FFT，EN阅读高18.44个百分点，区间[15.25,21.59]；SW点估计接近，但未证明相等或非劣。
+- 我们的英语保护P是否优于无保护U，仍没有结果；SSU的成绩不能当成P的验证。
+
+这些区间反映固定模型上的题目抽样不确定性，不代表跨训练种子稳定性，也不构成多任务整体最优证明。SSU当前实现使用Token加权激活聚合，非严格样本等权参考实现；HFT是整矩阵预算匹配变体，非HFT50。稀疏候选范围和额外英语校准曝光在报告中分别披露。
+
+旧FineWeb主导D2、近期短训代理结果与本轮分表；不能从跨配方数字直接推断更换数据来源的因果收益。已暴露benchmark属于补充比较，不包装成未见最终确认。表示漂移是无训练机制分析，当前Base与FFT提取完成，U/P未齐，尚无四模型完整关联或激活替换结论。
