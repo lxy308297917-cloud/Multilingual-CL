@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "aggregates": {
+    "All": {
+      "selected_elements": 196608000,
+      "intersection_with_current": 175367680,
+      "overlap_with_current": 0.8919661458333333,
+      "intersection_with_stable_reference": 194040832,
+      "overlap_with_stable_reference": 0.9869427083333333
+    },
+    "Attention": {
+      "selected_elements": 23178240,
+      "intersection_with_current": 21687808,
+      "overlap_with_current": 0.9356969295339077,
+      "intersection_with_stable_reference": 23029504,
+      "overlap_with_stable_reference": 0.9935829467638613
+    },
+    "MLP": {
+      "selected_elements": 173429760,
+      "intersection_with_current": 153679872,
+      "overlap_with_current": 0.8861216898414667,
+      "intersection_with_stable_reference": 171011328,
+      "overlap_with_stable_reference": 0.9860552652555132
+    }
+  },
+  "old_selection_unchanged": true,
+  "only_quota_adjusted_to_match196608000": true,
+  "reference_aggregation_and_BF16_score": true,
+  "CUDA_topk_highest_complement": true,
+  "original_reference_default_fraction_not_claimed": true,
+  "peak_allocated_bytes": 785408,
+  "completed_unix": 1793177568.3832238
+}

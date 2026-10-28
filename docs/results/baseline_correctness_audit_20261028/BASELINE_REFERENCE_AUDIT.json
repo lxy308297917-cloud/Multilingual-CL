@@ -1,0 +1,98 @@
+{
+  "official_MoFO": {
+    "torch.bfloat16": {
+      "updates": 40,
+      "mask_mismatch_steps": 0,
+      "weight_bit_mismatch_steps": 0,
+      "maximum_absolute_weight_difference": 0.0,
+      "maximum_absolute_m_difference": 2.384185791015625e-07,
+      "maximum_absolute_v_difference": 0.0,
+      "reference": "saved official MoFO, only removed private sqrt symbol shim",
+      "explicit_operation_differences": [
+        "current mul/add moment vs reference lerp",
+        "current FP32 update expression vs reference sqrt/addcdiv arithmetic"
+      ]
+    },
+    "torch.float32": {
+      "updates": 40,
+      "mask_mismatch_steps": 0,
+      "weight_bit_mismatch_steps": 40,
+      "maximum_absolute_weight_difference": 1.4901161193847656e-08,
+      "maximum_absolute_m_difference": 2.384185791015625e-07,
+      "maximum_absolute_v_difference": 0.0,
+      "reference": "saved official MoFO, only removed private sqrt symbol shim",
+      "explicit_operation_differences": [
+        "current mul/add moment vs reference lerp",
+        "current FP32 update expression vs reference sqrt/addcdiv arithmetic"
+      ]
+    }
+  },
+  "Dense_HFT_explicit_formula": [
+    {
+      "method": "Dense",
+      "dtype": "torch.bfloat16",
+      "updates": 20,
+      "maximum_absolute_weight_difference": 0.0,
+      "bitwise_equal": true,
+      "scope": "independent algebraic FP32 expression, not default torch.optim BF16 operator parity"
+    },
+    {
+      "method": "Dense",
+      "dtype": "torch.float32",
+      "updates": 20,
+      "maximum_absolute_weight_difference": 2.86102294921875e-06,
+      "bitwise_equal": false,
+      "scope": "independent algebraic FP32 expression, not default torch.optim BF16 operator parity"
+    },
+    {
+      "method": "HFT15",
+      "dtype": "torch.bfloat16",
+      "updates": 20,
+      "maximum_absolute_weight_difference": 0.0,
+      "bitwise_equal": true,
+      "scope": "independent algebraic FP32 expression, not default torch.optim BF16 operator parity"
+    },
+    {
+      "method": "HFT15",
+      "dtype": "torch.float32",
+      "updates": 20,
+      "maximum_absolute_weight_difference": 2.86102294921875e-06,
+      "bitwise_equal": false,
+      "scope": "independent algebraic FP32 expression, not default torch.optim BF16 operator parity"
+    }
+  ],
+  "Dense_HFT_operation_order": [
+    {
+      "method": "Dense",
+      "dtype": "torch.bfloat16",
+      "updates": 20,
+      "weights_and_moments_bitwise_equal": true,
+      "scope": "independent functional recurrence preserving FP32 operation order; small CPU matrix, not full model"
+    },
+    {
+      "method": "Dense",
+      "dtype": "torch.float32",
+      "updates": 20,
+      "weights_and_moments_bitwise_equal": true,
+      "scope": "independent functional recurrence preserving FP32 operation order; small CPU matrix, not full model"
+    },
+    {
+      "method": "HFT15",
+      "dtype": "torch.bfloat16",
+      "updates": 20,
+      "weights_and_moments_bitwise_equal": true,
+      "scope": "independent functional recurrence preserving FP32 operation order; small CPU matrix, not full model"
+    },
+    {
+      "method": "HFT15",
+      "dtype": "torch.float32",
+      "updates": 20,
+      "weights_and_moments_bitwise_equal": true,
+      "scope": "independent functional recurrence preserving FP32 operation order; small CPU matrix, not full model"
+    }
+  ],
+  "official_source_sha256": "bf83c326fb407316a31fd4cfe677816f04071da6cbad1ff66c3261c9c975d716",
+  "frozen_optimizer_sha256": "5208ca139025608025876fa1b3d4386a9c128a0baa75caac6a42f17a8eb2294d",
+  "no_real_model_or_CUDA_claim": true,
+  "checked_unix": 1793178868.742041
+}

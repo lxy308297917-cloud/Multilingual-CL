@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "dtype": "torch.bfloat16",
+      "updates": 40,
+      "weights_moments_masks_statistics_bitwise": true,
+      "zero_LR_steps": [
+        1,
+        20,
+        21
+      ],
+      "all_equal_threshold_at_first_step": true,
+      "state_roundtrip_at_step": 22
+    },
+    {
+      "dtype": "torch.float32",
+      "updates": 40,
+      "weights_moments_masks_statistics_bitwise": true,
+      "zero_LR_steps": [
+        1,
+        20,
+        21
+      ],
+      "all_equal_threshold_at_first_step": true,
+      "state_roundtrip_at_step": 22
+    }
+  ],
+  "scope": "CPU only, small matrices, same-input-gradient identity against frozen optimizer; no CUDA or real-model equivalence claim",
+  "checked_unix": 1793176920.6905253
+}

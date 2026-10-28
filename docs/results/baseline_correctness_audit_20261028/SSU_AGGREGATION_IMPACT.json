@@ -1,0 +1,217 @@
+{
+  "direct_precision_pairs": {
+    "sample_fp32 vs sample_fp64": {
+      "selected_elements": 196608000,
+      "intersection_elements": 196608000,
+      "overlap_fraction": 1.0
+    },
+    "token_fp64 vs sample_fp64": {
+      "selected_elements": 196608000,
+      "intersection_elements": 175469568,
+      "overlap_fraction": 0.892484375
+    },
+    "sample_bf16activation_fp32score vs reference_sample_bf16": {
+      "selected_elements": 196608000,
+      "intersection_elements": 194627072,
+      "overlap_fraction": 0.9899244791666667
+    }
+  },
+  "passed": true,
+  "samples": 128,
+  "token_min": 42,
+  "token_max": 625,
+  "current_selection_reproduced_exactly": true,
+  "aggregates": {
+    "frozen_token_fp32": {
+      "All": {
+        "selected_elements": 196608000,
+        "intersection_elements": 196608000,
+        "overlap_fraction": 1.0,
+        "selected_jaccard": 1.0,
+        "changed_elements": 0,
+        "matrices_with_different_selection": 0,
+        "matrices_with_boundary_ties": 0
+      },
+      "Attention": {
+        "selected_elements": 23178240,
+        "intersection_elements": 23178240,
+        "overlap_fraction": 1.0,
+        "selected_jaccard": 1.0,
+        "changed_elements": 0,
+        "matrices_with_different_selection": 0,
+        "matrices_with_boundary_ties": 0
+      },
+      "MLP": {
+        "selected_elements": 173429760,
+        "intersection_elements": 173429760,
+        "overlap_fraction": 1.0,
+        "selected_jaccard": 1.0,
+        "changed_elements": 0,
+        "matrices_with_different_selection": 0,
+        "matrices_with_boundary_ties": 0
+      }
+    },
+    "sample_fp32": {
+      "All": {
+        "selected_elements": 196608000,
+        "intersection_elements": 175469568,
+        "overlap_fraction": 0.892484375,
+        "selected_jaccard": 0.8058435970147148,
+        "changed_elements": 21138432,
+        "matrices_with_different_selection": 196,
+        "matrices_with_boundary_ties": 0
+      },
+      "Attention": {
+        "selected_elements": 23178240,
+        "intersection_elements": 21697792,
+        "overlap_fraction": 0.9361276783741993,
+        "selected_jaccard": 0.8799248362281075,
+        "changed_elements": 1480448,
+        "matrices_with_different_selection": 112,
+        "matrices_with_boundary_ties": 0
+      },
+      "MLP": {
+        "selected_elements": 173429760,
+        "intersection_elements": 153771776,
+        "overlap_fraction": 0.8866516104271839,
+        "selected_jaccard": 0.7963828921218324,
+        "changed_elements": 19657984,
+        "matrices_with_different_selection": 84,
+        "matrices_with_boundary_ties": 0
+      }
+    },
+    "token_fp64": {
+      "All": {
+        "selected_elements": 196608000,
+        "intersection_elements": 196608000,
+        "overlap_fraction": 1.0,
+        "selected_jaccard": 1.0,
+        "changed_elements": 0,
+        "matrices_with_different_selection": 0,
+        "matrices_with_boundary_ties": 0
+      },
+      "Attention": {
+        "selected_elements": 23178240,
+        "intersection_elements": 23178240,
+        "overlap_fraction": 1.0,
+        "selected_jaccard": 1.0,
+        "changed_elements": 0,
+        "matrices_with_different_selection": 0,
+        "matrices_with_boundary_ties": 0
+      },
+      "MLP": {
+        "selected_elements": 173429760,
+        "intersection_elements": 173429760,
+        "overlap_fraction": 1.0,
+        "selected_jaccard": 1.0,
+        "changed_elements": 0,
+        "matrices_with_different_selection": 0,
+        "matrices_with_boundary_ties": 0
+      }
+    },
+    "sample_fp64": {
+      "All": {
+        "selected_elements": 196608000,
+        "intersection_elements": 175469568,
+        "overlap_fraction": 0.892484375,
+        "selected_jaccard": 0.8058435970147148,
+        "changed_elements": 21138432,
+        "matrices_with_different_selection": 196,
+        "matrices_with_boundary_ties": 0
+      },
+      "Attention": {
+        "selected_elements": 23178240,
+        "intersection_elements": 21697792,
+        "overlap_fraction": 0.9361276783741993,
+        "selected_jaccard": 0.8799248362281075,
+        "changed_elements": 1480448,
+        "matrices_with_different_selection": 112,
+        "matrices_with_boundary_ties": 0
+      },
+      "MLP": {
+        "selected_elements": 173429760,
+        "intersection_elements": 153771776,
+        "overlap_fraction": 0.8866516104271839,
+        "selected_jaccard": 0.7963828921218324,
+        "changed_elements": 19657984,
+        "matrices_with_different_selection": 84,
+        "matrices_with_boundary_ties": 0
+      }
+    },
+    "sample_bf16activation_fp32score": {
+      "All": {
+        "selected_elements": 196608000,
+        "intersection_elements": 175388160,
+        "overlap_fraction": 0.8920703125,
+        "selected_jaccard": 0.8051687057081409,
+        "changed_elements": 21219840,
+        "matrices_with_different_selection": 196,
+        "matrices_with_boundary_ties": 0
+      },
+      "Attention": {
+        "selected_elements": 23178240,
+        "intersection_elements": 21679616,
+        "overlap_fraction": 0.9353434945880273,
+        "selected_jaccard": 0.8785401581011266,
+        "changed_elements": 1498624,
+        "matrices_with_different_selection": 112,
+        "matrices_with_boundary_ties": 0
+      },
+      "MLP": {
+        "selected_elements": 173429760,
+        "intersection_elements": 153708544,
+        "overlap_fraction": 0.8862870132553952,
+        "selected_jaccard": 0.7957948087199932,
+        "changed_elements": 19721216,
+        "matrices_with_different_selection": 84,
+        "matrices_with_boundary_ties": 0
+      }
+    },
+    "reference_sample_bf16": {
+      "All": {
+        "selected_elements": 196608000,
+        "intersection_elements": 175257856,
+        "overlap_fraction": 0.8914075520833333,
+        "selected_jaccard": 0.8040895044509097,
+        "changed_elements": 21350144,
+        "matrices_with_different_selection": 196,
+        "matrices_with_boundary_ties": 156
+      },
+      "Attention": {
+        "selected_elements": 23178240,
+        "intersection_elements": 21691648,
+        "overlap_fraction": 0.935862602164789,
+        "selected_jaccard": 0.8794565476870063,
+        "changed_elements": 1486592,
+        "matrices_with_different_selection": 112,
+        "matrices_with_boundary_ties": 79
+      },
+      "MLP": {
+        "selected_elements": 173429760,
+        "intersection_elements": 153566208,
+        "overlap_fraction": 0.8854663005933929,
+        "selected_jaccard": 0.7944724336866865,
+        "changed_elements": 19863552,
+        "matrices_with_different_selection": 84,
+        "matrices_with_boundary_ties": 77
+      }
+    }
+  },
+  "reference_ties": "Stable lowest-score order used to isolate differences. Saved reference freezes top(C-k), whose unstable ties may select different boundary columns; per-matrix lower/upper overlap bounds are recorded. No claim CPU topk tie ordering equals CUDA.",
+  "current_method_identity": "SSU-token-weighted-FP32-score-budgetmatched",
+  "frozen_definition_status": "Broad frozen description lowimportance columns does not specify sample-vs-token aggregation; implementation conforms to its source snapshot but this aggregation difference from the saved reference was not explicitly justified.",
+  "known_intentional_adaptations": [
+    "196 matrix scope, embedding/head/norm/bias frozen",
+    "Exact common column budget by floor/ceil allocation",
+    "Mask gradients before clipping, masked decay and writeback",
+    "Stable ties to meet exact quota"
+  ],
+  "unannounced_reference_differences": [
+    "Token-weighted instead of equal-sample activation mean",
+    "FP32 square and score with FP64 accumulation instead of BF16 activation square/means and BF16 norms/scores when model is BF16"
+  ],
+  "original_selection_sha256": "ade7626c05bfe9346057707335f9a39350f5d94ac51914028812acb5e5230169",
+  "cache_sha256": "98ab1e5f2068af2a8592ffcba1bde47d098b36acf46d1afebb45e912143ee936",
+  "checked_unix": 1793177168.704249,
+  "no_training_or_mask_changed": true
+}

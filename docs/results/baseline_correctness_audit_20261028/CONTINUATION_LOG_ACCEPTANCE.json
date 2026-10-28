@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "scope": "CPU fixture log-chain verification only; no formal continuation performed",
+  "logical_steps_1_to_8_exact": true,
+  "discarded_old_tail_not_counted": true,
+  "negative_cases_rejected": [
+    "hash_changed",
+    "missing_step",
+    "bad_checkpoint_boundary"
+  ]
+}

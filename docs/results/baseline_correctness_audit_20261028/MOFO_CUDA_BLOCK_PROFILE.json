@@ -1,0 +1,239 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "name": "model.layers.0.self_attn.q_proj.weight",
+      "shape": [
+        1536,
+        1536
+      ],
+      "CUDA_same_gradient_weights_moments_masks_and_stats_exact": true,
+      "timings": {
+        "frozen": [
+          0.011211272329092026,
+          0.010473346337676048,
+          0.009147308766841888
+        ],
+        "deferred": [
+          0.0037170182913541794,
+          0.00502404011785984,
+          0.004061492159962654
+        ]
+      },
+      "attribution": {
+        "finite_grad_check": {
+          "wall_seconds": 0.0018715038895606995,
+          "cuda_event_interval_ms": 1.8119679689407349
+        },
+        "FP32_full_moments": {
+          "wall_seconds": 0.0005532354116439819,
+          "cuda_event_interval_ms": 0.11980800330638885
+        },
+        "full_Adam_div_sqrt": {
+          "wall_seconds": 0.00247824564576149,
+          "cuda_event_interval_ms": 0.159743994474411
+        },
+        "exact_topk_threshold": {
+          "wall_seconds": 0.00041333213448524475,
+          "cuda_event_interval_ms": 0.16179199516773224
+        },
+        "nonzero_indices": {
+          "wall_seconds": 0.0010401960462331772,
+          "cuda_event_interval_ms": 0.4106239974498749
+        },
+        "D2H_indices_and_CPU_union": {
+          "wall_seconds": 0.007473444566130638,
+          "cuda_event_interval_ms": 5.175360202789307
+        },
+        "BF16_full_decay_and_sparse_write": {
+          "wall_seconds": 0.0009355749934911728,
+          "cuda_event_interval_ms": 0.34303998947143555
+        },
+        "actual_displacement_and_sync_statistics": {
+          "wall_seconds": 0.0063042957335710526,
+          "cuda_event_interval_ms": 5.8842878341674805
+        },
+        "index_D2H_bytes": 2831152,
+        "CPU_union_bytes": 2359296
+      }
+    },
+    {
+      "name": "model.layers.0.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        1536
+      ],
+      "CUDA_same_gradient_weights_moments_masks_and_stats_exact": true,
+      "timings": {
+        "frozen": [
+          0.007387585937976837,
+          0.0034115854650735855,
+          0.0034744292497634888
+        ],
+        "deferred": [
+          0.002911243587732315,
+          0.003086717799305916,
+          0.0030486565083265305
+        ]
+      },
+      "attribution": {
+        "finite_grad_check": {
+          "wall_seconds": 0.0006292890757322311,
+          "cuda_event_interval_ms": 0.5851519703865051
+        },
+        "FP32_full_moments": {
+          "wall_seconds": 0.00018688663840293884,
+          "cuda_event_interval_ms": 0.020959999412298203
+        },
+        "full_Adam_div_sqrt": {
+          "wall_seconds": 0.0003865361213684082,
+          "cuda_event_interval_ms": 0.023552000522613525
+        },
+        "exact_topk_threshold": {
+          "wall_seconds": 0.0004942715167999268,
+          "cuda_event_interval_ms": 0.47513601183891296
+        },
+        "nonzero_indices": {
+          "wall_seconds": 0.0005736220628023148,
+          "cuda_event_interval_ms": 0.29286399483680725
+        },
+        "D2H_indices_and_CPU_union": {
+          "wall_seconds": 0.0009047053754329681,
+          "cuda_event_interval_ms": 0.7202240228652954
+        },
+        "BF16_full_decay_and_sparse_write": {
+          "wall_seconds": 0.0023124292492866516,
+          "cuda_event_interval_ms": 2.2917120456695557
+        },
+        "actual_displacement_and_sync_statistics": {
+          "wall_seconds": 0.0011404044926166534,
+          "cuda_event_interval_ms": 0.7731199860572815
+        },
+        "index_D2H_bytes": 471856,
+        "CPU_union_bytes": 393216
+      }
+    },
+    {
+      "name": "model.layers.0.mlp.gate_proj.weight",
+      "shape": [
+        8960,
+        1536
+      ],
+      "CUDA_same_gradient_weights_moments_masks_and_stats_exact": true,
+      "timings": {
+        "frozen": [
+          0.06448028795421124,
+          0.05560837686061859,
+          0.05947370268404484
+        ],
+        "deferred": [
+          0.010817896574735641,
+          0.01495005376636982,
+          0.013252604752779007
+        ]
+      },
+      "attribution": {
+        "finite_grad_check": {
+          "wall_seconds": 0.0026625022292137146,
+          "cuda_event_interval_ms": 2.600127935409546
+        },
+        "FP32_full_moments": {
+          "wall_seconds": 0.002971336245536804,
+          "cuda_event_interval_ms": 0.6594560146331787
+        },
+        "full_Adam_div_sqrt": {
+          "wall_seconds": 0.004342317581176758,
+          "cuda_event_interval_ms": 2.0387840270996094
+        },
+        "exact_topk_threshold": {
+          "wall_seconds": 0.0028831847012043,
+          "cuda_event_interval_ms": 0.5652480125427246
+        },
+        "nonzero_indices": {
+          "wall_seconds": 0.0011366717517375946,
+          "cuda_event_interval_ms": 0.9123839735984802
+        },
+        "D2H_indices_and_CPU_union": {
+          "wall_seconds": 0.0471869520843029,
+          "cuda_event_interval_ms": 46.822975158691406
+        },
+        "BF16_full_decay_and_sparse_write": {
+          "wall_seconds": 0.004855142906308174,
+          "cuda_event_interval_ms": 4.212736129760742
+        },
+        "actual_displacement_and_sync_statistics": {
+          "wall_seconds": 0.009093567728996277,
+          "cuda_event_interval_ms": 6.797823905944824
+        },
+        "index_D2H_bytes": 16515072,
+        "CPU_union_bytes": 13762560
+      }
+    },
+    {
+      "name": "model.layers.0.mlp.down_proj.weight",
+      "shape": [
+        1536,
+        8960
+      ],
+      "CUDA_same_gradient_weights_moments_masks_and_stats_exact": true,
+      "timings": {
+        "frozen": [
+          0.06252411007881165,
+          0.06374925747513771,
+          0.06083265505731106
+        ],
+        "deferred": [
+          0.01442267931997776,
+          0.01948937028646469,
+          0.026000801473855972
+        ]
+      },
+      "attribution": {
+        "finite_grad_check": {
+          "wall_seconds": 0.0009678564965724945,
+          "cuda_event_interval_ms": 0.902783989906311
+        },
+        "FP32_full_moments": {
+          "wall_seconds": 0.0008517764508724213,
+          "cuda_event_interval_ms": 0.6588799953460693
+        },
+        "full_Adam_div_sqrt": {
+          "wall_seconds": 0.0014818385243415833,
+          "cuda_event_interval_ms": 1.146880030632019
+        },
+        "exact_topk_threshold": {
+          "wall_seconds": 0.0007435232400894165,
+          "cuda_event_interval_ms": 0.5580800175666809
+        },
+        "nonzero_indices": {
+          "wall_seconds": 0.0006706956773996353,
+          "cuda_event_interval_ms": 0.4362240135669708
+        },
+        "D2H_indices_and_CPU_union": {
+          "wall_seconds": 0.057645225897431374,
+          "cuda_event_interval_ms": 57.42403030395508
+        },
+        "BF16_full_decay_and_sparse_write": {
+          "wall_seconds": 0.0038777031004428864,
+          "cuda_event_interval_ms": 1.6414719820022583
+        },
+        "actual_displacement_and_sync_statistics": {
+          "wall_seconds": 0.007026532664895058,
+          "cuda_event_interval_ms": 6.400288105010986
+        },
+        "index_D2H_bytes": 16515072,
+        "CPU_union_bytes": 13762560
+      }
+    }
+  ],
+  "small_CUDA_updates": 40,
+  "CUDA_state_roundtrip": true,
+  "source_checkpoint": "/data0/users/lixiaoyang/models/checkpoint/sw_fullbudget_baselines_20261028/MoFO_first/checkpoint_002000",
+  "gradients": "fixed synthetic BF16 on actual Qwen matrix shapes and actual optimizer state",
+  "shared_with_own_training": true,
+  "not_isolated_throughput": true,
+  "real_Qwen_fixed_batch_and_full_checkpoint_acceptance_pending": true,
+  "timing_note": "Synchronized section wall times include host work. CUDA event intervals may include stream idle/other-context interference; not pure kernel sums. Final speedup decision requires isolated end-to-end measurement.",
+  "peak_allocated_bytes": 785518080,
+  "finished_unix": 1793177511.1343305
+}
