@@ -1,0 +1,19 @@
+{
+  "recorded_unix": 1793186683.4026024,
+  "no_token_or_position_change": true,
+  "MC": {
+    "last_input": "Last token after assistant prefill Answer:",
+    "next_token": "One of four fixed space-prefixed label tokens",
+    "interpretation": "Actual forced-choice answer decision boundary"
+  },
+  "math": {
+    "last_input": "Last token of the assistant generation prefix before any generated reasoning",
+    "next_token": "Start of the response; not the final numerical answer",
+    "interpretation": "Prefill/input-encoding representation only; cannot locate failure during long reasoning or final numeric decoding",
+    "generated_reasoning_not_used_as_shared_input": true,
+    "teacher_forced_gold_reasoning_prefix_not_added": true
+  },
+  "pooled": "Content tokens only, excluding instruction/chat template; raw post-block vectors before final model norm",
+  "final_norm": "Block27 residual precedes final RMSNorm; hidden-state API final output is normed, checked separately",
+  "no_causal_location_claim": true
+}

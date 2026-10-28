@@ -44,3 +44,11 @@ Base已完成并核验1152条输入、28层×3位置表示及全部逐题ID/Toke
 本诊断使用固定零样本提示，分数不与正式3/5-shot benchmark混合。材料已暴露，仅作机制开发诊断。t-SNE只用于辅助展示，不决定层位或方法去留。论文跨层均值协方差与本轮逐层跨样本协方差分开。
 
 [新诊断入口](docs/results/representation_drift_functional_forgetting_20261028/README_ZH.md) · [冻结协议](docs/results/representation_drift_functional_forgetting_20261028/PROTOCOL_FROZEN.json) · [SSU与MoFO审查](docs/results/baseline_correctness_audit_20261028/README_ZH.md)
+
+## 本日晚间阶段更新：首份完整预算训练验收完成
+
+HFT15完成42,465步，主输入15,360,935 Token、监督5,984,371 Token，每步精确196,608,000元素名额。权重/状态文件哈希、全部步数与计数、1,347,106,304冻结元素逐位不变、FP32动量有限及二阶动量非负等检查通过；实际GPU成本7.512小时。CPU RNG真实恢复通过，CUDA RNG字节与此前已通过真实GPU恢复的预检checkpoint一致；没有声称在正式终点重新做了GPU训练恢复。
+
+U已接续训练；Dense和SSU继续，P仍排队。MoFO保持用户暂停，未自动恢复。正式benchmark尚未出分，当前不作方法胜负判断。其余五组与Base完成后可先交付明确排除MoFO的阶段表，不冒充原定七模型整轮完成。
+
+[HFT15终点验收](docs/results/baseline_correctness_audit_20261028/HFT15_FULLBUDGET_TRAINING_ACCEPTANCE.json) · [当前执行政策](docs/research/sw_fullbudget_baselines_20261028/ACTIVE_EXECUTION_POLICY_20261028.json)

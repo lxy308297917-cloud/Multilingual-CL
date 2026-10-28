@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "observations": [
+    {
+      "id": "belebele:https://en.wikivoyage.org/wiki/Barcelona#1:en",
+      "repeat": 0,
+      "all28_layers_and3_positions_bitwise_equal": true
+    },
+    {
+      "id": "belebele:https://en.wikivoyage.org/wiki/Barcelona#1:en",
+      "repeat": 1,
+      "all28_layers_and3_positions_bitwise_equal": true
+    },
+    {
+      "id": "knowledge:high_school_european_history/test/34:sw",
+      "repeat": 0,
+      "all28_layers_and3_positions_bitwise_equal": true
+    },
+    {
+      "id": "knowledge:high_school_european_history/test/34:sw",
+      "repeat": 1,
+      "all28_layers_and3_positions_bitwise_equal": true
+    },
+    {
+      "id": "gsm8k:953",
+      "repeat": 0,
+      "all28_layers_and3_positions_bitwise_equal": true
+    },
+    {
+      "id": "gsm8k:953",
+      "repeat": 1,
+      "all28_layers_and3_positions_bitwise_equal": true
+    }
+  ],
+  "versions": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.6",
+    "numpy": "1.26.4",
+    "sklearn": "1.4.2",
+    "scipy": "1.15.3",
+    "cuda_build": "12.1",
+    "gpu_name": "NVIDIA GeForce RTX 3090",
+    "GPU_UUID": "GPU-1a3a5c22-63f7-8edb-d112-4458bb5baa58"
+  },
+  "no_training": true,
+  "no_new_scientific_predictions_or_dataset_change": true,
+  "six_technical_forwards": true,
+  "source_sha256": "643b07f2489a57654fe4b7af6d934157b23ea8e03c8b2541e922fec5ec41cd7d",
+  "finished_unix": 1793187818.1611807
+}

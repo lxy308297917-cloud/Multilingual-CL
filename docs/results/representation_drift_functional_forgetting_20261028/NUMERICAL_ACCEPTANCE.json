@@ -4,6 +4,7 @@
   "relative_error": 2.3204119214834716e-16,
   "identity_and_state_mapping_checked": true,
   "tiny_covariance_shift_preserved": true,
+  "matrix_spectral_norm_matches_explicit_eigenvalues": true,
   "scope": "Small CPU identity check only; no synthetic scientific figures or results",
-  "unix": 1793182207.428668
+  "unix": 1793184795.962871
 }

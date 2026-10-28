@@ -57,7 +57,7 @@ def main():
   v=analysis['prediction'][model];positions.append(i)
   if v['status']!='evaluated':labels.append(model+' (insufficient classes)');continue
   effect=v['primary_drift_over_controls'];d=effect['difference'];lo,hi=effect['paired95CI'];labels.append(model)
-  ax.errorbar(d,i,xerr=[[d-lo],[hi-d]],fmt='o',color=colors[model],capsize=4)
+  ax.hlines(i,lo,hi,color=colors[model]);ax.plot(d,i,'o',color=colors[model])
  ax.axvline(0,color='black',lw=.8);ax.set_yticks(positions,labels);ax.set_xlabel('Confirmation AUROC gain: controls + drift minus controls');ax.grid(axis='x',alpha=.15)
  ax.set_title('Controls include task, length, Base confidence and activation norm change')
  save(fig,'DRIFT_PREDICTION_AUROC_GAIN.png')

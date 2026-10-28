@@ -3,6 +3,7 @@ import csv,json,collections,time
 from result_io import *
 
 MODELS=('Base',)+METHODS
+DISPLAY_METHODS={'SSU':'SSU-token-weighted-15matched','HFT15':'HFT-whole-matrix-15matched'}
 OUT=REPORT/'results'
 
 def collect_costs():
@@ -42,16 +43,28 @@ def instruction_interval(a,b,repeats=10000):
  return dict(difference_pp=100*(x[:,0].sum()/x[:,1].sum()-y[:,0].sum()/y[:,1].sum()),
   paired95CI_pp=np.quantile(samples,[.025,.975]).tolist(),resampling_unit='prompt',bootstrap_replicates=repeats,training_seed_uncertainty=False)
 
-def aggregate():
- OUT.mkdir(exist_ok=True);all_rows={};table=[];behavior={};manifest={}
- for model in MODELS:
-  row=dict(method=model,main_input_tokens=0 if model=='Base' else 15360935)
+def aggregate(models=None,output=None,paused=()):
+ selected_models=MODELS if models is None else tuple(models)
+ assert selected_models and selected_models[0]=='Base' and set(selected_models)<=set(MODELS)
+ selected_methods=tuple(m for m in selected_models if m!='Base')
+ assert not set(paused)&set(selected_models)
+ outdir=OUT if output is None else Path(output)
+ outdir.mkdir(exist_ok=True);assert not (outdir/'MAIN_TABLE.csv').exists(),'Preserve existing results; choose a separate output directory';all_rows={};table=[];behavior={};manifest={}
+ for model in selected_models:
+  row=dict(method=DISPLAY_METHODS.get(model,model),method_id=model,main_input_tokens=0 if model=='Base' else 15360935,update_parameter_budget='—')
   if model!='Base':
    training=read(REPORT/'training_acceptance'/f'{model}.json');assert training['passed']
    row.update(selected_min=training['selected_min'],selected_max=training['selected_max'],
     candidate_denominator=training['candidate_denominator'],trainable_elements=training['trainable_elements'],
     actual_nonzero_write_events=training['actual_nonzero_write_events'],
     final_net_displacement=training['final_net_displacement'],cumulative_actual_path=training['cumulative_actual_path'])
+   denominator=training['unique_model_elements'] if model=='Dense' else training['candidate_denominator']
+   low=100*training['selected_min']/denominator;high=100*training['selected_max']/denominator
+   row.update(selected_ratio_min_percent=low,selected_ratio_max_percent=high,
+    ratio_denominator_elements=denominator,ratio_denominator_scope='all unique model parameters' if model=='Dense' else '196 candidate Attention/MLP matrices')
+   if model=='Dense':row['update_parameter_budget']='100%全模型'
+   elif model=='MoFO':row['update_parameter_budget']=f'Adam选中{low:.6f}–{high:.6f}%候选；全候选衰减'
+   else:row['update_parameter_budget']=f'{low:.6f}%候选'
    expected_model_sha=training['final_weights_sha256']
   else:expected_model_sha=sha(BASE/'model.safetensors')
   for task in TASKS:
@@ -78,8 +91,8 @@ def aggregate():
   table.append(row)
  # Paired prompt identities must be exactly equal across models, not merely counts.
  comparisons={};states={}
- for model in METHODS:
-  for reference in ('Base','Dense','Element'):
+ for model in selected_methods:
+  for reference in (m for m in ('Base','Dense','Element') if m in selected_models):
    if model==reference:continue
    for task in TASKS:
     a,b=all_rows[model,task],all_rows[reference,task];assert set(a)==set(b)
@@ -103,7 +116,7 @@ def aggregate():
       assert all(p[filter_name]['doc']==q[filter_name]['doc'] for p,q in zip(x,y))
       comparisons[label+'/'+filter_name]=paired_interval([p[filter_name]['exact_match'] for p in x],
        [p[filter_name]['exact_match'] for p in y],ids)
- for model in MODELS:
+ for model in selected_models:
   for family in ('belebele','knowledge'):
    en,sw=all_rows[model,family+'_en'],all_rows[model,family+'_sw'];assert set(en)==set(sw)
    base_en,base_sw=all_rows['Base',family+'_en'],all_rows['Base',family+'_sw']
@@ -113,34 +126,43 @@ def aggregate():
     count[new]+=1;transitions[old+' -> '+new]+=1
    states[model+'/'+family]=dict(n=len(en),states=dict(count),transitions_from_Base=dict(transitions))
  fields=list(dict.fromkeys(k for row in table for k in row))
- with (OUT/'MAIN_TABLE.csv').open('w') as stream:
+ with (outdir/'MAIN_TABLE.csv').open('w') as stream:
   writer=csv.DictWriter(stream,fieldnames=fields);writer.writeheader();writer.writerows(table)
- write(OUT/'PAIRED_COMPARISONS.json',comparisons);write(OUT/'CAPABILITY_STATES.json',states)
- write(OUT/'GENERATION_BEHAVIOR.json',behavior);write(OUT/'RAW_MANIFEST.json',manifest)
- write(OUT/'COSTS.json',collect_costs())
- labels={'method':'方法','main_input_tokens':'主输入Token','belebele_sw_ACC':'SW阅读ACC',
+ write(outdir/'PAIRED_COMPARISONS.json',comparisons);write(outdir/'CAPABILITY_STATES.json',states)
+ write(outdir/'GENERATION_BEHAVIOR.json',behavior);write(outdir/'RAW_MANIFEST.json',manifest)
+ write(outdir/'COSTS.json',collect_costs())
+ labels={'method':'方法','main_input_tokens':'主输入Token','update_parameter_budget':'每步更新名额及分母','belebele_sw_ACC':'SW阅读ACC',
   'knowledge_sw_ACC':'SW知识微平均ACC','en_to_sw_chrFpp':'EN→SW chrF++','sw_to_en_chrFpp':'SW→EN chrF++',
   'belebele_en_ACC':'EN阅读ACC','knowledge_en_ACC':'EN知识微平均ACC',
   'IFEval_prompt_strict':'IFEval提示严格','IFEval_instruction_strict':'IFEval指令严格','GSM8K_strict_ACC':'GSM8K严格ACC'}
  lines=['# 完整预算SW适配统一端点结果','',
-  '六组均使用相同15,360,935主输入Token、5,984,371监督Token和42,465次更新；Base仅评测。单个训练顺序，不根据测试成绩选择checkpoint。','',
+  f'本表{len(selected_methods)}组适配方法均使用相同15,360,935主输入Token、5,984,371监督Token和42,465次更新；Base仅评测。单个训练顺序，不根据测试成绩选择checkpoint。','',
   '| '+' | '.join(labels.values())+' |','| '+' | '.join(['---']*len(labels))+' |']
+ if paused:lines[2:2]=['阶段交付：'+', '.join(paused)+'按用户明确要求暂停，未列入本表；该表不代表原定七模型整轮已完成。','']
  for row in table:
-  values=[str(row[k]) if k in ('method','main_input_tokens') else f'{row[k]:.3f}' for k in labels]
+  values=[str(row[k]) if k in ('method','main_input_tokens','update_parameter_budget') else f'{row[k]:.3f}' for k in labels]
   lines.append('| '+' | '.join(values)+' |')
  lines.extend(['','阅读为Belebele四选一准确率，非KenSwQuAD词面F1。知识题的微平均与57学科宏平均均保存在CSV中。',
   '样本数：EN/SW Belebele各900题；EN MMLU与SW Global-MMLU各14,042题；翻译各方向1,012题；IFEval 541提示/834指令；GSM8K 1,319题。','',
-  'HFT15、SSU、元素稀疏和保护版每步名额均为196,608,000，占196个候选矩阵的15.0060024%。HFT15为历史整矩阵预算匹配版本，非原论文50%配方。MoFO阈值并列及全候选weight decay另列，不能声称所有方法实际写回量相同。','',
+  'HFT整矩阵预算变体、SSU-token-weighted、元素稀疏和保护版每步名额均为196,608,000，占196个候选矩阵的15.0060024%。HFT15为历史整矩阵预算匹配版本，非原论文50%配方。当前SSU按Token加权激活，参考实现按样本平均；同校准材料聚合方式改变10.75%的选中元素，故单列为变体，不代表严格参考SSU复现。MoFO阈值并列及全候选weight decay另列，不能声称所有方法实际写回量相同。','',
   'PAIRED_COMPARISONS.json保留相对Base、Dense和无保护元素稀疏的差值与来源配对区间；这些区间不代表跨训练种子稳定性。翻译区间重算语料级chrF++，不平均句级chrF。',
   'GSM8K严格与宽松提取分开报告；格式提取失败不必然代表内容错误。历史暴露benchmark属于补充比较，不包装为未见最终确认。',
   'RAW_MANIFEST.json指向保留的逐题原始结果；COSTS.json包含预检和失败运行，缺失退出时间明确保留为不确定性。','',
   '**该表由验收脚本生成；是否值得继续研究仍需结合配对区间、输出行为和人工错误复核判断。**'])
- (OUT/'README_ZH.md').write_text('\n'.join(lines)+'\n')
- write(OUT/'ACCEPTANCE.json',dict(passed=True,models=list(MODELS),same_prompt_identities_verified=True,
-  endpoint_only=True,MCF_records=209188,unique_generated_responses=27188,completed_unix=time.time(),
+ (outdir/'README_ZH.md').write_text('\n'.join(lines)+'\n')
+ write(outdir/'ACCEPTANCE.json',dict(passed=True,models=list(selected_models),same_prompt_identities_verified=True,
+  requested_models=list(MODELS),paused_methods=list(paused),complete_original_seven_model_suite=selected_models==MODELS,
+  endpoint_only=True,MCF_records=sum(len(r) for (m,t),r in all_rows.items() if t.startswith(('belebele','knowledge'))),unique_generated_responses=sum(len(r) for (m,t),r in all_rows.items() if t in ('translation','ifeval','gsm8k')),completed_unix=time.time(),
   limitations=['single training order; intervals reflect sampled questions/sources, not training-seed population',
    'exposed benchmark material is supplementary evaluation, not unseen final confirmation',
    'strict GSM8K includes required answer-format compliance; not all strict failures are content errors']))
  return table
 
-if __name__=='__main__':print(json.dumps(aggregate(),ensure_ascii=False,indent=2))
+if __name__=='__main__':
+ import argparse
+ parser=argparse.ArgumentParser();parser.add_argument('--exclude-user-paused-mofo',action='store_true');args=parser.parse_args()
+ if args.exclude_user_paused_mofo:
+  pause=read(RUN/'USER_PAUSE_MOFO_DONE.json');assert pause['user_requested_pause'] and pause['training_process_stopped']
+  result=aggregate(models=[m for m in MODELS if m!='MoFO'],output=REPORT/'results_non_mofo_user_paused',paused=['MoFO'])
+ else:result=aggregate()
+ print(json.dumps(result,ensure_ascii=False,indent=2))

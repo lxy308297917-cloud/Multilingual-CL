@@ -10,7 +10,7 @@ WORK=ROOT/'work/representation_drift_functional_forgetting_20261028'
 sys.path.insert(0,str(ROOT/'outputs/sw_fullbudget_baselines_20261028/code'))
 from settings import read,write,sha
 import numpy as np
-from metrics import paired_metrics,covariance_drift,functional_state,group_mean_intervals
+from metrics import paired_metrics,covariance_drift,covariance_spectral_drift,functional_state,group_mean_intervals
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -52,7 +52,7 @@ def predict_model(meta,preds,base_preds,metrics,signed,orthogonal):
  x=np.array(features);scores={}
  for name,n in [('base_controls',5),('controls_with_normchange',6),('controls_with_normchange_and_drift',7)]:
   model=make_pipeline(StandardScaler(),LogisticRegression(C=1.,max_iter=1000,random_state=42))
-  model.fit(x[discovery,:n],y[discovery]);scores[name]=model.predict_proba(x[confirmation,:n])[:,1]
+  model.fit(x[discovery,:n],y[discovery]);assert int(model[-1].n_iter_.max())<1000,'Primary fixed logistic solver did not converge';scores[name]=model.predict_proba(x[confirmation,:n])[:,1]
  groups=[meta[i]['group'] for i,k in zip(indices,confirmation) if k]
  yy=y[confirmation]
  primary=auc_interval(yy,scores['controls_with_normchange_and_drift'],scores['controls_with_normchange'],groups)
@@ -68,7 +68,7 @@ def predict_model(meta,preds,base_preds,metrics,signed,orthogonal):
  secondary_scores={}
  for name,features2 in secondary_features.items():
   fit=make_pipeline(StandardScaler(),LogisticRegression(C=1.,max_iter=1000,random_state=42))
-  fit.fit(features2[discovery],y[discovery]);secondary_scores[name]=fit.predict_proba(features2[confirmation])[:,1]
+  fit.fit(features2[discovery],y[discovery]);assert int(fit[-1].n_iter_.max())<1000,'Secondary fixed logistic solver did not converge';secondary_scores[name]=fit.predict_proba(features2[confirmation])[:,1]
  secondary={
   'depth_vs_overall_drift':auc_interval(yy,secondary_scores['fixed_depth_bins'],scores['controls_with_normchange_and_drift'],groups),
   'positions_vs_decision_only':auc_interval(yy,secondary_scores['fixed_three_positions'],scores['controls_with_normchange_and_drift'],groups),
@@ -210,7 +210,8 @@ def main():
       covariances.append(dict(model=name,task=task,language=language,phase=phase,block=block,position=position,
        **covariance_drift(caches['Base'][fixed,block,position],caches[name][fixed,block,position])))
     b=caches['Base'][fixed,:,0].astype(np.float64).mean(0);a=caches[name][fixed,:,0].astype(np.float64).mean(0)
-    paper_style.append(dict(model=name,task=task,language=language,phase=phase,**covariance_drift(b,a),
+    paper_metrics=covariance_drift(b,a);paper_metrics['definition']='covariance across 28 decoder-block means, each averaged over the fixed examples'
+    paper_style.append(dict(model=name,task=task,language=language,phase=phase,row_axis='decoder_block',original_examples=len(fixed),**paper_metrics,**covariance_spectral_drift(b,a),
      caveat='Rows are 28 layer means, NOT individual samples. One across-layer covariance scalar; not paper per-layer curve replication.'))
    print('Computed',name,flush=True)
  if contrasts:dump_csv(REPORT/'FORGOTTEN_RETAINED_CONTRASTS.csv',contrasts)

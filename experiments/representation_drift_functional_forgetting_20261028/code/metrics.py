@@ -40,3 +40,18 @@ def group_mean_intervals(values,groups,repeats=2000,seed=42):
  rng=np.random.default_rng(seed);weights=rng.multinomial(len(keys),np.ones(len(keys))/len(keys),size=repeats)
  scores=(weights@sums)/(weights@counts)[:,None]
  return np.mean(x,axis=0),np.quantile(scores,[.025,.975],axis=0),len(keys)
+
+def covariance_spectral_drift(base,adapted):
+ """Exact low-rank matrix-2-norm, separately named from Frobenius drift."""
+ b=np.asarray(base,dtype=np.float64);a=np.asarray(adapted,dtype=np.float64)
+ assert a.shape==b.shape and b.ndim==2 and len(b)>1
+ b=b-b.mean(0);a=a-a.mean(0);d=a-b;n=len(b)
+ # Delta C = b.T d + d.T b + d.T d, projected to its at-most-2N row span.
+ _,r=np.linalg.qr(np.concatenate((b,d),axis=0).T,mode='reduced')
+ rb,rd=r[:,:n],r[:,n:]
+ delta=(rb@rd.T+rd@rb.T+rd@rd.T)/(n-1)
+ delta=(delta+delta.T)/2
+ absolute=float(np.abs(np.linalg.eigvalsh(delta)).max())
+ base_spectral=float(np.linalg.eigvalsh(b@b.T).max()/(n-1))
+ return dict(absolute_matrix_spectral_norm_2=absolute,base_matrix_spectral_norm_2=base_spectral,
+  relative_matrix_spectral_norm_2=absolute/max(base_spectral,1e-12))

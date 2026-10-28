@@ -1,0 +1,51 @@
+{
+  "recorded_unix": 1793190355.1288836,
+  "human_instruction": "MoFO直接暂停，不等新checkpoint；释放GPU用于表示漂移诊断。",
+  "paused_methods": [
+    "MoFO"
+  ],
+  "automatic_resume_authorized": false,
+  "MoFO_pause_receipt": "work/sw_fullbudget_baselines_20261028/USER_PAUSE_MOFO_DONE.json",
+  "MoFO_recoverable_step": 2000,
+  "MoFO_last_flushed_step": 3940,
+  "cancelled_technical_tasks": [
+    "MoFO isolated full-Qwen validation"
+  ],
+  "active_training_methods": [
+    "Dense",
+    "SSU",
+    "Element"
+  ],
+  "pending_training_methods": [
+    "Protected"
+  ],
+  "completed_training_methods": [
+    "HFT15"
+  ],
+  "formal_eval_models": [
+    "Base",
+    "Dense",
+    "SSU",
+    "HFT15",
+    "Element",
+    "Protected"
+  ],
+  "max_account_GPUs": 4,
+  "max_baseline_GPUs": 3,
+  "diagnostic_reserved_uuid": "GPU-1a3a5c22-63f7-8edb-d112-4458bb5baa58",
+  "GPU_hold_process_authorized": false,
+  "GPU_hour_stop_limit": null,
+  "wall_clock_stop_limit": null,
+  "diagnostic_primary_models": [
+    "Base",
+    "Dense",
+    "Element",
+    "Protected"
+  ],
+  "diagnostic_no_training": true,
+  "original_seven_model_suite_complete": false,
+  "partial_table_path": "outputs/sw_fullbudget_baselines_20261028/results_non_mofo_user_paused/MAIN_TABLE.csv",
+  "original_dispatcher_pid": 2648566,
+  "original_dispatcher_state": "user-pause handoff; must remain stopped while adopted children or replacement coordinator run",
+  "replacement_coordinator_service": "sw-fullbudget-after-mofo-pause-20261028.service"
+}

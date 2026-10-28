@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "method": "HFT15",
+  "receipt_sha256": "d060751bf059fc9f454fefc692d272e1e88ffa2966fc585abf2e20eca91e128e",
+  "receipt_not_overwritten": true,
+  "all_prior_input_and_full_checkpoint_file_hashes_reverified": true,
+  "CPU_only": true,
+  "seconds": 13.164780616760254,
+  "finished_unix": 1793190229.452539
+}

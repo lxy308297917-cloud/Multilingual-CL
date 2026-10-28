@@ -1,0 +1,10 @@
+{
+  "commit": "0e060cdba6e631970c25478aa82b5a67cd578e1e",
+  "branch": "research/sw-fullbudget-baselines-20261028",
+  "report_path": "docs/results/representation_drift_functional_forgetting_20261028/README_ZH.md",
+  "critical_remote_readback_exact": true,
+  "verified_unix": 1793183180.982071,
+  "no_raw_questions_or_answers_or_weights_published": true,
+  "Base_only_extraction_complete": true,
+  "matched_endpoint_comparison_pending": true
+}

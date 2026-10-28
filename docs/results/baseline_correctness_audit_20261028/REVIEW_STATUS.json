@@ -1,0 +1,44 @@
+{
+  "started_unix": 1793177501.2799475,
+  "frozen_runtime_unmodified": true,
+  "SSU_current_selection_untouched": true,
+  "SSU_cache_passes": 1,
+  "SSU_selection_impact": {
+    "All": {
+      "selected_elements": 196608000,
+      "intersection_elements": 175469568,
+      "overlap_fraction": 0.892484375,
+      "selected_jaccard": 0.8058435970147148,
+      "changed_elements": 21138432,
+      "matrices_with_different_selection": 196,
+      "matrices_with_boundary_ties": 0
+    },
+    "Attention": {
+      "selected_elements": 23178240,
+      "intersection_elements": 21697792,
+      "overlap_fraction": 0.9361276783741993,
+      "selected_jaccard": 0.8799248362281075,
+      "changed_elements": 1480448,
+      "matrices_with_different_selection": 112,
+      "matrices_with_boundary_ties": 0
+    },
+    "MLP": {
+      "selected_elements": 173429760,
+      "intersection_elements": 153771776,
+      "overlap_fraction": 0.8866516104271839,
+      "selected_jaccard": 0.7963828921218324,
+      "changed_elements": 19657984,
+      "matrices_with_different_selection": 84,
+      "matrices_with_boundary_ties": 0
+    }
+  },
+  "MoFO_CPU_exact_acceptance": true,
+  "MoFO_formal_switch": false,
+  "MoFO_CUDA_full_model_and_isolated_throughput_pending": false,
+  "max_account_GPUs": 4,
+  "no_time_stop_threshold": true,
+  "diagnostics_share_only_own_HFT_card_with_explicit_memory_caps": true,
+  "updated_unix": 1793190355.129374,
+  "MoFO_validation_status": "cancelled because user explicitly paused MoFO; never completed or switched",
+  "HFT15_fullbudget_CPU_acceptance_passed": true
+}

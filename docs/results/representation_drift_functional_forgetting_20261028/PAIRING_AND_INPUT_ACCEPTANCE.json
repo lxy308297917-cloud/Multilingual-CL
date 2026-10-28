@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "paired_source_ids": 512,
+  "EN_SW_gold_consistency": true,
+  "source_and_phase_group_consistency": true,
+  "discovery_confirmation_source_group_overlap": 0,
+  "global_MMLU_alignment": "Existing frozen prepare_evaluation.py joins Global-MMLU sample_id to subject/test/index of original MMLU and checks answer identity; selected pairs reverified here",
+  "semantic_translation_quality_not_certified": true,
+  "physical_JSONL_iteration_required": true,
+  "unicode_line_separator_audit": {
+    "knowledge_en.jsonl": {
+      "physical_json_records": 14042,
+      "python_unicode_splitlines_count": 14044
+    },
+    "ifeval.jsonl": {
+      "physical_json_records": 541,
+      "python_unicode_splitlines_count": 541
+    },
+    "belebele_en.jsonl": {
+      "physical_json_records": 900,
+      "python_unicode_splitlines_count": 900
+    },
+    "translation.jsonl": {
+      "physical_json_records": 2024,
+      "python_unicode_splitlines_count": 2024
+    },
+    "belebele_sw.jsonl": {
+      "physical_json_records": 900,
+      "python_unicode_splitlines_count": 900
+    },
+    "gsm8k.jsonl": {
+      "physical_json_records": 1319,
+      "python_unicode_splitlines_count": 1319
+    },
+    "knowledge_sw.jsonl": {
+      "physical_json_records": 14042,
+      "python_unicode_splitlines_count": 14043
+    }
+  },
+  "note": "U+0085 occurs within JSON strings in knowledge sources; str.splitlines() would split valid records. Frozen extraction/analysis use file line iteration; source rows are unchanged.",
+  "source_preparer_sha256": "18630d99a4fc395c6bbd80db37806065a44e3c5b243a467d1c31972ced53a422",
+  "verified_unix": 1793183735.825269
+}

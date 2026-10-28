@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "method": "HFT15",
+  "steps": 42465,
+  "main_input_tokens": 15360935,
+  "main_supervised_tokens": 5984371,
+  "selected_min": 196608000,
+  "selected_max": 196608000,
+  "candidate_denominator": 1310195712,
+  "trainable_elements": 196608000,
+  "unique_model_elements": 1543714304,
+  "cumulative_actual_path": 1703.9228267984079,
+  "actual_nonzero_write_events": 379426868099,
+  "final_net_displacement": 39.263810859054956,
+  "module_net_displacements": {
+    "Other": 0.0,
+    "MLP": 35.853691980005294,
+    "Attention": 16.004987178331184
+  },
+  "frozen_elements_bitwise_verified": 1347106304,
+  "calibration_input_tokens": 0,
+  "calibration_supervised_tokens": 0,
+  "seconds_by_phase": {
+    "main": 17394.15808399394,
+    "optimizer": 8908.86971953325
+  },
+  "changed_elements_outside_adam_support_union": 0,
+  "outside_union_policy": "must remain bitwise unchanged",
+  "final_checkpoint": "/data0/users/lixiaoyang/models/checkpoint/sw_fullbudget_baselines_20261028/HFT15_first/checkpoint_042465",
+  "checkpoint_hashes_verified": true,
+  "FP32_moments_verified": true,
+  "FP32_moments_finite_and_v_nonnegative": true,
+  "RNG_scheduler_data_position_verified": true,
+  "final_weights_sha256": "95d1c683943c858adf1eb5b32c101542d7ca33cd425d9accf0ed10bf4498ebc5",
+  "optimizer_parameter_count": 196608000,
+  "logical_training_log_segments": [
+    {
+      "path": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/training/HFT15_first/steps.jsonl",
+      "first_step": 1,
+      "last_step": 42465
+    }
+  ],
+  "scientific_limit": "single frozen training order and budget; no best-checkpoint selection",
+  "completed_unix": 1793189984.9215715,
+  "auditor_sha256": "e6268cc769bd4e5fff92ca01310b6b885231afa5aa7645ffb7622fdc17ed6831",
+  "log_chain_helper_sha256": "98b77bf4d5b3448abcc3dc33486369880291ad11a4e5ba3c51b2728e98ccbc81",
+  "checkpoint_receipt_sha256": "f4099d662be953270f5a4a022c3e3e8a0be353ea7c5bceb013fc3a8042f2d94f",
+  "audit_input_sha256": {
+    "/data0/users/lixiaoyang/models/checkpoint/sw_fullbudget_baselines_20261028/HFT15_first/TRAINING_DONE.json": "176c7d77de190cd304a4557f45faaeb6d054fd90fb0c1a2defa181b0d70adfaf",
+    "/data0/users/lixiaoyang/models/checkpoint/sw_fullbudget_baselines_20261028/HFT15_first/RUN_IDENTITY.json": "4fe01ef3c0cf483bf83c0fd373bdfc548082e68ede2837ce315f8b8fc59a6290",
+    "/data0/users/lixiaoyang/models/checkpoint/sw_fullbudget_baselines_20261028/HFT15_first/PARAMETER_SCOPE.json": "8f73af07b777ee77876736e65f71003515877b22aae456b8cbb711958ae1c764",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/sw_fullbudget_baselines_20261028/TRAINING_CONFIG_FROZEN.json": "e35acd01030355313a533bafd133569884ecb48f9881263a5616052ae2a8aac9",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/sw_fullbudget_baselines_20261028/DATA_FROZEN.json": "383ed4b7170dcc317e78338abf5637cc198412ca66888ebc7fe68c960035c173",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/sw_fullbudget_baselines_20261028/COMMON_BUDGET_20261028.json": "cc270b50e9f22650be9bcb9061aa689b547a5c7440658358dc308dfdc6278f4b",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/training/HFT15_first/steps.jsonl": "054762fb410c8b0d6f676f38b9f93fac2fc7b3554b77775b09b911cb1e8cd1ba"
+  }
+}

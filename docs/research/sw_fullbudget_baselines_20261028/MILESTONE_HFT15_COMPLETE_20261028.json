@@ -1,0 +1,19 @@
+{
+  "recorded_unix": 1793190146.1939926,
+  "HFT15_complete": true,
+  "HFT15_acceptance_passed": true,
+  "HFT15_GPU_hours": 7.511783323023054,
+  "HFT15_acceptance_sha256": "d060751bf059fc9f454fefc692d272e1e88ffa2966fc585abf2e20eca91e128e",
+  "MoFO_user_paused_no_auto_restart": true,
+  "current_trainings": [
+    "Dense",
+    "SSU",
+    "Element"
+  ],
+  "pending_trainings": [
+    "Protected"
+  ],
+  "formal_benchmark_scores_pending": true,
+  "representation_drift_Base_complete": true,
+  "representation_drift_matched_endpoint_comparison_pending": true
+}

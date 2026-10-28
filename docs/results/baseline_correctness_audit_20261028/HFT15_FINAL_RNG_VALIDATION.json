@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "method": "HFT15",
+  "full_endpoint_step": 42465,
+  "CPU_Python_numpy_torch_RNG_perturbed_then_restored_exact": true,
+  "CUDA_saved_state_bitwise_same_as_real_preflight_restore": true,
+  "CUDA_state_shapes": [
+    [
+      16
+    ]
+  ],
+  "CUDA_state_dtype": "uint8",
+  "scope": "Actual endpoint CPU RNG restore; CUDA bytes compared against a successfully GPU-restored preflight checkpoint. No fresh endpoint GPU restore or training update.",
+  "full_endpoint_GPU_restore_performed": false,
+  "scheduler": {
+    "step": 42465,
+    "next_lr": 0.0
+  },
+  "data_position": 84930,
+  "finished_unix": 1793190697.6491015
+}
