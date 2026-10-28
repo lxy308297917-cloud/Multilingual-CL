@@ -67,6 +67,30 @@
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
+  "Dense-SSU/translation": {
+    "en_to_sw": {
+      "difference_chrFpp": 14.86745696590354,
+      "paired95CI": [
+        14.085868919317534,
+        15.63636500384204
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    },
+    "sw_to_en": {
+      "difference_chrFpp": -11.276363297755601,
+      "paired95CI": [
+        -12.473464613941006,
+        -10.094187563612586
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    }
+  },
   "Dense-HFT15/belebele_en": {
     "difference_pp": -16.444444444444446,
     "paired95CI_pp": [
@@ -88,6 +112,30 @@
     "source_groups": 488,
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
+  },
+  "Dense-HFT15/translation": {
+    "en_to_sw": {
+      "difference_chrFpp": 16.071850860711148,
+      "paired95CI": [
+        15.272937336802427,
+        16.873408376372605
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    },
+    "sw_to_en": {
+      "difference_chrFpp": -11.563041667941249,
+      "paired95CI": [
+        -12.744847958715278,
+        -10.417023933400092
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    }
   },
   "SSU-Base/belebele_en": {
     "difference_pp": 0.33333333333333337,
@@ -111,6 +159,30 @@
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
+  "SSU-Base/translation": {
+    "en_to_sw": {
+      "difference_chrFpp": 8.24082503727212,
+      "paired95CI": [
+        7.751305010391577,
+        8.726063242431362
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    },
+    "sw_to_en": {
+      "difference_chrFpp": 17.669275887579623,
+      "paired95CI": [
+        16.99421113896572,
+        18.337411272781893
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    }
+  },
   "SSU-Dense/belebele_en": {
     "difference_pp": 18.444444444444443,
     "paired95CI_pp": [
@@ -132,6 +204,30 @@
     "source_groups": 488,
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
+  },
+  "SSU-Dense/translation": {
+    "en_to_sw": {
+      "difference_chrFpp": -14.86745696590354,
+      "paired95CI": [
+        -15.636365003842041,
+        -14.085868919317534
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    },
+    "sw_to_en": {
+      "difference_chrFpp": 11.276363297755601,
+      "paired95CI": [
+        10.094187563612586,
+        12.473464613941006
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    }
   },
   "SSU-HFT15/belebele_en": {
     "difference_pp": 2.0,
@@ -155,6 +251,30 @@
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
+  "SSU-HFT15/translation": {
+    "en_to_sw": {
+      "difference_chrFpp": 1.204393894807609,
+      "paired95CI": [
+        0.7060114880256219,
+        1.703358579670759
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    },
+    "sw_to_en": {
+      "difference_chrFpp": -0.2866783701856477,
+      "paired95CI": [
+        -0.79290929690621,
+        0.20157047599522038
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    }
+  },
   "HFT15-Base/belebele_en": {
     "difference_pp": -1.6666666666666667,
     "paired95CI_pp": [
@@ -176,6 +296,30 @@
     "source_groups": 488,
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
+  },
+  "HFT15-Base/translation": {
+    "en_to_sw": {
+      "difference_chrFpp": 7.036431142464512,
+      "paired95CI": [
+        6.524584579616416,
+        7.544062398866798
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    },
+    "sw_to_en": {
+      "difference_chrFpp": 17.95595425776527,
+      "paired95CI": [
+        17.28427053790616,
+        18.61137849071446
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    }
   },
   "HFT15-Dense/belebele_en": {
     "difference_pp": 16.444444444444446,
@@ -199,6 +343,30 @@
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
+  "HFT15-Dense/translation": {
+    "en_to_sw": {
+      "difference_chrFpp": -16.071850860711148,
+      "paired95CI": [
+        -16.873408376372605,
+        -15.272937336802427
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    },
+    "sw_to_en": {
+      "difference_chrFpp": 11.563041667941249,
+      "paired95CI": [
+        10.417023933400092,
+        12.744847958715278
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    }
+  },
   "HFT15-SSU/belebele_en": {
     "difference_pp": -2.0,
     "paired95CI_pp": [
@@ -220,5 +388,29 @@
     "source_groups": 488,
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
+  },
+  "HFT15-SSU/translation": {
+    "en_to_sw": {
+      "difference_chrFpp": -1.204393894807609,
+      "paired95CI": [
+        -1.703358579670759,
+        -0.706011488025622
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    },
+    "sw_to_en": {
+      "difference_chrFpp": 0.2866783701856477,
+      "paired95CI": [
+        -0.20157047599522038,
+        0.7929092969062097
+      ],
+      "source_groups": 1012,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false,
+      "corpus_statistic": true
+    }
   }
 }

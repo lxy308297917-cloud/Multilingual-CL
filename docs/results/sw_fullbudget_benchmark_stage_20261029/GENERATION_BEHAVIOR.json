@@ -30,5 +30,37 @@
     "output_language": {
       "und": 1012
     }
+  },
+  "SSU/en_to_sw": {
+    "n": 1012,
+    "capped": 7,
+    "generated_tokens": 56861,
+    "output_language": {
+      "und": 1012
+    }
+  },
+  "SSU/sw_to_en": {
+    "n": 1012,
+    "capped": 0,
+    "generated_tokens": 28623,
+    "output_language": {
+      "und": 1012
+    }
+  },
+  "HFT15/en_to_sw": {
+    "n": 1012,
+    "capped": 19,
+    "generated_tokens": 58394,
+    "output_language": {
+      "und": 1012
+    }
+  },
+  "HFT15/sw_to_en": {
+    "n": 1012,
+    "capped": 0,
+    "generated_tokens": 28479,
+    "output_language": {
+      "und": 1012
+    }
   }
 }

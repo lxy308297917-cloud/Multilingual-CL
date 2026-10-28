@@ -1,6 +1,6 @@
 # 10月29日完整预算基线：已验收阶段结果
 
-本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收10/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
+本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收12/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
 
 [完整阶段主表](docs/results/sw_fullbudget_benchmark_stage_20261029/README_ZH.md) · [CSV](docs/results/sw_fullbudget_benchmark_stage_20261029/AVAILABLE_BENCHMARKS.csv) · [配对区间](docs/results/sw_fullbudget_benchmark_stage_20261029/PAIRED_COMPARISONS.json) · [阅读明细与图](docs/results/sw_fullbudget_reading_stage_20261029/README_ZH.md) · [表示漂移当前状态](docs/results/representation_drift_functional_forgetting_20261028/STATUS_20261029_ZH.md)
 
@@ -8,8 +8,8 @@
 |---|---:|---:|---:|---:|
 |Base|37.56%|81.78%|21.18|21.79|
 |Dense FFT|43.33%|63.67%|44.29|28.18|
-|SSU Token加权15%匹配变体|43.56%|82.11%|待完成|待完成|
-|HFT整矩阵15%匹配变体|40.78%|80.11%|待完成|待完成|
+|SSU Token加权15%匹配变体|43.56%|82.11%|29.42|39.46|
+|HFT整矩阵15%匹配变体|40.78%|80.11%|28.22|39.75|
 |无保护元素稀疏U|待完成|待完成|待完成|待完成|
 |英语敏感度保护P|待完成|待完成|待完成|待完成|
 
@@ -27,4 +27,8 @@
 旧FineWeb主导D2、近期短训代理结果与本轮分表；不能从跨配方数字直接推断更换数据来源的因果收益。已暴露benchmark属于补充比较，不包装成未见最终确认。表示漂移是无训练机制分析，当前Base与FFT提取完成，U/P未齐，尚无四模型完整关联或激活替换结论。
 
 
-补充逐题核查：FFT在SW→EN的1,012条输出中有70条完全复制原文，事后语言分类有552条判为SW；chrF++仍按原协议保留，不能将其上升解释为所有行为改善。语言标签只是辅助，详见[输出行为核查](docs/results/sw_fullbudget_benchmark_stage_20261029/TRANSLATION_BEHAVIOR_ZH.md)。原始und字段表示冻结环境未能分类，并非语言质量判定。
+最新翻译补充：SSU变体相对HFT15，EN→SW高1.20 chrF++，配对95%区间[0.71,1.70]；SW→EN低0.29，区间[−0.79,0.20]，该方向差异不确定。SSU相对FFT，SW→EN高11.28，区间[10.09,12.47]，但EN→SW低14.87，区间[−15.64,−14.09]。不能把这些取舍合并成总体最优排名。
+
+[输出行为核查](docs/results/sw_fullbudget_benchmark_stage_20261029/TRANSLATION_BEHAVIOR_ZH.md)：FFT的SW→EN有70/1012条原文直接复制，552条被事后启发式语言检测判为SW；原始chrF++保留，不能解释为所有翻译行为改善。SSU与HFT15在该方向无直接复制，事后判为英语分别1012与1011条。原始und字段是冻结环境分类依赖缺失的回退值，本补充是独立CPU侧车，不覆盖原数据。
+
+[正式阅读的同题状态变化](docs/results/sw_fullbudget_reading_transitions_20261029/README_ZH.md)：Base900题中448题EN对SW错；FFT的EN预测有199题Base对→错、36题错→对，SSU对应15/18，HFT15对应44/29。这是固定评分协议的功能状态观察，不等同内部知识通路的因果结论。

@@ -1,5 +1,5 @@
 {
-  "scope": "Posthoc descriptive diagnostics on original complete outputs, no new generation or benchmark scoring changes",
+  "scope": "Posthoc descriptive diagnostics, no new generation or benchmark scoring changes",
   "classifier": "langdetect",
   "seed": 0,
   "models": {
@@ -59,7 +59,59 @@
           "so": 1
         }
       }
+    },
+    "SSU": {
+      "en_to_sw": {
+        "n": 1012,
+        "source_literal_copy": 0,
+        "source_NFKC_whitespace_copy": 0,
+        "capped": 7,
+        "repeated_4gram_events": 796,
+        "outputs_with_repeated_4grams": 33,
+        "posthoc_language": {
+          "sw": 1008,
+          "en": 2,
+          "id": 2
+        }
+      },
+      "sw_to_en": {
+        "n": 1012,
+        "source_literal_copy": 0,
+        "source_NFKC_whitespace_copy": 0,
+        "capped": 0,
+        "repeated_4gram_events": 18,
+        "outputs_with_repeated_4grams": 9,
+        "posthoc_language": {
+          "en": 1012
+        }
+      }
+    },
+    "HFT15": {
+      "en_to_sw": {
+        "n": 1012,
+        "source_literal_copy": 1,
+        "source_NFKC_whitespace_copy": 1,
+        "capped": 19,
+        "repeated_4gram_events": 1531,
+        "outputs_with_repeated_4grams": 42,
+        "posthoc_language": {
+          "sw": 992,
+          "en": 20
+        }
+      },
+      "sw_to_en": {
+        "n": 1012,
+        "source_literal_copy": 0,
+        "source_NFKC_whitespace_copy": 0,
+        "capped": 0,
+        "repeated_4gram_events": 15,
+        "outputs_with_repeated_4grams": 8,
+        "posthoc_language": {
+          "en": 1011,
+          "id": 1
+        }
+      }
     }
   },
-  "raw_und": "Classifier unavailable in frozen evaluation environment; not evidence of output language quality"
+  "raw_und": "Classifier unavailable in frozen evaluation environment; not evidence of language quality"
 }

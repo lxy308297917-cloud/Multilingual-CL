@@ -1,0 +1,5 @@
+model,n,EN_correct_SW_correct,EN_correct_SW_wrong,EN_wrong_SW_correct,EN_wrong_SW_wrong,EN_Retained,EN_Forgotten,EN_Acquired,EN_Still_Wrong,SW_Retained,SW_Forgotten,SW_Acquired,SW_Still_Wrong,EN_loss_and_SW_gain_same_question
+Base,900,288,448,50,114,736,0,0,164,338,0,0,562,0
+Dense,900,333,240,57,270,537,199,36,128,215,123,175,387,19
+SSU,900,349,390,43,118,721,15,18,146,235,103,157,405,3
+HFT15,900,331,390,36,143,692,44,29,135,212,126,155,407,4
