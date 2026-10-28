@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "real_existing_MCF_rows_checked": 3840,
+  "all_60_cells_reproduce_old_v2": true,
+  "new_fullbudget_inference_not_started": true,
+  "code_hashes": {
+    "analyze.py": "dc53c6af4df68d437caf26760b91fc061b4aa1776b7ac66aa579c065722854a2",
+    "coordinate.py": "72057b5769e26fc8d997c2d5424ce0860ba89a2e21465298b711ee963aeda9fe",
+    "worker.py": "562c987102b105b2569d6c1686d336dad9ed40601cb351521b6d475b777d9b50"
+  }
+}

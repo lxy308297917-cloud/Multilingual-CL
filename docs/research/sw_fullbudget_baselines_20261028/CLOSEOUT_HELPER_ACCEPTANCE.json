@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "scope": "syntax, identical corpus chrF interval, instruction ratio bootstrap, four real smoke MCF identity checks, real GSM8K filter schema",
+  "full_endpoint_acceptance": false
+}

@@ -1,0 +1,71 @@
+{
+  "contexts": [
+    {
+      "label": "GPU_START_Historical-element_protected_smoke.json",
+      "uuid": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+      "seconds": 4.834540605545044,
+      "success": false,
+      "physical_peak_MiB": null
+    },
+    {
+      "label": "GPU_START_LR077-s42_smoke.json",
+      "uuid": "GPU-1a3a5c22-63f7-8edb-d112-4458bb5baa58",
+      "seconds": 4.8075175285339355,
+      "success": false,
+      "physical_peak_MiB": null
+    },
+    {
+      "label": "GPU_START_Base_smoke.json",
+      "uuid": "GPU-38e7429c-59f4-0126-ca93-bdd12e526387",
+      "seconds": 4.6963090896606445,
+      "success": false,
+      "physical_peak_MiB": null
+    },
+    {
+      "label": "recovery01/GPU_START_Historical-element_protected_smoke.json",
+      "uuid": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+      "seconds": 5.173915863037109,
+      "success": true,
+      "physical_peak_MiB": 3585
+    },
+    {
+      "label": "recovery01/GPU_START_Historical-element_protected_formal.json",
+      "uuid": "GPU-38dc0691-ffb0-12c2-0770-84bd5f37be39",
+      "seconds": 60.31849408149719,
+      "success": true,
+      "physical_peak_MiB": 3787
+    },
+    {
+      "label": "recovery01/GPU_START_Base_formal.json",
+      "uuid": "GPU-38e7429c-59f4-0126-ca93-bdd12e526387",
+      "seconds": 57.4751832485199,
+      "success": true,
+      "physical_peak_MiB": 3787
+    },
+    {
+      "label": "recovery01/GPU_START_LR077-s42_smoke.json",
+      "uuid": "GPU-1a3a5c22-63f7-8edb-d112-4458bb5baa58",
+      "seconds": 4.874810695648193,
+      "success": true,
+      "physical_peak_MiB": null
+    },
+    {
+      "label": "recovery01/GPU_START_Base_smoke.json",
+      "uuid": "GPU-38e7429c-59f4-0126-ca93-bdd12e526387",
+      "seconds": 4.731837034225464,
+      "success": true,
+      "physical_peak_MiB": null
+    },
+    {
+      "label": "recovery01/GPU_START_LR077-s42_formal.json",
+      "uuid": "GPU-1a3a5c22-63f7-8edb-d112-4458bb5baa58",
+      "seconds": 56.454625606536865,
+      "success": true,
+      "physical_peak_MiB": 3787
+    }
+  ],
+  "total_GPU_hours": 0.05649089826477899,
+  "new_MCF_decisions": 3840,
+  "new_generation_answers": 0,
+  "no_training": true
+}

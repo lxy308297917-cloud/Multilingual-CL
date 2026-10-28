@@ -1,0 +1,98 @@
+{
+  "models": [
+    "Base",
+    "LR077-s42",
+    "Historical-element_protected"
+  ],
+  "no_training": true,
+  "pairs_by_task": {
+    "belebele": 64,
+    "knowledge": 64
+  },
+  "primary_conditions": [
+    "EN_only",
+    "SW_only",
+    "SW_EN",
+    "SW_Control"
+  ],
+  "auxiliary_conditions": [
+    "SW_EN_explanation",
+    "EN_SW_explanation"
+  ],
+  "labels": [
+    " A",
+    " B",
+    " C",
+    " D"
+  ],
+  "candidate_ids": [
+    362,
+    425,
+    356,
+    422
+  ],
+  "candidate_tokens_each": 1,
+  "score": "logP(single candidate label | chatprompt+assistantAnswer:); normalized acrossfourlabels by logsumexp; report raw logP and conditional probability",
+  "primary_metric": "MCF raw argmax ACC; not generated-final parsing",
+  "fewshot": 0,
+  "auxiliary_C_D_not_output_language_interventions": true,
+  "predetermined_cyclic_permutation_control": "one deterministicnonidentity cyclicrotation perID; all4primaryconditions; translate goldback; never selected byscore",
+  "primary_decisions_per_model": 512,
+  "auxiliary_decisions_per_model": 256,
+  "permutation_decisions_per_model": 512,
+  "total_new_MCF_decisions": 3840,
+  "controls": {
+    "source": "independent train-side English reading pool; no referenceanswer shown",
+    "task_specific_structure": true,
+    "score_blind_nearest_token_length": true,
+    "normalized16word_overlap_with128pairs_excluded": true,
+    "fullbenchmark_lexical_pool_audit": "sw_fullbudget_baselines_20261028/OVERLAP_AUDIT.json",
+    "minimum_token_difference": -49,
+    "maximum_token_difference": 41,
+    "exact_length_matching": false,
+    "native_semantic_review": false,
+    "unrelated_text_may_interfere": true
+  },
+  "maximum_input_tokens": 1492,
+  "input_truncation": false,
+  "data_hashes": {
+    "prompts": "281b9f14d134f3e8f487634f032dbc0c6bb7309a73b6cc36ee7fef0adf30226f",
+    "controls": "da3d1045fe2061274d5240196e9ebb297fce4748daad28cd9ff0e0937b400ead",
+    "models": "ba94bd36413c03876b317aaacbd8c1a981f3a731b6b25de29144d169e161e7b6"
+  },
+  "v1_source_hashes": {
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/PAIRS_PRIVATE.json": "01cff7f4d69d22c03f2411a67b410771042611a34d52a0ebb8c45c2a28a6ae74",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/PROMPTS_PRIVATE.json": "400cb0c9b716e4e3d3777ad80c081dddd91674e878b416705003188955d441b5",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/generation/Base/PREDICTIONS.jsonl": "8320decee252bf8094ec18a2911894ecc3ade3bab206be56df454fe19a00e84e",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/generation/LR077-s42/PREDICTIONS.jsonl": "b754d2b15ff4c06cf497af59e3c9ff1c4f3b1a303370d72424e7f155ebb1ab8d",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/generation/Historical-element_protected/PREDICTIONS.jsonl": "0e081ab11fcbf23a152d4a4312583eaddcf52120f2023b155100e22f071e9cf5"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 42,
+    "unit": "source_document forreading;subject forknowledge",
+    "comparisons": [
+      "SW_EN-SW_only",
+      "SW_Control-SW_only",
+      "SW_EN-SW_Control",
+      "EN_only-SW_only"
+    ]
+  },
+  "parser_retrospective": true,
+  "previously_exposed_questions_not_independent_confirmation": true,
+  "model_budgets_differ_no_algorithm_ranking": true,
+  "no_new_generation": true,
+  "no_optional_G_or_scale_expansion": true,
+  "max_account_GPUs": 4,
+  "GPU_hour_stop_limit": null,
+  "wall_clock_stop_limit": null,
+  "frozen_unix": 1793161214.8765452,
+  "code_hashes": {
+    "resources.py": "c3c7fbca19f5b7d79a88a8f7db4b8fab055dc0b14e793aa15d79282911293b58",
+    "coordinate.py": "e32c1d9df65c58157b1204f33d6fb90e1acded388c1b653a54a7f4d814ddb3ba",
+    "parser.py": "d59719a69be8eab71f0716ba8ac505406b5da65bb856bf78e155367af4548163",
+    "prepare.py": "a8ac331f80016598b84d4932cd86d57f50718738c5070965ed228f7f3db84f16",
+    "settings.py": "e16089cfee53d6eae0fe960dd58aa950eda60d10d33660a09dc1996481f44aad",
+    "worker.py": "cb9edd9b0d9d9aee4918278179a930c1ade677ac5f7fc6022bcd006f09bb32d5"
+  }
+}

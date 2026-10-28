@@ -1,0 +1,53 @@
+{
+  "checked_unix": 1793164608.2128885,
+  "requirements": [
+    {
+      "requirement": "Original v2:3840 MCF +1920 retrospective answers",
+      "status": "verified_complete",
+      "evidence": [
+        "outputs/access_gap_diagnostic_v2_20261028/RAW_ACCEPTANCE.json",
+        "outputs/access_gap_diagnostic_v2_20261028/COMPLETION_VERIFIED.json"
+      ]
+    },
+    {
+      "requirement": "Six full-budget baseline trainings",
+      "status": "running_four_pending_two",
+      "evidence": [
+        "work/sw_fullbudget_baselines_20261028/QUEUE_STATE.json"
+      ]
+    },
+    {
+      "requirement": "Seven-model complete benchmark endpoints",
+      "status": "pending",
+      "evidence": [
+        "outputs/sw_fullbudget_baselines_20261028/EVALUATION_FROZEN.json"
+      ]
+    },
+    {
+      "requirement": "Exact HFT15/SSU/Element/Protected selection budget",
+      "status": "frozen_and_preflight_passed_formal_endpoint_pending",
+      "evidence": [
+        "outputs/sw_fullbudget_baselines_20261028/COMMON_BUDGET_20261028.json"
+      ]
+    },
+    {
+      "requirement": "Restorable checkpoints and scientific result acceptance",
+      "status": "first_formal_checkpoint_integrity_passed_final_pending",
+      "evidence": [
+        "outputs/sw_fullbudget_baselines_20261028/FIRST_FORMAL_CHECKPOINT_INTEGRITY.json",
+        "outputs/sw_fullbudget_baselines_20261028/CLOSEOUT_HELPER_ACCEPTANCE.json"
+      ]
+    },
+    {
+      "requirement": "Apply same frozen v2 to all new full-budget methods",
+      "status": "queued_after_primary_benchmark_completion",
+      "evidence": [
+        "outputs/access_gap_fullbudget_followup_20261028/FOLLOWUP_PROTOCOL_FROZEN.json",
+        "outputs/access_gap_fullbudget_followup_20261028/CPU_ACCEPTANCE.json"
+      ]
+    }
+  ],
+  "goal_complete": false,
+  "max_account_GPUs": 4,
+  "time_stop_limit": null
+}

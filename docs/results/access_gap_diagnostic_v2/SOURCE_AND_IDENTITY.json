@@ -1,0 +1,60 @@
+{
+  "protocol_sha256": "3739ed80a270bc9405745344e3f37023d08b501ab21d437fa9eb9066ab9c1336",
+  "models": {
+    "Base": {
+      "model": "/data0/users/lixiaoyang/models/Qwen2.5-1.5B-Instruct",
+      "model_real": "/data0/users/lixiaoyang/models/Qwen2.5-1.5B-Instruct",
+      "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+      "weights_hash_verified_now": true,
+      "MCF_v2_cache_available": true
+    },
+    "LR077-s42": {
+      "model": "/data0/users/lixiaoyang/models/checkpoint/module_lr077_20261023/S-All/checkpoint_004293/model",
+      "model_real": "/data1/lixiaoyang/module_lr077_20261023/S-All/checkpoint_004293/model",
+      "sha256": "9e40407fa7d7c95d85c746908f9569ccd8c440fa798ab67ccef11a328a1ca201",
+      "weights_hash_verified_now": true,
+      "MCF_v2_cache_available": true
+    },
+    "Historical-element_protected": {
+      "model": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_sparse_projection_v1/element_protected/final",
+      "sha256": "66224d74c715671f7eac754376e4c8884c314bc0c7f714342e1ad9d88c205d36",
+      "model_real": "/data0/users/lixiaoyang/models/checkpoint/sw_d2_sparse_projection_v1/element_protected/final",
+      "weights_hash_verified_now": true,
+      "MCF_v2_cache_available": false
+    }
+  },
+  "v1_hashes": {
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/PAIRS_PRIVATE.json": "01cff7f4d69d22c03f2411a67b410771042611a34d52a0ebb8c45c2a28a6ae74",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/PROMPTS_PRIVATE.json": "400cb0c9b716e4e3d3777ad80c081dddd91674e878b416705003188955d441b5",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/generation/Base/PREDICTIONS.jsonl": "8320decee252bf8094ec18a2911894ecc3ade3bab206be56df454fe19a00e84e",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/generation/LR077-s42/PREDICTIONS.jsonl": "b754d2b15ff4c06cf497af59e3c9ff1c4f3b1a303370d72424e7f155ebb1ab8d",
+    "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/benchmark_direction_20261026/access_diagnostic/generation/Historical-element_protected/PREDICTIONS.jsonl": "0e081ab11fcbf23a152d4a4312583eaddcf52120f2023b155100e22f071e9cf5"
+  },
+  "v2_prompt_sha256": "281b9f14d134f3e8f487634f032dbc0c6bb7309a73b6cc36ee7fef0adf30226f",
+  "control_sha256": "da3d1045fe2061274d5240196e9ebb297fce4748daad28cd9ff0e0937b400ead",
+  "raw_MCF": {
+    "Base": {
+      "path": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/access_gap_diagnostic_v2_20261028/recovery01/MCF/Base/PREDICTIONS.jsonl",
+      "sha256": "3518939c93b56fbcb22efafbefcdc9b827cdf53c1558e602aec013d895e9a360"
+    },
+    "LR077-s42": {
+      "path": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/access_gap_diagnostic_v2_20261028/recovery01/MCF/LR077-s42/PREDICTIONS.jsonl",
+      "sha256": "6571b3611d33098ce223c7d4df27a844a81963cba67770b735750667449c862b"
+    },
+    "Historical-element_protected": {
+      "path": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/access_gap_diagnostic_v2_20261028/recovery01/MCF/Historical-element_protected/PREDICTIONS.jsonl",
+      "sha256": "dda72c37e8dca4e1c60d57e34432d5cf4ecec1ef4d69b4920a32deb701e315b1"
+    }
+  },
+  "code_hashes": {
+    "resources.py": "c3c7fbca19f5b7d79a88a8f7db4b8fab055dc0b14e793aa15d79282911293b58",
+    "analyze.py": "64b773943e829e8c8b85f32b44b02c4052aecea7e708419948ab4ad2464a8572",
+    "coordinate.py": "e32c1d9df65c58157b1204f33d6fb90e1acded388c1b653a54a7f4d814ddb3ba",
+    "parser.py": "d59719a69be8eab71f0716ba8ac505406b5da65bb856bf78e155367af4548163",
+    "prepare.py": "a8ac331f80016598b84d4932cd86d57f50718738c5070965ed228f7f3db84f16",
+    "settings.py": "19343c524ad9ecd30a207248c55a30a06c445cb2eaaeeb3c63b447f80fd99fe8",
+    "worker.py": "01e0ff7347d3ab11c666e71065e5bf63b84204419c78924f283c21e6915363e1"
+  },
+  "no_model_weights_changed": true,
+  "publication_note": "Raw question text, model outputs and private bundle remain on the server; this is identity metadata only."
+}

@@ -1,0 +1,8 @@
+{
+  "reason": "lm_eval0.4.8 max_gen_toks belongs in generation kwargs, not HFLMmodel_args",
+  "fixed_generation_cap": 1024,
+  "decoding_and_scoring_policy_unchanged": true,
+  "failed_outputs_preserved": true,
+  "new_output": "Base/smoke/gsm8k/recovery01",
+  "recorded_unix": 1793162735.1615543
+}

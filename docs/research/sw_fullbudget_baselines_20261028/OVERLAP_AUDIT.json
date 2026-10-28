@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "collisions": [],
+  "rule": "NFKC/casefold normalized exact content>=5words OR common16 consecutive words; prompt/answer against full test content",
+  "main_unique_source_rows": 84930,
+  "calibration_rows": 766,
+  "repeated_content_groups": 7917,
+  "max_presentations_per_content_group": 8,
+  "cross_language_dual_direction_may_share_original_group": true,
+  "limitations": [
+    "Lexical screening is not proof of semantic decontamination.",
+    "Base pretraining unknown.",
+    "Parallel benchmark and previously exposed test material are supplementary benchmark comparisons."
+  ]
+}

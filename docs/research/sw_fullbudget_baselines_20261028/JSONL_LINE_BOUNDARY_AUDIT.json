@@ -1,0 +1,37 @@
+{
+  "belebele_en": {
+    "file_records": 900,
+    "str_splitlines_count": 900,
+    "same_line_boundaries": true
+  },
+  "belebele_sw": {
+    "file_records": 900,
+    "str_splitlines_count": 900,
+    "same_line_boundaries": true
+  },
+  "knowledge_en": {
+    "file_records": 14042,
+    "str_splitlines_count": 14044,
+    "same_line_boundaries": false
+  },
+  "knowledge_sw": {
+    "file_records": 14042,
+    "str_splitlines_count": 14043,
+    "same_line_boundaries": false
+  },
+  "translation": {
+    "file_records": 2024,
+    "str_splitlines_count": 2024,
+    "same_line_boundaries": true
+  },
+  "ifeval": {
+    "file_records": 541,
+    "str_splitlines_count": 541,
+    "same_line_boundaries": true
+  },
+  "gsm8k": {
+    "file_records": 1319,
+    "str_splitlines_count": 1319,
+    "same_line_boundaries": true
+  }
+}

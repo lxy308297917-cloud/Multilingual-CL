@@ -1,0 +1,21 @@
+{
+  "frozen_unix": 1793161426.413288,
+  "protocol_sha256": "3739ed80a270bc9405745344e3f37023d08b501ab21d437fa9eb9066ab9c1336",
+  "code_hashes": {
+    "resources.py": "c3c7fbca19f5b7d79a88a8f7db4b8fab055dc0b14e793aa15d79282911293b58",
+    "analyze.py": "64b773943e829e8c8b85f32b44b02c4052aecea7e708419948ab4ad2464a8572",
+    "coordinate.py": "e32c1d9df65c58157b1204f33d6fb90e1acded388c1b653a54a7f4d814ddb3ba",
+    "parser.py": "d59719a69be8eab71f0716ba8ac505406b5da65bb856bf78e155367af4548163",
+    "prepare.py": "a8ac331f80016598b84d4932cd86d57f50718738c5070965ed228f7f3db84f16",
+    "settings.py": "19343c524ad9ecd30a207248c55a30a06c445cb2eaaeeb3c63b447f80fd99fe8",
+    "worker.py": "01e0ff7347d3ab11c666e71065e5bf63b84204419c78924f283c21e6915363e1"
+  },
+  "batch_size": 1,
+  "model_forward": "standard full sequence logits; no logits_to_keep optimization",
+  "recovery_path": "work/access_gap_diagnostic_v2_20261028/recovery01",
+  "reason": "initial BF16 last-only versus full GEMM rounding consistency check failed; no formalMCF ran; use standard full forward consistently",
+  "no_time_limit": true,
+  "max_account_GPUs": 4,
+  "new_MCF_decisions": 3840,
+  "new_generation": 0
+}

@@ -1,0 +1,7 @@
+{
+  "reason": "recovery worker reused prior GPU_START contextlabel; identity safety assertion stopped before scoring",
+  "fix": "suffix evaluation contextlabel by independent recovery directory; duplicate check before CUDA initialization",
+  "same_scientific_protocol": true,
+  "all_previous_failures_retained": true,
+  "recorded_unix": 1793162573.1509836
+}

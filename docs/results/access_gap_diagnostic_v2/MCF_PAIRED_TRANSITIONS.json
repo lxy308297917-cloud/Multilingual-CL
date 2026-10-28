@@ -1,0 +1,496 @@
+{
+  "comparisons": {
+    "Base/belebele/original/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 42.1875,
+      "paired95CI_pp": [
+        29.6875,
+        54.6875
+      ],
+      "wrong_to_correct": 27,
+      "correct_to_wrong": 0
+    },
+    "Base/belebele/original/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": 4.6875,
+      "paired95CI_pp": [
+        -10.9375,
+        20.3125
+      ],
+      "wrong_to_correct": 14,
+      "correct_to_wrong": 11
+    },
+    "Base/belebele/original/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 37.5,
+      "paired95CI_pp": [
+        20.3125,
+        53.125
+      ],
+      "wrong_to_correct": 31,
+      "correct_to_wrong": 7
+    },
+    "Base/belebele/original/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 51.5625,
+      "paired95CI_pp": [
+        39.0625,
+        64.0625
+      ],
+      "wrong_to_correct": 33,
+      "correct_to_wrong": 0
+    },
+    "Base/belebele/cyclic_control/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 39.0625,
+      "paired95CI_pp": [
+        23.4375,
+        53.125
+      ],
+      "wrong_to_correct": 29,
+      "correct_to_wrong": 4
+    },
+    "Base/belebele/cyclic_control/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": -9.375,
+      "paired95CI_pp": [
+        -23.4375,
+        3.125
+      ],
+      "wrong_to_correct": 7,
+      "correct_to_wrong": 13
+    },
+    "Base/belebele/cyclic_control/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 48.4375,
+      "paired95CI_pp": [
+        32.8125,
+        62.5
+      ],
+      "wrong_to_correct": 35,
+      "correct_to_wrong": 4
+    },
+    "Base/belebele/cyclic_control/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 43.75,
+      "paired95CI_pp": [
+        29.6875,
+        57.8125
+      ],
+      "wrong_to_correct": 31,
+      "correct_to_wrong": 3
+    },
+    "Base/knowledge/original/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 10.9375,
+      "paired95CI_pp": [
+        -3.225806451612903,
+        25.423728813559322
+      ],
+      "wrong_to_correct": 15,
+      "correct_to_wrong": 8
+    },
+    "Base/knowledge/original/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": 3.125,
+      "paired95CI_pp": [
+        -7.936507936507936,
+        15.0
+      ],
+      "wrong_to_correct": 8,
+      "correct_to_wrong": 6
+    },
+    "Base/knowledge/original/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 7.8125,
+      "paired95CI_pp": [
+        -5.084745762711865,
+        21.21212121212121
+      ],
+      "wrong_to_correct": 12,
+      "correct_to_wrong": 7
+    },
+    "Base/knowledge/original/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 28.125,
+      "paired95CI_pp": [
+        11.76470588235294,
+        44.44444444444444
+      ],
+      "wrong_to_correct": 25,
+      "correct_to_wrong": 7
+    },
+    "Base/knowledge/cyclic_control/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 17.1875,
+      "paired95CI_pp": [
+        4.477611940298507,
+        30.64516129032258
+      ],
+      "wrong_to_correct": 16,
+      "correct_to_wrong": 5
+    },
+    "Base/knowledge/cyclic_control/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": 12.5,
+      "paired95CI_pp": [
+        -3.278688524590164,
+        30.0
+      ],
+      "wrong_to_correct": 19,
+      "correct_to_wrong": 11
+    },
+    "Base/knowledge/cyclic_control/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 4.6875,
+      "paired95CI_pp": [
+        -14.754098360655737,
+        22.22222222222222
+      ],
+      "wrong_to_correct": 19,
+      "correct_to_wrong": 16
+    },
+    "Base/knowledge/cyclic_control/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 31.25,
+      "paired95CI_pp": [
+        16.176470588235293,
+        46.03174603174603
+      ],
+      "wrong_to_correct": 26,
+      "correct_to_wrong": 6
+    },
+    "LR077-s42/belebele/original/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 37.5,
+      "paired95CI_pp": [
+        25.0,
+        50.0
+      ],
+      "wrong_to_correct": 25,
+      "correct_to_wrong": 1
+    },
+    "LR077-s42/belebele/original/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": -3.125,
+      "paired95CI_pp": [
+        -20.3125,
+        12.5
+      ],
+      "wrong_to_correct": 14,
+      "correct_to_wrong": 16
+    },
+    "LR077-s42/belebele/original/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 40.625,
+      "paired95CI_pp": [
+        25.0,
+        56.25
+      ],
+      "wrong_to_correct": 32,
+      "correct_to_wrong": 6
+    },
+    "LR077-s42/belebele/original/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 43.75,
+      "paired95CI_pp": [
+        31.25,
+        56.25
+      ],
+      "wrong_to_correct": 29,
+      "correct_to_wrong": 1
+    },
+    "LR077-s42/belebele/cyclic_control/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 29.6875,
+      "paired95CI_pp": [
+        17.1875,
+        42.1875
+      ],
+      "wrong_to_correct": 20,
+      "correct_to_wrong": 1
+    },
+    "LR077-s42/belebele/cyclic_control/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": -14.0625,
+      "paired95CI_pp": [
+        -29.6875,
+        0.039062499999431566
+      ],
+      "wrong_to_correct": 8,
+      "correct_to_wrong": 17
+    },
+    "LR077-s42/belebele/cyclic_control/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 43.75,
+      "paired95CI_pp": [
+        26.5625,
+        59.375
+      ],
+      "wrong_to_correct": 34,
+      "correct_to_wrong": 6
+    },
+    "LR077-s42/belebele/cyclic_control/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 37.5,
+      "paired95CI_pp": [
+        23.4375,
+        50.0
+      ],
+      "wrong_to_correct": 26,
+      "correct_to_wrong": 2
+    },
+    "LR077-s42/knowledge/original/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 4.6875,
+      "paired95CI_pp": [
+        -7.8125,
+        17.1875
+      ],
+      "wrong_to_correct": 10,
+      "correct_to_wrong": 7
+    },
+    "LR077-s42/knowledge/original/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": 3.125,
+      "paired95CI_pp": [
+        -10.76923076923077,
+        16.666666666666664
+      ],
+      "wrong_to_correct": 11,
+      "correct_to_wrong": 9
+    },
+    "LR077-s42/knowledge/original/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 1.5625,
+      "paired95CI_pp": [
+        -10.9375,
+        14.754098360655737
+      ],
+      "wrong_to_correct": 10,
+      "correct_to_wrong": 9
+    },
+    "LR077-s42/knowledge/original/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 14.0625,
+      "paired95CI_pp": [
+        -3.3333333333333335,
+        31.892041267501725
+      ],
+      "wrong_to_correct": 21,
+      "correct_to_wrong": 12
+    },
+    "LR077-s42/knowledge/cyclic_control/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 17.1875,
+      "paired95CI_pp": [
+        4.225352112676056,
+        30.64516129032258
+      ],
+      "wrong_to_correct": 15,
+      "correct_to_wrong": 4
+    },
+    "LR077-s42/knowledge/cyclic_control/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": 9.375,
+      "paired95CI_pp": [
+        -4.615384615384616,
+        22.535211267605636
+      ],
+      "wrong_to_correct": 13,
+      "correct_to_wrong": 7
+    },
+    "LR077-s42/knowledge/cyclic_control/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 7.8125,
+      "paired95CI_pp": [
+        -7.936507936507936,
+        24.242424242424242
+      ],
+      "wrong_to_correct": 17,
+      "correct_to_wrong": 12
+    },
+    "LR077-s42/knowledge/cyclic_control/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 21.875,
+      "paired95CI_pp": [
+        6.25,
+        37.704918032786885
+      ],
+      "wrong_to_correct": 22,
+      "correct_to_wrong": 8
+    },
+    "Historical-element_protected/belebele/original/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 21.875,
+      "paired95CI_pp": [
+        10.9375,
+        32.8125
+      ],
+      "wrong_to_correct": 15,
+      "correct_to_wrong": 1
+    },
+    "Historical-element_protected/belebele/original/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": -14.0625,
+      "paired95CI_pp": [
+        -31.25,
+        4.6875
+      ],
+      "wrong_to_correct": 14,
+      "correct_to_wrong": 23
+    },
+    "Historical-element_protected/belebele/original/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 35.9375,
+      "paired95CI_pp": [
+        18.75,
+        51.5625
+      ],
+      "wrong_to_correct": 30,
+      "correct_to_wrong": 7
+    },
+    "Historical-element_protected/belebele/original/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 28.125,
+      "paired95CI_pp": [
+        14.0625,
+        42.1875
+      ],
+      "wrong_to_correct": 21,
+      "correct_to_wrong": 3
+    },
+    "Historical-element_protected/belebele/cyclic_control/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 23.4375,
+      "paired95CI_pp": [
+        9.375,
+        37.5
+      ],
+      "wrong_to_correct": 19,
+      "correct_to_wrong": 4
+    },
+    "Historical-element_protected/belebele/cyclic_control/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": -7.8125,
+      "paired95CI_pp": [
+        -23.4375,
+        9.375
+      ],
+      "wrong_to_correct": 12,
+      "correct_to_wrong": 17
+    },
+    "Historical-element_protected/belebele/cyclic_control/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 31.25,
+      "paired95CI_pp": [
+        14.0625,
+        46.875
+      ],
+      "wrong_to_correct": 28,
+      "correct_to_wrong": 8
+    },
+    "Historical-element_protected/belebele/cyclic_control/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 34.375,
+      "paired95CI_pp": [
+        20.3125,
+        48.4375
+      ],
+      "wrong_to_correct": 25,
+      "correct_to_wrong": 3
+    },
+    "Historical-element_protected/knowledge/original/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 9.375,
+      "paired95CI_pp": [
+        -1.5625,
+        20.967741935483872
+      ],
+      "wrong_to_correct": 11,
+      "correct_to_wrong": 5
+    },
+    "Historical-element_protected/knowledge/original/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": 7.8125,
+      "paired95CI_pp": [
+        -1.6666666666666667,
+        17.647058823529413
+      ],
+      "wrong_to_correct": 8,
+      "correct_to_wrong": 3
+    },
+    "Historical-element_protected/knowledge/original/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 1.5625,
+      "paired95CI_pp": [
+        -10.44776119402985,
+        13.794429708222792
+      ],
+      "wrong_to_correct": 8,
+      "correct_to_wrong": 7
+    },
+    "Historical-element_protected/knowledge/original/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 21.875,
+      "paired95CI_pp": [
+        5.714285714285714,
+        38.46153846153847
+      ],
+      "wrong_to_correct": 22,
+      "correct_to_wrong": 8
+    },
+    "Historical-element_protected/knowledge/cyclic_control/SW_EN-SW_only": {
+      "n": 64,
+      "difference_pp": 14.0625,
+      "paired95CI_pp": [
+        6.0606060606060606,
+        23.4375
+      ],
+      "wrong_to_correct": 9,
+      "correct_to_wrong": 0
+    },
+    "Historical-element_protected/knowledge/cyclic_control/SW_Control-SW_only": {
+      "n": 64,
+      "difference_pp": 4.6875,
+      "paired95CI_pp": [
+        -6.557377049180328,
+        15.873015873015872
+      ],
+      "wrong_to_correct": 8,
+      "correct_to_wrong": 5
+    },
+    "Historical-element_protected/knowledge/cyclic_control/SW_EN-SW_Control": {
+      "n": 64,
+      "difference_pp": 9.375,
+      "paired95CI_pp": [
+        -4.761904761904762,
+        24.193548387096776
+      ],
+      "wrong_to_correct": 14,
+      "correct_to_wrong": 8
+    },
+    "Historical-element_protected/knowledge/cyclic_control/EN_only-SW_only": {
+      "n": 64,
+      "difference_pp": 25.0,
+      "paired95CI_pp": [
+        12.698412698412698,
+        37.68175338560227
+      ],
+      "wrong_to_correct": 18,
+      "correct_to_wrong": 2
+    }
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 42,
+    "unit": "source_document forreading;subject forknowledge",
+    "comparisons": [
+      "SW_EN-SW_only",
+      "SW_Control-SW_only",
+      "SW_EN-SW_Control",
+      "EN_only-SW_only"
+    ]
+  },
+  "exploratory": true
+}

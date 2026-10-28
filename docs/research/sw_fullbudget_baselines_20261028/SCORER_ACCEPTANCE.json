@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "translation_identity_case": true,
+  "translation_wrong_case": true,
+  "official_IFEval_keyword_positive_negative": true,
+  "official_GSM8K_yaml_sha256": "442b817bc83138ec89bd30ea9d6b4acac977dfc4653c177ad778f354c8543d29",
+  "GSM8K_strict_flexible_separately_reported": true,
+  "strict_format_failure_not_content_error": true,
+  "raw_generation_retained": true,
+  "no_posthoc_parser_substitution": true
+}

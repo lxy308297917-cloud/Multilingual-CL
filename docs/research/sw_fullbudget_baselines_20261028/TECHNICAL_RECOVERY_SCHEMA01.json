@@ -1,0 +1,9 @@
+{
+  "reason": "test split id column missing from validation caused datasets5 CastError",
+  "adapter_acceptance": "KNOWLEDGE_ADAPTER_ACCEPTANCE.json",
+  "old_scored_content_and_answers_unchanged": true,
+  "failed_outputs_preserved": true,
+  "recovery_subdirectories": "Base/smoke/knowledge_{en,sw}/recovery01",
+  "main_training_not_started": true,
+  "created_unix": 1793162408.9482
+}

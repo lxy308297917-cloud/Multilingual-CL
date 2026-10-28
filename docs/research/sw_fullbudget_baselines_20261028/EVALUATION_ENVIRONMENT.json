@@ -1,0 +1,15 @@
+{
+  "executable": "/data0/users/lixiaoyang/ssu-migration/envs/cl_eval_latest/bin/python",
+  "python": "3.10.20",
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.6",
+    "accelerate": "1.13.0",
+    "datasets": "5.0.0",
+    "safetensors": "0.7.0",
+    "numpy": "2.2.6",
+    "sacrebleu": "2.6.0"
+  },
+  "torch_cuda": "12.1",
+  "captured_unix": 1793163614.2701585
+}

@@ -1,0 +1,9 @@
+{
+  "n": 128,
+  "min_difference": -49,
+  "max_difference": 41,
+  "median_absolute_difference": 1.0,
+  "p95_absolute_difference": 37.29999999999998,
+  "max_relative_difference": 0.7027027027027027,
+  "not_strict_causal_control": true
+}

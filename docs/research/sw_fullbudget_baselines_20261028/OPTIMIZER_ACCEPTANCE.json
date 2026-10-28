@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": [
+    "Dense:resume and update checks",
+    "MoFO:resume and update checks",
+    "SSU:resume and update checks",
+    "HFT15:resume and update checks",
+    "Element:resume and update checks",
+    "Protected:resume and update checks"
+  ],
+  "official_MoFO_FP32_reference_parity": true,
+  "masked_outside_unchanged": true,
+  "zero_lr": true,
+  "full_state_resume": true,
+  "scope": "CPU numerical acceptance; real Qwen longest-batch/save-resume preflights separate",
+  "exact_common_budget_CPU_checked": true,
+  "common_selected_elements": 196608000,
+  "configuration_sha256": "e35acd01030355313a533bafd133569884ecb48f9881263a5616052ae2a8aac9"
+}

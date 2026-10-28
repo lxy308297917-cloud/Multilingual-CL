@@ -1,0 +1,10 @@
+{
+  "files": {
+    "outputs/sw_fullbudget_baselines_20261028/closeout/check_full_ifeval.py": "4b13d2787600af629da420aa727d848ebff8cf9ff90dde73a719097de48bea62",
+    "outputs/sw_fullbudget_baselines_20261028/closeout/aggregate.py": "c806b9bc3f1f5fa8e2c4ca28109b21a34c217c58b0226ae25c374e3bb82e2615",
+    "outputs/sw_fullbudget_baselines_20261028/closeout/result_io.py": "38402dc2da14fd1aea15345a2505faa1e89d1a4d3e59de40b6bdee02c6dba33d",
+    "outputs/sw_fullbudget_baselines_20261028/closeout/wait_and_closeout.py": "70956707a9d7fc5d6bda9ddb1df25b0b4b95ebe8bb19544f8a8cd34775183f78",
+    "outputs/sw_fullbudget_baselines_20261028/closeout/audit_training.py": "0fe92de5fce98da0076853c9e318f26495d9605daf39356810c05c330746203e"
+  },
+  "scope": "Independent CPU postprocessing only; frozen running training/evaluation code unchanged"
+}

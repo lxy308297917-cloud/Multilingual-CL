@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "MCF_rows": 3840,
+  "old_generation_rows": 1920,
+  "no_training": true,
+  "new_generation_answers": 0,
+  "model_count": 3,
+  "task_pairs": 128,
+  "finished_unix": 1793161565.6977322
+}

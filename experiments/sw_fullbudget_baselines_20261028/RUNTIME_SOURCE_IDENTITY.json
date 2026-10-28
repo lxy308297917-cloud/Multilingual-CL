@@ -1,0 +1,24 @@
+{
+  "runtime_directory": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/sw_fullbudget_baselines_20261028",
+  "files": {
+    "prepare_evaluation.py": "18630d99a4fc395c6bbd80db37806065a44e3c5b243a467d1c31972ced53a422",
+    "resources.py": "c8ee1084549943567da9601d5532f4c668991ce4f91c411c59d38bdc6f4f79ce",
+    "check_scoring.py": "ba7ebace72eac59f34524e6bc6400547f36c18f9d9ee445deee7b8cb2d0e24dd",
+    "coordinate.py": "c4718d93caf43fa43ead400b0688c84890ea0d27320bef5cd37b92f4c204d606",
+    "prepare_knowledge_adapter.py": "ea919abdc824f252f307eb2959750f4e7337ad48be40372042a0efe455e30945",
+    "scoring.py": "978fe10a2ee219eefbd153ef52bd300e3fe275fd6b7c997cb6f2a915778bda73",
+    "knowledge_tasks.py": "7616ec260b41f21cc4efe901c9ae33855c0753a9d35cfe054329061395ff42d5",
+    "train.py": "dae22b19de6183938133d1f2c47f9c8eebaab51997e3c20e07c262e1bc529e4a",
+    "prepare.py": "0c3d3adaf594018b5dc2434e28e51709c4e4a212c929c9dd22d404f66c3d5b7b",
+    "check_optimizer.py": "272b2319b0410bde6c06ffa38edfabdf5bde10c9fd74e538ad4f32b265af62c1",
+    "eval_worker.py": "930b3cc2f73a7f47bc225279a7f5c7e6be3b1689667c6ba298c0626c79ebfd37",
+    "optimizer.py": "5208ca139025608025876fa1b3d4386a9c128a0baa75caac6a42f17a8eb2294d",
+    "settings.py": "90b13da55f9ed663187e856e906090bb2f5097fe608c766c96b63cc1832bd468",
+    "selection.py": "a8e44880b6daffe8ed55d018dd76a278450e49932801f707df3f05907a3c1166",
+    "calibration.py": "923259f6cf9af551abba18a13a3c1d617075adebf0cf08380a8749063575080c",
+    "engine.py": "ff86c058271584948b3cf6f858d453d328a56bea59749e64e4fab8c25322f466",
+    "freeze_config.py": "474162c6ec9e838d4568f14bc94c706da26dc126fd7ccfbf38bb28a19f089923",
+    "allocate_budget.py": "9bb8c327cc6f65c46a7e2077b19369e31fae3f77fa49da7959834c4de0ff1d7d"
+  },
+  "snapshot_not_new_execution": true
+}

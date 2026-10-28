@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "model_checks": {
+    "Base": {
+      "n": 1280,
+      "predictions_sha256": "3518939c93b56fbcb22efafbefcdc9b827cdf53c1558e602aec013d895e9a360"
+    },
+    "LR077-s42": {
+      "n": 1280,
+      "predictions_sha256": "6571b3611d33098ce223c7d4df27a844a81963cba67770b735750667449c862b"
+    },
+    "Historical-element_protected": {
+      "n": 1280,
+      "predictions_sha256": "dda72c37e8dca4e1c60d57e34432d5cf4ecec1ef4d69b4920a32deb701e315b1"
+    }
+  },
+  "MCF_total": 3840,
+  "format_rows": 1920,
+  "updated_unix": 1793161745.4315708
+}

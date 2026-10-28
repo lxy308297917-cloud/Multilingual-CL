@@ -1,0 +1,34 @@
+{
+  "frozen_unix": 1793164496.178709,
+  "authorization": "User supplied prompt: 之后在新完整预算模型完成时，按照冻结后的新协议对所有方法统一复评。",
+  "dependency": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/sw_fullbudget_baselines_20261028/ALL_JOBS_DONE.json",
+  "methods": [
+    "Dense",
+    "MoFO",
+    "SSU",
+    "HFT15",
+    "Element",
+    "Protected"
+  ],
+  "reused_Base": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/work/access_gap_diagnostic_v2_20261028/recovery01/MCF/Base",
+  "original_protocol": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/access_gap_diagnostic_v2_20261028/PROTOCOL_FROZEN.json",
+  "original_protocol_sha256": "3739ed80a270bc9405745344e3f37023d08b501ab21d437fa9eb9066ab9c1336",
+  "prompts_sha256": "281b9f14d134f3e8f487634f032dbc0c6bb7309a73b6cc36ee7fef0adf30226f",
+  "worker_source": "/data0/users/lixiaoyang/Documents/Codex/2026-10-21/referenced-chatgpt-conversation-this-is-an/outputs/access_gap_diagnostic_v2_20261028/code/worker.py",
+  "worker_sha256": "01e0ff7347d3ab11c666e71065e5bf63b84204419c78924f283c21e6915363e1",
+  "MCF_decisions_per_new_model": 1280,
+  "new_MCF_decisions_total": 7680,
+  "smoke_decisions_per_model": 4,
+  "new_training": false,
+  "new_generation": false,
+  "new_conditions": false,
+  "model_hashes_bound_to_TRAINING_DONE_before_inference": true,
+  "max_account_GPUs": 4,
+  "time_stop_limit": null,
+  "old_diagnostic_outputs_untouched": true,
+  "limitations": [
+    "same exposed exploratory 128 paired questions as v2, not independent confirmation",
+    "MCF C/D prompt controls do not produce explanations",
+    "same imperfect length/semantic control as v2"
+  ]
+}
