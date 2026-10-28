@@ -1,0 +1,4 @@
+method,method_id,belebele_en_correct,belebele_en_n,belebele_en_ACC,belebele_sw_correct,belebele_sw_n,belebele_sw_ACC
+Base,Base,736,900,81.77777777777777,338,900,37.55555555555556
+SSU-token-weighted-15matched,SSU,739,900,82.11111111111111,392,900,43.55555555555556
+HFT-whole-matrix-15matched,HFT15,721,900,80.11111111111111,367,900,40.77777777777778

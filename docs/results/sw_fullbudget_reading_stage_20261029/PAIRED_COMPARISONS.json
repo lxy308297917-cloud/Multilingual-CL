@@ -1,0 +1,68 @@
+{
+  "SSU-Base/belebele_en": {
+    "difference_pp": 0.33333333333333337,
+    "paired95CI_pp": [
+      -0.8850048074092969,
+      1.55902004454343
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "SSU-Base/belebele_sw": {
+    "difference_pp": 6.0,
+    "paired95CI_pp": [
+      2.631578947368421,
+      9.486607142857142
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "SSU-HFT15/belebele_en": {
+    "difference_pp": 2.0,
+    "paired95CI_pp": [
+      0.4410143329658214,
+      3.6224924910435323
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "SSU-HFT15/belebele_sw": {
+    "difference_pp": 2.7777777777777777,
+    "paired95CI_pp": [
+      0.2232080645803472,
+      5.33941449420415
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "HFT15-Base/belebele_en": {
+    "difference_pp": -1.6666666666666667,
+    "paired95CI_pp": [
+      -3.4255090940204367,
+      0.11061946902654868
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "HFT15-Base/belebele_sw": {
+    "difference_pp": 3.2222222222222223,
+    "paired95CI_pp": [
+      -0.3314917127071823,
+      6.770299115855721
+    ],
+    "n": 900,
+    "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  }
+}
