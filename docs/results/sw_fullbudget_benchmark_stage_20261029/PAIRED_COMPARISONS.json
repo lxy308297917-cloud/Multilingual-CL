@@ -183,6 +183,29 @@
       "corpus_statistic": true
     }
   },
+  "Dense-HFT15/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -14.417744916820702,
+      "paired95CI_pp": [
+        -18.853974121996302,
+        -9.796672828096119
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": -16.666666666666668,
+      "paired95CI_pp": [
+        -20.813519481342016,
+        -12.573102148330983
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    }
+  },
   "SSU-Base/belebele_en": {
     "difference_pp": 0.33333333333333337,
     "paired95CI_pp": [
@@ -367,6 +390,29 @@
       "corpus_statistic": true
     }
   },
+  "SSU-HFT15/ifeval": {
+    "prompt_strict": {
+      "difference_pp": 8.133086876155268,
+      "paired95CI_pp": [
+        4.066543438077634,
+        12.014787430683919
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": 6.714628297362113,
+      "paired95CI_pp": [
+        3.337306317044103,
+        10.04786137145638
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    }
+  },
   "HFT15-Base/belebele_en": {
     "difference_pp": -1.6666666666666667,
     "paired95CI_pp": [
@@ -411,6 +457,29 @@
       "bootstrap_replicates": 10000,
       "training_seed_uncertainty": false,
       "corpus_statistic": true
+    }
+  },
+  "HFT15-Base/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -8.687615526802219,
+      "paired95CI_pp": [
+        -13.123844731977819,
+        -4.436229205175601
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": -5.39568345323741,
+      "paired95CI_pp": [
+        -9.178743961352659,
+        -1.523988210778325
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
     }
   },
   "HFT15-Dense/belebele_en": {
@@ -459,6 +528,29 @@
       "corpus_statistic": true
     }
   },
+  "HFT15-Dense/ifeval": {
+    "prompt_strict": {
+      "difference_pp": 14.417744916820702,
+      "paired95CI_pp": [
+        9.796672828096119,
+        18.853974121996302
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": 16.666666666666668,
+      "paired95CI_pp": [
+        12.57310214833098,
+        20.813519481342016
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    }
+  },
   "HFT15-SSU/belebele_en": {
     "difference_pp": -2.0,
     "paired95CI_pp": [
@@ -503,6 +595,29 @@
       "bootstrap_replicates": 10000,
       "training_seed_uncertainty": false,
       "corpus_statistic": true
+    }
+  },
+  "HFT15-SSU/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -8.133086876155268,
+      "paired95CI_pp": [
+        -12.014787430683919,
+        -4.066543438077634
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": -6.714628297362113,
+      "paired95CI_pp": [
+        -10.04786137145638,
+        -3.337306317044103
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
     }
   }
 }

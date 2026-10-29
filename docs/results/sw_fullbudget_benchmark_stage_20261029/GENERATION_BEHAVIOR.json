@@ -148,5 +148,38 @@
     "output_language": {
       "und": 1012
     }
+  },
+  "HFT15/ifeval": {
+    "n": 541,
+    "capped": 22,
+    "generated_tokens": 77541,
+    "output_language": {
+      "en": 496,
+      "de": 8,
+      "no": 1,
+      "it": 3,
+      "fr": 1,
+      "sw": 6,
+      "fa": 1,
+      "vi": 4,
+      "ca": 2,
+      "und": 2,
+      "ro": 1,
+      "so": 2,
+      "cy": 1,
+      "hi": 1,
+      "hu": 1,
+      "sl": 1,
+      "pt": 1,
+      "mr": 1,
+      "te": 1,
+      "ar": 1,
+      "tl": 1,
+      "ko": 1,
+      "ta": 1,
+      "fi": 1,
+      "th": 1,
+      "bn": 1
+    }
   }
 }

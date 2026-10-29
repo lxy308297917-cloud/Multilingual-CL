@@ -1,6 +1,6 @@
 # 10月29日完整预算基线：已验收阶段结果
 
-本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收15/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
+本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收16/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
 
 [完整阶段主表](docs/results/sw_fullbudget_benchmark_stage_20261029/README_ZH.md) · [CSV](docs/results/sw_fullbudget_benchmark_stage_20261029/AVAILABLE_BENCHMARKS.csv) · [配对区间](docs/results/sw_fullbudget_benchmark_stage_20261029/PAIRED_COMPARISONS.json) · [阅读明细与图](docs/results/sw_fullbudget_reading_stage_20261029/README_ZH.md) · [表示漂移当前状态](docs/results/representation_drift_functional_forgetting_20261028/STATUS_20261029_ZH.md)
 
@@ -34,14 +34,18 @@
 [正式阅读的同题状态变化](docs/results/sw_fullbudget_reading_transitions_20261029/README_ZH.md)：Base900题中448题EN对SW错；FFT的EN预测有199题Base对→错、36题错→对，SSU对应15/18，HFT15对应44/29。这是固定评分协议的功能状态观察，不等同内部知识通路的因果结论。
 
 
-官方完整IFEval（541提示、834指令）已完成三模型：
+官方完整IFEval（541提示、834指令）已完成Base及三个完整训练模型：
 
 |模型|提示级strict|指令级strict|达到长度上限|
 |---|---:|---:|---:|
 |Base|41.22%（223/541）|49.88%（416/834）|7|
 |Dense FFT|18.11%（98/541）|27.82%（232/834）|110|
 |SSU变体|40.67%（220/541）|51.20%（427/834）|20|
+|HFT15变体|32.53%（176/541）|44.48%（371/834）|22|
 
 FFT−Base：提示−23.11个百分点，95%配对区间[−27.73,−18.30]；指令−22.06，区间[−26.51,−17.70]。SSU−FFT：提示+22.55，区间[17.74,27.17]；指令+23.38，区间[19.10,27.69]。这些结果与英语阅读一起提示FFT的功能损伤；不将其全部解释为知识丢失，截断与输出行为也需分析。
 
 SSU−Base：提示−0.55，区间[−4.62,3.51]；指令+1.32，区间[−2.17,4.88]，没有证明提升或非劣。总分接近仍伴随同题行为变化：SSU有66题Base通过→失败、63题失败→通过；FFT对应162/37题。[完整25类指令及提示状态分解](docs/results/sw_fullbudget_ifeval_breakdown_20261029/README_ZH.md)。所有截断回答仍计入标准分母，区间按提示重采样。MMLU完整评测已启动，其他模型与任务未齐，不给出全benchmark排名。
+
+
+HFT15−Base的IFEval提示差值−8.69个百分点，95%区间[−13.12,−4.44]；指令−5.40，区间[−9.18,−1.52]。SSU−HFT15分别为+8.13 [4.07,12.01]、+6.71 [3.34,10.05]。目前SSU变体相对HFT15在SW/EN阅读、EN→SW及指令两项指标的逐项区间均支持较高成绩，SW→EN差异仍不确定；这些是单训练顺序、未作整体多重校正的探索性逐项比较，不是全benchmark总体最优证明。U/P仍在训练，MMLU/Global-MMLU与GSM8K尚待出分，不能把SSU结果归为我们的英语保护P的效果。

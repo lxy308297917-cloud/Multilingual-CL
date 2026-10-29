@@ -16,5 +16,11 @@
     "Forgotten": 66,
     "Acquired": 63,
     "Still_wrong": 255
+  },
+  "HFT15": {
+    "Retained": 128,
+    "Forgotten": 95,
+    "Acquired": 48,
+    "Still_wrong": 270
   }
 }
