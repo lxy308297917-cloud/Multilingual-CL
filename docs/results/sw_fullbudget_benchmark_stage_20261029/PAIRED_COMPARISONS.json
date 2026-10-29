@@ -45,6 +45,29 @@
       "corpus_statistic": true
     }
   },
+  "Dense-Base/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -23.10536044362292,
+      "paired95CI_pp": [
+        -27.726432532347506,
+        -18.299445471349355
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": -22.062350119904078,
+      "paired95CI_pp": [
+        -26.507611268425972,
+        -17.70220048240827
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    }
+  },
   "Dense-SSU/belebele_en": {
     "difference_pp": -18.444444444444443,
     "paired95CI_pp": [
@@ -89,6 +112,29 @@
       "bootstrap_replicates": 10000,
       "training_seed_uncertainty": false,
       "corpus_statistic": true
+    }
+  },
+  "Dense-SSU/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -22.55083179297597,
+      "paired95CI_pp": [
+        -27.171903881700555,
+        -17.744916820702404
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": -23.381294964028783,
+      "paired95CI_pp": [
+        -27.690447400241837,
+        -19.103773584905664
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
     }
   },
   "Dense-HFT15/belebele_en": {
@@ -183,6 +229,29 @@
       "corpus_statistic": true
     }
   },
+  "SSU-Base/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -0.5545286506469501,
+      "paired95CI_pp": [
+        -4.621072088724584,
+        3.512014787430684
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": 1.3189448441247031,
+      "paired95CI_pp": [
+        -2.16606498194945,
+        4.881097820534648
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    }
+  },
   "SSU-Dense/belebele_en": {
     "difference_pp": 18.444444444444443,
     "paired95CI_pp": [
@@ -227,6 +296,29 @@
       "bootstrap_replicates": 10000,
       "training_seed_uncertainty": false,
       "corpus_statistic": true
+    }
+  },
+  "SSU-Dense/ifeval": {
+    "prompt_strict": {
+      "difference_pp": 22.55083179297597,
+      "paired95CI_pp": [
+        17.744916820702404,
+        27.171903881700555
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": 23.381294964028783,
+      "paired95CI_pp": [
+        19.103773584905664,
+        27.690447400241837
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
     }
   },
   "SSU-HFT15/belebele_en": {

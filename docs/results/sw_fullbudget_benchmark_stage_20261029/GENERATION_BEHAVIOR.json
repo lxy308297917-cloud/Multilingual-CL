@@ -63,6 +63,32 @@
       "und": 1012
     }
   },
+  "Dense/ifeval": {
+    "n": 541,
+    "capped": 110,
+    "generated_tokens": 187919,
+    "output_language": {
+      "sw": 375,
+      "en": 134,
+      "und": 9,
+      "tl": 2,
+      "sv": 1,
+      "no": 1,
+      "ca": 3,
+      "so": 2,
+      "lt": 1,
+      "sk": 1,
+      "pt": 2,
+      "fi": 1,
+      "fr": 2,
+      "id": 1,
+      "et": 1,
+      "ro": 2,
+      "tr": 1,
+      "da": 1,
+      "it": 1
+    }
+  },
   "SSU/en_to_sw": {
     "n": 1012,
     "capped": 7,
@@ -77,6 +103,34 @@
     "generated_tokens": 28623,
     "output_language": {
       "und": 1012
+    }
+  },
+  "SSU/ifeval": {
+    "n": 541,
+    "capped": 20,
+    "generated_tokens": 93699,
+    "output_language": {
+      "en": 502,
+      "id": 3,
+      "kn": 1,
+      "it": 2,
+      "fr": 2,
+      "de": 8,
+      "hi": 5,
+      "fa": 1,
+      "vi": 3,
+      "und": 1,
+      "es": 1,
+      "ko": 1,
+      "sw": 3,
+      "pt": 1,
+      "gu": 1,
+      "te": 1,
+      "ta": 1,
+      "pl": 1,
+      "fi": 1,
+      "th": 1,
+      "bn": 1
     }
   },
   "HFT15/en_to_sw": {

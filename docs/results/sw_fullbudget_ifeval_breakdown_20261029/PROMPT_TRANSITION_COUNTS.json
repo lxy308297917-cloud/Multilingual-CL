@@ -1,0 +1,20 @@
+{
+  "Base": {
+    "Retained": 223,
+    "Forgotten": 0,
+    "Acquired": 0,
+    "Still_wrong": 318
+  },
+  "Dense": {
+    "Retained": 61,
+    "Forgotten": 162,
+    "Acquired": 37,
+    "Still_wrong": 281
+  },
+  "SSU": {
+    "Retained": 157,
+    "Forgotten": 66,
+    "Acquired": 63,
+    "Still_wrong": 255
+  }
+}
