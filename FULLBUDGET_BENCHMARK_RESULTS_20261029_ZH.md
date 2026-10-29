@@ -1,6 +1,6 @@
 # 10月29日完整预算基线：已验收阶段结果
 
-本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收16/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
+本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收17/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
 
 [完整阶段主表](docs/results/sw_fullbudget_benchmark_stage_20261029/README_ZH.md) · [CSV](docs/results/sw_fullbudget_benchmark_stage_20261029/AVAILABLE_BENCHMARKS.csv) · [配对区间](docs/results/sw_fullbudget_benchmark_stage_20261029/PAIRED_COMPARISONS.json) · [阅读明细与图](docs/results/sw_fullbudget_reading_stage_20261029/README_ZH.md) · [表示漂移当前状态](docs/results/representation_drift_functional_forgetting_20261028/STATUS_20261029_ZH.md)
 
@@ -45,7 +45,10 @@
 
 FFT−Base：提示−23.11个百分点，95%配对区间[−27.73,−18.30]；指令−22.06，区间[−26.51,−17.70]。SSU−FFT：提示+22.55，区间[17.74,27.17]；指令+23.38，区间[19.10,27.69]。这些结果与英语阅读一起提示FFT的功能损伤；不将其全部解释为知识丢失，截断与输出行为也需分析。
 
-SSU−Base：提示−0.55，区间[−4.62,3.51]；指令+1.32，区间[−2.17,4.88]，没有证明提升或非劣。总分接近仍伴随同题行为变化：SSU有66题Base通过→失败、63题失败→通过；FFT对应162/37题。[完整25类指令及提示状态分解](docs/results/sw_fullbudget_ifeval_breakdown_20261029/README_ZH.md)。所有截断回答仍计入标准分母，区间按提示重采样。MMLU完整评测已启动，其他模型与任务未齐，不给出全benchmark排名。
+SSU−Base：提示−0.55，区间[−4.62,3.51]；指令+1.32，区间[−2.17,4.88]，没有证明提升或非劣。总分接近仍伴随同题行为变化：SSU有66题Base通过→失败、63题失败→通过；FFT对应162/37题。[完整25类指令及提示状态分解](docs/results/sw_fullbudget_ifeval_breakdown_20261029/README_ZH.md)。所有截断回答仍计入标准分母，区间按提示重采样。Base英语MMLU已完成，适配模型与其他任务未齐，不给出全benchmark排名。
 
 
-HFT15−Base的IFEval提示差值−8.69个百分点，95%区间[−13.12,−4.44]；指令−5.40，区间[−9.18,−1.52]。SSU−HFT15分别为+8.13 [4.07,12.01]、+6.71 [3.34,10.05]。目前SSU变体相对HFT15在SW/EN阅读、EN→SW及指令两项指标的逐项区间均支持较高成绩，SW→EN差异仍不确定；这些是单训练顺序、未作整体多重校正的探索性逐项比较，不是全benchmark总体最优证明。U/P仍在训练，MMLU/Global-MMLU与GSM8K尚待出分，不能把SSU结果归为我们的英语保护P的效果。
+HFT15−Base的IFEval提示差值−8.69个百分点，95%区间[−13.12,−4.44]；指令−5.40，区间[−9.18,−1.52]。SSU−HFT15分别为+8.13 [4.07,12.01]、+6.71 [3.34,10.05]。目前SSU变体相对HFT15在SW/EN阅读、EN→SW及指令两项指标的逐项区间均支持较高成绩，SW→EN差异仍不确定；这些是单训练顺序、未作整体多重校正的探索性逐项比较，不是全benchmark总体最优证明。U/P仍在训练，适配模型知识、SW Global-MMLU与GSM8K尚待完整出分，不能把SSU结果归为我们的英语保护P的效果。
+
+
+完整知识参照新增：Base英语MMLU覆盖57学科、14,042题，5-shot原始选项似然评分，主指标微平均ACC为8,332/14,042＝59.3363%。学科宏平均61.2763%在CSV辅助列单列，不能与微平均混用。逐题来源ID、金标、四选项有限分数、提示及模型身份已完整核验；不是小样本外推。FFT英语MMLU和Base SW Global-MMLU仍在运行，尚不能判断知识保持或获得。
