@@ -32,6 +32,17 @@
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
+  "Dense-Base/knowledge_sw": {
+    "difference_pp": 1.1821677823671841,
+    "paired95CI_pp": [
+      0.09354542731778273,
+      2.3107846696222034
+    ],
+    "n": 14042,
+    "source_groups": 57,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
   "Dense-Base/translation": {
     "en_to_sw": {
       "difference_chrFpp": 23.10828200317566,
@@ -101,6 +112,17 @@
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
+  "Dense-Element/knowledge_en": {
+    "difference_pp": -5.46218487394958,
+    "paired95CI_pp": [
+      -6.8140132885263816,
+      -4.257226536358863
+    ],
+    "n": 14042,
+    "source_groups": 57,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
   "Dense-Element/translation": {
     "en_to_sw": {
       "difference_chrFpp": 4.0335952579584955,
@@ -123,6 +145,29 @@
       "bootstrap_replicates": 10000,
       "training_seed_uncertainty": false,
       "corpus_statistic": true
+    }
+  },
+  "Dense-Element/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -2.957486136783734,
+      "paired95CI_pp": [
+        -6.284658040665435,
+        0.18484288354898337
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": -3.83693045563549,
+      "paired95CI_pp": [
+        -6.996381182147163,
+        -0.7092198581560293
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
     }
   },
   "Dense-SSU/belebele_en": {
@@ -456,6 +501,17 @@
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
+  "SSU-Element/knowledge_en": {
+    "difference_pp": 6.7654180316194275,
+    "paired95CI_pp": [
+      5.6641833480392485,
+      7.941067897275708
+    ],
+    "n": 14042,
+    "source_groups": 57,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
   "SSU-Element/translation": {
     "en_to_sw": {
       "difference_chrFpp": -10.833861707945044,
@@ -478,6 +534,29 @@
       "bootstrap_replicates": 10000,
       "training_seed_uncertainty": false,
       "corpus_statistic": true
+    }
+  },
+  "SSU-Element/ifeval": {
+    "prompt_strict": {
+      "difference_pp": 19.593345656192238,
+      "paired95CI_pp": [
+        15.157116451016636,
+        24.029574861367838
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": 19.54436450839329,
+      "paired95CI_pp": [
+        15.375583357115278,
+        23.681062318372614
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
     }
   },
   "SSU-HFT15/belebele_en": {
@@ -733,6 +812,29 @@
       "corpus_statistic": true
     }
   },
+  "HFT15-Element/ifeval": {
+    "prompt_strict": {
+      "difference_pp": 11.460258780036968,
+      "paired95CI_pp": [
+        7.393715341959335,
+        15.526802218114602
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": 12.829736211031179,
+      "paired95CI_pp": [
+        8.939162967185455,
+        16.765772853816745
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    }
+  },
   "HFT15-SSU/belebele_en": {
     "difference_pp": -2.0,
     "paired95CI_pp": [
@@ -824,6 +926,17 @@
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
+  "Element-Base/knowledge_en": {
+    "difference_pp": -6.922090870246405,
+    "paired95CI_pp": [
+      -8.129219045631705,
+      -5.623179577542567
+    ],
+    "n": 14042,
+    "source_groups": 57,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
   "Element-Base/translation": {
     "en_to_sw": {
       "difference_chrFpp": 19.074686745217164,
@@ -848,6 +961,29 @@
       "corpus_statistic": true
     }
   },
+  "Element-Base/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -20.147874306839185,
+      "paired95CI_pp": [
+        -24.953789279112755,
+        -15.341959334565619
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": -18.22541966426859,
+      "paired95CI_pp": [
+        -22.584742351046707,
+        -13.945101196479326
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    }
+  },
   "Element-Dense/belebele_en": {
     "difference_pp": 8.666666666666668,
     "paired95CI_pp": [
@@ -867,6 +1003,17 @@
     ],
     "n": 900,
     "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "Element-Dense/knowledge_en": {
+    "difference_pp": 5.46218487394958,
+    "paired95CI_pp": [
+      4.257226536358863,
+      6.8140132885263816
+    ],
+    "n": 14042,
+    "source_groups": 57,
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
@@ -894,6 +1041,29 @@
       "corpus_statistic": true
     }
   },
+  "Element-Dense/ifeval": {
+    "prompt_strict": {
+      "difference_pp": 2.957486136783734,
+      "paired95CI_pp": [
+        -0.18484288354898337,
+        6.284658040665435
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": 3.83693045563549,
+      "paired95CI_pp": [
+        0.7092198581560293,
+        6.996381182147163
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    }
+  },
   "Element-SSU/belebele_en": {
     "difference_pp": -9.777777777777779,
     "paired95CI_pp": [
@@ -913,6 +1083,17 @@
     ],
     "n": 900,
     "source_groups": 488,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
+  "Element-SSU/knowledge_en": {
+    "difference_pp": -6.7654180316194275,
+    "paired95CI_pp": [
+      -7.941067897275708,
+      -5.6641833480392485
+    ],
+    "n": 14042,
+    "source_groups": 57,
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
@@ -938,6 +1119,29 @@
       "bootstrap_replicates": 10000,
       "training_seed_uncertainty": false,
       "corpus_statistic": true
+    }
+  },
+  "Element-SSU/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -19.593345656192238,
+      "paired95CI_pp": [
+        -24.029574861367838,
+        -15.157116451016636
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": -19.54436450839329,
+      "paired95CI_pp": [
+        -23.681062318372614,
+        -15.375583357115278
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
     }
   },
   "Element-HFT15/belebele_en": {
@@ -984,6 +1188,29 @@
       "bootstrap_replicates": 10000,
       "training_seed_uncertainty": false,
       "corpus_statistic": true
+    }
+  },
+  "Element-HFT15/ifeval": {
+    "prompt_strict": {
+      "difference_pp": -11.460258780036968,
+      "paired95CI_pp": [
+        -15.526802218114602,
+        -7.393715341959335
+      ],
+      "n": 541,
+      "source_groups": 541,
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
+    },
+    "instruction_strict": {
+      "difference_pp": -12.829736211031179,
+      "paired95CI_pp": [
+        -16.765772853816745,
+        -8.939162967185457
+      ],
+      "resampling_unit": "prompt",
+      "bootstrap_replicates": 10000,
+      "training_seed_uncertainty": false
     }
   }
 }
