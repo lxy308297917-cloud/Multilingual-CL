@@ -1,7 +1,7 @@
 method,main_input_tokens,update_budget,belebele_sw_ACC,knowledge_sw_ACC,en_to_sw_chrFpp,sw_to_en_chrFpp,belebele_en_ACC,knowledge_en_ACC,IFEval_prompt_strict,IFEval_instruction_strict,GSM8K_strict_ACC,method_id,training_endpoint_status,knowledge_en_subject_macro_ACC,knowledge_sw_subject_macro_ACC
 Base,0,—,37.55555555555556,30.472867112946872,21.181365394781693,21.789174705334048,81.77777777777777,59.33627688363481,41.21996303142329,49.88009592326139,,Base,Base reference,61.27632923940484,31.49026419795996
 Dense FFT,15360935,100% unique full model,43.333333333333336,,44.28964739795735,28.18208729515807,63.666666666666664,46.95200113943883,18.11460258780037,27.817745803357315,,Dense,accepted complete endpoint,48.547574530367406,
-SSU-token-weighted-15matched,15360935,15.0060024% candidate matrices,43.55555555555556,,29.422190432053814,39.45845059291367,82.11111111111111,,40.66543438077634,51.199040767386094,,SSU,accepted complete endpoint,,
+SSU-token-weighted-15matched,15360935,15.0060024% candidate matrices,43.55555555555556,,29.422190432053814,39.45845059291367,82.11111111111111,59.179604045007835,40.66543438077634,51.199040767386094,,SSU,accepted complete endpoint,61.19222038789003,
 HFT-whole-matrix-15matched,15360935,15.0060024% candidate matrices,40.77777777777778,,28.217796537246205,39.74512896309932,80.11111111111111,,32.53234750462107,44.48441247002398,,HFT15,accepted complete endpoint,,
-Element-Sparse U,,,,,,,,,,,,Element,not yet accepted,,
+Element-Sparse U,15360935,15.0060024% candidate matrices,43.77777777777778,,,,72.33333333333333,,,,,Element,accepted complete endpoint,,
 Element-Sparse-Protected P,,,,,,,,,,,,Protected,not yet accepted,,
