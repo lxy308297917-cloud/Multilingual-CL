@@ -21,6 +21,17 @@
     "bootstrap_replicates": 10000,
     "training_seed_uncertainty": false
   },
+  "Dense-Base/knowledge_en": {
+    "difference_pp": -12.384275744195984,
+    "paired95CI_pp": [
+      -14.55153094697045,
+      -10.23210023736846
+    ],
+    "n": 14042,
+    "source_groups": 57,
+    "bootstrap_replicates": 10000,
+    "training_seed_uncertainty": false
+  },
   "Dense-Base/translation": {
     "en_to_sw": {
       "difference_chrFpp": 23.10828200317566,

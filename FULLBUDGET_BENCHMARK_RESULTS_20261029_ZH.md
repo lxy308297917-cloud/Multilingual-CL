@@ -1,6 +1,6 @@
 # 10月29日完整预算基线：已验收阶段结果
 
-本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收17/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
+本轮统一Qwen2.5-1.5B-Instruct、Aya SW指令80%＋双向翻译各10%（主输入Token口径），每个完整训练端点42,465步、15,360,935主输入Token、5,984,371监督Token。当前已验收18/42个非暂停模型的完整分任务，其余保持空白。MoFO按用户要求暂停。
 
 [完整阶段主表](docs/results/sw_fullbudget_benchmark_stage_20261029/README_ZH.md) · [CSV](docs/results/sw_fullbudget_benchmark_stage_20261029/AVAILABLE_BENCHMARKS.csv) · [配对区间](docs/results/sw_fullbudget_benchmark_stage_20261029/PAIRED_COMPARISONS.json) · [阅读明细与图](docs/results/sw_fullbudget_reading_stage_20261029/README_ZH.md) · [表示漂移当前状态](docs/results/representation_drift_functional_forgetting_20261028/STATUS_20261029_ZH.md)
 
@@ -51,4 +51,13 @@ SSU−Base：提示−0.55，区间[−4.62,3.51]；指令+1.32，区间[−2.17
 HFT15−Base的IFEval提示差值−8.69个百分点，95%区间[−13.12,−4.44]；指令−5.40，区间[−9.18,−1.52]。SSU−HFT15分别为+8.13 [4.07,12.01]、+6.71 [3.34,10.05]。目前SSU变体相对HFT15在SW/EN阅读、EN→SW及指令两项指标的逐项区间均支持较高成绩，SW→EN差异仍不确定；这些是单训练顺序、未作整体多重校正的探索性逐项比较，不是全benchmark总体最优证明。U/P仍在训练，适配模型知识、SW Global-MMLU与GSM8K尚待完整出分，不能把SSU结果归为我们的英语保护P的效果。
 
 
-完整知识参照新增：Base英语MMLU覆盖57学科、14,042题，5-shot原始选项似然评分，主指标微平均ACC为8,332/14,042＝59.3363%。学科宏平均61.2763%在CSV辅助列单列，不能与微平均混用。逐题来源ID、金标、四选项有限分数、提示及模型身份已完整核验；不是小样本外推。FFT英语MMLU和Base SW Global-MMLU仍在运行，尚不能判断知识保持或获得。
+完整知识参照新增：Base英语MMLU覆盖57学科、14,042题，5-shot原始选项似然评分，主指标微平均ACC为8,332/14,042＝59.3363%。学科宏平均61.2763%在CSV辅助列单列，不能与微平均混用。逐题来源ID、金标、四选项有限分数、提示及模型身份已完整核验；不是小样本外推。FFT英语MMLU也已完成，Base与FFT的SW Global-MMLU仍在运行；SSU/HFT15/U/P知识结果未齐，尚不能给出完整知识取舍排名。
+
+
+FFT完整英语MMLU为6,593/14,042＝46.9520%，相对Base下降12.3843个百分点，按57个学科配对重采样的95%区间[−14.55,−10.23]。全量实际提示和金标跨模型逐题一致。固定评分下，Base正确而FFT错误有2,769题，Base错误而FFT正确有1,030题；这些是观察到的功能状态变化，不证明内部知识的唯一存储位置或丢失原因。
+
+阅读、知识、指令三个正式英语任务均观察到FFT下降；同时其SW阅读与翻译有收益。这支持在本轮固定配方下研究学习与保持的取舍，不能直接归因为更换数据来源，也不能替代P−U的匹配效果证据。
+
+![完整英语benchmark相对Base差值及配对区间](docs/results/sw_fullbudget_benchmark_stage_20261029/ENGLISH_BENCHMARK_DIFFERENCES.svg)
+
+图中知识任务暂只有FFT对照；未完成比较没有标记，不按零分填充。IFEval提示/指令指标相关，不能把四行当作四个独立任务或平均成总体排名。
