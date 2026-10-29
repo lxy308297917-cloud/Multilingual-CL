@@ -1,7 +1,7 @@
 # 完整预算基线：当前已核验汇报表
 
 本地汇总时间：2026-10-29 10:46:34。
-已独立验收22/42个完整分任务；缺项为待完成，绝不以子集或零分替代。MoFO用户暂停，原定七模型整轮尚未完成。
+已独立验收23/42个完整分任务；缺项为待完成，绝不以子集或零分替代。MoFO用户暂停，原定七模型整轮尚未完成。
 
 |方法|SW阅读ACC|SW知识ACC|EN→SW|SW→EN|EN阅读ACC|EN知识ACC|IFEval提示strict|IFEval指令strict|GSM8K strict|
 |---|---|---|---|---|---|---|---|---|---|
@@ -9,7 +9,7 @@
 |Dense FFT|43.33|—|44.29|28.18|63.67|46.95|18.11|27.82|—|
 |SSU-token-weighted-15matched|43.56|—|29.42|39.46|82.11|59.18|40.67|51.20|—|
 |HFT-whole-matrix-15matched|40.78|—|28.22|39.75|80.11|—|32.53|44.48|—|
-|元素稀疏U|43.78|—|—|—|72.33|—|—|—|—|
+|元素稀疏U|43.78|—|40.26|42.73|72.33|—|—|—|—|
 |英语敏感度保护P|—|—|—|—|—|—|—|—|—|
 
 阅读、知识、IFEval和数学为百分比；翻译为语料级chrF++。阅读900题/语言，知识14,042题/语言，翻译1,012题/方向，IFEval541提示/834指令，GSM8K1,319题。
@@ -28,4 +28,9 @@
 
 本次新增区间核验：SSU−Base英语MMLU差值−0.157个百分点，57学科配对95%区间[−0.718,+0.439]；SSU−FFT为+12.228，[+10.203,+14.361]。U−Base英语阅读−9.444个百分点，来源文档配对区间[−12.111,−6.846]。U−SSU的SW阅读差值+0.222，区间[−3.219,+3.663]，不能认定二者相等或U更优。
 
-[完整CSV](docs/results/sw_fullbudget_benchmark_stage_20261029/AVAILABLE_BENCHMARKS.csv) · [固定参考配对区间](docs/results/sw_fullbudget_benchmark_stage_20261029/PAIRED_COMPARISONS.json) · [表示漂移进度](docs/results/representation_drift_functional_forgetting_20261028/STATUS_20261029_ZH.md)
+U完整翻译新增：EN→SW 40.2561，SW→EN 42.7324 chrF++，各1012题。相对SSU分别+10.8339（配对95%区间[10.2179,11.4626]）、+3.2739（[2.3575,4.1693]）；U的英语阅读仍比SSU低9.78个百分点，不能将翻译优势称为整体更优。相对FFT，U的EN→SW低4.0336、SW→EN高14.5503。
+U的SW→EN有2条原文直接复制，103条事后语言启发式判为SW，908条判为EN；EN→SW目标语言判定1007/1012、5条达到长度上限。语言判断仅作输出诊断，不代替完整chrF++，原始评分及分母不变。
+
+[完整CSV](docs/results/sw_fullbudget_benchmark_stage_20261029/AVAILABLE_BENCHMARKS.csv) · [配对区间](docs/results/sw_fullbudget_benchmark_stage_20261029/PAIRED_COMPARISONS.json)
+
+![英语保持差值](docs/results/sw_fullbudget_benchmark_stage_20261029/ENGLISH_BENCHMARK_DIFFERENCES.svg)
