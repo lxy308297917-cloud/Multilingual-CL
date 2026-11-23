@@ -1,0 +1,2352 @@
+﻿轨迹,阶段,评估语,评估题数,错误类,计数
+MASSIVE Full-FT Replay · 原序,0,de-DE,2974,invalid_json,5
+MASSIVE Full-FT Replay · 原序,0,de-DE,2974,schema,321
+MASSIVE Full-FT Replay · 原序,0,de-DE,2974,span,720
+MASSIVE Full-FT Replay · 原序,0,de-DE,2974,合法输出,1928
+MASSIVE Full-FT Replay · 原序,0,ar-SA,2974,invalid_json,1
+MASSIVE Full-FT Replay · 原序,0,ar-SA,2974,schema,216
+MASSIVE Full-FT Replay · 原序,0,ar-SA,2974,span,823
+MASSIVE Full-FT Replay · 原序,0,ar-SA,2974,合法输出,1934
+MASSIVE Full-FT Replay · 原序,0,vi-VN,2974,invalid_json,1
+MASSIVE Full-FT Replay · 原序,0,vi-VN,2974,schema,258
+MASSIVE Full-FT Replay · 原序,0,vi-VN,2974,span,879
+MASSIVE Full-FT Replay · 原序,0,vi-VN,2974,合法输出,1836
+MASSIVE Full-FT Replay · 原序,0,sw-KE,2974,invalid_json,1
+MASSIVE Full-FT Replay · 原序,0,sw-KE,2974,schema,88
+MASSIVE Full-FT Replay · 原序,0,sw-KE,2974,span,513
+MASSIVE Full-FT Replay · 原序,0,sw-KE,2974,合法输出,2372
+MASSIVE Full-FT Replay · 原序,0,ur-PK,2974,invalid_json,1
+MASSIVE Full-FT Replay · 原序,0,ur-PK,2974,schema,288
+MASSIVE Full-FT Replay · 原序,0,ur-PK,2974,span,556
+MASSIVE Full-FT Replay · 原序,0,ur-PK,2974,合法输出,2129
+MASSIVE Full-FT Replay · 原序,1,de-DE,2974,invalid_json,16
+MASSIVE Full-FT Replay · 原序,1,de-DE,2974,schema,22
+MASSIVE Full-FT Replay · 原序,1,de-DE,2974,span,332
+MASSIVE Full-FT Replay · 原序,1,de-DE,2974,合法输出,2604
+MASSIVE Full-FT Replay · 原序,1,ar-SA,2974,invalid_json,29
+MASSIVE Full-FT Replay · 原序,1,ar-SA,2974,schema,18
+MASSIVE Full-FT Replay · 原序,1,ar-SA,2974,span,2072
+MASSIVE Full-FT Replay · 原序,1,ar-SA,2974,合法输出,855
+MASSIVE Full-FT Replay · 原序,1,vi-VN,2974,invalid_json,20
+MASSIVE Full-FT Replay · 原序,1,vi-VN,2974,schema,22
+MASSIVE Full-FT Replay · 原序,1,vi-VN,2974,span,1428
+MASSIVE Full-FT Replay · 原序,1,vi-VN,2974,合法输出,1504
+MASSIVE Full-FT Replay · 原序,1,sw-KE,2974,invalid_json,4
+MASSIVE Full-FT Replay · 原序,1,sw-KE,2974,schema,8
+MASSIVE Full-FT Replay · 原序,1,sw-KE,2974,span,865
+MASSIVE Full-FT Replay · 原序,1,sw-KE,2974,合法输出,2097
+MASSIVE Full-FT Replay · 原序,1,ur-PK,2974,invalid_json,6
+MASSIVE Full-FT Replay · 原序,1,ur-PK,2974,schema,8
+MASSIVE Full-FT Replay · 原序,1,ur-PK,2974,span,2247
+MASSIVE Full-FT Replay · 原序,1,ur-PK,2974,合法输出,713
+MASSIVE Full-FT Replay · 原序,2,de-DE,2974,invalid_json,13
+MASSIVE Full-FT Replay · 原序,2,de-DE,2974,schema,19
+MASSIVE Full-FT Replay · 原序,2,de-DE,2974,span,263
+MASSIVE Full-FT Replay · 原序,2,de-DE,2974,合法输出,2679
+MASSIVE Full-FT Replay · 原序,2,ar-SA,2974,invalid_json,2
+MASSIVE Full-FT Replay · 原序,2,ar-SA,2974,schema,23
+MASSIVE Full-FT Replay · 原序,2,ar-SA,2974,span,749
+MASSIVE Full-FT Replay · 原序,2,ar-SA,2974,合法输出,2200
+MASSIVE Full-FT Replay · 原序,2,vi-VN,2974,invalid_json,7
+MASSIVE Full-FT Replay · 原序,2,vi-VN,2974,schema,16
+MASSIVE Full-FT Replay · 原序,2,vi-VN,2974,span,1547
+MASSIVE Full-FT Replay · 原序,2,vi-VN,2974,合法输出,1404
+MASSIVE Full-FT Replay · 原序,2,sw-KE,2974,invalid_json,11
+MASSIVE Full-FT Replay · 原序,2,sw-KE,2974,schema,3
+MASSIVE Full-FT Replay · 原序,2,sw-KE,2974,span,545
+MASSIVE Full-FT Replay · 原序,2,sw-KE,2974,合法输出,2415
+MASSIVE Full-FT Replay · 原序,2,ur-PK,2974,invalid_json,3
+MASSIVE Full-FT Replay · 原序,2,ur-PK,2974,schema,10
+MASSIVE Full-FT Replay · 原序,2,ur-PK,2974,span,2188
+MASSIVE Full-FT Replay · 原序,2,ur-PK,2974,合法输出,773
+MASSIVE Full-FT Replay · 原序,3,de-DE,2974,schema,3
+MASSIVE Full-FT Replay · 原序,3,de-DE,2974,span,206
+MASSIVE Full-FT Replay · 原序,3,de-DE,2974,合法输出,2765
+MASSIVE Full-FT Replay · 原序,3,ar-SA,2974,invalid_json,2
+MASSIVE Full-FT Replay · 原序,3,ar-SA,2974,span,516
+MASSIVE Full-FT Replay · 原序,3,ar-SA,2974,合法输出,2456
+MASSIVE Full-FT Replay · 原序,3,vi-VN,2974,invalid_json,4
+MASSIVE Full-FT Replay · 原序,3,vi-VN,2974,schema,2
+MASSIVE Full-FT Replay · 原序,3,vi-VN,2974,span,473
+MASSIVE Full-FT Replay · 原序,3,vi-VN,2974,合法输出,2495
+MASSIVE Full-FT Replay · 原序,3,sw-KE,2974,invalid_json,1
+MASSIVE Full-FT Replay · 原序,3,sw-KE,2974,span,274
+MASSIVE Full-FT Replay · 原序,3,sw-KE,2974,合法输出,2699
+MASSIVE Full-FT Replay · 原序,3,ur-PK,2974,invalid_json,4
+MASSIVE Full-FT Replay · 原序,3,ur-PK,2974,schema,1
+MASSIVE Full-FT Replay · 原序,3,ur-PK,2974,span,1303
+MASSIVE Full-FT Replay · 原序,3,ur-PK,2974,合法输出,1666
+MASSIVE Full-FT Replay · 原序,4,de-DE,2974,invalid_json,6
+MASSIVE Full-FT Replay · 原序,4,de-DE,2974,span,211
+MASSIVE Full-FT Replay · 原序,4,de-DE,2974,合法输出,2757
+MASSIVE Full-FT Replay · 原序,4,ar-SA,2974,invalid_json,10
+MASSIVE Full-FT Replay · 原序,4,ar-SA,2974,schema,14
+MASSIVE Full-FT Replay · 原序,4,ar-SA,2974,span,706
+MASSIVE Full-FT Replay · 原序,4,ar-SA,2974,合法输出,2244
+MASSIVE Full-FT Replay · 原序,4,vi-VN,2974,invalid_json,22
+MASSIVE Full-FT Replay · 原序,4,vi-VN,2974,schema,12
+MASSIVE Full-FT Replay · 原序,4,vi-VN,2974,span,620
+MASSIVE Full-FT Replay · 原序,4,vi-VN,2974,合法输出,2320
+MASSIVE Full-FT Replay · 原序,4,sw-KE,2974,invalid_json,6
+MASSIVE Full-FT Replay · 原序,4,sw-KE,2974,schema,3
+MASSIVE Full-FT Replay · 原序,4,sw-KE,2974,span,164
+MASSIVE Full-FT Replay · 原序,4,sw-KE,2974,合法输出,2801
+MASSIVE Full-FT Replay · 原序,4,ur-PK,2974,invalid_json,10
+MASSIVE Full-FT Replay · 原序,4,ur-PK,2974,schema,3
+MASSIVE Full-FT Replay · 原序,4,ur-PK,2974,span,1569
+MASSIVE Full-FT Replay · 原序,4,ur-PK,2974,合法输出,1392
+MASSIVE Full-FT Replay · 原序,5,de-DE,2974,invalid_json,3
+MASSIVE Full-FT Replay · 原序,5,de-DE,2974,schema,2
+MASSIVE Full-FT Replay · 原序,5,de-DE,2974,span,187
+MASSIVE Full-FT Replay · 原序,5,de-DE,2974,合法输出,2782
+MASSIVE Full-FT Replay · 原序,5,ar-SA,2974,invalid_json,2
+MASSIVE Full-FT Replay · 原序,5,ar-SA,2974,schema,2
+MASSIVE Full-FT Replay · 原序,5,ar-SA,2974,span,724
+MASSIVE Full-FT Replay · 原序,5,ar-SA,2974,合法输出,2246
+MASSIVE Full-FT Replay · 原序,5,vi-VN,2974,schema,1
+MASSIVE Full-FT Replay · 原序,5,vi-VN,2974,span,589
+MASSIVE Full-FT Replay · 原序,5,vi-VN,2974,合法输出,2384
+MASSIVE Full-FT Replay · 原序,5,sw-KE,2974,schema,2
+MASSIVE Full-FT Replay · 原序,5,sw-KE,2974,span,166
+MASSIVE Full-FT Replay · 原序,5,sw-KE,2974,合法输出,2806
+MASSIVE Full-FT Replay · 原序,5,ur-PK,2974,invalid_json,1
+MASSIVE Full-FT Replay · 原序,5,ur-PK,2974,schema,4
+MASSIVE Full-FT Replay · 原序,5,ur-PK,2974,span,270
+MASSIVE Full-FT Replay · 原序,5,ur-PK,2974,合法输出,2699
+MASSIVE Full-FT Replay · 换序,0,de-DE,2974,invalid_json,5
+MASSIVE Full-FT Replay · 换序,0,de-DE,2974,schema,321
+MASSIVE Full-FT Replay · 换序,0,de-DE,2974,span,720
+MASSIVE Full-FT Replay · 换序,0,de-DE,2974,合法输出,1928
+MASSIVE Full-FT Replay · 换序,0,ar-SA,2974,invalid_json,1
+MASSIVE Full-FT Replay · 换序,0,ar-SA,2974,schema,216
+MASSIVE Full-FT Replay · 换序,0,ar-SA,2974,span,823
+MASSIVE Full-FT Replay · 换序,0,ar-SA,2974,合法输出,1934
+MASSIVE Full-FT Replay · 换序,0,vi-VN,2974,invalid_json,1
+MASSIVE Full-FT Replay · 换序,0,vi-VN,2974,schema,258
+MASSIVE Full-FT Replay · 换序,0,vi-VN,2974,span,879
+MASSIVE Full-FT Replay · 换序,0,vi-VN,2974,合法输出,1836
+MASSIVE Full-FT Replay · 换序,0,ur-PK,2974,invalid_json,1
+MASSIVE Full-FT Replay · 换序,0,ur-PK,2974,schema,288
+MASSIVE Full-FT Replay · 换序,0,ur-PK,2974,span,556
+MASSIVE Full-FT Replay · 换序,0,ur-PK,2974,合法输出,2129
+MASSIVE Full-FT Replay · 换序,0,sw-KE,2974,invalid_json,1
+MASSIVE Full-FT Replay · 换序,0,sw-KE,2974,schema,88
+MASSIVE Full-FT Replay · 换序,0,sw-KE,2974,span,513
+MASSIVE Full-FT Replay · 换序,0,sw-KE,2974,合法输出,2372
+MASSIVE Full-FT Replay · 换序,1,de-DE,2974,invalid_json,16
+MASSIVE Full-FT Replay · 换序,1,de-DE,2974,schema,22
+MASSIVE Full-FT Replay · 换序,1,de-DE,2974,span,332
+MASSIVE Full-FT Replay · 换序,1,de-DE,2974,合法输出,2604
+MASSIVE Full-FT Replay · 换序,1,ar-SA,2974,invalid_json,29
+MASSIVE Full-FT Replay · 换序,1,ar-SA,2974,schema,18
+MASSIVE Full-FT Replay · 换序,1,ar-SA,2974,span,2072
+MASSIVE Full-FT Replay · 换序,1,ar-SA,2974,合法输出,855
+MASSIVE Full-FT Replay · 换序,1,vi-VN,2974,invalid_json,20
+MASSIVE Full-FT Replay · 换序,1,vi-VN,2974,schema,22
+MASSIVE Full-FT Replay · 换序,1,vi-VN,2974,span,1428
+MASSIVE Full-FT Replay · 换序,1,vi-VN,2974,合法输出,1504
+MASSIVE Full-FT Replay · 换序,1,ur-PK,2974,invalid_json,6
+MASSIVE Full-FT Replay · 换序,1,ur-PK,2974,schema,8
+MASSIVE Full-FT Replay · 换序,1,ur-PK,2974,span,2247
+MASSIVE Full-FT Replay · 换序,1,ur-PK,2974,合法输出,713
+MASSIVE Full-FT Replay · 换序,1,sw-KE,2974,invalid_json,4
+MASSIVE Full-FT Replay · 换序,1,sw-KE,2974,schema,8
+MASSIVE Full-FT Replay · 换序,1,sw-KE,2974,span,865
+MASSIVE Full-FT Replay · 换序,1,sw-KE,2974,合法输出,2097
+MASSIVE Full-FT Replay · 换序,2,de-DE,2974,invalid_json,13
+MASSIVE Full-FT Replay · 换序,2,de-DE,2974,schema,19
+MASSIVE Full-FT Replay · 换序,2,de-DE,2974,span,263
+MASSIVE Full-FT Replay · 换序,2,de-DE,2974,合法输出,2679
+MASSIVE Full-FT Replay · 换序,2,ar-SA,2974,invalid_json,2
+MASSIVE Full-FT Replay · 换序,2,ar-SA,2974,schema,23
+MASSIVE Full-FT Replay · 换序,2,ar-SA,2974,span,749
+MASSIVE Full-FT Replay · 换序,2,ar-SA,2974,合法输出,2200
+MASSIVE Full-FT Replay · 换序,2,vi-VN,2974,invalid_json,7
+MASSIVE Full-FT Replay · 换序,2,vi-VN,2974,schema,16
+MASSIVE Full-FT Replay · 换序,2,vi-VN,2974,span,1547
+MASSIVE Full-FT Replay · 换序,2,vi-VN,2974,合法输出,1404
+MASSIVE Full-FT Replay · 换序,2,ur-PK,2974,invalid_json,3
+MASSIVE Full-FT Replay · 换序,2,ur-PK,2974,schema,10
+MASSIVE Full-FT Replay · 换序,2,ur-PK,2974,span,2188
+MASSIVE Full-FT Replay · 换序,2,ur-PK,2974,合法输出,773
+MASSIVE Full-FT Replay · 换序,2,sw-KE,2974,invalid_json,11
+MASSIVE Full-FT Replay · 换序,2,sw-KE,2974,schema,3
+MASSIVE Full-FT Replay · 换序,2,sw-KE,2974,span,545
+MASSIVE Full-FT Replay · 换序,2,sw-KE,2974,合法输出,2415
+MASSIVE Full-FT Replay · 换序,3,de-DE,2974,schema,3
+MASSIVE Full-FT Replay · 换序,3,de-DE,2974,span,206
+MASSIVE Full-FT Replay · 换序,3,de-DE,2974,合法输出,2765
+MASSIVE Full-FT Replay · 换序,3,ar-SA,2974,invalid_json,2
+MASSIVE Full-FT Replay · 换序,3,ar-SA,2974,span,516
+MASSIVE Full-FT Replay · 换序,3,ar-SA,2974,合法输出,2456
+MASSIVE Full-FT Replay · 换序,3,vi-VN,2974,invalid_json,4
+MASSIVE Full-FT Replay · 换序,3,vi-VN,2974,schema,2
+MASSIVE Full-FT Replay · 换序,3,vi-VN,2974,span,473
+MASSIVE Full-FT Replay · 换序,3,vi-VN,2974,合法输出,2495
+MASSIVE Full-FT Replay · 换序,3,ur-PK,2974,invalid_json,4
+MASSIVE Full-FT Replay · 换序,3,ur-PK,2974,schema,1
+MASSIVE Full-FT Replay · 换序,3,ur-PK,2974,span,1303
+MASSIVE Full-FT Replay · 换序,3,ur-PK,2974,合法输出,1666
+MASSIVE Full-FT Replay · 换序,3,sw-KE,2974,invalid_json,1
+MASSIVE Full-FT Replay · 换序,3,sw-KE,2974,span,274
+MASSIVE Full-FT Replay · 换序,3,sw-KE,2974,合法输出,2699
+MASSIVE Full-FT Replay · 换序,4,de-DE,2974,invalid_json,4
+MASSIVE Full-FT Replay · 换序,4,de-DE,2974,schema,7
+MASSIVE Full-FT Replay · 换序,4,de-DE,2974,span,250
+MASSIVE Full-FT Replay · 换序,4,de-DE,2974,合法输出,2713
+MASSIVE Full-FT Replay · 换序,4,ar-SA,2974,invalid_json,9
+MASSIVE Full-FT Replay · 换序,4,ar-SA,2974,schema,3
+MASSIVE Full-FT Replay · 换序,4,ar-SA,2974,span,631
+MASSIVE Full-FT Replay · 换序,4,ar-SA,2974,合法输出,2331
+MASSIVE Full-FT Replay · 换序,4,vi-VN,2974,invalid_json,9
+MASSIVE Full-FT Replay · 换序,4,vi-VN,2974,schema,1
+MASSIVE Full-FT Replay · 换序,4,vi-VN,2974,span,579
+MASSIVE Full-FT Replay · 换序,4,vi-VN,2974,合法输出,2385
+MASSIVE Full-FT Replay · 换序,4,ur-PK,2974,invalid_json,6
+MASSIVE Full-FT Replay · 换序,4,ur-PK,2974,schema,4
+MASSIVE Full-FT Replay · 换序,4,ur-PK,2974,span,330
+MASSIVE Full-FT Replay · 换序,4,ur-PK,2974,合法输出,2634
+MASSIVE Full-FT Replay · 换序,4,sw-KE,2974,invalid_json,4
+MASSIVE Full-FT Replay · 换序,4,sw-KE,2974,schema,3
+MASSIVE Full-FT Replay · 换序,4,sw-KE,2974,span,516
+MASSIVE Full-FT Replay · 换序,4,sw-KE,2974,合法输出,2451
+MASSIVE Full-FT Replay · 换序,5,de-DE,2974,invalid_json,4
+MASSIVE Full-FT Replay · 换序,5,de-DE,2974,schema,5
+MASSIVE Full-FT Replay · 换序,5,de-DE,2974,span,290
+MASSIVE Full-FT Replay · 换序,5,de-DE,2974,合法输出,2675
+MASSIVE Full-FT Replay · 换序,5,ar-SA,2974,invalid_json,1
+MASSIVE Full-FT Replay · 换序,5,ar-SA,2974,schema,3
+MASSIVE Full-FT Replay · 换序,5,ar-SA,2974,span,646
+MASSIVE Full-FT Replay · 换序,5,ar-SA,2974,合法输出,2324
+MASSIVE Full-FT Replay · 换序,5,vi-VN,2974,invalid_json,6
+MASSIVE Full-FT Replay · 换序,5,vi-VN,2974,schema,5
+MASSIVE Full-FT Replay · 换序,5,vi-VN,2974,span,629
+MASSIVE Full-FT Replay · 换序,5,vi-VN,2974,合法输出,2334
+MASSIVE Full-FT Replay · 换序,5,ur-PK,2974,invalid_json,2
+MASSIVE Full-FT Replay · 换序,5,ur-PK,2974,span,444
+MASSIVE Full-FT Replay · 换序,5,ur-PK,2974,合法输出,2528
+MASSIVE Full-FT Replay · 换序,5,sw-KE,2974,invalid_json,5
+MASSIVE Full-FT Replay · 换序,5,sw-KE,2974,schema,8
+MASSIVE Full-FT Replay · 换序,5,sw-KE,2974,span,321
+MASSIVE Full-FT Replay · 换序,5,sw-KE,2974,合法输出,2640
+MasakhaNER 2.0 LoRA Sequential · 新课程,0,swa,1883,无效 JSON,1883
+MasakhaNER 2.0 LoRA Sequential · 新课程,0,lug,1412,无效 JSON,1412
+MasakhaNER 2.0 LoRA Sequential · 新课程,0,ibo,2181,无效 JSON,2181
+MasakhaNER 2.0 LoRA Sequential · 新课程,0,yor,1964,无效 JSON,1964
+MasakhaNER 2.0 LoRA Sequential · 新课程,0,hau,1633,无效 JSON,1633
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,swa,1883,仅类型错误,122
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,swa,1883,仅边界错误,423
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,swa,1883,合法输出,1859
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,swa,1883,完全正确,3164
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,swa,1883,实体列表或跨度无效,24
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,swa,1883,未匹配金标,451
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,swa,1883,未匹配预测,567
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,swa,1883,类型及边界错误,77
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,lug,1412,仅类型错误,122
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,lug,1412,仅边界错误,218
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,lug,1412,合法输出,1408
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,lug,1412,完全正确,1239
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,lug,1412,实体列表或跨度无效,4
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,lug,1412,未匹配金标,523
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,lug,1412,未匹配预测,245
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,lug,1412,类型及边界错误,147
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,ibo,2181,仅类型错误,259
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,ibo,2181,仅边界错误,605
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,ibo,2181,合法输出,2168
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,ibo,2181,完全正确,1697
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,ibo,2181,实体列表或跨度无效,13
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,ibo,2181,未匹配金标,476
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,ibo,2181,未匹配预测,599
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,ibo,2181,类型及边界错误,155
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,yor,1964,仅类型错误,269
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,yor,1964,仅边界错误,326
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,yor,1964,合法输出,1951
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,yor,1964,完全正确,499
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,yor,1964,实体列表或跨度无效,13
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,yor,1964,未匹配金标,724
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,yor,1964,未匹配预测,413
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,yor,1964,类型及边界错误,148
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,hau,1633,仅类型错误,201
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,hau,1633,仅边界错误,894
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,hau,1633,合法输出,1619
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,hau,1633,完全正确,1793
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,hau,1633,实体列表或跨度无效,14
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,hau,1633,未匹配金标,844
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,hau,1633,未匹配预测,726
+MasakhaNER 2.0 LoRA Sequential · 新课程,1,hau,1633,类型及边界错误,317
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,swa,1883,仅类型错误,120
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,swa,1883,仅边界错误,509
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,swa,1883,合法输出,1863
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,swa,1883,完全正确,3309
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,swa,1883,实体列表或跨度无效,20
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,swa,1883,未匹配金标,252
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,swa,1883,未匹配预测,967
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,swa,1883,类型及边界错误,53
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,lug,1412,仅类型错误,128
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,lug,1412,仅边界错误,181
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,lug,1412,合法输出,1406
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,lug,1412,完全正确,1591
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,lug,1412,实体列表或跨度无效,6
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,lug,1412,未匹配金标,294
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,lug,1412,未匹配预测,258
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,lug,1412,类型及边界错误,61
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,ibo,2181,仅类型错误,161
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,ibo,2181,仅边界错误,702
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,ibo,2181,合法输出,2174
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,ibo,2181,完全正确,1892
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,ibo,2181,实体列表或跨度无效,6
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,ibo,2181,无效 JSON,1
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,ibo,2181,未匹配金标,348
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,ibo,2181,未匹配预测,725
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,ibo,2181,类型及边界错误,122
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,yor,1964,仅类型错误,292
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,yor,1964,仅边界错误,294
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,yor,1964,合法输出,1959
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,yor,1964,完全正确,711
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,yor,1964,实体列表或跨度无效,3
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,yor,1964,无效 JSON,2
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,yor,1964,未匹配金标,478
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,yor,1964,未匹配预测,633
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,yor,1964,类型及边界错误,224
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,hau,1633,仅类型错误,246
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,hau,1633,仅边界错误,997
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,hau,1633,合法输出,1625
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,hau,1633,完全正确,1963
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,hau,1633,实体列表或跨度无效,7
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,hau,1633,无效 JSON,1
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,hau,1633,未匹配金标,613
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,hau,1633,未匹配预测,994
+MasakhaNER 2.0 LoRA Sequential · 新课程,2,hau,1633,类型及边界错误,250
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,swa,1883,仅类型错误,108
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,swa,1883,仅边界错误,446
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,swa,1883,合法输出,1877
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,swa,1883,完全正确,3244
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,swa,1883,实体列表或跨度无效,6
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,swa,1883,未匹配金标,452
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,swa,1883,未匹配预测,502
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,swa,1883,类型及边界错误,48
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,lug,1412,仅类型错误,181
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,lug,1412,仅边界错误,150
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,lug,1412,合法输出,1410
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,lug,1412,完全正确,1441
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,lug,1412,实体列表或跨度无效,2
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,lug,1412,未匹配金标,430
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,lug,1412,未匹配预测,152
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,lug,1412,类型及边界错误,62
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,ibo,2181,仅类型错误,132
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,ibo,2181,仅边界错误,298
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,ibo,2181,合法输出,2180
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,ibo,2181,完全正确,2332
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,ibo,2181,实体列表或跨度无效,1
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,ibo,2181,未匹配金标,384
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,ibo,2181,未匹配预测,274
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,ibo,2181,类型及边界错误,90
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,yor,1964,仅类型错误,237
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,yor,1964,仅边界错误,201
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,yor,1964,合法输出,1962
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,yor,1964,完全正确,687
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,yor,1964,实体列表或跨度无效,2
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,yor,1964,未匹配金标,723
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,yor,1964,未匹配预测,251
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,yor,1964,类型及边界错误,156
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,hau,1633,仅类型错误,330
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,hau,1633,仅边界错误,911
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,hau,1633,合法输出,1630
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,hau,1633,完全正确,1715
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,hau,1633,实体列表或跨度无效,2
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,hau,1633,无效 JSON,1
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,hau,1633,未匹配金标,866
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,hau,1633,未匹配预测,498
+MasakhaNER 2.0 LoRA Sequential · 新课程,3,hau,1633,类型及边界错误,261
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,swa,1883,仅类型错误,139
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,swa,1883,仅边界错误,468
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,swa,1883,合法输出,1880
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,swa,1883,完全正确,3365
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,swa,1883,实体列表或跨度无效,3
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,swa,1883,未匹配金标,258
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,swa,1883,未匹配预测,850
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,swa,1883,类型及边界错误,75
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,lug,1412,仅类型错误,89
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,lug,1412,仅边界错误,151
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,lug,1412,合法输出,1412
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,lug,1412,完全正确,1714
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,lug,1412,未匹配金标,242
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,lug,1412,未匹配预测,472
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,lug,1412,类型及边界错误,71
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,ibo,2181,仅类型错误,129
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,ibo,2181,仅边界错误,283
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,ibo,2181,合法输出,2180
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,ibo,2181,完全正确,2421
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,ibo,2181,实体列表或跨度无效,1
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,ibo,2181,未匹配金标,275
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,ibo,2181,未匹配预测,367
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,ibo,2181,类型及边界错误,133
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,yor,1964,仅类型错误,122
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,yor,1964,仅边界错误,230
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,yor,1964,合法输出,1961
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,yor,1964,完全正确,1245
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,yor,1964,实体列表或跨度无效,3
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,yor,1964,未匹配金标,295
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,yor,1964,未匹配预测,273
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,yor,1964,类型及边界错误,110
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,hau,1633,仅类型错误,144
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,hau,1633,仅边界错误,809
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,hau,1633,合法输出,1629
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,hau,1633,完全正确,2202
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,hau,1633,实体列表或跨度无效,3
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,hau,1633,无效 JSON,1
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,hau,1633,未匹配金标,646
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,hau,1633,未匹配预测,725
+MasakhaNER 2.0 LoRA Sequential · 新课程,4,hau,1633,类型及边界错误,285
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,swa,1883,仅类型错误,92
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,swa,1883,仅边界错误,582
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,swa,1883,合法输出,1880
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,swa,1883,完全正确,3170
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,swa,1883,实体列表或跨度无效,3
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,swa,1883,未匹配金标,374
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,swa,1883,未匹配预测,639
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,swa,1883,类型及边界错误,92
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,lug,1412,仅类型错误,56
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,lug,1412,仅边界错误,149
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,lug,1412,合法输出,1411
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,lug,1412,完全正确,1537
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,lug,1412,实体列表或跨度无效,1
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,lug,1412,未匹配金标,466
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,lug,1412,未匹配预测,137
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,lug,1412,类型及边界错误,58
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,ibo,2181,仅类型错误,97
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,ibo,2181,仅边界错误,444
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,ibo,2181,合法输出,2176
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,ibo,2181,完全正确,2166
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,ibo,2181,实体列表或跨度无效,5
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,ibo,2181,未匹配金标,398
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,ibo,2181,未匹配预测,300
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,ibo,2181,类型及边界错误,113
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,yor,1964,仅类型错误,92
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,yor,1964,仅边界错误,210
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,yor,1964,合法输出,1960
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,yor,1964,完全正确,1153
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,yor,1964,实体列表或跨度无效,4
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,yor,1964,未匹配金标,464
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,yor,1964,未匹配预测,123
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,yor,1964,类型及边界错误,80
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,hau,1633,仅类型错误,140
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,hau,1633,仅边界错误,662
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,hau,1633,合法输出,1629
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,hau,1633,完全正确,2511
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,hau,1633,实体列表或跨度无效,3
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,hau,1633,无效 JSON,1
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,hau,1633,未匹配金标,569
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,hau,1633,未匹配预测,536
+MasakhaNER 2.0 LoRA Sequential · 新课程,5,hau,1633,类型及边界错误,199
+MasakhaNER 2.0 LoRA Replay · 新课程,0,swa,1883,无效 JSON,1883
+MasakhaNER 2.0 LoRA Replay · 新课程,0,lug,1412,无效 JSON,1412
+MasakhaNER 2.0 LoRA Replay · 新课程,0,ibo,2181,无效 JSON,2181
+MasakhaNER 2.0 LoRA Replay · 新课程,0,yor,1964,无效 JSON,1964
+MasakhaNER 2.0 LoRA Replay · 新课程,0,hau,1633,无效 JSON,1633
+MasakhaNER 2.0 LoRA Replay · 新课程,1,swa,1883,仅类型错误,122
+MasakhaNER 2.0 LoRA Replay · 新课程,1,swa,1883,仅边界错误,423
+MasakhaNER 2.0 LoRA Replay · 新课程,1,swa,1883,合法输出,1859
+MasakhaNER 2.0 LoRA Replay · 新课程,1,swa,1883,完全正确,3164
+MasakhaNER 2.0 LoRA Replay · 新课程,1,swa,1883,实体列表或跨度无效,24
+MasakhaNER 2.0 LoRA Replay · 新课程,1,swa,1883,未匹配金标,451
+MasakhaNER 2.0 LoRA Replay · 新课程,1,swa,1883,未匹配预测,567
+MasakhaNER 2.0 LoRA Replay · 新课程,1,swa,1883,类型及边界错误,77
+MasakhaNER 2.0 LoRA Replay · 新课程,1,lug,1412,仅类型错误,122
+MasakhaNER 2.0 LoRA Replay · 新课程,1,lug,1412,仅边界错误,218
+MasakhaNER 2.0 LoRA Replay · 新课程,1,lug,1412,合法输出,1408
+MasakhaNER 2.0 LoRA Replay · 新课程,1,lug,1412,完全正确,1239
+MasakhaNER 2.0 LoRA Replay · 新课程,1,lug,1412,实体列表或跨度无效,4
+MasakhaNER 2.0 LoRA Replay · 新课程,1,lug,1412,未匹配金标,523
+MasakhaNER 2.0 LoRA Replay · 新课程,1,lug,1412,未匹配预测,245
+MasakhaNER 2.0 LoRA Replay · 新课程,1,lug,1412,类型及边界错误,147
+MasakhaNER 2.0 LoRA Replay · 新课程,1,ibo,2181,仅类型错误,259
+MasakhaNER 2.0 LoRA Replay · 新课程,1,ibo,2181,仅边界错误,605
+MasakhaNER 2.0 LoRA Replay · 新课程,1,ibo,2181,合法输出,2168
+MasakhaNER 2.0 LoRA Replay · 新课程,1,ibo,2181,完全正确,1697
+MasakhaNER 2.0 LoRA Replay · 新课程,1,ibo,2181,实体列表或跨度无效,13
+MasakhaNER 2.0 LoRA Replay · 新课程,1,ibo,2181,未匹配金标,476
+MasakhaNER 2.0 LoRA Replay · 新课程,1,ibo,2181,未匹配预测,599
+MasakhaNER 2.0 LoRA Replay · 新课程,1,ibo,2181,类型及边界错误,155
+MasakhaNER 2.0 LoRA Replay · 新课程,1,yor,1964,仅类型错误,269
+MasakhaNER 2.0 LoRA Replay · 新课程,1,yor,1964,仅边界错误,326
+MasakhaNER 2.0 LoRA Replay · 新课程,1,yor,1964,合法输出,1951
+MasakhaNER 2.0 LoRA Replay · 新课程,1,yor,1964,完全正确,499
+MasakhaNER 2.0 LoRA Replay · 新课程,1,yor,1964,实体列表或跨度无效,13
+MasakhaNER 2.0 LoRA Replay · 新课程,1,yor,1964,未匹配金标,724
+MasakhaNER 2.0 LoRA Replay · 新课程,1,yor,1964,未匹配预测,413
+MasakhaNER 2.0 LoRA Replay · 新课程,1,yor,1964,类型及边界错误,148
+MasakhaNER 2.0 LoRA Replay · 新课程,1,hau,1633,仅类型错误,201
+MasakhaNER 2.0 LoRA Replay · 新课程,1,hau,1633,仅边界错误,894
+MasakhaNER 2.0 LoRA Replay · 新课程,1,hau,1633,合法输出,1619
+MasakhaNER 2.0 LoRA Replay · 新课程,1,hau,1633,完全正确,1793
+MasakhaNER 2.0 LoRA Replay · 新课程,1,hau,1633,实体列表或跨度无效,14
+MasakhaNER 2.0 LoRA Replay · 新课程,1,hau,1633,未匹配金标,844
+MasakhaNER 2.0 LoRA Replay · 新课程,1,hau,1633,未匹配预测,726
+MasakhaNER 2.0 LoRA Replay · 新课程,1,hau,1633,类型及边界错误,317
+MasakhaNER 2.0 LoRA Replay · 新课程,2,swa,1883,仅类型错误,104
+MasakhaNER 2.0 LoRA Replay · 新课程,2,swa,1883,仅边界错误,466
+MasakhaNER 2.0 LoRA Replay · 新课程,2,swa,1883,合法输出,1866
+MasakhaNER 2.0 LoRA Replay · 新课程,2,swa,1883,完全正确,3360
+MasakhaNER 2.0 LoRA Replay · 新课程,2,swa,1883,实体列表或跨度无效,16
+MasakhaNER 2.0 LoRA Replay · 新课程,2,swa,1883,无效 JSON,1
+MasakhaNER 2.0 LoRA Replay · 新课程,2,swa,1883,未匹配金标,297
+MasakhaNER 2.0 LoRA Replay · 新课程,2,swa,1883,未匹配预测,783
+MasakhaNER 2.0 LoRA Replay · 新课程,2,swa,1883,类型及边界错误,53
+MasakhaNER 2.0 LoRA Replay · 新课程,2,lug,1412,仅类型错误,110
+MasakhaNER 2.0 LoRA Replay · 新课程,2,lug,1412,仅边界错误,184
+MasakhaNER 2.0 LoRA Replay · 新课程,2,lug,1412,合法输出,1408
+MasakhaNER 2.0 LoRA Replay · 新课程,2,lug,1412,完全正确,1580
+MasakhaNER 2.0 LoRA Replay · 新课程,2,lug,1412,实体列表或跨度无效,4
+MasakhaNER 2.0 LoRA Replay · 新课程,2,lug,1412,未匹配金标,330
+MasakhaNER 2.0 LoRA Replay · 新课程,2,lug,1412,未匹配预测,219
+MasakhaNER 2.0 LoRA Replay · 新课程,2,lug,1412,类型及边界错误,57
+MasakhaNER 2.0 LoRA Replay · 新课程,2,ibo,2181,仅类型错误,185
+MasakhaNER 2.0 LoRA Replay · 新课程,2,ibo,2181,仅边界错误,678
+MasakhaNER 2.0 LoRA Replay · 新课程,2,ibo,2181,合法输出,2175
+MasakhaNER 2.0 LoRA Replay · 新课程,2,ibo,2181,完全正确,1858
+MasakhaNER 2.0 LoRA Replay · 新课程,2,ibo,2181,实体列表或跨度无效,6
+MasakhaNER 2.0 LoRA Replay · 新课程,2,ibo,2181,未匹配金标,388
+MasakhaNER 2.0 LoRA Replay · 新课程,2,ibo,2181,未匹配预测,643
+MasakhaNER 2.0 LoRA Replay · 新课程,2,ibo,2181,类型及边界错误,115
+MasakhaNER 2.0 LoRA Replay · 新课程,2,yor,1964,仅类型错误,274
+MasakhaNER 2.0 LoRA Replay · 新课程,2,yor,1964,仅边界错误,298
+MasakhaNER 2.0 LoRA Replay · 新课程,2,yor,1964,合法输出,1960
+MasakhaNER 2.0 LoRA Replay · 新课程,2,yor,1964,完全正确,705
+MasakhaNER 2.0 LoRA Replay · 新课程,2,yor,1964,实体列表或跨度无效,3
+MasakhaNER 2.0 LoRA Replay · 新课程,2,yor,1964,无效 JSON,1
+MasakhaNER 2.0 LoRA Replay · 新课程,2,yor,1964,未匹配金标,541
+MasakhaNER 2.0 LoRA Replay · 新课程,2,yor,1964,未匹配预测,528
+MasakhaNER 2.0 LoRA Replay · 新课程,2,yor,1964,类型及边界错误,175
+MasakhaNER 2.0 LoRA Replay · 新课程,2,hau,1633,仅类型错误,254
+MasakhaNER 2.0 LoRA Replay · 新课程,2,hau,1633,仅边界错误,981
+MasakhaNER 2.0 LoRA Replay · 新课程,2,hau,1633,合法输出,1625
+MasakhaNER 2.0 LoRA Replay · 新课程,2,hau,1633,完全正确,1927
+MasakhaNER 2.0 LoRA Replay · 新课程,2,hau,1633,实体列表或跨度无效,7
+MasakhaNER 2.0 LoRA Replay · 新课程,2,hau,1633,无效 JSON,1
+MasakhaNER 2.0 LoRA Replay · 新课程,2,hau,1633,未匹配金标,661
+MasakhaNER 2.0 LoRA Replay · 新课程,2,hau,1633,未匹配预测,896
+MasakhaNER 2.0 LoRA Replay · 新课程,2,hau,1633,类型及边界错误,248
+MasakhaNER 2.0 LoRA Replay · 新课程,3,swa,1883,仅类型错误,114
+MasakhaNER 2.0 LoRA Replay · 新课程,3,swa,1883,仅边界错误,489
+MasakhaNER 2.0 LoRA Replay · 新课程,3,swa,1883,合法输出,1879
+MasakhaNER 2.0 LoRA Replay · 新课程,3,swa,1883,完全正确,3157
+MasakhaNER 2.0 LoRA Replay · 新课程,3,swa,1883,实体列表或跨度无效,4
+MasakhaNER 2.0 LoRA Replay · 新课程,3,swa,1883,未匹配金标,496
+MasakhaNER 2.0 LoRA Replay · 新课程,3,swa,1883,未匹配预测,427
+MasakhaNER 2.0 LoRA Replay · 新课程,3,swa,1883,类型及边界错误,58
+MasakhaNER 2.0 LoRA Replay · 新课程,3,lug,1412,仅类型错误,142
+MasakhaNER 2.0 LoRA Replay · 新课程,3,lug,1412,仅边界错误,154
+MasakhaNER 2.0 LoRA Replay · 新课程,3,lug,1412,合法输出,1410
+MasakhaNER 2.0 LoRA Replay · 新课程,3,lug,1412,完全正确,1473
+MasakhaNER 2.0 LoRA Replay · 新课程,3,lug,1412,实体列表或跨度无效,2
+MasakhaNER 2.0 LoRA Replay · 新课程,3,lug,1412,未匹配金标,432
+MasakhaNER 2.0 LoRA Replay · 新课程,3,lug,1412,未匹配预测,126
+MasakhaNER 2.0 LoRA Replay · 新课程,3,lug,1412,类型及边界错误,63
+MasakhaNER 2.0 LoRA Replay · 新课程,3,ibo,2181,仅类型错误,134
+MasakhaNER 2.0 LoRA Replay · 新课程,3,ibo,2181,仅边界错误,326
+MasakhaNER 2.0 LoRA Replay · 新课程,3,ibo,2181,合法输出,2180
+MasakhaNER 2.0 LoRA Replay · 新课程,3,ibo,2181,完全正确,2253
+MasakhaNER 2.0 LoRA Replay · 新课程,3,ibo,2181,实体列表或跨度无效,1
+MasakhaNER 2.0 LoRA Replay · 新课程,3,ibo,2181,未匹配金标,448
+MasakhaNER 2.0 LoRA Replay · 新课程,3,ibo,2181,未匹配预测,261
+MasakhaNER 2.0 LoRA Replay · 新课程,3,ibo,2181,类型及边界错误,75
+MasakhaNER 2.0 LoRA Replay · 新课程,3,yor,1964,仅类型错误,220
+MasakhaNER 2.0 LoRA Replay · 新课程,3,yor,1964,仅边界错误,211
+MasakhaNER 2.0 LoRA Replay · 新课程,3,yor,1964,合法输出,1964
+MasakhaNER 2.0 LoRA Replay · 新课程,3,yor,1964,完全正确,639
+MasakhaNER 2.0 LoRA Replay · 新课程,3,yor,1964,未匹配金标,787
+MasakhaNER 2.0 LoRA Replay · 新课程,3,yor,1964,未匹配预测,214
+MasakhaNER 2.0 LoRA Replay · 新课程,3,yor,1964,类型及边界错误,152
+MasakhaNER 2.0 LoRA Replay · 新课程,3,hau,1633,仅类型错误,263
+MasakhaNER 2.0 LoRA Replay · 新课程,3,hau,1633,仅边界错误,929
+MasakhaNER 2.0 LoRA Replay · 新课程,3,hau,1633,合法输出,1628
+MasakhaNER 2.0 LoRA Replay · 新课程,3,hau,1633,完全正确,1793
+MasakhaNER 2.0 LoRA Replay · 新课程,3,hau,1633,实体列表或跨度无效,4
+MasakhaNER 2.0 LoRA Replay · 新课程,3,hau,1633,无效 JSON,1
+MasakhaNER 2.0 LoRA Replay · 新课程,3,hau,1633,未匹配金标,848
+MasakhaNER 2.0 LoRA Replay · 新课程,3,hau,1633,未匹配预测,501
+MasakhaNER 2.0 LoRA Replay · 新课程,3,hau,1633,类型及边界错误,241
+MasakhaNER 2.0 LoRA Replay · 新课程,4,swa,1883,仅类型错误,94
+MasakhaNER 2.0 LoRA Replay · 新课程,4,swa,1883,仅边界错误,392
+MasakhaNER 2.0 LoRA Replay · 新课程,4,swa,1883,合法输出,1880
+MasakhaNER 2.0 LoRA Replay · 新课程,4,swa,1883,完全正确,3490
+MasakhaNER 2.0 LoRA Replay · 新课程,4,swa,1883,实体列表或跨度无效,3
+MasakhaNER 2.0 LoRA Replay · 新课程,4,swa,1883,未匹配金标,276
+MasakhaNER 2.0 LoRA Replay · 新课程,4,swa,1883,未匹配预测,601
+MasakhaNER 2.0 LoRA Replay · 新课程,4,swa,1883,类型及边界错误,61
+MasakhaNER 2.0 LoRA Replay · 新课程,4,lug,1412,仅类型错误,78
+MasakhaNER 2.0 LoRA Replay · 新课程,4,lug,1412,仅边界错误,166
+MasakhaNER 2.0 LoRA Replay · 新课程,4,lug,1412,合法输出,1410
+MasakhaNER 2.0 LoRA Replay · 新课程,4,lug,1412,完全正确,1652
+MasakhaNER 2.0 LoRA Replay · 新课程,4,lug,1412,实体列表或跨度无效,2
+MasakhaNER 2.0 LoRA Replay · 新课程,4,lug,1412,未匹配金标,295
+MasakhaNER 2.0 LoRA Replay · 新课程,4,lug,1412,未匹配预测,277
+MasakhaNER 2.0 LoRA Replay · 新课程,4,lug,1412,类型及边界错误,73
+MasakhaNER 2.0 LoRA Replay · 新课程,4,ibo,2181,仅类型错误,154
+MasakhaNER 2.0 LoRA Replay · 新课程,4,ibo,2181,仅边界错误,298
+MasakhaNER 2.0 LoRA Replay · 新课程,4,ibo,2181,合法输出,2179
+MasakhaNER 2.0 LoRA Replay · 新课程,4,ibo,2181,完全正确,2378
+MasakhaNER 2.0 LoRA Replay · 新课程,4,ibo,2181,实体列表或跨度无效,2
+MasakhaNER 2.0 LoRA Replay · 新课程,4,ibo,2181,未匹配金标,289
+MasakhaNER 2.0 LoRA Replay · 新课程,4,ibo,2181,未匹配预测,351
+MasakhaNER 2.0 LoRA Replay · 新课程,4,ibo,2181,类型及边界错误,120
+MasakhaNER 2.0 LoRA Replay · 新课程,4,yor,1964,仅类型错误,122
+MasakhaNER 2.0 LoRA Replay · 新课程,4,yor,1964,仅边界错误,240
+MasakhaNER 2.0 LoRA Replay · 新课程,4,yor,1964,合法输出,1962
+MasakhaNER 2.0 LoRA Replay · 新课程,4,yor,1964,完全正确,1228
+MasakhaNER 2.0 LoRA Replay · 新课程,4,yor,1964,实体列表或跨度无效,2
+MasakhaNER 2.0 LoRA Replay · 新课程,4,yor,1964,未匹配金标,313
+MasakhaNER 2.0 LoRA Replay · 新课程,4,yor,1964,未匹配预测,264
+MasakhaNER 2.0 LoRA Replay · 新课程,4,yor,1964,类型及边界错误,101
+MasakhaNER 2.0 LoRA Replay · 新课程,4,hau,1633,仅类型错误,135
+MasakhaNER 2.0 LoRA Replay · 新课程,4,hau,1633,仅边界错误,820
+MasakhaNER 2.0 LoRA Replay · 新课程,4,hau,1633,合法输出,1630
+MasakhaNER 2.0 LoRA Replay · 新课程,4,hau,1633,完全正确,2234
+MasakhaNER 2.0 LoRA Replay · 新课程,4,hau,1633,实体列表或跨度无效,2
+MasakhaNER 2.0 LoRA Replay · 新课程,4,hau,1633,无效 JSON,1
+MasakhaNER 2.0 LoRA Replay · 新课程,4,hau,1633,未匹配金标,642
+MasakhaNER 2.0 LoRA Replay · 新课程,4,hau,1633,未匹配预测,623
+MasakhaNER 2.0 LoRA Replay · 新课程,4,hau,1633,类型及边界错误,255
+MasakhaNER 2.0 LoRA Replay · 新课程,5,swa,1883,仅类型错误,81
+MasakhaNER 2.0 LoRA Replay · 新课程,5,swa,1883,仅边界错误,520
+MasakhaNER 2.0 LoRA Replay · 新课程,5,swa,1883,合法输出,1880
+MasakhaNER 2.0 LoRA Replay · 新课程,5,swa,1883,完全正确,3226
+MasakhaNER 2.0 LoRA Replay · 新课程,5,swa,1883,实体列表或跨度无效,3
+MasakhaNER 2.0 LoRA Replay · 新课程,5,swa,1883,未匹配金标,432
+MasakhaNER 2.0 LoRA Replay · 新课程,5,swa,1883,未匹配预测,441
+MasakhaNER 2.0 LoRA Replay · 新课程,5,swa,1883,类型及边界错误,55
+MasakhaNER 2.0 LoRA Replay · 新课程,5,lug,1412,仅类型错误,59
+MasakhaNER 2.0 LoRA Replay · 新课程,5,lug,1412,仅边界错误,155
+MasakhaNER 2.0 LoRA Replay · 新课程,5,lug,1412,合法输出,1411
+MasakhaNER 2.0 LoRA Replay · 新课程,5,lug,1412,完全正确,1511
+MasakhaNER 2.0 LoRA Replay · 新课程,5,lug,1412,实体列表或跨度无效,1
+MasakhaNER 2.0 LoRA Replay · 新课程,5,lug,1412,未匹配金标,493
+MasakhaNER 2.0 LoRA Replay · 新课程,5,lug,1412,未匹配预测,116
+MasakhaNER 2.0 LoRA Replay · 新课程,5,lug,1412,类型及边界错误,45
+MasakhaNER 2.0 LoRA Replay · 新课程,5,ibo,2181,仅类型错误,75
+MasakhaNER 2.0 LoRA Replay · 新课程,5,ibo,2181,仅边界错误,470
+MasakhaNER 2.0 LoRA Replay · 新课程,5,ibo,2181,合法输出,2180
+MasakhaNER 2.0 LoRA Replay · 新课程,5,ibo,2181,完全正确,2164
+MasakhaNER 2.0 LoRA Replay · 新课程,5,ibo,2181,实体列表或跨度无效,1
+MasakhaNER 2.0 LoRA Replay · 新课程,5,ibo,2181,未匹配金标,447
+MasakhaNER 2.0 LoRA Replay · 新课程,5,ibo,2181,未匹配预测,246
+MasakhaNER 2.0 LoRA Replay · 新课程,5,ibo,2181,类型及边界错误,80
+MasakhaNER 2.0 LoRA Replay · 新课程,5,yor,1964,仅类型错误,70
+MasakhaNER 2.0 LoRA Replay · 新课程,5,yor,1964,仅边界错误,191
+MasakhaNER 2.0 LoRA Replay · 新课程,5,yor,1964,合法输出,1962
+MasakhaNER 2.0 LoRA Replay · 新课程,5,yor,1964,完全正确,1113
+MasakhaNER 2.0 LoRA Replay · 新课程,5,yor,1964,实体列表或跨度无效,2
+MasakhaNER 2.0 LoRA Replay · 新课程,5,yor,1964,未匹配金标,557
+MasakhaNER 2.0 LoRA Replay · 新课程,5,yor,1964,未匹配预测,114
+MasakhaNER 2.0 LoRA Replay · 新课程,5,yor,1964,类型及边界错误,74
+MasakhaNER 2.0 LoRA Replay · 新课程,5,hau,1633,仅类型错误,167
+MasakhaNER 2.0 LoRA Replay · 新课程,5,hau,1633,仅边界错误,672
+MasakhaNER 2.0 LoRA Replay · 新课程,5,hau,1633,合法输出,1631
+MasakhaNER 2.0 LoRA Replay · 新课程,5,hau,1633,完全正确,2454
+MasakhaNER 2.0 LoRA Replay · 新课程,5,hau,1633,实体列表或跨度无效,1
+MasakhaNER 2.0 LoRA Replay · 新课程,5,hau,1633,无效 JSON,1
+MasakhaNER 2.0 LoRA Replay · 新课程,5,hau,1633,未匹配金标,616
+MasakhaNER 2.0 LoRA Replay · 新课程,5,hau,1633,未匹配预测,501
+MasakhaNER 2.0 LoRA Replay · 新课程,5,hau,1633,类型及边界错误,178
+MasakhaNER 2.0 Full-FT Sequential · 新课程,0,swa,1883,无效 JSON,1883
+MasakhaNER 2.0 Full-FT Sequential · 新课程,0,lug,1412,无效 JSON,1412
+MasakhaNER 2.0 Full-FT Sequential · 新课程,0,ibo,2181,无效 JSON,2181
+MasakhaNER 2.0 Full-FT Sequential · 新课程,0,yor,1964,无效 JSON,1964
+MasakhaNER 2.0 Full-FT Sequential · 新课程,0,hau,1633,无效 JSON,1633
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,swa,1883,仅类型错误,269
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,swa,1883,仅边界错误,379
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,swa,1883,合法输出,1843
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,swa,1883,完全正确,3008
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,swa,1883,实体列表或跨度无效,38
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,swa,1883,无效 JSON,2
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,swa,1883,未匹配金标,475
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,swa,1883,未匹配预测,622
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,swa,1883,类型及边界错误,72
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,lug,1412,仅类型错误,209
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,lug,1412,仅边界错误,274
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,lug,1412,合法输出,1392
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,lug,1412,完全正确,1162
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,lug,1412,实体列表或跨度无效,19
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,lug,1412,无效 JSON,1
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,lug,1412,未匹配金标,471
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,lug,1412,未匹配预测,533
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,lug,1412,类型及边界错误,108
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,ibo,2181,仅类型错误,316
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,ibo,2181,仅边界错误,478
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,ibo,2181,合法输出,2119
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,ibo,2181,完全正确,1548
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,ibo,2181,实体列表或跨度无效,62
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,ibo,2181,未匹配金标,572
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,ibo,2181,未匹配预测,1330
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,ibo,2181,类型及边界错误,179
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,yor,1964,仅类型错误,298
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,yor,1964,仅边界错误,349
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,yor,1964,合法输出,1897
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,yor,1964,完全正确,528
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,yor,1964,实体列表或跨度无效,66
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,yor,1964,无效 JSON,1
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,yor,1964,未匹配金标,507
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,yor,1964,未匹配预测,1116
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,yor,1964,类型及边界错误,205
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,hau,1633,仅类型错误,478
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,hau,1633,仅边界错误,794
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,hau,1633,合法输出,1601
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,hau,1633,完全正确,1375
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,hau,1633,实体列表或跨度无效,32
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,hau,1633,未匹配金标,890
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,hau,1633,未匹配预测,831
+MasakhaNER 2.0 Full-FT Sequential · 新课程,1,hau,1633,类型及边界错误,448
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,swa,1883,仅类型错误,339
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,swa,1883,仅边界错误,413
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,swa,1883,合法输出,1818
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,swa,1883,完全正确,2776
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,swa,1883,实体列表或跨度无效,30
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,swa,1883,无效 JSON,35
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,swa,1883,未匹配金标,415
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,swa,1883,未匹配预测,521
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,swa,1883,类型及边界错误,82
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,lug,1412,仅类型错误,158
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,lug,1412,仅边界错误,170
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,lug,1412,合法输出,1364
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,lug,1412,完全正确,1484
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,lug,1412,实体列表或跨度无效,40
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,lug,1412,无效 JSON,8
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,lug,1412,未匹配金标,331
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,lug,1412,未匹配预测,197
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,lug,1412,类型及边界错误,52
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,ibo,2181,仅类型错误,515
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,ibo,2181,仅边界错误,404
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,ibo,2181,合法输出,2094
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,ibo,2181,完全正确,1132
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,ibo,2181,实体列表或跨度无效,45
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,ibo,2181,无效 JSON,42
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,ibo,2181,未匹配金标,689
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,ibo,2181,未匹配预测,709
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,ibo,2181,类型及边界错误,133
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,yor,1964,仅类型错误,255
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,yor,1964,仅边界错误,311
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,yor,1964,合法输出,1912
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,yor,1964,完全正确,459
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,yor,1964,实体列表或跨度无效,39
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,yor,1964,无效 JSON,13
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,yor,1964,未匹配金标,742
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,yor,1964,未匹配预测,422
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,yor,1964,类型及边界错误,120
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,hau,1633,仅类型错误,480
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,hau,1633,仅边界错误,727
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,hau,1633,合法输出,1578
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,hau,1633,完全正确,1385
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,hau,1633,实体列表或跨度无效,29
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,hau,1633,无效 JSON,26
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,hau,1633,未匹配金标,804
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,hau,1633,未匹配预测,727
+MasakhaNER 2.0 Full-FT Sequential · 新课程,2,hau,1633,类型及边界错误,439
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,swa,1883,仅类型错误,383
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,swa,1883,仅边界错误,409
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,swa,1883,合法输出,1866
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,swa,1883,完全正确,2481
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,swa,1883,实体列表或跨度无效,16
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,swa,1883,无效 JSON,1
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,swa,1883,未匹配金标,826
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,swa,1883,未匹配预测,346
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,swa,1883,类型及边界错误,131
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,lug,1412,仅类型错误,134
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,lug,1412,仅边界错误,111
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,lug,1412,合法输出,1411
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,lug,1412,完全正确,1364
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,lug,1412,实体列表或跨度无效,1
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,lug,1412,未匹配金标,599
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,lug,1412,未匹配预测,109
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,lug,1412,类型及边界错误,58
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,ibo,2181,仅类型错误,150
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,ibo,2181,仅边界错误,253
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,ibo,2181,合法输出,2174
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,ibo,2181,完全正确,2165
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,ibo,2181,实体列表或跨度无效,7
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,ibo,2181,未匹配金标,559
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,ibo,2181,未匹配预测,207
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,ibo,2181,类型及边界错误,75
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,yor,1964,仅类型错误,167
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,yor,1964,仅边界错误,233
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,yor,1964,合法输出,1962
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,yor,1964,完全正确,490
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,yor,1964,实体列表或跨度无效,2
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,yor,1964,未匹配金标,1031
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,yor,1964,未匹配预测,202
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,yor,1964,类型及边界错误,83
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,hau,1633,仅类型错误,605
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,hau,1633,仅边界错误,646
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,hau,1633,合法输出,1628
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,hau,1633,完全正确,1153
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,hau,1633,实体列表或跨度无效,5
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,hau,1633,未匹配金标,1297
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,hau,1633,未匹配预测,377
+MasakhaNER 2.0 Full-FT Sequential · 新课程,3,hau,1633,类型及边界错误,359
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,swa,1883,仅类型错误,410
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,swa,1883,仅边界错误,405
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,swa,1883,合法输出,1874
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,swa,1883,完全正确,2987
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,swa,1883,实体列表或跨度无效,7
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,swa,1883,无效 JSON,2
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,swa,1883,未匹配金标,320
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,swa,1883,未匹配预测,1309
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,swa,1883,类型及边界错误,147
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,lug,1412,仅类型错误,143
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,lug,1412,仅边界错误,126
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,lug,1412,合法输出,1410
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,lug,1412,完全正确,1662
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,lug,1412,实体列表或跨度无效,2
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,lug,1412,未匹配金标,250
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,lug,1412,未匹配预测,453
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,lug,1412,类型及边界错误,77
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,ibo,2181,仅类型错误,293
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,ibo,2181,仅边界错误,286
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,ibo,2181,合法输出,2169
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,ibo,2181,完全正确,2188
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,ibo,2181,实体列表或跨度无效,11
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,ibo,2181,无效 JSON,1
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,ibo,2181,未匹配金标,295
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,ibo,2181,未匹配预测,636
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,ibo,2181,类型及边界错误,136
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,yor,1964,仅类型错误,122
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,yor,1964,仅边界错误,195
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,yor,1964,合法输出,1942
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,yor,1964,完全正确,1382
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,yor,1964,实体列表或跨度无效,18
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,yor,1964,无效 JSON,4
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,yor,1964,未匹配金标,172
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,yor,1964,未匹配预测,301
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,yor,1964,类型及边界错误,87
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,hau,1633,仅类型错误,247
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,hau,1633,仅边界错误,691
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,hau,1633,合法输出,1624
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,hau,1633,完全正确,2043
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,hau,1633,实体列表或跨度无效,7
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,hau,1633,无效 JSON,2
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,hau,1633,未匹配金标,680
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,hau,1633,未匹配预测,934
+MasakhaNER 2.0 Full-FT Sequential · 新课程,4,hau,1633,类型及边界错误,369
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,swa,1883,仅类型错误,198
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,swa,1883,仅边界错误,746
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,swa,1883,合法输出,1870
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,swa,1883,完全正确,2622
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,swa,1883,实体列表或跨度无效,8
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,swa,1883,无效 JSON,5
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,swa,1883,未匹配金标,580
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,swa,1883,未匹配预测,844
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,swa,1883,类型及边界错误,140
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,lug,1412,仅类型错误,124
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,lug,1412,仅边界错误,268
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,lug,1412,合法输出,1409
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,lug,1412,完全正确,1327
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,lug,1412,实体列表或跨度无效,1
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,lug,1412,无效 JSON,2
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,lug,1412,未匹配金标,457
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,lug,1412,未匹配预测,393
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,lug,1412,类型及边界错误,83
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,ibo,2181,仅类型错误,155
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,ibo,2181,仅边界错误,497
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,ibo,2181,合法输出,2145
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,ibo,2181,完全正确,1915
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,ibo,2181,实体列表或跨度无效,11
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,ibo,2181,无效 JSON,25
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,ibo,2181,未匹配金标,494
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,ibo,2181,未匹配预测,493
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,ibo,2181,类型及边界错误,106
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,yor,1964,仅类型错误,104
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,yor,1964,仅边界错误,248
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,yor,1964,合法输出,1952
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,yor,1964,完全正确,938
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,yor,1964,实体列表或跨度无效,10
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,yor,1964,无效 JSON,2
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,yor,1964,未匹配金标,613
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,yor,1964,未匹配预测,155
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,yor,1964,类型及边界错误,69
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,hau,1633,仅类型错误,349
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,hau,1633,仅边界错误,642
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,hau,1633,合法输出,1626
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,hau,1633,完全正确,2280
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,hau,1633,实体列表或跨度无效,6
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,hau,1633,无效 JSON,1
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,hau,1633,未匹配金标,669
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,hau,1633,未匹配预测,361
+MasakhaNER 2.0 Full-FT Sequential · 新课程,5,hau,1633,类型及边界错误,138
+MasakhaNER 2.0 Full-FT Replay · 新课程,0,swa,1883,无效 JSON,1883
+MasakhaNER 2.0 Full-FT Replay · 新课程,0,lug,1412,无效 JSON,1412
+MasakhaNER 2.0 Full-FT Replay · 新课程,0,ibo,2181,无效 JSON,2181
+MasakhaNER 2.0 Full-FT Replay · 新课程,0,yor,1964,无效 JSON,1964
+MasakhaNER 2.0 Full-FT Replay · 新课程,0,hau,1633,无效 JSON,1633
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,swa,1883,仅类型错误,269
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,swa,1883,仅边界错误,379
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,swa,1883,合法输出,1843
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,swa,1883,完全正确,3008
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,swa,1883,实体列表或跨度无效,38
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,swa,1883,无效 JSON,2
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,swa,1883,未匹配金标,475
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,swa,1883,未匹配预测,622
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,swa,1883,类型及边界错误,72
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,lug,1412,仅类型错误,209
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,lug,1412,仅边界错误,274
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,lug,1412,合法输出,1392
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,lug,1412,完全正确,1162
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,lug,1412,实体列表或跨度无效,19
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,lug,1412,无效 JSON,1
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,lug,1412,未匹配金标,471
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,lug,1412,未匹配预测,533
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,lug,1412,类型及边界错误,108
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,ibo,2181,仅类型错误,316
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,ibo,2181,仅边界错误,478
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,ibo,2181,合法输出,2119
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,ibo,2181,完全正确,1548
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,ibo,2181,实体列表或跨度无效,62
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,ibo,2181,未匹配金标,572
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,ibo,2181,未匹配预测,1330
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,ibo,2181,类型及边界错误,179
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,yor,1964,仅类型错误,298
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,yor,1964,仅边界错误,349
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,yor,1964,合法输出,1897
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,yor,1964,完全正确,528
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,yor,1964,实体列表或跨度无效,66
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,yor,1964,无效 JSON,1
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,yor,1964,未匹配金标,507
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,yor,1964,未匹配预测,1116
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,yor,1964,类型及边界错误,205
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,hau,1633,仅类型错误,478
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,hau,1633,仅边界错误,794
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,hau,1633,合法输出,1601
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,hau,1633,完全正确,1375
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,hau,1633,实体列表或跨度无效,32
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,hau,1633,未匹配金标,890
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,hau,1633,未匹配预测,831
+MasakhaNER 2.0 Full-FT Replay · 新课程,1,hau,1633,类型及边界错误,448
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,swa,1883,仅类型错误,197
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,swa,1883,仅边界错误,364
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,swa,1883,合法输出,1870
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,swa,1883,完全正确,2982
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,swa,1883,实体列表或跨度无效,13
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,swa,1883,未匹配金标,638
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,swa,1883,未匹配预测,470
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,swa,1883,类型及边界错误,97
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,lug,1412,仅类型错误,152
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,lug,1412,仅边界错误,125
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,lug,1412,合法输出,1392
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,lug,1412,完全正确,1442
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,lug,1412,实体列表或跨度无效,20
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,lug,1412,未匹配金标,400
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,lug,1412,未匹配预测,183
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,lug,1412,类型及边界错误,97
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,ibo,2181,仅类型错误,363
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,ibo,2181,仅边界错误,511
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,ibo,2181,合法输出,2171
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,ibo,2181,完全正确,1380
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,ibo,2181,实体列表或跨度无效,10
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,ibo,2181,未匹配金标,788
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,ibo,2181,未匹配预测,427
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,ibo,2181,类型及边界错误,171
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,yor,1964,仅类型错误,231
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,yor,1964,仅边界错误,263
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,yor,1964,合法输出,1960
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,yor,1964,完全正确,560
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,yor,1964,实体列表或跨度无效,4
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,yor,1964,未匹配金标,835
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,yor,1964,未匹配预测,315
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,yor,1964,类型及边界错误,111
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,hau,1633,仅类型错误,614
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,hau,1633,仅边界错误,671
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,hau,1633,合法输出,1615
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,hau,1633,完全正确,1348
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,hau,1633,实体列表或跨度无效,18
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,hau,1633,未匹配金标,1015
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,hau,1633,未匹配预测,549
+MasakhaNER 2.0 Full-FT Replay · 新课程,2,hau,1633,类型及边界错误,399
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,swa,1883,仅类型错误,438
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,swa,1883,仅边界错误,278
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,swa,1883,合法输出,1857
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,swa,1883,完全正确,1722
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,swa,1883,实体列表或跨度无效,19
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,swa,1883,无效 JSON,7
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,swa,1883,未匹配金标,1632
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,swa,1883,未匹配预测,267
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,swa,1883,类型及边界错误,103
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,lug,1412,仅类型错误,206
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,lug,1412,仅边界错误,82
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,lug,1412,合法输出,1400
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,lug,1412,完全正确,762
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,lug,1412,实体列表或跨度无效,12
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,lug,1412,未匹配金标,1105
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,lug,1412,未匹配预测,74
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,lug,1412,类型及边界错误,77
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,ibo,2181,仅类型错误,293
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,ibo,2181,仅边界错误,144
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,ibo,2181,合法输出,2158
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,ibo,2181,完全正确,1331
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,ibo,2181,实体列表或跨度无效,22
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,ibo,2181,无效 JSON,1
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,ibo,2181,未匹配金标,1236
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,ibo,2181,未匹配预测,137
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,ibo,2181,类型及边界错误,123
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,yor,1964,仅类型错误,119
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,yor,1964,仅边界错误,64
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,yor,1964,合法输出,1955
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,yor,1964,完全正确,145
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,yor,1964,实体列表或跨度无效,9
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,yor,1964,未匹配金标,1526
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,yor,1964,未匹配预测,104
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,yor,1964,类型及边界错误,120
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,hau,1633,仅类型错误,475
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,hau,1633,仅边界错误,320
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,hau,1633,合法输出,1613
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,hau,1633,完全正确,467
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,hau,1633,实体列表或跨度无效,17
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,hau,1633,无效 JSON,3
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,hau,1633,未匹配金标,2392
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,hau,1633,未匹配预测,254
+MasakhaNER 2.0 Full-FT Replay · 新课程,3,hau,1633,类型及边界错误,315
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,swa,1883,仅类型错误,321
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,swa,1883,仅边界错误,454
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,swa,1883,合法输出,1869
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,swa,1883,完全正确,3017
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,swa,1883,实体列表或跨度无效,10
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,swa,1883,无效 JSON,4
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,swa,1883,未匹配金标,364
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,swa,1883,未匹配预测,884
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,swa,1883,类型及边界错误,99
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,lug,1412,仅类型错误,169
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,lug,1412,仅边界错误,147
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,lug,1412,合法输出,1405
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,lug,1412,完全正确,1477
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,lug,1412,实体列表或跨度无效,6
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,lug,1412,无效 JSON,1
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,lug,1412,未匹配金标,311
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,lug,1412,未匹配预测,284
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,lug,1412,类型及边界错误,140
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,ibo,2181,仅类型错误,215
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,ibo,2181,仅边界错误,260
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,ibo,2181,合法输出,2172
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,ibo,2181,完全正确,2219
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,ibo,2181,实体列表或跨度无效,7
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,ibo,2181,无效 JSON,2
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,ibo,2181,未匹配金标,385
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,ibo,2181,未匹配预测,411
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,ibo,2181,类型及边界错误,121
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,yor,1964,仅类型错误,147
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,yor,1964,仅边界错误,177
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,yor,1964,合法输出,1950
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,yor,1964,完全正确,1296
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,yor,1964,实体列表或跨度无效,11
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,yor,1964,无效 JSON,3
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,yor,1964,未匹配金标,255
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,yor,1964,未匹配预测,260
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,yor,1964,类型及边界错误,99
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,hau,1633,仅类型错误,241
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,hau,1633,仅边界错误,754
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,hau,1633,合法输出,1623
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,hau,1633,完全正确,2038
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,hau,1633,实体列表或跨度无效,6
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,hau,1633,无效 JSON,4
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,hau,1633,未匹配金标,727
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,hau,1633,未匹配预测,940
+MasakhaNER 2.0 Full-FT Replay · 新课程,4,hau,1633,类型及边界错误,288
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,swa,1883,仅类型错误,290
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,swa,1883,仅边界错误,448
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,swa,1883,合法输出,1846
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,swa,1883,完全正确,2749
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,swa,1883,实体列表或跨度无效,19
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,swa,1883,无效 JSON,18
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,swa,1883,未匹配金标,508
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,swa,1883,未匹配预测,677
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,swa,1883,类型及边界错误,110
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,lug,1412,仅类型错误,167
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,lug,1412,仅边界错误,146
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,lug,1412,合法输出,1408
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,lug,1412,完全正确,1412
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,lug,1412,实体列表或跨度无效,4
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,lug,1412,未匹配金标,477
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,lug,1412,未匹配预测,175
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,lug,1412,类型及边界错误,59
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,ibo,2181,仅类型错误,180
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,ibo,2181,仅边界错误,250
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,ibo,2181,合法输出,2154
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,ibo,2181,完全正确,2114
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,ibo,2181,实体列表或跨度无效,20
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,ibo,2181,无效 JSON,7
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,ibo,2181,未匹配金标,453
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,ibo,2181,未匹配预测,355
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,ibo,2181,类型及边界错误,113
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,yor,1964,仅类型错误,139
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,yor,1964,仅边界错误,191
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,yor,1964,合法输出,1947
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,yor,1964,完全正确,1105
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,yor,1964,实体列表或跨度无效,16
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,yor,1964,无效 JSON,1
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,yor,1964,未匹配金标,430
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,yor,1964,未匹配预测,201
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,yor,1964,类型及边界错误,86
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,hau,1633,仅类型错误,702
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,hau,1633,仅边界错误,509
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,hau,1633,合法输出,1602
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,hau,1633,完全正确,1925
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,hau,1633,实体列表或跨度无效,22
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,hau,1633,无效 JSON,9
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,hau,1633,未匹配金标,563
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,hau,1633,未匹配预测,488
+MasakhaNER 2.0 Full-FT Replay · 新课程,5,hau,1633,类型及边界错误,202
+MTOP LoRA Sequential · 新课程,0,fr,3193,仅类型错误,369
+MTOP LoRA Sequential · 新课程,0,fr,3193,仅边界错误,647
+MTOP LoRA Sequential · 新课程,0,fr,3193,可读意图错误,1299
+MTOP LoRA Sequential · 新课程,0,fr,3193,合法输出,2440
+MTOP LoRA Sequential · 新课程,0,fr,3193,完全正确,218
+MTOP LoRA Sequential · 新课程,0,fr,3193,意图字段无效,199
+MTOP LoRA Sequential · 新课程,0,fr,3193,无效 JSON,87
+MTOP LoRA Sequential · 新课程,0,fr,3193,未匹配金标,1812
+MTOP LoRA Sequential · 新课程,0,fr,3193,未匹配预测,1834
+MTOP LoRA Sequential · 新课程,0,fr,3193,槽位标签或跨度无效,467
+MTOP LoRA Sequential · 新课程,0,fr,3193,类型及边界错误,767
+MTOP LoRA Sequential · 新课程,0,es,2998,仅类型错误,346
+MTOP LoRA Sequential · 新课程,0,es,2998,仅边界错误,722
+MTOP LoRA Sequential · 新课程,0,es,2998,可读意图错误,871
+MTOP LoRA Sequential · 新课程,0,es,2998,合法输出,2260
+MTOP LoRA Sequential · 新课程,0,es,2998,完全正确,221
+MTOP LoRA Sequential · 新课程,0,es,2998,意图字段无效,222
+MTOP LoRA Sequential · 新课程,0,es,2998,无效 JSON,83
+MTOP LoRA Sequential · 新课程,0,es,2998,未匹配金标,1638
+MTOP LoRA Sequential · 新课程,0,es,2998,未匹配预测,1763
+MTOP LoRA Sequential · 新课程,0,es,2998,槽位标签或跨度无效,433
+MTOP LoRA Sequential · 新课程,0,es,2998,类型及边界错误,672
+MTOP LoRA Sequential · 新课程,0,hi,2789,仅类型错误,412
+MTOP LoRA Sequential · 新课程,0,hi,2789,仅边界错误,223
+MTOP LoRA Sequential · 新课程,0,hi,2789,可读意图错误,1022
+MTOP LoRA Sequential · 新课程,0,hi,2789,合法输出,1871
+MTOP LoRA Sequential · 新课程,0,hi,2789,完全正确,176
+MTOP LoRA Sequential · 新课程,0,hi,2789,意图字段无效,304
+MTOP LoRA Sequential · 新课程,0,hi,2789,无效 JSON,118
+MTOP LoRA Sequential · 新课程,0,hi,2789,未匹配金标,1816
+MTOP LoRA Sequential · 新课程,0,hi,2789,未匹配预测,1600
+MTOP LoRA Sequential · 新课程,0,hi,2789,槽位标签或跨度无效,496
+MTOP LoRA Sequential · 新课程,0,hi,2789,类型及边界错误,425
+MTOP LoRA Sequential · 新课程,0,de,3549,仅类型错误,510
+MTOP LoRA Sequential · 新课程,0,de,3549,仅边界错误,723
+MTOP LoRA Sequential · 新课程,0,de,3549,可读意图错误,1442
+MTOP LoRA Sequential · 新课程,0,de,3549,合法输出,2653
+MTOP LoRA Sequential · 新课程,0,de,3549,完全正确,286
+MTOP LoRA Sequential · 新课程,0,de,3549,意图字段无效,194
+MTOP LoRA Sequential · 新课程,0,de,3549,无效 JSON,115
+MTOP LoRA Sequential · 新课程,0,de,3549,未匹配金标,2083
+MTOP LoRA Sequential · 新课程,0,de,3549,未匹配预测,1665
+MTOP LoRA Sequential · 新课程,0,de,3549,槽位标签或跨度无效,587
+MTOP LoRA Sequential · 新课程,0,de,3549,类型及边界错误,748
+MTOP LoRA Sequential · 新课程,0,th,2765,仅类型错误,267
+MTOP LoRA Sequential · 新课程,0,th,2765,仅边界错误,482
+MTOP LoRA Sequential · 新课程,0,th,2765,可读意图错误,1328
+MTOP LoRA Sequential · 新课程,0,th,2765,合法输出,2043
+MTOP LoRA Sequential · 新课程,0,th,2765,完全正确,82
+MTOP LoRA Sequential · 新课程,0,th,2765,意图字段无效,283
+MTOP LoRA Sequential · 新课程,0,th,2765,无效 JSON,58
+MTOP LoRA Sequential · 新课程,0,th,2765,未匹配金标,1685
+MTOP LoRA Sequential · 新课程,0,th,2765,未匹配预测,1705
+MTOP LoRA Sequential · 新课程,0,th,2765,槽位标签或跨度无效,381
+MTOP LoRA Sequential · 新课程,0,th,2765,类型及边界错误,667
+MTOP LoRA Sequential · 新课程,1,fr,3193,仅类型错误,290
+MTOP LoRA Sequential · 新课程,1,fr,3193,仅边界错误,1145
+MTOP LoRA Sequential · 新课程,1,fr,3193,可读意图错误,597
+MTOP LoRA Sequential · 新课程,1,fr,3193,合法输出,3064
+MTOP LoRA Sequential · 新课程,1,fr,3193,完全正确,1910
+MTOP LoRA Sequential · 新课程,1,fr,3193,意图字段无效,52
+MTOP LoRA Sequential · 新课程,1,fr,3193,未匹配金标,1262
+MTOP LoRA Sequential · 新课程,1,fr,3193,未匹配预测,617
+MTOP LoRA Sequential · 新课程,1,fr,3193,槽位标签或跨度无效,77
+MTOP LoRA Sequential · 新课程,1,fr,3193,类型及边界错误,276
+MTOP LoRA Sequential · 新课程,1,es,2998,仅类型错误,230
+MTOP LoRA Sequential · 新课程,1,es,2998,仅边界错误,1255
+MTOP LoRA Sequential · 新课程,1,es,2998,可读意图错误,536
+MTOP LoRA Sequential · 新课程,1,es,2998,合法输出,2917
+MTOP LoRA Sequential · 新课程,1,es,2998,完全正确,1572
+MTOP LoRA Sequential · 新课程,1,es,2998,意图字段无效,43
+MTOP LoRA Sequential · 新课程,1,es,2998,无效 JSON,1
+MTOP LoRA Sequential · 新课程,1,es,2998,未匹配金标,1370
+MTOP LoRA Sequential · 新课程,1,es,2998,未匹配预测,738
+MTOP LoRA Sequential · 新课程,1,es,2998,槽位标签或跨度无效,37
+MTOP LoRA Sequential · 新课程,1,es,2998,类型及边界错误,296
+MTOP LoRA Sequential · 新课程,1,hi,2789,仅类型错误,406
+MTOP LoRA Sequential · 新课程,1,hi,2789,仅边界错误,977
+MTOP LoRA Sequential · 新课程,1,hi,2789,可读意图错误,706
+MTOP LoRA Sequential · 新课程,1,hi,2789,合法输出,2719
+MTOP LoRA Sequential · 新课程,1,hi,2789,完全正确,959
+MTOP LoRA Sequential · 新课程,1,hi,2789,意图字段无效,33
+MTOP LoRA Sequential · 新课程,1,hi,2789,未匹配金标,1627
+MTOP LoRA Sequential · 新课程,1,hi,2789,未匹配预测,1539
+MTOP LoRA Sequential · 新课程,1,hi,2789,槽位标签或跨度无效,37
+MTOP LoRA Sequential · 新课程,1,hi,2789,类型及边界错误,423
+MTOP LoRA Sequential · 新课程,1,de,3549,仅类型错误,399
+MTOP LoRA Sequential · 新课程,1,de,3549,仅边界错误,1470
+MTOP LoRA Sequential · 新课程,1,de,3549,可读意图错误,843
+MTOP LoRA Sequential · 新课程,1,de,3549,合法输出,3458
+MTOP LoRA Sequential · 新课程,1,de,3549,完全正确,1619
+MTOP LoRA Sequential · 新课程,1,de,3549,意图字段无效,36
+MTOP LoRA Sequential · 新课程,1,de,3549,未匹配金标,1925
+MTOP LoRA Sequential · 新课程,1,de,3549,未匹配预测,838
+MTOP LoRA Sequential · 新课程,1,de,3549,槽位标签或跨度无效,55
+MTOP LoRA Sequential · 新课程,1,de,3549,类型及边界错误,380
+MTOP LoRA Sequential · 新课程,1,th,2765,仅类型错误,264
+MTOP LoRA Sequential · 新课程,1,th,2765,仅边界错误,1351
+MTOP LoRA Sequential · 新课程,1,th,2765,可读意图错误,797
+MTOP LoRA Sequential · 新课程,1,th,2765,合法输出,2706
+MTOP LoRA Sequential · 新课程,1,th,2765,完全正确,1007
+MTOP LoRA Sequential · 新课程,1,th,2765,意图字段无效,32
+MTOP LoRA Sequential · 新课程,1,th,2765,无效 JSON,2
+MTOP LoRA Sequential · 新课程,1,th,2765,未匹配金标,1091
+MTOP LoRA Sequential · 新课程,1,th,2765,未匹配预测,1167
+MTOP LoRA Sequential · 新课程,1,th,2765,槽位标签或跨度无效,25
+MTOP LoRA Sequential · 新课程,1,th,2765,类型及边界错误,498
+MTOP LoRA Sequential · 新课程,2,fr,3193,仅类型错误,278
+MTOP LoRA Sequential · 新课程,2,fr,3193,仅边界错误,910
+MTOP LoRA Sequential · 新课程,2,fr,3193,可读意图错误,503
+MTOP LoRA Sequential · 新课程,2,fr,3193,合法输出,3131
+MTOP LoRA Sequential · 新课程,2,fr,3193,完全正确,2941
+MTOP LoRA Sequential · 新课程,2,fr,3193,意图字段无效,26
+MTOP LoRA Sequential · 新课程,2,fr,3193,未匹配金标,709
+MTOP LoRA Sequential · 新课程,2,fr,3193,未匹配预测,607
+MTOP LoRA Sequential · 新课程,2,fr,3193,槽位标签或跨度无效,36
+MTOP LoRA Sequential · 新课程,2,fr,3193,类型及边界错误,154
+MTOP LoRA Sequential · 新课程,2,es,2998,仅类型错误,218
+MTOP LoRA Sequential · 新课程,2,es,2998,仅边界错误,888
+MTOP LoRA Sequential · 新课程,2,es,2998,可读意图错误,336
+MTOP LoRA Sequential · 新课程,2,es,2998,合法输出,2963
+MTOP LoRA Sequential · 新课程,2,es,2998,完全正确,2936
+MTOP LoRA Sequential · 新课程,2,es,2998,意图字段无效,13
+MTOP LoRA Sequential · 新课程,2,es,2998,未匹配金标,617
+MTOP LoRA Sequential · 新课程,2,es,2998,未匹配预测,531
+MTOP LoRA Sequential · 新课程,2,es,2998,槽位标签或跨度无效,22
+MTOP LoRA Sequential · 新课程,2,es,2998,类型及边界错误,122
+MTOP LoRA Sequential · 新课程,2,hi,2789,仅类型错误,442
+MTOP LoRA Sequential · 新课程,2,hi,2789,仅边界错误,960
+MTOP LoRA Sequential · 新课程,2,hi,2789,可读意图错误,608
+MTOP LoRA Sequential · 新课程,2,hi,2789,合法输出,2724
+MTOP LoRA Sequential · 新课程,2,hi,2789,完全正确,1634
+MTOP LoRA Sequential · 新课程,2,hi,2789,意图字段无效,20
+MTOP LoRA Sequential · 新课程,2,hi,2789,无效 JSON,1
+MTOP LoRA Sequential · 新课程,2,hi,2789,未匹配金标,1091
+MTOP LoRA Sequential · 新课程,2,hi,2789,未匹配预测,893
+MTOP LoRA Sequential · 新课程,2,hi,2789,槽位标签或跨度无效,44
+MTOP LoRA Sequential · 新课程,2,hi,2789,类型及边界错误,247
+MTOP LoRA Sequential · 新课程,2,de,3549,仅类型错误,434
+MTOP LoRA Sequential · 新课程,2,de,3549,仅边界错误,1124
+MTOP LoRA Sequential · 新课程,2,de,3549,可读意图错误,658
+MTOP LoRA Sequential · 新课程,2,de,3549,合法输出,3489
+MTOP LoRA Sequential · 新课程,2,de,3549,完全正确,2817
+MTOP LoRA Sequential · 新课程,2,de,3549,意图字段无效,24
+MTOP LoRA Sequential · 新课程,2,de,3549,未匹配金标,1275
+MTOP LoRA Sequential · 新课程,2,de,3549,未匹配预测,791
+MTOP LoRA Sequential · 新课程,2,de,3549,槽位标签或跨度无效,36
+MTOP LoRA Sequential · 新课程,2,de,3549,类型及边界错误,194
+MTOP LoRA Sequential · 新课程,2,th,2765,仅类型错误,247
+MTOP LoRA Sequential · 新课程,2,th,2765,仅边界错误,1365
+MTOP LoRA Sequential · 新课程,2,th,2765,可读意图错误,676
+MTOP LoRA Sequential · 新课程,2,th,2765,合法输出,2718
+MTOP LoRA Sequential · 新课程,2,th,2765,完全正确,1448
+MTOP LoRA Sequential · 新课程,2,th,2765,意图字段无效,17
+MTOP LoRA Sequential · 新课程,2,th,2765,未匹配金标,889
+MTOP LoRA Sequential · 新课程,2,th,2765,未匹配预测,900
+MTOP LoRA Sequential · 新课程,2,th,2765,槽位标签或跨度无效,30
+MTOP LoRA Sequential · 新课程,2,th,2765,类型及边界错误,283
+MTOP LoRA Sequential · 新课程,3,fr,3193,仅类型错误,339
+MTOP LoRA Sequential · 新课程,3,fr,3193,仅边界错误,1208
+MTOP LoRA Sequential · 新课程,3,fr,3193,可读意图错误,478
+MTOP LoRA Sequential · 新课程,3,fr,3193,合法输出,3122
+MTOP LoRA Sequential · 新课程,3,fr,3193,完全正确,2678
+MTOP LoRA Sequential · 新课程,3,fr,3193,意图字段无效,21
+MTOP LoRA Sequential · 新课程,3,fr,3193,未匹配金标,612
+MTOP LoRA Sequential · 新课程,3,fr,3193,未匹配预测,786
+MTOP LoRA Sequential · 新课程,3,fr,3193,槽位标签或跨度无效,50
+MTOP LoRA Sequential · 新课程,3,fr,3193,类型及边界错误,166
+MTOP LoRA Sequential · 新课程,3,es,2998,仅类型错误,221
+MTOP LoRA Sequential · 新课程,3,es,2998,仅边界错误,1134
+MTOP LoRA Sequential · 新课程,3,es,2998,可读意图错误,317
+MTOP LoRA Sequential · 新课程,3,es,2998,合法输出,2949
+MTOP LoRA Sequential · 新课程,3,es,2998,完全正确,2792
+MTOP LoRA Sequential · 新课程,3,es,2998,意图字段无效,19
+MTOP LoRA Sequential · 新课程,3,es,2998,未匹配金标,499
+MTOP LoRA Sequential · 新课程,3,es,2998,未匹配预测,620
+MTOP LoRA Sequential · 新课程,3,es,2998,槽位标签或跨度无效,30
+MTOP LoRA Sequential · 新课程,3,es,2998,类型及边界错误,117
+MTOP LoRA Sequential · 新课程,3,hi,2789,仅类型错误,412
+MTOP LoRA Sequential · 新课程,3,hi,2789,仅边界错误,697
+MTOP LoRA Sequential · 新课程,3,hi,2789,可读意图错误,434
+MTOP LoRA Sequential · 新课程,3,hi,2789,合法输出,2758
+MTOP LoRA Sequential · 新课程,3,hi,2789,完全正确,2682
+MTOP LoRA Sequential · 新课程,3,hi,2789,意图字段无效,20
+MTOP LoRA Sequential · 新课程,3,hi,2789,未匹配金标,520
+MTOP LoRA Sequential · 新课程,3,hi,2789,未匹配预测,708
+MTOP LoRA Sequential · 新课程,3,hi,2789,槽位标签或跨度无效,11
+MTOP LoRA Sequential · 新课程,3,hi,2789,类型及边界错误,130
+MTOP LoRA Sequential · 新课程,3,de,3549,仅类型错误,485
+MTOP LoRA Sequential · 新课程,3,de,3549,仅边界错误,1273
+MTOP LoRA Sequential · 新课程,3,de,3549,可读意图错误,605
+MTOP LoRA Sequential · 新课程,3,de,3549,合法输出,3478
+MTOP LoRA Sequential · 新课程,3,de,3549,完全正确,3008
+MTOP LoRA Sequential · 新课程,3,de,3549,意图字段无效,27
+MTOP LoRA Sequential · 新课程,3,de,3549,未匹配金标,936
+MTOP LoRA Sequential · 新课程,3,de,3549,未匹配预测,1118
+MTOP LoRA Sequential · 新课程,3,de,3549,槽位标签或跨度无效,44
+MTOP LoRA Sequential · 新课程,3,de,3549,类型及边界错误,132
+MTOP LoRA Sequential · 新课程,3,th,2765,仅类型错误,266
+MTOP LoRA Sequential · 新课程,3,th,2765,仅边界错误,1465
+MTOP LoRA Sequential · 新课程,3,th,2765,可读意图错误,603
+MTOP LoRA Sequential · 新课程,3,th,2765,合法输出,2671
+MTOP LoRA Sequential · 新课程,3,th,2765,完全正确,1662
+MTOP LoRA Sequential · 新课程,3,th,2765,意图字段无效,14
+MTOP LoRA Sequential · 新课程,3,th,2765,未匹配金标,490
+MTOP LoRA Sequential · 新课程,3,th,2765,未匹配预测,945
+MTOP LoRA Sequential · 新课程,3,th,2765,槽位标签或跨度无效,80
+MTOP LoRA Sequential · 新课程,3,th,2765,类型及边界错误,287
+MTOP LoRA Sequential · 新课程,4,fr,3193,仅类型错误,306
+MTOP LoRA Sequential · 新课程,4,fr,3193,仅边界错误,758
+MTOP LoRA Sequential · 新课程,4,fr,3193,可读意图错误,482
+MTOP LoRA Sequential · 新课程,4,fr,3193,合法输出,3174
+MTOP LoRA Sequential · 新课程,4,fr,3193,完全正确,3220
+MTOP LoRA Sequential · 新课程,4,fr,3193,意图字段无效,6
+MTOP LoRA Sequential · 新课程,4,fr,3193,未匹配金标,662
+MTOP LoRA Sequential · 新课程,4,fr,3193,未匹配预测,366
+MTOP LoRA Sequential · 新课程,4,fr,3193,槽位标签或跨度无效,13
+MTOP LoRA Sequential · 新课程,4,fr,3193,类型及边界错误,122
+MTOP LoRA Sequential · 新课程,4,es,2998,仅类型错误,170
+MTOP LoRA Sequential · 新课程,4,es,2998,仅边界错误,847
+MTOP LoRA Sequential · 新课程,4,es,2998,可读意图错误,312
+MTOP LoRA Sequential · 新课程,4,es,2998,合法输出,2987
+MTOP LoRA Sequential · 新课程,4,es,2998,完全正确,3179
+MTOP LoRA Sequential · 新课程,4,es,2998,意图字段无效,4
+MTOP LoRA Sequential · 新课程,4,es,2998,未匹配金标,525
+MTOP LoRA Sequential · 新课程,4,es,2998,未匹配预测,318
+MTOP LoRA Sequential · 新课程,4,es,2998,槽位标签或跨度无效,7
+MTOP LoRA Sequential · 新课程,4,es,2998,类型及边界错误,102
+MTOP LoRA Sequential · 新课程,4,hi,2789,仅类型错误,378
+MTOP LoRA Sequential · 新课程,4,hi,2789,仅边界错误,722
+MTOP LoRA Sequential · 新课程,4,hi,2789,可读意图错误,474
+MTOP LoRA Sequential · 新课程,4,hi,2789,合法输出,2781
+MTOP LoRA Sequential · 新课程,4,hi,2789,完全正确,2652
+MTOP LoRA Sequential · 新课程,4,hi,2789,意图字段无效,4
+MTOP LoRA Sequential · 新课程,4,hi,2789,未匹配金标,602
+MTOP LoRA Sequential · 新课程,4,hi,2789,未匹配预测,546
+MTOP LoRA Sequential · 新课程,4,hi,2789,槽位标签或跨度无效,4
+MTOP LoRA Sequential · 新课程,4,hi,2789,类型及边界错误,128
+MTOP LoRA Sequential · 新课程,4,de,3549,仅类型错误,395
+MTOP LoRA Sequential · 新课程,4,de,3549,仅边界错误,737
+MTOP LoRA Sequential · 新课程,4,de,3549,可读意图错误,536
+MTOP LoRA Sequential · 新课程,4,de,3549,合法输出,3540
+MTOP LoRA Sequential · 新课程,4,de,3549,完全正确,3761
+MTOP LoRA Sequential · 新课程,4,de,3549,意图字段无效,1
+MTOP LoRA Sequential · 新课程,4,de,3549,未匹配金标,903
+MTOP LoRA Sequential · 新课程,4,de,3549,未匹配预测,462
+MTOP LoRA Sequential · 新课程,4,de,3549,槽位标签或跨度无效,8
+MTOP LoRA Sequential · 新课程,4,de,3549,类型及边界错误,144
+MTOP LoRA Sequential · 新课程,4,th,2765,仅类型错误,277
+MTOP LoRA Sequential · 新课程,4,th,2765,仅边界错误,1255
+MTOP LoRA Sequential · 新课程,4,th,2765,可读意图错误,609
+MTOP LoRA Sequential · 新课程,4,th,2765,合法输出,2754
+MTOP LoRA Sequential · 新课程,4,th,2765,完全正确,1911
+MTOP LoRA Sequential · 新课程,4,th,2765,意图字段无效,1
+MTOP LoRA Sequential · 新课程,4,th,2765,未匹配金标,652
+MTOP LoRA Sequential · 新课程,4,th,2765,未匹配预测,627
+MTOP LoRA Sequential · 新课程,4,th,2765,槽位标签或跨度无效,10
+MTOP LoRA Sequential · 新课程,4,th,2765,类型及边界错误,188
+MTOP LoRA Sequential · 新课程,5,fr,3193,仅类型错误,253
+MTOP LoRA Sequential · 新课程,5,fr,3193,仅边界错误,935
+MTOP LoRA Sequential · 新课程,5,fr,3193,可读意图错误,453
+MTOP LoRA Sequential · 新课程,5,fr,3193,合法输出,3134
+MTOP LoRA Sequential · 新课程,5,fr,3193,完全正确,2783
+MTOP LoRA Sequential · 新课程,5,fr,3193,意图字段无效,22
+MTOP LoRA Sequential · 新课程,5,fr,3193,未匹配金标,875
+MTOP LoRA Sequential · 新课程,5,fr,3193,未匹配预测,257
+MTOP LoRA Sequential · 新课程,5,fr,3193,槽位标签或跨度无效,37
+MTOP LoRA Sequential · 新课程,5,fr,3193,类型及边界错误,139
+MTOP LoRA Sequential · 新课程,5,es,2998,仅类型错误,148
+MTOP LoRA Sequential · 新课程,5,es,2998,仅边界错误,1099
+MTOP LoRA Sequential · 新课程,5,es,2998,可读意图错误,287
+MTOP LoRA Sequential · 新课程,5,es,2998,合法输出,2969
+MTOP LoRA Sequential · 新课程,5,es,2998,完全正确,2768
+MTOP LoRA Sequential · 新课程,5,es,2998,意图字段无效,13
+MTOP LoRA Sequential · 新课程,5,es,2998,未匹配金标,691
+MTOP LoRA Sequential · 新课程,5,es,2998,未匹配预测,207
+MTOP LoRA Sequential · 新课程,5,es,2998,槽位标签或跨度无效,16
+MTOP LoRA Sequential · 新课程,5,es,2998,类型及边界错误,86
+MTOP LoRA Sequential · 新课程,5,hi,2789,仅类型错误,357
+MTOP LoRA Sequential · 新课程,5,hi,2789,仅边界错误,775
+MTOP LoRA Sequential · 新课程,5,hi,2789,可读意图错误,473
+MTOP LoRA Sequential · 新课程,5,hi,2789,合法输出,2777
+MTOP LoRA Sequential · 新课程,5,hi,2789,完全正确,2338
+MTOP LoRA Sequential · 新课程,5,hi,2789,意图字段无效,8
+MTOP LoRA Sequential · 新课程,5,hi,2789,未匹配金标,838
+MTOP LoRA Sequential · 新课程,5,hi,2789,未匹配预测,346
+MTOP LoRA Sequential · 新课程,5,hi,2789,槽位标签或跨度无效,4
+MTOP LoRA Sequential · 新课程,5,hi,2789,类型及边界错误,166
+MTOP LoRA Sequential · 新课程,5,de,3549,仅类型错误,340
+MTOP LoRA Sequential · 新课程,5,de,3549,仅边界错误,936
+MTOP LoRA Sequential · 新课程,5,de,3549,可读意图错误,529
+MTOP LoRA Sequential · 新课程,5,de,3549,合法输出,3500
+MTOP LoRA Sequential · 新课程,5,de,3549,完全正确,3231
+MTOP LoRA Sequential · 新课程,5,de,3549,意图字段无效,14
+MTOP LoRA Sequential · 新课程,5,de,3549,未匹配金标,1191
+MTOP LoRA Sequential · 新课程,5,de,3549,未匹配预测,304
+MTOP LoRA Sequential · 新课程,5,de,3549,槽位标签或跨度无效,35
+MTOP LoRA Sequential · 新课程,5,de,3549,类型及边界错误,165
+MTOP LoRA Sequential · 新课程,5,th,2765,仅类型错误,223
+MTOP LoRA Sequential · 新课程,5,th,2765,仅边界错误,669
+MTOP LoRA Sequential · 新课程,5,th,2765,可读意图错误,408
+MTOP LoRA Sequential · 新课程,5,th,2765,合法输出,2750
+MTOP LoRA Sequential · 新课程,5,th,2765,完全正确,2679
+MTOP LoRA Sequential · 新课程,5,th,2765,意图字段无效,4
+MTOP LoRA Sequential · 新课程,5,th,2765,未匹配金标,579
+MTOP LoRA Sequential · 新课程,5,th,2765,未匹配预测,248
+MTOP LoRA Sequential · 新课程,5,th,2765,槽位标签或跨度无效,11
+MTOP LoRA Sequential · 新课程,5,th,2765,类型及边界错误,127
+MTOP LoRA Replay · 新课程,0,fr,3193,仅类型错误,369
+MTOP LoRA Replay · 新课程,0,fr,3193,仅边界错误,647
+MTOP LoRA Replay · 新课程,0,fr,3193,可读意图错误,1299
+MTOP LoRA Replay · 新课程,0,fr,3193,合法输出,2440
+MTOP LoRA Replay · 新课程,0,fr,3193,完全正确,218
+MTOP LoRA Replay · 新课程,0,fr,3193,意图字段无效,199
+MTOP LoRA Replay · 新课程,0,fr,3193,无效 JSON,87
+MTOP LoRA Replay · 新课程,0,fr,3193,未匹配金标,1812
+MTOP LoRA Replay · 新课程,0,fr,3193,未匹配预测,1834
+MTOP LoRA Replay · 新课程,0,fr,3193,槽位标签或跨度无效,467
+MTOP LoRA Replay · 新课程,0,fr,3193,类型及边界错误,767
+MTOP LoRA Replay · 新课程,0,es,2998,仅类型错误,346
+MTOP LoRA Replay · 新课程,0,es,2998,仅边界错误,722
+MTOP LoRA Replay · 新课程,0,es,2998,可读意图错误,871
+MTOP LoRA Replay · 新课程,0,es,2998,合法输出,2260
+MTOP LoRA Replay · 新课程,0,es,2998,完全正确,221
+MTOP LoRA Replay · 新课程,0,es,2998,意图字段无效,222
+MTOP LoRA Replay · 新课程,0,es,2998,无效 JSON,83
+MTOP LoRA Replay · 新课程,0,es,2998,未匹配金标,1638
+MTOP LoRA Replay · 新课程,0,es,2998,未匹配预测,1763
+MTOP LoRA Replay · 新课程,0,es,2998,槽位标签或跨度无效,433
+MTOP LoRA Replay · 新课程,0,es,2998,类型及边界错误,672
+MTOP LoRA Replay · 新课程,0,hi,2789,仅类型错误,412
+MTOP LoRA Replay · 新课程,0,hi,2789,仅边界错误,223
+MTOP LoRA Replay · 新课程,0,hi,2789,可读意图错误,1022
+MTOP LoRA Replay · 新课程,0,hi,2789,合法输出,1871
+MTOP LoRA Replay · 新课程,0,hi,2789,完全正确,176
+MTOP LoRA Replay · 新课程,0,hi,2789,意图字段无效,304
+MTOP LoRA Replay · 新课程,0,hi,2789,无效 JSON,118
+MTOP LoRA Replay · 新课程,0,hi,2789,未匹配金标,1816
+MTOP LoRA Replay · 新课程,0,hi,2789,未匹配预测,1600
+MTOP LoRA Replay · 新课程,0,hi,2789,槽位标签或跨度无效,496
+MTOP LoRA Replay · 新课程,0,hi,2789,类型及边界错误,425
+MTOP LoRA Replay · 新课程,0,de,3549,仅类型错误,510
+MTOP LoRA Replay · 新课程,0,de,3549,仅边界错误,723
+MTOP LoRA Replay · 新课程,0,de,3549,可读意图错误,1442
+MTOP LoRA Replay · 新课程,0,de,3549,合法输出,2653
+MTOP LoRA Replay · 新课程,0,de,3549,完全正确,286
+MTOP LoRA Replay · 新课程,0,de,3549,意图字段无效,194
+MTOP LoRA Replay · 新课程,0,de,3549,无效 JSON,115
+MTOP LoRA Replay · 新课程,0,de,3549,未匹配金标,2083
+MTOP LoRA Replay · 新课程,0,de,3549,未匹配预测,1665
+MTOP LoRA Replay · 新课程,0,de,3549,槽位标签或跨度无效,587
+MTOP LoRA Replay · 新课程,0,de,3549,类型及边界错误,748
+MTOP LoRA Replay · 新课程,0,th,2765,仅类型错误,267
+MTOP LoRA Replay · 新课程,0,th,2765,仅边界错误,482
+MTOP LoRA Replay · 新课程,0,th,2765,可读意图错误,1328
+MTOP LoRA Replay · 新课程,0,th,2765,合法输出,2043
+MTOP LoRA Replay · 新课程,0,th,2765,完全正确,82
+MTOP LoRA Replay · 新课程,0,th,2765,意图字段无效,283
+MTOP LoRA Replay · 新课程,0,th,2765,无效 JSON,58
+MTOP LoRA Replay · 新课程,0,th,2765,未匹配金标,1685
+MTOP LoRA Replay · 新课程,0,th,2765,未匹配预测,1705
+MTOP LoRA Replay · 新课程,0,th,2765,槽位标签或跨度无效,381
+MTOP LoRA Replay · 新课程,0,th,2765,类型及边界错误,667
+MTOP LoRA Replay · 新课程,1,fr,3193,仅类型错误,290
+MTOP LoRA Replay · 新课程,1,fr,3193,仅边界错误,1145
+MTOP LoRA Replay · 新课程,1,fr,3193,可读意图错误,597
+MTOP LoRA Replay · 新课程,1,fr,3193,合法输出,3064
+MTOP LoRA Replay · 新课程,1,fr,3193,完全正确,1910
+MTOP LoRA Replay · 新课程,1,fr,3193,意图字段无效,52
+MTOP LoRA Replay · 新课程,1,fr,3193,未匹配金标,1262
+MTOP LoRA Replay · 新课程,1,fr,3193,未匹配预测,617
+MTOP LoRA Replay · 新课程,1,fr,3193,槽位标签或跨度无效,77
+MTOP LoRA Replay · 新课程,1,fr,3193,类型及边界错误,276
+MTOP LoRA Replay · 新课程,1,es,2998,仅类型错误,230
+MTOP LoRA Replay · 新课程,1,es,2998,仅边界错误,1255
+MTOP LoRA Replay · 新课程,1,es,2998,可读意图错误,536
+MTOP LoRA Replay · 新课程,1,es,2998,合法输出,2917
+MTOP LoRA Replay · 新课程,1,es,2998,完全正确,1572
+MTOP LoRA Replay · 新课程,1,es,2998,意图字段无效,43
+MTOP LoRA Replay · 新课程,1,es,2998,无效 JSON,1
+MTOP LoRA Replay · 新课程,1,es,2998,未匹配金标,1370
+MTOP LoRA Replay · 新课程,1,es,2998,未匹配预测,738
+MTOP LoRA Replay · 新课程,1,es,2998,槽位标签或跨度无效,37
+MTOP LoRA Replay · 新课程,1,es,2998,类型及边界错误,296
+MTOP LoRA Replay · 新课程,1,hi,2789,仅类型错误,406
+MTOP LoRA Replay · 新课程,1,hi,2789,仅边界错误,977
+MTOP LoRA Replay · 新课程,1,hi,2789,可读意图错误,706
+MTOP LoRA Replay · 新课程,1,hi,2789,合法输出,2719
+MTOP LoRA Replay · 新课程,1,hi,2789,完全正确,959
+MTOP LoRA Replay · 新课程,1,hi,2789,意图字段无效,33
+MTOP LoRA Replay · 新课程,1,hi,2789,未匹配金标,1627
+MTOP LoRA Replay · 新课程,1,hi,2789,未匹配预测,1539
+MTOP LoRA Replay · 新课程,1,hi,2789,槽位标签或跨度无效,37
+MTOP LoRA Replay · 新课程,1,hi,2789,类型及边界错误,423
+MTOP LoRA Replay · 新课程,1,de,3549,仅类型错误,399
+MTOP LoRA Replay · 新课程,1,de,3549,仅边界错误,1470
+MTOP LoRA Replay · 新课程,1,de,3549,可读意图错误,843
+MTOP LoRA Replay · 新课程,1,de,3549,合法输出,3458
+MTOP LoRA Replay · 新课程,1,de,3549,完全正确,1619
+MTOP LoRA Replay · 新课程,1,de,3549,意图字段无效,36
+MTOP LoRA Replay · 新课程,1,de,3549,未匹配金标,1925
+MTOP LoRA Replay · 新课程,1,de,3549,未匹配预测,838
+MTOP LoRA Replay · 新课程,1,de,3549,槽位标签或跨度无效,55
+MTOP LoRA Replay · 新课程,1,de,3549,类型及边界错误,380
+MTOP LoRA Replay · 新课程,1,th,2765,仅类型错误,264
+MTOP LoRA Replay · 新课程,1,th,2765,仅边界错误,1351
+MTOP LoRA Replay · 新课程,1,th,2765,可读意图错误,797
+MTOP LoRA Replay · 新课程,1,th,2765,合法输出,2706
+MTOP LoRA Replay · 新课程,1,th,2765,完全正确,1007
+MTOP LoRA Replay · 新课程,1,th,2765,意图字段无效,32
+MTOP LoRA Replay · 新课程,1,th,2765,无效 JSON,2
+MTOP LoRA Replay · 新课程,1,th,2765,未匹配金标,1091
+MTOP LoRA Replay · 新课程,1,th,2765,未匹配预测,1167
+MTOP LoRA Replay · 新课程,1,th,2765,槽位标签或跨度无效,25
+MTOP LoRA Replay · 新课程,1,th,2765,类型及边界错误,498
+MTOP LoRA Replay · 新课程,2,fr,3193,仅类型错误,302
+MTOP LoRA Replay · 新课程,2,fr,3193,仅边界错误,922
+MTOP LoRA Replay · 新课程,2,fr,3193,可读意图错误,529
+MTOP LoRA Replay · 新课程,2,fr,3193,合法输出,3124
+MTOP LoRA Replay · 新课程,2,fr,3193,完全正确,2888
+MTOP LoRA Replay · 新课程,2,fr,3193,意图字段无效,12
+MTOP LoRA Replay · 新课程,2,fr,3193,未匹配金标,717
+MTOP LoRA Replay · 新课程,2,fr,3193,未匹配预测,507
+MTOP LoRA Replay · 新课程,2,fr,3193,槽位标签或跨度无效,57
+MTOP LoRA Replay · 新课程,2,fr,3193,类型及边界错误,141
+MTOP LoRA Replay · 新课程,2,es,2998,仅类型错误,220
+MTOP LoRA Replay · 新课程,2,es,2998,仅边界错误,924
+MTOP LoRA Replay · 新课程,2,es,2998,可读意图错误,319
+MTOP LoRA Replay · 新课程,2,es,2998,合法输出,2953
+MTOP LoRA Replay · 新课程,2,es,2998,完全正确,2873
+MTOP LoRA Replay · 新课程,2,es,2998,意图字段无效,12
+MTOP LoRA Replay · 新课程,2,es,2998,未匹配金标,623
+MTOP LoRA Replay · 新课程,2,es,2998,未匹配预测,456
+MTOP LoRA Replay · 新课程,2,es,2998,槽位标签或跨度无效,33
+MTOP LoRA Replay · 新课程,2,es,2998,类型及边界错误,121
+MTOP LoRA Replay · 新课程,2,hi,2789,仅类型错误,413
+MTOP LoRA Replay · 新课程,2,hi,2789,仅边界错误,912
+MTOP LoRA Replay · 新课程,2,hi,2789,可读意图错误,620
+MTOP LoRA Replay · 新课程,2,hi,2789,合法输出,2716
+MTOP LoRA Replay · 新课程,2,hi,2789,完全正确,1550
+MTOP LoRA Replay · 新课程,2,hi,2789,意图字段无效,8
+MTOP LoRA Replay · 新课程,2,hi,2789,未匹配金标,1267
+MTOP LoRA Replay · 新课程,2,hi,2789,未匹配预测,788
+MTOP LoRA Replay · 新课程,2,hi,2789,槽位标签或跨度无效,65
+MTOP LoRA Replay · 新课程,2,hi,2789,类型及边界错误,225
+MTOP LoRA Replay · 新课程,2,de,3549,仅类型错误,460
+MTOP LoRA Replay · 新课程,2,de,3549,仅边界错误,1139
+MTOP LoRA Replay · 新课程,2,de,3549,可读意图错误,667
+MTOP LoRA Replay · 新课程,2,de,3549,合法输出,3484
+MTOP LoRA Replay · 新课程,2,de,3549,完全正确,2767
+MTOP LoRA Replay · 新课程,2,de,3549,意图字段无效,11
+MTOP LoRA Replay · 新课程,2,de,3549,未匹配金标,1263
+MTOP LoRA Replay · 新课程,2,de,3549,未匹配预测,712
+MTOP LoRA Replay · 新课程,2,de,3549,槽位标签或跨度无效,54
+MTOP LoRA Replay · 新课程,2,de,3549,类型及边界错误,192
+MTOP LoRA Replay · 新课程,2,th,2765,仅类型错误,235
+MTOP LoRA Replay · 新课程,2,th,2765,仅边界错误,1336
+MTOP LoRA Replay · 新课程,2,th,2765,可读意图错误,673
+MTOP LoRA Replay · 新课程,2,th,2765,合法输出,2685
+MTOP LoRA Replay · 新课程,2,th,2765,完全正确,1423
+MTOP LoRA Replay · 新课程,2,th,2765,意图字段无效,10
+MTOP LoRA Replay · 新课程,2,th,2765,未匹配金标,876
+MTOP LoRA Replay · 新课程,2,th,2765,未匹配预测,813
+MTOP LoRA Replay · 新课程,2,th,2765,槽位标签或跨度无效,70
+MTOP LoRA Replay · 新课程,2,th,2765,类型及边界错误,304
+MTOP LoRA Replay · 新课程,3,fr,3193,仅类型错误,319
+MTOP LoRA Replay · 新课程,3,fr,3193,仅边界错误,1069
+MTOP LoRA Replay · 新课程,3,fr,3193,可读意图错误,494
+MTOP LoRA Replay · 新课程,3,fr,3193,合法输出,3124
+MTOP LoRA Replay · 新课程,3,fr,3193,完全正确,2770
+MTOP LoRA Replay · 新课程,3,fr,3193,意图字段无效,21
+MTOP LoRA Replay · 新课程,3,fr,3193,未匹配金标,654
+MTOP LoRA Replay · 新课程,3,fr,3193,未匹配预测,702
+MTOP LoRA Replay · 新课程,3,fr,3193,槽位标签或跨度无效,48
+MTOP LoRA Replay · 新课程,3,fr,3193,类型及边界错误,178
+MTOP LoRA Replay · 新课程,3,es,2998,仅类型错误,220
+MTOP LoRA Replay · 新课程,3,es,2998,仅边界错误,999
+MTOP LoRA Replay · 新课程,3,es,2998,可读意图错误,313
+MTOP LoRA Replay · 新课程,3,es,2998,合法输出,2957
+MTOP LoRA Replay · 新课程,3,es,2998,完全正确,2901
+MTOP LoRA Replay · 新课程,3,es,2998,意图字段无效,10
+MTOP LoRA Replay · 新课程,3,es,2998,未匹配金标,531
+MTOP LoRA Replay · 新课程,3,es,2998,未匹配预测,574
+MTOP LoRA Replay · 新课程,3,es,2998,槽位标签或跨度无效,31
+MTOP LoRA Replay · 新课程,3,es,2998,类型及边界错误,116
+MTOP LoRA Replay · 新课程,3,hi,2789,仅类型错误,389
+MTOP LoRA Replay · 新课程,3,hi,2789,仅边界错误,668
+MTOP LoRA Replay · 新课程,3,hi,2789,可读意图错误,452
+MTOP LoRA Replay · 新课程,3,hi,2789,合法输出,2771
+MTOP LoRA Replay · 新课程,3,hi,2789,完全正确,2700
+MTOP LoRA Replay · 新课程,3,hi,2789,意图字段无效,11
+MTOP LoRA Replay · 新课程,3,hi,2789,未匹配金标,553
+MTOP LoRA Replay · 新课程,3,hi,2789,未匹配预测,724
+MTOP LoRA Replay · 新课程,3,hi,2789,槽位标签或跨度无效,7
+MTOP LoRA Replay · 新课程,3,hi,2789,类型及边界错误,155
+MTOP LoRA Replay · 新课程,3,de,3549,仅类型错误,471
+MTOP LoRA Replay · 新课程,3,de,3549,仅边界错误,1114
+MTOP LoRA Replay · 新课程,3,de,3549,可读意图错误,685
+MTOP LoRA Replay · 新课程,3,de,3549,合法输出,3473
+MTOP LoRA Replay · 新课程,3,de,3549,字段结构无效,1
+MTOP LoRA Replay · 新课程,3,de,3549,完全正确,3142
+MTOP LoRA Replay · 新课程,3,de,3549,意图字段无效,22
+MTOP LoRA Replay · 新课程,3,de,3549,未匹配金标,925
+MTOP LoRA Replay · 新课程,3,de,3549,未匹配预测,1141
+MTOP LoRA Replay · 新课程,3,de,3549,槽位标签或跨度无效,53
+MTOP LoRA Replay · 新课程,3,de,3549,类型及边界错误,176
+MTOP LoRA Replay · 新课程,3,th,2765,仅类型错误,280
+MTOP LoRA Replay · 新课程,3,th,2765,仅边界错误,1431
+MTOP LoRA Replay · 新课程,3,th,2765,可读意图错误,617
+MTOP LoRA Replay · 新课程,3,th,2765,合法输出,2698
+MTOP LoRA Replay · 新课程,3,th,2765,完全正确,1708
+MTOP LoRA Replay · 新课程,3,th,2765,意图字段无效,13
+MTOP LoRA Replay · 新课程,3,th,2765,未匹配金标,471
+MTOP LoRA Replay · 新课程,3,th,2765,未匹配预测,1060
+MTOP LoRA Replay · 新课程,3,th,2765,槽位标签或跨度无效,54
+MTOP LoRA Replay · 新课程,3,th,2765,类型及边界错误,315
+MTOP LoRA Replay · 新课程,4,fr,3193,仅类型错误,308
+MTOP LoRA Replay · 新课程,4,fr,3193,仅边界错误,777
+MTOP LoRA Replay · 新课程,4,fr,3193,可读意图错误,521
+MTOP LoRA Replay · 新课程,4,fr,3193,合法输出,3174
+MTOP LoRA Replay · 新课程,4,fr,3193,完全正确,3196
+MTOP LoRA Replay · 新课程,4,fr,3193,意图字段无效,7
+MTOP LoRA Replay · 新课程,4,fr,3193,未匹配金标,649
+MTOP LoRA Replay · 新课程,4,fr,3193,未匹配预测,391
+MTOP LoRA Replay · 新课程,4,fr,3193,槽位标签或跨度无效,12
+MTOP LoRA Replay · 新课程,4,fr,3193,类型及边界错误,138
+MTOP LoRA Replay · 新课程,4,es,2998,仅类型错误,179
+MTOP LoRA Replay · 新课程,4,es,2998,仅边界错误,814
+MTOP LoRA Replay · 新课程,4,es,2998,可读意图错误,295
+MTOP LoRA Replay · 新课程,4,es,2998,合法输出,2984
+MTOP LoRA Replay · 新课程,4,es,2998,完全正确,3212
+MTOP LoRA Replay · 新课程,4,es,2998,意图字段无效,4
+MTOP LoRA Replay · 新课程,4,es,2998,未匹配金标,521
+MTOP LoRA Replay · 新课程,4,es,2998,未匹配预测,336
+MTOP LoRA Replay · 新课程,4,es,2998,槽位标签或跨度无效,10
+MTOP LoRA Replay · 新课程,4,es,2998,类型及边界错误,97
+MTOP LoRA Replay · 新课程,4,hi,2789,仅类型错误,365
+MTOP LoRA Replay · 新课程,4,hi,2789,仅边界错误,589
+MTOP LoRA Replay · 新课程,4,hi,2789,可读意图错误,464
+MTOP LoRA Replay · 新课程,4,hi,2789,合法输出,2769
+MTOP LoRA Replay · 新课程,4,hi,2789,完全正确,2718
+MTOP LoRA Replay · 新课程,4,hi,2789,意图字段无效,6
+MTOP LoRA Replay · 新课程,4,hi,2789,未匹配金标,639
+MTOP LoRA Replay · 新课程,4,hi,2789,未匹配预测,538
+MTOP LoRA Replay · 新课程,4,hi,2789,槽位标签或跨度无效,14
+MTOP LoRA Replay · 新课程,4,hi,2789,类型及边界错误,148
+MTOP LoRA Replay · 新课程,4,de,3549,仅类型错误,394
+MTOP LoRA Replay · 新课程,4,de,3549,仅边界错误,739
+MTOP LoRA Replay · 新课程,4,de,3549,可读意图错误,533
+MTOP LoRA Replay · 新课程,4,de,3549,合法输出,3534
+MTOP LoRA Replay · 新课程,4,de,3549,完全正确,3752
+MTOP LoRA Replay · 新课程,4,de,3549,意图字段无效,1
+MTOP LoRA Replay · 新课程,4,de,3549,未匹配金标,904
+MTOP LoRA Replay · 新课程,4,de,3549,未匹配预测,506
+MTOP LoRA Replay · 新课程,4,de,3549,槽位标签或跨度无效,14
+MTOP LoRA Replay · 新课程,4,de,3549,类型及边界错误,143
+MTOP LoRA Replay · 新课程,4,th,2765,仅类型错误,269
+MTOP LoRA Replay · 新课程,4,th,2765,仅边界错误,1293
+MTOP LoRA Replay · 新课程,4,th,2765,可读意图错误,605
+MTOP LoRA Replay · 新课程,4,th,2765,合法输出,2747
+MTOP LoRA Replay · 新课程,4,th,2765,完全正确,1855
+MTOP LoRA Replay · 新课程,4,th,2765,意图字段无效,4
+MTOP LoRA Replay · 新课程,4,th,2765,未匹配金标,623
+MTOP LoRA Replay · 新课程,4,th,2765,未匹配预测,689
+MTOP LoRA Replay · 新课程,4,th,2765,槽位标签或跨度无效,14
+MTOP LoRA Replay · 新课程,4,th,2765,类型及边界错误,229
+MTOP LoRA Replay · 新课程,5,fr,3193,仅类型错误,229
+MTOP LoRA Replay · 新课程,5,fr,3193,仅边界错误,878
+MTOP LoRA Replay · 新课程,5,fr,3193,可读意图错误,462
+MTOP LoRA Replay · 新课程,5,fr,3193,合法输出,3156
+MTOP LoRA Replay · 新课程,5,fr,3193,完全正确,2820
+MTOP LoRA Replay · 新课程,5,fr,3193,意图字段无效,9
+MTOP LoRA Replay · 新课程,5,fr,3193,未匹配金标,960
+MTOP LoRA Replay · 新课程,5,fr,3193,未匹配预测,188
+MTOP LoRA Replay · 新课程,5,fr,3193,槽位标签或跨度无效,28
+MTOP LoRA Replay · 新课程,5,fr,3193,类型及边界错误,143
+MTOP LoRA Replay · 新课程,5,es,2998,仅类型错误,139
+MTOP LoRA Replay · 新课程,5,es,2998,仅边界错误,1033
+MTOP LoRA Replay · 新课程,5,es,2998,可读意图错误,274
+MTOP LoRA Replay · 新课程,5,es,2998,合法输出,2977
+MTOP LoRA Replay · 新课程,5,es,2998,完全正确,2812
+MTOP LoRA Replay · 新课程,5,es,2998,意图字段无效,8
+MTOP LoRA Replay · 新课程,5,es,2998,未匹配金标,728
+MTOP LoRA Replay · 新课程,5,es,2998,未匹配预测,144
+MTOP LoRA Replay · 新课程,5,es,2998,槽位标签或跨度无效,13
+MTOP LoRA Replay · 新课程,5,es,2998,类型及边界错误,97
+MTOP LoRA Replay · 新课程,5,hi,2789,仅类型错误,310
+MTOP LoRA Replay · 新课程,5,hi,2789,仅边界错误,655
+MTOP LoRA Replay · 新课程,5,hi,2789,可读意图错误,459
+MTOP LoRA Replay · 新课程,5,hi,2789,合法输出,2777
+MTOP LoRA Replay · 新课程,5,hi,2789,完全正确,2425
+MTOP LoRA Replay · 新课程,5,hi,2789,意图字段无效,8
+MTOP LoRA Replay · 新课程,5,hi,2789,未匹配金标,920
+MTOP LoRA Replay · 新课程,5,hi,2789,未匹配预测,237
+MTOP LoRA Replay · 新课程,5,hi,2789,槽位标签或跨度无效,4
+MTOP LoRA Replay · 新课程,5,hi,2789,类型及边界错误,165
+MTOP LoRA Replay · 新课程,5,de,3549,仅类型错误,316
+MTOP LoRA Replay · 新课程,5,de,3549,仅边界错误,847
+MTOP LoRA Replay · 新课程,5,de,3549,可读意图错误,500
+MTOP LoRA Replay · 新课程,5,de,3549,合法输出,3516
+MTOP LoRA Replay · 新课程,5,de,3549,完全正确,3332
+MTOP LoRA Replay · 新课程,5,de,3549,意图字段无效,4
+MTOP LoRA Replay · 新课程,5,de,3549,未匹配金标,1229
+MTOP LoRA Replay · 新课程,5,de,3549,未匹配预测,266
+MTOP LoRA Replay · 新课程,5,de,3549,槽位标签或跨度无效,29
+MTOP LoRA Replay · 新课程,5,de,3549,类型及边界错误,161
+MTOP LoRA Replay · 新课程,5,th,2765,仅类型错误,204
+MTOP LoRA Replay · 新课程,5,th,2765,仅边界错误,661
+MTOP LoRA Replay · 新课程,5,th,2765,可读意图错误,384
+MTOP LoRA Replay · 新课程,5,th,2765,合法输出,2751
+MTOP LoRA Replay · 新课程,5,th,2765,完全正确,2635
+MTOP LoRA Replay · 新课程,5,th,2765,意图字段无效,2
+MTOP LoRA Replay · 新课程,5,th,2765,未匹配金标,647
+MTOP LoRA Replay · 新课程,5,th,2765,未匹配预测,194
+MTOP LoRA Replay · 新课程,5,th,2765,槽位标签或跨度无效,12
+MTOP LoRA Replay · 新课程,5,th,2765,类型及边界错误,127
+MTOP Full-FT Sequential · 新课程,0,fr,3193,仅类型错误,369
+MTOP Full-FT Sequential · 新课程,0,fr,3193,仅边界错误,647
+MTOP Full-FT Sequential · 新课程,0,fr,3193,可读意图错误,1299
+MTOP Full-FT Sequential · 新课程,0,fr,3193,合法输出,2440
+MTOP Full-FT Sequential · 新课程,0,fr,3193,完全正确,218
+MTOP Full-FT Sequential · 新课程,0,fr,3193,意图字段无效,199
+MTOP Full-FT Sequential · 新课程,0,fr,3193,无效 JSON,87
+MTOP Full-FT Sequential · 新课程,0,fr,3193,未匹配金标,1812
+MTOP Full-FT Sequential · 新课程,0,fr,3193,未匹配预测,1834
+MTOP Full-FT Sequential · 新课程,0,fr,3193,槽位标签或跨度无效,467
+MTOP Full-FT Sequential · 新课程,0,fr,3193,类型及边界错误,767
+MTOP Full-FT Sequential · 新课程,0,es,2998,仅类型错误,346
+MTOP Full-FT Sequential · 新课程,0,es,2998,仅边界错误,722
+MTOP Full-FT Sequential · 新课程,0,es,2998,可读意图错误,871
+MTOP Full-FT Sequential · 新课程,0,es,2998,合法输出,2260
+MTOP Full-FT Sequential · 新课程,0,es,2998,完全正确,221
+MTOP Full-FT Sequential · 新课程,0,es,2998,意图字段无效,222
+MTOP Full-FT Sequential · 新课程,0,es,2998,无效 JSON,83
+MTOP Full-FT Sequential · 新课程,0,es,2998,未匹配金标,1638
+MTOP Full-FT Sequential · 新课程,0,es,2998,未匹配预测,1763
+MTOP Full-FT Sequential · 新课程,0,es,2998,槽位标签或跨度无效,433
+MTOP Full-FT Sequential · 新课程,0,es,2998,类型及边界错误,672
+MTOP Full-FT Sequential · 新课程,0,hi,2789,仅类型错误,412
+MTOP Full-FT Sequential · 新课程,0,hi,2789,仅边界错误,223
+MTOP Full-FT Sequential · 新课程,0,hi,2789,可读意图错误,1022
+MTOP Full-FT Sequential · 新课程,0,hi,2789,合法输出,1871
+MTOP Full-FT Sequential · 新课程,0,hi,2789,完全正确,176
+MTOP Full-FT Sequential · 新课程,0,hi,2789,意图字段无效,304
+MTOP Full-FT Sequential · 新课程,0,hi,2789,无效 JSON,118
+MTOP Full-FT Sequential · 新课程,0,hi,2789,未匹配金标,1816
+MTOP Full-FT Sequential · 新课程,0,hi,2789,未匹配预测,1600
+MTOP Full-FT Sequential · 新课程,0,hi,2789,槽位标签或跨度无效,496
+MTOP Full-FT Sequential · 新课程,0,hi,2789,类型及边界错误,425
+MTOP Full-FT Sequential · 新课程,0,de,3549,仅类型错误,510
+MTOP Full-FT Sequential · 新课程,0,de,3549,仅边界错误,723
+MTOP Full-FT Sequential · 新课程,0,de,3549,可读意图错误,1442
+MTOP Full-FT Sequential · 新课程,0,de,3549,合法输出,2653
+MTOP Full-FT Sequential · 新课程,0,de,3549,完全正确,286
+MTOP Full-FT Sequential · 新课程,0,de,3549,意图字段无效,194
+MTOP Full-FT Sequential · 新课程,0,de,3549,无效 JSON,115
+MTOP Full-FT Sequential · 新课程,0,de,3549,未匹配金标,2083
+MTOP Full-FT Sequential · 新课程,0,de,3549,未匹配预测,1665
+MTOP Full-FT Sequential · 新课程,0,de,3549,槽位标签或跨度无效,587
+MTOP Full-FT Sequential · 新课程,0,de,3549,类型及边界错误,748
+MTOP Full-FT Sequential · 新课程,0,th,2765,仅类型错误,267
+MTOP Full-FT Sequential · 新课程,0,th,2765,仅边界错误,482
+MTOP Full-FT Sequential · 新课程,0,th,2765,可读意图错误,1328
+MTOP Full-FT Sequential · 新课程,0,th,2765,合法输出,2043
+MTOP Full-FT Sequential · 新课程,0,th,2765,完全正确,82
+MTOP Full-FT Sequential · 新课程,0,th,2765,意图字段无效,283
+MTOP Full-FT Sequential · 新课程,0,th,2765,无效 JSON,58
+MTOP Full-FT Sequential · 新课程,0,th,2765,未匹配金标,1685
+MTOP Full-FT Sequential · 新课程,0,th,2765,未匹配预测,1705
+MTOP Full-FT Sequential · 新课程,0,th,2765,槽位标签或跨度无效,381
+MTOP Full-FT Sequential · 新课程,0,th,2765,类型及边界错误,667
+MTOP Full-FT Sequential · 新课程,1,fr,3193,仅类型错误,469
+MTOP Full-FT Sequential · 新课程,1,fr,3193,仅边界错误,804
+MTOP Full-FT Sequential · 新课程,1,fr,3193,可读意图错误,668
+MTOP Full-FT Sequential · 新课程,1,fr,3193,合法输出,2986
+MTOP Full-FT Sequential · 新课程,1,fr,3193,完全正确,2282
+MTOP Full-FT Sequential · 新课程,1,fr,3193,意图字段无效,44
+MTOP Full-FT Sequential · 新课程,1,fr,3193,未匹配金标,971
+MTOP Full-FT Sequential · 新课程,1,fr,3193,未匹配预测,339
+MTOP Full-FT Sequential · 新课程,1,fr,3193,槽位标签或跨度无效,163
+MTOP Full-FT Sequential · 新课程,1,fr,3193,类型及边界错误,233
+MTOP Full-FT Sequential · 新课程,1,es,2998,仅类型错误,342
+MTOP Full-FT Sequential · 新课程,1,es,2998,仅边界错误,868
+MTOP Full-FT Sequential · 新课程,1,es,2998,可读意图错误,527
+MTOP Full-FT Sequential · 新课程,1,es,2998,合法输出,2856
+MTOP Full-FT Sequential · 新课程,1,es,2998,完全正确,2119
+MTOP Full-FT Sequential · 新课程,1,es,2998,意图字段无效,32
+MTOP Full-FT Sequential · 新课程,1,es,2998,未匹配金标,1045
+MTOP Full-FT Sequential · 新课程,1,es,2998,未匹配预测,267
+MTOP Full-FT Sequential · 新课程,1,es,2998,槽位标签或跨度无效,110
+MTOP Full-FT Sequential · 新课程,1,es,2998,类型及边界错误,217
+MTOP Full-FT Sequential · 新课程,1,hi,2789,仅类型错误,466
+MTOP Full-FT Sequential · 新课程,1,hi,2789,仅边界错误,792
+MTOP Full-FT Sequential · 新课程,1,hi,2789,可读意图错误,929
+MTOP Full-FT Sequential · 新课程,1,hi,2789,合法输出,2636
+MTOP Full-FT Sequential · 新课程,1,hi,2789,完全正确,862
+MTOP Full-FT Sequential · 新课程,1,hi,2789,意图字段无效,36
+MTOP Full-FT Sequential · 新课程,1,hi,2789,未匹配金标,1671
+MTOP Full-FT Sequential · 新课程,1,hi,2789,未匹配预测,1092
+MTOP Full-FT Sequential · 新课程,1,hi,2789,槽位标签或跨度无效,117
+MTOP Full-FT Sequential · 新课程,1,hi,2789,类型及边界错误,446
+MTOP Full-FT Sequential · 新课程,1,de,3549,仅类型错误,525
+MTOP Full-FT Sequential · 新课程,1,de,3549,仅边界错误,1149
+MTOP Full-FT Sequential · 新课程,1,de,3549,可读意图错误,934
+MTOP Full-FT Sequential · 新课程,1,de,3549,合法输出,3346
+MTOP Full-FT Sequential · 新课程,1,de,3549,完全正确,1870
+MTOP Full-FT Sequential · 新课程,1,de,3549,意图字段无效,44
+MTOP Full-FT Sequential · 新课程,1,de,3549,未匹配金标,1654
+MTOP Full-FT Sequential · 新课程,1,de,3549,未匹配预测,527
+MTOP Full-FT Sequential · 新课程,1,de,3549,槽位标签或跨度无效,159
+MTOP Full-FT Sequential · 新课程,1,de,3549,类型及边界错误,369
+MTOP Full-FT Sequential · 新课程,1,th,2765,仅类型错误,449
+MTOP Full-FT Sequential · 新课程,1,th,2765,仅边界错误,978
+MTOP Full-FT Sequential · 新课程,1,th,2765,可读意图错误,1038
+MTOP Full-FT Sequential · 新课程,1,th,2765,合法输出,2593
+MTOP Full-FT Sequential · 新课程,1,th,2765,完全正确,1132
+MTOP Full-FT Sequential · 新课程,1,th,2765,意图字段无效,56
+MTOP Full-FT Sequential · 新课程,1,th,2765,未匹配金标,1078
+MTOP Full-FT Sequential · 新课程,1,th,2765,未匹配预测,638
+MTOP Full-FT Sequential · 新课程,1,th,2765,槽位标签或跨度无效,116
+MTOP Full-FT Sequential · 新课程,1,th,2765,类型及边界错误,395
+MTOP Full-FT Sequential · 新课程,2,fr,3193,仅类型错误,416
+MTOP Full-FT Sequential · 新课程,2,fr,3193,仅边界错误,815
+MTOP Full-FT Sequential · 新课程,2,fr,3193,可读意图错误,662
+MTOP Full-FT Sequential · 新课程,2,fr,3193,合法输出,2959
+MTOP Full-FT Sequential · 新课程,2,fr,3193,完全正确,2535
+MTOP Full-FT Sequential · 新课程,2,fr,3193,意图字段无效,77
+MTOP Full-FT Sequential · 新课程,2,fr,3193,无效 JSON,2
+MTOP Full-FT Sequential · 新课程,2,fr,3193,未匹配金标,629
+MTOP Full-FT Sequential · 新课程,2,fr,3193,未匹配预测,939
+MTOP Full-FT Sequential · 新课程,2,fr,3193,槽位标签或跨度无效,155
+MTOP Full-FT Sequential · 新课程,2,fr,3193,类型及边界错误,285
+MTOP Full-FT Sequential · 新课程,2,es,2998,仅类型错误,304
+MTOP Full-FT Sequential · 新课程,2,es,2998,仅边界错误,803
+MTOP Full-FT Sequential · 新课程,2,es,2998,可读意图错误,552
+MTOP Full-FT Sequential · 新课程,2,es,2998,合法输出,2837
+MTOP Full-FT Sequential · 新课程,2,es,2998,完全正确,2668
+MTOP Full-FT Sequential · 新课程,2,es,2998,意图字段无效,59
+MTOP Full-FT Sequential · 新课程,2,es,2998,无效 JSON,2
+MTOP Full-FT Sequential · 新课程,2,es,2998,未匹配金标,539
+MTOP Full-FT Sequential · 新课程,2,es,2998,未匹配预测,748
+MTOP Full-FT Sequential · 新课程,2,es,2998,槽位标签或跨度无效,100
+MTOP Full-FT Sequential · 新课程,2,es,2998,类型及边界错误,233
+MTOP Full-FT Sequential · 新课程,2,hi,2789,仅类型错误,501
+MTOP Full-FT Sequential · 新课程,2,hi,2789,仅边界错误,810
+MTOP Full-FT Sequential · 新课程,2,hi,2789,可读意图错误,877
+MTOP Full-FT Sequential · 新课程,2,hi,2789,合法输出,2478
+MTOP Full-FT Sequential · 新课程,2,hi,2789,完全正确,1123
+MTOP Full-FT Sequential · 新课程,2,hi,2789,意图字段无效,60
+MTOP Full-FT Sequential · 新课程,2,hi,2789,无效 JSON,6
+MTOP Full-FT Sequential · 新课程,2,hi,2789,未匹配金标,961
+MTOP Full-FT Sequential · 新课程,2,hi,2789,未匹配预测,2614
+MTOP Full-FT Sequential · 新课程,2,hi,2789,槽位标签或跨度无效,245
+MTOP Full-FT Sequential · 新课程,2,hi,2789,类型及边界错误,558
+MTOP Full-FT Sequential · 新课程,2,de,3549,仅类型错误,591
+MTOP Full-FT Sequential · 新课程,2,de,3549,仅边界错误,1116
+MTOP Full-FT Sequential · 新课程,2,de,3549,可读意图错误,986
+MTOP Full-FT Sequential · 新课程,2,de,3549,合法输出,3245
+MTOP Full-FT Sequential · 新课程,2,de,3549,完全正确,2309
+MTOP Full-FT Sequential · 新课程,2,de,3549,意图字段无效,70
+MTOP Full-FT Sequential · 新课程,2,de,3549,无效 JSON,6
+MTOP Full-FT Sequential · 新课程,2,de,3549,未匹配金标,959
+MTOP Full-FT Sequential · 新课程,2,de,3549,未匹配预测,1689
+MTOP Full-FT Sequential · 新课程,2,de,3549,槽位标签或跨度无效,228
+MTOP Full-FT Sequential · 新课程,2,de,3549,类型及边界错误,455
+MTOP Full-FT Sequential · 新课程,2,th,2765,仅类型错误,368
+MTOP Full-FT Sequential · 新课程,2,th,2765,仅边界错误,809
+MTOP Full-FT Sequential · 新课程,2,th,2765,可读意图错误,849
+MTOP Full-FT Sequential · 新课程,2,th,2765,合法输出,2415
+MTOP Full-FT Sequential · 新课程,2,th,2765,完全正确,1366
+MTOP Full-FT Sequential · 新课程,2,th,2765,意图字段无效,92
+MTOP Full-FT Sequential · 新课程,2,th,2765,无效 JSON,1
+MTOP Full-FT Sequential · 新课程,2,th,2765,未匹配金标,577
+MTOP Full-FT Sequential · 新课程,2,th,2765,未匹配预测,1538
+MTOP Full-FT Sequential · 新课程,2,th,2765,槽位标签或跨度无效,257
+MTOP Full-FT Sequential · 新课程,2,th,2765,类型及边界错误,581
+MTOP Full-FT Sequential · 新课程,3,fr,3193,仅类型错误,381
+MTOP Full-FT Sequential · 新课程,3,fr,3193,仅边界错误,1027
+MTOP Full-FT Sequential · 新课程,3,fr,3193,可读意图错误,673
+MTOP Full-FT Sequential · 新课程,3,fr,3193,合法输出,2972
+MTOP Full-FT Sequential · 新课程,3,fr,3193,完全正确,2150
+MTOP Full-FT Sequential · 新课程,3,fr,3193,意图字段无效,52
+MTOP Full-FT Sequential · 新课程,3,fr,3193,无效 JSON,3
+MTOP Full-FT Sequential · 新课程,3,fr,3193,未匹配金标,891
+MTOP Full-FT Sequential · 新课程,3,fr,3193,未匹配预测,1041
+MTOP Full-FT Sequential · 新课程,3,fr,3193,槽位标签或跨度无效,166
+MTOP Full-FT Sequential · 新课程,3,fr,3193,类型及边界错误,241
+MTOP Full-FT Sequential · 新课程,3,es,2998,仅类型错误,288
+MTOP Full-FT Sequential · 新课程,3,es,2998,仅边界错误,973
+MTOP Full-FT Sequential · 新课程,3,es,2998,可读意图错误,485
+MTOP Full-FT Sequential · 新课程,3,es,2998,合法输出,2812
+MTOP Full-FT Sequential · 新课程,3,es,2998,完全正确,2303
+MTOP Full-FT Sequential · 新课程,3,es,2998,意图字段无效,78
+MTOP Full-FT Sequential · 新课程,3,es,2998,无效 JSON,5
+MTOP Full-FT Sequential · 新课程,3,es,2998,未匹配金标,817
+MTOP Full-FT Sequential · 新课程,3,es,2998,未匹配预测,723
+MTOP Full-FT Sequential · 新课程,3,es,2998,槽位标签或跨度无效,103
+MTOP Full-FT Sequential · 新课程,3,es,2998,类型及边界错误,149
+MTOP Full-FT Sequential · 新课程,3,hi,2789,仅类型错误,501
+MTOP Full-FT Sequential · 新课程,3,hi,2789,仅边界错误,539
+MTOP Full-FT Sequential · 新课程,3,hi,2789,可读意图错误,703
+MTOP Full-FT Sequential · 新课程,3,hi,2789,合法输出,2672
+MTOP Full-FT Sequential · 新课程,3,hi,2789,完全正确,2221
+MTOP Full-FT Sequential · 新课程,3,hi,2789,意图字段无效,53
+MTOP Full-FT Sequential · 新课程,3,hi,2789,无效 JSON,8
+MTOP Full-FT Sequential · 新课程,3,hi,2789,未匹配金标,802
+MTOP Full-FT Sequential · 新课程,3,hi,2789,未匹配预测,505
+MTOP Full-FT Sequential · 新课程,3,hi,2789,槽位标签或跨度无效,56
+MTOP Full-FT Sequential · 新课程,3,hi,2789,类型及边界错误,248
+MTOP Full-FT Sequential · 新课程,3,de,3549,仅类型错误,569
+MTOP Full-FT Sequential · 新课程,3,de,3549,仅边界错误,1264
+MTOP Full-FT Sequential · 新课程,3,de,3549,可读意图错误,1062
+MTOP Full-FT Sequential · 新课程,3,de,3549,合法输出,3381
+MTOP Full-FT Sequential · 新课程,3,de,3549,完全正确,2131
+MTOP Full-FT Sequential · 新课程,3,de,3549,意图字段无效,75
+MTOP Full-FT Sequential · 新课程,3,de,3549,无效 JSON,1
+MTOP Full-FT Sequential · 新课程,3,de,3549,未匹配金标,1314
+MTOP Full-FT Sequential · 新课程,3,de,3549,未匹配预测,1472
+MTOP Full-FT Sequential · 新课程,3,de,3549,槽位标签或跨度无效,92
+MTOP Full-FT Sequential · 新课程,3,de,3549,类型及边界错误,351
+MTOP Full-FT Sequential · 新课程,3,th,2765,仅类型错误,307
+MTOP Full-FT Sequential · 新课程,3,th,2765,仅边界错误,1091
+MTOP Full-FT Sequential · 新课程,3,th,2765,可读意图错误,943
+MTOP Full-FT Sequential · 新课程,3,th,2765,合法输出,2634
+MTOP Full-FT Sequential · 新课程,3,th,2765,完全正确,1172
+MTOP Full-FT Sequential · 新课程,3,th,2765,意图字段无效,22
+MTOP Full-FT Sequential · 新课程,3,th,2765,无效 JSON,5
+MTOP Full-FT Sequential · 新课程,3,th,2765,未匹配金标,971
+MTOP Full-FT Sequential · 新课程,3,th,2765,未匹配预测,912
+MTOP Full-FT Sequential · 新课程,3,th,2765,槽位标签或跨度无效,104
+MTOP Full-FT Sequential · 新课程,3,th,2765,类型及边界错误,493
+MTOP Full-FT Sequential · 新课程,4,fr,3193,仅类型错误,276
+MTOP Full-FT Sequential · 新课程,4,fr,3193,仅边界错误,695
+MTOP Full-FT Sequential · 新课程,4,fr,3193,可读意图错误,615
+MTOP Full-FT Sequential · 新课程,4,fr,3193,合法输出,2773
+MTOP Full-FT Sequential · 新课程,4,fr,3193,完全正确,2401
+MTOP Full-FT Sequential · 新课程,4,fr,3193,意图字段无效,46
+MTOP Full-FT Sequential · 新课程,4,fr,3193,无效 JSON,19
+MTOP Full-FT Sequential · 新课程,4,fr,3193,未匹配金标,613
+MTOP Full-FT Sequential · 新课程,4,fr,3193,未匹配预测,500
+MTOP Full-FT Sequential · 新课程,4,fr,3193,槽位标签或跨度无效,355
+MTOP Full-FT Sequential · 新课程,4,fr,3193,类型及边界错误,163
+MTOP Full-FT Sequential · 新课程,4,es,2998,仅类型错误,232
+MTOP Full-FT Sequential · 新课程,4,es,2998,仅边界错误,659
+MTOP Full-FT Sequential · 新课程,4,es,2998,可读意图错误,481
+MTOP Full-FT Sequential · 新课程,4,es,2998,合法输出,2636
+MTOP Full-FT Sequential · 新课程,4,es,2998,完全正确,2430
+MTOP Full-FT Sequential · 新课程,4,es,2998,意图字段无效,39
+MTOP Full-FT Sequential · 新课程,4,es,2998,无效 JSON,6
+MTOP Full-FT Sequential · 新课程,4,es,2998,未匹配金标,517
+MTOP Full-FT Sequential · 新课程,4,es,2998,未匹配预测,449
+MTOP Full-FT Sequential · 新课程,4,es,2998,槽位标签或跨度无效,317
+MTOP Full-FT Sequential · 新课程,4,es,2998,类型及边界错误,133
+MTOP Full-FT Sequential · 新课程,4,hi,2789,仅类型错误,412
+MTOP Full-FT Sequential · 新课程,4,hi,2789,仅边界错误,729
+MTOP Full-FT Sequential · 新课程,4,hi,2789,可读意图错误,874
+MTOP Full-FT Sequential · 新课程,4,hi,2789,合法输出,2617
+MTOP Full-FT Sequential · 新课程,4,hi,2789,完全正确,1741
+MTOP Full-FT Sequential · 新课程,4,hi,2789,意图字段无效,99
+MTOP Full-FT Sequential · 新课程,4,hi,2789,无效 JSON,7
+MTOP Full-FT Sequential · 新课程,4,hi,2789,未匹配金标,968
+MTOP Full-FT Sequential · 新课程,4,hi,2789,未匹配预测,551
+MTOP Full-FT Sequential · 新课程,4,hi,2789,槽位标签或跨度无效,66
+MTOP Full-FT Sequential · 新课程,4,hi,2789,类型及边界错误,299
+MTOP Full-FT Sequential · 新课程,4,de,3549,仅类型错误,417
+MTOP Full-FT Sequential · 新课程,4,de,3549,仅边界错误,547
+MTOP Full-FT Sequential · 新课程,4,de,3549,可读意图错误,634
+MTOP Full-FT Sequential · 新课程,4,de,3549,合法输出,3104
+MTOP Full-FT Sequential · 新课程,4,de,3549,完全正确,2961
+MTOP Full-FT Sequential · 新课程,4,de,3549,意图字段无效,92
+MTOP Full-FT Sequential · 新课程,4,de,3549,无效 JSON,13
+MTOP Full-FT Sequential · 新课程,4,de,3549,未匹配金标,746
+MTOP Full-FT Sequential · 新课程,4,de,3549,未匹配预测,467
+MTOP Full-FT Sequential · 新课程,4,de,3549,槽位标签或跨度无效,340
+MTOP Full-FT Sequential · 新课程,4,de,3549,类型及边界错误,178
+MTOP Full-FT Sequential · 新课程,4,th,2765,仅类型错误,254
+MTOP Full-FT Sequential · 新课程,4,th,2765,仅边界错误,1037
+MTOP Full-FT Sequential · 新课程,4,th,2765,可读意图错误,884
+MTOP Full-FT Sequential · 新课程,4,th,2765,合法输出,2600
+MTOP Full-FT Sequential · 新课程,4,th,2765,完全正确,1386
+MTOP Full-FT Sequential · 新课程,4,th,2765,意图字段无效,53
+MTOP Full-FT Sequential · 新课程,4,th,2765,无效 JSON,29
+MTOP Full-FT Sequential · 新课程,4,th,2765,未匹配金标,800
+MTOP Full-FT Sequential · 新课程,4,th,2765,未匹配预测,561
+MTOP Full-FT Sequential · 新课程,4,th,2765,槽位标签或跨度无效,83
+MTOP Full-FT Sequential · 新课程,4,th,2765,类型及边界错误,484
+MTOP Full-FT Sequential · 新课程,5,fr,3193,仅类型错误,262
+MTOP Full-FT Sequential · 新课程,5,fr,3193,仅边界错误,1174
+MTOP Full-FT Sequential · 新课程,5,fr,3193,可读意图错误,571
+MTOP Full-FT Sequential · 新课程,5,fr,3193,合法输出,3129
+MTOP Full-FT Sequential · 新课程,5,fr,3193,完全正确,2541
+MTOP Full-FT Sequential · 新课程,5,fr,3193,意图字段无效,22
+MTOP Full-FT Sequential · 新课程,5,fr,3193,无效 JSON,9
+MTOP Full-FT Sequential · 新课程,5,fr,3193,未匹配金标,762
+MTOP Full-FT Sequential · 新课程,5,fr,3193,未匹配预测,458
+MTOP Full-FT Sequential · 新课程,5,fr,3193,槽位标签或跨度无效,33
+MTOP Full-FT Sequential · 新课程,5,fr,3193,类型及边界错误,248
+MTOP Full-FT Sequential · 新课程,5,es,2998,仅类型错误,214
+MTOP Full-FT Sequential · 新课程,5,es,2998,仅边界错误,1296
+MTOP Full-FT Sequential · 新课程,5,es,2998,可读意图错误,406
+MTOP Full-FT Sequential · 新课程,5,es,2998,合法输出,2958
+MTOP Full-FT Sequential · 新课程,5,es,2998,完全正确,2408
+MTOP Full-FT Sequential · 新课程,5,es,2998,意图字段无效,17
+MTOP Full-FT Sequential · 新课程,5,es,2998,无效 JSON,4
+MTOP Full-FT Sequential · 新课程,5,es,2998,未匹配金标,669
+MTOP Full-FT Sequential · 新课程,5,es,2998,未匹配预测,369
+MTOP Full-FT Sequential · 新课程,5,es,2998,槽位标签或跨度无效,19
+MTOP Full-FT Sequential · 新课程,5,es,2998,类型及边界错误,200
+MTOP Full-FT Sequential · 新课程,5,hi,2789,仅类型错误,429
+MTOP Full-FT Sequential · 新课程,5,hi,2789,仅边界错误,737
+MTOP Full-FT Sequential · 新课程,5,hi,2789,可读意图错误,790
+MTOP Full-FT Sequential · 新课程,5,hi,2789,合法输出,2702
+MTOP Full-FT Sequential · 新课程,5,hi,2789,完全正确,1808
+MTOP Full-FT Sequential · 新课程,5,hi,2789,意图字段无效,19
+MTOP Full-FT Sequential · 新课程,5,hi,2789,无效 JSON,5
+MTOP Full-FT Sequential · 新课程,5,hi,2789,未匹配金标,1055
+MTOP Full-FT Sequential · 新课程,5,hi,2789,未匹配预测,601
+MTOP Full-FT Sequential · 新课程,5,hi,2789,槽位标签或跨度无效,63
+MTOP Full-FT Sequential · 新课程,5,hi,2789,类型及边界错误,336
+MTOP Full-FT Sequential · 新课程,5,de,3549,仅类型错误,413
+MTOP Full-FT Sequential · 新课程,5,de,3549,仅边界错误,1144
+MTOP Full-FT Sequential · 新课程,5,de,3549,可读意图错误,620
+MTOP Full-FT Sequential · 新课程,5,de,3549,合法输出,3464
+MTOP Full-FT Sequential · 新课程,5,de,3549,完全正确,2742
+MTOP Full-FT Sequential · 新课程,5,de,3549,意图字段无效,19
+MTOP Full-FT Sequential · 新课程,5,de,3549,无效 JSON,6
+MTOP Full-FT Sequential · 新课程,5,de,3549,未匹配金标,1255
+MTOP Full-FT Sequential · 新课程,5,de,3549,未匹配预测,525
+MTOP Full-FT Sequential · 新课程,5,de,3549,槽位标签或跨度无效,60
+MTOP Full-FT Sequential · 新课程,5,de,3549,类型及边界错误,261
+MTOP Full-FT Sequential · 新课程,5,th,2765,仅类型错误,357
+MTOP Full-FT Sequential · 新课程,5,th,2765,仅边界错误,710
+MTOP Full-FT Sequential · 新课程,5,th,2765,可读意图错误,570
+MTOP Full-FT Sequential · 新课程,5,th,2765,合法输出,2721
+MTOP Full-FT Sequential · 新课程,5,th,2765,完全正确,2392
+MTOP Full-FT Sequential · 新课程,5,th,2765,意图字段无效,12
+MTOP Full-FT Sequential · 新课程,5,th,2765,无效 JSON,4
+MTOP Full-FT Sequential · 新课程,5,th,2765,未匹配金标,558
+MTOP Full-FT Sequential · 新课程,5,th,2765,未匹配预测,496
+MTOP Full-FT Sequential · 新课程,5,th,2765,槽位标签或跨度无效,28
+MTOP Full-FT Sequential · 新课程,5,th,2765,类型及边界错误,197
+MTOP Full-FT Replay · 新课程,0,fr,3193,仅类型错误,369
+MTOP Full-FT Replay · 新课程,0,fr,3193,仅边界错误,647
+MTOP Full-FT Replay · 新课程,0,fr,3193,可读意图错误,1299
+MTOP Full-FT Replay · 新课程,0,fr,3193,合法输出,2440
+MTOP Full-FT Replay · 新课程,0,fr,3193,完全正确,218
+MTOP Full-FT Replay · 新课程,0,fr,3193,意图字段无效,199
+MTOP Full-FT Replay · 新课程,0,fr,3193,无效 JSON,87
+MTOP Full-FT Replay · 新课程,0,fr,3193,未匹配金标,1812
+MTOP Full-FT Replay · 新课程,0,fr,3193,未匹配预测,1834
+MTOP Full-FT Replay · 新课程,0,fr,3193,槽位标签或跨度无效,467
+MTOP Full-FT Replay · 新课程,0,fr,3193,类型及边界错误,767
+MTOP Full-FT Replay · 新课程,0,es,2998,仅类型错误,346
+MTOP Full-FT Replay · 新课程,0,es,2998,仅边界错误,722
+MTOP Full-FT Replay · 新课程,0,es,2998,可读意图错误,871
+MTOP Full-FT Replay · 新课程,0,es,2998,合法输出,2260
+MTOP Full-FT Replay · 新课程,0,es,2998,完全正确,221
+MTOP Full-FT Replay · 新课程,0,es,2998,意图字段无效,222
+MTOP Full-FT Replay · 新课程,0,es,2998,无效 JSON,83
+MTOP Full-FT Replay · 新课程,0,es,2998,未匹配金标,1638
+MTOP Full-FT Replay · 新课程,0,es,2998,未匹配预测,1763
+MTOP Full-FT Replay · 新课程,0,es,2998,槽位标签或跨度无效,433
+MTOP Full-FT Replay · 新课程,0,es,2998,类型及边界错误,672
+MTOP Full-FT Replay · 新课程,0,hi,2789,仅类型错误,412
+MTOP Full-FT Replay · 新课程,0,hi,2789,仅边界错误,223
+MTOP Full-FT Replay · 新课程,0,hi,2789,可读意图错误,1022
+MTOP Full-FT Replay · 新课程,0,hi,2789,合法输出,1871
+MTOP Full-FT Replay · 新课程,0,hi,2789,完全正确,176
+MTOP Full-FT Replay · 新课程,0,hi,2789,意图字段无效,304
+MTOP Full-FT Replay · 新课程,0,hi,2789,无效 JSON,118
+MTOP Full-FT Replay · 新课程,0,hi,2789,未匹配金标,1816
+MTOP Full-FT Replay · 新课程,0,hi,2789,未匹配预测,1600
+MTOP Full-FT Replay · 新课程,0,hi,2789,槽位标签或跨度无效,496
+MTOP Full-FT Replay · 新课程,0,hi,2789,类型及边界错误,425
+MTOP Full-FT Replay · 新课程,0,de,3549,仅类型错误,510
+MTOP Full-FT Replay · 新课程,0,de,3549,仅边界错误,723
+MTOP Full-FT Replay · 新课程,0,de,3549,可读意图错误,1442
+MTOP Full-FT Replay · 新课程,0,de,3549,合法输出,2653
+MTOP Full-FT Replay · 新课程,0,de,3549,完全正确,286
+MTOP Full-FT Replay · 新课程,0,de,3549,意图字段无效,194
+MTOP Full-FT Replay · 新课程,0,de,3549,无效 JSON,115
+MTOP Full-FT Replay · 新课程,0,de,3549,未匹配金标,2083
+MTOP Full-FT Replay · 新课程,0,de,3549,未匹配预测,1665
+MTOP Full-FT Replay · 新课程,0,de,3549,槽位标签或跨度无效,587
+MTOP Full-FT Replay · 新课程,0,de,3549,类型及边界错误,748
+MTOP Full-FT Replay · 新课程,0,th,2765,仅类型错误,267
+MTOP Full-FT Replay · 新课程,0,th,2765,仅边界错误,482
+MTOP Full-FT Replay · 新课程,0,th,2765,可读意图错误,1328
+MTOP Full-FT Replay · 新课程,0,th,2765,合法输出,2043
+MTOP Full-FT Replay · 新课程,0,th,2765,完全正确,82
+MTOP Full-FT Replay · 新课程,0,th,2765,意图字段无效,283
+MTOP Full-FT Replay · 新课程,0,th,2765,无效 JSON,58
+MTOP Full-FT Replay · 新课程,0,th,2765,未匹配金标,1685
+MTOP Full-FT Replay · 新课程,0,th,2765,未匹配预测,1705
+MTOP Full-FT Replay · 新课程,0,th,2765,槽位标签或跨度无效,381
+MTOP Full-FT Replay · 新课程,0,th,2765,类型及边界错误,667
+MTOP Full-FT Replay · 新课程,1,fr,3193,仅类型错误,469
+MTOP Full-FT Replay · 新课程,1,fr,3193,仅边界错误,804
+MTOP Full-FT Replay · 新课程,1,fr,3193,可读意图错误,668
+MTOP Full-FT Replay · 新课程,1,fr,3193,合法输出,2986
+MTOP Full-FT Replay · 新课程,1,fr,3193,完全正确,2282
+MTOP Full-FT Replay · 新课程,1,fr,3193,意图字段无效,44
+MTOP Full-FT Replay · 新课程,1,fr,3193,未匹配金标,971
+MTOP Full-FT Replay · 新课程,1,fr,3193,未匹配预测,339
+MTOP Full-FT Replay · 新课程,1,fr,3193,槽位标签或跨度无效,163
+MTOP Full-FT Replay · 新课程,1,fr,3193,类型及边界错误,233
+MTOP Full-FT Replay · 新课程,1,es,2998,仅类型错误,342
+MTOP Full-FT Replay · 新课程,1,es,2998,仅边界错误,868
+MTOP Full-FT Replay · 新课程,1,es,2998,可读意图错误,527
+MTOP Full-FT Replay · 新课程,1,es,2998,合法输出,2856
+MTOP Full-FT Replay · 新课程,1,es,2998,完全正确,2119
+MTOP Full-FT Replay · 新课程,1,es,2998,意图字段无效,32
+MTOP Full-FT Replay · 新课程,1,es,2998,未匹配金标,1045
+MTOP Full-FT Replay · 新课程,1,es,2998,未匹配预测,267
+MTOP Full-FT Replay · 新课程,1,es,2998,槽位标签或跨度无效,110
+MTOP Full-FT Replay · 新课程,1,es,2998,类型及边界错误,217
+MTOP Full-FT Replay · 新课程,1,hi,2789,仅类型错误,466
+MTOP Full-FT Replay · 新课程,1,hi,2789,仅边界错误,792
+MTOP Full-FT Replay · 新课程,1,hi,2789,可读意图错误,929
+MTOP Full-FT Replay · 新课程,1,hi,2789,合法输出,2636
+MTOP Full-FT Replay · 新课程,1,hi,2789,完全正确,862
+MTOP Full-FT Replay · 新课程,1,hi,2789,意图字段无效,36
+MTOP Full-FT Replay · 新课程,1,hi,2789,未匹配金标,1671
+MTOP Full-FT Replay · 新课程,1,hi,2789,未匹配预测,1092
+MTOP Full-FT Replay · 新课程,1,hi,2789,槽位标签或跨度无效,117
+MTOP Full-FT Replay · 新课程,1,hi,2789,类型及边界错误,446
+MTOP Full-FT Replay · 新课程,1,de,3549,仅类型错误,525
+MTOP Full-FT Replay · 新课程,1,de,3549,仅边界错误,1149
+MTOP Full-FT Replay · 新课程,1,de,3549,可读意图错误,934
+MTOP Full-FT Replay · 新课程,1,de,3549,合法输出,3346
+MTOP Full-FT Replay · 新课程,1,de,3549,完全正确,1870
+MTOP Full-FT Replay · 新课程,1,de,3549,意图字段无效,44
+MTOP Full-FT Replay · 新课程,1,de,3549,未匹配金标,1654
+MTOP Full-FT Replay · 新课程,1,de,3549,未匹配预测,527
+MTOP Full-FT Replay · 新课程,1,de,3549,槽位标签或跨度无效,159
+MTOP Full-FT Replay · 新课程,1,de,3549,类型及边界错误,369
+MTOP Full-FT Replay · 新课程,1,th,2765,仅类型错误,449
+MTOP Full-FT Replay · 新课程,1,th,2765,仅边界错误,978
+MTOP Full-FT Replay · 新课程,1,th,2765,可读意图错误,1038
+MTOP Full-FT Replay · 新课程,1,th,2765,合法输出,2593
+MTOP Full-FT Replay · 新课程,1,th,2765,完全正确,1132
+MTOP Full-FT Replay · 新课程,1,th,2765,意图字段无效,56
+MTOP Full-FT Replay · 新课程,1,th,2765,未匹配金标,1078
+MTOP Full-FT Replay · 新课程,1,th,2765,未匹配预测,638
+MTOP Full-FT Replay · 新课程,1,th,2765,槽位标签或跨度无效,116
+MTOP Full-FT Replay · 新课程,1,th,2765,类型及边界错误,395
+MTOP Full-FT Replay · 新课程,2,fr,3193,仅类型错误,392
+MTOP Full-FT Replay · 新课程,2,fr,3193,仅边界错误,716
+MTOP Full-FT Replay · 新课程,2,fr,3193,可读意图错误,726
+MTOP Full-FT Replay · 新课程,2,fr,3193,合法输出,3130
+MTOP Full-FT Replay · 新课程,2,fr,3193,完全正确,2741
+MTOP Full-FT Replay · 新课程,2,fr,3193,意图字段无效,21
+MTOP Full-FT Replay · 新课程,2,fr,3193,未匹配金标,933
+MTOP Full-FT Replay · 新课程,2,fr,3193,未匹配预测,383
+MTOP Full-FT Replay · 新课程,2,fr,3193,槽位标签或跨度无效,42
+MTOP Full-FT Replay · 新课程,2,fr,3193,类型及边界错误,229
+MTOP Full-FT Replay · 新课程,2,es,2998,仅类型错误,280
+MTOP Full-FT Replay · 新课程,2,es,2998,仅边界错误,649
+MTOP Full-FT Replay · 新课程,2,es,2998,可读意图错误,500
+MTOP Full-FT Replay · 新课程,2,es,2998,合法输出,2930
+MTOP Full-FT Replay · 新课程,2,es,2998,完全正确,2902
+MTOP Full-FT Replay · 新课程,2,es,2998,意图字段无效,27
+MTOP Full-FT Replay · 新课程,2,es,2998,无效 JSON,3
+MTOP Full-FT Replay · 新课程,2,es,2998,未匹配金标,762
+MTOP Full-FT Replay · 新课程,2,es,2998,未匹配预测,280
+MTOP Full-FT Replay · 新课程,2,es,2998,槽位标签或跨度无效,38
+MTOP Full-FT Replay · 新课程,2,es,2998,类型及边界错误,150
+MTOP Full-FT Replay · 新课程,2,hi,2789,仅类型错误,452
+MTOP Full-FT Replay · 新课程,2,hi,2789,仅边界错误,758
+MTOP Full-FT Replay · 新课程,2,hi,2789,可读意图错误,1007
+MTOP Full-FT Replay · 新课程,2,hi,2789,合法输出,2682
+MTOP Full-FT Replay · 新课程,2,hi,2789,完全正确,1265
+MTOP Full-FT Replay · 新课程,2,hi,2789,意图字段无效,17
+MTOP Full-FT Replay · 新课程,2,hi,2789,未匹配金标,1429
+MTOP Full-FT Replay · 新课程,2,hi,2789,未匹配预测,970
+MTOP Full-FT Replay · 新课程,2,hi,2789,槽位标签或跨度无效,90
+MTOP Full-FT Replay · 新课程,2,hi,2789,类型及边界错误,420
+MTOP Full-FT Replay · 新课程,2,de,3549,仅类型错误,624
+MTOP Full-FT Replay · 新课程,2,de,3549,仅边界错误,813
+MTOP Full-FT Replay · 新课程,2,de,3549,可读意图错误,1232
+MTOP Full-FT Replay · 新课程,2,de,3549,合法输出,3450
+MTOP Full-FT Replay · 新课程,2,de,3549,完全正确,2476
+MTOP Full-FT Replay · 新课程,2,de,3549,意图字段无效,16
+MTOP Full-FT Replay · 新课程,2,de,3549,无效 JSON,2
+MTOP Full-FT Replay · 新课程,2,de,3549,未匹配金标,1492
+MTOP Full-FT Replay · 新课程,2,de,3549,未匹配预测,849
+MTOP Full-FT Replay · 新课程,2,de,3549,槽位标签或跨度无效,81
+MTOP Full-FT Replay · 新课程,2,de,3549,类型及边界错误,382
+MTOP Full-FT Replay · 新课程,2,th,2765,仅类型错误,298
+MTOP Full-FT Replay · 新课程,2,th,2765,仅边界错误,900
+MTOP Full-FT Replay · 新课程,2,th,2765,可读意图错误,1168
+MTOP Full-FT Replay · 新课程,2,th,2765,合法输出,2672
+MTOP Full-FT Replay · 新课程,2,th,2765,完全正确,1371
+MTOP Full-FT Replay · 新课程,2,th,2765,意图字段无效,12
+MTOP Full-FT Replay · 新课程,2,th,2765,无效 JSON,1
+MTOP Full-FT Replay · 新课程,2,th,2765,未匹配金标,1016
+MTOP Full-FT Replay · 新课程,2,th,2765,未匹配预测,785
+MTOP Full-FT Replay · 新课程,2,th,2765,槽位标签或跨度无效,80
+MTOP Full-FT Replay · 新课程,2,th,2765,类型及边界错误,548
+MTOP Full-FT Replay · 新课程,3,fr,3193,仅类型错误,453
+MTOP Full-FT Replay · 新课程,3,fr,3193,仅边界错误,820
+MTOP Full-FT Replay · 新课程,3,fr,3193,可读意图错误,574
+MTOP Full-FT Replay · 新课程,3,fr,3193,合法输出,3132
+MTOP Full-FT Replay · 新课程,3,fr,3193,完全正确,2871
+MTOP Full-FT Replay · 新课程,3,fr,3193,意图字段无效,24
+MTOP Full-FT Replay · 新课程,3,fr,3193,未匹配金标,637
+MTOP Full-FT Replay · 新课程,3,fr,3193,未匹配预测,800
+MTOP Full-FT Replay · 新课程,3,fr,3193,槽位标签或跨度无效,37
+MTOP Full-FT Replay · 新课程,3,fr,3193,类型及边界错误,238
+MTOP Full-FT Replay · 新课程,3,es,2998,仅类型错误,323
+MTOP Full-FT Replay · 新课程,3,es,2998,仅边界错误,709
+MTOP Full-FT Replay · 新课程,3,es,2998,可读意图错误,412
+MTOP Full-FT Replay · 新课程,3,es,2998,合法输出,2955
+MTOP Full-FT Replay · 新课程,3,es,2998,完全正确,2986
+MTOP Full-FT Replay · 新课程,3,es,2998,意图字段无效,13
+MTOP Full-FT Replay · 新课程,3,es,2998,未匹配金标,610
+MTOP Full-FT Replay · 新课程,3,es,2998,未匹配预测,615
+MTOP Full-FT Replay · 新课程,3,es,2998,槽位标签或跨度无效,30
+MTOP Full-FT Replay · 新课程,3,es,2998,类型及边界错误,169
+MTOP Full-FT Replay · 新课程,3,hi,2789,仅类型错误,746
+MTOP Full-FT Replay · 新课程,3,hi,2789,仅边界错误,628
+MTOP Full-FT Replay · 新课程,3,hi,2789,可读意图错误,682
+MTOP Full-FT Replay · 新课程,3,hi,2789,合法输出,2702
+MTOP Full-FT Replay · 新课程,3,hi,2789,完全正确,2116
+MTOP Full-FT Replay · 新课程,3,hi,2789,意图字段无效,24
+MTOP Full-FT Replay · 新课程,3,hi,2789,无效 JSON,1
+MTOP Full-FT Replay · 新课程,3,hi,2789,未匹配金标,544
+MTOP Full-FT Replay · 新课程,3,hi,2789,未匹配预测,1104
+MTOP Full-FT Replay · 新课程,3,hi,2789,槽位标签或跨度无效,62
+MTOP Full-FT Replay · 新课程,3,hi,2789,类型及边界错误,341
+MTOP Full-FT Replay · 新课程,3,de,3549,仅类型错误,695
+MTOP Full-FT Replay · 新课程,3,de,3549,仅边界错误,959
+MTOP Full-FT Replay · 新课程,3,de,3549,可读意图错误,949
+MTOP Full-FT Replay · 新课程,3,de,3549,合法输出,3495
+MTOP Full-FT Replay · 新课程,3,de,3549,完全正确,2827
+MTOP Full-FT Replay · 新课程,3,de,3549,意图字段无效,18
+MTOP Full-FT Replay · 新课程,3,de,3549,未匹配金标,969
+MTOP Full-FT Replay · 新课程,3,de,3549,未匹配预测,1320
+MTOP Full-FT Replay · 新课程,3,de,3549,槽位标签或跨度无效,36
+MTOP Full-FT Replay · 新课程,3,de,3549,类型及边界错误,425
+MTOP Full-FT Replay · 新课程,3,th,2765,仅类型错误,438
+MTOP Full-FT Replay · 新课程,3,th,2765,仅边界错误,1134
+MTOP Full-FT Replay · 新课程,3,th,2765,可读意图错误,956
+MTOP Full-FT Replay · 新课程,3,th,2765,合法输出,2694
+MTOP Full-FT Replay · 新课程,3,th,2765,完全正确,1442
+MTOP Full-FT Replay · 新课程,3,th,2765,意图字段无效,21
+MTOP Full-FT Replay · 新课程,3,th,2765,未匹配金标,629
+MTOP Full-FT Replay · 新课程,3,th,2765,未匹配预测,1213
+MTOP Full-FT Replay · 新课程,3,th,2765,槽位标签或跨度无效,50
+MTOP Full-FT Replay · 新课程,3,th,2765,类型及边界错误,567
+MTOP Full-FT Replay · 新课程,4,fr,3193,仅类型错误,413
+MTOP Full-FT Replay · 新课程,4,fr,3193,仅边界错误,757
+MTOP Full-FT Replay · 新课程,4,fr,3193,可读意图错误,644
+MTOP Full-FT Replay · 新课程,4,fr,3193,合法输出,3047
+MTOP Full-FT Replay · 新课程,4,fr,3193,完全正确,2674
+MTOP Full-FT Replay · 新课程,4,fr,3193,意图字段无效,27
+MTOP Full-FT Replay · 新课程,4,fr,3193,无效 JSON,2
+MTOP Full-FT Replay · 新课程,4,fr,3193,未匹配金标,787
+MTOP Full-FT Replay · 新课程,4,fr,3193,未匹配预测,388
+MTOP Full-FT Replay · 新课程,4,fr,3193,槽位标签或跨度无效,117
+MTOP Full-FT Replay · 新课程,4,fr,3193,类型及边界错误,164
+MTOP Full-FT Replay · 新课程,4,es,2998,仅类型错误,328
+MTOP Full-FT Replay · 新课程,4,es,2998,仅边界错误,739
+MTOP Full-FT Replay · 新课程,4,es,2998,可读意图错误,496
+MTOP Full-FT Replay · 新课程,4,es,2998,合法输出,2913
+MTOP Full-FT Replay · 新课程,4,es,2998,完全正确,2871
+MTOP Full-FT Replay · 新课程,4,es,2998,意图字段无效,20
+MTOP Full-FT Replay · 新课程,4,es,2998,无效 JSON,6
+MTOP Full-FT Replay · 新课程,4,es,2998,未匹配金标,591
+MTOP Full-FT Replay · 新课程,4,es,2998,未匹配预测,297
+MTOP Full-FT Replay · 新课程,4,es,2998,槽位标签或跨度无效,59
+MTOP Full-FT Replay · 新课程,4,es,2998,类型及边界错误,141
+MTOP Full-FT Replay · 新课程,4,hi,2789,仅类型错误,461
+MTOP Full-FT Replay · 新课程,4,hi,2789,仅边界错误,629
+MTOP Full-FT Replay · 新课程,4,hi,2789,可读意图错误,915
+MTOP Full-FT Replay · 新课程,4,hi,2789,合法输出,2606
+MTOP Full-FT Replay · 新课程,4,hi,2789,完全正确,1281
+MTOP Full-FT Replay · 新课程,4,hi,2789,意图字段无效,18
+MTOP Full-FT Replay · 新课程,4,hi,2789,无效 JSON,1
+MTOP Full-FT Replay · 新课程,4,hi,2789,未匹配金标,1546
+MTOP Full-FT Replay · 新课程,4,hi,2789,未匹配预测,739
+MTOP Full-FT Replay · 新课程,4,hi,2789,槽位标签或跨度无效,164
+MTOP Full-FT Replay · 新课程,4,hi,2789,类型及边界错误,294
+MTOP Full-FT Replay · 新课程,4,de,3549,仅类型错误,445
+MTOP Full-FT Replay · 新课程,4,de,3549,仅边界错误,767
+MTOP Full-FT Replay · 新课程,4,de,3549,可读意图错误,761
+MTOP Full-FT Replay · 新课程,4,de,3549,合法输出,3439
+MTOP Full-FT Replay · 新课程,4,de,3549,完全正确,3247
+MTOP Full-FT Replay · 新课程,4,de,3549,意图字段无效,14
+MTOP Full-FT Replay · 新课程,4,de,3549,无效 JSON,2
+MTOP Full-FT Replay · 新课程,4,de,3549,未匹配金标,1096
+MTOP Full-FT Replay · 新课程,4,de,3549,未匹配预测,462
+MTOP Full-FT Replay · 新课程,4,de,3549,槽位标签或跨度无效,94
+MTOP Full-FT Replay · 新课程,4,de,3549,类型及边界错误,168
+MTOP Full-FT Replay · 新课程,4,th,2765,仅类型错误,396
+MTOP Full-FT Replay · 新课程,4,th,2765,仅边界错误,941
+MTOP Full-FT Replay · 新课程,4,th,2765,可读意图错误,1101
+MTOP Full-FT Replay · 新课程,4,th,2765,合法输出,2683
+MTOP Full-FT Replay · 新课程,4,th,2765,完全正确,1208
+MTOP Full-FT Replay · 新课程,4,th,2765,意图字段无效,3
+MTOP Full-FT Replay · 新课程,4,th,2765,无效 JSON,2
+MTOP Full-FT Replay · 新课程,4,th,2765,未匹配金标,1174
+MTOP Full-FT Replay · 新课程,4,th,2765,未匹配预测,625
+MTOP Full-FT Replay · 新课程,4,th,2765,槽位标签或跨度无效,77
+MTOP Full-FT Replay · 新课程,4,th,2765,类型及边界错误,411
+MTOP Full-FT Replay · 新课程,5,fr,3193,仅类型错误,325
+MTOP Full-FT Replay · 新课程,5,fr,3193,仅边界错误,726
+MTOP Full-FT Replay · 新课程,5,fr,3193,可读意图错误,537
+MTOP Full-FT Replay · 新课程,5,fr,3193,合法输出,3125
+MTOP Full-FT Replay · 新课程,5,fr,3193,完全正确,3048
+MTOP Full-FT Replay · 新课程,5,fr,3193,意图字段无效,17
+MTOP Full-FT Replay · 新课程,5,fr,3193,未匹配金标,678
+MTOP Full-FT Replay · 新课程,5,fr,3193,未匹配预测,284
+MTOP Full-FT Replay · 新课程,5,fr,3193,槽位标签或跨度无效,51
+MTOP Full-FT Replay · 新课程,5,fr,3193,类型及边界错误,172
+MTOP Full-FT Replay · 新课程,5,es,2998,仅类型错误,224
+MTOP Full-FT Replay · 新课程,5,es,2998,仅边界错误,887
+MTOP Full-FT Replay · 新课程,5,es,2998,可读意图错误,379
+MTOP Full-FT Replay · 新课程,5,es,2998,合法输出,2947
+MTOP Full-FT Replay · 新课程,5,es,2998,完全正确,2909
+MTOP Full-FT Replay · 新课程,5,es,2998,意图字段无效,18
+MTOP Full-FT Replay · 新课程,5,es,2998,无效 JSON,1
+MTOP Full-FT Replay · 新课程,5,es,2998,未匹配金标,599
+MTOP Full-FT Replay · 新课程,5,es,2998,未匹配预测,212
+MTOP Full-FT Replay · 新课程,5,es,2998,槽位标签或跨度无效,32
+MTOP Full-FT Replay · 新课程,5,es,2998,类型及边界错误,131
+MTOP Full-FT Replay · 新课程,5,hi,2789,仅类型错误,519
+MTOP Full-FT Replay · 新课程,5,hi,2789,仅边界错误,763
+MTOP Full-FT Replay · 新课程,5,hi,2789,可读意图错误,885
+MTOP Full-FT Replay · 新课程,5,hi,2789,合法输出,2752
+MTOP Full-FT Replay · 新课程,5,hi,2789,完全正确,1843
+MTOP Full-FT Replay · 新课程,5,hi,2789,意图字段无效,19
+MTOP Full-FT Replay · 新课程,5,hi,2789,未匹配金标,942
+MTOP Full-FT Replay · 新课程,5,hi,2789,未匹配预测,669
+MTOP Full-FT Replay · 新课程,5,hi,2789,槽位标签或跨度无效,18
+MTOP Full-FT Replay · 新课程,5,hi,2789,类型及边界错误,358
+MTOP Full-FT Replay · 新课程,5,de,3549,仅类型错误,522
+MTOP Full-FT Replay · 新课程,5,de,3549,仅边界错误,841
+MTOP Full-FT Replay · 新课程,5,de,3549,可读意图错误,708
+MTOP Full-FT Replay · 新课程,5,de,3549,合法输出,3489
+MTOP Full-FT Replay · 新课程,5,de,3549,完全正确,3150
+MTOP Full-FT Replay · 新课程,5,de,3549,意图字段无效,20
+MTOP Full-FT Replay · 新课程,5,de,3549,无效 JSON,1
+MTOP Full-FT Replay · 新课程,5,de,3549,未匹配金标,1096
+MTOP Full-FT Replay · 新课程,5,de,3549,未匹配预测,488
+MTOP Full-FT Replay · 新课程,5,de,3549,槽位标签或跨度无效,39
+MTOP Full-FT Replay · 新课程,5,de,3549,类型及边界错误,225
+MTOP Full-FT Replay · 新课程,5,th,2765,仅类型错误,380
+MTOP Full-FT Replay · 新课程,5,th,2765,仅边界错误,754
+MTOP Full-FT Replay · 新课程,5,th,2765,可读意图错误,552
+MTOP Full-FT Replay · 新课程,5,th,2765,合法输出,2697
+MTOP Full-FT Replay · 新课程,5,th,2765,完全正确,2297
+MTOP Full-FT Replay · 新课程,5,th,2765,意图字段无效,29
+MTOP Full-FT Replay · 新课程,5,th,2765,无效 JSON,2
+MTOP Full-FT Replay · 新课程,5,th,2765,未匹配金标,555
+MTOP Full-FT Replay · 新课程,5,th,2765,未匹配预测,425
+MTOP Full-FT Replay · 新课程,5,th,2765,槽位标签或跨度无效,37
+MTOP Full-FT Replay · 新课程,5,th,2765,类型及边界错误,193

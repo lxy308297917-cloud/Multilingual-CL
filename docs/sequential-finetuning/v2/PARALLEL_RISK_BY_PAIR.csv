@@ -1,0 +1,121 @@
+﻿基准,轨迹,旧语,新语,条件,验证行,真实失分,选入样本,选入失分
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,ar-SA,旧语历史,391,44,39,6
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,ar-SA,同源平行,391,44,39,8
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,ar-SA,异源平行,391,44,39,8
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,vi-VN,旧语历史,445,50,44,15
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,vi-VN,同源平行,445,50,44,16
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,vi-VN,异源平行,445,50,44,16
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,ur-PK,旧语历史,455,48,46,18
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,ur-PK,同源平行,455,48,46,17
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,ur-PK,异源平行,455,48,46,17
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,sw-KE,旧语历史,447,51,45,17
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,sw-KE,同源平行,447,51,45,17
+massive,MASSIVE SeqLoRA · 交换末两语,de-DE,sw-KE,异源平行,447,51,45,17
+massive,MASSIVE SeqLoRA · 交换末两语,ar-SA,vi-VN,旧语历史,388,57,39,11
+massive,MASSIVE SeqLoRA · 交换末两语,ar-SA,vi-VN,同源平行,388,57,39,12
+massive,MASSIVE SeqLoRA · 交换末两语,ar-SA,vi-VN,异源平行,388,57,39,11
+massive,MASSIVE SeqLoRA · 交换末两语,ar-SA,ur-PK,旧语历史,393,70,39,13
+massive,MASSIVE SeqLoRA · 交换末两语,ar-SA,ur-PK,同源平行,393,70,39,13
+massive,MASSIVE SeqLoRA · 交换末两语,ar-SA,ur-PK,异源平行,393,70,39,14
+massive,MASSIVE SeqLoRA · 交换末两语,ar-SA,sw-KE,旧语历史,356,41,36,14
+massive,MASSIVE SeqLoRA · 交换末两语,ar-SA,sw-KE,同源平行,356,41,36,14
+massive,MASSIVE SeqLoRA · 交换末两语,ar-SA,sw-KE,异源平行,356,41,36,15
+massive,MASSIVE SeqLoRA · 交换末两语,vi-VN,ur-PK,旧语历史,417,34,42,9
+massive,MASSIVE SeqLoRA · 交换末两语,vi-VN,ur-PK,同源平行,417,34,42,8
+massive,MASSIVE SeqLoRA · 交换末两语,vi-VN,ur-PK,异源平行,417,34,42,7
+massive,MASSIVE SeqLoRA · 交换末两语,vi-VN,sw-KE,旧语历史,401,31,40,11
+massive,MASSIVE SeqLoRA · 交换末两语,vi-VN,sw-KE,同源平行,401,31,40,11
+massive,MASSIVE SeqLoRA · 交换末两语,vi-VN,sw-KE,异源平行,401,31,40,11
+massive,MASSIVE SeqLoRA · 交换末两语,ur-PK,sw-KE,旧语历史,420,70,42,16
+massive,MASSIVE SeqLoRA · 交换末两语,ur-PK,sw-KE,同源平行,420,70,42,16
+massive,MASSIVE SeqLoRA · 交换末两语,ur-PK,sw-KE,异源平行,420,70,42,17
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,ar-SA,旧语历史,394,43,39,6
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,ar-SA,同源平行,394,43,39,5
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,ar-SA,异源平行,394,43,39,3
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,vi-VN,旧语历史,449,56,45,21
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,vi-VN,同源平行,449,56,45,23
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,vi-VN,异源平行,449,56,45,20
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,sw-KE,旧语历史,450,69,45,25
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,sw-KE,同源平行,450,69,45,25
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,sw-KE,异源平行,450,69,45,25
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,ur-PK,旧语历史,423,36,42,14
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,ur-PK,同源平行,423,36,42,14
+massive,MASSIVE SeqLoRA · 原顺序,de-DE,ur-PK,异源平行,423,36,42,14
+massive,MASSIVE SeqLoRA · 原顺序,ar-SA,vi-VN,旧语历史,389,60,39,10
+massive,MASSIVE SeqLoRA · 原顺序,ar-SA,vi-VN,同源平行,389,60,39,11
+massive,MASSIVE SeqLoRA · 原顺序,ar-SA,vi-VN,异源平行,389,60,39,12
+massive,MASSIVE SeqLoRA · 原顺序,ar-SA,sw-KE,旧语历史,384,44,38,16
+massive,MASSIVE SeqLoRA · 原顺序,ar-SA,sw-KE,同源平行,384,44,38,15
+massive,MASSIVE SeqLoRA · 原顺序,ar-SA,sw-KE,异源平行,384,44,38,15
+massive,MASSIVE SeqLoRA · 原顺序,ar-SA,ur-PK,旧语历史,385,56,38,16
+massive,MASSIVE SeqLoRA · 原顺序,ar-SA,ur-PK,同源平行,385,56,38,15
+massive,MASSIVE SeqLoRA · 原顺序,ar-SA,ur-PK,异源平行,385,56,38,17
+massive,MASSIVE SeqLoRA · 原顺序,vi-VN,sw-KE,旧语历史,415,40,42,9
+massive,MASSIVE SeqLoRA · 原顺序,vi-VN,sw-KE,同源平行,415,40,42,9
+massive,MASSIVE SeqLoRA · 原顺序,vi-VN,sw-KE,异源平行,415,40,42,9
+massive,MASSIVE SeqLoRA · 原顺序,vi-VN,ur-PK,旧语历史,407,43,41,24
+massive,MASSIVE SeqLoRA · 原顺序,vi-VN,ur-PK,同源平行,407,43,41,22
+massive,MASSIVE SeqLoRA · 原顺序,vi-VN,ur-PK,异源平行,407,43,41,24
+massive,MASSIVE SeqLoRA · 原顺序,sw-KE,ur-PK,旧语历史,311,75,31,14
+massive,MASSIVE SeqLoRA · 原顺序,sw-KE,ur-PK,同源平行,311,75,31,14
+massive,MASSIVE SeqLoRA · 原顺序,sw-KE,ur-PK,异源平行,311,75,31,14
+mtop,MTOP LoRA Sequential · 新课程,fr,es,旧语历史,155,32,16,3
+mtop,MTOP LoRA Sequential · 新课程,fr,es,同源平行,155,32,16,5
+mtop,MTOP LoRA Sequential · 新课程,fr,es,异源平行,155,32,16,3
+mtop,MTOP LoRA Sequential · 新课程,fr,hi,旧语历史,248,74,25,9
+mtop,MTOP LoRA Sequential · 新课程,fr,hi,同源平行,248,74,25,10
+mtop,MTOP LoRA Sequential · 新课程,fr,hi,异源平行,248,74,25,8
+mtop,MTOP LoRA Sequential · 新课程,fr,de,旧语历史,193,18,19,5
+mtop,MTOP LoRA Sequential · 新课程,fr,de,同源平行,193,18,19,6
+mtop,MTOP LoRA Sequential · 新课程,fr,de,异源平行,193,18,19,7
+mtop,MTOP LoRA Sequential · 新课程,fr,th,旧语历史,295,81,30,16
+mtop,MTOP LoRA Sequential · 新课程,fr,th,同源平行,295,81,30,14
+mtop,MTOP LoRA Sequential · 新课程,fr,th,异源平行,295,81,30,13
+mtop,MTOP LoRA Sequential · 新课程,es,hi,旧语历史,256,76,26,9
+mtop,MTOP LoRA Sequential · 新课程,es,hi,同源平行,256,76,26,9
+mtop,MTOP LoRA Sequential · 新课程,es,hi,异源平行,256,76,26,9
+mtop,MTOP LoRA Sequential · 新课程,es,de,旧语历史,217,38,22,11
+mtop,MTOP LoRA Sequential · 新课程,es,de,同源平行,217,38,22,11
+mtop,MTOP LoRA Sequential · 新课程,es,de,异源平行,217,38,22,13
+mtop,MTOP LoRA Sequential · 新课程,es,th,旧语历史,282,72,28,14
+mtop,MTOP LoRA Sequential · 新课程,es,th,同源平行,282,72,28,16
+mtop,MTOP LoRA Sequential · 新课程,es,th,异源平行,282,72,28,15
+mtop,MTOP LoRA Sequential · 新课程,hi,de,旧语历史,275,54,28,8
+mtop,MTOP LoRA Sequential · 新课程,hi,de,同源平行,275,54,28,11
+mtop,MTOP LoRA Sequential · 新课程,hi,de,异源平行,275,54,28,10
+mtop,MTOP LoRA Sequential · 新课程,hi,th,旧语历史,279,66,28,14
+mtop,MTOP LoRA Sequential · 新课程,hi,th,同源平行,279,66,28,19
+mtop,MTOP LoRA Sequential · 新课程,hi,th,异源平行,279,66,28,16
+mtop,MTOP LoRA Sequential · 新课程,de,th,旧语历史,328,74,33,19
+mtop,MTOP LoRA Sequential · 新课程,de,th,同源平行,328,74,33,13
+mtop,MTOP LoRA Sequential · 新课程,de,th,异源平行,328,74,33,15
+mtop,MTOP 平面语义解析 SeqLoRA,de,fr,旧语历史,139,26,14,4
+mtop,MTOP 平面语义解析 SeqLoRA,de,fr,同源平行,139,26,14,3
+mtop,MTOP 平面语义解析 SeqLoRA,de,fr,异源平行,139,26,14,3
+mtop,MTOP 平面语义解析 SeqLoRA,de,es,旧语历史,213,28,21,0
+mtop,MTOP 平面语义解析 SeqLoRA,de,es,同源平行,213,28,21,1
+mtop,MTOP 平面语义解析 SeqLoRA,de,es,异源平行,213,28,21,1
+mtop,MTOP 平面语义解析 SeqLoRA,de,hi,旧语历史,299,64,30,12
+mtop,MTOP 平面语义解析 SeqLoRA,de,hi,同源平行,299,64,30,14
+mtop,MTOP 平面语义解析 SeqLoRA,de,hi,异源平行,299,64,30,13
+mtop,MTOP 平面语义解析 SeqLoRA,de,th,旧语历史,279,89,28,20
+mtop,MTOP 平面语义解析 SeqLoRA,de,th,同源平行,279,89,28,20
+mtop,MTOP 平面语义解析 SeqLoRA,de,th,异源平行,279,89,28,19
+mtop,MTOP 平面语义解析 SeqLoRA,fr,es,旧语历史,222,29,22,7
+mtop,MTOP 平面语义解析 SeqLoRA,fr,es,同源平行,222,29,22,7
+mtop,MTOP 平面语义解析 SeqLoRA,fr,es,异源平行,222,29,22,8
+mtop,MTOP 平面语义解析 SeqLoRA,fr,hi,旧语历史,293,60,29,9
+mtop,MTOP 平面语义解析 SeqLoRA,fr,hi,同源平行,293,60,29,10
+mtop,MTOP 平面语义解析 SeqLoRA,fr,hi,异源平行,293,60,29,7
+mtop,MTOP 平面语义解析 SeqLoRA,fr,th,旧语历史,277,76,28,18
+mtop,MTOP 平面语义解析 SeqLoRA,fr,th,同源平行,277,76,28,15
+mtop,MTOP 平面语义解析 SeqLoRA,fr,th,异源平行,277,76,28,17
+mtop,MTOP 平面语义解析 SeqLoRA,es,hi,旧语历史,305,70,30,11
+mtop,MTOP 平面语义解析 SeqLoRA,es,hi,同源平行,305,70,30,13
+mtop,MTOP 平面语义解析 SeqLoRA,es,hi,异源平行,305,70,30,12
+mtop,MTOP 平面语义解析 SeqLoRA,es,th,旧语历史,278,111,28,21
+mtop,MTOP 平面语义解析 SeqLoRA,es,th,同源平行,278,111,28,17
+mtop,MTOP 平面语义解析 SeqLoRA,es,th,异源平行,278,111,28,17
+mtop,MTOP 平面语义解析 SeqLoRA,hi,th,旧语历史,321,89,32,17
+mtop,MTOP 平面语义解析 SeqLoRA,hi,th,同源平行,321,89,32,17
+mtop,MTOP 平面语义解析 SeqLoRA,hi,th,异源平行,321,89,32,17

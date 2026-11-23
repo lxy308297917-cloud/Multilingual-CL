@@ -1,0 +1,13 @@
+﻿作业,参数更新,标题,指标,末语 UR %,末语 SW %,UR 减 SW pp,95% 下限,95% 上限
+flores-language-probe,full,english_header,阿拉伯字母占比,4.05687657617729,0.0,4.05687657617729,1.6451118269978429,7.384502449086448
+flores-language-probe,full,english_header,含至少两个阿拉伯字母的题比例,29.375,0.0,29.375,20.625,38.75
+flores-language-probe,full,native_header,阿拉伯字母占比,5.323239849838812,0.0,5.323239849838812,2.459102873754201,9.009944252281192
+flores-language-probe,full,native_header,含至少两个阿拉伯字母的题比例,35.625,0.0,35.625,26.875,44.39062499999977
+flores-language-probe,lora,english_header,阿拉伯字母占比,0.0,0.0,0.0,0.0,0.0
+flores-language-probe,lora,english_header,含至少两个阿拉伯字母的题比例,0.0,0.0,0.0,0.0,0.0
+flores-language-probe,lora,native_header,阿拉伯字母占比,0.0,0.0,0.0,0.0,0.0
+flores-language-probe,lora,native_header,含至少两个阿拉伯字母的题比例,0.0,0.0,0.0,0.0,0.0
+flores-fewshot,full,english_header,阿拉伯字母占比,22.61990693130597,0.0,22.61990693130597,16.429765764983433,29.351977104477562
+flores-fewshot,full,english_header,含至少两个阿拉伯字母的题比例,54.375,0.0,54.375,45.625,63.125
+flores-fewshot,full,native_header,阿拉伯字母占比,22.633288261936286,0.0,22.633288261936286,16.50327244840061,29.16967426658427
+flores-fewshot,full,native_header,含至少两个阿拉伯字母的题比例,50.0,0.0,50.0,40.625,59.375

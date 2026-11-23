@@ -1,0 +1,110 @@
+benchmark,split,control,evaluation_language,examples,metric,score_pct,valid_output_pct
+MASSIVE,test,Base,de-DE,2974,slot_micro_f1,18.18928351,64.82851379
+MASSIVE,test,Base,ar-SA,2974,slot_micro_f1,14.67760844,65.03026227
+MASSIVE,test,Base,vi-VN,2974,slot_micro_f1,18.05674979,61.73503699
+MASSIVE,test,Base,sw-KE,2974,slot_micro_f1,3.98706897,79.75790182
+MASSIVE,test,Base,ur-PK,2974,slot_micro_f1,12.89905091,71.58708810
+MASSIVE,test,Single LoRA,de-DE,2974,slot_micro_f1,63.33456289,96.83927371
+MASSIVE,test,Single LoRA,ar-SA,2974,slot_micro_f1,55.32567050,92.70342972
+MASSIVE,test,Single LoRA,vi-VN,2974,slot_micro_f1,56.16744564,89.77807666
+MASSIVE,test,Single LoRA,sw-KE,2974,slot_micro_f1,43.08390023,97.61264291
+MASSIVE,test,Single LoRA,ur-PK,2974,slot_micro_f1,51.13828786,96.09952925
+MASSIVE,test,Joint LoRA,de-DE,2974,slot_micro_f1,72.22914072,98.62138534
+MASSIVE,test,Joint LoRA,ar-SA,2974,slot_micro_f1,63.45641416,92.80430397
+MASSIVE,test,Joint LoRA,vi-VN,2974,slot_micro_f1,64.73633749,89.34095494
+MASSIVE,test,Joint LoRA,sw-KE,2974,slot_micro_f1,56.91318328,99.36112979
+MASSIVE,test,Joint LoRA,ur-PK,2974,slot_micro_f1,61.92966637,98.21788837
+MASSIVE,test,Single Full-SFT,de-DE,2974,slot_micro_f1,53.61670395,87.55884331
+MASSIVE,test,Single Full-SFT,ar-SA,2974,slot_micro_f1,40.85889571,77.60591796
+MASSIVE,test,Single Full-SFT,vi-VN,2974,slot_micro_f1,49.15390814,81.43913921
+MASSIVE,test,Single Full-SFT,sw-KE,2974,slot_micro_f1,40.38497830,93.81304640
+MASSIVE,test,Single Full-SFT,ur-PK,2974,slot_micro_f1,37.28414443,86.75184936
+MASSIVE,test,Joint Full-SFT,de-DE,2974,slot_micro_f1,60.67989782,92.66980498
+MASSIVE,test,Joint Full-SFT,ar-SA,2974,slot_micro_f1,44.87295826,83.18762609
+MASSIVE,test,Joint Full-SFT,vi-VN,2974,slot_micro_f1,50.96277279,85.37323470
+MASSIVE,test,Joint Full-SFT,sw-KE,2974,slot_micro_f1,47.14933912,95.39340955
+MASSIVE,test,Joint Full-SFT,ur-PK,2974,slot_micro_f1,45.63243898,92.36718225
+MASSIVE,dev,Base,de-DE,2033,slot_micro_f1,19.27067892,61.73143138
+MASSIVE,dev,Base,ar-SA,2033,slot_micro_f1,14.11685241,65.51893753
+MASSIVE,dev,Base,vi-VN,2033,slot_micro_f1,19.20388940,60.99360551
+MASSIVE,dev,Base,sw-KE,2033,slot_micro_f1,4.34294272,78.01278898
+MASSIVE,dev,Base,ur-PK,2033,slot_micro_f1,16.76792224,72.01180521
+MASSIVE,dev,Single LoRA,de-DE,2033,slot_micro_f1,62.99171843,97.14707329
+MASSIVE,dev,Single LoRA,ar-SA,2033,slot_micro_f1,57.38101640,92.67092966
+MASSIVE,dev,Single LoRA,vi-VN,2033,slot_micro_f1,57.15099715,88.58829316
+MASSIVE,dev,Single LoRA,sw-KE,2033,slot_micro_f1,42.18215019,97.44220364
+MASSIVE,dev,Single LoRA,ur-PK,2033,slot_micro_f1,54.35066632,96.01574029
+MASSIVE,dev,Joint LoRA,de-DE,2033,slot_micro_f1,72.56021852,98.77029021
+MASSIVE,dev,Joint LoRA,ar-SA,2033,slot_micro_f1,65.46310832,93.90063945
+MASSIVE,dev,Joint LoRA,vi-VN,2033,slot_micro_f1,64.23554835,87.99803246
+MASSIVE,dev,Joint LoRA,sw-KE,2033,slot_micro_f1,56.49887303,99.26217413
+MASSIVE,dev,Joint LoRA,ur-PK,2033,slot_micro_f1,63.77396569,97.98327595
+MASSIVE,dev,Single Full-SFT,de-DE,2033,slot_micro_f1,51.78857448,85.58780128
+MASSIVE,dev,Single Full-SFT,ar-SA,2033,slot_micro_f1,43.00769012,78.45548451
+MASSIVE,dev,Single Full-SFT,vi-VN,2033,slot_micro_f1,48.63945578,80.42302017
+MASSIVE,dev,Single Full-SFT,sw-KE,2033,slot_micro_f1,38.47188593,92.96606001
+MASSIVE,dev,Single Full-SFT,ur-PK,2033,slot_micro_f1,38.19918145,86.76832268
+MASSIVE,dev,Joint Full-SFT,de-DE,2033,slot_micro_f1,61.08374384,91.53959666
+MASSIVE,dev,Joint Full-SFT,ar-SA,2033,slot_micro_f1,45.09803922,83.12838170
+MASSIVE,dev,Joint Full-SFT,vi-VN,2033,slot_micro_f1,49.50316170,84.21052632
+MASSIVE,dev,Joint Full-SFT,sw-KE,2033,slot_micro_f1,45.29035843,94.73684211
+MASSIVE,dev,Joint Full-SFT,ur-PK,2033,slot_micro_f1,47.72854739,92.12985735
+MasakhaNER 2.0,test,Base,hau,1633,entity_micro_f1,0.00000000,0.00000000
+MasakhaNER 2.0,test,Base,yor,1964,entity_micro_f1,0.00000000,0.00000000
+MasakhaNER 2.0,test,Base,swa,1883,entity_micro_f1,0.00000000,0.00000000
+MasakhaNER 2.0,test,Base,lug,1412,entity_micro_f1,0.00000000,0.00000000
+MasakhaNER 2.0,test,Single LoRA,hau,1633,entity_micro_f1,42.84250960,99.14268218
+MasakhaNER 2.0,test,Single LoRA,yor,1964,entity_micro_f1,41.55965445,99.79633401
+MasakhaNER 2.0,test,Single LoRA,swa,1883,entity_micro_f1,72.71053843,98.72543813
+MasakhaNER 2.0,test,Single LoRA,lug,1412,entity_micro_f1,61.16481962,99.64589235
+MasakhaNER 2.0,test,Joint LoRA,hau,1633,entity_micro_f1,61.16207951,99.75505205
+MasakhaNER 2.0,test,Joint LoRA,yor,1964,entity_micro_f1,56.33129812,99.94908350
+MasakhaNER 2.0,test,Joint LoRA,swa,1883,entity_micro_f1,81.61900369,99.89378651
+MasakhaNER 2.0,test,Joint LoRA,lug,1412,entity_micro_f1,76.44987086,99.92917847
+MasakhaNER 2.0,dev,Base,hau,384,entity_micro_f1,0.00000000,0.00000000
+MasakhaNER 2.0,dev,Base,yor,384,entity_micro_f1,0.00000000,0.00000000
+MasakhaNER 2.0,dev,Base,swa,384,entity_micro_f1,0.00000000,0.00000000
+MasakhaNER 2.0,dev,Base,lug,384,entity_micro_f1,0.00000000,0.00000000
+MasakhaNER 2.0,dev,Single LoRA,hau,384,entity_micro_f1,38.69731801,99.21875000
+MasakhaNER 2.0,dev,Single LoRA,yor,384,entity_micro_f1,40.21164021,100.00000000
+MasakhaNER 2.0,dev,Single LoRA,swa,384,entity_micro_f1,69.30203830,98.95833333
+MasakhaNER 2.0,dev,Single LoRA,lug,384,entity_micro_f1,63.31738437,100.00000000
+MasakhaNER 2.0,dev,Joint LoRA,hau,384,entity_micro_f1,61.01364522,100.00000000
+MasakhaNER 2.0,dev,Joint LoRA,yor,384,entity_micro_f1,56.49582837,100.00000000
+MasakhaNER 2.0,dev,Joint LoRA,swa,384,entity_micro_f1,79.07268170,99.73958333
+MasakhaNER 2.0,dev,Joint LoRA,lug,384,entity_micro_f1,77.57085020,99.73958333
+TyDiQA-GoldP,author-dev,Base,te,669,answer_f1,74.42834746,48.28101644
+TyDiQA-GoldP,author-dev,Base,id,565,answer_f1,81.54838917,30.44247788
+TyDiQA-GoldP,author-dev,Base,ru,812,answer_f1,68.02351544,21.18226601
+TyDiQA-GoldP,author-dev,Base,sw,499,answer_f1,69.30758894,25.05010020
+TyDiQA-GoldP,author-dev,Base,ar,921,answer_f1,72.40004258,18.02388708
+TyDiQA-GoldP,author-dev,Single LoRA,te,669,answer_f1,88.51222617,99.25261584
+TyDiQA-GoldP,author-dev,Single LoRA,id,565,answer_f1,90.26186684,98.76106195
+TyDiQA-GoldP,author-dev,Single LoRA,ru,812,answer_f1,84.43412548,98.02955665
+TyDiQA-GoldP,author-dev,Single LoRA,sw,499,answer_f1,84.54820965,100.00000000
+TyDiQA-GoldP,author-dev,Single LoRA,ar,921,answer_f1,87.45938312,98.69706840
+TyDiQA-GoldP,author-dev,Joint LoRA,te,669,answer_f1,89.80407372,100.00000000
+TyDiQA-GoldP,author-dev,Joint LoRA,id,565,answer_f1,91.82206044,99.64601770
+TyDiQA-GoldP,author-dev,Joint LoRA,ru,812,answer_f1,83.14020658,99.01477833
+TyDiQA-GoldP,author-dev,Joint LoRA,sw,499,answer_f1,85.50010639,100.00000000
+TyDiQA-GoldP,author-dev,Joint LoRA,ar,921,answer_f1,87.40481594,99.23995657
+MTOP,dev,Base,de,1815,slot_micro_f1,5.16252390,73.55371901
+MTOP,dev,Base,fr,1577,slot_micro_f1,4.71548402,75.84020292
+MTOP,dev,Base,es,1527,slot_micro_f1,4.98442368,75.70399476
+MTOP,dev,Base,hi,2012,slot_micro_f1,4.96916939,66.30218688
+MTOP,dev,Base,th,1671,slot_micro_f1,2.67702936,74.98503890
+MTOP,dev,Single LoRA,de,1815,slot_micro_f1,37.48540937,98.01652893
+MTOP,dev,Single LoRA,fr,1577,slot_micro_f1,41.55844156,96.57577679
+MTOP,dev,Single LoRA,es,1527,slot_micro_f1,40.31522190,96.85658153
+MTOP,dev,Single LoRA,hi,2012,slot_micro_f1,37.56495917,98.16103380
+MTOP,dev,Single LoRA,th,1671,slot_micro_f1,33.32674442,97.54637941
+MTOP,test,Base,de,3549,slot_micro_f1,5.78595994,74.75345168
+MTOP,test,Base,fr,3193,slot_micro_f1,4.87859461,76.41716254
+MTOP,test,Base,es,2998,slot_micro_f1,5.15933232,75.38358906
+MTOP,test,Base,hi,2789,slot_micro_f1,4.80152776,67.08497669
+MTOP,test,Base,th,2765,slot_micro_f1,2.18579235,73.88788427
+MTOP,test,Single LoRA,de,3549,slot_micro_f1,40.15883978,97.91490561
+MTOP,test,Single LoRA,fr,3193,slot_micro_f1,41.13733906,96.11650485
+MTOP,test,Single LoRA,es,2998,slot_micro_f1,43.57470406,97.46497665
+MTOP,test,Single LoRA,hi,2789,slot_micro_f1,40.08088070,98.35066332
+MTOP,test,Single LoRA,th,2765,slot_micro_f1,33.89080177,97.75768535
